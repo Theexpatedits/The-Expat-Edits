@@ -108,3 +108,64 @@ h1{font-size:78px;margin:.2em 0}
     top:54%;
 
 }
+.cards{
+
+display:grid;
+gap:25px;
+margin-top:50px;
+
+}
+
+.card{
+
+background:#181818;
+
+border:1px solid rgba(212,175,55,.3);
+
+padding:30px;
+
+border-radius:16px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+border-color:#d4af37;
+
+transform:translateY(-5px);
+
+}
+
+.card h3{
+
+color:#d4af37;
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+
+.card p{
+
+color:#bbb;
+
+line-height:1.6;
+
+}
+
+.card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+color:#d4af37;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}

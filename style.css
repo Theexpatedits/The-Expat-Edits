@@ -40,18 +40,22 @@ h1{font-size:78px;margin:.2em 0}
 .map-container{
 
     position:relative;
-    max-width:1200px;
-    margin:auto;
+    width:95%;
+    max-width:1400px;
+    margin:80px auto;
 
 }
+
+    
+
 
 .world-map{
 
     width:100%;
-    opacity:0.35;
+    display:block;
+    border-radius:20px;
 
 }
-
 .pin{
 
     position:absolute;

@@ -1012,3 +1012,46 @@ footer{
 }
 
 }
+
+.camera-roll {
+    padding: 90px 0;
+    overflow: hidden;
+}
+
+.camera-roll-slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.camera-roll-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scrollGallery 45s linear infinite;
+}
+
+.camera-roll-track img {
+    width: 320px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 18px;
+    flex-shrink: 0;
+    transition: transform .4s ease;
+}
+
+.camera-roll-track img:hover {
+    transform: scale(1.03);
+}
+
+@keyframes scrollGallery {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+

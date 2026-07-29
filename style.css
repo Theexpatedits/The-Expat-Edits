@@ -1138,3 +1138,65 @@ footer p{
 }
 
 }
+
+/* ==========================
+   TRIP SNAPSHOT
+========================== */
+
+.snapshot-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+}
+
+.snapshot-card{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.snapshot-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#d4af37;
+
+}
+
+.snapshot-card h3{
+
+    color:#d4af37;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+}
+
+.snapshot-card p{
+
+    font-size:1.2rem;
+
+    color:white;
+
+    line-height:1.6;
+
+}

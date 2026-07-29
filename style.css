@@ -875,3 +875,195 @@ nav{
     }
 
 }
+
+/* =======================================
+   VERSION 3.2 PATCH 3
+   Editorial Polish
+======================================= */
+
+
+/* Make every journey breathe */
+
+.journey{
+
+    margin-bottom:180px;
+
+    gap:90px;
+
+}
+
+
+/* Bigger destination names */
+
+.journey-content h3{
+
+    font-size:3.5rem;
+
+    margin-bottom:18px;
+
+    line-height:.95;
+
+}
+
+
+/* Smaller destination label */
+
+.journey-location{
+
+    font-size:.75rem;
+
+    letter-spacing:6px;
+
+    color:#d4af37;
+
+    margin-bottom:14px;
+
+}
+
+
+/* Better body text */
+
+.journey-content p{
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    color:#d7d7d7;
+
+    max-width:500px;
+
+}
+
+
+/* Elegant gold link */
+
+.text-link{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    text-decoration:none;
+
+    color:#d4af37;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.35s;
+
+}
+
+.text-link:hover{
+
+    transform:translateX(8px);
+
+    color:white;
+
+}
+
+
+/* Softer image corners */
+
+.journey-image{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+
+/* Better image shadows */
+
+.journey img{
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.35);
+
+}
+
+
+/* World map */
+
+.world-map{
+
+    margin-top:50px;
+
+    border-radius:18px;
+
+}
+
+
+/* About section */
+
+.about{
+
+    max-width:900px;
+
+}
+
+.about p{
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+}
+
+
+/* Premium footer */
+
+footer{
+
+    border-top:1px solid rgba(212,175,55,.25);
+
+    margin-top:80px;
+
+}
+
+footer h3{
+
+    color:#d4af37;
+
+    letter-spacing:6px;
+
+}
+
+footer p{
+
+    max-width:650px;
+
+    margin:12px auto;
+
+}
+
+
+/* Mobile */
+
+@media (max-width:900px){
+
+.journey{
+
+    margin-bottom:100px;
+
+    gap:35px;
+
+}
+
+.journey-content h3{
+
+    font-size:2.6rem;
+
+}
+
+.about p{
+
+    font-size:1rem;
+
+}
+
+}

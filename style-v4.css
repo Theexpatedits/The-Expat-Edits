@@ -275,4 +275,230 @@ nav{
 
 }
 
+/* ==========================================
+   VERSION 4.0
+   PART 2
+   Homepage + Shared Layout
+========================================== */
+
+
+/* ==========================
+   JOURNEY CARDS
+========================== */
+
+.journey{
+
+    max-width:1200px;
+
+    margin:0 auto 180px;
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.journey.reverse{
+
+    grid-template-columns:1fr 1.2fr;
+
+}
+
+.journey.reverse .journey-image{
+
+    order:2;
+
+}
+
+.journey.reverse .journey-content{
+
+    order:1;
+
+}
+
+.journey-image{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.journey-image img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    transition:transform .6s ease;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.journey:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.journey-location{
+
+    color:#d4af37;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.75rem;
+
+    margin-bottom:15px;
+
+}
+
+.journey-content h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3.4rem;
+
+    line-height:.95;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.journey-content p{
+
+    color:#d7d7d7;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    max-width:500px;
+
+    margin-bottom:28px;
+
+}
+
+.text-link{
+
+    display:inline-block;
+
+    color:#d4af37;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.text-link:hover{
+
+    color:white;
+
+    transform:translateX(8px);
+
+}
+
+
+/* ==========================
+   WORLD MAP
+========================== */
+
+.map-intro{
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    color:#cfcfcf;
+
+}
+
+.world-map{
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:50px auto 0;
+
+    border-radius:18px;
+
+}
+
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+.about p{
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    color:#d6d6d6;
+
+}
+
+
+/* ==========================
+   SHARED IMAGE STYLES
+========================== */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+figure{
+
+    margin:0;
+
+}
+
+
+/* ==========================
+   CONTENT WIDTH
+========================== */
+
+.story-grid,
+.snapshot-grid,
+.gallery,
+.journey,
+.about,
+.map-intro,
+.section-heading{
+
+    max-width:1200px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
 

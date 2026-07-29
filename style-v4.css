@@ -500,5 +500,256 @@ figure{
 
 }
 
+/* ==========================================
+   VERSION 4.0
+   PART 3
+   Destination Pages
+========================================== */
 
+
+/* ==========================
+   STORY INTRO
+========================== */
+
+.story-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.story-text{
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    color:#d8d8d8;
+
+}
+
+.story-image{
+
+    width:100%;
+
+    height:600px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+
+/* ==========================
+   TRIP SNAPSHOT
+========================== */
+
+.snapshot-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.snapshot-card{
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.snapshot-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#d4af37;
+
+}
+
+.snapshot-card h3{
+
+    color:#d4af37;
+
+    font-size:.85rem;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+}
+
+.snapshot-card p{
+
+    color:white;
+
+    font-size:1.15rem;
+
+    line-height:1.6;
+
+}
+
+
+/* ==========================
+   EDITORIAL STORY
+========================== */
+
+.journey-story{
+
+    max-width:1200px;
+
+    margin:140px auto;
+
+    padding:0 8%;
+
+}
+
+.story-block{
+
+    margin-bottom:140px;
+
+}
+
+.story-block:last-child{
+
+    margin-bottom:0;
+
+}
+
+.story-block img{
+
+    width:100%;
+
+    height:70vh;
+
+    min-height:460px;
+
+    max-height:720px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+}
+
+.journey-story .story-text{
+
+    max-width:720px;
+
+    margin:45px auto 0;
+
+    text-align:center;
+
+}
+
+.story-number{
+
+    color:#d4af37;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+    margin-bottom:14px;
+
+}
+
+.journey-story h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.journey-story p{
+
+    color:#d5d5d5;
+
+    line-height:1.9;
+
+}
+
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+}
+
+.gallery > img{
+
+    height:560px;
+
+}
+
+.gallery-row{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr;
+
+    gap:35px;
+
+}
+
+.gallery-row img{
+
+    height:400px;
+
+}
+
+
+/* ==========================
+   DESTINATION IMAGE POLISH
+========================== */
+
+.story-image,
+.story-block img,
+.gallery img{
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
 

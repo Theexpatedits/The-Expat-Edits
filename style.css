@@ -169,3 +169,52 @@ text-decoration:none;
 font-weight:bold;
 
 }
+.journeys{
+
+padding:120px 8%;
+
+}
+
+.journeys h2{
+
+font-size:60px;
+color:#d4af37;
+margin-bottom:60px;
+
+}
+
+.journey{
+
+margin-bottom:90px;
+
+}
+
+.journey img{
+
+width:100%;
+display:block;
+border-radius:20px;
+
+}
+
+.journey-text{
+
+padding:25px 10px;
+
+}
+
+.journey-text h3{
+
+font-size:42px;
+color:#d4af37;
+margin-bottom:10px;
+
+}
+
+.journey-text p{
+
+font-size:22px;
+line-height:1.6;
+color:#bdbdbd;
+
+}

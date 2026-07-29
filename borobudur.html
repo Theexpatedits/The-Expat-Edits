@@ -1,190 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+<section id="gallery" class="section">
 
-<head>
+    <div class="section-heading">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <p>Photography</p>
 
-<title>Borobudur | The Expat Edits</title>
+        <h2>Gallery</h2>
 
-<link rel="stylesheet" href="style.css">
+    </div>
 
-</head>
+    <div class="gallery">
 
-<body>
+        <img src="Borobudur - monk.jpg.jpeg" alt="Monks at Borobudur">
 
-<nav class="navbar">
+        <div class="gallery-row">
 
-<a href="index.html" class="logo">
+            <img src="Borobudur - Buddha2.jpg.jpeg" alt="Buddha Statue">
 
-THE EXPAT<br>EDITS
+            <img src="Borobudur - temple.jpg.jpeg" alt="Temple">
 
-</a>
+        </div>
 
-<ul>
+        <img src="Borobudur- mist.jpg.jpeg" alt="Morning Mist">
 
-<li><a href="index.html">Home</a></li>
-<li><a href="#story">Story</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#snapshot">Snapshot</a></li>
+        <div class="gallery-row">
 
-</ul>
+            <img src="Borobudur- stoopa2.jpg.jpeg" alt="Stone Stupa">
 
-</nav>
+            <img src="Borobudur - meditating.jpg.jpeg" alt="Meditating Monk">
 
+        </div>
 
+        <img src="Borobudur - buddha3.jpg.jpeg" alt="Buddha">
 
-<header class="destination-hero" style="background-image:url('Borobudur - hero.jpg.jpeg');">
+        <div class="gallery-row">
 
-<div class="hero-overlay">
+            <img src="Borobudur - stoopa1.jpg.jpeg" alt="Stupa">
 
-<p class="eyebrow">
+            <img src="Borobudur - buddha1.jpg.jpeg" alt="Buddha">
 
-JOURNEY 01
+        </div>
 
-</p>
-
-<h1>
-
-BOROBUDUR
-
-</h1>
-
-<p class="subtitle">
-
-Central Java • Indonesia
-
-</p>
-
-<p class="hero-text">
-
-Where sunrise meets history.
-
-</p>
-
-<a href="#story" class="button">
-
-Begin Journey
-
-</a>
-
-</div>
-
-</header>
-
-
-
-<section id="story" class="editorial">
-
-<div class="editorial-wrapper">
-
-<p class="section-label">
-
-THE EXPERIENCE
-
-</p>
-
-<h2>
-
-Watching the sun rise over Borobudur is one of those rare travel experiences that quietly stays with you long after you've returned home.
-
-</h2>
-
-<p>
-
-Before dawn, the temple is almost silent. As the first light reaches the ancient stone stupas, the surrounding volcanoes slowly emerge from the mist and the entire landscape begins to glow. It isn't just a visit to a UNESCO World Heritage Site—it's an experience that feels timeless.
-
-</p>
-
-<p>
-
-Rather than rushing through the monument, take your time. Wander the upper terraces, admire the intricate carvings, and simply pause to appreciate one of the world's greatest Buddhist temples.
-
-</p>
-
-</div>
+    </div>
 
 </section>
+/* ---------- BOROBUDUR GALLERY ---------- */
 
+.gallery{
+    max-width:1200px;
+    margin:70px auto;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
 
+.gallery img{
+    width:100%;
+    display:block;
+    border-radius:16px;
+}
 
-<section id="snapshot" class="snapshot">
+.gallery-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
 
-<div class="snapshot-card">
+@media(max-width:768px){
 
-<h3>
+.gallery-row{
+    grid-template-columns:1fr;
+}
 
-Trip Snapshot
-
-</h3>
-
-<div class="snapshot-grid">
-
-<div>
-
-<span>Destination</span>
-
-<strong>Borobudur</strong>
-
-</div>
-
-<div>
-
-<span>Country</span>
-
-<strong>Indonesia</strong>
-
-</div>
-
-<div>
-
-<span>Best Time</span>
-
-<strong>Sunrise</strong>
-
-</div>
-
-<div>
-
-<span>Recommended Stay</span>
-
-<strong>2–3 Days</strong>
-
-</div>
-
-<div>
-
-<span>Highlight</span>
-
-<strong>Temple Sunrise</strong>
-
-</div>
-
-<div>
-
-<span>Status</span>
-
-<strong>★★★★★</strong>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="gallery">
-
-<!-- Gallery begins in Part 1B -->
-
-</section>
-
-
-
-</body>
-
-</html>
+}

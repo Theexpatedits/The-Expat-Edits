@@ -1106,3 +1106,138 @@ footer{
     }
 
 }
+
+/* ==========================================
+   INTERACTIVE WORLD MAP
+========================================== */
+
+.map-wrapper{
+    position:relative;
+    max-width:1200px;
+    margin:70px auto;
+}
+
+.interactive-map{
+    width:100%;
+    display:block;
+    border-radius:24px;
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+
+/* Travel Stats */
+
+.travel-stats{
+    display:flex;
+    justify-content:center;
+    gap:70px;
+    margin:45px 0;
+    flex-wrap:wrap;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat .number{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    color:#d4af37;
+}
+
+.stat .label{
+    color:#cfcfcf;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:.8rem;
+}
+
+/* Pins */
+
+.map-pin{
+    position:absolute;
+    width:22px;
+    height:22px;
+    margin-left:-11px;
+    margin-top:-11px;
+    border-radius:50%;
+    background:#d4af37;
+    border:3px solid white;
+    box-shadow:0 0 25px rgba(212,175,55,.8);
+    animation:pulse 2s infinite;
+    transition:.3s;
+}
+
+.map-pin:hover{
+    transform:scale(1.35);
+}
+
+.map-pin span{
+    position:absolute;
+    inset:-8px;
+    border:2px solid rgba(212,175,55,.45);
+    border-radius:50%;
+}
+
+/* Correct pin positions */
+
+.borobudur{
+    left:71%;
+    top:58%;
+}
+
+.komodo{
+    left:74%;
+    top:63%;
+}
+
+.hongkong{
+    left:84%;
+    top:39%;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(212,175,55,.6);
+    }
+
+    70%{
+        box-shadow:0 0 0 18px rgba(212,175,55,0);
+    }
+
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 0 0 rgba(212,175,55,0);
+    }
+
+}
+
+.map-tip{
+    text-align:center;
+    color:#bfbfbf;
+    margin-top:35px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:.8rem;
+}
+
+@media(max-width:768px){
+
+    .travel-stats{
+        gap:35px;
+    }
+
+    .stat .number{
+        font-size:2.2rem;
+    }
+
+    .map-pin{
+        width:18px;
+        height:18px;
+        margin-left:-9px;
+        margin-top:-9px;
+    }
+
+}

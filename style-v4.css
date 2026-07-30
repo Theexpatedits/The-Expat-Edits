@@ -764,6 +764,19 @@ figure{
    HOTELS
 ========================== */
 
+<div class="hotel-grid">
+
+    <div class="hotel-card">
+    ...
+    </div>
+
+    <div class="hotel-card">
+    ...
+    </div>
+
+</div>
+
+
 .hotel-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));

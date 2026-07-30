@@ -1223,19 +1223,19 @@ footer{
 
 /* Correct pin positions */
 
-.borobudur{
-    left:71%;
-    top:58%;
-}
-
-.komodo{
-    left:74%;
-    top:63%;
-}
-
-.hongkong{
+.map-pin.hongkong{
     left:84%;
     top:39%;
+}
+
+.map-pin.borobudur{
+    left:72%;
+    top:57%;
+}
+
+.map-pin.komodo{
+    left:80%;
+    top:61%;
 }
 
 @keyframes pulse{

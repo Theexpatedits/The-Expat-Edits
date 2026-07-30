@@ -1120,21 +1120,38 @@ footer{
     overflow:hidden;
 }
 .interactive-map{
+
+    position:relative;
+
     width:100%;
+
     display:block;
-    opacity:.25;
-    filter:grayscale(100%) brightness(65%);
+
+    opacity:.45;
+
+    filter:
+        grayscale(100%)
+        brightness(.75)
+        contrast(1.15);
+
+    transform:scale(1.05);
+
+    z-index:1;
+
 }
 
 .map-wrapper::before{
     content:"";
     position:absolute;
-    inset:0;
+    inset:-100px;
     background:
         radial-gradient(circle at center,
-        rgba(212,175,55,.08),
-        transparent 65%);
+        rgba(212,175,55,.12) 0%,
+        rgba(212,175,55,.05) 35%,
+        transparent 75%);
+    filter:blur(70px);
     pointer-events:none;
+    z-index:0;
 }
 /* Travel Stats */
 
@@ -1167,17 +1184,30 @@ footer{
 /* Pins */
 
 .map-pin{
+
     position:absolute;
-    width:22px;
-    height:22px;
-    margin-left:-11px;
-    margin-top:-11px;
+
+    width:18px;
+    height:18px;
+
+    margin-left:-9px;
+    margin-top:-9px;
+
     border-radius:50%;
+
     background:#d4af37;
-    border:3px solid white;
-    box-shadow:0 0 25px rgba(212,175,55,.8);
-    animation:pulse 2s infinite;
-    transition:.3s;
+
+    border:2px solid #ffffff;
+
+    box-shadow:
+        0 0 10px rgba(212,175,55,.8),
+        0 0 25px rgba(212,175,55,.55),
+        0 0 50px rgba(212,175,55,.35);
+
+    animation:pulse 2.5s infinite;
+
+    z-index:10;
+
 }
 
 .map-pin:hover{

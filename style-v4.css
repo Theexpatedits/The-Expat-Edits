@@ -1013,14 +1013,6 @@ footer{
 
 }
 
-
-
-@media (max-width:768px){
-
-.camera-roll-track img{
-    width:260px;
-    height:350px;
-}
 /* ==========================
    CAMERA ROLL
 ========================== */
@@ -1056,6 +1048,14 @@ footer{
 }
 
 @keyframes scrollRoll{
+
+
+@media (max-width:768px){
+
+.camera-roll-track img{
+    width:260px;
+    height:350px;
+}
 
     from{
         transform:translateX(0);

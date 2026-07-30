@@ -1112,17 +1112,17 @@ footer{
 ========================================== */
 
 .map-wrapper{
-   overflow:hidden;
     position:relative;
-    max-width:1200px;
-    margin:70px auto;
-    padding:40px 0;
+    width:100%;
+    max-width:1400px;
+    margin:80px auto;
+    padding:20px 0 60px;
+    overflow:hidden;
 }
-
 .interactive-map{
     width:100%;
     display:block;
-    opacity:.88;
+    opacity:.35;
 }
 
 /* Travel Stats */

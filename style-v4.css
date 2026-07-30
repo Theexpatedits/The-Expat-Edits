@@ -1112,6 +1112,7 @@ footer{
 ========================================== */
 
 .map-wrapper{
+   overflow:hidden;
     position:relative;
     max-width:1200px;
     margin:70px auto;
@@ -1248,22 +1249,14 @@ footer{
 
     position:absolute;
 
-    top:8%;
-    left:6%;
+    top:55%;
+    left:50%;
 
-    width:290px;
+    transform:translate(-50%,-50%);
 
-    background:#141414;
+    width:320px;
 
-    border:1px solid rgba(212,175,55,.25);
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.45);
-
-}
+    z-index:20;
 
 .map-card img{
 

@@ -1122,9 +1122,20 @@ footer{
 .interactive-map{
     width:100%;
     display:block;
-    opacity:.35;
+    opacity:.25;
+    filter:grayscale(100%) brightness(65%);
 }
 
+.map-wrapper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at center,
+        rgba(212,175,55,.08),
+        transparent 65%);
+    pointer-events:none;
+}
 /* Travel Stats */
 
 .travel-stats{

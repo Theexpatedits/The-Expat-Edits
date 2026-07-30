@@ -761,6 +761,43 @@ figure{
 
 
 /* ==========================
+   HOTELS
+========================== */
+
+.hotel-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.hotel-card{
+    background:#111;
+    border:1px solid rgba(212,175,55,.15);
+    border-radius:18px;
+    padding:35px;
+    transition:.35s;
+}
+
+.hotel-card:hover{
+    transform:translateY(-6px);
+    border-color:#d4af37;
+}
+
+.hotel-card h3{
+    color:#d4af37;
+    margin-bottom:18px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+}
+
+.hotel-card p{
+    color:#d8d8d8;
+}
+
+
+/* ==========================
    FOOTER
 ========================== */
 

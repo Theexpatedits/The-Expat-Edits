@@ -1362,3 +1362,38 @@ footer{
     font-weight:600;
 
 }
+
+/* =====================================
+   EXPERIENCE SECTION
+===================================== */
+
+.experience-section{
+    max-width:900px;
+    margin:120px auto;
+    padding:0 28px;
+}
+
+.experience-section .section-label{
+    color:#d4af37;
+    text-transform:uppercase;
+    letter-spacing:6px;
+    font-size:.85rem;
+    margin-bottom:18px;
+}
+
+.experience-section .section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    font-weight:500;
+    color:#fff;
+    margin-bottom:50px;
+    line-height:1.1;
+}
+
+.experience-section p{
+    max-width:760px;
+    color:#d7d7d7;
+    font-size:1.15rem;
+    line-height:2;
+    margin-bottom:30px;
+}

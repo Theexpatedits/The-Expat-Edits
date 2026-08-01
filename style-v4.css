@@ -1380,12 +1380,14 @@ footer{
 
     display:block;
 
-    opacity:.45;
+    opacity:.65;
 
     filter:
-        grayscale(100%)
-        brightness(.75)
-        contrast(1.15);
+        sepia(100%)
+        hue-rotate(350deg)
+        saturate(180%)
+        brightness(.9)
+        contrast(1.05);
 
     transform:scale(1.05);
 

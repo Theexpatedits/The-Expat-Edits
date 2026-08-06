@@ -1,0 +1,2164 @@
+/* ==========================================
+   THE EXPAT EDITS
+   VERSION 5.0
+   PART A
+   Foundation • Navigation • Hero
+========================================== */
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0b0b;
+    color:#ffffff;
+    font-family:'Inter',sans-serif;
+    line-height:1.8;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* ==========================
+   TYPOGRAPHY
+========================== */
+
+h1,
+h2,
+h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+}
+
+.container{
+
+    width:min(1280px,92%);
+    margin:auto;
+
+}
+
+.section{
+
+    padding:120px 0;
+
+}
+
+.section-label{
+
+    color:#d4af37;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:.82rem;
+
+    margin-bottom:18px;
+
+}
+
+.section-title{
+
+    font-size:3.8rem;
+
+    line-height:1.05;
+
+    margin-bottom:28px;
+
+}
+
+.section-text{
+
+    max-width:760px;
+
+    color:#d5d5d5;
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+}
+
+nav{
+
+    width:min(1400px,92%);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:35px 0;
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    letter-spacing:5px;
+
+    color:white;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:36px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    letter-spacing:2px;
+
+    font-size:.92rem;
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+    color:#d4af37;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.hero img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.25)
+    );
+
+    z-index:1;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        #0b0b0b,
+        transparent 45%
+    );
+
+    z-index:2;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    left:8%;
+
+    bottom:12%;
+
+    max-width:650px;
+
+    z-index:3;
+
+}
+
+.hero-kicker{
+
+    color:#d4af37;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    font-size:.82rem;
+
+    margin-bottom:24px;
+
+}
+
+.hero h1{
+
+    font-size:5.4rem;
+
+    line-height:.92;
+
+    margin-bottom:28px;
+
+}
+
+.hero-description{
+
+    color:#ececec;
+
+    font-size:1.18rem;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+.hero-button{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border:1px solid #d4af37;
+
+    border-radius:100px;
+
+    color:#d4af37;
+
+    transition:.35s ease;
+
+}
+
+.hero-button:hover{
+
+    background:#d4af37;
+
+    color:#111;
+
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+
+    color:white;
+
+    z-index:5;
+
+    animation:bounce 2.5s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,20%,50%,80%,100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    40%{
+
+        transform:translate(-50%,-12px);
+
+    }
+
+    60%{
+
+        transform:translate(-50%,-6px);
+
+    }
+
+}
+
+/* ==========================
+   FEATURED INTRO
+========================== */
+
+.featured-intro{
+
+    width:min(900px,90%);
+
+    margin:140px auto;
+
+    text-align:center;
+
+}
+
+.featured-intro h2{
+
+    font-size:3.4rem;
+
+    margin:18px 0 28px;
+
+}
+
+.featured-intro p{
+
+    color:#d6d6d6;
+
+    line-height:2;
+
+    font-size:1.08rem;
+
+}
+
+/* ==========================================
+   PART B
+   FEATURED EDITIONS
+========================================== */
+
+.featured-editions{
+
+    width:min(1350px,92%);
+    margin:0 auto 140px;
+
+}
+
+.edition{
+
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:80px;
+    align-items:center;
+
+    margin-bottom:160px;
+
+}
+
+.edition.reverse{
+
+    grid-template-columns:1fr 1.35fr;
+
+}
+
+.edition.reverse .edition-image{
+
+    order:2;
+
+}
+
+.edition.reverse .edition-content{
+
+    order:1;
+
+}
+
+.edition-image{
+
+    overflow:hidden;
+    border-radius:22px;
+
+}
+
+.edition-image img{
+
+    width:100%;
+    height:650px;
+    object-fit:cover;
+
+    transition:transform .8s ease;
+
+}
+
+.edition:hover .edition-image img{
+
+    transform:scale(1.04);
+
+}
+
+.edition-content{
+
+    max-width:500px;
+
+}
+
+.edition-country{
+
+    color:#d4af37;
+
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-size:.8rem;
+
+    margin-bottom:16px;
+
+}
+
+.edition-content h3{
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+}
+
+.edition-content p{
+
+    color:#d7d7d7;
+
+    line-height:2;
+
+    margin-bottom:35px;
+
+}
+
+.edition-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#d4af37;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.edition-link:hover{
+
+    color:white;
+
+    transform:translateX(8px);
+
+}
+
+@media(max-width:900px){
+
+    .edition,
+    .edition.reverse{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        margin-bottom:90px;
+
+    }
+
+    .edition.reverse .edition-image,
+    .edition.reverse .edition-content{
+
+        order:initial;
+
+    }
+
+    .edition-image img{
+
+        height:380px;
+
+    }
+
+    .edition-content h3{
+
+        font-size:2.8rem;
+
+    }
+
+}
+
+/* ==========================================
+   PART C
+   WORLD MAP
+========================================== */
+
+.explore-world{
+
+    padding:140px 0;
+
+    background:#0d0d0d;
+
+}
+
+.explore-header{
+
+    width:min(900px,90%);
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+.explore-header h2{
+
+    font-size:3.6rem;
+
+    margin:20px 0;
+
+}
+
+.explore-header p{
+
+    color:#d5d5d5;
+
+    line-height:2;
+
+    font-size:1.08rem;
+
+}
+
+.travel-stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:90px;
+
+    flex-wrap:wrap;
+
+    margin:70px 0;
+
+}
+
+.stat{
+
+    text-align:center;
+
+}
+
+.stat-number{
+
+    display:block;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4rem;
+
+    color:#d4af37;
+
+    line-height:1;
+
+}
+
+.stat-label{
+
+    margin-top:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.8rem;
+
+    color:#bbbbbb;
+
+}
+
+.map-wrapper{
+
+    position:relative;
+
+    width:min(1400px,94%);
+
+    margin:80px auto;
+
+}
+
+.interactive-map{
+
+    width:100%;
+
+    opacity:.82;
+
+    transition:.4s;
+
+}
+
+.interactive-map:hover{
+
+    transform:scale(1.01);
+
+}
+
+.map-pin{
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    background:#d4af37;
+
+    border-radius:50%;
+
+    border:2px solid white;
+
+    margin-left:-9px;
+
+    margin-top:-9px;
+
+    animation:pulse 2.8s infinite;
+
+}
+
+.map-pin:hover{
+
+    transform:scale(1.4);
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:0 0 0 0 rgba(212,175,55,.6);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(212,175,55,0);
+
+}
+
+100%{
+
+transform:scale(1);
+
+box-shadow:0 0 0 0 rgba(212,175,55,0);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.travel-stats{
+
+gap:45px;
+
+}
+
+.stat-number{
+
+font-size:2.8rem;
+
+}
+
+}
+
+/* ==========================================
+   PART D
+   FOOTER
+========================================== */
+
+footer{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    margin-top:120px;
+
+    padding:80px 8%;
+
+    text-align:center;
+
+    background:#080808;
+
+}
+
+footer h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.4rem;
+
+    letter-spacing:8px;
+
+    color:#ffffff;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#aaaaaa;
+
+    max-width:700px;
+
+    margin:15px auto;
+
+    line-height:1.8;
+
+}
+
+footer .social-link{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    color:#d4af37;
+
+    transition:.3s;
+
+}
+
+footer .social-link:hover{
+
+    color:white;
+
+}
+
+.copyright{
+
+    margin-top:40px;
+
+    font-size:.82rem;
+
+    opacity:.6;
+
+}
+
+
+/* ==========================================
+   GLOBAL IMAGE EFFECTS
+========================================== */
+
+img{
+
+    transition:transform .6s ease;
+
+}
+
+.edition:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button,
+.hero-button,
+.edition-link{
+
+    transition:all .35s ease;
+
+}
+
+.hero-button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.edition-link:hover{
+
+    transform:translateX(8px);
+
+}
+
+
+/* ==========================================
+   SECTION SPACING
+========================================== */
+
+section{
+
+    position:relative;
+
+}
+
+.featured-editions{
+
+    padding-top:40px;
+
+}
+
+.explore-world{
+
+    padding-top:80px;
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:900px){
+
+    nav{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+        padding:30px 0;
+
+    }
+
+    .logo{
+
+        font-size:1.8rem;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        gap:18px;
+
+    }
+
+    .hero{
+
+        height:90vh;
+
+    }
+
+    .hero-overlay{
+
+        left:30px;
+
+        right:30px;
+
+        bottom:70px;
+
+        max-width:none;
+
+    }
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .hero-description{
+
+        font-size:1rem;
+
+    }
+
+    .featured-intro{
+
+        margin:90px auto;
+
+    }
+
+    .featured-intro h2{
+
+        font-size:2.5rem;
+
+    }
+
+    .section-title{
+
+        font-size:2.5rem;
+
+    }
+
+    .edition{
+
+        margin-bottom:90px;
+
+    }
+
+    .edition-image img{
+
+        height:360px;
+
+    }
+
+    .edition-content h3{
+
+        font-size:2.6rem;
+
+    }
+
+    .explore-header h2{
+
+        font-size:2.5rem;
+
+    }
+
+    footer{
+
+        padding:60px 30px;
+
+    }
+
+}
+
+
+/* ==========================================
+   LARGE DESKTOPS
+========================================== */
+
+@media (min-width:1600px){
+
+    .hero h1{
+
+        font-size:6rem;
+
+    }
+
+    .edition-image img{
+
+        height:760px;
+
+    }
+
+}
+
+/* ==========================================
+   PART E
+   JOURNAL
+========================================== */
+
+.journal{
+
+    width:min(1350px,92%);
+    margin:140px auto;
+
+}
+
+.journal-header{
+
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 70px;
+
+}
+
+.journal-header h2{
+
+    font-size:3.4rem;
+    margin:18px 0 28px;
+
+}
+
+.journal-header p{
+
+    color:#d4d4d4;
+    line-height:2;
+
+}
+
+.journal-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+
+}
+
+.journal-card{
+
+    background:#121212;
+    border-radius:22px;
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+.journal-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.journal-card img{
+
+    width:100%;
+    height:320px;
+    object-fit:cover;
+
+}
+
+.journal-content{
+
+    padding:30px;
+
+}
+
+.journal-content p{
+
+    color:#d4af37;
+    letter-spacing:3px;
+    font-size:.78rem;
+    margin-bottom:12px;
+
+}
+
+.journal-content h3{
+
+    font-size:2rem;
+    margin-bottom:20px;
+
+}
+
+.journal-content a{
+
+    color:#d4af37;
+
+}
+
+@media(max-width:900px){
+
+    .journal-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================
+   PART F
+   POLISH & ANIMATIONS
+========================================== */
+
+/* Smooth fade-in */
+
+.fade-in{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+
+}
+
+.fade-in.visible{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* Gentle image zoom */
+
+.edition-image{
+
+    position:relative;
+
+}
+
+.edition-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.18),
+        transparent 55%
+    );
+
+    opacity:.6;
+
+    transition:.4s;
+
+}
+
+.edition:hover .edition-image::after{
+
+    opacity:.25;
+
+}
+
+.edition:hover .edition-image img{
+
+    transform:scale(1.05);
+
+}
+
+/* Journal cards */
+
+.journal-card{
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.28);
+
+}
+
+.journal-card:hover{
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.45);
+
+}
+
+/* Better button transitions */
+
+.hero-button,
+.edition-link{
+
+    transition:
+        background .35s,
+        color .35s,
+        transform .35s;
+
+}
+
+/* Section spacing */
+
+.featured-editions{
+
+    margin-top:40px;
+
+}
+
+.journal{
+
+    margin-top:180px;
+
+}
+
+.explore-world{
+
+    margin-top:160px;
+
+}
+
+/* Elegant divider */
+
+.editorial-divider{
+
+    width:80px;
+
+    height:2px;
+
+    background:#d4af37;
+
+    margin:70px auto;
+
+    opacity:.35;
+
+}
+
+/* ==========================================
+   PART G
+   PREMIUM POLISH
+========================================== */
+
+/* ------------------------------------------
+   Page Width
+------------------------------------------ */
+
+.container{
+
+    width:min(1400px,92%);
+    margin:auto;
+
+}
+
+/* ------------------------------------------
+   Smooth Scrolling Sections
+------------------------------------------ */
+
+section{
+
+    scroll-margin-top:120px;
+
+}
+
+/* ------------------------------------------
+   Edition Image Overlay
+------------------------------------------ */
+
+.edition-image{
+
+    position:relative;
+
+}
+
+.edition-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.28),
+        rgba(0,0,0,0)
+    );
+
+    opacity:.6;
+
+    transition:.5s;
+
+    z-index:1;
+
+}
+
+.edition:hover .edition-image::before{
+
+    opacity:.2;
+
+}
+
+/* ------------------------------------------
+   Soft Shadow
+------------------------------------------ */
+
+.edition-image img{
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.35);
+
+}
+
+/* ------------------------------------------
+   Headings
+------------------------------------------ */
+
+h2{
+
+    letter-spacing:.5px;
+
+}
+
+h3{
+
+    letter-spacing:.2px;
+
+}
+
+/* ------------------------------------------
+   Gold Accent Line
+------------------------------------------ */
+
+.gold-line{
+
+    width:70px;
+
+    height:2px;
+
+    background:#d4af37;
+
+    margin:30px 0;
+
+}
+
+/* ------------------------------------------
+   Selection Colour
+------------------------------------------ */
+
+::selection{
+
+    background:#d4af37;
+
+    color:#111;
+
+}
+
+/* ------------------------------------------
+   Scrollbar
+------------------------------------------ */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0b0b0b;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#555;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#d4af37;
+
+}
+
+/* ------------------------------------------
+   Gentle Fade
+------------------------------------------ */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+body{
+
+    animation:fadeIn .8s ease;
+
+}
+
+/* ------------------------------------------
+   Footer Polish
+------------------------------------------ */
+
+footer{
+
+    background:#050505;
+
+}
+
+footer h3{
+
+    color:#ffffff;
+
+}
+
+footer .social-link{
+
+    letter-spacing:2px;
+
+}
+
+/* ==========================================
+   PART H
+   EDITORIAL POLISH
+========================================== */
+
+/* Elegant content width */
+
+.reading-width{
+
+    max-width:760px;
+
+}
+
+/* Editorial quotes */
+
+.editorial-quote{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.6rem;
+
+    line-height:1.4;
+
+    text-align:center;
+
+    color:#ffffff;
+
+    max-width:900px;
+
+    margin:140px auto;
+
+    font-style:italic;
+
+}
+
+.editorial-quote span{
+
+    display:block;
+
+    margin-top:25px;
+
+    font-size:1rem;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#d4af37;
+
+    font-style:normal;
+
+}
+
+/* Large editorial spacing */
+
+.editorial-space{
+
+    padding:180px 0;
+
+}
+
+/* Subtle image borders */
+
+.edition-image{
+
+    border:1px solid rgba(255,255,255,.05);
+
+}
+
+/* Image captions */
+
+.image-caption{
+
+    margin-top:16px;
+
+    font-size:.82rem;
+
+    color:#888;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+/* Links */
+
+a{
+
+    transition:all .35s ease;
+
+}
+
+/* Navigation underline */
+
+.nav-links a{
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:1px;
+
+    background:#d4af37;
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* Softer paragraphs */
+
+p{
+
+    text-rendering:optimizeLegibility;
+
+}
+
+/* Cleaner buttons */
+
+.hero-button{
+
+    backdrop-filter:blur(6px);
+
+}
+
+/* Hero text shadow */
+
+.hero-overlay{
+
+    text-shadow:
+
+        0 3px 25px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================
+   PART I
+   EDITOR'S NOTE
+========================================== */
+
+.editors-note{
+
+    padding:160px 0;
+
+    background:#0d0d0d;
+
+}
+
+.editors-note-content{
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.editors-note h2{
+
+    font-size:3.8rem;
+
+    line-height:1.15;
+
+    margin:25px 0 40px;
+
+}
+
+.editors-note p{
+
+    color:#d3d3d3;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+}
+
+.editors-note::before{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:2px;
+
+    background:#d4af37;
+
+    margin:0 auto 60px;
+
+    opacity:.4;
+
+}
+
+
+/* ==========================================
+   PART J
+   LUXURY MICRO INTERACTIONS
+========================================== */
+
+/* Smooth page scrolling */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* Images */
+
+img{
+
+    user-select:none;
+    -webkit-user-drag:none;
+
+}
+
+/* Better focus styles */
+
+a:focus-visible{
+
+    outline:2px solid #d4af37;
+    outline-offset:6px;
+
+}
+
+/* Hero button */
+
+.hero-button{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.hero-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:100%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+    transition:1s;
+
+}
+
+.hero-button:hover::before{
+
+    left:120%;
+
+}
+
+/* Edition cards */
+
+.edition{
+
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+
+}
+
+.edition:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* Journal cards */
+
+.journal-card{
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.journal-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* Navigation */
+
+nav{
+
+    transition:padding .35s ease;
+
+}
+
+/* Section headings */
+
+.section-label{
+
+    position:relative;
+
+}
+
+.section-label::after{
+
+    content:"";
+
+    display:block;
+
+    width:40px;
+
+    height:2px;
+
+    margin:12px auto 0;
+
+    background:#d4af37;
+
+    opacity:.45;
+
+}
+
+/* Better paragraph spacing */
+
+p{
+
+    margin-bottom:1rem;
+
+}
+
+/* Gold highlight */
+
+.gold{
+
+    color:#d4af37;
+
+}
+
+/* Editorial spacing */
+
+.editorial{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   PART K
+   PREMIUM LAYOUT
+========================================== */
+
+/* Consistent content width */
+
+.content-width{
+
+    width:min(1280px,92%);
+    margin:0 auto;
+
+}
+
+/* Large editorial spacing */
+
+.section{
+
+    padding:140px 0;
+
+}
+
+/* Better vertical rhythm */
+
+.featured-intro,
+.editors-note,
+.journal-header,
+.explore-header{
+
+    max-width:860px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+/* Smooth typography */
+
+body{
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/* Elegant serif headings */
+
+h1,
+h2,
+h3{
+
+    font-weight:600;
+    letter-spacing:.2px;
+
+}
+
+/* Refined paragraph styling */
+
+p{
+
+    max-width:70ch;
+
+}
+
+/* Better image presentation */
+
+.edition-image{
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background:#111;
+
+}
+
+.edition-image img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+/* Subtle lift on hover */
+
+.edition{
+
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+
+}
+
+.edition:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* Divider */
+
+.section-divider{
+
+    width:100px;
+
+    height:1px;
+
+    background:rgba(212,175,55,.35);
+
+    margin:100px auto;
+
+}
+
+/* Intro spacing */
+
+.featured-intro{
+
+    padding-top:40px;
+
+}
+
+.featured-intro h2{
+
+    margin-bottom:30px;
+
+}
+
+/* Journal spacing */
+
+.journal{
+
+    padding-top:40px;
+
+}
+
+/* Footer breathing room */
+
+footer{
+
+    padding-top:100px;
+
+}
+
+/* Gold text utility */
+
+.gold-text{
+
+    color:#d4af37;
+
+}
+
+/* Image rendering */
+
+img{
+
+    image-rendering:auto;
+
+}
+
+/* Prevent layout shifts */
+
+.edition-image img,
+.journal-card img,
+.hero img{
+
+    aspect-ratio:auto;
+
+}
+
+/* Selection colour */
+
+::selection{
+
+    background:#d4af37;
+    color:#111;
+
+}
+
+/* ==========================================
+   PART L
+   FINAL POLISH & UTILITIES
+========================================== */
+
+/* ---------- Utilities ---------- */
+
+.hidden{
+    display:none !important;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.mt-0{ margin-top:0; }
+.mt-1{ margin-top:20px; }
+.mt-2{ margin-top:40px; }
+.mt-3{ margin-top:80px; }
+
+.mb-0{ margin-bottom:0; }
+.mb-1{ margin-bottom:20px; }
+.mb-2{ margin-bottom:40px; }
+.mb-3{ margin-bottom:80px; }
+
+
+/* ---------- Image Quality ---------- */
+
+.hero img,
+.edition-image img,
+.journal-card img{
+
+    backface-visibility:hidden;
+    transform:translateZ(0);
+
+}
+
+
+/* ---------- Better Link Animation ---------- */
+
+a{
+
+    transition:
+        color .3s ease,
+        opacity .3s ease;
+
+}
+
+a:hover{
+
+    opacity:.95;
+
+}
+
+
+/* ---------- Buttons ---------- */
+
+.hero-button,
+.edition-link{
+
+    cursor:pointer;
+
+}
+
+.hero-button:active{
+
+    transform:translateY(1px);
+
+}
+
+
+/* ---------- Section Animation ---------- */
+
+.featured-intro,
+.editors-note,
+.edition,
+.journal-card,
+.explore-world{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ---------- Reduce Motion ---------- */
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+
+/* ---------- Mobile Improvements ---------- */
+
+@media (max-width:768px){
+
+    .hero{
+
+        min-height:85vh;
+
+    }
+
+    .hero-overlay{
+
+        bottom:50px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .section{
+
+        padding:90px 0;
+
+    }
+
+    .featured-intro h2,
+    .editors-note h2,
+    .explore-header h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .journal-card img{
+
+        height:260px;
+
+    }
+
+}
+
+
+/* ---------- Print ---------- */
+
+@media print{
+
+    nav,
+    footer,
+    .scroll-indicator{
+
+        display:none;
+
+    }
+
+    body{
+
+        background:white;
+        color:black;
+
+    }
+
+}

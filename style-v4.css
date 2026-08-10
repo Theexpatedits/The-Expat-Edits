@@ -899,15 +899,17 @@ figure{
 
     width:100%;
 
+    height:auto;
+
     border-radius:18px;
 
-    object-fit:cover;
+    object-fit:contain;
 
 }
 
 .gallery > img{
 
-    height:560px;
+    height:auto;
 
 }
 
@@ -923,7 +925,13 @@ figure{
 
 .gallery-row img{
 
-    height:400px;
+    height:auto;
+
+    width:100%;
+
+    object-fit:contain;
+
+}
 
 }
 

@@ -2460,3 +2460,64 @@ a:hover{
     }
 
 }
+/* =========================================================
+   EDITION CARDS — CONSISTENT IMAGE PROPORTIONS
+   ========================================================= */
+
+.home-page .edition-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.05;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.home-page .edition-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Keep every edition card visually consistent */
+.home-page .edition {
+    align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .home-page .edition-image {
+        aspect-ratio: 1 / 1;
+    }
+
+}/* =========================================================
+   EDITION CARDS — CONSISTENT IMAGE PROPORTIONS
+   ========================================================= */
+
+.home-page .edition-image {
+    width: 100%;
+    aspect-ratio: 1 / 1.05;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.home-page .edition-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Keep every edition card visually consistent */
+.home-page .edition {
+    align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .home-page .edition-image {
+        aspect-ratio: 1 / 1;
+    }
+
+}

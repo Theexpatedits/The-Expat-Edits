@@ -104,12 +104,12 @@ a {
 
     color: #f4f1eb;
 
-    font-family: "Inter", sans-serif;
+    font-family: "cormorant garamond", sans-serif;
     font-size: 2.15rem;
     font-weight: 600;
 
-    line-height: .78;
-    letter-spacing: .015em;
+    line-height: .72;
+    letter-spacing: .04em;
 }
 
 .home-page .nav-links {

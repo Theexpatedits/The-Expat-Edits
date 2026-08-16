@@ -150,31 +150,40 @@ a {
    ========================================================= */
 
 .home-page .hero {
-    position: relative;
+    position: relative !important;
+    display: block !important;
+
     width: 100%;
-    height: min(760px, 82vh);
-    min-height: 620px;
+    height: 720px;
+    min-height: 0;
+
     overflow: hidden;
 
     background: #292722;
 }
 
 .home-page .hero > img {
-    position: absolute;
-    inset: 0;
+    position: absolute !important;
 
-    width: 100%;
-    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none;
 
     object-fit: cover;
     object-position: center center;
 
-    transform: scale(1.01);
+    z-index: 0;
 }
 
 
 /* ---------------------------------------------------------
-   LEFT-TO-RIGHT IMAGE GRADIENT
+   IMAGE DARKENING
    --------------------------------------------------------- */
 
 .home-page .hero::before {
@@ -188,35 +197,36 @@ a {
     background:
         linear-gradient(
             90deg,
-            rgba(20, 19, 17, .68) 0%,
-            rgba(20, 19, 17, .38) 35%,
-            rgba(20, 19, 17, .08) 72%,
-            rgba(20, 19, 17, 0) 100%
+            rgba(20,19,17,.62) 0%,
+            rgba(20,19,17,.32) 38%,
+            rgba(20,19,17,.06) 75%,
+            rgba(20,19,17,0) 100%
         );
 }
 
 
 /* ---------------------------------------------------------
-   SOFT FADE INTO EDITORIAL PAGE
+   BOTTOM FADE
    --------------------------------------------------------- */
 
 .home-page .hero::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     right: 0;
     bottom: 0;
 
-    height: 150px;
+    height: 120px;
 
     z-index: 2;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(244, 241, 235, 0),
-            #f4f1eb
+            rgba(244,241,235,0),
+            rgba(244,241,235,.95)
         );
 }
 
@@ -226,16 +236,20 @@ a {
    --------------------------------------------------------- */
 
 .home-page .hero-overlay {
-    position: absolute;
+    position: absolute !important;
 
     left: 8%;
-    bottom: 17%;
+    bottom: 18%;
+
+    width: min(520px, 45%);
+    max-width: 520px;
 
     z-index: 3;
 
-    width: min(520px, 42%);
-
     color: #ffffff;
+
+    text-shadow:
+        0 3px 25px rgba(0,0,0,.35);
 }
 
 
@@ -244,7 +258,7 @@ a {
    --------------------------------------------------------- */
 
 .home-page .hero-kicker {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 
     color: #f4f1eb;
 
@@ -258,11 +272,11 @@ a {
 
 
 /* ---------------------------------------------------------
-   MAIN TITLE
+   TITLE
    --------------------------------------------------------- */
 
 .home-page .hero h1 {
-    margin-bottom: 22px;
+    margin: 0 0 22px;
 
     color: #ffffff;
 
@@ -271,9 +285,6 @@ a {
     font-weight: 500;
     letter-spacing: -.025em;
     line-height: .9;
-
-    text-shadow:
-        0 3px 25px rgba(0, 0, 0, .28);
 }
 
 
@@ -283,21 +294,19 @@ a {
 
 .home-page .hero-description {
     max-width: 470px;
-    margin-bottom: 30px;
 
-    color: rgba(255, 255, 255, .88);
+    margin: 0 0 30px;
+
+    color: rgba(255,255,255,.9);
 
     font-size: 14px;
     font-weight: 300;
     line-height: 1.8;
-
-    text-shadow:
-        0 2px 15px rgba(0, 0, 0, .35);
 }
 
 
 /* ---------------------------------------------------------
-   HERO BUTTON
+   BUTTON
    --------------------------------------------------------- */
 
 .home-page .hero-button {
@@ -305,7 +314,7 @@ a {
 
     padding: 12px 24px;
 
-    border: 1px solid rgba(244, 241, 235, .65);
+    border: 1px solid rgba(244,241,235,.7);
     border-radius: 100px;
 
     color: #ffffff;
@@ -336,7 +345,7 @@ a {
    --------------------------------------------------------- */
 
 .home-page .scroll-indicator {
-    position: absolute;
+    position: absolute !important;
 
     left: 50%;
     bottom: 25px;
@@ -348,21 +357,17 @@ a {
     color: #292722;
 
     font-size: 20px;
-    font-weight: 300;
-
-    opacity: .7;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================================================
    MOBILE HERO
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 768px) {
 
     .home-page .hero {
-        height: 78vh;
-        min-height: 560px;
+        height: 620px;
     }
 
     .home-page .hero > img {
@@ -373,29 +378,38 @@ a {
         background:
             linear-gradient(
                 90deg,
-                rgba(20, 19, 17, .62) 0%,
-                rgba(20, 19, 17, .25) 65%,
-                rgba(20, 19, 17, .05) 100%
+                rgba(20,19,17,.48) 0%,
+                rgba(20,19,17,.20) 55%,
+                rgba(20,19,17,.02) 100%
             );
+    }
+
+    .home-page .hero::after {
+        height: 90px;
     }
 
     .home-page .hero-overlay {
         left: 24px;
         right: 24px;
-        bottom: 14%;
+        bottom: 15%;
 
         width: auto;
+        max-width: none;
+    }
+
+    .home-page .hero-kicker {
+        font-size: 9px;
+        letter-spacing: .20em;
     }
 
     .home-page .hero h1 {
         font-size: 3.2rem;
-        line-height: .92;
     }
 
     .home-page .hero-description {
         max-width: 390px;
         font-size: 13px;
-        line-height: 1.75;
+        line-height: 1.7;
     }
 
     .home-page .hero-button {
@@ -403,12 +417,9 @@ a {
     }
 
     .home-page .scroll-indicator {
-        bottom: 20px;
+        bottom: 18px;
     }
-
 }
-
-
 /* =========================================================
    06 — EDITORIAL INTRO
    ========================================================= */

@@ -245,20 +245,27 @@ a {
 .home-page .hero-overlay {
     position: absolute;
 
-    left: 8%;
+    left: 50%;
     bottom: 18%;
 
-    width: min(520px, 45%);
-    max-width: 520px;
+    width: min(760px, 90%);
+    max-width: 760px;
 
     z-index: 5;
 
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform: translateX(-50%);
 
     color: #ffffff;
 
+    text-align: center;
+
     text-shadow:
-        0 3px 25px rgba(0,0,0,.35);
+        0 3px 25px rgba(0,0,0,.4);
+}
 }
 
 
@@ -311,9 +318,9 @@ a {
     position: relative;
     z-index: 6;
 
-    max-width: 470px;
+    max-width: 620px;
 
-    margin: 0 0 30px;
+    margin: 0 auto 30px;
 
     color: rgba(255,255,255,.9);
 

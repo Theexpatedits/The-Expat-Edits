@@ -239,20 +239,25 @@ a {
 .home-page .hero-overlay {
     position: absolute !important;
 
-    left: 8%;
-    bottom: 18%;
+    left: 24px;
+    right: 24px;
 
-    width: min(520px, 45%);
-    max-width: 520px;
+    bottom: 105px;
 
-    z-index: 3;
+    width: auto;
+    max-width: none;
 
-    color: #ffffff;
+    z-index: 5;
 
-    text-shadow:
-        0 3px 25px rgba(0,0,0,.35);
+    display: block;
 }
-
+.home-page .hero-kicker,
+.home-page .hero h1,
+.home-page .hero-description,
+.home-page .hero-button {
+    position: relative;
+    z-index: 6;
+}
 
 /* ---------------------------------------------------------
    KICKER
@@ -367,59 +372,39 @@ a {
 
 @media (max-width: 768px) {
 
-    .home-page .hero {
-        height: 620px;
+    .home-page header nav {
+        width: 100%;
+        padding: 18px 22px 16px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 16px;
     }
 
-    .home-page .hero > img {
-        object-position: center center;
+    .home-page .logo {
+        font-size: 1.75rem;
+        line-height: .78;
+        letter-spacing: .035em;
     }
 
-    .home-page .hero::before {
-        background:
-            linear-gradient(
-                90deg,
-                rgba(20,19,17,.48) 0%,
-                rgba(20,19,17,.20) 55%,
-                rgba(20,19,17,.02) 100%
-            );
+    .home-page .nav-links {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: nowrap;
+
+        gap: 22px;
     }
 
-    .home-page .hero::after {
-        height: 90px;
+    .home-page .nav-links a {
+        font-size: 10px;
+        letter-spacing: .13em;
+        white-space: nowrap;
     }
 
-    .home-page .hero-overlay {
-        left: 24px;
-        right: 24px;
-        bottom: 15%;
-
-        width: auto;
-        max-width: none;
-    }
-
-    .home-page .hero-kicker {
-        font-size: 9px;
-        letter-spacing: .20em;
-    }
-
-    .home-page .hero h1 {
-        font-size: 3.2rem;
-    }
-
-    .home-page .hero-description {
-        max-width: 390px;
-        font-size: 13px;
-        line-height: 1.7;
-    }
-
-    .home-page .hero-button {
-        padding: 11px 20px;
-    }
-
-    .home-page .scroll-indicator {
-        bottom: 18px;
-    }
+}
 }
 /* =========================================================
    06 — EDITORIAL INTRO

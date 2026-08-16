@@ -41,8 +41,10 @@ a {
 .home-page {
     background: #0b0b0b;
     color: #ffffff;
+
     font-family: "Inter", sans-serif;
     line-height: 1.7;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -146,34 +148,38 @@ a {
     width: 100%;
 }
 
+
 /* =========================================================
    05 — HERO
    ========================================================= */
 
 .home-page .hero {
-    position: relative !important;
-    display: block !important;
+    position: relative;
+    display: block;
 
     width: 100%;
     height: 720px;
-    min-height: 0;
 
     overflow: hidden;
 
     background: #292722;
 }
 
+
+/* ---------------------------------------------------------
+   HERO IMAGE
+   --------------------------------------------------------- */
+
 .home-page .hero > img {
-    position: absolute !important;
+    position: absolute;
 
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 
-    width: 100% !important;
-    height: 100% !important;
-
+    width: 100%;
+    height: 100%;
     max-width: none;
 
     object-fit: cover;
@@ -209,6 +215,7 @@ a {
 /* ---------------------------------------------------------
    BOTTOM FADE
    --------------------------------------------------------- */
+
 .home-page .hero::after {
     content: "";
 
@@ -229,7 +236,6 @@ a {
             #0b0b0b
         );
 }
-}
 
 
 /* ---------------------------------------------------------
@@ -237,33 +243,33 @@ a {
    --------------------------------------------------------- */
 
 .home-page .hero-overlay {
-    position: absolute !important;
+    position: absolute;
 
-    left: 24px;
-    right: 24px;
+    left: 8%;
+    bottom: 18%;
 
-    bottom: 105px;
-
-    width: auto;
-    max-width: none;
+    width: min(520px, 45%);
+    max-width: 520px;
 
     z-index: 5;
 
     display: block;
-}
-.home-page .hero-kicker,
-.home-page .hero h1,
-.home-page .hero-description,
-.home-page .hero-button {
-    position: relative;
-    z-index: 6;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 25px rgba(0,0,0,.35);
 }
 
+
 /* ---------------------------------------------------------
-   KICKER
+   HERO KICKER
    --------------------------------------------------------- */
 
 .home-page .hero-kicker {
+    position: relative;
+    z-index: 6;
+
     margin: 0 0 20px;
 
     color: #f4f1eb;
@@ -278,10 +284,13 @@ a {
 
 
 /* ---------------------------------------------------------
-   TITLE
+   HERO TITLE
    --------------------------------------------------------- */
 
 .home-page .hero h1 {
+    position: relative;
+    z-index: 6;
+
     margin: 0 0 22px;
 
     color: #ffffff;
@@ -295,10 +304,13 @@ a {
 
 
 /* ---------------------------------------------------------
-   DESCRIPTION
+   HERO DESCRIPTION
    --------------------------------------------------------- */
 
 .home-page .hero-description {
+    position: relative;
+    z-index: 6;
+
     max-width: 470px;
 
     margin: 0 0 30px;
@@ -312,10 +324,13 @@ a {
 
 
 /* ---------------------------------------------------------
-   BUTTON
+   HERO BUTTON
    --------------------------------------------------------- */
 
 .home-page .hero-button {
+    position: relative;
+    z-index: 6;
+
     display: inline-block;
 
     padding: 12px 24px;
@@ -351,29 +366,38 @@ a {
    --------------------------------------------------------- */
 
 .home-page .scroll-indicator {
-    position: absolute !important;
+    position: absolute;
 
     left: 50%;
     bottom: 25px;
 
-    z-index: 4;
+    z-index: 6;
 
     transform: translateX(-50%);
 
-    color: #292722;
+    color: #ffffff;
 
     font-size: 20px;
+    font-weight: 300;
+
+    opacity: .8;
 }
 
 
 /* =========================================================
-   MOBILE HERO
+   MOBILE HEADER + HERO
    ========================================================= */
 
 @media (max-width: 768px) {
 
+
+    /* -----------------------------------------------------
+       MOBILE HEADER
+       ----------------------------------------------------- */
+
     .home-page header nav {
         width: 100%;
+
         padding: 18px 22px 16px;
 
         display: flex;
@@ -404,7 +428,79 @@ a {
         white-space: nowrap;
     }
 
-}
+
+    /* -----------------------------------------------------
+       MOBILE HERO
+       ----------------------------------------------------- */
+
+    .home-page .hero {
+        height: 570px;
+    }
+
+    .home-page .hero > img {
+        object-position: center center;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE HERO DARKENING
+       ----------------------------------------------------- */
+
+    .home-page .hero::before {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,.68) 0%,
+                rgba(0,0,0,.38) 55%,
+                rgba(0,0,0,.10) 100%
+            );
+    }
+
+    .home-page .hero::after {
+        height: 110px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE HERO CONTENT
+       ----------------------------------------------------- */
+
+    .home-page .hero-overlay {
+        left: 24px;
+        right: 24px;
+        bottom: 105px;
+
+        width: auto;
+        max-width: none;
+
+        z-index: 5;
+    }
+
+    .home-page .hero-kicker {
+        font-size: 9px;
+        letter-spacing: .20em;
+    }
+
+    .home-page .hero h1 {
+        font-size: 3.2rem;
+        line-height: .92;
+    }
+
+    .home-page .hero-description {
+        max-width: 390px;
+
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .home-page .hero-button {
+        padding: 11px 20px;
+    }
+
+    .home-page .scroll-indicator {
+        bottom: 18px;
+    }
+
 }
 /* =========================================================
    06 — EDITORIAL INTRO

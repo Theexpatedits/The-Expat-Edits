@@ -1788,3 +1788,103 @@ a {
     }
 
 }
+/* =========================================================
+   ABOUT PAGE — FINAL OVERRIDE
+   ========================================================= */
+
+body.about-page {
+    background: #0b0b0b !important;
+    color: #f4f1eb !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+
+/* HEADER */
+
+body.about-page header {
+    background: #0b0b0b !important;
+    border-bottom: none !important;
+}
+
+body.about-page .logo {
+    color: #f4f1eb !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.about-page .nav-links a {
+    color: #f4f1eb !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+
+/* INTRO */
+
+body.about-page .about-intro {
+    background: #0b0b0b !important;
+}
+
+body.about-page .section-label {
+    color: #d4af37 !important;
+}
+
+body.about-page .about-intro h1 {
+    color: #f4f1eb !important;
+    font-family: "Cormorant Garamond", serif !important;
+}
+
+body.about-page .about-lead {
+    color: #c9c6bf !important;
+}
+
+
+/* STORY */
+
+body.about-page .about-story {
+    background: #0b0b0b !important;
+}
+
+body.about-page .about-story p {
+    color: #aaa69f !important;
+}
+
+body.about-page .about-story p:first-child {
+    color: #f4f1eb !important;
+    font-family: "Cormorant Garamond", serif !important;
+}
+
+
+/* CLOSING */
+
+body.about-page .about-closing {
+    background: #0b0b0b !important;
+}
+
+body.about-page .about-closing h2 {
+    color: #f4f1eb !important;
+    font-family: "Cormorant Garamond", serif !important;
+}
+
+
+/* FOOTER */
+
+body.about-page footer {
+    background: #070707 !important;
+}
+
+body.about-page footer h3 {
+    color: #f4f1eb !important;
+    font-family: "Cormorant Garamond", serif !important;
+}
+
+body.about-page .footer-tagline {
+    color: #88847d !important;
+}
+
+body.about-page .footer-nav a,
+body.about-page .footer-social a {
+    color: #d4af37 !important;
+}
+
+body.about-page .copyright {
+    color: #55524e !important;
+}

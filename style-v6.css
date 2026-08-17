@@ -160,7 +160,6 @@ a {
     width: 100%;
 }
 
-
 /* =========================================================
    05 — HERO
    ========================================================= */
@@ -213,14 +212,16 @@ a {
     background:
         linear-gradient(
             to bottom,
-            rgba(0,0,0,.0.2) 0%,
+            rgba(0,0,0,.02) 0%,
             rgba(0,0,0,.04) 35%,
             rgba(0,0,0,.20) 58%,
-            rgba(11,11,11,.62) 76%
-           rgba(11,11,11,.94) 91%,
-           #0b0b0b 100%
+            rgba(11,11,11,.62) 76%,
+            rgba(11,11,11,.94) 91%,
+            #0b0b0b 100%
         );
 }
+
+
 /* ---------------------------------------------------------
    HERO BLENDED BOTTOM FADE
    --------------------------------------------------------- */
@@ -248,6 +249,7 @@ a {
             #0b0b0b 100%
         );
 }
+
 
 /* ---------------------------------------------------------
    HERO CONTENT
@@ -460,10 +462,13 @@ a {
 
 .home-page .featured-intro {
     width: min(820px, 90%);
+
     margin: 0 auto;
+
     padding: 100px 20px 65px;
 
     text-align: center;
+
     background: #0b0b0b;
 }
 
@@ -474,6 +479,7 @@ a {
 
     font-size: 10px;
     font-weight: 500;
+
     letter-spacing: .24em;
 
     text-transform: uppercase;
@@ -485,6 +491,7 @@ a {
     color: #f4f1eb;
 
     font-family: "Cormorant Garamond", serif;
+
     font-size: clamp(40px, 4vw, 60px);
     font-weight: 500;
 
@@ -538,7 +545,6 @@ a {
     width: 100%;
 
     margin: 0;
-
     padding: 0;
 
     background: #111111;
@@ -565,7 +571,7 @@ a {
 
 
 /* ---------------------------------------------------------
-   IMAGE
+   EDITION IMAGE
    --------------------------------------------------------- */
 
 .home-page .edition-image,
@@ -574,7 +580,13 @@ a {
 
     width: 100%;
 
-    aspect-ratio: 4 / 3;
+    /*
+       Slightly taller image window.
+       This reduces aggressive cropping while
+       keeping the compact editorial card shape.
+    */
+
+    aspect-ratio: 1.15 / 1;
 
     overflow: hidden;
 
@@ -591,12 +603,13 @@ a {
     display: block;
 
     object-fit: cover;
+    object-position: center center;
 
     transition: transform .7s ease;
 }
 
 .home-page .edition:hover .edition-image img {
-    transform: scale(1.035);
+    transform: scale(1.025);
 }
 
 
@@ -741,7 +754,6 @@ a {
     .home-page .edition-content h3 {
         font-size: 34px;
     }
-
 }
 
 
@@ -767,10 +779,11 @@ a {
 
     .home-page .edition-image,
     .home-page .edition.reverse .edition-image {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 1.08 / 1;
     }
-
 }
+
+
 /* =========================================================
    09 — JOURNAL
    ========================================================= */
@@ -810,6 +823,11 @@ a {
     line-height: 1.9;
 }
 
+
+/* ---------------------------------------------------------
+   JOURNAL GRID
+   --------------------------------------------------------- */
+
 .home-page .journal-grid {
     display: grid;
 
@@ -818,6 +836,11 @@ a {
     gap: 24px;
 }
 
+
+/* ---------------------------------------------------------
+   JOURNAL CARD
+   --------------------------------------------------------- */
+
 .home-page .journal-card {
     overflow: hidden;
 
@@ -825,7 +848,7 @@ a {
 
     border: 1px solid rgba(255,255,255,.06);
 
-    text-align: left;
+    text-align: center;
 
     transition:
         transform .4s ease,
@@ -838,12 +861,27 @@ a {
     border-color: rgba(212,175,55,.35);
 }
 
+
+/* ---------------------------------------------------------
+   JOURNAL IMAGE
+   --------------------------------------------------------- */
+
 .home-page .journal-card img {
+    display: block;
+
     width: 100%;
-    height: 260px;
+    height: auto;
+
+    aspect-ratio: 1.15 / 1;
 
     object-fit: cover;
+    object-position: center center;
 }
+
+
+/* ---------------------------------------------------------
+   JOURNAL CONTENT
+   --------------------------------------------------------- */
 
 .home-page .journal-content {
     padding: 25px;
@@ -858,6 +896,8 @@ a {
     font-weight: 500;
 
     letter-spacing: .22em;
+
+    text-align: center;
 }
 
 .home-page .journal-content h3 {
@@ -868,6 +908,8 @@ a {
     font-size: 28px;
 
     line-height: 1;
+
+    text-align: center;
 }
 
 .home-page .journal-content a {
@@ -880,8 +922,6 @@ a {
 
     text-transform: uppercase;
 }
-
-
 /* =========================================================
    10 — DIVIDER
    ========================================================= */

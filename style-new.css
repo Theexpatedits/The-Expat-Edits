@@ -1319,7 +1319,7 @@ p {
     .featured-editions .edition-grid {
         display: grid !important;
         grid-template-columns: repeat(6, 1fr) !important;
-        gap: 20px !important;
+        gap: 28px !important;
     }
 
     .featured-editions .edition-card {

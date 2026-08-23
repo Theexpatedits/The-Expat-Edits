@@ -1,1 +1,598 @@
-placeholder
+/* =========================================================
+   THE EXPAT EDITS
+   NEW SITE — MASTER STYLE
+   Version 1.0
+
+   This stylesheet controls the permanent visual language
+   shared by the homepage and all new edition pages.
+
+   DO NOT alter the current live site's CSS.
+========================================================= */
+
+
+/* =========================================================
+   01. DESIGN VARIABLES
+========================================================= */
+
+:root {
+
+    /* Core colours */
+    --bg: #11100F;
+    --bg-soft: #171615;
+    --bg-card: #1B1A18;
+
+    --ivory: #F1EDE4;
+    --text: #E5E0D7;
+    --muted: #9D9990;
+
+    --gold: #B59A63;
+    --gold-soft: rgba(181, 154, 99, 0.35);
+
+    --line: rgba(181, 154, 99, 0.20);
+    --line-soft: rgba(241, 237, 228, 0.10);
+
+
+    /* Typography */
+    --font-display: "Cormorant Garamond", serif;
+    --font-body: "Inter", sans-serif;
+
+
+    /* Layout */
+    --content-width: 1240px;
+    --page-padding: clamp(20px, 5vw, 72px);
+
+    --section-space: clamp(70px, 9vw, 130px);
+
+    --header-height: 88px;
+
+
+    /* Transitions */
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   02. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: var(--font-body);
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================================
+   03. GLOBAL TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+
+    font-family: var(--font-display);
+    font-weight: 500;
+
+    color: var(--ivory);
+
+    line-height: 1.05;
+}
+
+p {
+    margin: 0;
+}
+
+.eyebrow,
+.section-label {
+    margin-bottom: 14px;
+
+    color: var(--gold);
+
+    font-family: var(--font-body);
+    font-size: 0.70rem;
+    font-weight: 500;
+
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   04. GLOBAL LAYOUT
+========================================================= */
+
+.container {
+    width: min(
+        calc(100% - (var(--page-padding) * 2)),
+        var(--content-width)
+    );
+
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: var(--section-space);
+}
+
+.section-heading {
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.section-intro {
+    max-width: 620px;
+
+    margin-top: 18px;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   05. FIXED HEADER
+========================================================= */
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: var(--bg);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.site-header-inner {
+    min-height: var(--header-height);
+
+    width: min(
+        calc(100% - (var(--page-padding) * 2)),
+        var(--content-width)
+    );
+
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* Masthead */
+
+.site-logo {
+    flex-shrink: 0;
+
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 2.5vw, 2.05rem);
+
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    transition: color var(--transition);
+}
+
+.site-logo:hover {
+    color: var(--gold);
+}
+
+
+/* Navigation */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(18px, 3vw, 38px);
+}
+
+.site-nav a {
+    position: relative;
+
+    color: var(--muted);
+
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    transition: color var(--transition);
+}
+
+.site-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: width var(--transition);
+}
+
+.site-nav a:hover {
+    color: var(--ivory);
+}
+
+.site-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--ivory);
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 21px;
+    height: 1px;
+
+    margin: 5px auto;
+
+    background: var(--ivory);
+}
+
+
+/* =========================================================
+   06. GOLD DIVIDER
+========================================================= */
+
+.gold-rule {
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold-soft),
+        transparent
+    );
+}
+
+
+/* =========================================================
+   07. BUTTON / TEXT LINKS
+========================================================= */
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--gold);
+
+    font-family: var(--font-body);
+    font-size: 0.70rem;
+    font-weight: 500;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    transition:
+        color var(--transition),
+        gap var(--transition);
+}
+
+.text-link:hover {
+    color: var(--ivory);
+    gap: 13px;
+}
+
+
+/* =========================================================
+   08. IMAGE TREATMENT
+========================================================= */
+
+/*
+   Photography should feel slightly softer and warmer.
+
+   We are deliberately NOT making this aggressive.
+   The photograph should still look like the photograph.
+*/
+
+.editorial-image {
+    overflow: hidden;
+}
+
+.editorial-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        saturate(0.92)
+        contrast(0.96);
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.editorial-image:hover img {
+    transform: scale(1.025);
+
+    filter:
+        saturate(0.98)
+        contrast(0.98);
+}
+
+
+/* =========================================================
+   09. FIXED FOOTER
+========================================================= */
+
+.site-footer {
+    margin-top: var(--section-space);
+
+    padding-block: 70px 30px;
+
+    border-top: 1px solid var(--line);
+
+    text-align: center;
+}
+
+.site-footer-inner {
+    width: min(
+        calc(100% - (var(--page-padding) * 2)),
+        var(--content-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* Footer masthead */
+
+.footer-logo {
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* Footer description */
+
+.footer-description {
+    max-width: 500px;
+
+    margin: 15px auto 28px;
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+
+
+/* Footer navigation */
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    margin-bottom: 24px;
+}
+
+.footer-nav a {
+    color: var(--muted);
+
+    font-size: 0.65rem;
+    font-weight: 500;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    transition: color var(--transition);
+}
+
+.footer-nav a:hover {
+    color: var(--gold);
+}
+
+
+/* Instagram */
+
+.footer-social {
+    color: var(--gold);
+
+    font-size: 0.65rem;
+    font-weight: 500;
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+
+/* Copyright */
+
+.footer-copyright {
+    margin-top: 42px;
+
+    color: #6F6B64;
+
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   10. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+        --header-height: 76px;
+    }
+
+    .site-nav {
+        gap: 20px;
+    }
+
+    .site-nav a {
+        font-size: 0.62rem;
+    }
+
+}
+
+
+/* =========================================================
+   11. RESPONSIVE — PHONE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .site-header-inner {
+        min-height: var(--header-height);
+    }
+
+    .site-logo {
+        font-size: 1.55rem;
+        letter-spacing: 0.10em;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .site-nav {
+        display: none;
+    }
+
+
+    /* Show mobile menu */
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 2.55rem;
+    }
+
+    .section-intro {
+        font-size: 0.88rem;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        padding-block: 55px 25px;
+    }
+
+    .footer-logo {
+        font-size: 1.65rem;
+    }
+
+    .footer-nav {
+        gap: 16px 22px;
+    }
+
+}
+
+
+/* =========================================================
+   12. ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+    outline: 1px solid var(--gold);
+
+    outline-offset: 5px;
+}
+
+
+/* =========================================================
+   END — MASTER STYLE
+========================================================= */

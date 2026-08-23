@@ -1055,23 +1055,16 @@ p {
    DESKTOP — FOUR COMPACT EDITIONS
 ========================================================= */
 
-.edition-grid {
-    display: grid;
+.edition-card-image {
+    position: relative;
 
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+    width: 220px;
 
-    gap: 22px;
+    height: 145px;
 
-    /*
-       Keep the destination cards visually
-       compact on large screens rather than
-       stretching them across the whole page.
-    */
+    overflow: hidden;
 
-    max-width: 1000px;
-
-    margin-inline: auto;
+    background: #171717;
 }
 
 /* CARD */

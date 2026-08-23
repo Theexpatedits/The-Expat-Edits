@@ -1311,18 +1311,24 @@ p {
 
 }
 /* =========================================================
-   FEATURED EDITIONS — SIX ACROSS ON DESKTOP
+   FEATURED EDITIONS — DESKTOP SIX ACROSS
 ========================================================= */
 
-@media (min-width: 1101px) {
+@media screen and (min-width: 1101px) {
 
-    .edition-grid {
-        display: grid;
+    .featured-editions .edition-grid {
+        display: grid !important;
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 20px !important;
+    }
 
-        grid-template-columns:
-            repeat(6, minmax(0, 1fr));
+    .featured-editions .edition-card {
+        width: 100%;
+        min-width: 0;
+    }
 
-        gap: 20px;
+    .featured-editions .edition-card-image {
+        width: 100%;
     }
 
 }

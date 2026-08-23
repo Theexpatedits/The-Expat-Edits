@@ -1031,7 +1031,7 @@ p {
     }
 
 /* =========================================================
-   HOMEPAGE — FEATURED EDITIONS
+   FEATURED EDITIONS — FINAL CARD SIZING
 ========================================================= */
 
 .featured-editions {
@@ -1039,138 +1039,114 @@ p {
 }
 
 
-/* Section heading */
+/* SECTION HEADING */
 
 .featured-editions .section-heading {
     margin-bottom: 38px;
 }
 
 .featured-editions .section-heading h2 {
-    max-width: 600px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
 }
 
 
 /* =========================================================
-   EDITION GRID
+   DESKTOP — FOUR COMPACT EDITIONS
 ========================================================= */
 
 .edition-grid {
-
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(4, minmax(0, 1fr));
 
-    gap: clamp(30px, 4vw, 58px);
+    gap: 24px;
+
+    width: 100%;
 }
 
 
-/* =========================================================
-   EDITION CARD
-========================================================= */
+/* CARD */
 
 .edition-card {
-
     display: block;
 
-    position: relative;
-
     color: inherit;
+    text-decoration: none;
 
-    transition:
-        transform 0.4s ease;
+    transition: transform .35s ease;
 }
 
 .edition-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 
-/* =========================================================
-   CARD IMAGE
-========================================================= */
+/* IMAGE */
 
 .edition-card-image {
-
     position: relative;
 
     width: 100%;
 
-    /*
-       Smaller than the main Komodo lead.
-       This is deliberate.
-    */
-
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
 
     overflow: hidden;
 
-    background: var(--bg-card);
+    background: #171717;
 }
 
 .edition-card-image img {
+    display: block;
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    filter:
-        saturate(0.91)
-        contrast(0.96);
-
     transition:
-        transform 0.7s ease,
-        filter 0.7s ease;
+        transform .6s ease,
+        filter .6s ease;
 }
 
 .edition-card:hover .edition-card-image img {
-
     transform: scale(1.025);
-
-    filter:
-        saturate(0.98)
-        contrast(0.98);
 }
 
 
 /* =========================================================
-   CARD CONTENT
+   CARD TYPOGRAPHY
 ========================================================= */
 
 .edition-card-content {
-
-    padding-top: 17px;
+    padding-top: 14px;
 }
 
 .edition-card-country {
-
     margin: 0 0 5px;
 
-    color: var(--gold);
+    color: #d4af37;
 
-    font-size: 0.64rem;
+    font-family: 'Inter', sans-serif;
+
+    font-size: .62rem;
 
     font-weight: 500;
 
-    letter-spacing: 0.20em;
+    letter-spacing: .18em;
 
     text-transform: uppercase;
 }
 
 .edition-card h3 {
-
     margin: 0;
 
-    color: var(--ivory);
+    color: #f2eee7;
 
-    font-family: var(--font-display);
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size: clamp(
-        2rem,
-        3vw,
-        2.7rem
-    );
+    font-size: 2rem;
 
     font-weight: 500;
 
@@ -1178,40 +1154,54 @@ p {
 }
 
 .edition-card-link {
-
     display: inline-block;
 
-    margin-top: 10px;
+    margin-top: 9px;
 
-    color: var(--muted);
+    color: #a9a9a9;
 
-    font-size: 0.64rem;
+    font-family: 'Inter', sans-serif;
 
-    font-weight: 500;
+    font-size: .62rem;
 
-    letter-spacing: 0.14em;
+    font-weight: 400;
+
+    letter-spacing: .12em;
 
     text-transform: uppercase;
 
-    transition: color var(--transition);
+    transition: color .3s ease;
 }
 
 .edition-card:hover .edition-card-link {
-    color: var(--gold);
+    color: #d4af37;
 }
 
 
-/* =========================================================
-   ARCHIVE LINK
-========================================================= */
+/* ARCHIVE LINK */
 
 .editions-archive-link {
-
     display: flex;
 
     justify-content: center;
 
-    margin-top: 60px;
+    margin-top: 55px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .edition-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 38px 24px;
+    }
+
 }
 
 
@@ -1222,54 +1212,38 @@ p {
 @media (max-width: 700px) {
 
     .featured-editions {
-
         padding-top: 45px;
-
         padding-bottom: 65px;
     }
 
-
     .featured-editions .section-heading {
-
         margin-bottom: 28px;
     }
 
-
     .edition-grid {
-
         grid-template-columns: 1fr;
 
-        gap: 48px;
+        gap: 42px;
     }
 
-
-    /*
-       Keep the cards compact on phone.
-       We don't want four giant vertical
-       blocks after the Komodo lead.
-    */
-
     .edition-card-image {
-
         aspect-ratio: 16 / 10;
     }
 
-
     .edition-card-content {
-
-        padding-top: 14px;
+        padding-top: 12px;
     }
-
 
     .edition-card h3 {
-
-        font-size: 2.35rem;
+        font-size: 2.15rem;
     }
 
+    .edition-card-link {
+        margin-top: 7px;
+    }
 
     .editions-archive-link {
-
-        margin-top: 48px;
+        margin-top: 45px;
     }
 
 }

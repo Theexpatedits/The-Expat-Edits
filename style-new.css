@@ -1,52 +1,55 @@
 /* =========================================================
    THE EXPAT EDITS
    NEW SITE — MASTER STYLE
-   Version 1.0
-
-   This stylesheet controls the permanent visual language
-   shared by the homepage and all new edition pages.
-
-   DO NOT alter the current live site's CSS.
+   VERSION 1.1
 ========================================================= */
 
 
 /* =========================================================
-   01. DESIGN VARIABLES
+   01. DESIGN SYSTEM
 ========================================================= */
 
 :root {
 
-    /* Core colours */
+    /* Core palette */
+
     --bg: #11100F;
-    --bg-soft: #171615;
-    --bg-card: #1B1A18;
+    --bg-soft: #151412;
+    --bg-card: #1A1816;
 
     --ivory: #F1EDE4;
     --text: #E5E0D7;
     --muted: #9D9990;
 
-    --gold: #B59A63;
-    --gold-soft: rgba(181, 154, 99, 0.35);
+    /* Richer gold — new preferred accent */
 
-    --line: rgba(181, 154, 99, 0.20);
-    --line-soft: rgba(241, 237, 228, 0.10);
+    --gold: #D4A83A;
+    --gold-soft: rgba(212, 168, 58, 0.55);
+    --gold-faint: rgba(212, 168, 58, 0.20);
+
+    --line: rgba(212, 168, 58, 0.28);
+    --line-soft: rgba(241, 237, 228, 0.08);
 
 
     /* Typography */
+
     --font-display: "Cormorant Garamond", serif;
     --font-body: "Inter", sans-serif;
 
 
     /* Layout */
-    --content-width: 1240px;
-    --page-padding: clamp(20px, 5vw, 72px);
 
-    --section-space: clamp(70px, 9vw, 130px);
+    --content-width: 1240px;
+
+    --page-padding: clamp(24px, 5vw, 72px);
+
+    --section-space: clamp(80px, 9vw, 140px);
 
     --header-height: 88px;
 
 
-    /* Transitions */
+    /* Animation */
+
     --transition: 0.3s ease;
 }
 
@@ -100,7 +103,7 @@ select {
 
 
 /* =========================================================
-   03. GLOBAL TYPOGRAPHY
+   03. TYPOGRAPHY
 ========================================================= */
 
 h1,
@@ -121,9 +124,12 @@ p {
     margin: 0;
 }
 
+
+/* Small gold editorial labels */
+
 .eyebrow,
 .section-label {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 
     color: var(--gold);
 
@@ -131,7 +137,7 @@ p {
     font-size: 0.70rem;
     font-weight: 500;
 
-    letter-spacing: 0.22em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
 }
 
@@ -168,8 +174,8 @@ p {
 
     color: var(--muted);
 
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 0.94rem;
+    line-height: 1.85;
 }
 
 
@@ -206,19 +212,27 @@ p {
 }
 
 
-/* Masthead */
+/* =========================================================
+   MASTHEAD
+========================================================= */
 
 .site-logo {
     flex-shrink: 0;
 
-    color: var(--ivory);
+    color: var(--gold);
 
     font-family: var(--font-display);
-    font-size: clamp(1.65rem, 2.5vw, 2.05rem);
+
+    font-size: clamp(
+        1.65rem,
+        2.5vw,
+        2.05rem
+    );
 
     font-weight: 500;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.13em;
+
     line-height: 1;
 
     white-space: nowrap;
@@ -227,29 +241,38 @@ p {
 }
 
 .site-logo:hover {
-    color: var(--gold);
+    color: var(--ivory);
 }
 
 
-/* Navigation */
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
 
 .site-nav {
     display: flex;
     align-items: center;
 
-    gap: clamp(18px, 3vw, 38px);
+    gap: clamp(
+        20px,
+        3vw,
+        40px
+    );
 }
 
 .site-nav a {
     position: relative;
 
-    color: var(--muted);
+    color: var(--gold);
 
     font-family: var(--font-body);
-    font-size: 0.68rem;
+
+    font-size: 0.67rem;
+
     font-weight: 500;
 
     letter-spacing: 0.16em;
+
     text-transform: uppercase;
 
     transition: color var(--transition);
@@ -280,7 +303,9 @@ p {
 }
 
 
-/* Mobile menu button */
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
 
 .menu-toggle {
     display: none;
@@ -294,7 +319,7 @@ p {
 
     background: transparent;
 
-    color: var(--ivory);
+    color: var(--gold);
 
     cursor: pointer;
 }
@@ -302,17 +327,17 @@ p {
 .menu-toggle span {
     display: block;
 
-    width: 21px;
+    width: 25px;
     height: 1px;
 
-    margin: 5px auto;
+    margin: 6px auto;
 
-    background: var(--ivory);
+    background: var(--gold);
 }
 
 
 /* =========================================================
-   06. GOLD DIVIDER
+   06. GOLD DIVIDERS
 ========================================================= */
 
 .gold-rule {
@@ -329,21 +354,26 @@ p {
 
 
 /* =========================================================
-   07. BUTTON / TEXT LINKS
+   07. TEXT LINKS
 ========================================================= */
 
 .text-link {
     display: inline-flex;
+
     align-items: center;
+
     gap: 9px;
 
     color: var(--gold);
 
     font-family: var(--font-body);
+
     font-size: 0.70rem;
+
     font-weight: 500;
 
     letter-spacing: 0.15em;
+
     text-transform: uppercase;
 
     transition:
@@ -353,20 +383,14 @@ p {
 
 .text-link:hover {
     color: var(--ivory);
+
     gap: 13px;
 }
 
 
 /* =========================================================
-   08. IMAGE TREATMENT
+   08. EDITORIAL IMAGE TREATMENT
 ========================================================= */
-
-/*
-   Photography should feel slightly softer and warmer.
-
-   We are deliberately NOT making this aggressive.
-   The photograph should still look like the photograph.
-*/
 
 .editorial-image {
     overflow: hidden;
@@ -378,8 +402,13 @@ p {
 
     object-fit: cover;
 
+    /*
+       Gentle treatment only.
+       We want the original photography to remain visible.
+    */
+
     filter:
-        saturate(0.92)
+        saturate(0.93)
         contrast(0.96);
 
     transition:
@@ -391,7 +420,7 @@ p {
     transform: scale(1.025);
 
     filter:
-        saturate(0.98)
+        saturate(0.99)
         contrast(0.98);
 }
 
@@ -403,7 +432,7 @@ p {
 .site-footer {
     margin-top: var(--section-space);
 
-    padding-block: 70px 30px;
+    padding-block: 72px 34px;
 
     border-top: 1px solid var(--line);
 
@@ -420,83 +449,109 @@ p {
 }
 
 
-/* Footer masthead */
+/* =========================================================
+   FOOTER MASTHEAD
+========================================================= */
 
 .footer-logo {
-    color: var(--ivory);
+    color: var(--gold);
 
     font-family: var(--font-display);
+
     font-size: 2rem;
+
     font-weight: 500;
 
     letter-spacing: 0.14em;
 }
 
 
-/* Footer description */
+/* =========================================================
+   FOOTER DESCRIPTION
+========================================================= */
 
 .footer-description {
-    max-width: 500px;
+    max-width: 520px;
 
-    margin: 15px auto 28px;
+    margin: 16px auto 30px;
 
-    color: var(--muted);
+    color: var(--ivory);
 
     font-size: 0.78rem;
+
     line-height: 1.7;
 }
 
 
-/* Footer navigation */
+/* =========================================================
+   FOOTER NAVIGATION
+========================================================= */
 
 .footer-nav {
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
 
-    gap: 24px;
+    gap: 28px;
 
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .footer-nav a {
-    color: var(--muted);
+    color: var(--gold);
 
     font-size: 0.65rem;
+
     font-weight: 500;
 
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
+
     text-transform: uppercase;
 
     transition: color var(--transition);
 }
 
 .footer-nav a:hover {
-    color: var(--gold);
+    color: var(--ivory);
 }
 
 
-/* Instagram */
+/* =========================================================
+   INSTAGRAM
+========================================================= */
 
 .footer-social {
     color: var(--gold);
 
     font-size: 0.65rem;
+
     font-weight: 500;
 
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
+
     text-transform: uppercase;
+
+    transition: color var(--transition);
+}
+
+.footer-social:hover {
+    color: var(--ivory);
 }
 
 
-/* Copyright */
+/* =========================================================
+   FOOTER COPYRIGHT
+========================================================= */
 
 .footer-copyright {
-    margin-top: 42px;
+    margin-top: 44px;
 
-    color: #6F6B64;
+    color: #77736C;
 
     font-size: 0.62rem;
+
     letter-spacing: 0.08em;
 }
 
@@ -508,17 +563,16 @@ p {
 @media (max-width: 900px) {
 
     :root {
-        --header-height: 76px;
+        --header-height: 78px;
     }
 
     .site-nav {
-        gap: 20px;
+        gap: 22px;
     }
 
     .site-nav a {
         font-size: 0.62rem;
     }
-
 }
 
 
@@ -528,12 +582,21 @@ p {
 
 @media (max-width: 700px) {
 
+    :root {
+        --page-padding: 42px;
+        --header-height: 76px;
+    }
+
+
+    /* Header */
+
     .site-header-inner {
         min-height: var(--header-height);
     }
 
     .site-logo {
         font-size: 1.55rem;
+
         letter-spacing: 0.10em;
     }
 
@@ -552,6 +615,8 @@ p {
     }
 
 
+    /* Sections */
+
     .section-heading {
         margin-bottom: 30px;
     }
@@ -568,17 +633,20 @@ p {
     /* Footer */
 
     .site-footer {
-        padding-block: 55px 25px;
+        padding-block: 58px 28px;
     }
 
     .footer-logo {
         font-size: 1.65rem;
     }
 
-    .footer-nav {
-        gap: 16px 22px;
+    .footer-description {
+        font-size: 0.76rem;
     }
 
+    .footer-nav {
+        gap: 18px 24px;
+    }
 }
 
 

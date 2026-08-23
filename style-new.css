@@ -1029,9 +1029,9 @@ p {
 
         font-size: 0.88rem;
     }
-
+}
 /* =========================================================
-   FEATURED EDITIONS — FINAL CARD SIZING
+   HOMEPAGE — FEATURED EDITIONS
 ========================================================= */
 
 .featured-editions {
@@ -1039,23 +1039,70 @@ p {
 }
 
 
-/* SECTION HEADING */
+/* =========================================================
+   SECTION HEADING
+========================================================= */
 
 .featured-editions .section-heading {
     margin-bottom: 38px;
 }
 
 .featured-editions .section-heading h2 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-display);
     font-weight: 500;
 }
 
 
 /* =========================================================
-   DESKTOP — FOUR COMPACT EDITIONS
+   DESKTOP EDITION GRID
+========================================================= */
+
+.edition-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 220px);
+
+    gap: 22px;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   EDITION CARD
+========================================================= */
+
+.edition-card {
+
+    display: block;
+
+    width: 220px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.edition-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   EDITION IMAGE
 ========================================================= */
 
 .edition-card-image {
+
     position: relative;
 
     width: 220px;
@@ -1064,40 +1111,11 @@ p {
 
     overflow: hidden;
 
-    background: #171717;
-}
-
-/* CARD */
-
-.edition-card {
-    display: block;
-
-    color: inherit;
-    text-decoration: none;
-
-    transition: transform .35s ease;
-}
-
-.edition-card:hover {
-    transform: translateY(-3px);
-}
-
-
-/* IMAGE */
-
-.edition-card-image {
-    position: relative;
-
-    width: 100%;
-
-    aspect-ratio: 5 / 3;
-
-    overflow: hidden;
-
-    background: #171717;
+    background: var(--bg-card);
 }
 
 .edition-card-image img {
+
     display: block;
 
     width: 100%;
@@ -1105,46 +1123,58 @@ p {
 
     object-fit: cover;
 
+    filter:
+        saturate(0.93)
+        contrast(0.96);
+
     transition:
-        transform .6s ease,
-        filter .6s ease;
+        transform 0.6s ease,
+        filter 0.6s ease;
 }
 
 .edition-card:hover .edition-card-image img {
+
     transform: scale(1.025);
+
+    filter:
+        saturate(0.98)
+        contrast(0.98);
 }
 
 
 /* =========================================================
-   CARD TYPOGRAPHY
+   CARD TEXT
 ========================================================= */
 
 .edition-card-content {
+
     padding-top: 14px;
 }
 
 .edition-card-country {
+
     margin: 0 0 5px;
 
-    color: #d4af37;
+    color: var(--gold);
 
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
 
-    font-size: .62rem;
+    font-size: 0.62rem;
 
     font-weight: 500;
 
-    letter-spacing: .18em;
+    letter-spacing: 0.18em;
 
     text-transform: uppercase;
 }
 
 .edition-card h3 {
+
     margin: 0;
 
-    color: #f2eee7;
+    color: var(--ivory);
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-display);
 
     font-size: 2rem;
 
@@ -1154,33 +1184,38 @@ p {
 }
 
 .edition-card-link {
+
     display: inline-block;
 
     margin-top: 9px;
 
-    color: #a9a9a9;
+    color: var(--muted);
 
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
 
-    font-size: .62rem;
+    font-size: 0.62rem;
 
     font-weight: 400;
 
-    letter-spacing: .12em;
+    letter-spacing: 0.12em;
 
     text-transform: uppercase;
 
-    transition: color .3s ease;
+    transition:
+        color var(--transition);
 }
 
 .edition-card:hover .edition-card-link {
-    color: #d4af37;
+    color: var(--gold);
 }
 
 
-/* ARCHIVE LINK */
+/* =========================================================
+   VIEW ALL EDITIONS
+========================================================= */
 
 .editions-archive-link {
+
     display: flex;
 
     justify-content: center;
@@ -1196,8 +1231,9 @@ p {
 @media (max-width: 1000px) {
 
     .edition-grid {
+
         grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+            repeat(2, 220px);
 
         gap: 38px 24px;
     }
@@ -1212,37 +1248,63 @@ p {
 @media (max-width: 700px) {
 
     .featured-editions {
+
         padding-top: 45px;
+
         padding-bottom: 65px;
     }
 
+
     .featured-editions .section-heading {
+
         margin-bottom: 28px;
     }
 
+
     .edition-grid {
+
         grid-template-columns: 1fr;
 
         gap: 42px;
     }
 
+
+    .edition-card {
+
+        width: 100%;
+    }
+
+
     .edition-card-image {
+
+        width: 100%;
+
+        height: auto;
+
         aspect-ratio: 16 / 10;
     }
 
+
     .edition-card-content {
+
         padding-top: 12px;
     }
 
+
     .edition-card h3 {
+
         font-size: 2.15rem;
     }
 
+
     .edition-card-link {
+
         margin-top: 7px;
     }
 
+
     .editions-archive-link {
+
         margin-top: 45px;
     }
 

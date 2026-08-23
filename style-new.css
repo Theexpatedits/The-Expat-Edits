@@ -1276,13 +1276,14 @@ p {
 
 
     .edition-card-image {
+    width: calc(100% + 24px);
 
-        width: 100%;
+    margin-left: -12px;
 
-        height: auto;
+    height: auto;
 
-        aspect-ratio: 16 / 10;
-    }
+    aspect-ratio: 16 / 10;
+}
 
 
     .edition-card-content {

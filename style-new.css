@@ -1030,4 +1030,246 @@ p {
         font-size: 0.88rem;
     }
 
+/* =========================================================
+   HOMEPAGE — FEATURED EDITIONS
+========================================================= */
+
+.featured-editions {
+    padding-top: 55px;
+}
+
+
+/* Section heading */
+
+.featured-editions .section-heading {
+    margin-bottom: 38px;
+}
+
+.featured-editions .section-heading h2 {
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   EDITION GRID
+========================================================= */
+
+.edition-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: clamp(30px, 4vw, 58px);
+}
+
+
+/* =========================================================
+   EDITION CARD
+========================================================= */
+
+.edition-card {
+
+    display: block;
+
+    position: relative;
+
+    color: inherit;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.edition-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.edition-card-image {
+
+    position: relative;
+
+    width: 100%;
+
+    /*
+       Smaller than the main Komodo lead.
+       This is deliberate.
+    */
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: var(--bg-card);
+}
+
+.edition-card-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        saturate(0.91)
+        contrast(0.96);
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.edition-card:hover .edition-card-image img {
+
+    transform: scale(1.025);
+
+    filter:
+        saturate(0.98)
+        contrast(0.98);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.edition-card-content {
+
+    padding-top: 17px;
+}
+
+.edition-card-country {
+
+    margin: 0 0 5px;
+
+    color: var(--gold);
+
+    font-size: 0.64rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.20em;
+
+    text-transform: uppercase;
+}
+
+.edition-card h3 {
+
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        2rem,
+        3vw,
+        2.7rem
+    );
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.edition-card-link {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 0.64rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    transition: color var(--transition);
+}
+
+.edition-card:hover .edition-card-link {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   ARCHIVE LINK
+========================================================= */
+
+.editions-archive-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 60px;
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .featured-editions {
+
+        padding-top: 45px;
+
+        padding-bottom: 65px;
+    }
+
+
+    .featured-editions .section-heading {
+
+        margin-bottom: 28px;
+    }
+
+
+    .edition-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 48px;
+    }
+
+
+    /*
+       Keep the cards compact on phone.
+       We don't want four giant vertical
+       blocks after the Komodo lead.
+    */
+
+    .edition-card-image {
+
+        aspect-ratio: 16 / 10;
+    }
+
+
+    .edition-card-content {
+
+        padding-top: 14px;
+    }
+
+
+    .edition-card h3 {
+
+        font-size: 2.35rem;
+    }
+
+
+    .editions-archive-link {
+
+        margin-top: 48px;
+    }
+
 }

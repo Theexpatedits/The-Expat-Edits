@@ -1332,3 +1332,53 @@ p {
     }
 
 }
+/* =========================================
+   SINGAPORE HERO — SOFT EDGE FADE
+   ========================================= */
+
+.singapore-hero-image {
+    position: relative;
+    overflow: hidden;
+    background: #11100F;
+}
+
+.singapore-hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.singapore-hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        /* Top fade */
+        linear-gradient(
+            to bottom,
+            #11100F 0%,
+            rgba(17,16,15,0.82) 5%,
+            rgba(17,16,15,0.35) 13%,
+            transparent 24%
+        ),
+
+        /* Left fade */
+        linear-gradient(
+            to right,
+            #11100F 0%,
+            rgba(17,16,15,0.70) 5%,
+            rgba(17,16,15,0.25) 12%,
+            transparent 21%
+        ),
+
+        /* Right fade */
+        linear-gradient(
+            to left,
+            #11100F 0%,
+            rgba(17,16,15,0.70) 5%,
+            rgba(17,16,15,0.25) 12%,
+            transparent 21%
+        );
+}

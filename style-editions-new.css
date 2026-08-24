@@ -1,1 +1,408 @@
+/* =========================================================
+   THE EXPAT EDITS
+   NEW EDITIONS SYSTEM
+   MASTER STYLESHEET
+========================================================= */
 
+
+/* =========================================================
+   01. EDITIONS PAGE INTRO
+========================================================= */
+
+.editions-intro {
+    padding-top: clamp(70px, 9vw, 120px);
+    padding-bottom: clamp(55px, 7vw, 90px);
+}
+
+.editions-intro h1 {
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 7vw, 6.5rem);
+    font-weight: 500;
+
+    line-height: 0.9;
+}
+
+.editions-intro .section-intro {
+    max-width: 560px;
+
+    margin-top: 24px;
+
+    color: var(--muted);
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   02. EDITIONS ARCHIVE
+========================================================= */
+
+.editions-archive {
+    padding-top: 20px;
+    padding-bottom: var(--section-space);
+}
+
+.editions-archive .section-heading {
+    margin-bottom: 48px;
+}
+
+
+/* =========================================================
+   03. EDITION ARCHIVE GRID
+========================================================= */
+
+.edition-archive-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-gap: 30px;
+    row-gap: 70px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   04. EDITION ARCHIVE CARD
+========================================================= */
+
+.edition-archive-card {
+
+    display: block;
+
+    min-width: 0;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.edition-archive-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   05. ARCHIVE IMAGE
+========================================================= */
+
+.edition-archive-image {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: var(--bg-card);
+}
+
+.edition-archive-image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        saturate(0.93)
+        contrast(0.96);
+
+    transition:
+        transform 0.65s ease,
+        filter 0.65s ease;
+}
+
+.edition-archive-card:hover .edition-archive-image img {
+
+    transform: scale(1.025);
+
+    filter:
+        saturate(0.98)
+        contrast(0.98);
+}
+
+
+/* =========================================================
+   06. CARD CONTENT
+========================================================= */
+
+.edition-archive-content {
+
+    padding-top: 17px;
+}
+
+
+/* Country / region */
+
+.edition-archive-country {
+
+    margin: 0 0 7px;
+
+    color: var(--gold);
+
+    font-family: var(--font-body);
+
+    font-size: 0.62rem;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    line-height: 1.4;
+}
+
+
+/* Destination */
+
+.edition-archive-content h3 {
+
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2rem, 3vw, 2.65rem);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+
+/* Description */
+
+.edition-archive-description {
+
+    max-width: 360px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-family: var(--font-body);
+
+    font-size: 0.78rem;
+
+    font-weight: 400;
+
+    line-height: 1.65;
+}
+
+
+/* Explore link */
+
+.edition-archive-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 14px;
+
+    color: var(--gold);
+
+    font-family: var(--font-body);
+
+    font-size: 0.62rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    transition:
+        color var(--transition),
+        gap var(--transition);
+}
+
+.edition-archive-card:hover .edition-archive-link {
+
+    color: var(--ivory);
+
+    gap: 11px;
+}
+
+
+/* =========================================================
+   07. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .edition-archive-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 24px;
+        row-gap: 60px;
+    }
+
+}
+
+
+/* =========================================================
+   08. PHONE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .editions-intro {
+
+        padding-top: 58px;
+        padding-bottom: 48px;
+    }
+
+    .editions-intro h1 {
+
+        font-size: 4rem;
+    }
+
+    .editions-intro .section-intro {
+
+        margin-top: 20px;
+
+        font-size: 0.86rem;
+    }
+
+
+    .editions-archive {
+
+        padding-top: 10px;
+        padding-bottom: 70px;
+    }
+
+    .editions-archive .section-heading {
+
+        margin-bottom: 30px;
+    }
+
+
+    /*
+       Two columns on phone.
+
+       The photographs deliberately stay compact
+       so the archive feels like an editorial index
+       rather than a long gallery.
+    */
+
+    .edition-archive-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 12px;
+        row-gap: 48px;
+    }
+
+
+    .edition-archive-card:hover {
+
+        transform: none;
+    }
+
+
+    .edition-archive-image {
+
+        aspect-ratio: 1 / 0.78;
+    }
+
+
+    .edition-archive-content {
+
+        padding-top: 11px;
+    }
+
+
+    .edition-archive-country {
+
+        margin-bottom: 5px;
+
+        font-size: 0.50rem;
+
+        letter-spacing: 0.13em;
+    }
+
+
+    .edition-archive-content h3 {
+
+        font-size: 1.65rem;
+
+        line-height: 0.95;
+    }
+
+
+    .edition-archive-description {
+
+        margin-top: 7px;
+
+        font-size: 0.68rem;
+
+        line-height: 1.5;
+    }
+
+
+    .edition-archive-link {
+
+        margin-top: 9px;
+
+        font-size: 0.52rem;
+
+        letter-spacing: 0.10em;
+
+        gap: 5px;
+    }
+
+}
+
+
+/* =========================================================
+   09. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .edition-archive-grid {
+
+        column-gap: 10px;
+        row-gap: 42px;
+    }
+
+
+    .edition-archive-content h3 {
+
+        font-size: 1.48rem;
+    }
+
+
+    .edition-archive-description {
+
+        font-size: 0.64rem;
+    }
+
+}
+
+
+/* =========================================================
+   END — NEW EDITIONS SYSTEM
+========================================================= */

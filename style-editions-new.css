@@ -1161,7 +1161,546 @@
     }
 
 }
+/* =========================================================
+   THE EXPAT EDITS
+   EDITION MASTER OVERRIDES
+   HERO + PHOTOGRAPHY + GOLD SYSTEM
+   ========================================================= */
 
+
+/* =========================================================
+   01 — EDITION GOLD SYSTEM
+   Keep all Edition accents aligned with the new site.
+   ========================================================= */
+
+.edition-page {
+    --edition-gold: #D4A83A;
+    --edition-ivory: #F1EDE4;
+    --edition-muted: #9D9990;
+    --edition-bg: #11100F;
+}
+
+
+/* Gold editorial labels */
+
+.edition-page .eyebrow,
+.edition-page .section-label,
+.edition-page .story-number,
+.edition-page .journey-location,
+.edition-page .section-heading > p {
+    color: var(--edition-gold) !important;
+}
+
+
+/* Gold links */
+
+.edition-page a.text-link,
+.edition-page .text-link {
+    color: var(--edition-gold);
+}
+
+
+/* =========================================================
+   02 — MASTER EDITION HERO
+   ========================================================= */
+
+.edition-page .hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: min(78vh, 780px);
+
+    min-height: 620px;
+
+    overflow: hidden;
+
+    background-color: var(--edition-bg);
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*
+   If the hero uses an actual <img>, make sure it fills
+   the hero correctly.
+*/
+
+.edition-page .hero > img,
+.edition-page .hero img.hero-image {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+}
+
+
+/* =========================================================
+   03 — HERO DARK EDITORIAL FADE
+   ========================================================= */
+
+.edition-page .hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(17,16,15,0.12) 0%,
+            rgba(17,16,15,0.02) 38%,
+            rgba(17,16,15,0.16) 58%,
+            rgba(17,16,15,0.72) 82%,
+            #11100F 100%
+        );
+}
+
+
+/* =========================================================
+   04 — HERO CONTENT
+   ========================================================= */
+
+.edition-page .hero-overlay {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 75px;
+
+    z-index: 5;
+
+    width: min(760px, 88%);
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    color: var(--edition-ivory);
+
+    text-shadow:
+        0 3px 24px rgba(0,0,0,0.45);
+}
+
+
+.edition-page .hero-overlay .eyebrow {
+
+    margin-bottom: 16px;
+
+    color: var(--edition-gold) !important;
+
+    font-size: 10px;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+}
+
+
+.edition-page .hero-overlay h1 {
+
+    margin-bottom: 18px;
+
+    color: var(--edition-ivory);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(54px, 7vw, 88px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+}
+
+
+.edition-page .hero-text {
+
+    max-width: 620px;
+
+    margin: 0 auto 26px;
+
+    color: rgba(241,237,228,0.90);
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   05 — EDITORIAL STORY SPACING
+   ========================================================= */
+
+.edition-page .story-block {
+
+    margin-bottom: 115px;
+}
+
+
+.edition-page .story-block img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 540px;
+
+    object-fit: cover;
+
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   06 — PHOTOGRAPHY GRID
+   ========================================================= */
+
+/*
+   Photographs should feel like individual editorial images,
+   not one continuous strip.
+*/
+
+.edition-page .gallery {
+
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+
+.edition-page .gallery > img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    margin: 0 0 24px;
+
+    object-fit: cover;
+
+    border-radius: 0;
+}
+
+
+.edition-page .gallery-row {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin-bottom: 24px;
+}
+
+
+.edition-page .gallery-row img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 460px;
+
+    object-fit: cover;
+
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   07 — IMAGE HOVER
+   ========================================================= */
+
+.edition-page .gallery img,
+.edition-page .story-block img {
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+.edition-page .gallery img:hover,
+.edition-page .story-block img:hover {
+
+    transform: scale(1.008);
+}
+
+
+/* =========================================================
+   08 — WHERE WE STAY
+   ========================================================= */
+
+.edition-page .journey {
+
+    background: var(--bg-card, #1A1816);
+
+    border: 1px solid rgba(212,168,58,0.14);
+}
+
+
+.edition-page .journey-location {
+
+    color: var(--edition-gold) !important;
+}
+
+
+/* =========================================================
+   09 — CAMERA ROLL
+   ========================================================= */
+
+.edition-page .camera-roll {
+
+    background: #11100F;
+}
+
+
+.edition-page .camera-roll-track img {
+
+    border-radius: 0;
+}
+
+
+/* =========================================================
+   10 — FOOTER
+   ========================================================= */
+
+/*
+   The footer now follows the same fixed visual language
+   as the homepage.
+*/
+
+.edition-page footer {
+
+    background: #11100F;
+
+    border-top: 1px solid rgba(212,168,58,0.28);
+}
+
+
+.edition-page footer h3 {
+
+    color: var(--edition-gold) !important;
+
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+.edition-page footer p {
+
+    color: var(--edition-muted);
+}
+
+
+.edition-page footer .text-link {
+
+    color: var(--edition-gold) !important;
+}
+
+
+.edition-page .copyright {
+
+    color: #77736C;
+}
+
+
+/* =========================================================
+   11 — PHONE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+
+    /* HERO */
+
+    .edition-page .hero {
+
+        height: 610px;
+
+        min-height: 610px;
+
+        background-position: center center;
+    }
+
+
+    .edition-page .hero > img,
+    .edition-page .hero img.hero-image {
+
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center center;
+    }
+
+
+    .edition-page .hero-overlay {
+
+        bottom: 58px;
+
+        width: calc(100% - 44px);
+    }
+
+
+    .edition-page .hero-overlay .eyebrow {
+
+        margin-bottom: 13px;
+
+        font-size: 9px;
+    }
+
+
+    .edition-page .hero-overlay h1 {
+
+        margin-bottom: 14px;
+
+        font-size: 3.7rem;
+
+        line-height: 0.9;
+    }
+
+
+    .edition-page .hero-text {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* STORY IMAGES */
+
+    .edition-page .story-block {
+
+        margin-bottom: 72px;
+    }
+
+
+    .edition-page .story-block img {
+
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        object-fit: cover;
+    }
+
+
+    /* GALLERY */
+
+    .edition-page .gallery {
+
+        margin-top: 20px;
+    }
+
+
+    .edition-page .gallery > img {
+
+        height: auto;
+
+        margin-bottom: 18px;
+    }
+
+
+    .edition-page .gallery-row {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .edition-page .gallery-row img {
+
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1 / 1;
+
+        object-fit: cover;
+    }
+
+
+    /* CAMERA ROLL */
+
+    .edition-page .camera-roll-track {
+
+        gap: 12px;
+    }
+
+
+    .edition-page .camera-roll-track img {
+
+        width: 190px;
+
+        height: 255px;
+    }
+
+
+    /* FOOTER */
+
+    .edition-page footer {
+
+        border-top-color: rgba(212,168,58,0.28);
+    }
+
+}
+
+
+/* =========================================================
+   12 — VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .edition-page .hero {
+
+        height: 590px;
+
+        min-height: 590px;
+    }
+
+
+    .edition-page .hero-overlay h1 {
+
+        font-size: 3.35rem;
+    }
+
+
+    .edition-page .gallery-row {
+
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   END — EDITION MASTER OVERRIDES
+   ========================================================= */
 
 /* =========================================================
    END — NEW EDITION PAGE SYSTEM

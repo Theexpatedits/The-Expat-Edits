@@ -1163,276 +1163,211 @@
 }
 /* =========================================================
    THE EXPAT EDITS
-   EDITION MASTER OVERRIDES
-   HERO + PHOTOGRAPHY + GOLD SYSTEM
-   ========================================================= */
+   EDITION MASTER — FINAL OVERRIDES
+   VERSION 1.0
+========================================================= */
 
 
 /* =========================================================
-   01 — EDITION GOLD SYSTEM
-   Keep all Edition accents aligned with the new site.
-   ========================================================= */
+   01. HERO
+========================================================= */
 
-.edition-page {
-    --edition-gold: #D4A83A;
-    --edition-ivory: #F1EDE4;
-    --edition-muted: #9D9990;
-    --edition-bg: #11100F;
-}
-
-
-/* Gold editorial labels */
-
-.edition-page .eyebrow,
-.edition-page .section-label,
-.edition-page .story-number,
-.edition-page .journey-location,
-.edition-page .section-heading > p {
-    color: var(--edition-gold) !important;
-}
-
-
-/* Gold links */
-
-.edition-page a.text-link,
-.edition-page .text-link {
-    color: var(--edition-gold);
-}
-
-
-/* =========================================================
-   02 — MASTER EDITION HERO
-   ========================================================= */
-
-.edition-page .hero {
-
+.edition-hero {
     position: relative;
-
     width: 100%;
-
-    height: min(78vh, 780px);
-
-    min-height: 620px;
-
+    min-height: min(78vh, 780px);
     overflow: hidden;
-
-    background-color: var(--edition-bg);
-
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: var(--bg);
 }
 
 
-/*
-   If the hero uses an actual <img>, make sure it fills
-   the hero correctly.
-*/
+/* Hero image */
 
-.edition-page .hero > img,
-.edition-page .hero img.hero-image {
+.edition-hero-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: var(--bg);
+}
 
+.edition-hero-image img {
     display: block;
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
-
     object-position: center center;
 
+    filter:
+        saturate(0.93)
+        contrast(0.96);
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 62%,
+        rgba(0,0,0,0.92) 72%,
+        rgba(0,0,0,0.62) 84%,
+        rgba(0,0,0,0.22) 94%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        #000 0%,
+        #000 62%,
+        rgba(0,0,0,0.92) 72%,
+        rgba(0,0,0,0.62) 84%,
+        rgba(0,0,0,0.22) 94%,
+        transparent 100%
+    );
 }
 
 
-/* =========================================================
-   03 — HERO DARK EDITORIAL FADE
-   ========================================================= */
+/* Subtle top treatment */
 
-.edition-page .hero::after {
-
+.edition-hero-image::after {
     content: "";
 
     position: absolute;
-
     inset: 0;
-
-    z-index: 2;
 
     pointer-events: none;
 
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(17,16,15,0.12) 0%,
-            rgba(17,16,15,0.02) 38%,
-            rgba(17,16,15,0.16) 58%,
-            rgba(17,16,15,0.72) 82%,
-            #11100F 100%
-        );
+    background: linear-gradient(
+        to bottom,
+        rgba(17,16,15,0.10),
+        transparent 20%
+    );
 }
 
 
 /* =========================================================
-   04 — HERO CONTENT
-   ========================================================= */
+   02. HERO CONTENT
+========================================================= */
 
-.edition-page .hero-overlay {
-
+.edition-hero-content {
     position: absolute;
-
-    left: 50%;
-    bottom: 75px;
 
     z-index: 5;
 
-    width: min(760px, 88%);
+    left: 50%;
+    bottom: 72px;
+
+    width: min(
+        calc(100% - (var(--page-padding) * 2)),
+        900px
+    );
 
     transform: translateX(-50%);
 
     text-align: center;
-
-    color: var(--edition-ivory);
-
-    text-shadow:
-        0 3px 24px rgba(0,0,0,0.45);
 }
 
 
-.edition-page .hero-overlay .eyebrow {
+.edition-hero-content h1 {
+    margin: 0;
 
-    margin-bottom: 16px;
+    color: var(--ivory);
 
-    color: var(--edition-gold) !important;
+    font-family: var(--font-display);
 
-    font-size: 10px;
+    font-size: clamp(
+        4.5rem,
+        9vw,
+        8rem
+    );
 
-    letter-spacing: 0.28em;
+    font-weight: 500;
+
+    line-height: 0.82;
+
+    text-shadow:
+        0 3px 25px rgba(0,0,0,0.35);
+}
+
+
+.edition-hero-intro {
+
+    margin-top: 18px;
+
+    color: var(--gold);
+
+    font-family: var(--font-body);
+
+    font-size: 0.68rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.20em;
 
     text-transform: uppercase;
 }
 
 
-.edition-page .hero-overlay h1 {
+/* =========================================================
+   03. GOLD EDITORIAL LABELS
+========================================================= */
 
-    margin-bottom: 18px;
+.edition-section .section-label,
+.edition-snapshot-label,
+.edition-stay-number,
+.edition-dont-miss-list span {
 
-    color: var(--edition-ivory);
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: clamp(54px, 7vw, 88px);
-
-    font-weight: 500;
-
-    line-height: 0.9;
-}
-
-
-.edition-page .hero-text {
-
-    max-width: 620px;
-
-    margin: 0 auto 26px;
-
-    color: rgba(241,237,228,0.90);
-
-    font-size: 14px;
-
-    font-weight: 300;
-
-    line-height: 1.8;
+    color: var(--gold);
 }
 
 
 /* =========================================================
-   05 — EDITORIAL STORY SPACING
-   ========================================================= */
-
-.edition-page .story-block {
-
-    margin-bottom: 115px;
-}
-
-
-.edition-page .story-block img {
-
-    display: block;
-
-    width: 100%;
-
-    height: 540px;
-
-    object-fit: cover;
-
-    border-radius: 0;
-}
-
-
-/* =========================================================
-   06 — PHOTOGRAPHY GRID
-   ========================================================= */
+   04. PHOTOGRAPHY — SEPARATION
+========================================================= */
 
 /*
-   Photographs should feel like individual editorial images,
-   not one continuous strip.
+   Every photograph must have breathing room.
+   This prevents images visually merging into one
+   continuous block.
 */
 
-.edition-page .gallery {
-
-    width: 100%;
-
-    margin-top: 30px;
-}
-
-
-.edition-page .gallery > img {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    margin: 0 0 24px;
-
-    object-fit: cover;
-
-    border-radius: 0;
-}
-
-
-.edition-page .gallery-row {
+.edition-photo-grid {
 
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
 
-    gap: 24px;
-
-    margin-bottom: 24px;
+    gap: 20px;
 }
 
 
-.edition-page .gallery-row img {
+.edition-photo-grid figure {
 
-    display: block;
+    margin: 0;
 
-    width: 100%;
+    overflow: hidden;
 
-    height: 460px;
-
-    object-fit: cover;
-
-    border-radius: 0;
+    background: var(--bg-card);
 }
 
 
 /* =========================================================
-   07 — IMAGE HOVER
-   ========================================================= */
+   05. PHOTO TREATMENT
+========================================================= */
 
-.edition-page .gallery img,
-.edition-page .story-block img {
+.edition-photo-grid img {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    filter:
+        saturate(0.93)
+        contrast(0.96);
 
     transition:
         transform 0.6s ease,
@@ -1440,257 +1375,168 @@
 }
 
 
-.edition-page .gallery img:hover,
-.edition-page .story-block img:hover {
+.edition-photo-grid figure:hover img {
 
-    transform: scale(1.008);
+    transform: scale(1.02);
+
+    filter:
+        saturate(0.98)
+        contrast(0.98);
 }
 
 
 /* =========================================================
-   08 — WHERE WE STAY
-   ========================================================= */
+   06. FEATURE PHOTOGRAPH
+========================================================= */
 
-.edition-page .journey {
+.edition-feature-image {
 
-    background: var(--bg-card, #1A1816);
-
-    border: 1px solid rgba(212,168,58,0.14);
+    overflow: hidden;
 }
 
 
-.edition-page .journey-location {
+.edition-feature-image img {
 
-    color: var(--edition-gold) !important;
-}
+    display: block;
 
+    width: 100%;
+    height: 620px;
 
-/* =========================================================
-   09 — CAMERA ROLL
-   ========================================================= */
+    object-fit: cover;
 
-.edition-page .camera-roll {
-
-    background: #11100F;
-}
-
-
-.edition-page .camera-roll-track img {
-
-    border-radius: 0;
+    filter:
+        saturate(0.93)
+        contrast(0.96);
 }
 
 
 /* =========================================================
-   10 — FOOTER
-   ========================================================= */
+   07. STAY SECTION
+========================================================= */
 
-/*
-   The footer now follows the same fixed visual language
-   as the homepage.
-*/
+.edition-stays {
 
-.edition-page footer {
+    background: var(--bg-soft);
 
-    background: #11100F;
-
-    border-top: 1px solid rgba(212,168,58,0.28);
-}
-
-
-.edition-page footer h3 {
-
-    color: var(--edition-gold) !important;
-
-    font-family: "Cormorant Garamond", serif;
-}
-
-
-.edition-page footer p {
-
-    color: var(--edition-muted);
-}
-
-
-.edition-page footer .text-link {
-
-    color: var(--edition-gold) !important;
-}
-
-
-.edition-page .copyright {
-
-    color: #77736C;
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
 }
 
 
 /* =========================================================
-   11 — PHONE
-   ========================================================= */
+   08. MOBILE HERO
+========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+
+    .edition-hero {
+
+        min-height: 650px;
+
+        height: 650px;
+    }
 
 
-    /* HERO */
+    .edition-hero-image img {
 
-    .edition-page .hero {
+        object-position: center center;
 
-        height: 610px;
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            #000 0%,
+            #000 55%,
+            rgba(0,0,0,0.92) 67%,
+            rgba(0,0,0,0.62) 80%,
+            rgba(0,0,0,0.22) 92%,
+            transparent 100%
+        );
+
+        mask-image: linear-gradient(
+            to bottom,
+            #000 0%,
+            #000 55%,
+            rgba(0,0,0,0.92) 67%,
+            rgba(0,0,0,0.62) 80%,
+            rgba(0,0,0,0.22) 92%,
+            transparent 100%
+        );
+    }
+
+
+    .edition-hero-content {
+
+        bottom: 52px;
+
+        width: calc(100% - 48px);
+    }
+
+
+    .edition-hero-content h1 {
+
+        font-size: 4.5rem;
+
+        line-height: 0.86;
+    }
+
+
+    .edition-hero-intro {
+
+        margin-top: 14px;
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.15em;
+    }
+
+
+    /* Photography */
+
+    .edition-photo-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    .edition-photo-grid img {
+
+        aspect-ratio: 1 / 1;
+    }
+
+
+    /* Feature image */
+
+    .edition-feature-image img {
+
+        height: 420px;
+    }
+
+}
+
+
+/* =========================================================
+   09. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .edition-hero {
 
         min-height: 610px;
 
-        background-position: center center;
+        height: 610px;
     }
 
 
-    .edition-page .hero > img,
-    .edition-page .hero img.hero-image {
+    .edition-hero-content h1 {
 
-        height: 100%;
-
-        object-fit: cover;
-
-        object-position: center center;
+        font-size: 4rem;
     }
 
 
-    .edition-page .hero-overlay {
-
-        bottom: 58px;
-
-        width: calc(100% - 44px);
-    }
-
-
-    .edition-page .hero-overlay .eyebrow {
-
-        margin-bottom: 13px;
-
-        font-size: 9px;
-    }
-
-
-    .edition-page .hero-overlay h1 {
-
-        margin-bottom: 14px;
-
-        font-size: 3.7rem;
-
-        line-height: 0.9;
-    }
-
-
-    .edition-page .hero-text {
-
-        font-size: 13px;
-
-        line-height: 1.7;
-    }
-
-
-    /* STORY IMAGES */
-
-    .edition-page .story-block {
-
-        margin-bottom: 72px;
-    }
-
-
-    .edition-page .story-block img {
-
-        height: auto;
-
-        aspect-ratio: 4 / 3;
-
-        object-fit: cover;
-    }
-
-
-    /* GALLERY */
-
-    .edition-page .gallery {
-
-        margin-top: 20px;
-    }
-
-
-    .edition-page .gallery > img {
-
-        height: auto;
-
-        margin-bottom: 18px;
-    }
-
-
-    .edition-page .gallery-row {
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
-
-        margin-bottom: 18px;
-    }
-
-
-    .edition-page .gallery-row img {
-
-        width: 100%;
-
-        height: auto;
-
-        aspect-ratio: 1 / 1;
-
-        object-fit: cover;
-    }
-
-
-    /* CAMERA ROLL */
-
-    .edition-page .camera-roll-track {
-
-        gap: 12px;
-    }
-
-
-    .edition-page .camera-roll-track img {
-
-        width: 190px;
-
-        height: 255px;
-    }
-
-
-    /* FOOTER */
-
-    .edition-page footer {
-
-        border-top-color: rgba(212,168,58,0.28);
-    }
-
-}
-
-
-/* =========================================================
-   12 — VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-    .edition-page .hero {
-
-        height: 590px;
-
-        min-height: 590px;
-    }
-
-
-    .edition-page .hero-overlay h1 {
-
-        font-size: 3.35rem;
-    }
-
-
-    .edition-page .gallery-row {
+    .edition-photo-grid {
 
         gap: 10px;
     }
@@ -1700,8 +1546,4 @@
 
 /* =========================================================
    END — EDITION MASTER OVERRIDES
-   ========================================================= */
-
-/* =========================================================
-   END — NEW EDITION PAGE SYSTEM
 ========================================================= */

@@ -14,16 +14,22 @@
 
     <meta
         name="description"
-        content="The Expat Edits — our journeys, collected."
+        content="The Expat Edits — our journeys, photographed and collected."
     >
 
-    <!-- Google Fonts -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
         crossorigin
     >
 
@@ -32,11 +38,24 @@
         rel="stylesheet"
     >
 
-    <!-- MASTER CSS -->
+
+    <!-- =====================================================
+         MASTER GLOBAL CSS
+    ====================================================== -->
 
     <link
         rel="stylesheet"
         href="style-new.css"
+    >
+
+
+    <!-- =====================================================
+         NEW EDITIONS CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style-editions-new.css"
     >
 
 </head>
@@ -47,11 +66,17 @@
 
 <!-- =====================================================
      FIXED HEADER
+     
+     MASTER VERSION
+     Controlled by style-new.css
 ====================================================== -->
 
 <header class="site-header">
 
     <div class="site-header-inner">
+
+
+        <!-- LOGO -->
 
         <a
             href="index-new.html"
@@ -60,6 +85,8 @@
             THE EXPAT EDITS
         </a>
 
+
+        <!-- DESKTOP NAVIGATION -->
 
         <nav class="site-nav">
 
@@ -82,7 +109,7 @@
         </nav>
 
 
-        <!-- Mobile menu button -->
+        <!-- MOBILE MENU BUTTON -->
 
         <button
             class="menu-toggle"
@@ -110,7 +137,7 @@
 
 
     <!-- =================================================
-         INTRODUCTION
+         PAGE INTRODUCTION
     ================================================== -->
 
     <section class="editions-intro section">
@@ -125,7 +152,7 @@
                 Editions
             </h1>
 
-            <p class="editions-intro-text">
+            <p class="section-intro">
                 Places we've travelled, photographed and
                 remembered along the way.
             </p>
@@ -138,6 +165,8 @@
 
     <!-- =================================================
          EDITION ARCHIVE
+         
+         This grid will grow as new Editions are added.
     ================================================== -->
 
     <section class="editions-archive section">
@@ -174,14 +203,14 @@
 
                         <img
                             src="javahero.jpeg"
-                            alt="Borobudur at sunrise, Java"
+                            alt="Java, Indonesia"
                         >
 
                     </div>
 
                     <div class="edition-archive-content">
 
-                        <p class="edition-archive-location">
+                        <p class="edition-archive-country">
                             CENTRAL JAVA · INDONESIA
                         </p>
 
@@ -189,7 +218,7 @@
                             Java
                         </h3>
 
-                        <p>
+                        <p class="edition-archive-description">
                             Temples, mountains and coffee country.
                         </p>
 
@@ -223,7 +252,7 @@
 
                     <div class="edition-archive-content">
 
-                        <p class="edition-archive-location">
+                        <p class="edition-archive-country">
                             JAPAN
                         </p>
 
@@ -231,7 +260,7 @@
                             Japan
                         </h3>
 
-                        <p>
+                        <p class="edition-archive-description">
                             Tokyo, Kyoto and beyond.
                         </p>
 
@@ -265,7 +294,7 @@
 
                     <div class="edition-archive-content">
 
-                        <p class="edition-archive-location">
+                        <p class="edition-archive-country">
                             VIETNAM
                         </p>
 
@@ -273,7 +302,7 @@
                             Vietnam
                         </h3>
 
-                        <p>
+                        <p class="edition-archive-description">
                             Culture, coast and countryside.
                         </p>
 
@@ -300,14 +329,14 @@
 
                         <img
                             src="komodohero.jpeg"
-                            alt="Komodo Islands"
+                            alt="Komodo, Indonesia"
                         >
 
                     </div>
 
                     <div class="edition-archive-content">
 
-                        <p class="edition-archive-location">
+                        <p class="edition-archive-country">
                             INDONESIA
                         </p>
 
@@ -315,7 +344,7 @@
                             Komodo
                         </h3>
 
-                        <p>
+                        <p class="edition-archive-description">
                             Islands, ocean and wild beauty.
                         </p>
 
@@ -349,7 +378,7 @@
 
                     <div class="edition-archive-content">
 
-                        <p class="edition-archive-location">
+                        <p class="edition-archive-country">
                             HONG KONG
                         </p>
 
@@ -357,7 +386,7 @@
                             Hong Kong
                         </h3>
 
-                        <p>
+                        <p class="edition-archive-description">
                             City energy and hidden escapes.
                         </p>
 
@@ -391,7 +420,7 @@
 
                     <div class="edition-archive-content">
 
-                        <p class="edition-archive-location">
+                        <p class="edition-archive-country">
                             THAILAND
                         </p>
 
@@ -399,7 +428,7 @@
                             Krabi
                         </h3>
 
-                        <p>
+                        <p class="edition-archive-description">
                             Islands, beaches and easy living.
                         </p>
 
@@ -424,23 +453,34 @@
 
 
 <!-- =====================================================
-     FOOTER
+     FIXED FOOTER
+     
+     MASTER VERSION
+     Controlled by style-new.css
 ====================================================== -->
 
 <footer class="site-footer">
 
     <div class="site-footer-inner">
 
-        <div class="site-footer-brand">
+
+        <!-- FOOTER LOGO -->
+
+        <div class="footer-logo">
             THE EXPAT EDITS
         </div>
 
-        <p class="site-footer-tagline">
+
+        <!-- FOOTER DESCRIPTION -->
+
+        <p class="footer-description">
             Travel, places &amp; observations from life abroad.
         </p>
 
 
-        <nav class="site-footer-nav">
+        <!-- FOOTER NAVIGATION -->
+
+        <nav class="footer-nav">
 
             <a href="editions.html">
                 Editions
@@ -461,15 +501,19 @@
         </nav>
 
 
+        <!-- INSTAGRAM -->
+
         <a
             href="#"
-            class="site-footer-instagram"
+            class="footer-social"
         >
             Instagram
         </a>
 
 
-        <p class="site-footer-copyright">
+        <!-- COPYRIGHT -->
+
+        <p class="footer-copyright">
             © The Expat Edits
         </p>
 

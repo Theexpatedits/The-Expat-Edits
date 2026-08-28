@@ -1383,7 +1383,7 @@ p {
         );
 }
 /* =========================================================
-   HOMEPAGE POLISH — AUGUST 2026
+   HOMEPAGE POLISH — FINAL
 ========================================================= */
 
 
@@ -1409,15 +1409,14 @@ p {
     color: var(--gold);
 
     font-family: var(--font-display);
-    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-size: clamp(1.9rem, 4vw, 3rem);
     font-weight: 500;
 
-    line-height: 1.05;
+    line-height: 1.1;
 }
 
 
-/* Welcome body text
-   Match the Singapore editorial text */
+/* Welcome body — matched to Singapore */
 
 .homepage-intro p {
     max-width: 620px;
@@ -1440,7 +1439,6 @@ p {
 
 /* =========================================================
    VIEW ALL EDITIONS
-   Gold version is the only homepage archive link
 ========================================================= */
 
 .editions-archive-link {
@@ -1472,7 +1470,6 @@ p {
 
 .singapore-hero-image::after {
     background:
-        /* Top fade — softer */
         linear-gradient(
             to bottom,
             rgba(17, 16, 15, 0.72) 0%,
@@ -1481,7 +1478,6 @@ p {
             transparent 18%
         ),
 
-        /* Left fade — softer */
         linear-gradient(
             to right,
             rgba(17, 16, 15, 0.72) 0%,
@@ -1490,7 +1486,6 @@ p {
             transparent 18%
         ),
 
-        /* Right fade — softer */
         linear-gradient(
             to left,
             rgba(17, 16, 15, 0.72) 0%,
@@ -1519,7 +1514,13 @@ p {
     .homepage-intro h1 {
         margin-bottom: 12px;
 
-        font-size: 2.75rem;
+        /*
+           Deliberately smaller than the fixed
+           masthead for a quieter introduction.
+        */
+
+        font-size: 1.9rem;
+        line-height: 1.1;
     }
 
     .homepage-intro p {

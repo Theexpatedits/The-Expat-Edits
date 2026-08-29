@@ -4,102 +4,185 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Phuket | The Expat Edits</title>
 
-    <meta name="description" content="Phuket — island days, boat trips, beach clubs and late nights around the Andaman Sea.">
+    <meta
+        name="description"
+        content="Phuket — island days, blue water and nights that run late. The Expat Edits."
+    >
+
+    <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <!-- NEW SHARED SITE STYLES -->
-    <link rel="stylesheet" href="style-new.css">
-    <link rel="stylesheet" href="style-editions-new.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- MASTER SITE CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style-new.css"
+    >
+
+    <!-- EDITION CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style-editions-new.css"
+    >
 
 </head>
 
-<body>
 
-<header class="edition-hero" style="background-image:url('phukethero.jpeg');">
+<body class="edition-page">
 
-    <nav>
 
-        <div class="logo">
-            <a href="index.html">THE EXPAT EDITS</a>
-        </div>
+<!-- =====================================================
+     FIXED HEADER
+====================================================== -->
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#story">Story</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-        </ul>
+<header class="site-header">
 
-    </nav>
+    <div class="site-header-inner">
 
-    <div class="edition-hero-content">
+        <a
+            href="index-new.html"
+            class="site-logo"
+        >
+            THE EXPAT EDITS
+        </a>
 
-        <p class="edition-kicker">JOURNEY 06</p>
 
-        <h1>Phuket</h1>
+        <nav class="site-nav">
 
-        <p class="edition-intro">
-            Island days, blue water and nights that run late.
-            From boat days across the Andaman Sea to long afternoons
-            by the beach, Phuket gave us exactly the kind of escape
-            we were looking for.
-        </p>
+            <a href="editions.html">
+                Editions
+            </a>
+
+            <a href="index-new.html#journal">
+                Journal
+            </a>
+
+            <a href="index-new.html#map">
+                Map
+            </a>
+
+            <a href="index-new.html#about">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
 
     </div>
 
 </header>
 
 
-<main>
+
+<!-- =====================================================
+     PHUKET — HERO
+====================================================== -->
+
+<section
+    class="edition-hero"
+    style="background-image: url('phukethero.jpeg');"
+>
+
+    <div class="edition-hero-overlay">
+
+        <p class="eyebrow">
+            THAILAND
+        </p>
+
+        <h1>
+            Phuket
+        </h1>
+
+        <p class="edition-hero-subtitle">
+            Island days, blue water and nights that run late.
+        </p>
+
+    </div>
+
+</section>
 
 
-<!-- INTRODUCTION -->
 
-<section class="edition-intro-section">
+<!-- =====================================================
+     INTRODUCTION
+====================================================== -->
 
-    <div class="edition-container">
+<section class="edition-intro section">
 
-        <p class="edition-section-label">THE EXPERIENCE</p>
-
-        <h2>Phuket, our way</h2>
+    <div class="container">
 
         <div class="edition-intro-grid">
 
             <div>
 
-                <p>
-                    Phuket is easy to think you already know. But once you
-                    get away from the traffic and out onto the water, the
-                    island feels very different.
+                <p class="section-label">
+                    The Journey
                 </p>
 
-                <p>
-                    We based ourselves at the InterContinental and settled
-                    quickly into the rhythm of beach mornings, boat days and
-                    evenings that carried on long after sunset.
-                </p>
-
-                <p>
-                    The best days were spent exploring the nearby islands
-                    by boat — clear water, dramatic coastlines and the
-                    freedom to stop wherever looked too good to pass.
-                </p>
+                <h2>
+                    Phuket, our way
+                </h2>
 
             </div>
 
-            <div>
 
-                <img
-                    src="phuket5.jpeg"
-                    alt="Exploring the islands around Phuket by boat"
-                >
+            <div class="edition-intro-text">
+
+                <p>
+                    Phuket is easy to think you already know. But once
+                    you get away from the traffic and out onto the water,
+                    the island feels very different.
+                </p>
+
+                <p>
+                    We based ourselves at the InterContinental and
+                    settled quickly into the rhythm of beach mornings,
+                    boat days and evenings that carried on long after
+                    sunset. Exploring the nearby islands by boat was
+                    the highlight — clear water, dramatic coastlines
+                    and the freedom to stop wherever looked too good
+                    to pass.
+                </p>
+
+                <p>
+                    Back on the island, the mood changed. Café del Mar
+                    brought the music and late afternoons turned into
+                    nights, while some of the quieter moments were often
+                    the ones we remembered most.
+                </p>
 
             </div>
 
@@ -110,93 +193,125 @@
 </section>
 
 
-<!-- EDITORIAL STORY -->
 
-<section class="edition-story">
+<!-- =====================================================
+     PHOTO STORY
+====================================================== -->
 
-    <div class="edition-container">
+<section class="edition-photo-story section">
+
+    <div class="container">
 
 
         <!-- STORY 01 -->
 
-        <article class="edition-story-block">
+        <div class="edition-story-block">
 
-            <img
-                src="phuket2.jpeg"
-                alt="Boat day exploring the Andaman Sea"
-            >
+            <div class="edition-story-image">
+
+                <img
+                    src="phuket2.jpeg"
+                    alt="Boat day exploring the Andaman Sea"
+                >
+
+            </div>
+
 
             <div class="edition-story-copy">
 
-                <p class="edition-story-number">01</p>
+                <p class="story-number">
+                    01
+                </p>
 
-                <h2>Out on the water</h2>
+                <h2>
+                    Out on the water
+                </h2>
 
                 <p>
-                    The best way to see Phuket is to leave it behind for
-                    a day. We spent our time exploring the nearby islands,
-                    moving between clear water, rocky coastlines and quiet
-                    stretches of beach.
+                    The best way to see Phuket is to leave it behind
+                    for a day. We spent our time exploring the nearby
+                    islands, moving between clear water, rocky
+                    coastlines and quiet stretches of beach.
                 </p>
 
                 <p>
                     There is something about being on a boat that makes
-                    the whole day slow down. No traffic, no timetable —
-                    just the sea and somewhere new to explore.
+                    the whole day slow down. The scenery keeps changing,
+                    but there is never any real need to hurry.
                 </p>
 
             </div>
 
-        </article>
+        </div>
+
 
 
         <!-- STORY 02 -->
 
-        <article class="edition-story-block">
+        <div class="edition-story-block">
 
-            <img
-                src="phuket7.jpeg"
-                alt="Island scenery near Phuket"
-            >
+            <div class="edition-story-image">
+
+                <img
+                    src="phuket7.jpeg"
+                    alt="Island scenery near Phuket"
+                >
+
+            </div>
+
 
             <div class="edition-story-copy">
 
-                <p class="edition-story-number">02</p>
+                <p class="story-number">
+                    02
+                </p>
 
-                <h2>The islands</h2>
+                <h2>
+                    The islands
+                </h2>
 
                 <p>
-                    Phuket's real magic is scattered offshore. Dramatic
-                    limestone, turquoise water and small islands appear
-                    around almost every bend.
+                    Phuket's real magic is scattered offshore.
+                    Dramatic limestone, turquoise water and small
+                    islands appear around almost every bend.
                 </p>
 
                 <p>
                     A boat day gives you the freedom to see the places
-                    that are impossible to reach from the road — and
-                    some of the best memories came from simply finding
-                    somewhere beautiful and stopping there.
+                    that are impossible to reach from the road and
+                    makes the island feel much bigger than it first
+                    appears.
                 </p>
 
             </div>
 
-        </article>
+        </div>
+
 
 
         <!-- STORY 03 -->
 
-        <article class="edition-story-block">
+        <div class="edition-story-block">
 
-            <img
-                src="phuket13.jpeg"
-                alt="Beach club afternoon in Phuket"
-            >
+            <div class="edition-story-image">
+
+                <img
+                    src="phuket13.jpeg"
+                    alt="Beach club afternoon in Phuket"
+                >
+
+            </div>
+
 
             <div class="edition-story-copy">
 
-                <p class="edition-story-number">03</p>
+                <p class="story-number">
+                    03
+                </p>
 
-                <h2>Beach clubs &amp; late nights</h2>
+                <h2>
+                    Beach clubs &amp; late nights
+                </h2>
 
                 <p>
                     Back on the island, Phuket has another side.
@@ -207,98 +322,49 @@
 
                 <p>
                     It is an easy rhythm: sun, sea, music and nowhere
-                    you particularly need to be. Some nights were about
-                    going out, others simply about letting the evening
-                    unfold.
+                    you particularly need to be.
                 </p>
 
             </div>
 
-        </article>
+        </div>
+
 
 
         <!-- STORY 04 -->
 
-        <article class="edition-story-block">
+        <div class="edition-story-block">
 
-            <img
-                src="phuket14.jpeg"
-                alt="Quiet moment by the sea in Phuket"
-            >
+            <div class="edition-story-image">
+
+                <img
+                    src="phuket14.jpeg"
+                    alt="Quiet moment by the sea in Phuket"
+                >
+
+            </div>
+
 
             <div class="edition-story-copy">
 
-                <p class="edition-story-number">04</p>
+                <p class="story-number">
+                    04
+                </p>
 
-                <h2>Time to slow down</h2>
+                <h2>
+                    Time to slow down
+                </h2>
 
                 <p>
-                    For all the energy around Phuket, some of our favourite
-                    moments were the quiet ones.
+                    For all the energy around Phuket, some of our
+                    favourite moments were the quiet ones.
                 </p>
 
                 <p>
                     A coffee, an empty stretch of sand, the sea in front
-                    of us and a few hours with nowhere to go. Phuket has
-                    plenty going on, but you don't need to chase all of it.
-                </p>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-<!-- DON'T MISS -->
-
-<section class="edition-features">
-
-    <div class="edition-container">
-
-        <p class="edition-section-label">DON'T MISS</p>
-
-        <h2>The Phuket Edit</h2>
-
-        <div class="edition-features-grid">
-
-            <div class="edition-feature">
-
-                <h3>Boat days</h3>
-
-                <p>
-                    Leave the island behind and spend a day exploring
-                    the surrounding islands by boat. The water is where
-                    Phuket really comes alive.
-                </p>
-
-            </div>
-
-
-            <div class="edition-feature">
-
-                <h3>Café del Mar</h3>
-
-                <p>
-                    Head to Café del Mar for the transition from
-                    late-afternoon beach time into music, drinks and
-                    a night that doesn't need to end early.
-                </p>
-
-            </div>
-
-
-            <div class="edition-feature">
-
-                <h3>InterContinental Phuket</h3>
-
-                <p>
-                    Our base for the trip and an easy place to settle
-                    into the west-coast rhythm of beach mornings,
-                    boat adventures and evenings out.
+                    of us and a few hours with nowhere to go. Phuket
+                    works particularly well when you leave some space
+                    in the day.
                 </p>
 
             </div>
@@ -310,42 +376,26 @@
 </section>
 
 
-<!-- OUR TAKE -->
 
-<section class="edition-take">
+<!-- =====================================================
+     GALLERY — PHUKET
+====================================================== -->
 
-    <div class="edition-container">
+<section class="edition-gallery section">
 
-        <p class="edition-section-label">OUR TAKE</p>
+    <div class="container">
 
-        <h2>What we'd remember</h2>
+        <div class="section-heading">
 
-        <p class="edition-take-copy">
-            Phuket works best when you do not try to do too much.
-            Spend a day on the water, find a good beach, let an
-            afternoon run into evening and keep a few hours completely
-            free.
-        </p>
+            <p>
+                From the camera
+            </p>
 
-        <p class="edition-take-copy">
-            The island has plenty going on, but the memories are usually
-            made in the spaces between the plans.
-        </p>
+            <h2>
+                Phuket
+            </h2>
 
-    </div>
-
-</section>
-
-
-<!-- FROM THE CAMERA -->
-
-<section id="gallery" class="edition-gallery">
-
-    <div class="edition-container">
-
-        <p class="edition-section-label">FROM THE CAMERA</p>
-
-        <h2>Phuket</h2>
+        </div>
 
 
         <div class="edition-gallery-grid">
@@ -395,10 +445,129 @@
                 alt="Phuket sunset"
             >
 
-            <img
-                src="phuket15.jpeg"
-                alt="Phuket beach"
-            >
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTERCONTINENTAL
+====================================================== -->
+
+<section class="edition-feature section">
+
+    <div class="container">
+
+        <div class="edition-feature-grid">
+
+            <div class="edition-feature-copy">
+
+                <p class="section-label">
+                    Where we stayed
+                </p>
+
+                <h2>
+                    InterContinental Phuket
+                </h2>
+
+                <p>
+                    We based ourselves at the InterContinental Phuket
+                    and settled quickly into the rhythm of beach
+                    mornings, days out on the water and evenings around
+                    the west coast.
+                </p>
+
+                <p>
+                    The location made it easy to move between slow beach
+                    days, boat adventures and the livelier side of
+                    Phuket without making the whole trip feel like a
+                    schedule.
+                </p>
+
+            </div>
+
+
+            <div class="edition-feature-image">
+
+                <img
+                    src="phuket15.jpeg"
+                    alt="Phuket beach"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EAT & DRINK
+====================================================== -->
+
+<section class="edition-stay section">
+
+    <div class="container">
+
+        <div class="edition-stay-card">
+
+            <p class="section-label">
+                Eat &amp; Drink
+            </p>
+
+            <h2>
+                Café del Mar
+            </h2>
+
+            <p>
+                Café del Mar became part of the Phuket rhythm for us,
+                particularly as afternoons started to turn into
+                evenings.
+            </p>
+
+            <p>
+                It is the kind of place that works best when you do not
+                have anywhere else you need to be — music, drinks,
+                sunset and the sea providing an easy backdrop to the
+                later part of the day.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL PHOTOS
+====================================================== -->
+
+<section class="edition-gallery section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>
+                Phuket
+            </p>
+
+            <h2>
+                The wider view
+            </h2>
+
+        </div>
+
+
+        <div class="edition-gallery-grid">
 
             <img
                 src="phuket5.jpeg"
@@ -412,26 +581,45 @@
 </section>
 
 
-<!-- STAY -->
 
-<section class="edition-stay">
+<!-- =====================================================
+     WHAT NOT TO MISS
+====================================================== -->
 
-    <div class="edition-container">
+<section class="edition-not-miss section">
 
-        <p class="edition-section-label">STAY</p>
+    <div class="container">
 
-        <h2>InterContinental Phuket</h2>
+        <div class="section-heading">
 
-        <div class="edition-stay-grid">
+            <p>
+                Don't Miss
+            </p>
+
+            <h2>
+                The Phuket experience
+            </h2>
+
+        </div>
+
+
+        <div class="edition-not-miss-grid">
+
 
             <div>
 
-                <h3>Our base</h3>
+                <p class="story-number">
+                    01
+                </p>
+
+                <h3>
+                    Get out on the water
+                </h3>
 
                 <p>
-                    We stayed at the InterContinental Phuket, a comfortable
-                    base for combining beach time with days out on the water
-                    and evenings around the west coast.
+                    The best way to experience Phuket is to spend a day
+                    among the islands. Leave the roads behind and see
+                    the coastline from the sea.
                 </p>
 
             </div>
@@ -439,15 +627,42 @@
 
             <div>
 
-                <h3>Why we liked it</h3>
+                <p class="story-number">
+                    02
+                </p>
+
+                <h3>
+                    Let the day run late
+                </h3>
 
                 <p>
-                    The location made it easy to move between slow beach days,
-                    boat adventures and the livelier side of Phuket without
-                    making the whole trip feel like a schedule.
+                    Phuket is at its best when a beach afternoon does
+                    not have a fixed ending. Stay for sunset and let
+                    the evening happen naturally.
                 </p>
 
             </div>
+
+
+            <div>
+
+                <p class="story-number">
+                    03
+                </p>
+
+                <h3>
+                    Leave time to do nothing
+                </h3>
+
+                <p>
+                    There is plenty to see, but some of the best
+                    memories come from the spaces between the plans —
+                    a quiet beach, a coffee or a few hours beside the
+                    sea.
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -456,21 +671,91 @@
 </section>
 
 
-</main>
+
+<!-- =====================================================
+     FINAL EDITORIAL
+====================================================== -->
+
+<section class="edition-closing section">
+
+    <div class="container">
+
+        <div class="edition-closing-inner">
+
+            <p class="section-label">
+                Our Take
+            </p>
+
+            <h2>
+                Phuket is better when you slow it down.
+            </h2>
+
+            <p>
+                Phuket has plenty going on, but for us the best version
+                of the island was a balance between the two sides of
+                it. A day on the water, a good beach, an afternoon that
+                becomes evening and a few hours with nowhere to be.
+                That was the rhythm that made the trip work.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-<footer>
 
-    <div class="footer-inner">
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
-        <h3>THE EXPAT EDITS</h3>
+<footer class="site-footer">
 
-        <p>
-            Photography • Travel • Hotels • Restaurants • Experiences
+    <div class="site-footer-inner">
+
+        <div class="footer-logo">
+            THE EXPAT EDITS
+        </div>
+
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
         </p>
 
-        <p class="copyright">
-            © 2026 The Expat Edits. All rights reserved.
+
+        <nav class="footer-nav">
+
+            <a href="editions.html">
+                Editions
+            </a>
+
+            <a href="index-new.html#journal">
+                Journal
+            </a>
+
+            <a href="index-new.html#map">
+                Map
+            </a>
+
+            <a href="index-new.html#about">
+                About
+            </a>
+
+        </nav>
+
+
+        <a
+            href="https://www.instagram.com/theexpatedits/"
+            class="footer-social"
+            target="_blank"
+            rel="noopener"
+        >
+            Instagram
+        </a>
+
+
+        <p class="footer-copyright">
+            © The Expat Edits
         </p>
 
     </div>
@@ -479,4 +764,5 @@
 
 
 </body>
+
 </html>

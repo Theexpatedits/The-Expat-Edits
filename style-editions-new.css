@@ -1,23 +1,14 @@
 /* =========================================================
    THE EXPAT EDITS
    EDITION MASTER STYLESHEET
-   VERSION 2.0
+   VERSION 2.1
 
    One master system for all destination Editions.
 
-   This file controls:
-   - Editions archive
-   - Edition hero
-   - Introduction
-   - Photo stories
-   - Galleries
-   - Feature sections
-   - Stay sections
-   - Don't Miss
-   - Closing
-
-   Destination HTML should change.
-   This CSS should not.
+   Photography rule:
+   - Hero = cover
+   - All editorial photography = natural aspect ratio
+   - No unnecessary cropping
 ========================================================= */
 
 
@@ -238,16 +229,6 @@
    03. EDITION HERO
 ========================================================= */
 
-/*
-   The current Edition HTML uses the hero photograph
-   as a background-image directly on .edition-hero.
-
-   The master system therefore handles it here.
-
-   Viewport-responsive height prevents the large empty
-   desktop bands we identified during the Java review.
-*/
-
 .edition-hero {
 
     position: relative;
@@ -273,10 +254,6 @@
     background-repeat: no-repeat;
 }
 
-
-/*
-   Subtle photographic treatment.
-*/
 
 .edition-hero::before {
 
@@ -479,19 +456,21 @@
 }
 
 
+/*
+   Editorial photography is never forced into
+   a fixed-height frame.
+
+   The original image ratio is preserved.
+*/
+
 .edition-story-image img {
 
     display: block;
 
     width: 100%;
+    height: auto;
 
-    height: clamp(
-        400px,
-        40vw,
-        560px
-    );
-
-    object-fit: cover;
+    object-fit: contain;
 
     filter:
         saturate(0.93)
@@ -623,8 +602,8 @@
 /*
    Three across on desktop.
 
-   The number of images does not matter.
-   The grid automatically handles any number.
+   Images retain their natural proportions.
+   No fixed height and no object-fit: cover.
 */
 
 .edition-gallery-grid {
@@ -633,6 +612,8 @@
 
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
+
+    align-items: start;
 
     gap: 20px;
 
@@ -645,10 +626,9 @@
     display: block;
 
     width: 100%;
+    height: auto;
 
-    height: 320px;
-
-    object-fit: cover;
+    object-fit: contain;
 
     background: var(--bg-card);
 
@@ -696,11 +676,6 @@
     align-items: center;
 }
 
-
-/*
-   Reverse means image on the left,
-   text on the right.
-*/
 
 .edition-feature-grid.reverse {
 
@@ -772,19 +747,19 @@
 }
 
 
+/*
+   Feature photography also preserves its
+   original proportions.
+*/
+
 .edition-feature-image img {
 
     display: block;
 
     width: 100%;
+    height: auto;
 
-    height: clamp(
-        420px,
-        43vw,
-        600px
-    );
-
-    object-fit: cover;
+    object-fit: contain;
 
     filter:
         saturate(0.93)
@@ -1020,7 +995,75 @@
 
 
 /* =========================================================
-   12. TABLET
+   12. EDITION END NAVIGATION
+========================================================= */
+
+/*
+   Standard navigation at the end of every Edition.
+
+   Left:
+   Back to Home
+
+   Right:
+   View All Editions
+*/
+
+.edition-end {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    width: 100%;
+
+    padding:
+        55px var(--page-padding) 70px;
+
+    border-top: 1px solid var(--line-soft);
+}
+
+
+.edition-end .text-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    color: var(--gold);
+
+    font-family: var(--font-body);
+
+    font-size: 0.64rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transition),
+        opacity var(--transition);
+}
+
+
+.edition-end .text-link:hover {
+
+    color: var(--ivory);
+}
+
+
+/* =========================================================
+   13. TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1105,7 +1148,7 @@
 
 
 /* =========================================================
-   13. PHONE
+   14. PHONE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -1290,11 +1333,20 @@
     }
 
 
+    /*
+       Natural image height.
+
+       No forced 4:3 crop on mobile.
+    */
+
     .edition-story-image img {
 
+        width: 100%;
         height: auto;
 
-        aspect-ratio: 4 / 3;
+        aspect-ratio: auto;
+
+        object-fit: contain;
     }
 
 
@@ -1331,10 +1383,7 @@
     /*
        One image per row on mobile.
 
-       This is deliberate.
-
-       It gives every photograph breathing room
-       and prevents the images visually merging.
+       Natural proportions are preserved.
     */
 
     .edition-gallery-grid {
@@ -1348,12 +1397,11 @@
     .edition-gallery-grid img {
 
         width: 100%;
-
         height: auto;
 
-        aspect-ratio: 4 / 3;
+        aspect-ratio: auto;
 
-        object-fit: cover;
+        object-fit: contain;
     }
 
 
@@ -1399,11 +1447,12 @@
 
     .edition-feature-image img {
 
+        width: 100%;
         height: auto;
 
-        aspect-ratio: 4 / 3;
+        aspect-ratio: auto;
 
-        object-fit: cover;
+        object-fit: contain;
     }
 
 
@@ -1492,11 +1541,30 @@
         line-height: 1.8;
     }
 
+
+    /* End navigation */
+
+    .edition-end {
+
+        gap: 25px;
+
+        padding:
+            42px 24px 55px;
+    }
+
+
+    .edition-end .text-link {
+
+        font-size: 0.54rem;
+
+        letter-spacing: 0.10em;
+    }
+
 }
 
 
 /* =========================================================
-   14. VERY SMALL PHONES
+   15. VERY SMALL PHONES
 ========================================================= */
 
 @media (max-width: 390px) {
@@ -1533,9 +1601,26 @@
         font-size: 2.7rem;
     }
 
+
+    .edition-end {
+
+        gap: 18px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    .edition-end .text-link {
+
+        font-size: 0.48rem;
+
+        letter-spacing: 0.08em;
+    }
+
 }
 
 
 /* =========================================================
-   END — EDITION MASTER V2
+   END — EDITION MASTER V2.1
 ========================================================= */

@@ -46,6 +46,93 @@
         href="style-editions-new.css"
     >
 
+
+    <!-- =================================================
+         THAILAND EDITION — HERO FIX
+    ================================================== -->
+
+    <style>
+
+        .edition-hero {
+            min-height: 100svh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 900px) {
+
+            .edition-hero {
+                min-height: 95svh;
+            }
+
+        }
+
+
+        /* =================================================
+           BOTTOM EDITION NAVIGATION
+        ================================================== */
+
+        .edition-bottom-navigation {
+            width: 100%;
+            padding: 70px 8% 90px;
+            text-align: center;
+        }
+
+        .edition-bottom-navigation-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .edition-bottom-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 210px;
+            padding: 15px 28px;
+            border: 1px solid #B59A63;
+            color: #B59A63;
+            font-family: 'Inter', sans-serif;
+            font-size: .78rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition:
+                background-color .3s ease,
+                color .3s ease;
+        }
+
+        .edition-bottom-button:hover {
+            background: #B59A63;
+            color: #11100F;
+        }
+
+        @media (max-width: 600px) {
+
+            .edition-bottom-navigation {
+                padding: 50px 7% 65px;
+            }
+
+            .edition-bottom-navigation-inner {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .edition-bottom-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -581,6 +668,10 @@
 
 <!-- =====================================================
      MORE FROM THE CAMERA
+     
+     Only samui1 remains here.
+     samui7, samui21 and samui22 already appear above,
+     so repeating them would duplicate the photography.
 ====================================================== -->
 
 <section class="edition-gallery section">
@@ -605,21 +696,6 @@
             <img
                 src="samui1.jpeg"
                 alt="Thailand island beach"
-            >
-
-            <img
-                src="samui7.jpeg"
-                alt="Koh Samui beach"
-            >
-
-            <img
-                src="samui22.jpeg"
-                alt="Koh Tao coastline"
-            >
-
-            <img
-                src="samui21.jpeg"
-                alt="Koh Phangan beach"
             >
 
         </div>
@@ -752,6 +828,35 @@
 
 
 </main>
+
+
+
+<!-- =====================================================
+     BOTTOM EDITION NAVIGATION
+====================================================== -->
+
+<section class="edition-bottom-navigation">
+
+    <div class="edition-bottom-navigation-inner">
+
+        <a
+            href="editions.html"
+            class="edition-bottom-button"
+        >
+            ← Back to Editions
+        </a>
+
+
+        <a
+            href="#"
+            class="edition-bottom-button"
+        >
+            Back to Top ↑
+        </a>
+
+    </div>
+
+</section>
 
 
 

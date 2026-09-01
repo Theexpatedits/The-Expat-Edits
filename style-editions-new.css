@@ -1624,3 +1624,82 @@
 /* =========================================================
    END — EDITION MASTER V2.1
 ========================================================= */
+/* =========================================================
+   DESKTOP EDITION REFINEMENT
+   Stage 2 — Desktop polish
+
+   Mobile styling remains unchanged.
+========================================================= */
+
+@media (min-width: 1001px) {
+
+    /* -----------------------------------------------------
+       HERO
+       Keep the full-viewport, stretched treatment.
+    ----------------------------------------------------- */
+
+    .edition-hero {
+
+        min-height: 100svh;
+
+        background-size: cover;
+        background-position: center center;
+    }
+
+
+    /* -----------------------------------------------------
+       PHOTO STORY
+       Give photography slightly less visual dominance
+       and allow the editorial copy more space.
+    ----------------------------------------------------- */
+
+    .edition-story-block {
+
+        grid-template-columns:
+            minmax(0, 0.85fr)
+            minmax(0, 1fr);
+
+        gap: clamp(45px, 6vw, 80px);
+    }
+
+
+    .edition-story-image {
+
+        max-width: 720px;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURE
+       Apply the same more compact editorial balance.
+    ----------------------------------------------------- */
+
+    .edition-feature-grid {
+
+        grid-template-columns:
+            minmax(0, 0.85fr)
+            minmax(0, 1fr);
+
+        gap: clamp(45px, 6vw, 80px);
+    }
+
+
+    .edition-feature-grid.reverse {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 0.85fr);
+    }
+
+
+    .edition-feature-image {
+
+        max-width: 720px;
+    }
+
+}
+
+
+/* =========================================================
+   END — DESKTOP EDITION REFINEMENT
+========================================================= */

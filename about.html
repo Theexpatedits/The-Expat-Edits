@@ -29,38 +29,71 @@
      HEADER
      ========================================================= -->
 
-<header>
+<header class="site-header">
 
-    <nav>
+    <div class="header-inner">
 
-        <a href="index.html" class="logo">
-            THE EXPAT<br>
-            EDITS
+        <a href="index.html" class="site-logo">
+            THE EXPAT EDITS
         </a>
 
-        <ul class="nav-links">
+        <nav class="desktop-nav">
 
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+            <a href="index.html#featured-editions">
+                EDITIONS
+            </a>
 
-            <li>
-                <a href="about.html">About</a>
-            </li>
+            <a href="journal.html">
+                JOURNAL
+            </a>
 
-            <li>
-                <a href="index.html#featured-editions">Editions</a>
-            </li>
+            <a href="index.html#explore-map">
+                MAP
+            </a>
 
-            <li>
-                <a href="index.html#explore-map">Explore</a>
-            </li>
+            <a href="about.html" class="active">
+                ABOUT
+            </a>
 
-        </ul>
+        </nav>
+
+        <button class="menu-toggle"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE NAV -->
+
+    <nav class="mobile-nav">
+
+        <a href="index.html#featured-editions">
+            EDITIONS
+        </a>
+
+        <a href="journal.html">
+            JOURNAL
+        </a>
+
+        <a href="index.html#explore-map">
+            MAP
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
 
     </nav>
 
 </header>
+
 
 
 <!-- =========================================================
@@ -90,6 +123,7 @@
         </p>
 
     </section>
+
 
 
     <!-- STORY -->
@@ -141,7 +175,8 @@
     </section>
 
 
-    <!-- CLOSING STATEMENT -->
+
+    <!-- CLOSING -->
 
     <section class="about-closing">
 
@@ -158,12 +193,17 @@
     </section>
 
 
+
     <!-- FAMILY IMAGE -->
 
-    <section class="about-family-image">
+    <section class="about-family">
 
-        <img src="komodo9.jpeg"
-             alt="The Expat Edits family in Komodo">
+        <div class="about-family-image">
+
+            <img src="komodo9.jpeg"
+                 alt="Our family in Komodo">
+
+        </div>
 
     </section>
 
@@ -171,78 +211,81 @@
 </main>
 
 
+
 <!-- =========================================================
      FOOTER
      ========================================================= -->
 
-<footer>
+<footer class="site-footer">
 
     <div class="footer-inner">
 
-        <div class="footer-brand">
 
-            <a href="index.html" class="footer-logo">
-                THE EXPAT<br>
-                EDITS
-            </a>
-
-            <p class="footer-tagline">
-                Travel slowly. Stay longer. Collect moments.
-            </p>
-
-        </div>
+        <a href="index.html" class="footer-logo">
+            THE EXPAT<br>
+            EDITS
+        </a>
 
 
-        <div class="footer-links">
+        <p class="footer-tagline">
+            TRAVEL, PLACES &amp; OBSERVATIONS FROM LIFE ABROAD.
+        </p>
 
-            <a href="index.html">
-                Home
-            </a>
 
-            <a href="about.html">
-                About
-            </a>
+        <nav class="footer-nav">
 
             <a href="index.html#featured-editions">
-                Editions
+                EDITIONS
+            </a>
+
+            <a href="journal.html">
+                JOURNAL
             </a>
 
             <a href="index.html#explore-map">
-                Explore
+                MAP
             </a>
 
-        </div>
-
-
-        <div class="footer-social">
-
-            <a href="https://instagram.com"
-               target="_blank"
-               rel="noopener noreferrer">
-                Instagram →
+            <a href="about.html">
+                ABOUT
             </a>
 
-        </div>
+        </nav>
 
 
-        <div class="footer-bottom">
+        <a href="https://instagram.com"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer-instagram">
 
-            <p>
-                © 2026 The Expat Edits. All rights reserved.
-            </p>
+            INSTAGRAM →
 
-        </div>
+        </a>
+
+
+        <div class="footer-rule"></div>
+
+
+        <p class="copyright">
+            © 2026 The Expat Edits. All rights reserved.
+        </p>
 
     </div>
 
 </footer>
 
 
+
 <!-- =========================================================
-     ABOUT PAGE STYLES
+     ABOUT PAGE OVERRIDES
      ========================================================= -->
 
 <style>
+
+
+/* =========================================================
+   COLOUR SYSTEM
+   ========================================================= */
 
 .about-page {
     background: #11100F;
@@ -250,63 +293,133 @@
 }
 
 
-/* ---------------------------------------------------------
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    position: relative;
+    z-index: 100;
+    background: #11100F;
+    border-bottom: 1px solid rgba(181, 154, 99, 0.28);
+}
+
+.header-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #B59A63;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.desktop-nav a {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: #9D9990;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    color: #B59A63;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+
+/* =========================================================
    ABOUT INTRO
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .about-intro {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 180px 40px 120px;
+    padding: 150px 40px 115px;
+    text-align: center;
 }
 
-.about-intro .section-label,
-.about-closing .section-label {
+.section-label {
     font-family: "Inter", sans-serif;
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #B59A63;
-    margin-bottom: 30px;
 }
 
-.about-intro h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(56px, 7vw, 96px);
-    font-weight: 400;
-    line-height: 0.94;
-    letter-spacing: -0.025em;
+.about-intro .section-label {
     margin: 0 0 55px;
 }
 
-.about-lead {
-    max-width: 720px;
+.about-intro h1 {
+    margin: 0 auto 60px;
+    max-width: 1000px;
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(25px, 3vw, 34px);
-    line-height: 1.35;
+    font-size: clamp(62px, 7vw, 105px);
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: -0.025em;
     color: #F1EDE4;
-    margin: 0;
+}
+
+.about-lead {
+    max-width: 760px;
+    margin: 0 auto;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(24px, 2.6vw, 31px);
+    font-weight: 400;
+    line-height: 1.4;
+    color: #BDB8AF;
 }
 
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    STORY
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .about-story {
     max-width: 760px;
     margin: 0 auto;
-    padding: 40px 40px 130px;
+    padding: 50px 40px 120px;
 }
 
 .about-story p {
+    margin: 0 0 34px;
     font-family: "Cormorant Garamond", serif;
-    font-size: 22px;
-    line-height: 1.6;
+    font-size: 23px;
     font-weight: 400;
-    color: #D8D3C9;
-    margin: 0 0 32px;
+    line-height: 1.58;
+    color: #D0CBC2;
 }
 
 .about-story p:last-child {
@@ -314,38 +427,47 @@
 }
 
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    CLOSING
-   --------------------------------------------------------- */
+   ========================================================= */
 
 .about-closing {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 70px 40px 100px;
+    padding: 60px 40px 110px;
     text-align: center;
 }
 
 .about-closing .section-label {
-    margin-bottom: 28px;
+    margin: 0 0 30px;
 }
 
 .about-closing h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(52px, 7vw, 88px);
-    line-height: 0.95;
-    font-weight: 400;
-    letter-spacing: -0.02em;
     margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(55px, 7vw, 90px);
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -0.025em;
+    color: #F1EDE4;
 }
 
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    FAMILY IMAGE
-   --------------------------------------------------------- */
+   ========================================================= */
+
+.about-family {
+    width: 100%;
+    padding: 0 40px 130px;
+}
 
 .about-family-image {
     width: 100%;
-    margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -353,155 +475,305 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: 760px;
+    max-height: 720px;
     object-fit: cover;
 }
 
 
-/* ---------------------------------------------------------
-   FOOTER
-   --------------------------------------------------------- */
 
-footer {
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
     background: #11100F;
-    border-top: 1px solid rgba(241, 237, 228, 0.12);
-    padding: 75px 40px 30px;
+    border-top: 1px solid rgba(241, 237, 228, 0.10);
+    padding: 78px 40px 30px;
 }
 
 .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.footer-brand {
-    margin-bottom: 55px;
+    text-align: center;
 }
 
 .footer-logo {
     display: inline-block;
+    margin: 0 0 27px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 0.83;
+    letter-spacing: 0.03em;
     color: #F1EDE4;
     text-decoration: none;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 28px;
-    line-height: 0.82;
-    letter-spacing: 0.02em;
 }
 
 .footer-tagline {
-    margin: 22px 0 0;
+    margin: 0 auto 48px;
     font-family: "Inter", sans-serif;
     font-size: 11px;
     font-weight: 400;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #9D9990;
+    letter-spacing: 0.14em;
+    line-height: 1.8;
+    color: #8F8B84;
 }
 
-.footer-links {
+.footer-nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 28px;
-    margin-bottom: 35px;
+    gap: 32px;
+    margin-bottom: 48px;
 }
 
-.footer-links a,
-.footer-social a {
+.footer-nav a {
     font-family: "Inter", sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    letter-spacing: 0.17em;
     color: #F1EDE4;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer-links a:hover,
-.footer-social a:hover {
+.footer-nav a:hover {
     color: #B59A63;
 }
 
-.footer-social {
-    margin-bottom: 70px;
+.footer-instagram {
+    display: inline-block;
+    margin-bottom: 78px;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: #B59A63;
+    text-decoration: none;
 }
 
-.footer-bottom {
-    padding-top: 22px;
-    border-top: 1px solid rgba(241, 237, 228, 0.10);
+.footer-rule {
+    width: 100%;
+    height: 1px;
+    background: rgba(241, 237, 228, 0.10);
+    margin-bottom: 24px;
 }
 
-.footer-bottom p {
+.copyright {
     margin: 0;
     font-family: "Inter", sans-serif;
     font-size: 10px;
+    font-weight: 400;
     letter-spacing: 0.08em;
-    color: #77736C;
+    color: #706D67;
 }
 
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    MOBILE
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 700px) {
 
-    .about-intro {
-        padding: 135px 24px 80px;
+
+    /* HEADER */
+
+    .site-header {
+        border-bottom: 1px solid rgba(181, 154, 99, 0.35);
     }
 
-    .about-intro h1 {
-        font-size: clamp(48px, 14vw, 68px);
+    .header-inner {
+        min-height: 82px;
+        padding: 0 28px;
+    }
+
+    .site-logo {
+        font-size: 21px;
+        letter-spacing: 0.09em;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        width: 31px;
+        height: 25px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: transparent;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #B59A63;
+    }
+
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        padding: 15px 28px 30px;
+        border-top: 1px solid rgba(181, 154, 99, 0.18);
+    }
+
+    .mobile-nav.open {
+        display: flex;
+    }
+
+    .mobile-nav a {
+        padding: 17px 0;
+        font-family: "Inter", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        color: #F1EDE4;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(241, 237, 228, 0.08);
+    }
+
+
+    /* INTRO */
+
+    .about-intro {
+        padding: 90px 24px 75px;
+    }
+
+    .about-intro .section-label {
         margin-bottom: 38px;
     }
 
-    .about-lead {
-        font-size: 25px;
-        line-height: 1.35;
+    .about-intro h1 {
+        font-size: clamp(51px, 14vw, 70px);
+        line-height: 0.91;
+        margin-bottom: 43px;
     }
 
+    .about-lead {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+
+    /* STORY */
+
     .about-story {
-        padding: 20px 24px 90px;
+        padding: 25px 24px 80px;
     }
 
     .about-story p {
-        font-size: 20px;
-        line-height: 1.55;
-        margin-bottom: 28px;
+        font-size: 21px;
+        line-height: 1.52;
+        margin-bottom: 30px;
     }
+
+
+    /* CLOSING */
 
     .about-closing {
         padding: 50px 24px 75px;
     }
 
+    .about-closing .section-label {
+        margin-bottom: 27px;
+    }
+
     .about-closing h2 {
-        font-size: clamp(48px, 14vw, 68px);
+        font-size: clamp(50px, 14vw, 68px);
+        line-height: 0.94;
+    }
+
+
+    /* FAMILY IMAGE */
+
+    .about-family {
+        padding: 0 24px 85px;
+    }
+
+    .about-family-image {
+        width: 100%;
+        max-width: 100%;
     }
 
     .about-family-image img {
-        min-height: 430px;
+        width: 100%;
+        height: auto;
+        max-height: none;
         object-fit: cover;
     }
 
-    footer {
-        padding: 60px 24px 25px;
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 65px 24px 25px;
     }
 
-    .footer-brand {
-        margin-bottom: 45px;
+    .footer-logo {
+        font-size: 29px;
+        margin-bottom: 25px;
     }
 
-    .footer-links {
-        gap: 20px 25px;
-        margin-bottom: 30px;
+    .footer-tagline {
+        max-width: 360px;
+        margin-bottom: 43px;
+        font-size: 10px;
+        line-height: 1.9;
     }
 
-    .footer-social {
-        margin-bottom: 55px;
+    .footer-nav {
+        gap: 26px;
+        margin-bottom: 43px;
+    }
+
+    .footer-nav a {
+        font-size: 10px;
+    }
+
+    .footer-instagram {
+        margin-bottom: 65px;
+    }
+
+    .footer-rule {
+        margin-bottom: 23px;
+    }
+
+    .copyright {
+        font-size: 9px;
+        letter-spacing: 0.07em;
     }
 
 }
 
 </style>
+
+
+
+<!-- =========================================================
+     MOBILE MENU SCRIPT
+     ========================================================= -->
+
+<script>
+
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+
+menuToggle.addEventListener('click', function () {
+
+    const isOpen = mobileNav.classList.toggle('open');
+
+    menuToggle.setAttribute('aria-expanded', isOpen);
+
+});
+
+</script>
 
 
 </body>

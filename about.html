@@ -69,6 +69,9 @@
 
 <main>
 
+
+    <!-- INTRO -->
+
     <section class="about-intro">
 
         <p class="section-label">
@@ -88,6 +91,8 @@
 
     </section>
 
+
+    <!-- STORY -->
 
     <section class="about-story">
 
@@ -136,6 +141,8 @@
     </section>
 
 
+    <!-- CLOSING STATEMENT -->
+
     <section class="about-closing">
 
         <p class="section-label">
@@ -150,6 +157,17 @@
 
     </section>
 
+
+    <!-- FAMILY IMAGE -->
+
+    <section class="about-family-image">
+
+        <img src="komodo9.jpeg"
+             alt="The Expat Edits family in Komodo">
+
+    </section>
+
+
 </main>
 
 
@@ -159,44 +177,331 @@
 
 <footer>
 
-    <div class="container">
+    <div class="footer-inner">
 
-        <h3>
-            THE EXPAT EDITS
-        </h3>
+        <div class="footer-brand">
 
-        <p class="footer-tagline">
-            Travel slowly. Stay longer. Collect moments.
-        </p>
+            <a href="index.html" class="footer-logo">
+                THE EXPAT<br>
+                EDITS
+            </a>
 
-        <div class="footer-nav">
-
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About</a>
-
-            <a href="index.html#featured-editions">Editions</a>
-
-            <a href="index.html#explore-map">Explore</a>
+            <p class="footer-tagline">
+                Travel slowly. Stay longer. Collect moments.
+            </p>
 
         </div>
 
-        <p class="footer-social">
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="index.html#featured-editions">
+                Editions
+            </a>
+
+            <a href="index.html#explore-map">
+                Explore
+            </a>
+
+        </div>
+
+
+        <div class="footer-social">
 
             <a href="https://instagram.com"
-               target="_blank">
+               target="_blank"
+               rel="noopener noreferrer">
                 Instagram →
             </a>
 
-        </p>
+        </div>
 
-        <p class="copyright">
-            © 2026 The Expat Edits. All rights reserved.
-        </p>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 The Expat Edits. All rights reserved.
+            </p>
+
+        </div>
 
     </div>
 
 </footer>
+
+
+<!-- =========================================================
+     ABOUT PAGE STYLES
+     ========================================================= -->
+
+<style>
+
+.about-page {
+    background: #11100F;
+    color: #F1EDE4;
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT INTRO
+   --------------------------------------------------------- */
+
+.about-intro {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 180px 40px 120px;
+}
+
+.about-intro .section-label,
+.about-closing .section-label {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #B59A63;
+    margin-bottom: 30px;
+}
+
+.about-intro h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(56px, 7vw, 96px);
+    font-weight: 400;
+    line-height: 0.94;
+    letter-spacing: -0.025em;
+    margin: 0 0 55px;
+}
+
+.about-lead {
+    max-width: 720px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.35;
+    color: #F1EDE4;
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   STORY
+   --------------------------------------------------------- */
+
+.about-story {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 40px 130px;
+}
+
+.about-story p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #D8D3C9;
+    margin: 0 0 32px;
+}
+
+.about-story p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CLOSING
+   --------------------------------------------------------- */
+
+.about-closing {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 40px 100px;
+    text-align: center;
+}
+
+.about-closing .section-label {
+    margin-bottom: 28px;
+}
+
+.about-closing h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(52px, 7vw, 88px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   FAMILY IMAGE
+   --------------------------------------------------------- */
+
+.about-family-image {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.about-family-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 760px;
+    object-fit: cover;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+footer {
+    background: #11100F;
+    border-top: 1px solid rgba(241, 237, 228, 0.12);
+    padding: 75px 40px 30px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    margin-bottom: 55px;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: #F1EDE4;
+    text-decoration: none;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    line-height: 0.82;
+    letter-spacing: 0.02em;
+}
+
+.footer-tagline {
+    margin: 22px 0 0;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9D9990;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-bottom: 35px;
+}
+
+.footer-links a,
+.footer-social a {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #F1EDE4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #B59A63;
+}
+
+.footer-social {
+    margin-bottom: 70px;
+}
+
+.footer-bottom {
+    padding-top: 22px;
+    border-top: 1px solid rgba(241, 237, 228, 0.10);
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: #77736C;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .about-intro {
+        padding: 135px 24px 80px;
+    }
+
+    .about-intro h1 {
+        font-size: clamp(48px, 14vw, 68px);
+        margin-bottom: 38px;
+    }
+
+    .about-lead {
+        font-size: 25px;
+        line-height: 1.35;
+    }
+
+    .about-story {
+        padding: 20px 24px 90px;
+    }
+
+    .about-story p {
+        font-size: 20px;
+        line-height: 1.55;
+        margin-bottom: 28px;
+    }
+
+    .about-closing {
+        padding: 50px 24px 75px;
+    }
+
+    .about-closing h2 {
+        font-size: clamp(48px, 14vw, 68px);
+    }
+
+    .about-family-image img {
+        min-height: 430px;
+        object-fit: cover;
+    }
+
+    footer {
+        padding: 60px 24px 25px;
+    }
+
+    .footer-brand {
+        margin-bottom: 45px;
+    }
+
+    .footer-links {
+        gap: 20px 25px;
+        margin-bottom: 30px;
+    }
+
+    .footer-social {
+        margin-bottom: 55px;
+    }
+
+}
+
+</style>
 
 
 </body>

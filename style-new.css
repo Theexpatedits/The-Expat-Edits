@@ -664,12 +664,14 @@ p {
 /* =========================================================
    END — MASTER STYLE
 ========================================================= */
+
+
 /* =========================================================
    HOMEPAGE — LEAD STORY
 ========================================================= */
 
 .lead-story {
-    padding-block: clamp(55px, 7vw, 95px);
+    padding-block: clamp(30px, 4vw, 55px);
 }
 
 .lead-story-grid {
@@ -751,7 +753,7 @@ p {
 ========================================================= */
 
 .lead-story {
-    padding-block: clamp(55px, 7vw, 95px);
+    padding-block: clamp(30px, 4vw, 55px);
 }
 
 .lead-story-grid {
@@ -1030,6 +1032,8 @@ p {
         font-size: 0.88rem;
     }
 }
+
+
 /* =========================================================
    HOMEPAGE — FEATURED EDITIONS
 ========================================================= */
@@ -1276,14 +1280,14 @@ p {
 
 
     .edition-card-image {
-    width: calc(100% + 24px);
+        width: calc(100% + 24px);
 
-    margin-left: -12px;
+        margin-left: -12px;
 
-    height: auto;
+        height: auto;
 
-    aspect-ratio: 16 / 10;
-}
+        aspect-ratio: 16 / 10;
+    }
 
 
     .edition-card-content {
@@ -1310,6 +1314,8 @@ p {
     }
 
 }
+
+
 /* =========================================================
    FEATURED EDITIONS — DESKTOP SIX ACROSS
 ========================================================= */
@@ -1332,6 +1338,8 @@ p {
     }
 
 }
+
+
 /* =========================================
    SINGAPORE HERO — SOFT EDGE FADE
    ========================================= */
@@ -1382,6 +1390,8 @@ p {
             transparent 21%
         );
 }
+
+
 /* =========================================================
    HOMEPAGE POLISH — FINAL
 ========================================================= */
@@ -1393,7 +1403,7 @@ p {
 
 .homepage-intro {
     padding-top: 0;
-    padding-bottom: clamp(45px, 6vw, 75px);
+    padding-bottom: 25px;
 }
 
 .homepage-intro-inner {

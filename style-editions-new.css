@@ -1,14 +1,25 @@
 /* =========================================================
    THE EXPAT EDITS
    EDITION MASTER STYLESHEET
-   VERSION 2.1
+   VERSION 3.0
 
-   One master system for all destination Editions.
+   New Edition system:
 
-   Photography rule:
-   - Hero = cover
-   - All editorial photography = natural aspect ratio
+   HERO
+   INTRODUCTION
+   PHOTOGRAPHIC STORY
+   LOCAL INFORMATION
+   OUR RECOMMENDATIONS
+   FROM THE JOURNAL
+   MORE FROM OUR CAMERA
+   MAP
+   END NAVIGATION
+
+   Photography:
+   - Natural aspect ratios
    - No unnecessary cropping
+   - Close photographic spacing
+   - Layout adapts to the photographs
 ========================================================= */
 
 
@@ -59,10 +70,6 @@
     margin-bottom: 48px;
 }
 
-
-/* =========================================================
-   02. EDITION ARCHIVE GRID
-========================================================= */
 
 .edition-archive-grid {
 
@@ -226,7 +233,7 @@
 
 
 /* =========================================================
-   03. EDITION HERO
+   02. EDITION HERO
 ========================================================= */
 
 .edition-hero {
@@ -278,10 +285,6 @@
         );
 }
 
-
-/* =========================================================
-   04. HERO TEXT
-========================================================= */
 
 .edition-hero-overlay {
 
@@ -351,53 +354,59 @@
 
 
 /* =========================================================
-   05. EDITION INTRODUCTION
+   03. EDITION INTRODUCTION
 ========================================================= */
 
 .edition-intro {
 
     padding-block:
-        clamp(80px, 9vw, 130px);
+        clamp(70px, 8vw, 110px);
 }
 
 
-.edition-intro-grid {
+.edition-intro-inner {
 
-    display: grid;
+    max-width: 850px;
 
-    grid-template-columns:
-        minmax(0, 0.8fr)
-        minmax(0, 1.2fr);
+    margin-inline: auto;
 
-    gap: clamp(50px, 8vw, 120px);
+    text-align: center;
+}
 
-    align-items: start;
+
+.edition-intro-inner .section-label {
+
+    margin-bottom: 18px;
 }
 
 
 .edition-intro h2 {
 
-    margin: 0;
+    max-width: 760px;
+
+    margin: 0 auto;
 
     color: var(--ivory);
 
     font-family: var(--font-display);
 
     font-size: clamp(
-        3rem,
-        5vw,
-        4.8rem
+        3.4rem,
+        6vw,
+        5.5rem
     );
 
     font-weight: 500;
 
-    line-height: 0.92;
+    line-height: 0.9;
 }
 
 
 .edition-intro-text {
 
-    max-width: 650px;
+    max-width: 720px;
+
+    margin: 30px auto 0;
 
     color: var(--muted);
 
@@ -407,162 +416,32 @@
 }
 
 
-.edition-intro-text p + p {
+.edition-intro-text p {
 
-    margin-top: 22px;
+    margin: 0;
 }
 
 
 /* =========================================================
-   06. GENERAL PHOTO STORY
+   04. PHOTOGRAPHIC STORY
 ========================================================= */
 
 .edition-photo-story {
 
     padding-block:
-        clamp(70px, 8vw, 120px);
+        clamp(45px, 6vw, 80px);
 }
 
 
-.edition-story-block {
+.edition-photo-heading {
 
-    display: grid;
+    max-width: 700px;
 
-    grid-template-columns:
-        minmax(0, 1.15fr)
-        minmax(0, 0.85fr);
-
-    gap: clamp(45px, 7vw, 100px);
-
-    align-items: center;
-
-    margin-bottom: clamp(80px, 10vw, 140px);
+    margin-bottom: clamp(28px, 4vw, 45px);
 }
 
 
-.edition-story-block:last-child {
-
-    margin-bottom: 0;
-}
-
-
-.edition-story-image {
-
-    width: 100%;
-
-    overflow: hidden;
-
-    background: var(--bg-card);
-}
-
-
-/*
-   Editorial photography is never forced into
-   a fixed-height frame.
-
-   The original image ratio is preserved.
-*/
-
-.edition-story-image img {
-
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-
-    filter:
-        saturate(0.93)
-        contrast(0.96);
-
-    transition:
-        transform 0.7s ease,
-        filter 0.7s ease;
-}
-
-
-.edition-story-image:hover img {
-
-    transform: scale(1.015);
-
-    filter:
-        saturate(0.98)
-        contrast(0.98);
-}
-
-
-.edition-story-copy {
-
-    max-width: 520px;
-}
-
-
-.story-number {
-
-    margin: 0 0 16px;
-
-    color: var(--gold);
-
-    font-size: 0.60rem;
-
-    font-weight: 500;
-
-    letter-spacing: 0.18em;
-}
-
-
-.edition-story-copy h2 {
-
-    margin: 0;
-
-    color: var(--ivory);
-
-    font-family: var(--font-display);
-
-    font-size: clamp(
-        2.8rem,
-        5vw,
-        4.5rem
-    );
-
-    font-weight: 500;
-
-    line-height: 0.92;
-}
-
-
-.edition-story-copy p:not(.story-number) {
-
-    margin-top: 24px;
-
-    color: var(--muted);
-
-    font-size: 0.90rem;
-
-    line-height: 1.85;
-}
-
-
-/* =========================================================
-   07. GALLERY
-========================================================= */
-
-.edition-gallery {
-
-    padding-block:
-        clamp(70px, 8vw, 120px);
-}
-
-
-.edition-gallery .section-heading {
-
-    max-width: 650px;
-
-    margin-bottom: 45px;
-}
-
-
+.edition-photo-heading p,
 .edition-gallery .section-heading p {
 
     margin: 0 0 12px;
@@ -579,6 +458,7 @@
 }
 
 
+.edition-photo-heading h2,
 .edition-gallery .section-heading h2 {
 
     margin: 0;
@@ -599,34 +479,51 @@
 }
 
 
-/*
-   Three across on desktop.
+/* =========================================================
+   05. PHOTO MOSAIC
+========================================================= */
 
-   Images retain their natural proportions.
-   No fixed height and no object-fit: cover.
+/*
+   The photographs determine their own height.
+
+   We use flex-wrap rather than fixed-height CSS grid
+   cells so that:
+   - original aspect ratios remain intact
+   - no image is cropped
+   - the existing image order is preserved
+   - different photographs can occupy different amounts
+     of horizontal space
 */
 
-.edition-gallery-grid {
+.edition-photo-mosaic {
 
-    display: grid;
+    display: flex;
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+    flex-wrap: wrap;
 
-    align-items: start;
+    align-items: flex-start;
 
-    gap: 20px;
+    gap: 8px;
 
     width: 100%;
 }
 
 
-.edition-gallery-grid img {
+/*
+   Each image is allowed to establish its own
+   natural height from its aspect ratio.
+*/
+
+.edition-photo-mosaic img {
 
     display: block;
 
     width: 100%;
     height: auto;
+
+    flex: 1 1 30%;
+
+    min-width: 0;
 
     object-fit: contain;
 
@@ -642,9 +539,72 @@
 }
 
 
-.edition-gallery-grid img:hover {
+/*
+   Controlled variation in image widths.
 
-    transform: scale(1.015);
+   This creates the asymmetric editorial feeling
+   without changing the order of the photographs.
+*/
+
+.edition-photo-mosaic img:nth-child(1) {
+
+    flex-basis: 48%;
+}
+
+.edition-photo-mosaic img:nth-child(2) {
+
+    flex-basis: 28%;
+}
+
+.edition-photo-mosaic img:nth-child(3) {
+
+    flex-basis: 23%;
+}
+
+.edition-photo-mosaic img:nth-child(4) {
+
+    flex-basis: 31%;
+}
+
+.edition-photo-mosaic img:nth-child(5) {
+
+    flex-basis: 36%;
+}
+
+.edition-photo-mosaic img:nth-child(6) {
+
+    flex-basis: 28%;
+}
+
+.edition-photo-mosaic img:nth-child(7) {
+
+    flex-basis: 24%;
+}
+
+.edition-photo-mosaic img:nth-child(8) {
+
+    flex-basis: 31%;
+}
+
+.edition-photo-mosaic img:nth-child(9) {
+
+    flex-basis: 34%;
+}
+
+.edition-photo-mosaic img:nth-child(10) {
+
+    flex-basis: 27%;
+}
+
+.edition-photo-mosaic img:nth-child(11) {
+
+    flex-basis: 42%;
+}
+
+
+.edition-photo-mosaic img:hover {
+
+    transform: scale(1.008);
 
     filter:
         saturate(0.98)
@@ -653,219 +613,120 @@
 
 
 /* =========================================================
-   08. FEATURE SECTION
+   06. LOCAL INFORMATION
 ========================================================= */
 
-.edition-feature {
+.edition-local-info {
 
-    padding-block:
-        clamp(80px, 9vw, 130px);
+    padding-block: 20px;
+
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+
+    background: var(--bg-soft);
 }
 
 
-.edition-feature-grid {
+.edition-local-info-grid {
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.85fr)
-        minmax(0, 1.15fr);
-
-    gap: clamp(45px, 8vw, 110px);
-
-    align-items: center;
-}
-
-
-.edition-feature-grid.reverse {
-
-    grid-template-columns:
-        minmax(0, 1.15fr)
-        minmax(0, 0.85fr);
-}
-
-
-.edition-feature-grid.reverse .edition-feature-image {
-
-    order: 1;
-}
-
-
-.edition-feature-grid.reverse .edition-feature-copy {
-
-    order: 2;
-}
-
-
-.edition-feature-copy {
-
-    max-width: 600px;
-}
-
-
-.edition-feature-copy h2 {
-
-    margin: 0;
-
-    color: var(--ivory);
-
-    font-family: var(--font-display);
-
-    font-size: clamp(
-        3rem,
-        5vw,
-        4.8rem
-    );
-
-    font-weight: 500;
-
-    line-height: 0.92;
-}
-
-
-.edition-feature-copy p:not(.section-label) {
-
-    max-width: 570px;
-
-    margin-top: 24px;
-
-    color: var(--muted);
-
-    font-size: 0.90rem;
-
-    line-height: 1.85;
-}
-
-
-.edition-feature-image {
+        repeat(3, minmax(0, 1fr));
 
     width: 100%;
-
-    overflow: hidden;
-
-    background: var(--bg-card);
 }
 
 
-/*
-   Feature photography also preserves its
-   original proportions.
-*/
-
-.edition-feature-image img {
-
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    object-fit: contain;
-
-    filter:
-        saturate(0.93)
-        contrast(0.96);
-
-    transition:
-        transform 0.7s ease,
-        filter 0.7s ease;
-}
-
-
-.edition-feature-image:hover img {
-
-    transform: scale(1.015);
-
-    filter:
-        saturate(0.98)
-        contrast(0.98);
-}
-
-
-/* =========================================================
-   09. STAY SECTION
-========================================================= */
-
-.edition-stay {
-
-    padding-block:
-        clamp(70px, 8vw, 110px);
-}
-
-
-.edition-stay-card {
-
-    max-width: 760px;
+.edition-local-info-item {
 
     padding:
-        clamp(35px, 5vw, 65px)
-        clamp(30px, 5vw, 70px);
+        30px 35px;
 
-    background: var(--bg-soft);
-
-    border-top: 1px solid var(--line-soft);
-    border-bottom: 1px solid var(--line-soft);
+    border-left: 1px solid var(--line-soft);
 }
 
 
-.edition-stay-card h2 {
+.edition-local-info-item:first-child {
 
-    margin: 0;
+    border-left: 0;
+
+    padding-left: 0;
+}
+
+
+.edition-local-info-item:last-child {
+
+    padding-right: 0;
+}
+
+
+.edition-local-info-item h3 {
+
+    margin: 7px 0 0;
 
     color: var(--ivory);
 
     font-family: var(--font-display);
 
-    font-size: clamp(
-        3rem,
-        5vw,
-        4.8rem
-    );
+    font-size: 2rem;
 
     font-weight: 500;
 
-    line-height: 0.92;
+    line-height: 1;
 }
 
 
-.edition-stay-card p:not(.section-label) {
+.edition-local-info-item p:not(.section-label) {
 
-    max-width: 620px;
+    max-width: 360px;
 
-    margin-top: 24px;
+    margin-top: 13px;
 
     color: var(--muted);
 
-    font-size: 0.90rem;
+    font-size: 0.74rem;
 
-    line-height: 1.85;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   10. DON'T MISS
+   07. OUR RECOMMENDATIONS
 ========================================================= */
 
-.edition-not-miss {
+.edition-recommendations {
 
     padding-block:
-        clamp(80px, 9vw, 130px);
-
-    background: var(--bg-soft);
-
-    border-top: 1px solid var(--line-soft);
-    border-bottom: 1px solid var(--line-soft);
+        clamp(75px, 9vw, 120px);
 }
 
 
-.edition-not-miss .section-heading {
+.edition-recommendations .section-heading {
 
     max-width: 700px;
 
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 
-.edition-not-miss .section-heading h2 {
+.edition-recommendations .section-heading > p {
+
+    margin: 0 0 12px;
+
+    color: var(--gold);
+
+    font-size: 0.60rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.edition-recommendations .section-heading h2 {
 
     margin: 0;
 
@@ -885,7 +746,7 @@
 }
 
 
-.edition-not-miss-grid {
+.edition-recommendations-grid {
 
     display: grid;
 
@@ -893,25 +754,42 @@
         repeat(3, minmax(0, 1fr));
 
     gap: 0;
+
+    border-top: 1px solid var(--line-soft);
 }
 
 
-.edition-not-miss-grid > div {
+.edition-recommendation {
 
     padding:
-        28px 30px;
+        30px 30px 35px;
 
     border-left: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
 }
 
 
-.edition-not-miss-grid > div:first-child {
+.edition-recommendation:nth-child(3n + 1) {
 
     border-left: 0;
 }
 
 
-.edition-not-miss-grid h3 {
+.edition-recommendation .story-number {
+
+    margin: 0 0 16px;
+
+    color: var(--gold);
+
+    font-size: 0.60rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+}
+
+
+.edition-recommendation h3 {
 
     margin: 0;
 
@@ -919,17 +797,19 @@
 
     font-family: var(--font-display);
 
-    font-size: 1.8rem;
+    font-size: 2rem;
 
     font-weight: 500;
 
-    line-height: 1;
+    line-height: 0.98;
 }
 
 
-.edition-not-miss-grid p:not(.story-number) {
+.edition-recommendation p:not(.story-number) {
 
-    margin-top: 14px;
+    max-width: 390px;
+
+    margin-top: 16px;
 
     color: var(--muted);
 
@@ -940,27 +820,36 @@
 
 
 /* =========================================================
-   11. CLOSING
+   08. FROM THE JOURNAL
 ========================================================= */
 
-.edition-closing {
+.edition-journal {
 
     padding-block:
-        clamp(90px, 11vw, 160px);
+        clamp(75px, 9vw, 120px);
+
+    background: var(--bg-soft);
+
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
 }
 
 
-.edition-closing-inner {
+.edition-journal-inner {
 
-    max-width: 800px;
+    display: grid;
 
-    margin-inline: auto;
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        minmax(0, 1.2fr);
 
-    text-align: center;
+    gap: clamp(50px, 8vw, 120px);
+
+    align-items: start;
 }
 
 
-.edition-closing-inner h2 {
+.edition-journal h2 {
 
     margin: 0;
 
@@ -969,44 +858,129 @@
     font-family: var(--font-display);
 
     font-size: clamp(
-        3.2rem,
-        6vw,
-        5.8rem
+        3rem,
+        5vw,
+        4.8rem
     );
 
     font-weight: 500;
 
-    line-height: 0.90;
+    line-height: 0.92;
 }
 
 
-.edition-closing-inner p:not(.section-label) {
+.edition-journal-copy {
 
     max-width: 650px;
-
-    margin: 28px auto 0;
 
     color: var(--muted);
 
     font-size: 0.90rem;
 
-    line-height: 1.9;
+    line-height: 1.85;
+}
+
+
+.edition-journal-copy p {
+
+    margin: 0;
+}
+
+
+.edition-journal-copy p + p {
+
+    margin-top: 20px;
 }
 
 
 /* =========================================================
-   12. EDITION END NAVIGATION
+   09. MORE FROM OUR CAMERA
 ========================================================= */
 
+.edition-gallery {
+
+    padding-block:
+        clamp(70px, 8vw, 110px);
+}
+
+
+.edition-gallery .section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 40px;
+}
+
+
 /*
-   Standard navigation at the end of every Edition.
-
-   Left:
-   Back to Home
-
-   Right:
-   View All Editions
+   Secondary photography follows exactly the
+   same natural-ratio system as the main story.
 */
+
+.edition-photo-mosaic-secondary {
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   10. MAP
+========================================================= */
+
+.edition-map {
+
+    padding-block:
+        clamp(75px, 9vw, 120px);
+}
+
+
+.edition-map-inner {
+
+    max-width: 720px;
+
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+
+.edition-map-inner h2 {
+
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        3rem,
+        5vw,
+        4.8rem
+    );
+
+    font-weight: 500;
+
+    line-height: 0.92;
+}
+
+
+.edition-map-inner p:not(.section-label) {
+
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    color: var(--muted);
+
+    font-size: 0.88rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   11. EDITION END NAVIGATION
+========================================================= */
 
 .edition-end {
 
@@ -1063,7 +1037,7 @@
 
 
 /* =========================================================
-   13. TABLET
+   12. TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1078,77 +1052,63 @@
     }
 
 
-    .edition-intro-grid {
+    .edition-photo-mosaic img {
 
-        grid-template-columns: 1fr;
-
-        gap: 35px;
+        flex-basis: 45%;
     }
 
 
-    .edition-story-block {
+    .edition-photo-mosaic img:nth-child(n) {
 
-        grid-template-columns: 1fr;
-
-        gap: 35px;
+        flex-basis: 45%;
     }
 
 
-    .edition-story-copy {
+    .edition-local-info-grid {
 
-        max-width: 650px;
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
     }
 
 
-    .edition-feature-grid,
-    .edition-feature-grid.reverse {
+    .edition-local-info-item {
 
-        grid-template-columns: 1fr;
-
-        gap: 40px;
+        padding:
+            25px 20px;
     }
 
 
-    .edition-feature-grid.reverse .edition-feature-image,
-    .edition-feature-grid.reverse .edition-feature-copy {
-
-        order: initial;
-    }
-
-
-    .edition-gallery-grid {
+    .edition-recommendations-grid {
 
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
-
-        gap: 16px;
     }
 
 
-    .edition-not-miss-grid {
+    .edition-recommendation:nth-child(3n + 1) {
 
-        grid-template-columns: 1fr;
+        border-left: 1px solid var(--line-soft);
     }
 
 
-    .edition-not-miss-grid > div {
+    .edition-recommendation:nth-child(2n + 1) {
 
         border-left: 0;
-
-        border-top: 1px solid var(--line-soft);
     }
 
 
-    .edition-not-miss-grid > div:first-child {
+    .edition-journal-inner {
 
-        border-top: 0;
+        grid-template-columns: 1fr;
+
+        gap: 35px;
     }
 
 }
 
 
 /* =========================================================
-   14. PHONE
+   13. PHONE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -1251,7 +1211,9 @@
     }
 
 
-    /* Hero */
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
 
     .edition-hero {
 
@@ -1289,252 +1251,209 @@
     }
 
 
-    /* Introduction */
+    /* -----------------------------------------------------
+       INTRODUCTION
+    ----------------------------------------------------- */
 
     .edition-intro {
 
-        padding-block: 70px;
-    }
-
-
-    .edition-intro-grid {
-
-        gap: 30px;
+        padding-block: 65px;
     }
 
 
     .edition-intro h2 {
 
-        font-size: 3rem;
+        font-size: 3.25rem;
     }
 
 
     .edition-intro-text {
 
+        margin-top: 24px;
+
         font-size: 0.84rem;
 
         line-height: 1.8;
     }
 
 
-    /* Story */
+    /* -----------------------------------------------------
+       PHOTOGRAPHIC STORY
+    ----------------------------------------------------- */
 
     .edition-photo-story {
 
-        padding-block: 60px;
+        padding-block: 45px;
     }
 
 
-    .edition-story-block {
+    .edition-photo-heading {
 
-        gap: 28px;
-
-        margin-bottom: 75px;
+        margin-bottom: 25px;
     }
 
 
-    /*
-       Natural image height.
-
-       No forced 4:3 crop on mobile.
-    */
-
-    .edition-story-image img {
-
-        width: 100%;
-        height: auto;
-
-        aspect-ratio: auto;
-
-        object-fit: contain;
-    }
-
-
-    .edition-story-copy h2 {
+    .edition-photo-heading h2,
+    .edition-gallery .section-heading h2 {
 
         font-size: 3rem;
-    }
-
-
-    .edition-story-copy p:not(.story-number) {
-
-        margin-top: 18px;
-
-        font-size: 0.84rem;
-
-        line-height: 1.8;
-    }
-
-
-    /* Gallery */
-
-    .edition-gallery {
-
-        padding-block: 60px;
-    }
-
-
-    .edition-gallery .section-heading {
-
-        margin-bottom: 30px;
     }
 
 
     /*
        One image per row on mobile.
 
-       Natural proportions are preserved.
+       Natural proportions remain completely intact.
     */
 
-    .edition-gallery-grid {
+    .edition-photo-mosaic {
 
-        grid-template-columns: 1fr;
+        display: flex;
 
-        gap: 22px;
+        flex-direction: column;
+
+        gap: 5px;
     }
 
 
-    .edition-gallery-grid img {
+    .edition-photo-mosaic img,
+    .edition-photo-mosaic img:nth-child(n) {
+
+        flex: none;
 
         width: 100%;
+
         height: auto;
-
-        aspect-ratio: auto;
-
-        object-fit: contain;
     }
 
 
-    /* Feature */
+    /* -----------------------------------------------------
+       LOCAL INFORMATION
+    ----------------------------------------------------- */
 
-    .edition-feature {
+    .edition-local-info {
 
-        padding-block: 70px;
+        padding-block: 5px;
     }
 
 
-    .edition-feature-grid,
-    .edition-feature-grid.reverse {
+    .edition-local-info-grid {
+
+        display: grid;
 
         grid-template-columns: 1fr;
-
-        gap: 32px;
     }
 
 
-    .edition-feature-grid.reverse .edition-feature-image,
-    .edition-feature-grid.reverse .edition-feature-copy {
-
-        order: initial;
-    }
-
-
-    .edition-feature-copy h2 {
-
-        font-size: 3rem;
-    }
-
-
-    .edition-feature-copy p:not(.section-label) {
-
-        margin-top: 18px;
-
-        font-size: 0.84rem;
-
-        line-height: 1.8;
-    }
-
-
-    .edition-feature-image img {
-
-        width: 100%;
-        height: auto;
-
-        aspect-ratio: auto;
-
-        object-fit: contain;
-    }
-
-
-    /* Stay */
-
-    .edition-stay {
-
-        padding-block: 60px;
-    }
-
-
-    .edition-stay-card {
+    .edition-local-info-item,
+    .edition-local-info-item:first-child,
+    .edition-local-info-item:last-child {
 
         padding:
-            32px 28px;
+            24px 0;
+
+        border-left: 0;
+
+        border-top: 1px solid var(--line-soft);
     }
 
 
-    .edition-stay-card h2 {
+    .edition-local-info-item:first-child {
 
-        font-size: 3rem;
+        border-top: 0;
     }
 
 
-    .edition-stay-card p:not(.section-label) {
+    .edition-local-info-item h3 {
 
-        margin-top: 18px;
-
-        font-size: 0.84rem;
-
-        line-height: 1.8;
+        font-size: 1.9rem;
     }
 
 
-    /* Don't Miss */
-
-    .edition-not-miss {
-
-        padding-block: 70px;
-    }
-
-
-    .edition-not-miss .section-heading {
-
-        margin-bottom: 30px;
-    }
-
-
-    .edition-not-miss-grid > div {
-
-        padding:
-            26px 0;
-    }
-
-
-    .edition-not-miss-grid h3 {
-
-        font-size: 1.55rem;
-    }
-
-
-    .edition-not-miss-grid p:not(.story-number) {
+    .edition-local-info-item p:not(.section-label) {
 
         font-size: 0.74rem;
     }
 
 
-    /* Closing */
+    /* -----------------------------------------------------
+       RECOMMENDATIONS
+    ----------------------------------------------------- */
 
-    .edition-closing {
+    .edition-recommendations {
 
-        padding-block: 85px;
+        padding-block: 65px;
     }
 
 
-    .edition-closing-inner h2 {
+    .edition-recommendations .section-heading {
 
-        font-size: 3.3rem;
+        margin-bottom: 30px;
     }
 
 
-    .edition-closing-inner p:not(.section-label) {
+    .edition-recommendations .section-heading h2 {
+
+        font-size: 3rem;
+    }
+
+
+    .edition-recommendations-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .edition-recommendation,
+    .edition-recommendation:nth-child(3n + 1),
+    .edition-recommendation:nth-child(2n + 1) {
+
+        padding:
+            25px 0 30px;
+
+        border-left: 0;
+
+        border-bottom: 1px solid var(--line-soft);
+    }
+
+
+    .edition-recommendation:first-child {
+
+        border-top: 0;
+    }
+
+
+    .edition-recommendation h3 {
+
+        font-size: 1.8rem;
+    }
+
+
+    .edition-recommendation p:not(.story-number) {
+
+        font-size: 0.75rem;
+
+        line-height: 1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       JOURNAL
+    ----------------------------------------------------- */
+
+    .edition-journal {
+
+        padding-block: 65px;
+    }
+
+
+    .edition-journal h2 {
+
+        font-size: 3rem;
+    }
+
+
+    .edition-journal-copy {
 
         font-size: 0.84rem;
 
@@ -1542,7 +1461,49 @@
     }
 
 
-    /* End navigation */
+    /* -----------------------------------------------------
+       MORE FROM CAMERA
+    ----------------------------------------------------- */
+
+    .edition-gallery {
+
+        padding-block: 55px;
+    }
+
+
+    .edition-gallery .section-heading {
+
+        margin-bottom: 25px;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP
+    ----------------------------------------------------- */
+
+    .edition-map {
+
+        padding-block: 65px;
+    }
+
+
+    .edition-map-inner h2 {
+
+        font-size: 3.2rem;
+    }
+
+
+    .edition-map-inner p:not(.section-label) {
+
+        font-size: 0.84rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* -----------------------------------------------------
+       END NAVIGATION
+    ----------------------------------------------------- */
 
     .edition-end {
 
@@ -1564,7 +1525,7 @@
 
 
 /* =========================================================
-   15. VERY SMALL PHONES
+   14. VERY SMALL PHONES
 ========================================================= */
 
 @media (max-width: 390px) {
@@ -1582,9 +1543,9 @@
     }
 
 
-    .edition-gallery-grid {
+    .edition-photo-mosaic {
 
-        gap: 18px;
+        gap: 4px;
     }
 
 
@@ -1594,11 +1555,17 @@
     }
 
 
-    .edition-story-copy h2,
-    .edition-feature-copy h2,
-    .edition-stay-card h2 {
+    .edition-intro h2,
+    .edition-recommendations .section-heading h2,
+    .edition-journal h2 {
 
-        font-size: 2.7rem;
+        font-size: 2.8rem;
+    }
+
+
+    .edition-map-inner h2 {
+
+        font-size: 3rem;
     }
 
 
@@ -1622,84 +1589,5 @@
 
 
 /* =========================================================
-   END — EDITION MASTER V2.1
-========================================================= */
-/* =========================================================
-   DESKTOP EDITION REFINEMENT
-   Stage 2 — Desktop polish
-
-   Mobile styling remains unchanged.
-========================================================= */
-
-@media (min-width: 1001px) {
-
-    /* -----------------------------------------------------
-       HERO
-       Keep the full-viewport, stretched treatment.
-    ----------------------------------------------------- */
-
-    .edition-hero {
-
-        min-height: 100svh;
-
-        background-size: cover;
-        background-position: center center;
-    }
-
-
-    /* -----------------------------------------------------
-       PHOTO STORY
-       Give photography slightly less visual dominance
-       and allow the editorial copy more space.
-    ----------------------------------------------------- */
-
-    .edition-story-block {
-
-        grid-template-columns:
-            minmax(0, 0.85fr)
-            minmax(0, 1fr);
-
-        gap: clamp(45px, 6vw, 80px);
-    }
-
-
-    .edition-story-image {
-
-        max-width: 720px;
-    }
-
-
-    /* -----------------------------------------------------
-       FEATURE
-       Apply the same more compact editorial balance.
-    ----------------------------------------------------- */
-
-    .edition-feature-grid {
-
-        grid-template-columns:
-            minmax(0, 0.85fr)
-            minmax(0, 1fr);
-
-        gap: clamp(45px, 6vw, 80px);
-    }
-
-
-    .edition-feature-grid.reverse {
-
-        grid-template-columns:
-            minmax(0, 1fr)
-            minmax(0, 0.85fr);
-    }
-
-
-    .edition-feature-image {
-
-        max-width: 720px;
-    }
-
-}
-
-
-/* =========================================================
-   END — DESKTOP EDITION REFINEMENT
+   END — EDITION MASTER V3.0
 ========================================================= */

@@ -506,6 +506,16 @@
     gap: 8px;
 
     width: 100%;
+
+    /*
+       Slightly narrower photographic field on desktop.
+       This gives the images more breathing room while
+       keeping the photographic section visually strong.
+    */
+
+    max-width: 1120px;
+
+    margin-inline: auto;
 }
 
 
@@ -912,11 +922,6 @@
 }
 
 
-/*
-   Secondary photography follows exactly the
-   same natural-ratio system as the main story.
-*/
-
 .edition-photo-mosaic-secondary {
 
     gap: 8px;
@@ -1313,6 +1318,8 @@
         flex-direction: column;
 
         gap: 5px;
+
+        max-width: none;
     }
 
 

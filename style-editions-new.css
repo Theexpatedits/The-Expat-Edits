@@ -1,9 +1,7 @@
 /* =========================================================
    THE EXPAT EDITS
    EDITION MASTER STYLESHEET
-   VERSION 3.4
-
-   New Edition system:
+   VERSION 3.5
 
    HERO
    INTRODUCTION
@@ -21,7 +19,7 @@
    - Close photographic spacing
    - Layout adapts to the photographs
    - Refined desktop photographic field
-   - Full desktop hero photography
+   - Larger full-image desktop heroes
 ========================================================= */
 
 
@@ -528,6 +526,10 @@
 }
 
 
+/* ---------------------------------------------------------
+   CONTROLLED IMAGE WIDTHS
+--------------------------------------------------------- */
+
 .edition-photo-mosaic img:nth-child(1) {
 
     flex-basis: 48%;
@@ -602,13 +604,13 @@
 
     .edition-photo-mosaic {
 
-        max-width: 800px;
+        max-width: 900px;
     }
 
 
     .edition-photo-mosaic img {
 
-        flex-grow: 0;
+        flex-grow: 1;
         flex-shrink: 1;
     }
 
@@ -620,38 +622,37 @@
 ========================================================= */
 
 /*
-   Desktop heroes previously used "cover", which forced the
-   photograph to fill the entire screen and therefore cropped
-   substantial parts of many of the original photographs.
+   Desktop hero photographs are now displayed in full.
 
-   Desktop now uses "contain" so the complete photograph is
-   visible. The surrounding area uses the site background.
+   The hero is deliberately taller than the previous
+   contain version so portrait-oriented photographs
+   remain substantial on a laptop screen.
 
-   The hero is also slightly shorter than a full screen,
-   creating a calmer editorial opening.
+   Unlike "cover", "contain" prevents the original image
+   from being cropped.
 
-   Phone and tablet remain unchanged below.
+   The result is a larger photograph with controlled
+   negative space rather than an aggressively cropped image.
 */
 
 @media (min-width: 1001px) {
 
     .edition-hero {
 
-        min-height: 82svh;
+        min-height: 94svh;
 
         background-size: contain;
 
         background-position: center center;
 
         background-color: var(--bg);
-
     }
 
 
     .edition-hero-overlay {
 
-        padding-bottom: clamp(50px, 7vh, 85px);
-
+        padding-bottom:
+            clamp(55px, 7vh, 90px);
     }
 
 }
@@ -1625,5 +1626,5 @@
 
 
 /* =========================================================
-   END — EDITION MASTER V3.4
+   END — EDITION MASTER V3.5
 ========================================================= */

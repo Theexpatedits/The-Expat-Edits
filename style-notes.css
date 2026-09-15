@@ -1,0 +1,546 @@
+/* =========================================================
+   THE EXPAT EDITS
+   EDITORIAL NOTES MASTER STYLESHEET
+   VERSION 1.0
+
+   Notes:
+   - Same site framework as Editions
+   - No photography required
+   - Editorial / journal treatment
+   - Existing master CSS remains untouched
+========================================================= */
+
+
+/* =========================================================
+   01. NOTE INTRO
+========================================================= */
+
+.note-intro {
+
+    padding-block:
+        clamp(75px, 9vw, 120px)
+        clamp(65px, 8vw, 105px);
+
+    border-bottom: 1px solid var(--line-soft);
+}
+
+
+.note-intro-inner {
+
+    max-width: 850px;
+
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+
+.note-intro .section-label {
+
+    margin-bottom: 20px;
+}
+
+
+.note-intro h1 {
+
+    margin: 0;
+
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        4rem,
+        7vw,
+        6.5rem
+    );
+
+    font-weight: 500;
+
+    line-height: 0.88;
+}
+
+
+.note-subtitle {
+
+    margin: 22px auto 0;
+
+    color: var(--muted);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        1.25rem,
+        2vw,
+        1.65rem
+    );
+
+    font-style: italic;
+
+    line-height: 1.25;
+}
+
+
+.note-opening {
+
+    max-width: 700px;
+
+    margin: 38px auto 0;
+
+    color: var(--muted);
+
+    font-size: 0.92rem;
+
+    line-height: 1.9;
+}
+
+
+.note-opening p {
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   02. NOTE DAYS
+========================================================= */
+
+.note-day {
+
+    padding-block:
+        clamp(60px, 7vw, 95px);
+
+    border-bottom: 1px solid var(--line-soft);
+}
+
+
+.note-day-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 0.55fr)
+        minmax(0, 1.45fr);
+
+    gap: clamp(45px, 8vw, 120px);
+
+    max-width: 1050px;
+
+    margin-inline: auto;
+
+    align-items: start;
+}
+
+
+.note-day-heading {
+
+    padding-top: 3px;
+}
+
+
+.note-day-number {
+
+    margin: 0;
+
+    color: var(--gold);
+
+    font-size: 0.62rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.20em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+}
+
+
+.note-rule {
+
+    width: 28px;
+
+    height: 1px;
+
+    margin-top: 17px;
+
+    background: var(--line-soft);
+}
+
+
+.note-day-route {
+
+    margin: 18px 0 0;
+
+    color: var(--muted);
+
+    font-family: var(--font-display);
+
+    font-size: 1.35rem;
+
+    font-style: italic;
+
+    line-height: 1.25;
+}
+
+
+.note-day-content {
+
+    max-width: 680px;
+
+    color: var(--muted);
+
+    font-size: 0.88rem;
+
+    line-height: 1.9;
+}
+
+
+.note-day-content p {
+
+    margin: 0;
+}
+
+
+.note-day-content p + p {
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   03. THE EXPAT EDIT
+========================================================= */
+
+.note-closing {
+
+    padding-block:
+        clamp(65px, 8vw, 100px);
+}
+
+
+.note-closing-inner {
+
+    max-width: 900px;
+
+    margin-inline: auto;
+
+    padding:
+        clamp(35px, 5vw, 55px)
+        clamp(25px, 7vw, 90px);
+
+    background: var(--bg-soft);
+
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+
+    text-align: center;
+}
+
+
+.note-closing .section-label {
+
+    margin-bottom: 20px;
+}
+
+
+.note-closing-quote {
+
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: var(--ivory);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(
+        1.55rem,
+        2.7vw,
+        2.25rem
+    );
+
+    font-style: italic;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   04. END NAVIGATION
+========================================================= */
+
+.note-end {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    width: 100%;
+
+    padding:
+        55px var(--page-padding) 70px;
+
+    border-top: 1px solid var(--line-soft);
+}
+
+
+.note-end .text-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    color: var(--gold);
+
+    font-family: var(--font-body);
+
+    font-size: 0.64rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transition),
+        opacity var(--transition);
+}
+
+
+.note-end .text-link:hover {
+
+    color: var(--ivory);
+}
+
+
+/* =========================================================
+   05. TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .note-day-grid {
+
+        grid-template-columns:
+            minmax(150px, 0.45fr)
+            minmax(0, 1.55fr);
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   06. PHONE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .note-intro {
+
+        padding-block:
+            65px
+            55px;
+    }
+
+
+    .note-intro h1 {
+
+        font-size: 3.7rem;
+
+        line-height: 0.9;
+    }
+
+
+    .note-subtitle {
+
+        margin-top: 18px;
+
+        font-size: 1.18rem;
+
+        line-height: 1.3;
+    }
+
+
+    .note-opening {
+
+        margin-top: 28px;
+
+        font-size: 0.84rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* -----------------------------------------------------
+       DAYS
+    ----------------------------------------------------- */
+
+    .note-day {
+
+        padding-block: 52px;
+    }
+
+
+    .note-day-grid {
+
+        display: block;
+    }
+
+
+    .note-day-heading {
+
+        margin-bottom: 28px;
+    }
+
+
+    .note-day-number {
+
+        font-size: 0.56rem;
+
+        letter-spacing: 0.17em;
+    }
+
+
+    .note-rule {
+
+        margin-top: 13px;
+    }
+
+
+    .note-day-route {
+
+        margin-top: 14px;
+
+        font-size: 1.25rem;
+
+        line-height: 1.25;
+    }
+
+
+    .note-day-content {
+
+        font-size: 0.84rem;
+
+        line-height: 1.8;
+    }
+
+
+    .note-day-content p + p {
+
+        margin-top: 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       CLOSING
+    ----------------------------------------------------- */
+
+    .note-closing {
+
+        padding-block: 50px;
+    }
+
+
+    .note-closing-inner {
+
+        padding:
+            35px 22px;
+    }
+
+
+    .note-closing-quote {
+
+        font-size: 1.55rem;
+
+        line-height: 1.3;
+    }
+
+
+    /* -----------------------------------------------------
+       END NAVIGATION
+    ----------------------------------------------------- */
+
+    .note-end {
+
+        gap: 25px;
+
+        padding:
+            42px 24px 55px;
+    }
+
+
+    .note-end .text-link {
+
+        font-size: 0.54rem;
+
+        letter-spacing: 0.10em;
+    }
+
+}
+
+
+/* =========================================================
+   07. VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .note-intro h1 {
+
+        font-size: 3.25rem;
+    }
+
+
+    .note-subtitle {
+
+        font-size: 1.08rem;
+    }
+
+
+    .note-day {
+
+        padding-block: 45px;
+    }
+
+
+    .note-closing-quote {
+
+        font-size: 1.42rem;
+    }
+
+
+    .note-end {
+
+        gap: 18px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    .note-end .text-link {
+
+        font-size: 0.48rem;
+
+        letter-spacing: 0.08em;
+    }
+
+}
+
+
+/* =========================================================
+   END — EDITORIAL NOTES V1.0
+========================================================= */

@@ -1,7 +1,7 @@
 /* =========================================================
    THE EXPAT EDITS
    EDITION MASTER STYLESHEET
-   VERSION 3.2
+   VERSION 3.3
    New Edition system:
    HERO
    INTRODUCTION
@@ -283,14 +283,11 @@
    05. PHOTO MOSAIC
 ========================================================= */
 /*
-   The photographs determine their own height.
-   We use flex-wrap rather than fixed-height CSS grid
-   cells so that:
-   - original aspect ratios remain intact
-   - no image is cropped
-   - the existing image order is preserved
-   - different photographs can occupy different amounts
-     of horizontal space
+   The photographs retain their natural aspect ratios.
+   Desktop uses a narrower photographic field and prevents
+   flex-grow from enlarging the photographs to fill each row.
+   This creates more deliberate negative space and a quieter,
+   more editorial presentation.
 */
 .edition-photo-mosaic {
     display: flex;
@@ -301,10 +298,6 @@
     max-width: 1120px;
     margin-inline: auto;
 }
-/*
-   Each image is allowed to establish its own
-   natural height from its aspect ratio.
-*/
 .edition-photo-mosaic img {
     display: block;
     width: 100%;
@@ -369,14 +362,19 @@
 ========================================================= */
 /*
    Desktop only.
-   The photographic field is deliberately narrower than
-   the main page width. This gives the photographs more
-   negative space and a more refined editorial feel.
-   Phone and tablet are deliberately unaffected.
+   The photographic field is now deliberately compact.
+   More importantly, the images are prevented from growing
+   beyond their assigned flex-basis. This stops the browser
+   from expanding the photographs to fill each row.
+   Natural aspect ratios remain completely intact.
 */
 @media (min-width: 1001px) {
     .edition-photo-mosaic {
-        max-width: 850px;
+        max-width: 800px;
+    }
+    .edition-photo-mosaic img {
+        flex-grow: 0;
+        flex-shrink: 1;
     }
 }
 /* =========================================================
@@ -911,5 +909,5 @@
     }
 }
 /* =========================================================
-   END — EDITION MASTER V3.2
+   END — EDITION MASTER V3.3
 ========================================================= */

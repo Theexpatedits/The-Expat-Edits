@@ -1,7 +1,7 @@
 /* =========================================================
    THE EXPAT EDITS
    EDITION MASTER STYLESHEET
-   VERSION 3.1
+   VERSION 3.2
    New Edition system:
    HERO
    INTRODUCTION
@@ -17,7 +17,7 @@
    - No unnecessary cropping
    - Close photographic spacing
    - Layout adapts to the photographs
-   - Desktop photographic field reduced for balance
+   - Refined desktop photographic field
 ========================================================= */
 /* =========================================================
    01. EDITIONS ARCHIVE
@@ -298,11 +298,6 @@
     align-items: flex-start;
     gap: 8px;
     width: 100%;
-    /*
-       Base photographic field.
-       Desktop uses a narrower field below.
-       Tablet and mobile retain their existing behaviour.
-    */
     max-width: 1120px;
     margin-inline: auto;
 }
@@ -374,15 +369,14 @@
 ========================================================= */
 /*
    Desktop only.
-   The previous 1120px photographic field allowed the
-   photographs to become visually dominant on large screens.
-   Reducing this to 980px gives the page more negative space
-   and creates a more refined editorial composition.
-   Mobile and tablet are deliberately unaffected.
+   The photographic field is deliberately narrower than
+   the main page width. This gives the photographs more
+   negative space and a more refined editorial feel.
+   Phone and tablet are deliberately unaffected.
 */
 @media (min-width: 1001px) {
     .edition-photo-mosaic {
-        max-width: 980px;
+        max-width: 850px;
     }
 }
 /* =========================================================
@@ -917,5 +911,5 @@
     }
 }
 /* =========================================================
-   END — EDITION MASTER V3.1
+   END — EDITION MASTER V3.2
 ========================================================= */

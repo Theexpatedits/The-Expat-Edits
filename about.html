@@ -8,16 +8,21 @@
 
     <title>About — The Expat Edits</title>
 
-    <meta name="description"
-          content="The story behind The Expat Edits — a family travel journal documenting the places we visit, the experiences we have and the moments that make us want to keep travelling.">
+    <meta
+        name="description"
+        content="The story behind The Expat Edits — a family travel journal documenting the places we visit, the experiences we have and the moments that make us want to keep travelling."
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
-    <link rel="stylesheet" href="style-v6.css">
+    <!-- CURRENT SITE MASTER CSS -->
+    <link rel="stylesheet" href="style-new.css">
 
 </head>
 
@@ -27,39 +32,45 @@
 
 <!-- =========================================================
      HEADER
+     CURRENT SITE MASTER
      ========================================================= -->
 
 <header class="site-header">
 
-    <div class="header-inner">
+    <div class="site-header-inner">
 
-        <a href="index.html" class="site-logo">
+        <a href="index-new.html" class="site-logo">
             THE EXPAT EDITS
         </a>
 
-        <nav class="desktop-nav">
 
-            <a href="index.html#featured-editions">
-                EDITIONS
+        <nav class="site-nav">
+
+            <a href="editions.html">
+                Editions
             </a>
 
-            <a href="journal.html">
-                JOURNAL
+            <a href="index-new.html#journal">
+                Journal
             </a>
 
-            <a href="index.html#explore-map">
-                MAP
+            <a href="index-new.html#map">
+                Map
             </a>
 
             <a href="about.html" class="active">
-                ABOUT
+                About
             </a>
 
         </nav>
 
-        <button class="menu-toggle"
-                aria-label="Open menu"
-                aria-expanded="false">
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
 
             <span></span>
             <span></span>
@@ -68,29 +79,6 @@
         </button>
 
     </div>
-
-
-    <!-- MOBILE NAV -->
-
-    <nav class="mobile-nav">
-
-        <a href="index.html#featured-editions">
-            EDITIONS
-        </a>
-
-        <a href="journal.html">
-            JOURNAL
-        </a>
-
-        <a href="index.html#explore-map">
-            MAP
-        </a>
-
-        <a href="about.html">
-            ABOUT
-        </a>
-
-    </nav>
 
 </header>
 
@@ -200,8 +188,10 @@
 
         <div class="about-family-image">
 
-            <img src="komodo9.jpeg"
-                 alt="Our family in Komodo">
+            <img
+                src="komodo9.jpeg"
+                alt="Our family in Komodo"
+            >
 
         </div>
 
@@ -214,61 +204,71 @@
 
 <!-- =========================================================
      FOOTER
+     CURRENT SITE MASTER
      ========================================================= -->
 
 <footer class="site-footer">
 
-    <div class="footer-inner">
+    <div class="site-footer-inner">
 
 
-        <a href="index.html" class="footer-logo">
-            THE EXPAT<br>
-            EDITS
-        </a>
+        <div class="footer-brand">
 
+            <a
+                href="index-new.html"
+                class="footer-logo"
+            >
+                THE EXPAT EDITS
+            </a>
 
-        <p class="footer-tagline">
-            TRAVEL, PLACES &amp; OBSERVATIONS FROM LIFE ABROAD.
-        </p>
+            <p class="footer-description">
+                TRAVEL, PLACES &amp; OBSERVATIONS FROM LIFE ABROAD.
+            </p>
+
+        </div>
 
 
         <nav class="footer-nav">
 
-            <a href="index.html#featured-editions">
-                EDITIONS
+            <a href="editions.html">
+                Editions
             </a>
 
-            <a href="journal.html">
-                JOURNAL
+            <a href="index-new.html#journal">
+                Journal
             </a>
 
-            <a href="index.html#explore-map">
-                MAP
+            <a href="index-new.html#map">
+                Map
             </a>
 
             <a href="about.html">
-                ABOUT
+                About
             </a>
 
         </nav>
 
 
-        <a href="https://instagram.com"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="footer-instagram">
-
-            INSTAGRAM →
-
+        <a
+            href="https://instagram.com/theexpatedits"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-instagram"
+        >
+            Instagram →
         </a>
 
 
-        <div class="footer-rule"></div>
+        <div class="footer-bottom">
 
+            <div class="footer-rule"></div>
 
-        <p class="copyright">
-            © 2026 The Expat Edits. All rights reserved.
-        </p>
+            <p class="copyright">
+                © 2026 The Expat Edits. All rights reserved.
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -277,14 +277,15 @@
 
 
 <!-- =========================================================
-     ABOUT PAGE OVERRIDES
+     ABOUT PAGE STYLING
+     CONTENT ONLY
+     HEADER + FOOTER REMAIN CONTROLLED BY MASTER CSS
      ========================================================= -->
 
 <style>
 
-
 /* =========================================================
-   COLOUR SYSTEM
+   ABOUT PAGE
    ========================================================= */
 
 .about-page {
@@ -295,69 +296,7 @@
 
 
 /* =========================================================
-   HEADER
-   ========================================================= */
-
-.site-header {
-    position: relative;
-    z-index: 100;
-    background: #11100F;
-    border-bottom: 1px solid rgba(181, 154, 99, 0.28);
-}
-
-.header-inner {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 28px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.site-logo {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: #B59A63;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 34px;
-}
-
-.desktop-nav a {
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: #9D9990;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.desktop-nav a:hover,
-.desktop-nav a.active {
-    color: #B59A63;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.mobile-nav {
-    display: none;
-}
-
-
-
-/* =========================================================
-   ABOUT INTRO
+   INTRO
    ========================================================= */
 
 .about-intro {
@@ -367,15 +306,6 @@
     text-align: center;
 }
 
-.section-label {
-    font-family: "Inter", sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #B59A63;
-}
-
 .about-intro .section-label {
     margin: 0 0 55px;
 }
@@ -383,21 +313,25 @@
 .about-intro h1 {
     margin: 0 auto 60px;
     max-width: 1000px;
+
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(62px, 7vw, 105px);
     font-weight: 400;
     line-height: 0.91;
     letter-spacing: -0.025em;
+
     color: #F1EDE4;
 }
 
 .about-lead {
     max-width: 760px;
     margin: 0 auto;
+
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(24px, 2.6vw, 31px);
     font-weight: 400;
     line-height: 1.4;
+
     color: #BDB8AF;
 }
 
@@ -415,10 +349,12 @@
 
 .about-story p {
     margin: 0 0 34px;
+
     font-family: "Cormorant Garamond", serif;
     font-size: 23px;
     font-weight: 400;
     line-height: 1.58;
+
     color: #D0CBC2;
 }
 
@@ -445,11 +381,13 @@
 
 .about-closing h2 {
     margin: 0;
+
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(55px, 7vw, 90px);
     font-weight: 400;
     line-height: 0.94;
     letter-spacing: -0.025em;
+
     color: #F1EDE4;
 }
 
@@ -482,162 +420,10 @@
 
 
 /* =========================================================
-   FOOTER
-   ========================================================= */
-
-.site-footer {
-    background: #11100F;
-    border-top: 1px solid rgba(241, 237, 228, 0.10);
-    padding: 78px 40px 30px;
-}
-
-.footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.footer-logo {
-    display: inline-block;
-    margin: 0 0 27px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 31px;
-    font-weight: 400;
-    line-height: 0.83;
-    letter-spacing: 0.03em;
-    color: #F1EDE4;
-    text-decoration: none;
-}
-
-.footer-tagline {
-    margin: 0 auto 48px;
-    font-family: "Inter", sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    line-height: 1.8;
-    color: #8F8B84;
-}
-
-.footer-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 32px;
-    margin-bottom: 48px;
-}
-
-.footer-nav a {
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.17em;
-    color: #F1EDE4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-nav a:hover {
-    color: #B59A63;
-}
-
-.footer-instagram {
-    display: inline-block;
-    margin-bottom: 78px;
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: #B59A63;
-    text-decoration: none;
-}
-
-.footer-rule {
-    width: 100%;
-    height: 1px;
-    background: rgba(241, 237, 228, 0.10);
-    margin-bottom: 24px;
-}
-
-.copyright {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
-    color: #706D67;
-}
-
-
-
-/* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
-
-
-    /* HEADER */
-
-    .site-header {
-        border-bottom: 1px solid rgba(181, 154, 99, 0.35);
-    }
-
-    .header-inner {
-        min-height: 82px;
-        padding: 0 28px;
-    }
-
-    .site-logo {
-        font-size: 21px;
-        letter-spacing: 0.09em;
-    }
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-        width: 31px;
-        height: 25px;
-        padding: 0;
-        margin: 0;
-        border: 0;
-        background: transparent;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-    }
-
-    .menu-toggle span {
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: #B59A63;
-    }
-
-    .mobile-nav {
-        display: none;
-        flex-direction: column;
-        padding: 15px 28px 30px;
-        border-top: 1px solid rgba(181, 154, 99, 0.18);
-    }
-
-    .mobile-nav.open {
-        display: flex;
-    }
-
-    .mobile-nav a {
-        padding: 17px 0;
-        font-family: "Inter", sans-serif;
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 0.18em;
-        color: #F1EDE4;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(241, 237, 228, 0.08);
-    }
 
 
     /* INTRO */
@@ -709,47 +495,6 @@
         object-fit: cover;
     }
 
-
-    /* FOOTER */
-
-    .site-footer {
-        padding: 65px 24px 25px;
-    }
-
-    .footer-logo {
-        font-size: 29px;
-        margin-bottom: 25px;
-    }
-
-    .footer-tagline {
-        max-width: 360px;
-        margin-bottom: 43px;
-        font-size: 10px;
-        line-height: 1.9;
-    }
-
-    .footer-nav {
-        gap: 26px;
-        margin-bottom: 43px;
-    }
-
-    .footer-nav a {
-        font-size: 10px;
-    }
-
-    .footer-instagram {
-        margin-bottom: 65px;
-    }
-
-    .footer-rule {
-        margin-bottom: 23px;
-    }
-
-    .copyright {
-        font-size: 9px;
-        letter-spacing: 0.07em;
-    }
-
 }
 
 </style>
@@ -757,21 +502,28 @@
 
 
 <!-- =========================================================
-     MOBILE MENU SCRIPT
+     MOBILE MENU
      ========================================================= -->
 
 <script>
 
 const menuToggle = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
+const siteNav = document.querySelector('.site-nav');
 
-menuToggle.addEventListener('click', function () {
+if (menuToggle && siteNav) {
 
-    const isOpen = mobileNav.classList.toggle('open');
+    menuToggle.addEventListener('click', function () {
 
-    menuToggle.setAttribute('aria-expanded', isOpen);
+        const isOpen = siteNav.classList.toggle('open');
 
-});
+        menuToggle.setAttribute(
+            'aria-expanded',
+            isOpen
+        );
+
+    });
+
+}
 
 </script>
 

@@ -1,1 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hong Kong, Our Way | The Expat Edits</title>
+
+    <meta
+        name="description"
+        content="A few days in Hong Kong — the Peak, Repulse Bay, the Star Ferry, Sheung Wan, Soho, great restaurants and getting out of the city."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CURRENT SITE MASTER -->
+    <link rel="stylesheet" href="style-new.css">
+
+
+    <style>
+
+        /* =========================================================
+           HONG KONG JOURNAL NOTE
+           A deliberately different editorial treatment from
+           the main Editions.
+        ========================================================= */
+
+
+        .hk-note{
+            background:#0b0b0b;
+            color:#f5f2ea;
+            overflow:hidden;
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .hk-header{
+            position:relative;
+            min-height:78vh;
+            display:flex;
+            align-items:flex-end;
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0,0,0,.88) 0%,
+                    rgba(0,0,0,.30) 55%,
+                    rgba(0,0,0,.15) 100%
+                ),
+                url('hongkong1.jpeg')
+                center center / cover no-repeat;
+        }
+
+
+        .hk-header-content{
+            width:min(1180px, 84%);
+            margin:0 auto;
+            padding:0 0 90px;
+        }
+
+
+        .hk-kicker{
+            color:#caa96a;
+            font-size:.76rem;
+            letter-spacing:5px;
+            text-transform:uppercase;
+            margin-bottom:20px;
+        }
+
+
+        .hk-header h1{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(4rem,8vw,7rem);
+            font-weight:500;
+            line-height:.88;
+            margin:0 0 25px;
+            max-width:800px;
+        }
+
+
+        .hk-header-intro{
+            max-width:610px;
+            font-size:1.08rem;
+            line-height:1.85;
+            color:#e3e0d8;
+            margin:0;
+        }
+
+
+        .hk-date{
+            margin-top:28px;
+            color:#aaa59b;
+            font-size:.75rem;
+            letter-spacing:3px;
+            text-transform:uppercase;
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .hk-intro{
+            width:min(900px, 84%);
+            margin:0 auto;
+            padding:120px 0 100px;
+        }
+
+
+        .hk-intro p{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(1.65rem,3vw,2.35rem);
+            line-height:1.42;
+            color:#eeeae1;
+            margin:0;
+        }
+
+
+        .hk-intro p:first-letter{
+            font-size:1.8em;
+            float:left;
+            line-height:.78;
+            padding-right:8px;
+            color:#caa96a;
+        }
+
+
+        /* =========================================================
+           NOTE SECTIONS
+        ========================================================= */
+
+        .hk-section{
+            width:min(1180px, 84%);
+            margin:0 auto;
+            padding:80px 0;
+        }
+
+
+        .hk-rule{
+            width:100%;
+            height:1px;
+            background:rgba(202,169,106,.25);
+            margin-bottom:65px;
+        }
+
+
+        .hk-number{
+            color:#caa96a;
+            font-size:.72rem;
+            letter-spacing:4px;
+            margin-bottom:15px;
+        }
+
+
+        .hk-section h2{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(2.7rem,5vw,4.5rem);
+            font-weight:500;
+            line-height:.98;
+            margin:0 0 25px;
+            max-width:720px;
+        }
+
+
+        .hk-section p{
+            color:#c8c5bd;
+            font-size:1rem;
+            line-height:1.9;
+            max-width:650px;
+        }
+
+
+        /* =========================================================
+           IMAGE + TEXT
+        ========================================================= */
+
+        .hk-feature{
+            display:grid;
+            grid-template-columns:1.35fr .85fr;
+            gap:70px;
+            align-items:center;
+        }
+
+
+        .hk-feature.reverse{
+            grid-template-columns:.85fr 1.35fr;
+        }
+
+
+        .hk-feature.reverse .hk-image{
+            order:2;
+        }
+
+
+        .hk-feature.reverse .hk-copy{
+            order:1;
+        }
+
+
+        .hk-image img{
+            width:100%;
+            height:auto;
+            display:block;
+        }
+
+
+        .hk-image-caption{
+            margin-top:14px;
+            color:#77736c;
+            font-size:.7rem;
+            letter-spacing:2px;
+            text-transform:uppercase;
+        }
+
+
+        /* =========================================================
+           LARGE QUOTE / OBSERVATION
+        ========================================================= */
+
+        .hk-observation{
+            width:min(1000px, 84%);
+            margin:40px auto 90px;
+            padding:70px 0;
+            border-top:1px solid rgba(202,169,106,.22);
+            border-bottom:1px solid rgba(202,169,106,.22);
+        }
+
+
+        .hk-observation p{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(2rem,4vw,3.2rem);
+            line-height:1.25;
+            text-align:center;
+            color:#eeeae1;
+            margin:0 auto;
+            max-width:850px;
+        }
+
+
+        .hk-observation span{
+            color:#caa96a;
+        }
+
+
+        /* =========================================================
+           RESTAURANTS
+        ========================================================= */
+
+        .hk-food{
+            width:min(1180px,84%);
+            margin:0 auto;
+            padding:100px 0;
+        }
+
+
+        .hk-food-heading{
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-end;
+            gap:40px;
+            margin-bottom:60px;
+        }
+
+
+        .hk-food-heading .label{
+            color:#caa96a;
+            text-transform:uppercase;
+            letter-spacing:5px;
+            font-size:.75rem;
+            margin-bottom:14px;
+        }
+
+
+        .hk-food-heading h2{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(3rem,5vw,4.5rem);
+            font-weight:500;
+            line-height:.95;
+            margin:0;
+        }
+
+
+        .hk-food-heading p{
+            max-width:390px;
+            color:#aaa69d;
+            line-height:1.8;
+            margin:0;
+        }
+
+
+        .hk-food-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:25px;
+        }
+
+
+        .hk-food-card{
+            border-top:1px solid rgba(202,169,106,.28);
+            padding-top:25px;
+        }
+
+
+        .hk-food-card h3{
+            font-family:'Cormorant Garamond',serif;
+            font-size:2.3rem;
+            font-weight:500;
+            margin:0 0 12px;
+        }
+
+
+        .hk-food-card .type{
+            color:#caa96a;
+            font-size:.7rem;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            margin-bottom:18px;
+        }
+
+
+        .hk-food-card p{
+            color:#aaa69d;
+            font-size:.92rem;
+            line-height:1.8;
+            margin:0;
+        }
+
+
+        /* =========================================================
+           STAY
+        ========================================================= */
+
+        .hk-stay{
+            width:min(1000px,84%);
+            margin:0 auto;
+            padding:100px 0;
+            text-align:center;
+        }
+
+
+        .hk-stay .label{
+            color:#caa96a;
+            font-size:.72rem;
+            letter-spacing:5px;
+            text-transform:uppercase;
+            margin-bottom:20px;
+        }
+
+
+        .hk-stay h2{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(3rem,6vw,5rem);
+            font-weight:500;
+            margin:0 0 25px;
+        }
+
+
+        .hk-stay p{
+            max-width:700px;
+            margin:0 auto;
+            color:#bbb7ae;
+            line-height:1.9;
+        }
+
+
+        .hk-stay-place{
+            display:inline-block;
+            margin-top:30px;
+            color:#caa96a;
+            font-size:.75rem;
+            letter-spacing:3px;
+            text-transform:uppercase;
+        }
+
+
+        /* =========================================================
+           OUTSIDE THE CITY
+        ========================================================= */
+
+        .hk-outside{
+            width:min(1180px,84%);
+            margin:0 auto;
+            padding:90px 0 120px;
+        }
+
+
+        .hk-outside-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:70px;
+            align-items:start;
+        }
+
+
+        .hk-outside h2{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(3rem,5vw,4.5rem);
+            font-weight:500;
+            line-height:.95;
+            margin:0 0 30px;
+        }
+
+
+        .hk-outside p{
+            color:#bbb7ae;
+            line-height:1.9;
+            max-width:550px;
+        }
+
+
+        .hk-islands{
+            border-left:1px solid rgba(202,169,106,.28);
+            padding-left:45px;
+        }
+
+
+        .hk-islands h3{
+            font-family:'Cormorant Garamond',serif;
+            font-size:2.4rem;
+            font-weight:500;
+            margin:0 0 15px;
+        }
+
+
+        .hk-islands p{
+            margin-bottom:35px;
+        }
+
+
+        /* =========================================================
+           THE EDIT
+        ========================================================= */
+
+        .hk-final{
+            width:min(900px,84%);
+            margin:0 auto;
+            padding:100px 0 130px;
+            text-align:center;
+        }
+
+
+        .hk-final .label{
+            color:#caa96a;
+            font-size:.72rem;
+            letter-spacing:5px;
+            text-transform:uppercase;
+            margin-bottom:22px;
+        }
+
+
+        .hk-final h2{
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(3rem,6vw,5rem);
+            font-weight:500;
+            line-height:.95;
+            margin:0 0 30px;
+        }
+
+
+        .hk-final p{
+            max-width:680px;
+            margin:0 auto;
+            color:#bbb7ae;
+            line-height:1.9;
+        }
+
+
+        .hk-back{
+            display:inline-block;
+            margin-top:40px;
+            color:#caa96a;
+            font-size:.75rem;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            text-decoration:none;
+        }
+
+
+        .hk-back:hover{
+            opacity:.7;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media(max-width:900px){
+
+            .hk-header{
+                min-height:76svh;
+                background-position:center;
+            }
+
+            .hk-header-content{
+                width:calc(100% - 60px);
+                padding-bottom:60px;
+            }
+
+            .hk-header h1{
+                font-size:4rem;
+            }
+
+            .hk-header-intro{
+                font-size:.95rem;
+                line-height:1.75;
+            }
+
+
+            .hk-intro{
+                width:calc(100% - 60px);
+                padding:80px 0 65px;
+            }
+
+            .hk-intro p{
+                font-size:1.65rem;
+            }
+
+
+            .hk-section{
+                width:calc(100% - 60px);
+                padding:55px 0;
+            }
+
+
+            .hk-rule{
+                margin-bottom:45px;
+            }
+
+
+            .hk-feature,
+            .hk-feature.reverse{
+                grid-template-columns:1fr;
+                gap:35px;
+            }
+
+
+            .hk-feature.reverse .hk-image,
+            .hk-feature.reverse .hk-copy{
+                order:initial;
+            }
+
+
+            .hk-section h2{
+                font-size:3rem;
+            }
+
+
+            .hk-observation{
+                width:calc(100% - 60px);
+                margin:20px auto 55px;
+                padding:55px 0;
+            }
+
+
+            .hk-observation p{
+                font-size:2rem;
+            }
+
+
+            .hk-food{
+                width:calc(100% - 60px);
+                padding:70px 0;
+            }
+
+
+            .hk-food-heading{
+                display:block;
+                margin-bottom:45px;
+            }
+
+
+            .hk-food-heading p{
+                margin-top:25px;
+            }
+
+
+            .hk-food-grid{
+                grid-template-columns:1fr;
+                gap:45px;
+            }
+
+
+            .hk-stay{
+                width:calc(100% - 60px);
+                padding:70px 0;
+            }
+
+
+            .hk-outside{
+                width:calc(100% - 60px);
+                padding:65px 0 80px;
+            }
+
+
+            .hk-outside-grid{
+                grid-template-columns:1fr;
+                gap:45px;
+            }
+
+
+            .hk-islands{
+                border-left:none;
+                border-top:1px solid rgba(202,169,106,.28);
+                padding-left:0;
+                padding-top:35px;
+            }
+
+
+            .hk-final{
+                width:calc(100% - 60px);
+                padding:75px 0 90px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="hk-note">
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="hk-header">
+
+    <div class="hk-header-content">
+
+        <p class="hk-kicker">
+            FROM THE JOURNAL
+        </p>
+
+        <h1>
+            Hong Kong,<br>
+            our way
+        </h1>
+
+        <p class="hk-header-intro">
+            A few days of moving around one of Asia's great cities —
+            looking down from the Peak, crossing the harbour, wandering
+            old streets, finding good places to eat and getting out of
+            the city whenever we can.
+        </p>
+
+        <p class="hk-date">
+            HONG KONG · A PERSONAL NOTE
+        </p>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="hk-intro">
+
+    <p>
+        Hong Kong is one of those places that never really feels the
+        same twice. We have been coming back for years, often for work,
+        and somehow there is always another corner to discover. For us,
+        the best way to spend a few days here is simply to keep moving —
+        from the mountains to the beach, across the harbour, through the
+        old streets and, when time allows, out beyond the city itself.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     THE PEAK
+========================================================= -->
+
+<section class="hk-section">
+
+    <div class="hk-rule"></div>
+
+    <div class="hk-feature">
+
+        <div class="hk-image">
+
+            <img
+                src="hongkong2.jpeg"
+                alt="Victoria Harbour viewed from The Peak"
+            >
+
+            <p class="hk-image-caption">
+                Victoria Harbour from above
+            </p>
+
+        </div>
+
+
+        <div class="hk-copy">
+
+            <p class="hk-number">
+                01 · LOOKING DOWN
+            </p>
+
+            <h2>
+                Start at the Peak
+            </h2>
+
+            <p>
+                There are plenty of ways to see Hong Kong, but starting
+                from the Peak gives you the full picture. Victoria Harbour
+                stretches out below, the towers seem to rise from every
+                available piece of land and suddenly the scale of the
+                city makes sense.
+            </p>
+
+            <p>
+                We never really get tired of that view. Even after all the
+                visits, standing there and looking across the harbour is
+                one of those moments that reminds you just how extraordinary
+                Hong Kong is.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     REPULSE BAY
+========================================================= -->
+
+<section class="hk-section">
+
+    <div class="hk-feature reverse">
+
+        <div class="hk-image">
+
+            <img
+                src="hongkong3.jpeg"
+                alt="Repulse Bay in Hong Kong"
+            >
+
+            <p class="hk-image-caption">
+                Repulse Bay
+            </p>
+
+        </div>
+
+
+        <div class="hk-copy">
+
+            <p class="hk-number">
+                02 · SLOWING DOWN
+            </p>
+
+            <h2>
+                Then head for the beach
+            </h2>
+
+            <p>
+                Repulse Bay is a completely different side of Hong Kong.
+                After the noise and density of Central, the open stretch
+                of sand and sea feels like a change of country rather than
+                a change of neighbourhood.
+            </p>
+
+            <p>
+                We like coming out here without too much of a plan —
+                spend some time on the beach, walk around the bay and
+                settle in for lunch. TIDES is the sort of place that makes
+                it easy to turn a quick stop into a lazy afternoon.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OBSERVATION
+========================================================= -->
+
+<section class="hk-observation">
+
+    <p>
+        The trick with Hong Kong is to
+        <span>keep changing your viewpoint.</span>
+        Above the skyline. Across the harbour.
+        Down an old street. Out towards the islands.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     STAR FERRY
+========================================================= -->
+
+<section class="hk-section">
+
+    <div class="hk-feature">
+
+        <div class="hk-image">
+
+            <img
+                src="hongkong4.jpeg"
+                alt="Hong Kong skyline from the Star Ferry"
+            >
+
+            <p class="hk-image-caption">
+                Crossing Victoria Harbour
+            </p>
+
+        </div>
+
+
+        <div class="hk-copy">
+
+            <p class="hk-number">
+                03 · CROSSING THE HARBOUR
+            </p>
+
+            <h2>
+                Take the Star Ferry
+            </h2>
+
+            <p>
+                It is one of the simplest things you can do in Hong Kong,
+                and still one of our favourites.
+            </p>
+
+            <p>
+                Jump on the Star Ferry and head across to Kowloon. Once
+                you are on the other side, turn around and look back.
+                Seeing Hong Kong Island from the water, rather than from
+                somewhere between its skyscrapers, gives you a completely
+                different perspective.
+            </p>
+
+            <p>
+                It costs very little, takes hardly any time and somehow
+                still feels like part of the experience rather than just
+                a way of getting somewhere.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SHEUNG WAN
+========================================================= -->
+
+<section class="hk-section">
+
+    <div class="hk-feature reverse">
+
+        <div class="hk-image">
+
+            <img
+                src="hongkong5.jpeg"
+                alt="Old streets and shops in Sheung Wan"
+            >
+
+            <p class="hk-image-caption">
+                Sheung Wan
+            </p>
+
+        </div>
+
+
+        <div class="hk-copy">
+
+            <p class="hk-number">
+                04 · GET LOST
+            </p>
+
+            <h2>
+                Wander Sheung Wan
+            </h2>
+
+            <p>
+                This is where we like Hong Kong at its most interesting.
+                Leave the big roads behind and start walking.
+            </p>
+
+            <p>
+                Around Sheung Wan you can spend an afternoon browsing
+                little shops and market stalls, looking at old trinkets,
+                traditional pieces and the sort of gifts you never knew
+                you were looking for.
+            </p>
+
+            <p>
+                Keep walking towards Hollywood Road and Soho and the
+                character changes again. Old Hong Kong, contemporary
+                galleries, tiny shops, fantastic bars and some very good
+                restaurants all seem to sit within a few streets of one
+                another.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHERE WE'D STAY
+========================================================= -->
+
+<section class="hk-stay">
+
+    <p class="label">
+        WHERE WE'D STAY
+    </p>
+
+    <h2>
+        The Pottinger
+    </h2>
+
+    <p>
+        If we were choosing a base for a few days of exploring, The
+        Pottinger would be hard to ignore. Its location in Central puts
+        you right in the middle of everything we enjoy about this part
+        of Hong Kong — Soho, Hollywood Road, the bars and restaurants,
+        and the streets that make wandering around here so much fun.
+    </p>
+
+    <p>
+        It is the kind of hotel where you can walk out of the door with
+        no real plan and still find yourself somewhere interesting a
+        few minutes later.
+    </p>
+
+    <span class="hk-stay-place">
+        CENTRAL · HONG KONG
+    </span>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOD
+========================================================= -->
+
+<section class="hk-food">
+
+    <div class="hk-food-heading">
+
+        <div>
+
+            <p class="label">
+                AROUND THE TABLE
+            </p>
+
+            <h2>
+                Eat your way<br>
+                around Central
+            </h2>
+
+        </div>
+
+        <p>
+            Hong Kong is a city where we rarely need much convincing
+            to go out for dinner. These are three places that have
+            stayed on our list.
+        </p>
+
+    </div>
+
+
+    <div class="hk-food-grid">
+
+
+        <article class="hk-food-card">
+
+            <p class="type">
+                New York · Italian
+            </p>
+
+            <h3>
+                Carbone
+            </h3>
+
+            <p>
+                For when the evening calls for something a little more
+                glamorous. Carbone brings the old-school New York
+                restaurant feeling to Wyndham Street, and it is one of
+                those dinners that feels like an occasion.
+            </p>
+
+        </article>
+
+
+        <article class="hk-food-card">
+
+            <p class="type">
+                French · Bistro
+            </p>
+
+            <h3>
+                Jean-Pierre
+            </h3>
+
+            <p>
+                A smaller, more relaxed option when what you want is
+                good French food without making the whole evening feel
+                like an event. Exactly the sort of place we like finding
+                when we are back in Central.
+            </p>
+
+        </article>
+
+
+        <article class="hk-food-card">
+
+            <p class="type">
+                Thai · Casual
+            </p>
+
+            <h3>
+                Samsen
+            </h3>
+
+            <p>
+                And then there is Samsen — the more casual choice.
+                Great Thai food, relaxed surroundings and the sort of
+                place you can happily drop into after a day of walking
+                around the city.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUTSIDE THE CITY
+========================================================= -->
+
+<section class="hk-outside">
+
+    <div class="hk-rule"></div>
+
+
+    <div class="hk-outside-grid">
+
+        <div>
+
+            <p class="hk-number">
+                05 · GET OUT
+            </p>
+
+            <h2>
+                Leave the<br>
+                skyscrapers behind
+            </h2>
+
+            <p>
+                One of the things we like most about Hong Kong is how
+                quickly the city disappears. Give yourself a little time
+                and you can be walking a trail, looking across the sea
+                or sitting somewhere that feels a world away from
+                Central.
+            </p>
+
+            <p>
+                If you enjoy hiking, there are plenty of routes to choose
+                from. It is worth building at least half a day into a
+                visit simply to see this side of Hong Kong.
+            </p>
+
+        </div>
+
+
+        <div class="hk-islands">
+
+            <h3>
+                Lamma Island
+            </h3>
+
+            <p>
+                An easy escape from the city, with walking trails,
+                coastal views and the chance to slow the pace down for
+                a few hours. The seafood around Sok Kwu Wan is another
+                good reason to make the trip.
+            </p>
+
+
+            <h3>
+                Lantau
+            </h3>
+
+            <p>
+                For something a little more adventurous, head out
+                towards Lantau. The island opens up another side of
+                Hong Kong — mountains, beaches, hiking trails and a
+                much quieter landscape than the city centre.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL EDIT
+========================================================= -->
+
+<section class="hk-final">
+
+    <p class="label">
+        THE HONG KONG EDIT
+    </p>
+
+    <h2>
+        See it from above.<br>
+        See it from the water.
+    </h2>
+
+    <p>
+        Walk the old streets. Eat somewhere memorable. Spend an
+        afternoon at the beach. Then get out of the city for a day.
+        That is probably our favourite way to do Hong Kong — not trying
+        to tick everything off, but moving around enough to keep
+        discovering another version of it.
+    </p>
+
+    <a
+        href="hongkong.html"
+        class="hk-back"
+    >
+        ← Back to Hong Kong Edition
+    </a>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <h3>
+        THE EXPAT EDITS
+    </h3>
+
+    <p>
+        Photography • Travel • Hotels • Restaurants • Experiences
+    </p>
+
+    <p class="copyright">
+        © 2026 The Expat Edits. All rights reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

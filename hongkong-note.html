@@ -3,653 +3,1172 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Hong Kong, Our Way | The Expat Edits</title>
-
-    <meta
-        name="description"
-        content="A few days in Hong Kong — the Peak, Repulse Bay, the Star Ferry, Sheung Wan, Soho, great restaurants and getting out of the city."
-    >
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CURRENT SITE MASTER -->
-    <link rel="stylesheet" href="style-new.css">
-
-
-    <style>
-
-        /* =========================================================
-           HONG KONG JOURNAL NOTE
-           A deliberately different editorial treatment from
-           the main Editions.
-        ========================================================= */
-
-
-        .hk-note{
-            background:#0b0b0b;
-            color:#f5f2ea;
-            overflow:hidden;
-        }
-
-
-        /* =========================================================
-           HEADER
-        ========================================================= */
-
-        .hk-header{
-            position:relative;
-            min-height:78vh;
-            display:flex;
-            align-items:flex-end;
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(0,0,0,.88) 0%,
-                    rgba(0,0,0,.30) 55%,
-                    rgba(0,0,0,.15) 100%
-                ),
-                url('hongkong1.jpeg')
-                center center / cover no-repeat;
-        }
-
-
-        .hk-header-content{
-            width:min(1180px, 84%);
-            margin:0 auto;
-            padding:0 0 90px;
-        }
-
-
-        .hk-kicker{
-            color:#caa96a;
-            font-size:.76rem;
-            letter-spacing:5px;
-            text-transform:uppercase;
-            margin-bottom:20px;
-        }
-
-
-        .hk-header h1{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(4rem,8vw,7rem);
-            font-weight:500;
-            line-height:.88;
-            margin:0 0 25px;
-            max-width:800px;
-        }
-
-
-        .hk-header-intro{
-            max-width:610px;
-            font-size:1.08rem;
-            line-height:1.85;
-            color:#e3e0d8;
-            margin:0;
-        }
-
+<meta charset="UTF-8">
 
-        .hk-date{
-            margin-top:28px;
-            color:#aaa59b;
-            font-size:.75rem;
-            letter-spacing:3px;
-            text-transform:uppercase;
-        }
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
+<title>Hong Kong, Our Way | The Expat Edits</title>
 
-        /* =========================================================
-           INTRO
-        ========================================================= */
+<meta
+    name="description"
+    content="Hong Kong, our way — a personal journal note from The Expat Edits."
+>
 
-        .hk-intro{
-            width:min(900px, 84%);
-            margin:0 auto;
-            padding:120px 0 100px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
 
-        .hk-intro p{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(1.65rem,3vw,2.35rem);
-            line-height:1.42;
-            color:#eeeae1;
-            margin:0;
-        }
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
 
 
-        .hk-intro p:first-letter{
-            font-size:1.8em;
-            float:left;
-            line-height:.78;
-            padding-right:8px;
-            color:#caa96a;
-        }
+<style>
 
+/* =========================================================
+   THE EXPAT EDITS
+   HONG KONG JOURNAL NOTE
+   SELF-CONTAINED PAGE
+========================================================= */
 
-        /* =========================================================
-           NOTE SECTIONS
-        ========================================================= */
 
-        .hk-section{
-            width:min(1180px, 84%);
-            margin:0 auto;
-            padding:80px 0;
-        }
+/* =========================
+   RESET
+========================= */
 
+html,
+body{
+    margin:0 !important;
+    padding:0 !important;
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+    height:auto !important;
+}
 
-        .hk-rule{
-            width:100%;
-            height:1px;
-            background:rgba(202,169,106,.25);
-            margin-bottom:65px;
-        }
+*{
+    box-sizing:border-box;
+}
 
+body{
+    background:#090909 !important;
+    color:#f3efe7;
+    font-family:'Inter',sans-serif;
+    line-height:1.8;
+}
 
-        .hk-number{
-            color:#caa96a;
-            font-size:.72rem;
-            letter-spacing:4px;
-            margin-bottom:15px;
-        }
+img{
+    display:block;
+    max-width:100%;
+}
 
+a{
+    text-decoration:none;
+}
 
-        .hk-section h2{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(2.7rem,5vw,4.5rem);
-            font-weight:500;
-            line-height:.98;
-            margin:0 0 25px;
-            max-width:720px;
-        }
 
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
 
-        .hk-section p{
-            color:#c8c5bd;
-            font-size:1rem;
-            line-height:1.9;
-            max-width:650px;
-        }
+.hk-page{
+    width:100%;
+    min-height:100vh;
+    background:#090909;
+}
 
 
-        /* =========================================================
-           IMAGE + TEXT
-        ========================================================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
-        .hk-feature{
-            display:grid;
-            grid-template-columns:1.35fr .85fr;
-            gap:70px;
-            align-items:center;
-        }
+.hk-hero{
 
+    position:relative;
 
-        .hk-feature.reverse{
-            grid-template-columns:.85fr 1.35fr;
-        }
+    min-height:88svh;
 
+    display:flex;
+    align-items:flex-end;
 
-        .hk-feature.reverse .hk-image{
-            order:2;
-        }
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.92) 0%,
+            rgba(0,0,0,.48) 48%,
+            rgba(0,0,0,.18) 100%
+        ),
+        url('hongkong1.jpeg');
 
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-        .hk-feature.reverse .hk-copy{
-            order:1;
-        }
+}
 
 
-        .hk-image img{
-            width:100%;
-            height:auto;
-            display:block;
-        }
+.hk-hero-inner{
 
+    width:min(1180px,84%);
 
-        .hk-image-caption{
-            margin-top:14px;
-            color:#77736c;
-            font-size:.7rem;
-            letter-spacing:2px;
-            text-transform:uppercase;
-        }
+    margin:0 auto;
 
+    padding:0 0 90px;
 
-        /* =========================================================
-           LARGE QUOTE / OBSERVATION
-        ========================================================= */
+}
 
-        .hk-observation{
-            width:min(1000px, 84%);
-            margin:40px auto 90px;
-            padding:70px 0;
-            border-top:1px solid rgba(202,169,106,.22);
-            border-bottom:1px solid rgba(202,169,106,.22);
-        }
 
+.hk-eyebrow{
 
-        .hk-observation p{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(2rem,4vw,3.2rem);
-            line-height:1.25;
-            text-align:center;
-            color:#eeeae1;
-            margin:0 auto;
-            max-width:850px;
-        }
+    margin:0 0 22px;
 
+    color:#caa96a;
 
-        .hk-observation span{
-            color:#caa96a;
-        }
+    font-size:.76rem;
 
+    letter-spacing:6px;
 
-        /* =========================================================
-           RESTAURANTS
-        ========================================================= */
+    text-transform:uppercase;
 
-        .hk-food{
-            width:min(1180px,84%);
-            margin:0 auto;
-            padding:100px 0;
-        }
+}
 
 
-        .hk-food-heading{
-            display:flex;
-            justify-content:space-between;
-            align-items:flex-end;
-            gap:40px;
-            margin-bottom:60px;
-        }
+.hk-hero h1{
 
+    margin:0 0 30px;
 
-        .hk-food-heading .label{
-            color:#caa96a;
-            text-transform:uppercase;
-            letter-spacing:5px;
-            font-size:.75rem;
-            margin-bottom:14px;
-        }
+    max-width:900px;
 
+    font-family:'Cormorant Garamond',serif;
 
-        .hk-food-heading h2{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(3rem,5vw,4.5rem);
-            font-weight:500;
-            line-height:.95;
-            margin:0;
-        }
+    font-size:clamp(4.5rem,9vw,8rem);
 
+    font-weight:500;
 
-        .hk-food-heading p{
-            max-width:390px;
-            color:#aaa69d;
-            line-height:1.8;
-            margin:0;
-        }
+    line-height:.86;
 
+    letter-spacing:-2px;
 
-        .hk-food-grid{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:25px;
-        }
+}
 
 
-        .hk-food-card{
-            border-top:1px solid rgba(202,169,106,.28);
-            padding-top:25px;
-        }
+.hk-hero-intro{
 
+    max-width:680px;
 
-        .hk-food-card h3{
-            font-family:'Cormorant Garamond',serif;
-            font-size:2.3rem;
-            font-weight:500;
-            margin:0 0 12px;
-        }
+    margin:0;
 
+    color:#e2ded6;
 
-        .hk-food-card .type{
-            color:#caa96a;
-            font-size:.7rem;
-            letter-spacing:3px;
-            text-transform:uppercase;
-            margin-bottom:18px;
-        }
+    font-size:1.08rem;
 
+    line-height:1.85;
 
-        .hk-food-card p{
-            color:#aaa69d;
-            font-size:.92rem;
-            line-height:1.8;
-            margin:0;
-        }
+}
 
 
-        /* =========================================================
-           STAY
-        ========================================================= */
+.hk-hero-meta{
 
-        .hk-stay{
-            width:min(1000px,84%);
-            margin:0 auto;
-            padding:100px 0;
-            text-align:center;
-        }
+    margin:30px 0 0;
 
+    color:#aaa59c;
 
-        .hk-stay .label{
-            color:#caa96a;
-            font-size:.72rem;
-            letter-spacing:5px;
-            text-transform:uppercase;
-            margin-bottom:20px;
-        }
+    font-size:.72rem;
 
+    letter-spacing:4px;
 
-        .hk-stay h2{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(3rem,6vw,5rem);
-            font-weight:500;
-            margin:0 0 25px;
-        }
+    text-transform:uppercase;
 
+}
 
-        .hk-stay p{
-            max-width:700px;
-            margin:0 auto;
-            color:#bbb7ae;
-            line-height:1.9;
-        }
 
+/* =========================================================
+   INTRODUCTION
+========================================================= */
 
-        .hk-stay-place{
-            display:inline-block;
-            margin-top:30px;
-            color:#caa96a;
-            font-size:.75rem;
-            letter-spacing:3px;
-            text-transform:uppercase;
-        }
+.hk-introduction{
 
+    width:min(900px,84%);
 
-        /* =========================================================
-           OUTSIDE THE CITY
-        ========================================================= */
+    margin:0 auto;
 
-        .hk-outside{
-            width:min(1180px,84%);
-            margin:0 auto;
-            padding:90px 0 120px;
-        }
+    padding:125px 0 105px;
 
+}
 
-        .hk-outside-grid{
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:70px;
-            align-items:start;
-        }
 
+.hk-introduction p{
 
-        .hk-outside h2{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(3rem,5vw,4.5rem);
-            font-weight:500;
-            line-height:.95;
-            margin:0 0 30px;
-        }
+    margin:0;
 
+    font-family:'Cormorant Garamond',serif;
 
-        .hk-outside p{
-            color:#bbb7ae;
-            line-height:1.9;
-            max-width:550px;
-        }
+    font-size:clamp(1.75rem,3.2vw,2.5rem);
 
+    line-height:1.4;
 
-        .hk-islands{
-            border-left:1px solid rgba(202,169,106,.28);
-            padding-left:45px;
-        }
+    color:#eee9df;
 
+}
 
-        .hk-islands h3{
-            font-family:'Cormorant Garamond',serif;
-            font-size:2.4rem;
-            font-weight:500;
-            margin:0 0 15px;
-        }
 
+.hk-dropcap{
 
-        .hk-islands p{
-            margin-bottom:35px;
-        }
+    float:left;
 
+    margin-right:8px;
 
-        /* =========================================================
-           THE EDIT
-        ========================================================= */
+    color:#caa96a;
 
-        .hk-final{
-            width:min(900px,84%);
-            margin:0 auto;
-            padding:100px 0 130px;
-            text-align:center;
-        }
+    font-size:1.9em;
 
+    line-height:.75;
 
-        .hk-final .label{
-            color:#caa96a;
-            font-size:.72rem;
-            letter-spacing:5px;
-            text-transform:uppercase;
-            margin-bottom:22px;
-        }
+}
 
 
-        .hk-final h2{
-            font-family:'Cormorant Garamond',serif;
-            font-size:clamp(3rem,6vw,5rem);
-            font-weight:500;
-            line-height:.95;
-            margin:0 0 30px;
-        }
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
 
+.hk-section{
 
-        .hk-final p{
-            max-width:680px;
-            margin:0 auto;
-            color:#bbb7ae;
-            line-height:1.9;
-        }
+    width:min(1180px,84%);
 
+    margin:0 auto;
 
-        .hk-back{
-            display:inline-block;
-            margin-top:40px;
-            color:#caa96a;
-            font-size:.75rem;
-            letter-spacing:3px;
-            text-transform:uppercase;
-            text-decoration:none;
-        }
+    padding:80px 0;
 
+}
 
-        .hk-back:hover{
-            opacity:.7;
-        }
 
+.hk-line{
 
-        /* =========================================================
-           MOBILE
-        ========================================================= */
+    width:100%;
 
-        @media(max-width:900px){
+    height:1px;
 
-            .hk-header{
-                min-height:76svh;
-                background-position:center;
-            }
+    margin-bottom:65px;
 
-            .hk-header-content{
-                width:calc(100% - 60px);
-                padding-bottom:60px;
-            }
+    background:rgba(202,169,106,.24);
 
-            .hk-header h1{
-                font-size:4rem;
-            }
+}
 
-            .hk-header-intro{
-                font-size:.95rem;
-                line-height:1.75;
-            }
 
+.hk-index{
 
-            .hk-intro{
-                width:calc(100% - 60px);
-                padding:80px 0 65px;
-            }
+    margin:0 0 15px;
 
-            .hk-intro p{
-                font-size:1.65rem;
-            }
+    color:#caa96a;
 
+    font-size:.7rem;
 
-            .hk-section{
-                width:calc(100% - 60px);
-                padding:55px 0;
-            }
+    letter-spacing:4px;
 
+    text-transform:uppercase;
 
-            .hk-rule{
-                margin-bottom:45px;
-            }
+}
 
 
-            .hk-feature,
-            .hk-feature.reverse{
-                grid-template-columns:1fr;
-                gap:35px;
-            }
+.hk-copy h2{
 
+    margin:0 0 28px;
 
-            .hk-feature.reverse .hk-image,
-            .hk-feature.reverse .hk-copy{
-                order:initial;
-            }
+    max-width:650px;
 
+    font-family:'Cormorant Garamond',serif;
 
-            .hk-section h2{
-                font-size:3rem;
-            }
+    font-size:clamp(3rem,5vw,4.7rem);
 
+    font-weight:500;
 
-            .hk-observation{
-                width:calc(100% - 60px);
-                margin:20px auto 55px;
-                padding:55px 0;
-            }
+    line-height:.95;
 
+}
 
-            .hk-observation p{
-                font-size:2rem;
-            }
 
+.hk-copy p{
 
-            .hk-food{
-                width:calc(100% - 60px);
-                padding:70px 0;
-            }
+    max-width:620px;
 
+    margin:0 0 22px;
 
-            .hk-food-heading{
-                display:block;
-                margin-bottom:45px;
-            }
+    color:#bdb9b0;
 
+    font-size:1rem;
 
-            .hk-food-heading p{
-                margin-top:25px;
-            }
+    line-height:1.9;
 
+}
 
-            .hk-food-grid{
-                grid-template-columns:1fr;
-                gap:45px;
-            }
 
+/* =========================================================
+   IMAGE / TEXT FEATURE
+========================================================= */
 
-            .hk-stay{
-                width:calc(100% - 60px);
-                padding:70px 0;
-            }
+.hk-feature{
 
+    display:grid;
 
-            .hk-outside{
-                width:calc(100% - 60px);
-                padding:65px 0 80px;
-            }
+    grid-template-columns:1.35fr .85fr;
 
+    gap:75px;
 
-            .hk-outside-grid{
-                grid-template-columns:1fr;
-                gap:45px;
-            }
+    align-items:center;
 
+}
 
-            .hk-islands{
-                border-left:none;
-                border-top:1px solid rgba(202,169,106,.28);
-                padding-left:0;
-                padding-top:35px;
-            }
 
+.hk-feature.reverse{
 
-            .hk-final{
-                width:calc(100% - 60px);
-                padding:75px 0 90px;
-            }
+    grid-template-columns:.85fr 1.35fr;
 
-        }
+}
 
-    </style>
+
+.hk-feature.reverse .hk-photo{
+
+    order:2;
+
+}
+
+
+.hk-feature.reverse .hk-copy{
+
+    order:1;
+
+}
+
+
+.hk-photo img{
+
+    width:100%;
+
+    height:auto;
+
+}
+
+
+.hk-caption{
+
+    margin:14px 0 0;
+
+    color:#716d66;
+
+    font-size:.68rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =========================================================
+   BIG OBSERVATION
+========================================================= */
+
+.hk-observation{
+
+    width:min(1000px,84%);
+
+    margin:45px auto 95px;
+
+    padding:70px 0;
+
+    border-top:1px solid rgba(202,169,106,.23);
+
+    border-bottom:1px solid rgba(202,169,106,.23);
+
+}
+
+
+.hk-observation p{
+
+    max-width:880px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(2rem,4vw,3.3rem);
+
+    line-height:1.25;
+
+    color:#eee9df;
+
+}
+
+
+.hk-observation span{
+
+    color:#caa96a;
+
+}
+
+
+/* =========================================================
+   FOOD
+========================================================= */
+
+.hk-food{
+
+    width:min(1180px,84%);
+
+    margin:0 auto;
+
+    padding:105px 0;
+
+}
+
+
+.hk-food-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:60px;
+
+    margin-bottom:65px;
+
+}
+
+
+.hk-food-label{
+
+    margin:0 0 15px;
+
+    color:#caa96a;
+
+    font-size:.72rem;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+
+.hk-food-header h2{
+
+    margin:0;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(3rem,5vw,4.7rem);
+
+    font-weight:500;
+
+    line-height:.95;
+
+}
+
+
+.hk-food-intro{
+
+    max-width:390px;
+
+    margin:0;
+
+    color:#aaa69e;
+
+    line-height:1.85;
+
+}
+
+
+.hk-food-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+.hk-food-card{
+
+    padding-top:27px;
+
+    border-top:1px solid rgba(202,169,106,.28);
+
+}
+
+
+.hk-food-type{
+
+    margin:0 0 15px;
+
+    color:#caa96a;
+
+    font-size:.68rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+.hk-food-card h3{
+
+    margin:0 0 16px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.4rem;
+
+    font-weight:500;
+
+}
+
+
+.hk-food-card p{
+
+    margin:0;
+
+    color:#aaa69e;
+
+    font-size:.92rem;
+
+    line-height:1.85;
+
+}
+
+
+/* =========================================================
+   STAY
+========================================================= */
+
+.hk-stay{
+
+    width:min(900px,84%);
+
+    margin:0 auto;
+
+    padding:100px 0;
+
+    text-align:center;
+
+}
+
+
+.hk-stay-label{
+
+    margin:0 0 20px;
+
+    color:#caa96a;
+
+    font-size:.72rem;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+
+.hk-stay h2{
+
+    margin:0 0 28px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(3.5rem,6vw,5.5rem);
+
+    font-weight:500;
+
+    line-height:.9;
+
+}
+
+
+.hk-stay p{
+
+    max-width:700px;
+
+    margin:0 auto 20px;
+
+    color:#b9b5ad;
+
+    line-height:1.9;
+
+}
+
+
+.hk-stay-location{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#caa96a;
+
+    font-size:.7rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =========================================================
+   GET OUT OF THE CITY
+========================================================= */
+
+.hk-outside{
+
+    width:min(1180px,84%);
+
+    margin:0 auto;
+
+    padding:80px 0 120px;
+
+}
+
+
+.hk-outside-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+}
+
+
+.hk-outside h2{
+
+    margin:0 0 28px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(3rem,5vw,4.7rem);
+
+    font-weight:500;
+
+    line-height:.95;
+
+}
+
+
+.hk-outside p{
+
+    max-width:560px;
+
+    margin:0 0 25px;
+
+    color:#b9b5ad;
+
+    line-height:1.9;
+
+}
+
+
+.hk-islands{
+
+    padding-left:50px;
+
+    border-left:1px solid rgba(202,169,106,.25);
+
+}
+
+
+.hk-island{
+
+    margin-bottom:50px;
+
+}
+
+
+.hk-island:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+.hk-island h3{
+
+    margin:0 0 12px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.5rem;
+
+    font-weight:500;
+
+}
+
+
+.hk-island p{
+
+    margin:0;
+
+}
+
+
+/* =========================================================
+   FINAL EDIT
+========================================================= */
+
+.hk-final{
+
+    width:min(900px,84%);
+
+    margin:0 auto;
+
+    padding:105px 0 130px;
+
+    text-align:center;
+
+}
+
+
+.hk-final-label{
+
+    margin:0 0 22px;
+
+    color:#caa96a;
+
+    font-size:.72rem;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+
+.hk-final h2{
+
+    margin:0 0 30px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(3.2rem,6vw,5.5rem);
+
+    font-weight:500;
+
+    line-height:.92;
+
+}
+
+
+.hk-final p{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color:#b9b5ad;
+
+    line-height:1.9;
+
+}
+
+
+.hk-back{
+
+    display:inline-block;
+
+    margin-top:42px;
+
+    color:#caa96a;
+
+    font-size:.7rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+.hk-back:hover{
+
+    opacity:.7;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.hk-footer{
+
+    width:100%;
+
+    padding:75px 30px 40px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(202,169,106,.25);
+
+    background:#090909;
+
+}
+
+
+.hk-footer h3{
+
+    margin:0 0 15px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    letter-spacing:4px;
+
+}
+
+
+.hk-footer p{
+
+    margin:0;
+
+    color:#85817a;
+
+    font-size:.8rem;
+
+}
+
+
+.hk-footer .copyright{
+
+    margin-top:30px;
+
+    font-size:.68rem;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .hk-hero{
+
+        min-height:82svh;
+
+        background-position:center center;
+
+    }
+
+
+    .hk-hero-inner{
+
+        width:calc(100% - 60px);
+
+        padding-bottom:60px;
+
+    }
+
+
+    .hk-eyebrow{
+
+        font-size:.68rem;
+
+        letter-spacing:4px;
+
+    }
+
+
+    .hk-hero h1{
+
+        font-size:4.2rem;
+
+        line-height:.88;
+
+        letter-spacing:-1px;
+
+    }
+
+
+    .hk-hero-intro{
+
+        font-size:.95rem;
+
+        line-height:1.75;
+
+    }
+
+
+    .hk-hero-meta{
+
+        font-size:.65rem;
+
+        letter-spacing:3px;
+
+    }
+
+
+    .hk-introduction{
+
+        width:calc(100% - 60px);
+
+        padding:80px 0 65px;
+
+    }
+
+
+    .hk-introduction p{
+
+        font-size:1.7rem;
+
+        line-height:1.42;
+
+    }
+
+
+    .hk-section{
+
+        width:calc(100% - 60px);
+
+        padding:55px 0;
+
+    }
+
+
+    .hk-line{
+
+        margin-bottom:45px;
+
+    }
+
+
+    .hk-feature,
+    .hk-feature.reverse{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:35px;
+
+    }
+
+
+    .hk-feature.reverse .hk-photo,
+    .hk-feature.reverse .hk-copy{
+
+        order:initial;
+
+    }
+
+
+    .hk-copy h2{
+
+        font-size:3rem;
+
+    }
+
+
+    .hk-observation{
+
+        width:calc(100% - 60px);
+
+        margin:25px auto 60px;
+
+        padding:55px 0;
+
+    }
+
+
+    .hk-observation p{
+
+        font-size:2rem;
+
+    }
+
+
+    .hk-food{
+
+        width:calc(100% - 60px);
+
+        padding:70px 0;
+
+    }
+
+
+    .hk-food-header{
+
+        display:block;
+
+        margin-bottom:50px;
+
+    }
+
+
+    .hk-food-intro{
+
+        margin-top:25px;
+
+    }
+
+
+    .hk-food-grid{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+
+    .hk-stay{
+
+        width:calc(100% - 60px);
+
+        padding:75px 0;
+
+    }
+
+
+    .hk-stay h2{
+
+        font-size:4rem;
+
+    }
+
+
+    .hk-outside{
+
+        width:calc(100% - 60px);
+
+        padding:60px 0 80px;
+
+    }
+
+
+    .hk-outside-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+
+    .hk-islands{
+
+        padding-left:0;
+
+        padding-top:40px;
+
+        border-left:0;
+
+        border-top:1px solid rgba(202,169,106,.25);
+
+    }
+
+
+    .hk-final{
+
+        width:calc(100% - 60px);
+
+        padding:75px 0 90px;
+
+    }
+
+
+    .hk-final h2{
+
+        font-size:3.8rem;
+
+    }
+
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:480px){
+
+    .hk-hero h1{
+
+        font-size:3.7rem;
+
+    }
+
+
+    .hk-hero-intro{
+
+        font-size:.9rem;
+
+    }
+
+
+    .hk-introduction p{
+
+        font-size:1.55rem;
+
+    }
+
+
+    .hk-copy h2{
+
+        font-size:2.7rem;
+
+    }
+
+
+    .hk-final h2{
+
+        font-size:3.3rem;
+
+    }
+
+}
+
+</style>
 
 </head>
 
 
-<body class="hk-note">
+<body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<div class="hk-page">
 
-<header class="hk-header">
 
-    <div class="hk-header-content">
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-        <p class="hk-kicker">
+<header class="hk-hero">
+
+    <div class="hk-hero-inner">
+
+        <p class="hk-eyebrow">
             FROM THE JOURNAL
         </p>
 
@@ -658,14 +1177,14 @@
             our way
         </h1>
 
-        <p class="hk-header-intro">
+        <p class="hk-hero-intro">
             A few days of moving around one of Asia's great cities —
             looking down from the Peak, crossing the harbour, wandering
             old streets, finding good places to eat and getting out of
             the city whenever we can.
         </p>
 
-        <p class="hk-date">
+        <p class="hk-hero-meta">
             HONG KONG · A PERSONAL NOTE
         </p>
 
@@ -677,43 +1196,43 @@
 <main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      INTRO
-========================================================= -->
+===================================================== -->
 
-<section class="hk-intro">
+<section class="hk-introduction">
 
     <p>
-        Hong Kong is one of those places that never really feels the
-        same twice. We have been coming back for years, often for work,
-        and somehow there is always another corner to discover. For us,
-        the best way to spend a few days here is simply to keep moving —
-        from the mountains to the beach, across the harbour, through the
-        old streets and, when time allows, out beyond the city itself.
+        <span class="hk-dropcap">H</span>ong Kong is one of those
+        places that never really feels the same twice. We have been
+        coming back for years, often for work, and somehow there is
+        always another corner to discover. For us, the best way to
+        spend a few days here is simply to keep moving — from the
+        mountains to the beach, across the harbour, through the old
+        streets and, when time allows, out beyond the city itself.
     </p>
 
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      THE PEAK
-========================================================= -->
+===================================================== -->
 
 <section class="hk-section">
 
-    <div class="hk-rule"></div>
+    <div class="hk-line"></div>
 
     <div class="hk-feature">
 
-        <div class="hk-image">
+        <div class="hk-photo">
 
             <img
                 src="hongkong2.jpeg"
-                alt="Victoria Harbour viewed from The Peak"
+                alt="Victoria Harbour from The Peak"
             >
 
-            <p class="hk-image-caption">
+            <p class="hk-caption">
                 Victoria Harbour from above
             </p>
 
@@ -722,7 +1241,7 @@
 
         <div class="hk-copy">
 
-            <p class="hk-number">
+            <p class="hk-index">
                 01 · LOOKING DOWN
             </p>
 
@@ -732,17 +1251,17 @@
 
             <p>
                 There are plenty of ways to see Hong Kong, but starting
-                from the Peak gives you the full picture. Victoria Harbour
-                stretches out below, the towers seem to rise from every
-                available piece of land and suddenly the scale of the
-                city makes sense.
+                from the Peak gives you the full picture. Victoria
+                Harbour stretches out below, the towers seem to rise
+                from every available piece of land and suddenly the
+                scale of the city makes sense.
             </p>
 
             <p>
-                We never really get tired of that view. Even after all the
-                visits, standing there and looking across the harbour is
-                one of those moments that reminds you just how extraordinary
-                Hong Kong is.
+                We never really get tired of that view. Even after all
+                the visits, standing there and looking across the
+                harbour is one of those moments that reminds you just
+                how extraordinary Hong Kong is.
             </p>
 
         </div>
@@ -752,23 +1271,22 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      REPULSE BAY
-========================================================= -->
+===================================================== -->
 
 <section class="hk-section">
 
     <div class="hk-feature reverse">
 
-        <div class="hk-image">
+        <div class="hk-photo">
 
             <img
                 src="hongkong3.jpeg"
-                alt="Repulse Bay in Hong Kong"
+                alt="Repulse Bay"
             >
 
-            <p class="hk-image-caption">
+            <p class="hk-caption">
                 Repulse Bay
             </p>
 
@@ -777,7 +1295,7 @@
 
         <div class="hk-copy">
 
-            <p class="hk-number">
+            <p class="hk-index">
                 02 · SLOWING DOWN
             </p>
 
@@ -788,15 +1306,15 @@
             <p>
                 Repulse Bay is a completely different side of Hong Kong.
                 After the noise and density of Central, the open stretch
-                of sand and sea feels like a change of country rather than
-                a change of neighbourhood.
+                of sand and sea feels like a change of country rather
+                than a change of neighbourhood.
             </p>
 
             <p>
                 We like coming out here without too much of a plan —
                 spend some time on the beach, walk around the bay and
-                settle in for lunch. TIDES is the sort of place that makes
-                it easy to turn a quick stop into a lazy afternoon.
+                settle in for lunch. TIDES is the sort of place that
+                makes it easy to turn a quick stop into a lazy afternoon.
             </p>
 
         </div>
@@ -806,10 +1324,9 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      OBSERVATION
-========================================================= -->
+===================================================== -->
 
 <section class="hk-observation">
 
@@ -823,23 +1340,22 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      STAR FERRY
-========================================================= -->
+===================================================== -->
 
 <section class="hk-section">
 
     <div class="hk-feature">
 
-        <div class="hk-image">
+        <div class="hk-photo">
 
             <img
                 src="hongkong4.jpeg"
                 alt="Hong Kong skyline from the Star Ferry"
             >
 
-            <p class="hk-image-caption">
+            <p class="hk-caption">
                 Crossing Victoria Harbour
             </p>
 
@@ -848,7 +1364,7 @@
 
         <div class="hk-copy">
 
-            <p class="hk-number">
+            <p class="hk-index">
                 03 · CROSSING THE HARBOUR
             </p>
 
@@ -882,23 +1398,22 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      SHEUNG WAN
-========================================================= -->
+===================================================== -->
 
 <section class="hk-section">
 
     <div class="hk-feature reverse">
 
-        <div class="hk-image">
+        <div class="hk-photo">
 
             <img
                 src="hongkong5.jpeg"
-                alt="Old streets and shops in Sheung Wan"
+                alt="Sheung Wan streets and shops"
             >
 
-            <p class="hk-image-caption">
+            <p class="hk-caption">
                 Sheung Wan
             </p>
 
@@ -907,7 +1422,7 @@
 
         <div class="hk-copy">
 
-            <p class="hk-number">
+            <p class="hk-index">
                 04 · GET LOST
             </p>
 
@@ -942,14 +1457,13 @@
 </section>
 
 
-
-<!-- =========================================================
-     WHERE WE'D STAY
-========================================================= -->
+<!-- =====================================================
+     STAY
+===================================================== -->
 
 <section class="hk-stay">
 
-    <p class="label">
+    <p class="hk-stay-label">
         WHERE WE'D STAY
     </p>
 
@@ -971,25 +1485,24 @@
         few minutes later.
     </p>
 
-    <span class="hk-stay-place">
+    <span class="hk-stay-location">
         CENTRAL · HONG KONG
     </span>
 
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      FOOD
-========================================================= -->
+===================================================== -->
 
 <section class="hk-food">
 
-    <div class="hk-food-heading">
+    <div class="hk-food-header">
 
         <div>
 
-            <p class="label">
+            <p class="hk-food-label">
                 AROUND THE TABLE
             </p>
 
@@ -1000,7 +1513,7 @@
 
         </div>
 
-        <p>
+        <p class="hk-food-intro">
             Hong Kong is a city where we rarely need much convincing
             to go out for dinner. These are three places that have
             stayed on our list.
@@ -1014,7 +1527,7 @@
 
         <article class="hk-food-card">
 
-            <p class="type">
+            <p class="hk-food-type">
                 New York · Italian
             </p>
 
@@ -1034,7 +1547,7 @@
 
         <article class="hk-food-card">
 
-            <p class="type">
+            <p class="hk-food-type">
                 French · Bistro
             </p>
 
@@ -1054,7 +1567,7 @@
 
         <article class="hk-food-card">
 
-            <p class="type">
+            <p class="hk-food-type">
                 Thai · Casual
             </p>
 
@@ -1077,21 +1590,20 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      OUTSIDE THE CITY
-========================================================= -->
+===================================================== -->
 
 <section class="hk-outside">
 
-    <div class="hk-rule"></div>
+    <div class="hk-line"></div>
 
 
     <div class="hk-outside-grid">
 
         <div>
 
-            <p class="hk-number">
+            <p class="hk-index">
                 05 · GET OUT
             </p>
 
@@ -1109,9 +1621,9 @@
             </p>
 
             <p>
-                If you enjoy hiking, there are plenty of routes to choose
-                from. It is worth building at least half a day into a
-                visit simply to see this side of Hong Kong.
+                If you enjoy hiking, there are plenty of routes to
+                choose from. It is worth building at least half a day
+                into a visit simply to see this side of Hong Kong.
             </p>
 
         </div>
@@ -1119,28 +1631,38 @@
 
         <div class="hk-islands">
 
-            <h3>
-                Lamma Island
-            </h3>
 
-            <p>
-                An easy escape from the city, with walking trails,
-                coastal views and the chance to slow the pace down for
-                a few hours. The seafood around Sok Kwu Wan is another
-                good reason to make the trip.
-            </p>
+            <div class="hk-island">
+
+                <h3>
+                    Lamma Island
+                </h3>
+
+                <p>
+                    An easy escape from the city, with walking trails,
+                    coastal views and the chance to slow the pace down
+                    for a few hours. The seafood around Sok Kwu Wan is
+                    another good reason to make the trip.
+                </p>
+
+            </div>
 
 
-            <h3>
-                Lantau
-            </h3>
+            <div class="hk-island">
 
-            <p>
-                For something a little more adventurous, head out
-                towards Lantau. The island opens up another side of
-                Hong Kong — mountains, beaches, hiking trails and a
-                much quieter landscape than the city centre.
-            </p>
+                <h3>
+                    Lantau
+                </h3>
+
+                <p>
+                    For something a little more adventurous, head out
+                    towards Lantau. The island opens up another side of
+                    Hong Kong — mountains, beaches, hiking trails and a
+                    much quieter landscape than the city centre.
+                </p>
+
+            </div>
+
 
         </div>
 
@@ -1149,14 +1671,13 @@
 </section>
 
 
-
-<!-- =========================================================
+<!-- =====================================================
      FINAL EDIT
-========================================================= -->
+===================================================== -->
 
 <section class="hk-final">
 
-    <p class="label">
+    <p class="hk-final-label">
         THE HONG KONG EDIT
     </p>
 
@@ -1186,11 +1707,11 @@
 </main>
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
-<footer>
+<footer class="hk-footer">
 
     <h3>
         THE EXPAT EDITS
@@ -1205,6 +1726,9 @@
     </p>
 
 </footer>
+
+
+</div>
 
 
 </body>

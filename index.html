@@ -46,6 +46,84 @@
         href="style-notes.css"
     >
 
+    <!-- =====================================================
+         HERO IMAGE PRELOAD
+    ====================================================== -->
+
+    <link
+        rel="preload"
+        as="image"
+        href="singapore2.jpeg"
+        fetchpriority="high"
+    >
+
+
+    <!-- =====================================================
+         SMALL HOMEPAGE TIDY-UPS
+    ====================================================== -->
+
+    <style>
+
+        /* -----------------------------------------------
+           INTRODUCTION — DROP SLIGHTLY
+        ----------------------------------------------- */
+
+        .homepage-intro-inner {
+            padding-top: 22px;
+        }
+
+
+        /* -----------------------------------------------
+           MOBILE MENU
+        ----------------------------------------------- */
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+
+            .mobile-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                display: none;
+                padding: 22px 24px 28px;
+                background: #171717;
+                border-top: 1px solid rgba(255,255,255,0.08);
+                box-sizing: border-box;
+                z-index: 999;
+            }
+
+            .mobile-menu.open {
+                display: block;
+            }
+
+            .mobile-menu a {
+                display: block;
+                padding: 13px 0;
+                text-decoration: none;
+                font-family: "Inter", sans-serif;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+        }
+
+
+        /* -----------------------------------------------
+           IMAGE LOADING
+        ----------------------------------------------- */
+
+        img {
+            max-width: 100%;
+        }
+
+    </style>
+
 </head>
 
 
@@ -61,7 +139,7 @@
     <div class="site-header-inner">
 
         <a
-            href="index.html"
+            href="index-new.html"
             class="site-logo"
         >
             THE EXPAT EDITS
@@ -95,6 +173,8 @@
             class="menu-toggle"
             type="button"
             aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
         >
 
             <span></span>
@@ -102,6 +182,35 @@
             <span></span>
 
         </button>
+
+
+        <!-- =================================================
+             MOBILE NAVIGATION
+        ================================================== -->
+
+        <nav
+            id="mobile-menu"
+            class="mobile-menu"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="index-new.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="#editions">
+                Editions
+            </a>
+
+            <a href="#journal">
+                Journal
+            </a>
+
+        </nav>
 
     </div>
 
@@ -172,6 +281,8 @@
                     <img
                         src="singapore2.jpeg"
                         alt="Singapore at night"
+                        fetchpriority="high"
+                        decoding="async"
                     >
 
                 </div>
@@ -272,6 +383,8 @@
                     <img
                         src="hong-kong.jpg.jpeg"
                         alt="Hong Kong"
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -309,6 +422,8 @@
                     <img
                         src="javahero.jpeg"
                         alt="Borobudur at sunrise, Java"
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -346,6 +461,8 @@
                     <img
                         src="komodo.jpg.jpeg"
                         alt="Komodo Islands"
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -383,6 +500,8 @@
                     <img
                         src="angkor.jpg.jpeg"
                         alt="Angkor temples, Cambodia"
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -420,6 +539,8 @@
                     <img
                         src="images/home/japanhero.jpeg"
                         alt="Japan"
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -457,6 +578,8 @@
                     <img
                         src="images/home/lombokhero.jpeg"
                         alt="Lombok"
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -507,7 +630,10 @@
      HOMEPAGE — EDITORIAL NOTES
 ====================================================== -->
 
-<div class="editorial-notes-home-content">
+<div
+    id="journal"
+    class="editorial-notes-home-content"
+>
 
 
     <!-- =========================
@@ -616,6 +742,65 @@
     </div>
 
 </footer>
+
+
+
+<!-- =====================================================
+     MOBILE MENU SCRIPT
+====================================================== -->
+
+<script>
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobileMenu = document.querySelector("#mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen =
+                mobileMenu.classList.toggle("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation"
+                    : "Open navigation"
+            );
+
+        });
+
+
+        /* Close menu after selecting a link */
+
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mobileMenu.classList.remove("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation"
+                );
+
+            });
+
+        });
+
+    }
+
+</script>
 
 
 </body>

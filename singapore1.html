@@ -1,1 +1,2446 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Singapore — The Expat Edits</title>
+
+    <meta
+        name="description"
+        content="Singapore — home, family, city life and the places we return to. The Expat Edits."
+    >
+
+    <style>
+
+        /* =========================================================
+           SINGAPORE 1 — EXPERIMENTAL EDITION
+           Self-contained prototype.
+           Does not alter the existing site CSS.
+        ========================================================= */
+
+        :root {
+            --paper: #f6f3ed;
+            --paper-light: #fbfaf7;
+            --ink: #1d1d1b;
+            --muted: #6f6c65;
+            --line: #d8d4cc;
+            --accent: #a99a69;
+            --white: #ffffff;
+            --max: 1280px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+            line-height: 1.6;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .s1-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 42px;
+
+            background: rgba(246, 243, 237, 0.96);
+            border-bottom: 1px solid var(--line);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .s1-logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .s1-nav {
+            display: flex;
+            gap: 30px;
+
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .s1-nav a {
+            transition: opacity 0.2s ease;
+        }
+
+        .s1-nav a:hover {
+            opacity: 0.5;
+        }
+
+        /* =========================================================
+           GENERAL
+        ========================================================= */
+
+        .s1-page {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .s1-container {
+            width: min(calc(100% - 80px), var(--max));
+            margin: 0 auto;
+        }
+
+        .s1-eyebrow {
+            margin: 0 0 14px;
+
+            font-size: 10px;
+            line-height: 1.4;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            color: var(--muted);
+        }
+
+        .s1-title {
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 400;
+            line-height: 0.95;
+        }
+
+        .s1-section-title {
+            margin: 0 0 18px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 400;
+            font-size: clamp(30px, 4vw, 54px);
+            line-height: 1.02;
+        }
+
+        .s1-lead {
+            max-width: 650px;
+
+            margin: 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(19px, 2vw, 27px);
+            line-height: 1.45;
+        }
+
+        .s1-copy {
+            max-width: 570px;
+
+            margin: 0;
+
+            font-size: 15px;
+            line-height: 1.8;
+            color: #3f3d39;
+        }
+
+        .s1-small {
+            font-size: 12px;
+            line-height: 1.65;
+            color: var(--muted);
+        }
+
+        .s1-rule {
+            height: 1px;
+            background: var(--line);
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .s1-hero {
+            width: min(calc(100% - 80px), var(--max));
+            margin: 54px auto 0;
+
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.85fr);
+
+            min-height: 650px;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .s1-hero-image {
+            background: #111;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .s1-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .s1-hero-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 70px 70px 70px 76px;
+        }
+
+        .s1-hero-copy .s1-title {
+            font-size: clamp(68px, 8vw, 126px);
+            letter-spacing: -0.045em;
+        }
+
+        .s1-hero-subtitle {
+            margin: 25px 0 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 27px;
+            line-height: 1.25;
+        }
+
+        .s1-hero-text {
+            margin: 30px 0 0;
+
+            max-width: 500px;
+
+            font-size: 15px;
+            line-height: 1.8;
+            color: #4b4944;
+        }
+
+        .s1-hero-note {
+            margin-top: 50px;
+
+            padding-top: 18px;
+
+            border-top: 1px solid var(--line);
+
+            font-size: 10px;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           AT A GLANCE
+        ========================================================= */
+
+        .s1-glance {
+            width: min(calc(100% - 80px), var(--max));
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .s1-glance-item {
+            min-height: 130px;
+
+            padding: 30px 26px;
+
+            border-right: 1px solid var(--line);
+        }
+
+        .s1-glance-item:last-child {
+            border-right: none;
+        }
+
+        .s1-glance-label {
+            margin-bottom: 6px;
+
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .s1-glance-value {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 21px;
+        }
+
+        .s1-glance-detail {
+            margin-top: 5px;
+
+            font-size: 11px;
+            line-height: 1.5;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .s1-intro {
+            padding: 110px 0 90px;
+        }
+
+        .s1-intro-grid {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .s1-intro-side {
+            padding-top: 9px;
+        }
+
+        /* =========================================================
+           CITY SECTION
+        ========================================================= */
+
+        .s1-city {
+            padding: 0 0 120px;
+        }
+
+        .s1-city-feature {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .s1-image-frame {
+            background: #e9e5dc;
+            overflow: hidden;
+        }
+
+        .s1-image-frame img {
+            height: auto;
+        }
+
+        .s1-city-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 40px;
+            background: var(--paper-light);
+        }
+
+        .s1-city-copy h3 {
+            margin: 0 0 18px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 37px;
+            font-weight: 400;
+            line-height: 1.05;
+        }
+
+        .s1-city-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+
+            margin-top: 22px;
+        }
+
+        .s1-image-caption {
+            padding-top: 13px;
+        }
+
+        .s1-image-caption strong {
+            display: block;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .s1-image-caption span {
+            display: block;
+
+            margin-top: 4px;
+
+            font-size: 11px;
+            line-height: 1.5;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           PLACES WE RETURN TO
+        ========================================================= */
+
+        .s1-places {
+            padding: 100px 0 120px;
+
+            background: var(--paper-light);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .s1-places-intro {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+
+            margin-bottom: 55px;
+        }
+
+        .s1-place-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .s1-place {
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+        }
+
+        .s1-place h3 {
+            margin: 0 0 10px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 400;
+            font-size: 27px;
+        }
+
+        .s1-place p {
+            margin: 0;
+
+            font-size: 13px;
+            line-height: 1.75;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           GREEN SINGAPORE
+        ========================================================= */
+
+        .s1-green {
+            padding: 120px 0;
+        }
+
+        .s1-green-feature {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .s1-green-copy {
+            padding: 50px 20px 0 20px;
+        }
+
+        .s1-green-copy .s1-section-title {
+            font-size: clamp(38px, 5vw, 68px);
+        }
+
+        .s1-green-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+
+            margin-top: 55px;
+        }
+
+        .s1-green-gallery .s1-gallery-large {
+            grid-column: span 2;
+        }
+
+        /* =========================================================
+           MARINA BAY
+        ========================================================= */
+
+        .s1-marina {
+            padding: 110px 0 120px;
+
+            background: #171716;
+            color: #f4f1e9;
+        }
+
+        .s1-marina .s1-eyebrow,
+        .s1-marina .s1-small {
+            color: #aaa69d;
+        }
+
+        .s1-marina-head {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: end;
+
+            margin-bottom: 60px;
+        }
+
+        .s1-marina .s1-section-title {
+            font-size: clamp(45px, 6vw, 78px);
+        }
+
+        .s1-marina-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 22px;
+            align-items: start;
+        }
+
+        .s1-marina-side {
+            display: grid;
+            gap: 22px;
+        }
+
+        .s1-marina-full {
+            margin-top: 22px;
+        }
+
+        .s1-marina-caption {
+            margin-top: 17px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            line-height: 1.35;
+        }
+
+        /* =========================================================
+           FOOD / EVENING
+        ========================================================= */
+
+        .s1-evening {
+            padding: 115px 0;
+        }
+
+        .s1-evening-intro {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        .s1-evening-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .s1-evening-card {
+            padding: 30px 0 0;
+
+            border-top: 1px solid var(--line);
+        }
+
+        .s1-evening-card h3 {
+            margin: 0 0 9px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 27px;
+            font-weight: 400;
+        }
+
+        .s1-evening-card p {
+            margin: 0;
+
+            font-size: 13px;
+            line-height: 1.75;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           CHINATOWN
+        ========================================================= */
+
+        .s1-chinatown {
+            padding: 110px 0;
+
+            border-top: 1px solid var(--line);
+        }
+
+        .s1-chinatown-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .s1-chinatown-copy {
+            padding: 30px;
+        }
+
+        .s1-chinatown-copy .s1-section-title {
+            font-size: clamp(42px, 5vw, 70px);
+        }
+
+        /* =========================================================
+           SENTOSA
+        ========================================================= */
+
+        .s1-sentosa {
+            padding: 110px 0 120px;
+
+            background: #e8e3d8;
+        }
+
+        .s1-sentosa-head {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 80px;
+            margin-bottom: 55px;
+        }
+
+        .s1-sentosa-image {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .s1-sentosa-note {
+            max-width: 700px;
+
+            margin: 30px auto 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* =========================================================
+           FAMILY
+        ========================================================= */
+
+        .s1-family {
+            padding: 120px 0;
+        }
+
+        .s1-family-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .s1-family-copy {
+            padding-right: 50px;
+        }
+
+        .s1-family-copy .s1-section-title {
+            font-size: clamp(42px, 5vw, 70px);
+        }
+
+        .s1-family-quote {
+            margin: 35px 0 0;
+
+            padding-left: 24px;
+
+            border-left: 2px solid var(--accent);
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            line-height: 1.45;
+        }
+
+        /* =========================================================
+           CHANGI
+        ========================================================= */
+
+        .s1-base {
+            padding: 110px 0;
+
+            background: var(--paper-light);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .s1-base-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .s1-base-copy .s1-section-title {
+            font-size: clamp(40px, 5vw, 65px);
+        }
+
+        /* =========================================================
+           VISITOR GUIDE
+        ========================================================= */
+
+        .s1-visitors {
+            padding: 115px 0;
+        }
+
+        .s1-visitors-head {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 80px;
+            margin-bottom: 55px;
+        }
+
+        .s1-visitor-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1px;
+
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .s1-visitor-card {
+            min-height: 180px;
+
+            padding: 28px 22px;
+
+            background: var(--paper);
+        }
+
+        .s1-visitor-number {
+            margin-bottom: 22px;
+
+            font-size: 9px;
+            letter-spacing: 0.18em;
+            color: var(--muted);
+        }
+
+        .s1-visitor-card h3 {
+            margin: 0 0 10px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 21px;
+            font-weight: 400;
+        }
+
+        .s1-visitor-card p {
+            margin: 0;
+
+            font-size: 11px;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           COLLECTION
+        ========================================================= */
+
+        .s1-collection {
+            padding: 100px 0 115px;
+
+            background: #20201e;
+            color: #f4f1e9;
+        }
+
+        .s1-collection-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 40px;
+
+            margin-bottom: 45px;
+        }
+
+        .s1-collection-head .s1-section-title {
+            margin: 0;
+        }
+
+        .s1-collection-count {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #aaa69d;
+        }
+
+        .s1-collection-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .s1-collection-item {
+            background: #111;
+        }
+
+        .s1-collection-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .s1-footer {
+            padding: 55px 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-top: 1px solid #333;
+            background: #20201e;
+            color: #f4f1e9;
+        }
+
+        .s1-footer-logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .s1-footer-right {
+            font-size: 10px;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #aaa69d;
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 760px) {
+
+            .s1-header {
+                height: 60px;
+                padding: 0 20px;
+            }
+
+            .s1-logo {
+                font-size: 13px;
+            }
+
+            .s1-nav {
+                gap: 14px;
+                font-size: 8px;
+            }
+
+            .s1-container {
+                width: calc(100% - 36px);
+            }
+
+            /* -----------------------------------------------------
+               HERO
+            ----------------------------------------------------- */
+
+            .s1-hero {
+                width: 100%;
+                margin: 0;
+
+                display: flex;
+                flex-direction: column;
+
+                min-height: 0;
+
+                border-bottom: none;
+            }
+
+            .s1-hero-image {
+                width: 100%;
+                min-height: 0;
+
+                background: #111;
+            }
+
+            .s1-hero-image img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .s1-hero-copy {
+                padding: 34px 20px 42px;
+            }
+
+            .s1-hero-copy .s1-title {
+                font-size: 57px;
+            }
+
+            .s1-hero-subtitle {
+                margin-top: 17px;
+                font-size: 22px;
+            }
+
+            .s1-hero-text {
+                margin-top: 20px;
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .s1-hero-note {
+                margin-top: 28px;
+            }
+
+            /* -----------------------------------------------------
+               GLANCE
+            ----------------------------------------------------- */
+
+            .s1-glance {
+                width: 100%;
+
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .s1-glance-item {
+                min-height: 105px;
+                padding: 20px 18px;
+
+                border-bottom: 1px solid var(--line);
+            }
+
+            .s1-glance-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .s1-glance-item:nth-child(3),
+            .s1-glance-item:nth-child(4) {
+                border-bottom: none;
+            }
+
+            .s1-glance-value {
+                font-size: 18px;
+            }
+
+            /* -----------------------------------------------------
+               GENERAL SECTIONS
+            ----------------------------------------------------- */
+
+            .s1-intro,
+            .s1-city,
+            .s1-green,
+            .s1-marina,
+            .s1-evening,
+            .s1-chinatown,
+            .s1-sentosa,
+            .s1-family,
+            .s1-base,
+            .s1-visitors,
+            .s1-collection {
+                padding-top: 70px;
+                padding-bottom: 70px;
+            }
+
+            .s1-intro-grid,
+            .s1-places-intro,
+            .s1-green-feature,
+            .s1-marina-head,
+            .s1-evening-intro,
+            .s1-chinatown-grid,
+            .s1-sentosa-head,
+            .s1-family-grid,
+            .s1-base-grid,
+            .s1-visitors-head {
+                display: block;
+            }
+
+            .s1-intro-side {
+                margin-bottom: 22px;
+            }
+
+            .s1-lead {
+                font-size: 19px;
+            }
+
+            .s1-copy {
+                font-size: 14px;
+            }
+
+            /* -----------------------------------------------------
+               CITY
+            ----------------------------------------------------- */
+
+            .s1-city-feature {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .s1-city-copy {
+                padding: 30px 22px 34px;
+            }
+
+            .s1-city-copy h3 {
+                font-size: 30px;
+            }
+
+            .s1-city-strip {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                margin-top: 35px;
+            }
+
+            /* -----------------------------------------------------
+               PLACES
+            ----------------------------------------------------- */
+
+            .s1-places-intro {
+                margin-bottom: 38px;
+            }
+
+            .s1-place-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .s1-place {
+                padding-top: 20px;
+            }
+
+            /* -----------------------------------------------------
+               GREEN
+            ----------------------------------------------------- */
+
+            .s1-green-copy {
+                padding: 0 0 35px;
+            }
+
+            .s1-green-gallery {
+                grid-template-columns: 1fr;
+                gap: 14px;
+                margin-top: 35px;
+            }
+
+            .s1-green-gallery .s1-gallery-large {
+                grid-column: auto;
+            }
+
+            /* -----------------------------------------------------
+               MARINA
+            ----------------------------------------------------- */
+
+            .s1-marina-head {
+                margin-bottom: 38px;
+            }
+
+            .s1-marina-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .s1-marina-side {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .s1-marina-full {
+                margin-top: 14px;
+            }
+
+            .s1-marina-caption {
+                font-size: 19px;
+            }
+
+            /* -----------------------------------------------------
+               EVENING
+            ----------------------------------------------------- */
+
+            .s1-evening-intro {
+                margin-bottom: 38px;
+            }
+
+            .s1-evening-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            /* -----------------------------------------------------
+               CHINATOWN
+            ----------------------------------------------------- */
+
+            .s1-chinatown-copy {
+                padding: 30px 0 0;
+            }
+
+            /* -----------------------------------------------------
+               SENTOSA
+            ----------------------------------------------------- */
+
+            .s1-sentosa-head {
+                margin-bottom: 35px;
+            }
+
+            .s1-sentosa-note {
+                font-size: 20px;
+                text-align: left;
+            }
+
+            /* -----------------------------------------------------
+               FAMILY
+            ----------------------------------------------------- */
+
+            .s1-family-copy {
+                padding-right: 0;
+                padding-bottom: 35px;
+            }
+
+            .s1-family-quote {
+                font-size: 20px;
+            }
+
+            /* -----------------------------------------------------
+               BASE
+            ----------------------------------------------------- */
+
+            .s1-base-copy {
+                margin-bottom: 35px;
+            }
+
+            /* -----------------------------------------------------
+               VISITORS
+            ----------------------------------------------------- */
+
+            .s1-visitors-head {
+                margin-bottom: 35px;
+            }
+
+            .s1-visitor-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .s1-visitor-card {
+                min-height: 155px;
+                padding: 22px 17px;
+            }
+
+            /* -----------------------------------------------------
+               COLLECTION
+            ----------------------------------------------------- */
+
+            .s1-collection-head {
+                display: block;
+                margin-bottom: 30px;
+            }
+
+            .s1-collection-count {
+                display: block;
+                margin-top: 12px;
+            }
+
+            .s1-collection-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 7px;
+            }
+
+            /* -----------------------------------------------------
+               FOOTER
+            ----------------------------------------------------- */
+
+            .s1-footer {
+                display: block;
+                padding: 38px 20px;
+            }
+
+            .s1-footer-right {
+                margin-top: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="s1-page">
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="s1-header">
+
+        <a
+            class="s1-logo"
+            href="index.html"
+        >
+            The Expat Edits
+        </a>
+
+        <nav class="s1-nav">
+
+            <a href="editions.html">
+                Editions
+            </a>
+
+            <a href="index.html#journal">
+                Journal
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <main>
+
+        <section class="s1-hero">
+
+            <div class="s1-hero-image">
+
+                <img
+                    src="singaporehero1.png"
+                    alt="Singapore skyline at night"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+
+            </div>
+
+            <div class="s1-hero-copy">
+
+                <p class="s1-eyebrow">
+                    The Expat Edits · Singapore
+                </p>
+
+                <h1 class="s1-title">
+                    Singapore
+                </h1>
+
+                <p class="s1-hero-subtitle">
+                    Home, somewhere in Asia.
+                </p>
+
+                <p class="s1-hero-text">
+                    Singapore has been home for us for several years.
+                    It is where we work, where the children are growing up,
+                    where we run, eat, explore and spend our weekends —
+                    and where Changi makes the rest of Asia feel remarkably close.
+                </p>
+
+                <div class="s1-hero-note">
+                    A personal guide to the Singapore we actually live
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             AT A GLANCE
+        ====================================================== -->
+
+        <section class="s1-glance">
+
+            <div class="s1-glance-item">
+
+                <div class="s1-glance-label">
+                    Climate
+                </div>
+
+                <div class="s1-glance-value">
+                    Tropical
+                </div>
+
+                <div class="s1-glance-detail">
+                    Warm and humid throughout the year.
+                </div>
+
+            </div>
+
+
+            <div class="s1-glance-item">
+
+                <div class="s1-glance-label">
+                    Time
+                </div>
+
+                <div class="s1-glance-value">
+                    GMT +8
+                </div>
+
+                <div class="s1-glance-detail">
+                    A useful base for exploring Asia.
+                </div>
+
+            </div>
+
+
+            <div class="s1-glance-item">
+
+                <div class="s1-glance-label">
+                    Getting around
+                </div>
+
+                <div class="s1-glance-value">
+                    Easy
+                </div>
+
+                <div class="s1-glance-detail">
+                    MRT, taxis and walking all work well.
+                </div>
+
+            </div>
+
+
+            <div class="s1-glance-item">
+
+                <div class="s1-glance-label">
+                    Our perspective
+                </div>
+
+                <div class="s1-glance-value">
+                    Home
+                </div>
+
+                <div class="s1-glance-detail">
+                    This is the Singapore we actually use.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRO
+        ====================================================== -->
+
+        <section class="s1-intro">
+
+            <div class="s1-container">
+
+                <div class="s1-intro-grid">
+
+                    <div class="s1-intro-side">
+
+                        <p class="s1-eyebrow">
+                            Our Singapore
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            Not a trip.
+                        </h2>
+
+                    </div>
+
+                    <div>
+
+                        <p class="s1-lead">
+                            Singapore is different for us because we don't
+                            arrive here with a departure date. We live here.
+                        </p>
+
+                        <br>
+
+                        <p class="s1-copy">
+                            That changes the way we see it. The places we
+                            return to are as important as the famous sights.
+                            A lunchtime run, an old colonial building,
+                            a drink at Raffles, a hotel pool, a late afternoon
+                            on Sentosa or dinner around Duxton Hill can all
+                            become part of an ordinary week.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CITY
+        ====================================================== -->
+
+        <section class="s1-city">
+
+            <div class="s1-container">
+
+                <div class="s1-city-feature">
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore1.jpeg"
+                            alt="Singapore financial district"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+                    <div class="s1-city-copy">
+
+                        <p class="s1-eyebrow">
+                            The city we live in
+                        </p>
+
+                        <h3>
+                            Work, running, architecture and the old city.
+                        </h3>
+
+                        <p class="s1-copy">
+                            We spend a lot of time around the city during
+                            the week. Work takes us there, lunch often
+                            becomes a run, and there is always another
+                            building, street or colonial corner worth
+                            stopping to look at.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="s1-city-strip">
+
+                    <div>
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore7.jpeg"
+                                alt="Singapore architecture"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="s1-image-caption">
+                            <strong>Architecture</strong>
+                            <span>
+                                Modern Singapore is full of buildings worth looking up at.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore6.jpeg"
+                                alt="Architecture and trees in Singapore"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="s1-image-caption">
+                            <strong>City &amp; green</strong>
+                            <span>
+                                Even the densest parts of the city rarely feel far from greenery.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore9.jpeg"
+                                alt="Colonial architecture in Singapore"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="s1-image-caption">
+                            <strong>Old &amp; new</strong>
+                            <span>
+                                Colonial buildings and modern towers sit naturally together.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PLACES WE RETURN TO
+        ====================================================== -->
+
+        <section class="s1-places">
+
+            <div class="s1-container">
+
+                <div class="s1-places-intro">
+
+                    <div>
+
+                        <p class="s1-eyebrow">
+                            Places we return to
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            The hotels have become part of home.
+                        </h2>
+
+                    </div>
+
+                    <div>
+
+                        <p class="s1-lead">
+                            We don't only use hotels when we are travelling.
+                            Some of them have become places we return to
+                            simply because we enjoy being there.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="s1-place-grid">
+
+                    <article class="s1-place">
+
+                        <h3>
+                            Raffles
+                        </h3>
+
+                        <p>
+                            The courtyard is one of our favourite places
+                            to slow down in the middle of the city.
+                            Colonial Singapore, drinks and an atmosphere
+                            that never feels rushed.
+                        </p>
+
+                    </article>
+
+
+                    <article class="s1-place">
+
+                        <h3>
+                            The Singapore Edition
+                        </h3>
+
+                        <p>
+                            Snacks by the pool, a swim and a game of pool
+                            in the bar. It has become somewhere we enjoy
+                            spending an afternoon rather than somewhere
+                            we simply stay.
+                        </p>
+
+                    </article>
+
+
+                    <article class="s1-place">
+
+                        <h3>
+                            Hyatt on Scott's
+                        </h3>
+
+                        <p>
+                            The pool bar is relaxed and easy — one of those
+                            places where you can settle in for an afternoon
+                            without needing much of a plan.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GREEN SINGAPORE
+        ====================================================== -->
+
+        <section class="s1-green">
+
+            <div class="s1-container">
+
+                <div class="s1-green-feature">
+
+                    <div class="s1-green-copy">
+
+                        <p class="s1-eyebrow">
+                            The green city
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            Singapore is greener than you expect.
+                        </h2>
+
+                        <p class="s1-copy">
+                            For all the glass and concrete, some of our
+                            favourite parts of Singapore are the places
+                            where the city disappears.
+                        </p>
+
+                        <br>
+
+                        <p class="s1-copy">
+                            We love exploring MacRitchie Reservoir,
+                            the Botanic Gardens and Fort Canning Park,
+                            and seeing how much wildlife exists alongside
+                            everyday city life.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore22.jpeg"
+                            alt="Wildlife at a Singapore reservoir"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="s1-green-gallery">
+
+                    <div class="s1-gallery-large">
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore3.jpeg"
+                                alt="Wildlife in Singapore"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore15.jpeg"
+                                alt="Wildlife in Singapore"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore21.jpeg"
+                                alt="Wildlife and greenery in Singapore"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore16.jpeg"
+                                alt="Bananas growing in Singapore"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="s1-image-caption">
+                            <strong>From the garden</strong>
+                            <span>
+                                We are lucky enough to grow bananas at home.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="s1-image-frame">
+                            <img
+                                src="singapore17.jpeg"
+                                alt="Tropical fruit in Singapore"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+
+                        <div class="s1-image-caption">
+                            <strong>Tropical fruit</strong>
+                            <span>
+                                One of the pleasures of living in Asia.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MARINA BAY
+        ====================================================== -->
+
+        <section class="s1-marina">
+
+            <div class="s1-container">
+
+                <div class="s1-marina-head">
+
+                    <div>
+
+                        <p class="s1-eyebrow">
+                            Marina Bay
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            From sunlight to sundown.
+                        </h2>
+
+                    </div>
+
+                    <p class="s1-copy">
+                        Marina Bay is one of those parts of Singapore that
+                        can still feel special even when you know it well.
+                        There are plenty of places to stop for a drink,
+                        watch the skyline change and let the evening begin.
+                    </p>
+
+                </div>
+
+
+                <div class="s1-marina-grid">
+
+                    <div>
+
+                        <div class="s1-image-frame">
+
+                            <img
+                                src="singapore2.jpeg"
+                                alt="Marina Bay Sands framed by flowers"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </div>
+
+                        <p class="s1-marina-caption">
+                            The city can be remarkably colourful in daylight.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-marina-side">
+
+                        <div class="s1-image-frame">
+
+                            <img
+                                src="singapore10.jpeg"
+                                alt="Singapore skyline reflected in the water"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </div>
+
+
+                        <div class="s1-image-frame">
+
+                            <img
+                                src="singapore13.jpeg"
+                                alt="Merlion and Marina Bay Sands at night"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="s1-marina-full">
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore18.jpeg"
+                            alt="Fireworks over Marina Bay Sands"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+                    <p class="s1-marina-caption">
+                        Some Singapore evenings are difficult to improve upon.
+                    </p>
+
+                </div>
+
+
+                <div class="s1-marina-full">
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore12.jpeg"
+                            alt="Marina Bay Sands at night"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EATING & DRINKING
+        ====================================================== -->
+
+        <section class="s1-evening">
+
+            <div class="s1-container">
+
+                <div class="s1-evening-intro">
+
+                    <div>
+
+                        <p class="s1-eyebrow">
+                            Eating &amp; drinking
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            We rarely need much of a plan.
+                        </h2>
+
+                    </div>
+
+                    <p class="s1-lead">
+                        Singapore makes an evening out remarkably easy.
+                        There is always another bar, restaurant or street
+                        worth exploring.
+                    </p>
+
+                </div>
+
+
+                <div class="s1-evening-grid">
+
+                    <article class="s1-evening-card">
+
+                        <h3>
+                            Duxton Hill
+                        </h3>
+
+                        <p>
+                            One of the areas we most often head to for
+                            dinner. Plenty of restaurants and bars sit close
+                            enough together to keep the evening flexible.
+                        </p>
+
+                    </article>
+
+
+                    <article class="s1-evening-card">
+
+                        <h3>
+                            Amoy Street
+                        </h3>
+
+                        <p>
+                            Another favourite for evenings when we want
+                            plenty of choice and somewhere lively to
+                            wander between dinner and drinks.
+                        </p>
+
+                    </article>
+
+
+                    <article class="s1-evening-card">
+
+                        <h3>
+                            Dempsey Hill
+                        </h3>
+
+                        <p>
+                            A more relaxed setting for eating, drinking and
+                            lounging away from the intensity of the CBD.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CHINATOWN
+        ====================================================== -->
+
+        <section class="s1-chinatown">
+
+            <div class="s1-container">
+
+                <div class="s1-chinatown-grid">
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore19.jpeg"
+                            alt="Chinatown in Singapore at night"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+
+                    <div class="s1-chinatown-copy">
+
+                        <p class="s1-eyebrow">
+                            When friends come to visit
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            Chinatown in the evening.
+                        </h2>
+
+                        <p class="s1-copy">
+                            Chinatown and the surrounding streets are great
+                            to walk around after dark. We also like taking
+                            visiting friends and family here to find local,
+                            authentic gifts to take home.
+                        </p>
+
+                        <br>
+
+                        <div class="s1-image-frame">
+
+                            <img
+                                src="singapore20.jpeg"
+                                alt="Colourful temple architecture in Chinatown"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SENTOSA
+        ====================================================== -->
+
+        <section class="s1-sentosa">
+
+            <div class="s1-container">
+
+                <div class="s1-sentosa-head">
+
+                    <div>
+
+                        <p class="s1-eyebrow">
+                            Weekends
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            Sentosa, late.
+                        </h2>
+
+                    </div>
+
+                    <p class="s1-copy">
+                        We love getting down to Sentosa with the children.
+                        The best time for us is usually towards sunset,
+                        when the heat begins to ease and the whole island
+                        feels a little slower.
+                    </p>
+
+                </div>
+
+
+                <div class="s1-sentosa-image">
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore5.jpeg"
+                            alt="Sentosa beach at sunset"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <p class="s1-sentosa-note">
+                    Settle into a drink at Tanjong Beach Club,
+                    walk along the beach and find somewhere relaxed
+                    for something to eat.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY
+        ====================================================== -->
+
+        <section class="s1-family">
+
+            <div class="s1-container">
+
+                <div class="s1-family-grid">
+
+                    <div class="s1-family-copy">
+
+                        <p class="s1-eyebrow">
+                            Growing up here
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            More than travel.
+                        </h2>
+
+                        <p class="s1-copy">
+                            Living in Singapore has given our children
+                            experiences that go far beyond the trips we
+                            take. They have grown up surrounded by a
+                            different culture, new opportunities and the
+                            confidence to try things that might once have
+                            seemed out of reach.
+                        </p>
+
+                        <p class="s1-family-quote">
+                            Seeing our son DJ at Marina Bay Sands gave him
+                            confidence and created one of those memories
+                            that will stay with all of us.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore11.jpeg"
+                            alt="DJ performance at Marina Bay Sands"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SINGAPORE AS A BASE
+        ====================================================== -->
+
+        <section class="s1-base">
+
+            <div class="s1-container">
+
+                <div class="s1-base-grid">
+
+                    <div class="s1-base-copy">
+
+                        <p class="s1-eyebrow">
+                            Singapore as a base
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            A great city to live in.
+                            An even better place to travel from.
+                        </h2>
+
+                        <p class="s1-copy">
+                            One of the great advantages of living here is
+                            how easy it is to leave for the weekend.
+                            Changi makes travelling around Asia feel
+                            remarkably straightforward.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-image-frame">
+
+                        <img
+                            src="singapore14.jpeg"
+                            alt="Singapore Changi Airport"
+                            loading="lazy"
+                            decoding="async"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WHEN FRIENDS COME TO TOWN
+        ====================================================== -->
+
+        <section class="s1-visitors">
+
+            <div class="s1-container">
+
+                <div class="s1-visitors-head">
+
+                    <div>
+
+                        <p class="s1-eyebrow">
+                            Our Singapore
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            If friends came for three days...
+                        </h2>
+
+                    </div>
+
+                    <p class="s1-lead">
+                        We wouldn't try to show them everything.
+                        We'd show them the Singapore we actually enjoy.
+                    </p>
+
+                </div>
+
+
+                <div class="s1-visitor-grid">
+
+                    <div class="s1-visitor-card">
+
+                        <div class="s1-visitor-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Morning
+                        </h3>
+
+                        <p>
+                            Botanic Gardens, MacRitchie or a walk through
+                            one of the city's greener corners.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-visitor-card">
+
+                        <div class="s1-visitor-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Afternoon
+                        </h3>
+
+                        <p>
+                            Orchard, a hotel pool or a slower afternoon
+                            away from the heat.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-visitor-card">
+
+                        <div class="s1-visitor-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Sundowner
+                        </h3>
+
+                        <p>
+                            Lantern at Fullerton Bay or somewhere around
+                            Marina Bay as the light changes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-visitor-card">
+
+                        <div class="s1-visitor-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Dinner
+                        </h3>
+
+                        <p>
+                            Duxton Hill, Amoy Street or Dempsey Hill —
+                            depending on the mood.
+                        </p>
+
+                    </div>
+
+
+                    <div class="s1-visitor-card">
+
+                        <div class="s1-visitor-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Evening
+                        </h3>
+
+                        <p>
+                            Chinatown or Marina Bay, then simply wander
+                            and see where the night takes you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             COLLECTION
+        ====================================================== -->
+
+        <section class="s1-collection">
+
+            <div class="s1-container">
+
+                <div class="s1-collection-head">
+
+                    <div>
+
+                        <p class="s1-eyebrow">
+                            The photographs
+                        </p>
+
+                        <h2 class="s1-section-title">
+                            Our Singapore Collection
+                        </h2>
+
+                    </div>
+
+                    <div class="s1-collection-count">
+                        22 photographs from home
+                    </div>
+
+                </div>
+
+
+                <div class="s1-collection-grid">
+
+                    <div class="s1-collection-item">
+                        <img src="singapore1.jpeg" alt="Singapore city" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore2.jpeg" alt="Marina Bay Sands" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore3.jpeg" alt="Wildlife in Singapore" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore4.jpeg" alt="Orchard Road" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore5.jpeg" alt="Sentosa at sunset" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore6.jpeg" alt="Singapore architecture" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore7.jpeg" alt="Singapore architecture" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore8.jpeg" alt="Singapore detail" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore9.jpeg" alt="Colonial Singapore" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore10.jpeg" alt="Singapore skyline reflection" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore11.jpeg" alt="DJ performance" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore12.jpeg" alt="Marina Bay at night" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore13.jpeg" alt="Merlion and Marina Bay Sands" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore14.jpeg" alt="Singapore airport" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore15.jpeg" alt="Wildlife" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore16.jpeg" alt="Bananas growing in Singapore" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore17.jpeg" alt="Tropical fruit" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore18.jpeg" alt="Fireworks over Marina Bay" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore19.jpeg" alt="Chinatown at night" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore20.jpeg" alt="Colourful Chinatown temple" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore21.jpeg" alt="Singapore greenery" loading="lazy">
+                    </div>
+
+                    <div class="s1-collection-item">
+                        <img src="singapore22.jpeg" alt="Wildlife at the reservoir" loading="lazy">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="s1-footer">
+
+        <div class="s1-footer-logo">
+            The Expat Edits
+        </div>
+
+        <div class="s1-footer-right">
+            Singapore · Home
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>

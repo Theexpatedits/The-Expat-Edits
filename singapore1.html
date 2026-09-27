@@ -50,28 +50,27 @@
     >
 
 
-    <!-- =================================================
-         SINGAPORE 1 — EDITORIAL OVERRIDES
-    ================================================== -->
+    <!-- =====================================================
+         SINGAPORE 1 EDITORIAL OVERRIDES
+    ====================================================== -->
 
     <style>
 
-        /* =================================================
-           BASE
-        ================================================== */
+        /* =====================================================
+           SINGAPORE 1 COLOUR SYSTEM
+        ====================================================== */
 
         .sg1 {
-            --sg-paper: #f7f4ee;
-            --sg-paper-light: #fbfaf7;
-            --sg-ink: #20201e;
-            --sg-muted: #77736b;
-            --sg-line: #d9d5cd;
-            --sg-dark: #242421;
-            --sg-dark-text: #f5f2eb;
-            --sg-max: 1240px;
 
-            background: var(--sg-paper);
-            color: var(--sg-ink);
+            --paper: #f7f4ee;
+            --paper-light: #fbfaf7;
+            --ink: #252522;
+            --muted: #625f58;
+            --line: #d8d3ca;
+
+            background: var(--paper);
+            color: var(--ink);
+
         }
 
 
@@ -81,18 +80,21 @@
 
 
         .sg1 .container {
+
             width: min(
                 calc(100% - 80px),
-                var(--sg-max)
+                1240px
             );
 
             margin-left: auto;
             margin-right: auto;
+
         }
 
 
-        .sg1 .sg-eyebrow {
-            margin: 0 0 16px;
+        .sg1 .eyebrow {
+
+            margin: 0 0 15px;
 
             font-family: Inter, sans-serif;
 
@@ -103,27 +105,13 @@
 
             text-transform: uppercase;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
-        .sg1 .sg-heading {
-            margin: 0;
+        .sg1 .copy {
 
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-weight: 500;
-
-            line-height: .98;
-
-            letter-spacing: -.025em;
-        }
-
-
-        .sg1 .sg-copy {
             margin: 0;
 
             font-family: Inter, sans-serif;
@@ -133,11 +121,13 @@
 
             line-height: 1.8;
 
-            color: #4f4c46;
+            color: var(--ink);
+
         }
 
 
-        .sg1 .sg-lead {
+        .sg1 .lead {
+
             margin: 0;
 
             font-family:
@@ -149,110 +139,116 @@
 
             line-height: 1.22;
 
-            color: var(--sg-ink);
+            color: var(--ink);
+
         }
 
 
-        .sg1 .sg-rule {
-            height: 1px;
+        /* =====================================================
+           IMAGE SYSTEM
+        ====================================================== */
 
-            background: var(--sg-line);
-        }
+        .sg1 .image {
 
-
-        /* =================================================
-           IMAGE RULE
-
-           Desktop is intentionally restrained.
-           Mobile returns to natural/full-width imagery.
-        ================================================== */
-
-        .sg1 .sg-image {
             width: 100%;
 
-            background: #ebe7df;
+            background: #eeeae2;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             overflow: hidden;
+
         }
 
 
-        .sg1 .sg-image img {
+        .sg1 .image img {
+
             display: block;
 
             width: 100%;
             height: auto;
 
             object-fit: contain;
+
         }
 
 
-        /* =================================================
+        /* =====================================================
            HERO
-        ================================================== */
+        ====================================================== */
 
         .sg1-hero {
+
             display: grid;
 
             grid-template-columns:
-                minmax(0, 1.12fr)
-                minmax(360px, .88fr);
+                1.12fr
+                .88fr;
 
             width: min(
                 calc(100% - 80px),
-                var(--sg-max)
+                1240px
             );
 
             margin: 44px auto 0;
 
-            background: var(--sg-paper-light);
+            background: var(--paper-light);
 
-            border-bottom: 1px solid var(--sg-line);
+            border-bottom: 1px solid var(--line);
+
         }
 
 
         .sg1-hero-image {
+
             background: #080808;
 
-            min-height: 560px;
-
             display: flex;
+
             align-items: center;
             justify-content: center;
 
             overflow: hidden;
+
         }
 
 
         .sg1-hero-image img {
+
             display: block;
 
             width: 100%;
             height: auto;
 
-            max-height: 690px;
+            max-height: 620px;
 
             object-fit: contain;
+
         }
 
 
         .sg1-hero-copy {
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
 
             padding:
+                55px
                 58px
-                62px
-                58px
-                68px;
+                55px
+                64px;
+
         }
 
 
         .sg1-hero-copy h1 {
+
             margin: 0;
 
             font-family:
@@ -261,43 +257,53 @@
                 serif;
 
             font-size:
-                clamp(70px, 8vw, 112px);
+                clamp(70px, 8vw, 110px);
 
             font-weight: 500;
 
             line-height: .84;
 
             letter-spacing: -.045em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-hero-subtitle {
-            margin: 24px 0 0;
+
+            margin: 22px 0 0;
 
             font-family:
                 "Cormorant Garamond",
                 Georgia,
                 serif;
 
-            font-size: 30px;
+            font-size: 29px;
 
             line-height: 1.15;
+
+            color: var(--ink);
+
         }
 
 
-        .sg1-hero-copy .sg-copy {
-            max-width: 510px;
+        .sg1-hero-copy .copy {
 
-            margin-top: 28px;
+            max-width: 500px;
+
+            margin-top: 25px;
+
         }
 
 
         .sg1-hero-note {
-            margin-top: 38px;
 
-            padding-top: 16px;
+            margin-top: 32px;
 
-            border-top: 1px solid var(--sg-line);
+            padding-top: 15px;
+
+            border-top: 1px solid var(--line);
 
             font-family: Inter, sans-serif;
 
@@ -308,18 +314,20 @@
 
             text-transform: uppercase;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
-        /* =================================================
+        /* =====================================================
            AT A GLANCE
-        ================================================== */
+        ====================================================== */
 
         .sg1-glance {
+
             width: min(
                 calc(100% - 80px),
-                var(--sg-max)
+                1240px
             );
 
             margin: 0 auto;
@@ -329,16 +337,19 @@
             grid-template-columns:
                 repeat(4, 1fr);
 
-            border-bottom: 1px solid var(--sg-line);
+            border-bottom: 1px solid var(--line);
+
         }
 
 
         .sg1-glance-item {
-            min-height: 116px;
 
-            padding: 26px 24px;
+            min-height: 112px;
 
-            border-right: 1px solid var(--sg-line);
+            padding: 25px 23px;
+
+            border-right: 1px solid var(--line);
+
         }
 
 
@@ -348,6 +359,7 @@
 
 
         .sg1-glance-label {
+
             margin-bottom: 8px;
 
             font-family: Inter, sans-serif;
@@ -359,11 +371,13 @@
 
             text-transform: uppercase;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
         .sg1-glance-value {
+
             font-family:
                 "Cormorant Garamond",
                 Georgia,
@@ -372,10 +386,14 @@
             font-size: 25px;
 
             line-height: 1;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-glance-detail {
+
             margin-top: 7px;
 
             font-family: Inter, sans-serif;
@@ -385,31 +403,37 @@
 
             line-height: 1.5;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
-        /* =================================================
-           INTRODUCTION
-        ================================================== */
+        /* =====================================================
+           INTRO
+        ====================================================== */
 
         .sg1-intro {
-            padding: 96px 0 88px;
+
+            padding: 90px 0 82px;
+
         }
 
 
         .sg1-intro-grid {
+
             display: grid;
 
             grid-template-columns:
                 .72fr
                 1.28fr;
 
-            gap: 85px;
+            gap: 80px;
+
         }
 
 
         .sg1-intro h2 {
+
             margin: 0;
 
             font-family:
@@ -425,54 +449,70 @@
             line-height: .95;
 
             letter-spacing: -.035em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-intro-right {
-            padding-top: 8px;
+
+            padding-top: 7px;
+
         }
 
 
-        /* =================================================
-           CITY / EVERYDAY SINGAPORE
-        ================================================== */
+        /* =====================================================
+           CITY
+        ====================================================== */
 
         .sg1-city {
-            padding: 0 0 105px;
+
+            padding: 0 0 92px;
+
         }
 
 
         .sg1-city-feature {
+
             display: grid;
 
             grid-template-columns:
-                1.3fr
-                .7fr;
+                1.22fr
+                .78fr;
 
-            gap: 26px;
+            gap: 24px;
 
             align-items: stretch;
+
         }
 
 
         .sg1-city-image img {
-            max-height: 545px;
+
+            max-height: 470px;
+
         }
 
 
         .sg1-city-copy {
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
 
-            padding: 48px;
+            padding: 44px;
 
-            background: var(--sg-paper-light);
+            background: var(--paper-light);
+
         }
 
 
         .sg1-city-copy h3 {
-            margin: 0 0 20px;
+
+            margin: 0 0 18px;
 
             font-family:
                 "Cormorant Garamond",
@@ -480,37 +520,47 @@
                 serif;
 
             font-size:
-                clamp(34px, 3.7vw, 52px);
+                clamp(34px, 3.7vw, 50px);
 
             font-weight: 500;
 
             line-height: .98;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-city-strip {
+
             display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 20px;
+            gap: 18px;
 
-            margin-top: 22px;
+            margin-top: 20px;
+
         }
 
 
-        .sg1-city-strip .sg-image img {
-            max-height: 380px;
+        .sg1-city-strip .image img {
+
+            max-height: 330px;
+
         }
 
 
         .sg1-caption {
-            padding-top: 12px;
+
+            padding-top: 11px;
+
         }
 
 
         .sg1-caption strong {
+
             display: block;
 
             font-family:
@@ -518,13 +568,17 @@
                 Georgia,
                 serif;
 
-            font-size: 21px;
+            font-size: 20px;
 
             font-weight: 500;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-caption span {
+
             display: block;
 
             margin-top: 4px;
@@ -534,40 +588,46 @@
             font-size: 10px;
             font-weight: 300;
 
-            line-height: 1.55;
+            line-height: 1.5;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
-        /* =================================================
-           PLACES WE RETURN TO
-        ================================================== */
+        /* =====================================================
+           HOTELS
+        ====================================================== */
 
-        .sg1-places {
-            padding: 90px 0 98px;
+        .sg1-hotels {
 
-            background: var(--sg-paper-light);
+            padding: 86px 0 92px;
 
-            border-top: 1px solid var(--sg-line);
-            border-bottom: 1px solid var(--sg-line);
+            background: var(--paper-light);
+
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+
         }
 
 
-        .sg1-places-intro {
+        .sg1-hotels-intro {
+
             display: grid;
 
             grid-template-columns:
                 .8fr
                 1.2fr;
 
-            gap: 80px;
+            gap: 75px;
 
-            margin-bottom: 48px;
+            margin-bottom: 46px;
+
         }
 
 
-        .sg1-places h2 {
+        .sg1-hotels h2 {
+
             margin: 0;
 
             font-family:
@@ -576,48 +636,60 @@
                 serif;
 
             font-size:
-                clamp(45px, 5vw, 70px);
+                clamp(45px, 5vw, 68px);
 
             font-weight: 500;
 
             line-height: .94;
 
             letter-spacing: -.035em;
+
+            color: var(--ink);
+
         }
 
 
-        .sg1-place-grid {
+        .sg1-hotel-grid {
+
             display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
             gap: 24px;
+
         }
 
 
-        .sg1-place {
-            padding-top: 22px;
+        .sg1-hotel {
 
-            border-top: 1px solid var(--sg-line);
+            padding-top: 21px;
+
+            border-top: 1px solid var(--line);
+
         }
 
 
-        .sg1-place h3 {
-            margin: 0 0 12px;
+        .sg1-hotel h3 {
+
+            margin: 0 0 11px;
 
             font-family:
                 "Cormorant Garamond",
                 Georgia,
                 serif;
 
-            font-size: 31px;
+            font-size: 30px;
 
             font-weight: 500;
+
+            color: var(--ink);
+
         }
 
 
-        .sg1-place p {
+        .sg1-hotel p {
+
             margin: 0;
 
             font-family: Inter, sans-serif;
@@ -625,41 +697,49 @@
             font-size: 13px;
             font-weight: 300;
 
-            line-height: 1.75;
+            line-height: 1.72;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
-        /* =================================================
+        /* =====================================================
            GREEN SINGAPORE
-        ================================================== */
+        ====================================================== */
 
         .sg1-green {
-            padding: 105px 0;
+
+            padding: 92px 0;
+
         }
 
 
         .sg1-green-feature {
+
             display: grid;
 
             grid-template-columns:
                 .78fr
                 1.22fr;
 
-            gap: 45px;
+            gap: 44px;
 
             align-items: center;
+
         }
 
 
         .sg1-green-copy {
-            padding-right: 20px;
+
+            padding-right: 15px;
+
         }
 
 
         .sg1-green-copy h2 {
-            margin: 0 0 25px;
+
+            margin: 0 0 22px;
 
             font-family:
                 "Cormorant Garamond",
@@ -667,60 +747,84 @@
                 serif;
 
             font-size:
-                clamp(48px, 5.5vw, 76px);
+                clamp(48px, 5.5vw, 74px);
 
             font-weight: 500;
 
             line-height: .92;
 
             letter-spacing: -.04em;
+
+            color: var(--ink);
+
         }
 
 
-        .sg1-green-feature .sg-image img {
-            max-height: 550px;
+        .sg1-green-feature .image img {
+
+            max-height: 500px;
+
         }
 
 
         .sg1-green-gallery {
+
             display: grid;
 
             grid-template-columns:
-                1.5fr
-                .75fr
-                .75fr;
+                1.4fr
+                .8fr
+                .8fr;
 
-            gap: 18px;
+            gap: 16px;
 
-            margin-top: 44px;
+            margin-top: 38px;
+
         }
 
 
-        .sg1-green-gallery .sg-image img {
-            max-height: 390px;
+        .sg1-green-gallery .image img {
+
+            max-height: 330px;
+
         }
 
 
-        /* =================================================
-           MARINA BAY — DARK EDITORIAL CHAPTER
-        ================================================== */
+        /* =====================================================
+           MARINA BAY
+        ====================================================== */
 
         .sg1-marina {
-            padding: 96px 0 105px;
 
-            background: var(--sg-dark);
+            padding: 90px 0 96px;
 
-            color: var(--sg-dark-text);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+
+            background: var(--paper-light);
+
         }
 
 
-        .sg1-marina .sg-eyebrow,
-        .sg1-marina .sg-copy {
-            color: #aaa69d;
+        .sg1-marina-head {
+
+            display: grid;
+
+            grid-template-columns:
+                .78fr
+                1.22fr;
+
+            gap: 75px;
+
+            align-items: end;
+
+            margin-bottom: 42px;
+
         }
 
 
         .sg1-marina h2 {
+
             margin: 0;
 
             font-family:
@@ -729,73 +833,72 @@
                 serif;
 
             font-size:
-                clamp(52px, 6vw, 84px);
+                clamp(50px, 5.8vw, 80px);
 
             font-weight: 500;
 
             line-height: .9;
 
             letter-spacing: -.04em;
-        }
 
+            color: var(--ink);
 
-        .sg1-marina-head {
-            display: grid;
-
-            grid-template-columns:
-                .78fr
-                1.22fr;
-
-            gap: 80px;
-
-            align-items: end;
-
-            margin-bottom: 48px;
         }
 
 
         .sg1-marina-grid {
+
             display: grid;
 
             grid-template-columns:
-                1.18fr
-                .82fr;
+                1.15fr
+                .85fr;
 
-            gap: 20px;
+            gap: 18px;
 
-            align-items: start;
         }
 
 
         .sg1-marina-main img {
-            max-height: 560px;
+
+            max-height: 500px;
+
         }
 
 
         .sg1-marina-side {
+
             display: grid;
 
-            gap: 20px;
+            gap: 18px;
+
         }
 
 
         .sg1-marina-side img {
-            max-height: 360px;
+
+            max-height: 300px;
+
         }
 
 
         .sg1-marina-full {
-            margin-top: 20px;
+
+            margin-top: 18px;
+
         }
 
 
         .sg1-marina-full img {
-            max-height: 520px;
+
+            max-height: 450px;
+
         }
 
 
         .sg1-marina-caption {
-            margin: 14px 0 0;
+
+            margin: 12px 0 0;
 
             font-family:
                 "Cormorant Garamond",
@@ -806,33 +909,39 @@
 
             line-height: 1.3;
 
-            color: var(--sg-dark-text);
+            color: var(--ink);
+
         }
 
 
-        /* =================================================
-           FOOD / EVENINGS
-        ================================================== */
+        /* =====================================================
+           EVENINGS
+        ====================================================== */
 
         .sg1-evening {
-            padding: 100px 0;
+
+            padding: 90px 0;
+
         }
 
 
         .sg1-evening-intro {
+
             display: grid;
 
             grid-template-columns:
                 .75fr
                 1.25fr;
 
-            gap: 80px;
+            gap: 75px;
 
-            margin-bottom: 48px;
+            margin-bottom: 45px;
+
         }
 
 
         .sg1-evening h2 {
+
             margin: 0;
 
             font-family:
@@ -841,35 +950,43 @@
                 serif;
 
             font-size:
-                clamp(48px, 5vw, 72px);
+                clamp(48px, 5vw, 70px);
 
             font-weight: 500;
 
             line-height: .94;
 
             letter-spacing: -.035em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-evening-grid {
+
             display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 24px;
+            gap: 22px;
+
         }
 
 
         .sg1-evening-card {
-            padding-top: 23px;
 
-            border-top: 1px solid var(--sg-line);
+            padding-top: 21px;
+
+            border-top: 1px solid var(--line);
+
         }
 
 
         .sg1-evening-card h3 {
-            margin: 0 0 10px;
+
+            margin: 0 0 9px;
 
             font-family:
                 "Cormorant Garamond",
@@ -879,10 +996,14 @@
             font-size: 30px;
 
             font-weight: 500;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-evening-card p {
+
             margin: 0;
 
             font-family: Inter, sans-serif;
@@ -890,95 +1011,43 @@
             font-size: 13px;
             font-weight: 300;
 
-            line-height: 1.75;
+            line-height: 1.72;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
-        /* =================================================
-           CHINATOWN
-        ================================================== */
-
-        .sg1-chinatown {
-            padding: 100px 0;
-
-            border-top: 1px solid var(--sg-line);
-        }
-
-
-        .sg1-chinatown-grid {
-            display: grid;
-
-            grid-template-columns:
-                1fr
-                1fr;
-
-            gap: 55px;
-
-            align-items: center;
-        }
-
-
-        .sg1-chinatown-main img {
-            max-height: 570px;
-        }
-
-
-        .sg1-chinatown-copy h2 {
-            margin: 0 0 25px;
-
-            font-family:
-                "Cormorant Garamond",
-                Georgia,
-                serif;
-
-            font-size:
-                clamp(48px, 5.2vw, 76px);
-
-            font-weight: 500;
-
-            line-height: .92;
-
-            letter-spacing: -.04em;
-        }
-
-
-        .sg1-chinatown-detail {
-            margin-top: 28px;
-        }
-
-
-        .sg1-chinatown-detail img {
-            max-height: 360px;
-        }
-
-
-        /* =================================================
+        /* =====================================================
            SENTOSA
-        ================================================== */
+        ====================================================== */
 
         .sg1-sentosa {
-            padding: 98px 0 105px;
 
-            background: #e8e3d8;
+            padding: 90px 0 98px;
+
+            border-top: 1px solid var(--line);
+
         }
 
 
         .sg1-sentosa-head {
+
             display: grid;
 
             grid-template-columns:
                 .7fr
                 1.3fr;
 
-            gap: 80px;
+            gap: 75px;
 
-            margin-bottom: 45px;
+            margin-bottom: 42px;
+
         }
 
 
         .sg1-sentosa h2 {
+
             margin: 0;
 
             font-family:
@@ -987,32 +1056,40 @@
                 serif;
 
             font-size:
-                clamp(52px, 6vw, 82px);
+                clamp(50px, 5.8vw, 80px);
 
             font-weight: 500;
 
             line-height: .9;
 
             letter-spacing: -.04em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-sentosa-image {
-            max-width: 980px;
+
+            max-width: 880px;
 
             margin: 0 auto;
+
         }
 
 
         .sg1-sentosa-image img {
-            max-height: 600px;
+
+            max-height: 500px;
+
         }
 
 
         .sg1-sentosa-note {
-            max-width: 720px;
 
-            margin: 26px auto 0;
+            max-width: 700px;
+
+            margin: 25px auto 0;
 
             font-family:
                 "Cormorant Garamond",
@@ -1024,38 +1101,53 @@
             line-height: 1.35;
 
             text-align: center;
+
+            color: var(--ink);
+
         }
 
 
-        /* =================================================
+        /* =====================================================
            FAMILY
-        ================================================== */
+        ====================================================== */
 
         .sg1-family {
-            padding: 105px 0;
+
+            padding: 94px 0;
+
+            background: var(--paper-light);
+
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+
         }
 
 
         .sg1-family-grid {
+
             display: grid;
 
             grid-template-columns:
-                1.2fr
-                .8fr;
+                1.15fr
+                .85fr;
 
-            gap: 55px;
+            gap: 52px;
 
             align-items: center;
+
         }
 
 
         .sg1-family-copy {
-            padding-right: 30px;
+
+            padding-right: 25px;
+
         }
 
 
         .sg1-family-copy h2 {
-            margin: 0 0 25px;
+
+            margin: 0 0 22px;
 
             font-family:
                 "Cormorant Garamond",
@@ -1063,27 +1155,33 @@
                 serif;
 
             font-size:
-                clamp(50px, 5.5vw, 78px);
+                clamp(50px, 5.5vw, 76px);
 
             font-weight: 500;
 
             line-height: .92;
 
             letter-spacing: -.04em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-family-image img {
-            max-height: 520px;
+
+            max-height: 470px;
+
         }
 
 
         .sg1-family-quote {
-            margin: 30px 0 0;
 
-            padding-left: 22px;
+            margin: 27px 0 0;
 
-            border-left: 2px solid #a99b72;
+            padding-left: 20px;
+
+            border-left: 2px solid #aaa18f;
 
             font-family:
                 "Cormorant Garamond",
@@ -1093,38 +1191,41 @@
             font-size: 24px;
 
             line-height: 1.35;
+
+            color: var(--ink);
+
         }
 
 
-        /* =================================================
-           BASE / CHANGI
-        ================================================== */
+        /* =====================================================
+           TROPICAL LIFE
+        ====================================================== */
 
-        .sg1-base {
-            padding: 94px 0;
+        .sg1-tropical {
 
-            background: var(--sg-paper-light);
+            padding: 88px 0;
 
-            border-top: 1px solid var(--sg-line);
-            border-bottom: 1px solid var(--sg-line);
         }
 
 
-        .sg1-base-grid {
+        .sg1-tropical-grid {
+
             display: grid;
 
             grid-template-columns:
                 .8fr
                 1.2fr;
 
-            gap: 55px;
+            gap: 52px;
 
             align-items: center;
+
         }
 
 
-        .sg1-base h2 {
-            margin: 0 0 24px;
+        .sg1-tropical h2 {
+
+            margin: 0 0 23px;
 
             font-family:
                 "Cormorant Garamond",
@@ -1139,37 +1240,108 @@
             line-height: .94;
 
             letter-spacing: -.035em;
+
+            color: var(--ink);
+
+        }
+
+
+        .sg1-tropical-image img {
+
+            max-height: 430px;
+
+        }
+
+
+        /* =====================================================
+           CHANGI / BASE
+        ====================================================== */
+
+        .sg1-base {
+
+            padding: 88px 0;
+
+            background: var(--paper-light);
+
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+
+        }
+
+
+        .sg1-base-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                .8fr
+                1.2fr;
+
+            gap: 52px;
+
+            align-items: center;
+
+        }
+
+
+        .sg1-base h2 {
+
+            margin: 0 0 23px;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(48px, 5.2vw, 72px);
+
+            font-weight: 500;
+
+            line-height: .94;
+
+            letter-spacing: -.035em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-base-image img {
-            max-height: 470px;
+
+            max-height: 430px;
+
         }
 
 
-        /* =================================================
-           THREE DAYS
-        ================================================== */
+        /* =====================================================
+           OUR SINGAPORE
+        ====================================================== */
 
-        .sg1-three-days {
-            padding: 100px 0;
+        .sg1-days {
+
+            padding: 90px 0;
+
         }
 
 
-        .sg1-three-days-head {
+        .sg1-days-head {
+
             display: grid;
 
             grid-template-columns:
                 .75fr
                 1.25fr;
 
-            gap: 80px;
+            gap: 75px;
 
-            margin-bottom: 48px;
+            margin-bottom: 45px;
+
         }
 
 
-        .sg1-three-days h2 {
+        .sg1-days h2 {
+
             margin: 0;
 
             font-family:
@@ -1178,63 +1350,78 @@
                 serif;
 
             font-size:
-                clamp(48px, 5vw, 72px);
+                clamp(48px, 5vw, 70px);
 
             font-weight: 500;
 
             line-height: .94;
 
             letter-spacing: -.035em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-day-grid {
+
             display: grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 22px;
+            gap: 20px;
+
         }
 
 
         .sg1-day {
-            padding: 27px 24px 30px;
 
-            background: var(--sg-paper-light);
+            padding: 25px 22px 28px;
 
-            border-top: 1px solid var(--sg-line);
+            background: var(--paper-light);
+
+            border-top: 1px solid var(--line);
+
         }
 
 
         .sg1-day-number {
-            margin-bottom: 17px;
+
+            margin-bottom: 15px;
 
             font-family: Inter, sans-serif;
 
             font-size: 9px;
+            font-weight: 500;
 
-            letter-spacing: .17em;
+            letter-spacing: .16em;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
         .sg1-day h3 {
-            margin: 0 0 12px;
+
+            margin: 0 0 11px;
 
             font-family:
                 "Cormorant Garamond",
                 Georgia,
                 serif;
 
-            font-size: 30px;
+            font-size: 29px;
 
             font-weight: 500;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-day p {
+
             margin: 0;
 
             font-family: Inter, sans-serif;
@@ -1244,36 +1431,43 @@
 
             line-height: 1.7;
 
-            color: var(--sg-muted);
+            color: var(--muted);
+
         }
 
 
-        /* =================================================
+        /* =====================================================
            COLLECTION
-        ================================================== */
+        ====================================================== */
 
         .sg1-collection {
-            padding: 88px 0 100px;
 
-            background: var(--sg-dark);
+            padding: 82px 0 90px;
 
-            color: var(--sg-dark-text);
+            border-top: 1px solid var(--line);
+
+            background: var(--paper-light);
+
         }
 
 
         .sg1-collection-head {
+
             display: flex;
 
             align-items: end;
+
             justify-content: space-between;
 
-            gap: 40px;
+            gap: 30px;
 
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+
         }
 
 
         .sg1-collection-head h2 {
+
             margin: 0;
 
             font-family:
@@ -1282,67 +1476,80 @@
                 serif;
 
             font-size:
-                clamp(48px, 5.5vw, 76px);
+                clamp(48px, 5.2vw, 72px);
 
             font-weight: 500;
 
             line-height: .92;
 
             letter-spacing: -.04em;
+
+            color: var(--ink);
+
         }
 
 
         .sg1-collection-count {
+
             font-family: Inter, sans-serif;
 
             font-size: 9px;
             font-weight: 500;
 
-            letter-spacing: .16em;
+            letter-spacing: .15em;
 
             text-transform: uppercase;
 
-            color: #aaa69d;
+            color: var(--muted);
+
         }
 
 
         .sg1-collection-grid {
+
             display: grid;
 
             grid-template-columns:
                 repeat(4, 1fr);
 
             gap: 9px;
+
         }
 
 
         .sg1-collection-grid img {
+
             display: block;
 
             width: 100%;
             height: auto;
+
         }
 
 
-        /* =================================================
+        /* =====================================================
            END
-        ================================================== */
+        ====================================================== */
 
         .sg1-end {
-            padding: 60px 0;
+
+            padding: 55px 0;
 
             display: flex;
 
             align-items: center;
+
             justify-content: space-between;
 
             gap: 30px;
 
-            background: var(--sg-paper);
+            background: var(--paper);
+
         }
 
 
         .sg1-end a {
+
             font-family: Inter, sans-serif;
 
             font-size: 10px;
@@ -1351,24 +1558,30 @@
             letter-spacing: .12em;
 
             text-transform: uppercase;
+
+            color: var(--ink);
+
         }
 
 
-        /* =================================================
+        /* =====================================================
            MOBILE
-        ================================================== */
+        ====================================================== */
 
         @media (max-width: 760px) {
 
 
             .sg1 .container {
+
                 width: calc(100% - 36px);
+
             }
 
 
             /* HERO */
 
             .sg1-hero {
+
                 display: flex;
 
                 flex-direction: column;
@@ -1376,82 +1589,91 @@
                 width: 100%;
 
                 margin-top: 0;
-            }
 
-
-            .sg1-hero-image {
-                min-height: 0;
             }
 
 
             .sg1-hero-image img {
+
                 width: 100%;
 
                 max-height: none;
+
             }
 
 
             .sg1-hero-copy {
+
                 padding:
                     34px
                     20px
-                    42px;
+                    40px;
+
             }
 
 
             .sg1-hero-copy h1 {
+
                 font-size: 60px;
+
             }
 
 
             .sg1-hero-subtitle {
-                margin-top: 16px;
+
+                margin-top: 15px;
 
                 font-size: 24px;
+
             }
 
 
-            .sg1-hero-copy .sg-copy {
-                margin-top: 20px;
+            .sg1-hero-copy .copy {
+
+                margin-top: 19px;
 
                 font-size: 14px;
 
                 line-height: 1.7;
-            }
 
-
-            .sg1-hero-note {
-                margin-top: 27px;
             }
 
 
             /* GLANCE */
 
             .sg1-glance {
+
                 width: 100%;
 
                 grid-template-columns:
                     repeat(2, 1fr);
+
             }
 
 
             .sg1-glance-item {
-                min-height: 103px;
 
-                padding: 20px 18px;
+                min-height: 101px;
 
-                border-bottom: 1px solid var(--sg-line);
+                padding: 20px 17px;
+
+                border-bottom: 1px solid var(--line);
+
             }
 
 
             .sg1-glance-item:nth-child(2) {
+
                 border-right: none;
+
             }
 
 
             .sg1-glance-item:nth-child(3),
             .sg1-glance-item:nth-child(4) {
+
                 border-bottom: none;
+
             }
 
 
@@ -1459,318 +1681,383 @@
 
             .sg1-intro,
             .sg1-city,
+            .sg1-hotels,
             .sg1-green,
             .sg1-marina,
             .sg1-evening,
-            .sg1-chinatown,
             .sg1-sentosa,
             .sg1-family,
+            .sg1-tropical,
             .sg1-base,
-            .sg1-three-days,
+            .sg1-days,
             .sg1-collection {
-                padding-top: 68px;
-                padding-bottom: 68px;
+
+                padding-top: 66px;
+
+                padding-bottom: 66px;
+
             }
 
 
             .sg1-intro-grid,
-            .sg1-places-intro,
+            .sg1-hotels-intro,
             .sg1-green-feature,
             .sg1-marina-head,
             .sg1-evening-intro,
-            .sg1-chinatown-grid,
             .sg1-sentosa-head,
             .sg1-family-grid,
+            .sg1-tropical-grid,
             .sg1-base-grid,
-            .sg1-three-days-head {
+            .sg1-days-head {
+
                 display: block;
+
             }
 
 
             .sg1-intro-right {
+
                 margin-top: 25px;
+
             }
 
 
-            .sg1 .sg-lead {
+            .sg1 .lead {
+
                 font-size: 22px;
+
             }
 
 
-            .sg1 .sg-copy {
+            .sg1 .copy {
+
                 font-size: 14px;
+
             }
 
 
             /* CITY */
 
             .sg1-city-feature {
+
                 display: flex;
 
                 flex-direction: column;
 
                 gap: 0;
+
             }
 
 
             .sg1-city-image img {
+
                 max-height: none;
+
             }
 
 
             .sg1-city-copy {
+
                 padding:
-                    30px
-                    22px
-                    34px;
+                    29px
+                    21px
+                    33px;
+
             }
 
 
             .sg1-city-copy h3 {
+
                 font-size: 32px;
+
             }
 
 
             .sg1-city-strip {
+
                 grid-template-columns: 1fr;
 
-                gap: 34px;
+                gap: 31px;
 
-                margin-top: 34px;
+                margin-top: 31px;
+
             }
 
 
-            .sg1-city-strip .sg-image img {
+            .sg1-city-strip .image img {
+
                 max-height: none;
+
             }
 
 
-            /* PLACES */
+            /* HOTELS */
 
-            .sg1-places {
-                padding-top: 68px;
-                padding-bottom: 68px;
+            .sg1-hotels-intro {
+
+                margin-bottom: 37px;
+
             }
 
 
-            .sg1-places-intro {
-                margin-bottom: 38px;
-            }
+            .sg1-hotel-grid {
 
-
-            .sg1-place-grid {
                 grid-template-columns: 1fr;
 
-                gap: 34px;
+                gap: 32px;
+
             }
 
 
             /* GREEN */
 
             .sg1-green-copy {
+
                 padding-right: 0;
 
-                margin-bottom: 34px;
+                margin-bottom: 31px;
+
             }
 
 
-            .sg1-green-feature .sg-image img,
-            .sg1-green-gallery .sg-image img {
+            .sg1-green-feature .image img,
+            .sg1-green-gallery .image img {
+
                 max-height: none;
+
             }
 
 
             .sg1-green-gallery {
+
                 grid-template-columns: 1fr;
 
-                gap: 14px;
+                gap: 13px;
 
-                margin-top: 32px;
+                margin-top: 30px;
+
             }
 
 
             /* MARINA */
 
             .sg1-marina-head {
-                margin-bottom: 35px;
+
+                margin-bottom: 33px;
+
             }
 
 
             .sg1-marina-grid {
+
                 display: flex;
 
                 flex-direction: column;
 
-                gap: 14px;
+                gap: 13px;
+
             }
 
 
             .sg1-marina-side {
+
                 display: flex;
 
                 flex-direction: column;
 
-                gap: 14px;
+                gap: 13px;
+
             }
 
 
             .sg1-marina-main img,
             .sg1-marina-side img,
             .sg1-marina-full img {
+
                 max-height: none;
+
             }
 
 
             .sg1-marina-full {
-                margin-top: 14px;
+
+                margin-top: 13px;
+
             }
 
 
             .sg1-marina-caption {
+
                 font-size: 20px;
+
             }
 
 
             /* EVENINGS */
 
             .sg1-evening-intro {
-                margin-bottom: 35px;
+
+                margin-bottom: 34px;
+
             }
 
 
             .sg1-evening-grid {
+
                 grid-template-columns: 1fr;
 
-                gap: 34px;
-            }
+                gap: 31px;
 
-
-            /* CHINATOWN */
-
-            .sg1-chinatown-grid {
-                display: flex;
-
-                flex-direction: column;
-
-                gap: 35px;
-            }
-
-
-            .sg1-chinatown-main img,
-            .sg1-chinatown-detail img {
-                max-height: none;
             }
 
 
             /* SENTOSA */
 
             .sg1-sentosa-head {
-                margin-bottom: 34px;
+
+                margin-bottom: 33px;
+
             }
 
 
             .sg1-sentosa-image {
+
                 max-width: none;
+
             }
 
 
             .sg1-sentosa-image img {
+
                 max-height: none;
+
             }
 
 
             .sg1-sentosa-note {
+
                 font-size: 21px;
 
                 text-align: left;
+
             }
 
 
             /* FAMILY */
 
             .sg1-family-copy {
+
                 padding-right: 0;
 
-                margin-bottom: 35px;
+                margin-bottom: 32px;
+
             }
 
 
             .sg1-family-image img {
+
                 max-height: none;
+
             }
 
 
             .sg1-family-quote {
+
                 font-size: 21px;
+
             }
 
 
-            /* BASE */
+            /* TROPICAL / BASE */
 
-            .sg1-base-copy {
-                margin-bottom: 35px;
+            .sg1-tropical-grid > div:first-child,
+            .sg1-base-grid > div:first-child {
+
+                margin-bottom: 32px;
+
             }
 
 
+            .sg1-tropical-image img,
             .sg1-base-image img {
+
                 max-height: none;
+
             }
 
 
-            /* THREE DAYS */
+            /* DAYS */
 
-            .sg1-three-days-head {
-                margin-bottom: 35px;
+            .sg1-days-head {
+
+                margin-bottom: 34px;
+
             }
 
 
             .sg1-day-grid {
+
                 grid-template-columns: 1fr;
 
-                gap: 12px;
+                gap: 11px;
+
             }
 
 
             /* COLLECTION */
 
             .sg1-collection-head {
+
                 display: block;
 
-                margin-bottom: 30px;
+                margin-bottom: 28px;
+
             }
 
 
             .sg1-collection-count {
+
                 display: block;
 
-                margin-top: 12px;
+                margin-top: 10px;
+
             }
 
 
             .sg1-collection-grid {
+
                 grid-template-columns:
                     repeat(2, 1fr);
 
                 gap: 7px;
+
             }
 
 
             /* END */
 
             .sg1-end {
+
                 display: block;
 
-                padding: 42px 20px;
+                padding:
+                    40px
+                    20px;
+
             }
 
 
             .sg1-end a {
+
                 display: block;
+
             }
 
 
             .sg1-end a + a {
-                margin-top: 20px;
+
+                margin-top: 19px;
+
             }
 
         }
@@ -1784,7 +2071,7 @@
 
 
 <!-- =====================================================
-     EXISTING SITE HEADER — PRESERVED
+     EXISTING HEADER
 ====================================================== -->
 
 <header class="site-header">
@@ -1861,7 +2148,7 @@
 
     <div class="sg1-hero-copy">
 
-        <p class="sg-eyebrow">
+        <p class="eyebrow">
             THE EXPAT EDITS · SINGAPORE
         </p>
 
@@ -1873,7 +2160,7 @@
             Home, somewhere in Asia.
         </p>
 
-        <p class="sg-copy">
+        <p class="copy">
             Singapore has been home for us for several years.
             It is where we work, where the children are growing
             up, where we run, eat, explore and spend our weekends
@@ -1980,7 +2267,7 @@
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     OUR SINGAPORE
                 </p>
 
@@ -1993,7 +2280,7 @@
 
             <div class="sg1-intro-right">
 
-                <p class="sg-lead">
+                <p class="lead">
                     Singapore is different for us because
                     we don't arrive here with a departure date.
                     We live here.
@@ -2001,7 +2288,7 @@
 
                 <br>
 
-                <p class="sg-copy">
+                <p class="copy">
                     That changes the way we see it. The places
                     we return to are as important as the famous
                     sights. A lunchtime run, an old colonial
@@ -2022,7 +2309,7 @@
 
 
 <!-- =====================================================
-     CITY LIFE
+     THE CITY
 ====================================================== -->
 
 <section class="sg1-city">
@@ -2032,7 +2319,7 @@
         <div class="sg1-city-feature">
 
 
-            <div class="sg1-city-image sg-image">
+            <div class="sg1-city-image image">
 
                 <img
                     src="singapore6.jpeg"
@@ -2046,7 +2333,7 @@
 
             <div class="sg1-city-copy">
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     THE CITY WE LIVE IN
                 </p>
 
@@ -2054,7 +2341,7 @@
                     Work, running, architecture and the old city.
                 </h3>
 
-                <p class="sg-copy">
+                <p class="copy">
                     We spend a lot of time around the city during
                     the week. Work takes us there, lunch often
                     becomes a run, and there is always another
@@ -2072,7 +2359,7 @@
 
             <div>
 
-                <div class="sg-image">
+                <div class="image">
 
                     <img
                         src="singapore4.jpeg"
@@ -2100,7 +2387,7 @@
 
             <div>
 
-                <div class="sg-image">
+                <div class="image">
 
                     <img
                         src="singapore5.jpeg"
@@ -2128,11 +2415,11 @@
 
             <div>
 
-                <div class="sg-image">
+                <div class="image">
 
                     <img
                         src="singapore8.jpeg"
-                        alt="Singapore city detail"
+                        alt="Singapore architectural detail"
                         loading="lazy"
                         decoding="async"
                     >
@@ -2163,18 +2450,18 @@
 
 
 <!-- =====================================================
-     PLACES WE RETURN TO
+     HOTELS
 ====================================================== -->
 
-<section class="sg1-places">
+<section class="sg1-hotels">
 
     <div class="container">
 
-        <div class="sg1-places-intro">
+        <div class="sg1-hotels-intro">
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     PLACES WE RETURN TO
                 </p>
 
@@ -2187,10 +2474,10 @@
 
             <div>
 
-                <p class="sg-lead">
+                <p class="lead">
                     We don't only use hotels when we are travelling.
-                    Some of them have become places we return to simply
-                    because we enjoy being there.
+                    Some of them have become places we return to
+                    simply because we enjoy being there.
                 </p>
 
             </div>
@@ -2198,18 +2485,18 @@
         </div>
 
 
-        <div class="sg1-place-grid">
+        <div class="sg1-hotel-grid">
 
 
-            <article class="sg1-place">
+            <article class="sg1-hotel">
 
                 <h3>
                     Raffles
                 </h3>
 
                 <p>
-                    The courtyard is one of our favourite places to
-                    slow down in the middle of the city. Colonial
+                    The courtyard is one of our favourite places
+                    to slow down in the middle of the city. Colonial
                     Singapore, drinks and an atmosphere that never
                     feels rushed.
                 </p>
@@ -2217,7 +2504,7 @@
             </article>
 
 
-            <article class="sg1-place">
+            <article class="sg1-hotel">
 
                 <h3>
                     The Singapore Edition
@@ -2233,7 +2520,7 @@
             </article>
 
 
-            <article class="sg1-place">
+            <article class="sg1-hotel">
 
                 <h3>
                     Hyatt on Scott's
@@ -2270,7 +2557,7 @@
 
             <div class="sg1-green-copy">
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     THE GREEN CITY
                 </p>
 
@@ -2278,7 +2565,7 @@
                     Singapore is greener than you expect.
                 </h2>
 
-                <p class="sg-copy">
+                <p class="copy">
                     For all the glass and concrete, some of our
                     favourite parts of Singapore are the places
                     where the city disappears.
@@ -2286,7 +2573,7 @@
 
                 <br>
 
-                <p class="sg-copy">
+                <p class="copy">
                     We love exploring MacRitchie Reservoir,
                     the Botanic Gardens and Fort Canning Park,
                     and seeing how much wildlife exists alongside
@@ -2296,7 +2583,7 @@
             </div>
 
 
-            <div class="sg-image">
+            <div class="image">
 
                 <img
                     src="singapore17.jpeg"
@@ -2314,11 +2601,11 @@
         <div class="sg1-green-gallery">
 
 
-            <div class="sg-image">
+            <div class="image">
 
                 <img
                     src="singapore18.jpeg"
-                    alt="Wildlife in the trees in Singapore"
+                    alt="Snake in the trees in Singapore"
                     loading="lazy"
                     decoding="async"
                 >
@@ -2326,11 +2613,11 @@
             </div>
 
 
-            <div class="sg-image">
+            <div class="image">
 
                 <img
                     src="singapore19.jpeg"
-                    alt="Monitor lizards in Singapore"
+                    alt="Monitor lizards by the water in Singapore"
                     loading="lazy"
                     decoding="async"
                 >
@@ -2338,11 +2625,11 @@
             </div>
 
 
-            <div class="sg-image">
+            <div class="image">
 
                 <img
                     src="singapore21.jpeg"
-                    alt="Wildlife in Singapore"
+                    alt="Snake in Singapore"
                     loading="lazy"
                     decoding="async"
                 >
@@ -2372,7 +2659,7 @@
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     MARINA BAY
                 </p>
 
@@ -2384,12 +2671,12 @@
             </div>
 
 
-            <p class="sg-copy">
+            <p class="copy">
                 Marina Bay is one of those parts of Singapore
                 that can still feel special even when you know
-                it well. There are plenty of places to stop for
-                a drink, watch the skyline change and let the
-                evening begin.
+                it well. We like coming here as the light changes,
+                watching the skyline come alive and stopping for
+                a drink along the water.
             </p>
 
 
@@ -2399,11 +2686,11 @@
         <div class="sg1-marina-grid">
 
 
-            <div class="sg1-marina-main sg-image">
+            <div class="sg1-marina-main image">
 
                 <img
                     src="singapore3.jpeg"
-                    alt="Marina Bay surrounded by tropical greenery"
+                    alt="Marina Bay Sands framed by flowers"
                     loading="lazy"
                     decoding="async"
                 >
@@ -2414,11 +2701,11 @@
             <div class="sg1-marina-side">
 
 
-                <div class="sg-image">
+                <div class="image">
 
                     <img
-                        src="singapore12.jpeg"
-                        alt="Singapore skyline at night"
+                        src="singapore13.jpeg"
+                        alt="Marina Bay Sands at night"
                         loading="lazy"
                         decoding="async"
                     >
@@ -2426,11 +2713,11 @@
                 </div>
 
 
-                <div class="sg-image">
+                <div class="image">
 
                     <img
-                        src="singapore13.jpeg"
-                        alt="Merlion and Marina Bay Sands at night"
+                        src="singapore14.jpeg"
+                        alt="Singapore waterfront at night"
                         loading="lazy"
                         decoding="async"
                     >
@@ -2446,11 +2733,11 @@
 
         <div class="sg1-marina-full">
 
-            <div class="sg-image">
+            <div class="image">
 
                 <img
-                    src="singapore14.jpeg"
-                    alt="Singapore waterfront at night"
+                    src="singapore12.jpeg"
+                    alt="Singapore city detail"
                     loading="lazy"
                     decoding="async"
                 >
@@ -2463,28 +2750,6 @@
             </p>
 
         </div>
-
-
-        <div class="sg1-marina-full">
-
-            <div class="sg-image">
-
-                <img
-                    src="singapore15.jpeg"
-                    alt="DJing by the waterfront in Singapore"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
-
-            <p class="sg1-marina-caption">
-                Living here has also given the children memories
-                that simply wouldn't have happened anywhere else.
-            </p>
-
-        </div>
-
 
     </div>
 
@@ -2506,7 +2771,7 @@
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     EATING &amp; DRINKING
                 </p>
 
@@ -2517,7 +2782,7 @@
             </div>
 
 
-            <p class="sg-lead">
+            <p class="lead">
                 Singapore makes an evening out remarkably easy.
                 There is always another bar, restaurant or street
                 worth exploring.
@@ -2583,70 +2848,6 @@
 
 
 <!-- =====================================================
-     CHINATOWN
-====================================================== -->
-
-<section class="sg1-chinatown">
-
-    <div class="container">
-
-
-        <div class="sg1-chinatown-grid">
-
-
-            <div class="sg1-chinatown-main sg-image">
-
-                <img
-                    src="singapore7.jpeg"
-                    alt="Singapore at sunset"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
-
-
-            <div class="sg1-chinatown-copy">
-
-                <p class="sg-eyebrow">
-                    WHEN FRIENDS COME TO VISIT
-                </p>
-
-                <h2>
-                    Chinatown in the evening.
-                </h2>
-
-                <p class="sg-copy">
-                    Chinatown and the surrounding streets are
-                    great to walk around after dark. We also like
-                    taking visiting friends and family here to find
-                    local, authentic gifts to take home.
-                </p>
-
-
-                <div class="sg1-chinatown-detail sg-image">
-
-                    <img
-                        src="singapore22.jpeg"
-                        alt="Durian fruit in Singapore"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
      SENTOSA
 ====================================================== -->
 
@@ -2660,7 +2861,7 @@
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     WEEKENDS
                 </p>
 
@@ -2671,7 +2872,7 @@
             </div>
 
 
-            <p class="sg-copy">
+            <p class="copy">
                 We love getting down to Sentosa with the children.
                 The best time for us is usually towards sunset,
                 when the heat begins to ease and the whole island
@@ -2684,10 +2885,10 @@
 
         <div class="sg1-sentosa-image">
 
-            <div class="sg-image">
+            <div class="image">
 
                 <img
-                    src="singapore2.jpeg"
+                    src="singapore7.jpeg"
                     alt="Sentosa beach at sunset"
                     loading="lazy"
                     decoding="async"
@@ -2712,7 +2913,7 @@
 
 
 <!-- =====================================================
-     FAMILY LIFE
+     FAMILY
 ====================================================== -->
 
 <section class="sg1-family">
@@ -2725,7 +2926,7 @@
 
             <div class="sg1-family-copy">
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     GROWING UP HERE
                 </p>
 
@@ -2733,7 +2934,7 @@
                     More than travel.
                 </h2>
 
-                <p class="sg-copy">
+                <p class="copy">
                     Living in Singapore has given our children
                     experiences that go far beyond the trips we
                     take. They have grown up surrounded by a
@@ -2753,7 +2954,7 @@
             </div>
 
 
-            <div class="sg1-family-image sg-image">
+            <div class="sg1-family-image image">
 
                 <img
                     src="singapore15.jpeg"
@@ -2777,17 +2978,17 @@
      TROPICAL LIFE
 ====================================================== -->
 
-<section class="sg1-base">
+<section class="sg1-tropical">
 
     <div class="container">
 
 
-        <div class="sg1-base-grid">
+        <div class="sg1-tropical-grid">
 
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     THE PLEASURES OF HOME
                 </p>
 
@@ -2795,7 +2996,7 @@
                     A tropical life has its advantages.
                 </h2>
 
-                <p class="sg-copy">
+                <p class="copy">
                     We are lucky enough to grow bananas in our garden
                     and love the exotic fruit that Asia puts within
                     easy reach. It is one of the smaller pleasures
@@ -2806,7 +3007,7 @@
             </div>
 
 
-            <div class="sg1-base-image sg-image">
+            <div class="sg1-tropical-image image">
 
                 <img
                     src="singapore20.jpeg"
@@ -2827,20 +3028,20 @@
 
 
 <!-- =====================================================
-     SINGAPORE AS A BASE
+     CHANGI / SINGAPORE AS A BASE
 ====================================================== -->
 
-<section class="sg1-three-days">
+<section class="sg1-base">
 
     <div class="container">
 
 
-        <div class="sg1-three-days-head">
+        <div class="sg1-base-grid">
 
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     SINGAPORE AS A BASE
                 </p>
 
@@ -2850,23 +3051,66 @@
                     to travel from.
                 </h2>
 
+                <p class="copy">
+                    One of the great advantages of living here
+                    is how easy it is to leave for the weekend.
+                    Changi makes travelling around Asia feel
+                    remarkably straightforward.
+                </p>
+
+            </div>
+
+
+            <div class="sg1-base-image image">
+
+                <img
+                    src="singapore9.jpeg"
+                    alt="Singapore garden and city detail"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OUR SINGAPORE
+====================================================== -->
+
+<section class="sg1-days">
+
+    <div class="container">
+
+
+        <div class="sg1-days-head">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    OUR SINGAPORE
+                </p>
+
+                <h2>
+                    How we'd spend a weekend.
+                </h2>
+
             </div>
 
 
             <div>
 
-                <p class="sg-lead">
-                    One of the great advantages of living here
-                    is how easy it is to leave for the weekend.
-                </p>
-
-                <br>
-
-                <p class="sg-copy">
-                    Changi makes travelling around Asia feel
-                    remarkably straightforward. We can spend
-                    Saturday morning in Singapore and be somewhere
-                    completely different by the afternoon.
+                <p class="lead">
+                    This isn't a checklist. It's simply the
+                    rhythm that works for us.
                 </p>
 
             </div>
@@ -2885,14 +3129,13 @@
                 </div>
 
                 <h3>
-                    Stay close to the centre.
+                    Start in the centre.
                 </h3>
 
                 <p>
-                    Spend the morning exploring the city, walk
-                    through the Botanic Gardens or Fort Canning,
-                    then settle into one of the hotels we return
-                    to for an afternoon by the pool.
+                    Walk through the city, explore the architecture,
+                    take in the Botanic Gardens or Fort Canning and
+                    settle somewhere good for lunch.
                 </p>
 
             </article>
@@ -2924,14 +3167,13 @@
                 </div>
 
                 <h3>
-                    Leave the city behind.
+                    Head for Sentosa.
                 </h3>
 
                 <p>
-                    Sentosa, Tanjong Beach Club and a slow walk
-                    along the beach are often all that is needed
-                    to make Singapore feel like a holiday without
-                    actually going anywhere.
+                    Spend the afternoon by the water, stay through
+                    sunset and let the evening develop without
+                    needing much more of a plan.
                 </p>
 
             </article>
@@ -2946,7 +3188,7 @@
 
 
 <!-- =====================================================
-     COLLECTION
+     PHOTOGRAPHIC COLLECTION
 ====================================================== -->
 
 <section class="sg1-collection">
@@ -2958,7 +3200,7 @@
 
             <div>
 
-                <p class="sg-eyebrow">
+                <p class="eyebrow">
                     FROM OUR CAMERA
                 </p>
 
@@ -2970,7 +3212,7 @@
 
 
             <div class="sg1-collection-count">
-                22 photographs from home
+                The photographs that didn't need a story
             </div>
 
         </div>
@@ -2978,54 +3220,6 @@
 
         <div class="sg1-collection-grid">
 
-
-            <img
-                src="singapore2.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore3.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore4.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore5.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore6.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore7.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore8.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore9.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
 
             <img
                 src="singapore10.jpeg"
@@ -3040,68 +3234,14 @@
             >
 
             <img
-                src="singapore12.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore13.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore14.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore15.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
                 src="singapore16.jpeg"
                 alt="Singapore"
                 loading="lazy"
             >
 
             <img
-                src="singapore17.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore18.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore19.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore20.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
-                src="singapore21.jpeg"
-                alt="Singapore"
-                loading="lazy"
-            >
-
-            <img
                 src="singapore22.jpeg"
-                alt="Singapore"
+                alt="Durian fruit in Singapore"
                 loading="lazy"
             >
 
@@ -3142,7 +3282,7 @@
 
 
 <!-- =====================================================
-     EXISTING SITE FOOTER — PRESERVED
+     EXISTING FOOTER
 ====================================================== -->
 
 <footer class="site-footer">

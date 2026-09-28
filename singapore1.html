@@ -49,41 +49,89 @@
         href="style-editions-new.css"
     >
 
-    <!--
-        SINGAPORE 1
-        Small page-specific corrections only.
-        The main design remains controlled by the master CSS.
-    -->
+
+    <!-- =====================================================
+         SINGAPORE 1 — SMALL PAGE-SPECIFIC OVERRIDES
+    ====================================================== -->
 
     <style>
 
-        /* -----------------------------------------------------
-           SINGAPORE 1 COLOUR CORRECTIONS
-        ----------------------------------------------------- */
+        /* =====================================================
+           COLOUR SYSTEM
+        ===================================================== */
 
         body.edition-page {
             background: #f5f2eb;
+            color: #242320;
         }
 
-        /*
-           The new palette made this heading too close to
-           the cream background. Keep the palette, but give
-           this editorial heading enough contrast to read.
-        */
 
-        .singapore1-feature-title {
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        body.edition-page .site-header {
+            background: #f5f2eb !important;
+            color: #242320 !important;
+            border-bottom: 1px solid rgba(36,35,32,.16) !important;
+        }
+
+        body.edition-page .site-header a,
+        body.edition-page .site-logo {
+            color: #242320 !important;
+        }
+
+        body.edition-page .menu-toggle span {
+            background: #c8a34a !important;
+        }
+
+
+        /* =====================================================
+           TYPOGRAPHY
+        ===================================================== */
+
+        body.edition-page h1,
+        body.edition-page h2,
+        body.edition-page h3 {
+            color: #242320 !important;
+        }
+
+        body.edition-page .edition-intro h2,
+        body.edition-page .section-heading h2,
+        body.edition-page .edition-recommendation h3,
+        body.edition-page .singapore1-story-copy h2,
+        body.edition-page .singapore1-note h3 {
             color: #242320 !important;
         }
 
 
-        /* -----------------------------------------------------
-           HERO
-        ----------------------------------------------------- */
+        /* =====================================================
+           GOLD LABELS
+        ===================================================== */
 
-        /*
-           Keep the established Edition hero structure so the
-           existing blended image treatment remains intact.
-        */
+        body.edition-page .section-label,
+        body.edition-page .eyebrow {
+            color: #c8a34a !important;
+        }
+
+
+        /* =====================================================
+           BODY COPY
+        ===================================================== */
+
+        body.edition-page p {
+            color: #57554f;
+        }
+
+        body.edition-page .section-label,
+        body.edition-page .eyebrow {
+            font-weight: 500;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
 
         .singapore1-hero {
             background-position: center center;
@@ -91,9 +139,9 @@
         }
 
 
-        /* -----------------------------------------------------
+        /* =====================================================
            EDITORIAL STORY
-        ----------------------------------------------------- */
+        ===================================================== */
 
         .singapore1-story {
             padding: 90px 0;
@@ -140,7 +188,7 @@
             font-size: clamp(44px, 5vw, 72px);
             line-height: 1;
             font-weight: 500;
-            color: #242320;
+            color: #242320 !important;
         }
 
         .singapore1-story-copy p {
@@ -153,9 +201,9 @@
         }
 
 
-        /* -----------------------------------------------------
+        /* =====================================================
            TWO IMAGE STORY
-        ----------------------------------------------------- */
+        ===================================================== */
 
         .singapore1-pair {
             max-width: 1180px;
@@ -173,9 +221,9 @@
         }
 
 
-        /* -----------------------------------------------------
-           SIMPLE FULL IMAGE
-        ----------------------------------------------------- */
+        /* =====================================================
+           FULL IMAGE
+        ===================================================== */
 
         .singapore1-full-image {
             max-width: 1180px;
@@ -190,9 +238,9 @@
         }
 
 
-        /* -----------------------------------------------------
+        /* =====================================================
            NOTES
-        ----------------------------------------------------- */
+        ===================================================== */
 
         .singapore1-notes {
             padding: 90px 0;
@@ -214,7 +262,7 @@
             font-size: 38px;
             line-height: 1;
             font-weight: 500;
-            color: #242320;
+            color: #242320 !important;
         }
 
         .singapore1-note p {
@@ -227,9 +275,9 @@
         }
 
 
-        /* -----------------------------------------------------
+        /* =====================================================
            MOBILE
-        ----------------------------------------------------- */
+        ===================================================== */
 
         @media (max-width: 760px) {
 
@@ -446,7 +494,7 @@
                     THE CITY
                 </p>
 
-                <h2 class="singapore1-feature-title">
+                <h2>
                     A city that rewards looking up.
                 </h2>
 

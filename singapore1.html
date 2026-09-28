@@ -26,7 +26,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.gstatic.com"
+        href="https://fonts.googleapis.com"
         crossorigin
     >
 
@@ -49,75 +49,30 @@
         href="style-editions-new.css"
     >
 
-
-    <!-- =====================================================
-         SINGAPORE 1 — EDITION OVERRIDES
-    ====================================================== -->
+    <!--
+        SINGAPORE 1
+        Small page-specific corrections only.
+        The main design remains controlled by the master CSS.
+    -->
 
     <style>
 
         /* -----------------------------------------------------
-           COLOUR SYSTEM
+           SINGAPORE 1 COLOUR CORRECTIONS
         ----------------------------------------------------- */
 
         body.edition-page {
             background: #f5f2eb;
-            color: #242320;
         }
 
-        body.edition-page .site-header {
-            background: #f5f2eb;
-            color: #242320;
-            border-bottom: 1px solid rgba(36,35,32,.16);
-        }
+        /*
+           The new palette made this heading too close to
+           the cream background. Keep the palette, but give
+           this editorial heading enough contrast to read.
+        */
 
-        body.edition-page .site-header a {
-            color: #242320;
-        }
-
-        body.edition-page .site-logo {
-            color: #242320;
-        }
-
-
-        /* -----------------------------------------------------
-           GENERAL
-        ----------------------------------------------------- */
-
-        .sg-section {
-            padding: 100px 0;
-            background: #f5f2eb;
-        }
-
-        .sg-container {
-            width: min(1180px, calc(100% - 80px));
-            margin: 0 auto;
-        }
-
-        .sg-eyebrow {
-            margin: 0 0 18px;
-            font-family: Inter, sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: .22em;
-            text-transform: uppercase;
-            color: #706e68;
-        }
-
-        .sg-title {
-            margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-weight: 500;
-            color: #242320;
-            line-height: .95;
-        }
-
-        .sg-copy {
-            font-family: Inter, sans-serif;
-            font-size: 16px;
-            line-height: 1.85;
-            font-weight: 300;
-            color: #55534e;
+        .singapore1-feature-title {
+            color: #242320 !important;
         }
 
 
@@ -125,181 +80,70 @@
            HERO
         ----------------------------------------------------- */
 
-        .sg-hero {
-            position: relative;
-            background: #111;
-        }
+        /*
+           Keep the established Edition hero structure so the
+           existing blended image treatment remains intact.
+        */
 
-        .sg-hero img {
-            display: block;
-            width: 100%;
-            height: min(72vh, 780px);
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .sg-hero-content {
-            padding: 76px 0 88px;
-            background: #f5f2eb;
-        }
-
-        .sg-hero-content h1 {
-            font-size: clamp(72px, 9vw, 138px);
-            margin-bottom: 20px;
-        }
-
-        .sg-hero-subtitle {
-            margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(27px, 3vw, 43px);
-            line-height: 1.1;
-            color: #4b4944;
-        }
-
-        .sg-hero-intro {
-            max-width: 700px;
-            margin-top: 34px;
+        .singapore1-hero {
+            background-position: center center;
+            background-size: cover;
         }
 
 
         /* -----------------------------------------------------
-           AT A GLANCE
+           EDITORIAL STORY
         ----------------------------------------------------- */
 
-        .sg-glance {
-            border-top: 1px solid rgba(36,35,32,.18);
-            border-bottom: 1px solid rgba(36,35,32,.18);
+        .singapore1-story {
+            padding: 90px 0;
         }
 
-        .sg-glance-grid {
+        .singapore1-story-inner {
+            max-width: 1180px;
+            width: calc(100% - 80px);
+            margin: 0 auto;
+        }
+
+        .singapore1-story-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .sg-glance-item {
-            padding: 38px 30px;
-            border-right: 1px solid rgba(36,35,32,.15);
-        }
-
-        .sg-glance-item:first-child {
-            padding-left: 0;
-        }
-
-        .sg-glance-item:last-child {
-            border-right: none;
-        }
-
-        .sg-glance-label {
-            margin: 0 0 10px;
-            font-family: Inter, sans-serif;
-            font-size: 10px;
-            letter-spacing: .2em;
-            text-transform: uppercase;
-            color: #77736c;
-        }
-
-        .sg-glance-value {
-            margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 30px;
-            color: #242320;
-        }
-
-
-        /* -----------------------------------------------------
-           STORY INTRO
-        ----------------------------------------------------- */
-
-        .sg-story-intro {
-            padding-bottom: 50px;
-        }
-
-        .sg-story-intro-grid {
-            display: grid;
-            grid-template-columns: .85fr 1.15fr;
-            gap: 100px;
-            align-items: start;
-        }
-
-        .sg-story-intro h2 {
-            font-size: clamp(52px, 6vw, 82px);
-        }
-
-        .sg-story-intro-copy {
-            padding-top: 8px;
-        }
-
-
-        /* -----------------------------------------------------
-           EDITORIAL IMAGE / TEXT GRID
-        ----------------------------------------------------- */
-
-        .sg-feature {
-            display: grid;
-            grid-template-columns: 1.08fr .92fr;
-            gap: 70px;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 80px;
             align-items: center;
-            margin-bottom: 110px;
         }
 
-        .sg-feature.reverse {
-            grid-template-columns: .92fr 1.08fr;
+        .singapore1-story-grid.reverse {
+            grid-template-columns: .85fr 1.15fr;
         }
 
-        .sg-feature.reverse .sg-image {
+        .singapore1-story-grid.reverse .singapore1-story-image {
             order: 2;
         }
 
-        .sg-feature.reverse .sg-feature-copy {
+        .singapore1-story-grid.reverse .singapore1-story-copy {
             order: 1;
         }
 
-        .sg-image {
-            min-width: 0;
-        }
-
-        .sg-image-frame {
-            width: 100%;
-            background: #ebe7df;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .sg-image-frame.feature {
-            max-height: 680px;
-        }
-
-        .sg-image-frame.standard {
-            max-height: 570px;
-        }
-
-        .sg-image-frame.small {
-            max-height: 430px;
-        }
-
-        .sg-image-frame img {
+        .singapore1-story-image img {
             display: block;
             width: 100%;
             height: auto;
-            max-height: inherit;
-            object-fit: contain;
         }
 
-        .sg-feature-copy {
+        .singapore1-story-copy {
             max-width: 520px;
         }
 
-        .sg-feature-copy h2 {
+        .singapore1-story-copy h2 {
             margin: 0 0 24px;
             font-family: "Cormorant Garamond", serif;
-            font-size: clamp(42px, 4.4vw, 66px);
+            font-size: clamp(44px, 5vw, 72px);
             line-height: 1;
             font-weight: 500;
+            color: #242320;
         }
 
-        .sg-feature-copy p {
+        .singapore1-story-copy p {
             margin: 0 0 18px;
             font-family: Inter, sans-serif;
             font-size: 15px;
@@ -310,156 +154,70 @@
 
 
         /* -----------------------------------------------------
-           FULL WIDTH IMAGE
+           TWO IMAGE STORY
         ----------------------------------------------------- */
 
-        .sg-full-image {
-            margin: 20px 0 110px;
-        }
-
-        .sg-full-image-frame {
-            width: 100%;
-            max-height: 690px;
-            background: #ebe7df;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .sg-full-image-frame img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: 690px;
-            object-fit: contain;
-        }
-
-        .sg-caption {
-            max-width: 720px;
-            margin: 18px auto 0;
-            text-align: center;
-            font-family: Inter, sans-serif;
-            font-size: 13px;
-            line-height: 1.7;
-            font-weight: 300;
-            color: #77736c;
-        }
-
-
-        /* -----------------------------------------------------
-           TWO IMAGE MOMENT
-        ----------------------------------------------------- */
-
-        .sg-pair {
+        .singapore1-pair {
+            max-width: 1180px;
+            width: calc(100% - 80px);
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 24px;
-            margin: 30px 0 110px;
         }
 
-        .sg-pair .sg-image-frame {
-            max-height: 520px;
-        }
-
-
-        /* -----------------------------------------------------
-           PLACES WE RETURN TO
-        ----------------------------------------------------- */
-
-        .sg-places {
-            padding: 110px 0;
-            border-top: 1px solid rgba(36,35,32,.16);
-            border-bottom: 1px solid rgba(36,35,32,.16);
-        }
-
-        .sg-places-header {
-            max-width: 760px;
-            margin-bottom: 65px;
-        }
-
-        .sg-places-header h2 {
-            font-size: clamp(52px, 6vw, 82px);
-        }
-
-        .sg-place {
-            padding: 34px 0;
-            border-top: 1px solid rgba(36,35,32,.14);
-            display: grid;
-            grid-template-columns: .7fr 1.3fr;
-            gap: 60px;
-        }
-
-        .sg-place h3 {
-            margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 40px;
-            font-weight: 500;
-        }
-
-        .sg-place p {
-            margin: 0;
-            max-width: 650px;
-            font-family: Inter, sans-serif;
-            font-size: 15px;
-            line-height: 1.8;
-            font-weight: 300;
-            color: #57554f;
+        .singapore1-pair img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
 
         /* -----------------------------------------------------
-           FAMILY EDIT
+           SIMPLE FULL IMAGE
         ----------------------------------------------------- */
 
-        .sg-family {
-            padding: 115px 0;
+        .singapore1-full-image {
+            max-width: 1180px;
+            width: calc(100% - 80px);
+            margin: 0 auto;
         }
 
-        .sg-family-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 90px;
-            align-items: center;
-        }
-
-        .sg-family h2 {
-            font-size: clamp(52px, 6vw, 82px);
-        }
-
-        .sg-family-copy p {
-            margin: 0 0 22px;
-            font-family: Inter, sans-serif;
-            font-size: 15px;
-            line-height: 1.85;
-            font-weight: 300;
-            color: #57554f;
+        .singapore1-full-image img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
 
         /* -----------------------------------------------------
-           OUR NOTES
+           NOTES
         ----------------------------------------------------- */
 
-        .sg-notes {
-            padding: 105px 0;
+        .singapore1-notes {
+            padding: 90px 0;
             background: #ebe7df;
         }
 
-        .sg-notes-grid {
+        .singapore1-notes-grid {
+            max-width: 1180px;
+            width: calc(100% - 80px);
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 55px;
+            gap: 60px;
         }
 
-        .sg-note h3 {
-            margin: 0 0 18px;
+        .singapore1-note h3 {
+            margin: 0 0 16px;
             font-family: "Cormorant Garamond", serif;
             font-size: 38px;
+            line-height: 1;
             font-weight: 500;
+            color: #242320;
         }
 
-        .sg-note p {
+        .singapore1-note p {
             margin: 0;
             font-family: Inter, sans-serif;
             font-size: 14px;
@@ -470,277 +228,53 @@
 
 
         /* -----------------------------------------------------
-           COLLECTION
-        ----------------------------------------------------- */
-
-        .sg-collection {
-            padding: 110px 0 80px;
-        }
-
-        .sg-collection-header {
-            max-width: 700px;
-            margin-bottom: 55px;
-        }
-
-        .sg-collection-header h2 {
-            font-size: clamp(52px, 6vw, 82px);
-        }
-
-        .sg-collection-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            align-items: start;
-        }
-
-        .sg-collection-grid .sg-image-frame {
-            max-height: 430px;
-        }
-
-
-        /* -----------------------------------------------------
-           END NAVIGATION
-        ----------------------------------------------------- */
-
-        .sg-end {
-            padding: 70px 0 95px;
-            border-top: 1px solid rgba(36,35,32,.15);
-            background: #f5f2eb;
-        }
-
-        .sg-end-inner {
-            width: min(1180px, calc(100% - 80px));
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .sg-end a {
-            color: #242320;
-            text-decoration: none;
-            font-family: Inter, sans-serif;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: .16em;
-            text-transform: uppercase;
-        }
-
-
-        /* -----------------------------------------------------
-           FOOTER — MATCH THE CREAM SYSTEM
-        ----------------------------------------------------- */
-
-        body.edition-page .site-footer {
-            background: #f5f2eb;
-            color: #242320;
-            border-top: 1px solid rgba(36,35,32,.18);
-        }
-
-        body.edition-page .site-footer a,
-        body.edition-page .footer-logo,
-        body.edition-page .footer-description,
-        body.edition-page .footer-copyright {
-            color: #242320;
-        }
-
-        body.edition-page .footer-description {
-            opacity: .65;
-        }
-
-        body.edition-page .footer-copyright {
-            opacity: .5;
-        }
-
-
-        /* -----------------------------------------------------
            MOBILE
         ----------------------------------------------------- */
 
         @media (max-width: 760px) {
 
-            .sg-container {
+            .singapore1-story {
+                padding: 65px 0;
+            }
+
+            .singapore1-story-inner,
+            .singapore1-pair,
+            .singapore1-full-image,
+            .singapore1-notes-grid {
                 width: calc(100% - 42px);
             }
 
-            .sg-section {
-                padding: 72px 0;
-            }
-
-            .sg-hero img {
-                height: 62vh;
-                max-height: 620px;
-            }
-
-            .sg-hero-content {
-                padding: 52px 0 65px;
-            }
-
-            .sg-hero-content h1 {
-                font-size: 72px;
-            }
-
-            .sg-hero-subtitle {
-                font-size: 29px;
-            }
-
-            .sg-hero-intro {
-                margin-top: 25px;
-            }
-
-            .sg-copy {
-                font-size: 15px;
-                line-height: 1.75;
-            }
-
-
-            .sg-glance-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .sg-glance-item {
-                padding: 28px 18px;
-                border-bottom: 1px solid rgba(36,35,32,.15);
-            }
-
-            .sg-glance-item:nth-child(2) {
-                border-right: none;
-            }
-
-            .sg-glance-item:nth-child(3),
-            .sg-glance-item:nth-child(4) {
-                border-bottom: none;
-            }
-
-            .sg-glance-item:first-child {
-                padding-left: 0;
-            }
-
-
-            .sg-story-intro-grid {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-
-            .sg-story-intro h2 {
-                font-size: 58px;
-            }
-
-
-            .sg-feature,
-            .sg-feature.reverse {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                margin-bottom: 75px;
-            }
-
-            .sg-feature.reverse .sg-image,
-            .sg-feature.reverse .sg-feature-copy {
-                order: initial;
-            }
-
-            .sg-feature-copy {
-                max-width: none;
-            }
-
-            .sg-feature-copy h2 {
-                font-size: 48px;
-            }
-
-            .sg-image-frame.feature,
-            .sg-image-frame.standard,
-            .sg-image-frame.small {
-                max-height: none;
-            }
-
-
-            .sg-full-image {
-                margin-bottom: 75px;
-            }
-
-            .sg-full-image-frame,
-            .sg-full-image-frame img {
-                max-height: none;
-            }
-
-
-            .sg-pair {
-                grid-template-columns: 1fr;
-                gap: 18px;
-                margin-bottom: 75px;
-            }
-
-
-            .sg-places {
-                padding: 75px 0;
-            }
-
-            .sg-places-header {
-                margin-bottom: 40px;
-            }
-
-            .sg-places-header h2 {
-                font-size: 58px;
-            }
-
-            .sg-place {
-                grid-template-columns: 1fr;
-                gap: 14px;
-                padding: 28px 0;
-            }
-
-            .sg-place h3 {
-                font-size: 38px;
-            }
-
-
-            .sg-family {
-                padding: 75px 0;
-            }
-
-            .sg-family-grid {
+            .singapore1-story-grid,
+            .singapore1-story-grid.reverse {
                 grid-template-columns: 1fr;
                 gap: 35px;
             }
 
-            .sg-family h2 {
-                font-size: 58px;
+            .singapore1-story-grid.reverse .singapore1-story-image,
+            .singapore1-story-grid.reverse .singapore1-story-copy {
+                order: initial;
             }
 
-
-            .sg-notes {
-                padding: 75px 0;
+            .singapore1-story-copy {
+                max-width: none;
             }
 
-            .sg-notes-grid {
+            .singapore1-story-copy h2 {
+                font-size: 48px;
+            }
+
+            .singapore1-pair {
                 grid-template-columns: 1fr;
-                gap: 45px;
+                gap: 18px;
             }
 
-
-            .sg-collection {
-                padding: 75px 0 50px;
+            .singapore1-notes {
+                padding: 65px 0;
             }
 
-            .sg-collection-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 14px;
-            }
-
-            .sg-collection-grid .sg-image-frame {
-                max-height: none;
-            }
-
-
-            .sg-end {
-                padding: 55px 0 70px;
-            }
-
-            .sg-end-inner {
-                width: calc(100% - 42px);
-                display: flex;
-                flex-direction: column;
-                gap: 25px;
+            .singapore1-notes-grid {
+                grid-template-columns: 1fr;
+                gap: 42px;
             }
 
         }
@@ -815,33 +349,50 @@
      HERO
 ====================================================== -->
 
-<section class="sg-hero">
+<section
+    class="edition-hero singapore1-hero"
+    style="background-image: url('singaporehero.jpeg');"
+>
 
-    <img
-        src="singaporehero.jpeg"
-        alt="Singapore skyline at night"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-    >
+    <div class="edition-hero-overlay">
 
-    <div class="sg-hero-content">
+        <p class="eyebrow">
+            THE EXPAT EDITS · SINGAPORE
+        </p>
 
-        <div class="sg-container">
+        <h1>
+            Singapore
+        </h1>
 
-            <p class="sg-eyebrow">
-                THE EXPAT EDITS · SINGAPORE
+        <p class="edition-hero-subtitle">
+            Home, somewhere in Asia.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+====================================================== -->
+
+<section class="edition-intro section">
+
+    <div class="container">
+
+        <div class="edition-intro-inner">
+
+            <p class="section-label">
+                OUR HOME
             </p>
 
-            <h1 class="sg-title">
-                Singapore
-            </h1>
+            <h2>
+                A new lease on life.
+            </h2>
 
-            <p class="sg-hero-subtitle">
-                Home, somewhere in Asia.
-            </p>
-
-            <div class="sg-hero-intro sg-copy">
+            <div class="edition-intro-text">
 
                 <p>
                     Singapore has been home for us for several years.
@@ -850,73 +401,12 @@
                     and where Changi makes the rest of Asia feel remarkably close.
                 </p>
 
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     AT A GLANCE
-====================================================== -->
-
-<section class="sg-section sg-glance">
-
-    <div class="sg-container">
-
-        <div class="sg-glance-grid">
-
-            <div class="sg-glance-item">
-
-                <p class="sg-glance-label">
-                    OUR BASE
-                </p>
-
-                <p class="sg-glance-value">
-                    Singapore
-                </p>
-
-            </div>
-
-
-            <div class="sg-glance-item">
-
-                <p class="sg-glance-label">
-                    CLIMATE
-                </p>
-
-                <p class="sg-glance-value">
-                    Tropical
-                </p>
-
-            </div>
-
-
-            <div class="sg-glance-item">
-
-                <p class="sg-glance-label">
-                    BEST TIME
-                </p>
-
-                <p class="sg-glance-value">
-                    Year round
-                </p>
-
-            </div>
-
-
-            <div class="sg-glance-item">
-
-                <p class="sg-glance-label">
-                    GETTING AROUND
-                </p>
-
-                <p class="sg-glance-value">
-                    Easy
+                <p>
+                    After spending our lives living and working in the UK,
+                    moving here changed the rhythm of our family life.
+                    Singapore has become much more than the place we live.
+                    It has become the starting point for almost everything
+                    we do.
                 </p>
 
             </div>
@@ -930,31 +420,35 @@
 
 
 <!-- =====================================================
-     THE CITY WE LIVE IN
+     THE CITY
 ====================================================== -->
 
-<section class="sg-section">
+<section class="singapore1-story">
 
-    <div class="sg-container">
+    <div class="singapore1-story-inner">
 
-        <div class="sg-story-intro-grid">
+        <div class="singapore1-story-grid">
 
-            <div>
+            <div class="singapore1-story-image">
 
-                <p class="sg-eyebrow">
-                    THE CITY WE LIVE IN
+                <img
+                    src="singapore10.jpeg"
+                    alt="Singapore city and architecture"
+                    loading="eager"
+                >
+
+            </div>
+
+
+            <div class="singapore1-story-copy">
+
+                <p class="section-label">
+                    THE CITY
                 </p>
 
-                <h2 class="sg-title">
-                    Work, running,
-                    architecture
-                    and the old city.
+                <h2 class="singapore1-feature-title">
+                    A city that rewards looking up.
                 </h2>
-
-            </div>
-
-
-            <div class="sg-story-intro-copy sg-copy">
 
                 <p>
                     We spend a lot of time around the city during the week.
@@ -965,8 +459,15 @@
 
                 <p>
                     Singapore's mix of old and new is one of the things
-                    we enjoy most about living here. The modern skyline
-                    is never far from the older parts of the city.
+                    we enjoy most about living here. Glass towers,
+                    old shophouses, colonial buildings and tropical
+                    greenery all sit remarkably close together.
+                </p>
+
+                <p>
+                    This is the everyday Singapore for us — not a checklist
+                    of sights, but the city we pass through on the way to
+                    lunch, dinner or a drink.
                 </p>
 
             </div>
@@ -980,83 +481,111 @@
 
 
 <!-- =====================================================
-     CITY IMAGE
+     CITY SUPPORTING IMAGES
 ====================================================== -->
 
-<section class="sg-section" style="padding-top:20px;">
+<section class="edition-gallery section">
 
-    <div class="sg-container">
+    <div class="container">
 
-        <div class="sg-feature">
+        <div class="singapore1-pair">
 
-            <div class="sg-image">
+            <img
+                src="singapore4.jpeg"
+                alt="Singapore architecture framed by greenery"
+                loading="lazy"
+            >
 
-                <div class="sg-image-frame feature">
+            <img
+                src="singapore2.jpeg"
+                alt="Singapore skyline surrounded by tropical greenery"
+                loading="lazy"
+            >
 
-                    <img
-                        src="singapore6.jpeg"
-                        alt="Singapore skyline reflected across the water"
-                        loading="lazy"
-                        decoding="async"
-                    >
+        </div>
 
-                </div>
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LIFE BY THE WATER
+====================================================== -->
+
+<section class="singapore1-story">
+
+    <div class="singapore1-story-inner">
+
+        <div class="singapore1-story-grid reverse">
+
+            <div class="singapore1-story-image">
+
+                <img
+                    src="singapore11.jpeg"
+                    alt="DJing beside the waterfront in Singapore"
+                    loading="lazy"
+                >
 
             </div>
 
 
-            <div class="sg-feature-copy">
+            <div class="singapore1-story-copy">
 
-                <p class="sg-eyebrow">
-                    THE CITY
+                <p class="section-label">
+                    LIFE BY THE WATER
                 </p>
 
                 <h2>
-                    A city that rewards looking up.
+                    When the city lights up.
                 </h2>
 
                 <p>
-                    We never seem to tire of the architecture. Glass towers,
-                    old shophouses, colonial buildings and tropical greenery
-                    all sit remarkably close together.
+                    Around Marina Bay there are plenty of places we enjoy
+                    settling into for an evening.
                 </p>
 
                 <p>
-                    For us, this is the everyday Singapore — not a checklist
-                    of sights, but the city we pass through on the way to
-                    lunch, dinner or a drink.
+                    But some of our favourite Singapore memories aren't
+                    about the skyline at all. They are the moments that
+                    happen around it — friends visiting, evenings by the
+                    water and watching the children find their own way
+                    into the life of the city.
+                </p>
+
+                <p>
+                    Our son's DJing at Marina Bay Sands has given him
+                    confidence and created some genuinely magical memories.
+                    Those are the moments that make Singapore feel like
+                    home rather than simply somewhere we happen to live.
                 </p>
 
             </div>
 
         </div>
 
+    </div>
+
+</section>
 
 
-        <div class="sg-pair">
 
-            <div class="sg-image-frame standard">
+<!-- =====================================================
+     MARINA BAY
+====================================================== -->
 
-                <img
-                    src="singapore4.jpeg"
-                    alt="Singapore architecture framed by greenery"
-                    loading="lazy"
-                    decoding="async"
-                >
+<section class="edition-photo-story section">
 
-            </div>
+    <div class="container">
 
+        <div class="singapore1-full-image">
 
-            <div class="sg-image-frame standard">
-
-                <img
-                    src="singapore2.jpeg"
-                    alt="Marina Bay framed by tropical flowers"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
+            <img
+                src="singapore13.jpeg"
+                alt="Singapore waterfront and Marina Bay at night"
+                loading="lazy"
+            >
 
         </div>
 
@@ -1070,151 +599,82 @@
      PLACES WE RETURN TO
 ====================================================== -->
 
-<section class="sg-places">
+<section class="edition-recommendations section">
 
-    <div class="sg-container">
+    <div class="container">
 
-        <div class="sg-places-header">
+        <div class="section-heading">
 
-            <p class="sg-eyebrow">
+            <p>
                 PLACES WE RETURN TO
             </p>
 
-            <h2 class="sg-title">
+            <h2>
                 The hotels have become part of home.
             </h2>
 
-            <div class="sg-copy">
-
-                <p>
-                    We don't only use hotels when we are travelling.
-                    Some of them have become places we return to simply
-                    because we enjoy being there.
-                </p>
-
-            </div>
-
         </div>
 
 
-        <article class="sg-place">
-
-            <h3>
-                Raffles
-            </h3>
-
-            <p>
-                The courtyard is one of our favourite places to slow down
-                in the middle of the city. Colonial Singapore, drinks and
-                an atmosphere that never feels rushed.
-            </p>
-
-        </article>
+        <div class="edition-recommendations-grid">
 
 
-        <article class="sg-place">
+            <article class="edition-recommendation">
 
-            <h3>
-                The Singapore Edition
-            </h3>
-
-            <p>
-                Snacks by the pool, a swim and a game of pool in the bar.
-                It has become somewhere we enjoy spending an afternoon
-                rather than somewhere we simply stay.
-            </p>
-
-        </article>
-
-
-        <article class="sg-place">
-
-            <h3>
-                Hyatt on Scott's
-            </h3>
-
-            <p>
-                The pool bar is relaxed and easy — one of those places
-                where you can settle in for an afternoon without needing
-                much of a plan.
-            </p>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     MARINA BAY
-====================================================== -->
-
-<section class="sg-section">
-
-    <div class="sg-container">
-
-        <div class="sg-feature reverse">
-
-            <div class="sg-image">
-
-                <div class="sg-image-frame feature">
-
-                    <img
-                        src="singapore13.jpeg"
-                        alt="Marina Bay and the Merlion at night"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <div class="sg-feature-copy">
-
-                <p class="sg-eyebrow">
-                    MARINA BAY
+                <p class="story-number">
+                    01
                 </p>
 
-                <h2>
-                    When the city lights up.
-                </h2>
+                <h3>
+                    Raffles
+                </h3>
 
                 <p>
-                    Around Marina Bay there are plenty of places we enjoy
-                    settling into for an evening.
+                    The courtyard is one of our favourite places to slow
+                    down in the middle of the city. Colonial Singapore,
+                    drinks and an atmosphere that never feels rushed.
                 </p>
+
+            </article>
+
+
+            <article class="edition-recommendation">
+
+                <p class="story-number">
+                    02
+                </p>
+
+                <h3>
+                    The Singapore Edition
+                </h3>
 
                 <p>
-                    Lantern at the Fullerton Bay Hotel is one of our
-                    favourite places for a sundowner — particularly when
-                    the city begins to change from day to night.
+                    Snacks by the pool, a swim and a game of pool in the
+                    bar. It has become somewhere we enjoy spending an
+                    afternoon rather than somewhere we simply stay.
                 </p>
 
-            </div>
-
-        </div>
+            </article>
 
 
-        <div class="sg-full-image">
+            <article class="edition-recommendation">
 
-            <div class="sg-full-image-frame">
+                <p class="story-number">
+                    03
+                </p>
 
-                <img
-                    src="singapore12.jpeg"
-                    alt="Marina Bay Sands illuminated at night"
-                    loading="lazy"
-                    decoding="async"
-                >
+                <h3>
+                    Hyatt on Scott's
+                </h3>
 
-            </div>
+                <p>
+                    The pool bar is relaxed and easy — one of those places
+                    where you can settle in for an afternoon without
+                    needing much of a plan.
+                </p>
 
-            <p class="sg-caption">
-                Marina Bay is at its most atmospheric after dark.
-            </p>
+            </article>
+
 
         </div>
 
@@ -1228,31 +688,26 @@
      FOOD & NEIGHBOURHOODS
 ====================================================== -->
 
-<section class="sg-section">
+<section class="singapore1-story">
 
-    <div class="sg-container">
+    <div class="singapore1-story-inner">
 
-        <div class="sg-feature">
+        <div class="singapore1-story-grid">
 
-            <div class="sg-image">
+            <div class="singapore1-story-image">
 
-                <div class="sg-image-frame standard">
-
-                    <img
-                        src="singapore5.jpeg"
-                        alt="Singapore city life"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                </div>
+                <img
+                    src="singapore5.jpeg"
+                    alt="Singapore city life"
+                    loading="lazy"
+                >
 
             </div>
 
 
-            <div class="sg-feature-copy">
+            <div class="singapore1-story-copy">
 
-                <p class="sg-eyebrow">
+                <p class="section-label">
                     FOOD &amp; NEIGHBOURHOODS
                 </p>
 
@@ -1287,26 +742,32 @@
      GREEN SINGAPORE
 ====================================================== -->
 
-<section class="sg-section">
+<section class="singapore1-story">
 
-    <div class="sg-container">
+    <div class="singapore1-story-inner">
 
-        <div class="sg-story-intro-grid">
+        <div class="singapore1-story-grid reverse">
 
-            <div>
+            <div class="singapore1-story-image">
 
-                <p class="sg-eyebrow">
-                    GREEN SINGAPORE
-                </p>
-
-                <h2 class="sg-title">
-                    The jungle is never very far away.
-                </h2>
+                <img
+                    src="singapore17.jpeg"
+                    alt="Wildlife in Singapore"
+                    loading="lazy"
+                >
 
             </div>
 
 
-            <div class="sg-story-intro-copy sg-copy">
+            <div class="singapore1-story-copy">
+
+                <p class="section-label">
+                    GREEN SINGAPORE
+                </p>
+
+                <h2>
+                    The jungle is never very far away.
+                </h2>
 
                 <p>
                     One of the things we appreciate most about living here
@@ -1324,32 +785,33 @@
 
         </div>
 
+    </div>
+
+</section>
 
 
-        <div class="sg-pair">
 
-            <div class="sg-image-frame standard">
+<!-- =====================================================
+     WILDLIFE SUPPORTING IMAGES
+====================================================== -->
 
-                <img
-                    src="singapore17.jpeg"
-                    alt="Wildlife in Singapore"
-                    loading="lazy"
-                    decoding="async"
-                >
+<section class="edition-gallery section">
 
-            </div>
+    <div class="container">
 
+        <div class="singapore1-pair">
 
-            <div class="sg-image-frame standard">
+            <img
+                src="singapore18.jpeg"
+                alt="Snake in the trees in Singapore"
+                loading="lazy"
+            >
 
-                <img
-                    src="singapore19.jpeg"
-                    alt="Monitor lizards by the water in Singapore"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
+            <img
+                src="singapore19.jpeg"
+                alt="Monitor lizards by the water in Singapore"
+                loading="lazy"
+            >
 
         </div>
 
@@ -1363,39 +825,25 @@
      FAMILY LIFE
 ====================================================== -->
 
-<section class="sg-family">
+<section class="edition-intro section">
 
-    <div class="sg-container">
+    <div class="container">
 
-        <div class="sg-family-grid">
+        <div class="edition-intro-inner">
 
-            <div>
+            <p class="section-label">
+                FAMILY LIFE
+            </p>
 
-                <p class="sg-eyebrow">
-                    FAMILY LIFE
-                </p>
+            <h2>
+                The experiences outside the travel.
+            </h2>
 
-                <h2 class="sg-title">
-                    The experiences
-                    outside the
-                    travel.
-                </h2>
-
-            </div>
-
-
-            <div class="sg-family-copy">
+            <div class="edition-intro-text">
 
                 <p>
                     Living here has given the children so many experiences
                     that have nothing to do with getting on a plane.
-                </p>
-
-                <p>
-                    Our son's DJing at Marina Bay Sands has given him
-                    confidence and created some genuinely magical memories.
-                    Those are the moments that make Singapore feel like
-                    home rather than simply somewhere we happen to live.
                 </p>
 
                 <p>
@@ -1418,31 +866,26 @@
      HOME GROWN
 ====================================================== -->
 
-<section class="sg-section">
+<section class="singapore1-story">
 
-    <div class="sg-container">
+    <div class="singapore1-story-inner">
 
-        <div class="sg-feature reverse">
+        <div class="singapore1-story-grid reverse">
 
-            <div class="sg-image">
+            <div class="singapore1-story-image">
 
-                <div class="sg-image-frame standard">
-
-                    <img
-                        src="singapore20.jpeg"
-                        alt="Bananas growing in our garden in Singapore"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                </div>
+                <img
+                    src="singapore16.jpeg"
+                    alt="Bananas growing in our garden in Singapore"
+                    loading="lazy"
+                >
 
             </div>
 
 
-            <div class="sg-feature-copy">
+            <div class="singapore1-story-copy">
 
-                <p class="sg-eyebrow">
+                <p class="section-label">
                     HOME GROWN
                 </p>
 
@@ -1473,34 +916,29 @@
 
 
 <!-- =====================================================
-     SENTOSA
+     WEEKENDS
 ====================================================== -->
 
-<section class="sg-section">
+<section class="singapore1-story">
 
-    <div class="sg-container">
+    <div class="singapore1-story-inner">
 
-        <div class="sg-feature">
+        <div class="singapore1-story-grid">
 
-            <div class="sg-image">
+            <div class="singapore1-story-image">
 
-                <div class="sg-image-frame feature">
-
-                    <img
-                        src="singapore7.jpeg"
-                        alt="Sentosa beach at sunset"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                </div>
+                <img
+                    src="singapore7.jpeg"
+                    alt="Sentosa beach at sunset"
+                    loading="lazy"
+                >
 
             </div>
 
 
-            <div class="sg-feature-copy">
+            <div class="singapore1-story-copy">
 
-                <p class="sg-eyebrow">
+                <p class="section-label">
                     WEEKENDS
                 </p>
 
@@ -1509,8 +947,7 @@
                 </h2>
 
                 <p>
-                    We spend plenty of time around Orchard Road, but
-                    weekends are often an excuse to get down to Sentosa
+                    Weekends are often an excuse to get down to Sentosa
                     with the kids.
                 </p>
 
@@ -1532,61 +969,55 @@
 
 
 <!-- =====================================================
-     FAMILY / CHANGI / TRAVEL
+     SMALL NOTES
 ====================================================== -->
 
-<section class="sg-notes">
+<section class="singapore1-notes">
 
-    <div class="sg-container">
+    <div class="singapore1-notes-grid">
 
-        <div class="sg-notes-grid">
+        <article class="singapore1-note">
 
-            <article class="sg-note">
+            <h3>
+                Changi
+            </h3>
 
-                <h3>
-                    Changi
-                </h3>
+            <p>
+                One of the great luxuries of living here is how easy
+                weekends away can be. Changi makes the rest of Asia
+                feel remarkably accessible.
+            </p>
 
-                <p>
-                    One of the great luxuries of living here is how easy
-                    weekends away can be. Changi makes the rest of Asia
-                    feel remarkably accessible.
-                </p>
-
-            </article>
+        </article>
 
 
-            <article class="sg-note">
+        <article class="singapore1-note">
 
-                <h3>
-                    Dempsey Hill
-                </h3>
+            <h3>
+                Dempsey Hill
+            </h3>
 
-                <p>
-                    Another favourite for eating and lounging. It has
-                    enough of a change of pace to feel like an outing
-                    without requiring much effort.
-                </p>
+            <p>
+                Another favourite for eating and lounging. It has enough
+                of a change of pace to feel like an outing without
+                requiring much effort.
+            </p>
 
-            </article>
+        </article>
 
 
-            <article class="sg-note">
+        <article class="singapore1-note">
 
-                <h3>
-                    Chinatown
-                </h3>
+            <h3>
+                Chinatown
+            </h3>
 
-                <p>
-                    We love walking around in the evening, particularly
-                    when friends and family are visiting. It is also one
-                    of our favourite places to find local and authentic
-                    gifts to take home.
-                </p>
+            <p>
+                We love walking around in the evening, particularly
+                when friends and family are visiting.
+            </p>
 
-            </article>
-
-        </div>
+        </article>
 
     </div>
 
@@ -1595,51 +1026,24 @@
 
 
 <!-- =====================================================
-     THE SINGAPORE FEEL
+     OUR SINGAPORE
 ====================================================== -->
 
-<section class="sg-section">
+<section class="edition-intro section">
 
-    <div class="sg-container">
+    <div class="container">
 
-        <div class="sg-full-image">
+        <div class="edition-intro-inner">
 
-            <div class="sg-full-image-frame">
-
-                <img
-                    src="singapore18.jpeg"
-                    alt="Fireworks above Marina Bay"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
-
-            <p class="sg-caption">
-                Singapore has become less about the places we visit and
-                more about the life we have built around them.
+            <p class="section-label">
+                OUR SINGAPORE
             </p>
 
-        </div>
+            <h2>
+                More than a place to live.
+            </h2>
 
-
-        <div class="sg-story-intro-grid">
-
-            <div>
-
-                <p class="sg-eyebrow">
-                    OUR SINGAPORE
-                </p>
-
-                <h2 class="sg-title">
-                    More than a place
-                    to live.
-                </h2>
-
-            </div>
-
-
-            <div class="sg-story-intro-copy sg-copy">
+            <div class="edition-intro-text">
 
                 <p>
                     The longer we live here, the more Singapore feels like
@@ -1669,98 +1073,75 @@
 
 
 <!-- =====================================================
-     COLLECTION
+     FROM OUR CAMERA
 ====================================================== -->
 
-<section class="sg-collection">
+<section class="edition-gallery section">
 
-    <div class="sg-container">
+    <div class="container">
 
-        <div class="sg-collection-header">
+        <div class="section-heading">
 
-            <p class="sg-eyebrow">
+            <p>
                 FROM OUR CAMERA
             </p>
 
-            <h2 class="sg-title">
+            <h2>
                 Singapore, as we see it.
             </h2>
 
         </div>
 
 
-        <div class="sg-collection-grid">
+        <div class="edition-photo-mosaic">
 
-            <div class="sg-image-frame">
+            <img
+                src="singapore3.jpeg"
+                alt="Singapore greenery"
+                loading="lazy"
+            >
 
-                <img
-                    src="singapore3.jpeg"
-                    alt="Singapore greenery"
-                    loading="lazy"
-                    decoding="async"
-                >
+            <img
+                src="singapore8.jpeg"
+                alt="Singapore architectural detail"
+                loading="lazy"
+            >
 
-            </div>
+            <img
+                src="singapore9.jpeg"
+                alt="Singapore city detail"
+                loading="lazy"
+            >
 
+            <img
+                src="singapore12.jpeg"
+                alt="Singapore waterfront at night"
+                loading="lazy"
+            >
 
-            <div class="sg-image-frame">
+            <img
+                src="singapore14.jpeg"
+                alt="Singapore waterfront"
+                loading="lazy"
+            >
 
-                <img
-                    src="singapore8.jpeg"
-                    alt="Singapore architectural detail"
-                    loading="lazy"
-                    decoding="async"
-                >
+            <img
+                src="singapore20.jpeg"
+                alt="Tropical fruit growing in Singapore"
+                loading="lazy"
+            >
 
-            </div>
+            <img
+                src="singapore21.jpeg"
+                alt="Snake in Singapore"
+                loading="lazy"
+            >
 
-
-            <div class="sg-image-frame">
-
-                <img
-                    src="singapore9.jpeg"
-                    alt="Singapore city detail"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
-
-
-            <div class="sg-image-frame">
-
-                <img
-                    src="singapore15.jpeg"
-                    alt="Wildlife in Singapore"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
-
-
-            <div class="sg-image-frame">
-
-                <img
-                    src="singapore21.jpeg"
-                    alt="Wildlife in Singapore"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
-
-
-            <div class="sg-image-frame">
-
-                <img
-                    src="singapore22.jpeg"
-                    alt="Singapore tropical landscape"
-                    loading="lazy"
-                    decoding="async"
-                >
-
-            </div>
+            <img
+                src="singapore22.jpeg"
+                alt="Durian fruit in Singapore"
+                loading="lazy"
+            >
 
         </div>
 
@@ -1774,19 +1155,21 @@
      END NAVIGATION
 ====================================================== -->
 
-<section class="sg-end">
+<section class="edition-end">
 
-    <div class="sg-end-inner">
+    <a
+        href="/"
+        class="text-link"
+    >
+        ← Back to Home
+    </a>
 
-        <a href="/">
-            ← Back to Home
-        </a>
-
-        <a href="editions.html">
-            View All Editions →
-        </a>
-
-    </div>
+    <a
+        href="editions.html"
+        class="text-link"
+    >
+        View All Editions →
+    </a>
 
 </section>
 

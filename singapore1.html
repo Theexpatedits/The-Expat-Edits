@@ -11,14 +11,18 @@
     name="description"
     content="Singapore is home — the base for our family, our travels and the place that has given us a new lease on life."
 >
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
 <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet"
 >
+
 <link rel="stylesheet" href="style-new.css">
 <link rel="stylesheet" href="style-editions-new.css">
+
 
 <style>
 
@@ -26,7 +30,7 @@
    SINGAPORE 1
 
    DESKTOP:
-   Compact editorial composition.
+   Editorial home-based Singapore story.
 
    MOBILE:
    Original Singapore Edition structure.
@@ -34,7 +38,7 @@
 
 
 /* =====================================================
-   DESKTOP EDITORIAL VERSION
+   DESKTOP
 ====================================================== */
 
 .singapore-desktop {
@@ -49,80 +53,139 @@
 @media (min-width: 769px) {
 
 
-    /* -------------------------------------------------
-       OPENING HERO + INTRODUCTION
+    /* =================================================
+       OPENING SPREAD
 
-       Large photographic hero on the left.
-       Introductory editorial copy sits alongside it.
-    -------------------------------------------------- */
+       Portrait hero on the left.
+       Introduction on the right.
+    ================================================== */
 
     .sg-opening {
         width: min(1500px, calc(100% - 80px));
         margin: 0 auto;
+
         display: grid;
-        grid-template-columns: 1.35fr 0.65fr;
-        gap: 70px;
-        align-items: stretch;
-        padding: 0 0 80px;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 75px;
+
+        align-items: center;
+
+        padding: 0 0 90px;
     }
 
+
+    /* -------------------------------------------------
+       HERO IMAGE
+
+       The photograph is allowed to retain its
+       portrait character instead of being cropped
+       into a conventional banner.
+    -------------------------------------------------- */
+
     .sg-opening-hero {
-        min-height: 72vh;
-        background-size: cover;
-        background-position: center;
         position: relative;
+
+        width: 100%;
+
+        background: #000;
+
         overflow: hidden;
     }
 
+
+    .sg-opening-hero img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+    }
+
+
+    /* -------------------------------------------------
+       BOTTOM FADE
+
+       Brings back the soft transition we had before.
+    -------------------------------------------------- */
+
     .sg-opening-hero::after {
         content: "";
+
         position: absolute;
-        inset: 0;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 30%;
+
         background:
             linear-gradient(
-                to top,
-                rgba(0,0,0,0.42),
-                rgba(0,0,0,0.02) 55%
+                to bottom,
+                rgba(0,0,0,0),
+                rgba(0,0,0,0.15) 35%,
+                rgba(0,0,0,0.75) 78%,
+                rgba(0,0,0,1) 100%
             );
+
         pointer-events: none;
     }
 
+
+    /* -------------------------------------------------
+       HERO TEXT
+    -------------------------------------------------- */
+
     .sg-opening-hero .edition-hero-overlay {
         position: absolute;
+
         left: 55px;
         right: 55px;
         bottom: 50px;
+
         z-index: 2;
     }
+
+
+    /* -------------------------------------------------
+       INTRODUCTION
+    -------------------------------------------------- */
 
     .sg-opening-intro {
         display: flex;
         flex-direction: column;
+
         justify-content: center;
-        padding: 50px 35px 50px 10px;
+
+        padding: 50px 35px 50px 5px;
     }
+
 
     .sg-opening-intro h2 {
         margin: 0 0 28px;
     }
 
+
     .sg-opening-intro-copy {
         max-width: 560px;
     }
+
 
     .sg-opening-intro-copy p {
         margin: 0;
     }
 
 
-    /* -------------------------------------------------
-       GLOBAL DESKTOP EDITORIAL CANVAS
-    -------------------------------------------------- */
+    /* =================================================
+       GLOBAL EDITORIAL CANVAS
+    ================================================== */
 
     .sg-editorial {
         width: min(1400px, calc(100% - 80px));
         margin: 0 auto;
     }
+
 
     .sg-editorial-section {
         margin: 0;
@@ -130,195 +193,212 @@
     }
 
 
-    /* -------------------------------------------------
-       OLD INTRO
-       
-       Retained for compatibility but no longer used
-       in the desktop opening.
-    -------------------------------------------------- */
-
-    .sg-intro {
-        display: grid;
-        grid-template-columns: 0.75fr 1.25fr;
-        gap: 80px;
-        align-items: end;
-        padding: 80px 0 70px;
-    }
-
-    .sg-intro h2 {
-        margin: 0 0 25px;
-    }
-
-    .sg-intro-copy {
-        max-width: 760px;
-    }
-
-    .sg-intro-copy p {
-        margin: 0;
-    }
-
-
-    /* -------------------------------------------------
+    /* =================================================
        EDITORIAL GRID
-
-       12 columns gives us enough freedom to place
-       photographs and text into the same visual field.
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-grid {
         display: grid;
+
         grid-template-columns:
             repeat(12, minmax(0, 1fr));
+
         column-gap: 22px;
         row-gap: 42px;
+
         align-items: start;
     }
+
 
     .sg-grid img {
         width: 100%;
         height: auto;
+
         display: block;
+
         object-fit: contain;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        TEXT BLOCKS
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-text {
         align-self: center;
     }
 
+
     .sg-text p {
         margin-top: 0;
     }
+
 
     .sg-text h2,
     .sg-text h3 {
         margin-top: 0;
     }
 
+
     .sg-text .section-label {
         margin-bottom: 12px;
     }
 
+
     .sg-rule {
         width: 42px;
         height: 1px;
+
         margin: 20px 0;
+
         background: currentColor;
+
         opacity: 0.65;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        ROW 1
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-r1-text {
         grid-column: 1 / span 3;
     }
 
+
     .sg-r1-img1 {
         grid-column: 4 / span 5;
+
+        /*
+         * Singapore2 deliberately reduced.
+         * It is now a supporting image rather than
+         * competing with the hero.
+         */
+        width: 88%;
     }
+
 
     .sg-r1-img2 {
         grid-column: 9 / span 4;
+
         padding-top: 55px;
 
-        /* Slightly reduced so the image breathes
-           more within the composition. */
         width: 90%;
+
         margin-left: auto;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        ROW 2
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-r2-img1 {
         grid-column: 1 / span 3;
+
         padding-top: 25px;
     }
 
+
     .sg-r2-text {
         grid-column: 4 / span 3;
+
         padding: 0 8px;
     }
+
 
     .sg-r2-img2 {
         grid-column: 7 / span 3;
     }
 
+
     .sg-r2-text2 {
         grid-column: 10 / span 3;
+
         padding-top: 55px;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        ROW 3
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-r3-text {
         grid-column: 1 / span 3;
+
         padding-top: 20px;
     }
+
 
     .sg-r3-img1 {
         grid-column: 4 / span 4;
     }
 
+
     .sg-r3-img2 {
         grid-column: 8 / span 2;
+
         padding-top: 55px;
     }
 
+
     .sg-r3-img3 {
         grid-column: 10 / span 3;
+
         padding-top: 10px;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        ROW 4
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-r4-img1 {
         grid-column: 1 / span 4;
     }
 
+
     .sg-r4-text {
         grid-column: 5 / span 3;
+
         padding: 20px 5px 0;
     }
 
+
     .sg-r4-img2 {
         grid-column: 8 / span 5;
+
         padding-top: 40px;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        LOCAL INFORMATION
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-info {
-        border-top: 1px solid rgba(255,255,255,0.12);
-        border-bottom: 1px solid rgba(255,255,255,0.12);
+        border-top:
+            1px solid rgba(255,255,255,0.12);
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.12);
+
         padding: 60px 0;
+
         margin-top: 20px;
         margin-bottom: 70px;
     }
 
+
     .sg-info-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
         gap: 70px;
     }
+
 
     .sg-info-item h3 {
         margin-top: 10px;
@@ -326,186 +406,189 @@
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        RECOMMENDATIONS
-    -------------------------------------------------- */
+
+       No photography here.
+
+       A clean, editorial vertical list.
+    ================================================== */
 
     .sg-recommendations {
-        padding-bottom: 70px;
+        padding: 20px 0 100px;
     }
+
 
     .sg-recommendations-heading {
-        margin-bottom: 45px;
+        margin-bottom: 50px;
     }
 
-    .sg-recommendation-grid {
+
+    .sg-recommendation-list {
+        max-width: 950px;
+
+        border-top:
+            1px solid rgba(255,255,255,0.16);
+    }
+
+
+    .sg-recommendation {
         display: grid;
-        grid-template-columns:
-            repeat(12, minmax(0, 1fr));
-        column-gap: 22px;
-        row-gap: 35px;
+
+        grid-template-columns: 70px 280px 1fr;
+
+        column-gap: 35px;
+
         align-items: start;
+
+        padding: 30px 0;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.16);
     }
 
-    .sg-rec {
-        align-self: center;
-    }
-
-    .sg-rec h3 {
-        margin-top: 8px;
-        margin-bottom: 12px;
-    }
-
-    .sg-rec p {
-        margin: 0;
-    }
 
     .sg-rec-number {
         font-size: 0.72rem;
+
         letter-spacing: 0.14em;
+
         opacity: 0.6;
-    }
 
-    .sg-rec-1 {
-        grid-column: 1 / span 3;
-    }
-
-    .sg-rec-img1 {
-        grid-column: 4 / span 3;
-        padding-top: 35px;
-    }
-
-    .sg-rec-2 {
-        grid-column: 7 / span 3;
-        padding-top: 20px;
-    }
-
-    .sg-rec-img2 {
-        grid-column: 10 / span 3;
-    }
-
-    .sg-rec-img3 {
-        grid-column: 1 / span 3;
-        padding-top: 25px;
-    }
-
-    .sg-rec-3 {
-        grid-column: 4 / span 3;
-    }
-
-    .sg-rec-4 {
-        grid-column: 7 / span 3;
-        padding-top: 45px;
-    }
-
-    .sg-rec-img4 {
-        grid-column: 10 / span 3;
-    }
-
-    .sg-rec-5 {
-        grid-column: 2 / span 3;
-        padding-top: 20px;
-    }
-
-    .sg-rec-img5 {
-        grid-column: 5 / span 4;
-    }
-
-    .sg-rec-6 {
-        grid-column: 9 / span 3;
-        padding-top: 35px;
+        padding-top: 7px;
     }
 
 
-    /* -------------------------------------------------
+    .sg-recommendation h3 {
+        margin: 0;
+
+        font-size: 1.35rem;
+    }
+
+
+    .sg-recommendation p {
+        margin: 0;
+
+        max-width: 520px;
+    }
+
+
+    /* =================================================
        JOURNAL
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-journal {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:
+            1fr 1fr;
+
         gap: 90px;
+
         align-items: center;
+
         padding: 70px 0;
-        border-top: 1px solid rgba(255,255,255,0.12);
+
+        border-top:
+            1px solid rgba(255,255,255,0.12);
     }
+
 
     .sg-journal-copy p {
         margin-top: 0;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        FINAL PHOTOGRAPHIC FIELD
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-final-grid {
         display: grid;
+
         grid-template-columns:
             repeat(12, minmax(0, 1fr));
+
         column-gap: 22px;
         row-gap: 35px;
+
         align-items: start;
     }
 
+
     .sg-final-heading {
         grid-column: 1 / span 3;
+
         padding-top: 30px;
     }
+
 
     .sg-final-img1 {
         grid-column: 4 / span 4;
     }
 
+
     .sg-final-img2 {
         grid-column: 8 / span 2;
+
         padding-top: 45px;
     }
+
 
     .sg-final-img3 {
         grid-column: 10 / span 3;
     }
 
+
     .sg-final-img4 {
         grid-column: 1 / span 3;
+
         padding-top: 25px;
     }
 
+
     .sg-final-img5 {
         grid-column: 4 / span 3;
+
         padding-top: 55px;
     }
+
 
     .sg-final-img6 {
         grid-column: 7 / span 3;
     }
 
+
     .sg-final-img7 {
         grid-column: 10 / span 3;
+
         padding-top: 30px;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        MAP
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-map {
         padding: 80px 0 70px;
     }
+
 
     .sg-map-inner {
         max-width: 650px;
     }
 
 
-    /* -------------------------------------------------
+    /* =================================================
        END NAVIGATION
-    -------------------------------------------------- */
+    ================================================== */
 
     .sg-end {
         display: flex;
+
         justify-content: space-between;
+
         padding: 35px 0 70px;
     }
 
@@ -515,8 +598,7 @@
 /* =====================================================
    MOBILE
 
-   Hide desktop experiment completely.
-   Show the original Singapore Edition structure.
+   Completely untouched.
 ====================================================== */
 
 @media (max-width: 768px) {
@@ -595,21 +677,21 @@
 
 
 <!-- =====================================================
-     OPENING
-     
-     Large hero left.
-     Introduction right.
+     OPENING SPREAD
 ====================================================== -->
 
 <section class="sg-opening">
 
 
-    <!-- HERO IMAGE -->
+    <!-- HERO -->
 
-    <div
-        class="sg-opening-hero"
-        style="background-image: url('singaporehero.jpeg');"
-    >
+    <div class="sg-opening-hero">
+
+        <img
+            src="singaporehero.jpeg"
+            alt="Singapore skyline at night"
+            loading="eager"
+        >
 
         <div class="edition-hero-overlay">
 
@@ -714,6 +796,8 @@
 
     </div>
 
+
+    <!-- SINGAPORE2 — REDUCED -->
 
     <img
         class="sg-r1-img1"
@@ -963,10 +1047,12 @@
 </div>
 
 
-<div class="sg-recommendation-grid">
+<div class="sg-recommendation-list">
 
 
-    <article class="sg-rec sg-rec-1">
+    <!-- 01 -->
+
+    <article class="sg-recommendation">
 
         <span class="sg-rec-number">
             01
@@ -986,15 +1072,9 @@
     </article>
 
 
-    <img
-        class="sg-rec-img1"
-        src="singapore20.jpeg"
-        alt="Bananas growing in our garden in Singapore"
-        loading="lazy"
-    >
+    <!-- 02 -->
 
-
-    <article class="sg-rec sg-rec-2">
+    <article class="sg-recommendation">
 
         <span class="sg-rec-number">
             02
@@ -1013,23 +1093,9 @@
     </article>
 
 
-    <img
-        class="sg-rec-img2"
-        src="singapore22.jpeg"
-        alt="Durian fruit in Singapore"
-        loading="lazy"
-    >
+    <!-- 03 -->
 
-
-    <img
-        class="sg-rec-img3"
-        src="singapore7.jpeg"
-        alt="Singapore beach at sunset"
-        loading="lazy"
-    >
-
-
-    <article class="sg-rec sg-rec-3">
+    <article class="sg-recommendation">
 
         <span class="sg-rec-number">
             03
@@ -1049,7 +1115,9 @@
     </article>
 
 
-    <article class="sg-rec sg-rec-4">
+    <!-- 04 -->
+
+    <article class="sg-recommendation">
 
         <span class="sg-rec-number">
             04
@@ -1068,15 +1136,9 @@
     </article>
 
 
-    <img
-        class="sg-rec-img4"
-        src="singapore8.jpeg"
-        alt="Singapore architectural detail"
-        loading="lazy"
-    >
+    <!-- 05 -->
 
-
-    <article class="sg-rec sg-rec-5">
+    <article class="sg-recommendation">
 
         <span class="sg-rec-number">
             05
@@ -1095,15 +1157,9 @@
     </article>
 
 
-    <img
-        class="sg-rec-img5"
-        src="singapore9.jpeg"
-        alt="Water lilies and sculpture in Singapore"
-        loading="lazy"
-    >
+    <!-- 06 -->
 
-
-    <article class="sg-rec sg-rec-6">
+    <article class="sg-recommendation">
 
         <span class="sg-rec-number">
             06

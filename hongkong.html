@@ -1,520 +1,1763 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <title>Hong Kong | The Expat Edits</title>
-    <meta
-        name="description"
-        content="Hong Kong — a city we return to again and again for its food, energy, streets, hotels and endless things to discover."
-    >
-    <!-- Google Fonts -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        crossorigin
-    >
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-    <!-- MASTER SITE CSS -->
-    <link
-        rel="stylesheet"
-        href="style-new.css"
-    >
-    <!-- EDITION MASTER CSS -->
-    <link
-        rel="stylesheet"
-        href="style-editions-new.css"
-    >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hong Kong | The Expat Edits</title>
+
+<meta
+    name="description"
+    content="Hong Kong — a city we return to again and again for its food, energy, streets, hotels and endless things to discover."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-editions-new.css">
+
+
+<style>
+
+/* =========================================================
+   HONG KONG
+   Editorial destination Edition / new master template
+========================================================= */
+
+.hongkong-desktop { display:block; }
+.hongkong-mobile { display:none; }
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width:769px) {
+
+    :root {
+        --hk-width: min(1400px, calc(100% - 80px));
+        --hk-wide: min(1500px, calc(100% - 80px));
+        --hk-gap: 22px;
+        --hk-line: rgba(255,255,255,.12);
+        --hk-line-strong: rgba(255,255,255,.16);
+    }
+
+
+    /* -----------------------------------------------------
+       OPENING
+    ----------------------------------------------------- */
+
+    .hk-opening {
+        width:var(--hk-wide);
+        margin:0 auto;
+        padding:0 0 90px;
+
+        display:grid;
+        grid-template-columns:1.25fr .75fr;
+        gap:75px;
+        align-items:center;
+    }
+
+    .hk-opening-hero {
+        position:relative;
+        overflow:hidden;
+        width:100%;
+        background:#090909;
+    }
+
+    .hk-opening-hero img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+    /* Softly dissolves the photograph into the page */
+    .hk-opening-hero::after {
+        content:"";
+        position:absolute;
+        z-index:1;
+        left:0;
+        right:0;
+        bottom:0;
+        height:38%;
+        pointer-events:none;
+
+        background:linear-gradient(
+            to bottom,
+            rgba(9,9,9,0) 0%,
+            rgba(9,9,9,.22) 28%,
+            rgba(9,9,9,.55) 55%,
+            rgba(9,9,9,.82) 78%,
+            #242320 100%
+        );
+    }
+
+    .hk-opening-hero .edition-hero-overlay {
+        position:absolute;
+        z-index:2;
+        left:55px;
+        right:55px;
+        bottom:50px;
+    }
+
+    .hk-opening-intro {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:50px 35px 50px 5px;
+    }
+
+    .hk-opening-intro h2 {
+        margin:0 0 28px;
+    }
+
+    .hk-opening-intro-copy {
+        max-width:560px;
+    }
+
+    .hk-opening-intro-copy p {
+        margin:0 0 20px;
+    }
+
+    .hk-opening-intro-copy p:last-child {
+        margin-bottom:0;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN EDITORIAL CANVAS
+    ----------------------------------------------------- */
+
+    .hk-editorial {
+        width:var(--hk-width);
+        margin:0 auto;
+    }
+
+    .hk-editorial-section {
+        padding:70px 0;
+    }
+
+    .hk-grid,
+    .hk-final-grid {
+        display:grid;
+        grid-template-columns:repeat(12,minmax(0,1fr));
+        column-gap:var(--hk-gap);
+        row-gap:42px;
+        align-items:start;
+    }
+
+    .hk-grid img,
+    .hk-final-grid img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+    .hk-text {
+        align-self:center;
+    }
+
+    .hk-text p {
+        margin-top:0;
+    }
+
+    .hk-text h2,
+    .hk-text h3 {
+        margin-top:0;
+    }
+
+    .hk-text .section-label {
+        margin-bottom:12px;
+    }
+
+    .hk-rule {
+        width:42px;
+        height:1px;
+        margin:20px 0;
+        background:currentColor;
+        opacity:.65;
+    }
+
+
+    /* -----------------------------------------------------
+       EDITORIAL ROWS
+    ----------------------------------------------------- */
+
+    .hk-r1-text {
+        grid-column:1 / span 3;
+    }
+
+    .hk-r1-img1 {
+        grid-column:4 / span 5;
+        width:88%;
+    }
+
+    .hk-r1-img2 {
+        grid-column:9 / span 4;
+        width:90%;
+        margin-left:auto;
+        padding-top:55px;
+    }
+
+
+    .hk-r2-img1 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .hk-r2-text {
+        grid-column:4 / span 3;
+        padding:0 8px;
+    }
+
+    .hk-r2-img2 {
+        grid-column:7 / span 3;
+    }
+
+    .hk-r2-text2 {
+        grid-column:10 / span 3;
+        padding-top:55px;
+    }
+
+
+    .hk-r3-text {
+        grid-column:1 / span 3;
+        padding-top:20px;
+    }
+
+    .hk-r3-img1 {
+        grid-column:4 / span 4;
+    }
+
+    .hk-r3-img2 {
+        grid-column:8 / span 2;
+        padding-top:55px;
+    }
+
+    .hk-r3-img3 {
+        grid-column:10 / span 3;
+        padding-top:10px;
+    }
+
+
+    .hk-r4-img1 {
+        grid-column:1 / span 4;
+    }
+
+    .hk-r4-text {
+        grid-column:5 / span 3;
+        padding:20px 5px 0;
+    }
+
+    .hk-r4-img2 {
+        grid-column:8 / span 5;
+        padding-top:40px;
+    }
+
+
+    /* -----------------------------------------------------
+       LOCAL INFORMATION
+    ----------------------------------------------------- */
+
+    .hk-info {
+        margin:20px 0 70px;
+        padding:60px 0;
+        border-top:1px solid var(--hk-line);
+        border-bottom:1px solid var(--hk-line);
+    }
+
+    .hk-info-grid {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:70px;
+    }
+
+    .hk-info-item h3 {
+        margin:10px 0 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       RECOMMENDATIONS
+    ----------------------------------------------------- */
+
+    .hk-recommendations {
+        padding:20px 0 100px;
+    }
+
+    .hk-recommendations-heading {
+        margin-bottom:50px;
+    }
+
+    .hk-recommendation-list {
+        max-width:950px;
+        border-top:1px solid var(--hk-line-strong);
+    }
+
+    .hk-recommendation {
+        display:grid;
+        grid-template-columns:70px 280px 1fr;
+        column-gap:35px;
+        align-items:start;
+
+        padding:30px 0;
+        border-bottom:1px solid var(--hk-line-strong);
+    }
+
+    .hk-rec-number {
+        padding-top:7px;
+        font-size:.72rem;
+        letter-spacing:.14em;
+        opacity:.6;
+    }
+
+    .hk-recommendation h3 {
+        margin:0;
+        font-size:1.35rem;
+    }
+
+    .hk-recommendation p {
+        margin:0;
+        max-width:520px;
+    }
+
+
+    /* -----------------------------------------------------
+       JOURNAL / OUR EDIT
+    ----------------------------------------------------- */
+
+    .hk-journal {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:90px;
+        align-items:center;
+
+        padding:70px 0;
+        border-top:1px solid var(--hk-line);
+    }
+
+    .hk-journal-copy p {
+        margin-top:0;
+    }
+
+
+    /* -----------------------------------------------------
+       FINAL PHOTOGRAPHIC FIELD
+    ----------------------------------------------------- */
+
+    .hk-final-heading {
+        grid-column:1 / span 3;
+        padding-top:30px;
+    }
+
+    .hk-final-img1 {
+        grid-column:4 / span 4;
+    }
+
+    .hk-final-img2 {
+        grid-column:8 / span 2;
+        padding-top:45px;
+    }
+
+    .hk-final-img3 {
+        grid-column:10 / span 3;
+    }
+
+    .hk-final-img4 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .hk-final-img5 {
+        grid-column:4 / span 3;
+        padding-top:55px;
+    }
+
+    .hk-final-img6 {
+        grid-column:7 / span 3;
+    }
+
+    .hk-final-img7 {
+        grid-column:10 / span 3;
+        padding-top:30px;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP
+    ----------------------------------------------------- */
+
+    .hk-map {
+        padding:80px 0 70px;
+    }
+
+    .hk-map-inner {
+        max-width:650px;
+    }
+
+
+    /* -----------------------------------------------------
+       END NAVIGATION
+    ----------------------------------------------------- */
+
+    .hk-end {
+        display:flex;
+        justify-content:space-between;
+        padding:35px 0 70px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   New editorial structure using existing master CSS
+========================================================= */
+
+@media (max-width:768px) {
+
+    .hongkong-desktop {
+        display:none;
+    }
+
+    .hongkong-mobile {
+        display:block;
+    }
+
+}
+
+</style>
 </head>
+
+
 <body class="edition-page">
+
+
 <!-- =====================================================
      HEADER
 ====================================================== -->
+
 <header class="site-header">
-    <div class="site-header-inner">
-        <a
-            href="/"
-            class="site-logo"
-        >
-            THE EXPAT EDITS
+
+<div class="site-header-inner">
+
+    <a href="/" class="site-logo">
+        THE EXPAT EDITS
+    </a>
+
+    <nav class="site-nav">
+
+        <a href="editions.html">
+            Editions
         </a>
-        <nav class="site-nav">
-            <a href="editions.html">
-                Editions
-            </a>
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-            <a href="index-new.html#map">
-                Map
-            </a>
-            <a href="index-new.html#about">
-                About
-            </a>
-        </nav>
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
+
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+
+        <a href="index-new.html#map">
+            Map
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</div>
+
 </header>
-<main>
+
+
 <!-- =====================================================
-     HERO
+     DESKTOP EDITION
 ====================================================== -->
-<section
-    class="edition-hero"
-    style="background-image: url('Hk-hero.jpeg');"
->
-    <div class="edition-hero-overlay">
-        <p class="eyebrow">
-            OUR HONG KONG
-        </p>
-        <h1>
-            Hong Kong
-        </h1>
-        <p class="edition-hero-subtitle">
-            The city we keep coming back to.
-        </p>
-    </div>
-</section>
+
+<main class="hongkong-desktop">
+
+
 <!-- =====================================================
-     INTRODUCTION
+     OPENING SPREAD
 ====================================================== -->
-<section class="edition-intro section">
-    <div class="container">
-        <div class="edition-intro-inner">
-            <p class="section-label">
+
+<section class="hk-opening">
+
+    <div class="hk-opening-hero">
+
+        <img
+            src="Hk-hero.jpeg"
+            alt="Hong Kong skyline"
+            loading="eager"
+        >
+
+        <div class="edition-hero-overlay">
+
+            <p class="eyebrow">
                 OUR HONG KONG
             </p>
-            <h2>
-                The city we always come back to.
-            </h2>
-            <div class="edition-intro-text">
-                <p>
-                    Hong Kong is one of those cities that somehow feels
-                    familiar every time we arrive. Living in Singapore
-                    means it is only a short flight away, and between
-                    work trips and weekends away we've found ourselves
-                    returning again and again. Every visit reminds us
-                    why we love it.
-                </p>
-                <p>
-                    Our favourite days usually begin with coffee before
-                    wandering through Soho, getting deliberately lost
-                    among the side streets where some of the city's best
-                    restaurants and cocktail bars seem to hide behind
-                    unassuming doors. Hong Kong rewards curiosity more
-                    than planning, and some of our favourite meals have
-                    been found simply by turning the next corner.
-                </p>
-                <p>
-                    Food is a huge part of why we keep coming back.
-                    We never miss an excuse to book somewhere from the
-                    Black Sheep group — especially Carbone — while
-                    The New Punjab Club has become another firm favourite.
-                    Long lunches, late dinners and discovering somewhere
-                    new each trip have become part of our Hong Kong
-                    tradition.
-                </p>
-                <p>
-                    We also love slowing the city down. Taking the
-                    Star Ferry across to Kowloon, spending an afternoon
-                    shopping, escaping for a pool day at the Hyatt, or
-                    checking into The Hari or The Pottinger gives Hong Kong
-                    a completely different rhythm. It is energetic,
-                    stylish and endlessly exciting, but it also knows
-                    how to do luxury remarkably well.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- =====================================================
-     PHOTOGRAPHIC STORY
-====================================================== -->
-<section class="edition-photo-story section">
-    <div class="container">
-        <div class="section-heading edition-photo-heading">
-            <p>
-                FROM OUR CAMERA
+
+            <h1>
+                Hong Kong
+            </h1>
+
+            <p class="edition-hero-subtitle">
+                The city we keep coming back to.
             </p>
-            <h2>
-                Hong Kong, as we see it.
-            </h2>
+
         </div>
-        <div class="edition-photo-mosaic">
-            <img
-                src="hk1.jpeg"
-                alt="Hong Kong skyline"
-                loading="eager"
-            >
-            <img
-                src="hk2.jpeg"
-                alt="Hong Kong landscape and coastline"
-                loading="lazy"
-            >
-            <img
-                src="hk3.jpeg"
-                alt="Hong Kong street life"
-                loading="lazy"
-            >
-            <img
-                src="hk4.jpeg"
-                alt="Hong Kong skyline"
-                loading="lazy"
-            >
-            <img
-                src="hk5.jpeg"
-                alt="Hong Kong harbour"
-                loading="lazy"
-            >
-            <img
-                src="hk6.jpeg"
-                alt="Hong Kong old buildings"
-                loading="lazy"
-            >
-            <img
-                src="hk7.jpeg"
-                alt="Hong Kong architecture"
-                loading="lazy"
-            >
-            <img
-                src="hk8.jpeg"
-                alt="Hong Kong buildings"
-                loading="lazy"
-            >
-        </div>
+
     </div>
+
+
+    <div class="hk-opening-intro">
+
+        <p class="section-label">
+            OUR HONG KONG
+        </p>
+
+        <h2>
+            The city we always come back to.
+        </h2>
+
+        <div class="hk-opening-intro-copy">
+
+            <p>
+                Hong Kong is one of those cities that somehow feels
+                familiar every time we arrive. Living in Singapore
+                means it is only a short flight away, and between
+                work trips and weekends away we've found ourselves
+                returning again and again. Every visit reminds us
+                why we love it.
+            </p>
+
+            <p>
+                Our favourite days usually begin with coffee before
+                wandering through Soho, getting deliberately lost
+                among the side streets where some of the city's best
+                restaurants and cocktail bars seem to hide behind
+                unassuming doors.
+            </p>
+
+            <p>
+                Food is a huge part of why we keep coming back.
+                We never miss an excuse to book somewhere from the
+                Black Sheep group — especially Carbone — while
+                The New Punjab Club has become another firm favourite.
+            </p>
+
+            <p>
+                We also love slowing the city down. Taking the
+                Star Ferry across to Kowloon, spending an afternoon
+                shopping, escaping for a pool day at the Hyatt, or
+                checking into The Hari or The Pottinger gives Hong Kong
+                a completely different rhythm.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+<div class="hk-editorial">
+
+
+<!-- =====================================================
+     FROM OUR CAMERA
+====================================================== -->
+
+<section class="hk-editorial-section">
+
+<div class="section-heading">
+
+    <p>
+        FROM OUR CAMERA
+    </p>
+
+    <h2>
+        Hong Kong, as we see it.
+    </h2>
+
+</div>
+
+
+<div class="hk-grid">
+
+
+    <!-- ROW 1 -->
+
+    <div class="hk-text hk-r1-text">
+
+        <p class="section-label">
+            THE CITY
+        </p>
+
+        <h3>
+            A city built upwards.
+        </h3>
+
+        <div class="hk-rule"></div>
+
+        <p>
+            Hong Kong has a way of making scale feel almost
+            impossible. Towers rise behind old streets, the
+            harbour cuts through the centre of the city and
+            mountains appear almost wherever you look.
+        </p>
+
+    </div>
+
+
+    <img
+        class="hk-r1-img1"
+        src="hk1.jpeg"
+        alt="Hong Kong skyline"
+        loading="eager"
+    >
+
+    <img
+        class="hk-r1-img2"
+        src="hk2.jpeg"
+        alt="Hong Kong landscape and coastline"
+        loading="eager"
+    >
+
+
+    <!-- ROW 2 -->
+
+    <img
+        class="hk-r2-img1"
+        src="hk3.jpeg"
+        alt="Hong Kong street life"
+        loading="lazy"
+    >
+
+
+    <div class="hk-text hk-r2-text">
+
+        <p class="section-label">
+            STREET LIFE
+        </p>
+
+        <h3>
+            The best discoveries happen on foot.
+        </h3>
+
+        <div class="hk-rule"></div>
+
+        <p>
+            We love wandering Hong Kong without much of a plan.
+            Side streets, small restaurants, bars and unexpected
+            corners are often more memorable than anything that
+            appears on an itinerary.
+        </p>
+
+    </div>
+
+
+    <img
+        class="hk-r2-img2"
+        src="hk4.jpeg"
+        alt="Hong Kong skyline"
+        loading="lazy"
+    >
+
+
+    <div class="hk-text hk-r2-text2">
+
+        <p class="section-label">
+            THE HARBOUR
+        </p>
+
+        <h3>
+            The view is part of the experience.
+        </h3>
+
+        <p>
+            Across Victoria Harbour, Hong Kong constantly changes
+            character. The skyline, ferries, water and mountains
+            create one of those views that never really becomes
+            ordinary.
+        </p>
+
+    </div>
+
+
+    <!-- ROW 3 -->
+
+    <div class="hk-text hk-r3-text">
+
+        <p class="section-label">
+            OLD &amp; NEW
+        </p>
+
+        <h3>
+            Where different worlds meet.
+        </h3>
+
+        <div class="hk-rule"></div>
+
+        <p>
+            Hong Kong can move from old buildings and busy
+            neighbourhood streets to polished towers and
+            contemporary hotels within minutes. That contrast
+            is a huge part of its appeal.
+        </p>
+
+    </div>
+
+
+    <img
+        class="hk-r3-img1"
+        src="hk5.jpeg"
+        alt="Hong Kong harbour"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-r3-img2"
+        src="hk6.jpeg"
+        alt="Hong Kong old buildings"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-r3-img3"
+        src="hk7.jpeg"
+        alt="Hong Kong architecture"
+        loading="lazy"
+    >
+
+
+    <!-- ROW 4 -->
+
+    <img
+        class="hk-r4-img1"
+        src="hk8.jpeg"
+        alt="Hong Kong buildings"
+        loading="lazy"
+    >
+
+
+    <div class="hk-text hk-r4-text">
+
+        <p class="section-label">
+            AFTER DARK
+        </p>
+
+        <h3>
+            The city changes again at night.
+        </h3>
+
+        <p>
+            Restaurants fill up, the skyline begins to glow and
+            the streets take on a different energy. Hong Kong
+            after dark is one of the reasons we never feel we've
+            quite finished exploring it.
+        </p>
+
+    </div>
+
+
+    <img
+        class="hk-r4-img2"
+        src="hk9.jpeg"
+        alt="Hong Kong coastline"
+        loading="lazy"
+    >
+
+</div>
+
+</section>
+
+
 <!-- =====================================================
      LOCAL INFORMATION
 ====================================================== -->
-<section class="edition-local-info">
-    <div class="container">
-        <div class="edition-local-info-grid">
-            <div class="edition-local-info-item">
-                <p class="section-label">
-                    BEST TIME
-                </p>
-                <h3>
-                    October – April
-                </h3>
-                <p>
-                    The cooler months are our favourite time to be in
-                    Hong Kong, with comfortable temperatures for walking,
-                    eating and exploring the city.
-                </p>
-            </div>
-            <div class="edition-local-info-item">
-                <p class="section-label">
-                    WEATHER
-                </p>
-                <h3>
-                    Subtropical
-                </h3>
-                <p>
-                    Warm and humid summers, milder winters and plenty
-                    of sunshine make Hong Kong a destination for almost
-                    any time of year.
-                </p>
-            </div>
-            <div class="edition-local-info-item">
-                <p class="section-label">
-                    GETTING AROUND
-                </p>
-                <h3>
-                    Walk &amp; ride
-                </h3>
-                <p>
-                    The MTR, ferries, trams and taxis make getting around
-                    incredibly easy, while some of our favourite discoveries
-                    are made simply by walking.
-                </p>
-            </div>
-        </div>
+
+<section class="hk-info">
+
+<div class="hk-info-grid">
+
+    <div class="hk-info-item">
+
+        <p class="section-label">
+            BEST TIME
+        </p>
+
+        <h3>
+            October – April
+        </h3>
+
+        <p>
+            The cooler months are our favourite time to be in
+            Hong Kong, with comfortable temperatures for walking,
+            eating and exploring the city.
+        </p>
+
     </div>
+
+
+    <div class="hk-info-item">
+
+        <p class="section-label">
+            WEATHER
+        </p>
+
+        <h3>
+            Subtropical
+        </h3>
+
+        <p>
+            Warm and humid summers, milder winters and plenty
+            of sunshine make Hong Kong a destination for almost
+            any time of year.
+        </p>
+
+    </div>
+
+
+    <div class="hk-info-item">
+
+        <p class="section-label">
+            GETTING AROUND
+        </p>
+
+        <h3>
+            Walk &amp; ride
+        </h3>
+
+        <p>
+            The MTR, ferries, trams and taxis make getting around
+            incredibly easy, while some of our favourite discoveries
+            are made simply by walking.
+        </p>
+
+    </div>
+
+</div>
+
 </section>
+
+
 <!-- =====================================================
-     OUR RECOMMENDATIONS
+     RECOMMENDATIONS
 ====================================================== -->
-<section class="edition-recommendations section">
-    <div class="container">
-        <div class="section-heading">
-            <p>
-                OUR RECOMMENDATIONS
-            </p>
-            <h2>
-                Places we love.
-            </h2>
-        </div>
-        <div class="edition-recommendations-grid">
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    01
-                </p>
-                <h3>
-                    Carbone
-                </h3>
-                <p>
-                    One of our favourite reasons to book a table in
-                    Hong Kong. Classic Italian-American dining with
-                    all the theatre and energy that makes an evening
-                    here memorable.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    02
-                </p>
-                <h3>
-                    Black Sheep Group
-                </h3>
-                <p>
-                    We are big fans of the group and rarely need much
-                    convincing to try another of their restaurants.
-                    They have become part of our Hong Kong rotation.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    03
-                </p>
-                <h3>
-                    The New Punjab Club
-                </h3>
-                <p>
-                    Another firm favourite. A memorable place for a
-                    long lunch or dinner and exactly the sort of restaurant
-                    that keeps us excited to come back.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    04
-                </p>
-                <h3>
-                    Soho
-                </h3>
-                <p>
-                    One of our favourite parts of Hong Kong. We love
-                    wandering without much of a plan, finding hidden
-                    restaurants, bars and little places that weren't
-                    on the itinerary.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    05
-                </p>
-                <h3>
-                    The Star Ferry
-                </h3>
-                <p>
-                    Taking the ferry across to Kowloon never gets old.
-                    Add an afternoon of shopping and it makes for one
-                    of our favourite easy Hong Kong days.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    06
-                </p>
-                <h3>
-                    The Hari &amp; The Pottinger
-                </h3>
-                <p>
-                    Two hotels we really like. Both offer a different
-                    take on Hong Kong and make excellent bases when
-                    we're spending time in the city.
-                </p>
-            </article>
-        </div>
-    </div>
+
+<section class="hk-recommendations">
+
+<div class="hk-recommendations-heading">
+
+    <p class="section-label">
+        OUR RECOMMENDATIONS
+    </p>
+
+    <h2>
+        Places we love.
+    </h2>
+
+</div>
+
+
+<div class="hk-recommendation-list">
+
+    <article class="hk-recommendation">
+
+        <span class="hk-rec-number">01</span>
+
+        <h3>
+            Carbone
+        </h3>
+
+        <p>
+            One of our favourite reasons to book a table in
+            Hong Kong. Classic Italian-American dining with
+            all the theatre and energy that makes an evening
+            here memorable.
+        </p>
+
+    </article>
+
+
+    <article class="hk-recommendation">
+
+        <span class="hk-rec-number">02</span>
+
+        <h3>
+            Black Sheep Group
+        </h3>
+
+        <p>
+            We are big fans of the group and rarely need much
+            convincing to try another of their restaurants.
+            They have become part of our Hong Kong rotation.
+        </p>
+
+    </article>
+
+
+    <article class="hk-recommendation">
+
+        <span class="hk-rec-number">03</span>
+
+        <h3>
+            The New Punjab Club
+        </h3>
+
+        <p>
+            Another firm favourite. A memorable place for a
+            long lunch or dinner and exactly the sort of restaurant
+            that keeps us excited to come back.
+        </p>
+
+    </article>
+
+
+    <article class="hk-recommendation">
+
+        <span class="hk-rec-number">04</span>
+
+        <h3>
+            Soho
+        </h3>
+
+        <p>
+            One of our favourite parts of Hong Kong. We love
+            wandering without much of a plan, finding hidden
+            restaurants, bars and little places that weren't
+            on the itinerary.
+        </p>
+
+    </article>
+
+
+    <article class="hk-recommendation">
+
+        <span class="hk-rec-number">05</span>
+
+        <h3>
+            The Star Ferry
+        </h3>
+
+        <p>
+            Taking the ferry across to Kowloon never gets old.
+            Add an afternoon of shopping and it makes for one
+            of our favourite easy Hong Kong days.
+        </p>
+
+    </article>
+
+
+    <article class="hk-recommendation">
+
+        <span class="hk-rec-number">06</span>
+
+        <h3>
+            The Hari &amp; The Pottinger
+        </h3>
+
+        <p>
+            Two hotels we really like. Both offer a different
+            take on Hong Kong and make excellent bases when
+            we're spending time in the city.
+        </p>
+
+    </article>
+
+</div>
+
 </section>
+
+
 <!-- =====================================================
      OUR EDIT
 ====================================================== -->
-<section class="edition-journal section">
-    <div class="container">
-        <div class="edition-journal-inner">
-            <div>
-                <p class="section-label">
-                    OUR EDIT
-                </p>
-                <h2>
-                    Don't over-plan Hong Kong.
-                </h2>
-            </div>
-            <div class="edition-journal-copy">
-                <p>
-                    Our favourite Hong Kong days rarely involve a long
-                    list of things to tick off. Pick a neighbourhood,
-                    start walking and see where you end up.
-                </p>
-                <p>
-                    Soho is perfect for this. There is always another
-                    restaurant, bar or tiny doorway worth investigating.
-                    Hong Kong is a city that rewards curiosity, and
-                    that's exactly how we like to experience it.
-                </p>
-            </div>
-        </div>
-    </div>
+
+<section class="hk-journal">
+
+<div>
+
+    <p class="section-label">
+        OUR EDIT
+    </p>
+
+    <h2>
+        Don't over-plan Hong Kong.
+    </h2>
+
+</div>
+
+
+<div class="hk-journal-copy">
+
+    <p>
+        Our favourite Hong Kong days rarely involve a long
+        list of things to tick off. Pick a neighbourhood,
+        start walking and see where you end up.
+    </p>
+
+    <p>
+        Soho is perfect for this. There is always another
+        restaurant, bar or tiny doorway worth investigating.
+        Hong Kong is a city that rewards curiosity, and
+        that's exactly how we like to experience it.
+    </p>
+
+</div>
+
 </section>
+
+
 <!-- =====================================================
      MORE FROM OUR CAMERA
 ====================================================== -->
-<section class="edition-gallery section">
-    <div class="container">
-        <div class="section-heading">
-            <p>
-                MORE FROM OUR CAMERA
-            </p>
-            <h2>
-                More from Hong Kong.
-            </h2>
-        </div>
-        <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-            <img
-                src="hk9.jpeg"
-                alt="Hong Kong coastline"
-                loading="lazy"
-            >
-            <img
-                src="hk10.jpeg"
-                alt="Hong Kong at night"
-                loading="lazy"
-            >
-            <img
-                src="hk11.jpeg"
-                alt="Hong Kong restaurant interior"
-                loading="lazy"
-            >
-            <img
-                src="hk12.jpeg"
-                alt="Hong Kong architecture"
-                loading="lazy"
-            >
-            <img
-                src="hk13.jpeg"
-                alt="Hong Kong modern architecture"
-                loading="lazy"
-            >
-            <img
-                src="hk14.jpeg"
-                alt="Hong Kong city view"
-                loading="lazy"
-            >
-            <img
-                src="hk15.jpeg"
-                alt="Hong Kong street life"
-                loading="lazy"
-            >
-            <img
-                src="hk16.jpeg"
-                alt="Hong Kong at sunset"
-                loading="lazy"
-            >
-            <img
-                src="hk17.jpeg"
-                alt="Hong Kong street"
-                loading="lazy"
-            >
-        </div>
+
+<section class="hk-editorial-section">
+
+<div class="hk-final-grid">
+
+    <div class="hk-final-heading">
+
+        <p class="section-label">
+            MORE FROM OUR CAMERA
+        </p>
+
+        <h2>
+            More from Hong Kong.
+        </h2>
+
     </div>
+
+
+    <img
+        class="hk-final-img1"
+        src="hk10.jpeg"
+        alt="Hong Kong at night"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-final-img2"
+        src="hk11.jpeg"
+        alt="Hong Kong restaurant interior"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-final-img3"
+        src="hk12.jpeg"
+        alt="Hong Kong architecture"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-final-img4"
+        src="hk13.jpeg"
+        alt="Hong Kong modern architecture"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-final-img5"
+        src="hk14.jpeg"
+        alt="Hong Kong city view"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-final-img6"
+        src="hk15.jpeg"
+        alt="Hong Kong street life"
+        loading="lazy"
+    >
+
+    <img
+        class="hk-final-img7"
+        src="hk16.jpeg"
+        alt="Hong Kong at sunset"
+        loading="lazy"
+    >
+
+</div>
+
 </section>
+
+
 <!-- =====================================================
      MAP
 ====================================================== -->
-<section class="edition-map section">
-    <div class="container">
-        <div class="edition-map-inner">
-            <p class="section-label">
-                OUR MAP
-            </p>
-            <h2>
-                Hong Kong.
-            </h2>
-            <p>
-                The places that keep bringing us back to Hong Kong
-                will eventually live here on our wider travel map.
-            </p>
-        </div>
-    </div>
+
+<section class="hk-map">
+
+<div class="hk-map-inner">
+
+    <p class="section-label">
+        OUR MAP
+    </p>
+
+    <h2>
+        Hong Kong.
+    </h2>
+
+    <p>
+        The places that keep bringing us back to Hong Kong
+        will eventually live here on our wider travel map.
+    </p>
+
+</div>
+
 </section>
+
+
 <!-- =====================================================
-     END NAVIGATION
+     END
 ====================================================== -->
-<section class="edition-end">
-    <a
-        href="/"
-        class="text-link"
-    >
-        ← Back to Home
-    </a>
-    <a
-        href="editions.html"
-        class="text-link"
-    >
-        View All Editions →
-    </a>
+
+<section class="hk-end">
+
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+
 </section>
+
+</div>
+
 </main>
+
+
+<!-- =====================================================
+     MOBILE EDITION
+====================================================== -->
+
+<main class="hongkong-mobile">
+
+
+<section
+    class="edition-hero"
+    style="background-image:url('Hk-hero.jpeg');"
+>
+
+<div class="edition-hero-overlay">
+
+    <p class="eyebrow">
+        OUR HONG KONG
+    </p>
+
+    <h1>
+        Hong Kong
+    </h1>
+
+    <p class="edition-hero-subtitle">
+        The city we keep coming back to.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="edition-intro section">
+
+<div class="container">
+
+<div class="edition-intro-inner">
+
+    <p class="section-label">
+        OUR HONG KONG
+    </p>
+
+    <h2>
+        The city we always come back to.
+    </h2>
+
+    <div class="edition-intro-text">
+
+        <p>
+            Hong Kong is one of those cities that somehow feels
+            familiar every time we arrive. Living in Singapore
+            means it is only a short flight away, and between
+            work trips and weekends away we've found ourselves
+            returning again and again. Every visit reminds us
+            why we love it.
+        </p>
+
+        <p>
+            Our favourite days usually begin with coffee before
+            wandering through Soho, getting deliberately lost
+            among the side streets where some of the city's best
+            restaurants and cocktail bars seem to hide behind
+            unassuming doors.
+        </p>
+
+        <p>
+            Food is a huge part of why we keep coming back.
+            We never miss an excuse to book somewhere from the
+            Black Sheep group — especially Carbone — while
+            The New Punjab Club has become another firm favourite.
+        </p>
+
+        <p>
+            We also love slowing the city down. Taking the
+            Star Ferry across to Kowloon, spending an afternoon
+            shopping, escaping for a pool day at the Hyatt, or
+            checking into The Hari or The Pottinger gives Hong Kong
+            a completely different rhythm.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PHOTOGRAPHIC STORY -->
+
+<section class="edition-photo-story section">
+
+<div class="container">
+
+<div class="section-heading edition-photo-heading">
+
+    <p>
+        FROM OUR CAMERA
+    </p>
+
+    <h2>
+        Hong Kong, as we see it.
+    </h2>
+
+</div>
+
+
+<div class="edition-photo-mosaic">
+
+    <img
+        src="hk1.jpeg"
+        alt="Hong Kong skyline"
+        loading="eager"
+    >
+
+    <img
+        src="hk2.jpeg"
+        alt="Hong Kong landscape and coastline"
+        loading="lazy"
+    >
+
+    <img
+        src="hk3.jpeg"
+        alt="Hong Kong street life"
+        loading="lazy"
+    >
+
+    <img
+        src="hk4.jpeg"
+        alt="Hong Kong skyline"
+        loading="lazy"
+    >
+
+    <img
+        src="hk5.jpeg"
+        alt="Hong Kong harbour"
+        loading="lazy"
+    >
+
+    <img
+        src="hk6.jpeg"
+        alt="Hong Kong old buildings"
+        loading="lazy"
+    >
+
+    <img
+        src="hk7.jpeg"
+        alt="Hong Kong architecture"
+        loading="lazy"
+    >
+
+    <img
+        src="hk8.jpeg"
+        alt="Hong Kong buildings"
+        loading="lazy"
+    >
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LOCAL INFORMATION -->
+
+<section class="edition-local-info">
+
+<div class="container">
+
+<div class="edition-local-info-grid">
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">
+            BEST TIME
+        </p>
+
+        <h3>
+            October – April
+        </h3>
+
+        <p>
+            The cooler months are our favourite time to be in
+            Hong Kong, with comfortable temperatures for walking,
+            eating and exploring the city.
+        </p>
+
+    </div>
+
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">
+            WEATHER
+        </p>
+
+        <h3>
+            Subtropical
+        </h3>
+
+        <p>
+            Warm and humid summers, milder winters and plenty
+            of sunshine make Hong Kong a destination for almost
+            any time of year.
+        </p>
+
+    </div>
+
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">
+            GETTING AROUND
+        </p>
+
+        <h3>
+            Walk &amp; ride
+        </h3>
+
+        <p>
+            The MTR, ferries, trams and taxis make getting around
+            incredibly easy, while some of our favourite discoveries
+            are made simply by walking.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RECOMMENDATIONS -->
+
+<section class="edition-recommendations section">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>
+        OUR RECOMMENDATIONS
+    </p>
+
+    <h2>
+        Places we love.
+    </h2>
+
+</div>
+
+
+<div class="edition-recommendations-grid">
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            01
+        </p>
+
+        <h3>
+            Carbone
+        </h3>
+
+        <p>
+            One of our favourite reasons to book a table in
+            Hong Kong. Classic Italian-American dining with
+            all the theatre and energy that makes an evening
+            here memorable.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            02
+        </p>
+
+        <h3>
+            Black Sheep Group
+        </h3>
+
+        <p>
+            We are big fans of the group and rarely need much
+            convincing to try another of their restaurants.
+            They have become part of our Hong Kong rotation.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            03
+        </p>
+
+        <h3>
+            The New Punjab Club
+        </h3>
+
+        <p>
+            Another firm favourite. A memorable place for a
+            long lunch or dinner and exactly the sort of restaurant
+            that keeps us excited to come back.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            04
+        </p>
+
+        <h3>
+            Soho
+        </h3>
+
+        <p>
+            One of our favourite parts of Hong Kong. We love
+            wandering without much of a plan, finding hidden
+            restaurants, bars and little places that weren't
+            on the itinerary.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            05
+        </p>
+
+        <h3>
+            The Star Ferry
+        </h3>
+
+        <p>
+            Taking the ferry across to Kowloon never gets old.
+            Add an afternoon of shopping and it makes for one
+            of our favourite easy Hong Kong days.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            06
+        </p>
+
+        <h3>
+            The Hari &amp; The Pottinger
+        </h3>
+
+        <p>
+            Two hotels we really like. Both offer a different
+            take on Hong Kong and make excellent bases when
+            we're spending time in the city.
+        </p>
+
+    </article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUR EDIT -->
+
+<section class="edition-journal section">
+
+<div class="container">
+
+<div class="edition-journal-inner">
+
+    <div>
+
+        <p class="section-label">
+            OUR EDIT
+        </p>
+
+        <h2>
+            Don't over-plan Hong Kong.
+        </h2>
+
+    </div>
+
+
+    <div class="edition-journal-copy">
+
+        <p>
+            Our favourite Hong Kong days rarely involve a long
+            list of things to tick off. Pick a neighbourhood,
+            start walking and see where you end up.
+        </p>
+
+        <p>
+            Soho is perfect for this. There is always another
+            restaurant, bar or tiny doorway worth investigating.
+            Hong Kong is a city that rewards curiosity, and
+            that's exactly how we like to experience it.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MORE FROM CAMERA -->
+
+<section class="edition-gallery section">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>
+        MORE FROM OUR CAMERA
+    </p>
+
+    <h2>
+        More from Hong Kong.
+    </h2>
+
+</div>
+
+
+<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
+
+    <img
+        src="hk9.jpeg"
+        alt="Hong Kong coastline"
+        loading="lazy"
+    >
+
+    <img
+        src="hk10.jpeg"
+        alt="Hong Kong at night"
+        loading="lazy"
+    >
+
+    <img
+        src="hk11.jpeg"
+        alt="Hong Kong restaurant interior"
+        loading="lazy"
+    >
+
+    <img
+        src="hk12.jpeg"
+        alt="Hong Kong architecture"
+        loading="lazy"
+    >
+
+    <img
+        src="hk13.jpeg"
+        alt="Hong Kong modern architecture"
+        loading="lazy"
+    >
+
+    <img
+        src="hk14.jpeg"
+        alt="Hong Kong city view"
+        loading="lazy"
+    >
+
+    <img
+        src="hk15.jpeg"
+        alt="Hong Kong street life"
+        loading="lazy"
+    >
+
+    <img
+        src="hk16.jpeg"
+        alt="Hong Kong at sunset"
+        loading="lazy"
+    >
+
+    <img
+        src="hk17.jpeg"
+        alt="Hong Kong street"
+        loading="lazy"
+    >
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MAP -->
+
+<section class="edition-map section">
+
+<div class="container">
+
+<div class="edition-map-inner">
+
+    <p class="section-label">
+        OUR MAP
+    </p>
+
+    <h2>
+        Hong Kong.
+    </h2>
+
+    <p>
+        The places that keep bringing us back to Hong Kong
+        will eventually live here on our wider travel map.
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- END -->
+
+<section class="edition-end">
+
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+
+</section>
+
+</main>
+
+
 <!-- =====================================================
      FOOTER
 ====================================================== -->
+
 <footer class="site-footer">
-    <div class="site-footer-inner">
-        <div>
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-            <p class="footer-description">
-                Travel, places &amp; observations from life abroad.
-            </p>
+
+<div class="site-footer-inner">
+
+    <div>
+
+        <div class="footer-logo">
+            THE EXPAT EDITS
         </div>
-        <nav class="footer-nav">
-            <a href="editions.html">
-                Editions
-            </a>
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-            <a href="index-new.html#map">
-                Map
-            </a>
-            <a href="index-new.html#about">
-                About
-            </a>
-        </nav>
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-        <p class="footer-copyright">
-            © The Expat Edits
+
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
         </p>
+
     </div>
+
+
+    <nav class="footer-nav">
+
+        <a href="editions.html">
+            Editions
+        </a>
+
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+
+        <a href="index-new.html#map">
+            Map
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+
+    <a
+        href="https://www.instagram.com/theexpatedits/"
+        class="footer-social"
+        target="_blank"
+        rel="noopener"
+    >
+        Instagram
+    </a>
+
+
+    <p class="footer-copyright">
+        © The Expat Edits
+    </p>
+
+</div>
+
 </footer>
+
 </body>
 </html>

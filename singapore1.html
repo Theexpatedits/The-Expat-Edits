@@ -82,16 +82,19 @@
         content:"";
         position:absolute;
         z-index:1;
-        inset:auto 0 0;
-        height:28%;
+        left:0;
+        right:0;
+        bottom:0;
+        height:38%;
         pointer-events:none;
 
         background:linear-gradient(
             to bottom,
-            rgba(9,9,9,0),
-            rgba(9,9,9,.35) 35%,
-            rgba(9,9,9,.82) 75%,
-            rgba(9,9,9,1)
+            rgba(9,9,9,0) 0%,
+            rgba(9,9,9,.22) 28%,
+            rgba(9,9,9,.55) 55%,
+            rgba(9,9,9,.82) 78%,
+            #242320 100%
         );
     }
 
@@ -182,7 +185,9 @@
        EDITORIAL ROWS
     ----------------------------------------------------- */
 
-    .sg-r1-text  { grid-column:1 / span 3; }
+    .sg-r1-text {
+        grid-column:1 / span 3;
+    }
 
     .sg-r1-img1 {
         grid-column:4 / span 5;
@@ -455,7 +460,6 @@
             Map
         </a>
 
-        <!-- FIXED: standalone About page -->
         <a href="about.html">
             About
         </a>
@@ -1299,55 +1303,89 @@
 <div class="edition-recommendations-grid">
 
     <article class="edition-recommendation">
+
         <p class="story-number">01</p>
-        <h3>The Singapore Edition</h3>
+
+        <h3>
+            The Singapore Edition
+        </h3>
+
         <p>
             One of the hotels that has become part of our local
             rotation. It feels like somewhere that fits naturally
             into life in the city rather than somewhere we need
             to make a special occasion of.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
+
         <p class="story-number">02</p>
-        <h3>Grand Hyatt</h3>
+
+        <h3>
+            Grand Hyatt
+        </h3>
+
         <p>
             Sometimes the best Singapore experience is doing very
             little at all. A poolside drink and a slow afternoon
             is one of our favourite ways to enjoy the city.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
+
         <p class="story-number">03</p>
-        <h3>Raffles</h3>
+
+        <h3>
+            Raffles
+        </h3>
+
         <p>
             A Singapore classic. We particularly enjoy the
             courtyard — a peaceful setting in the middle of the
             city and one of the places that captures something
             of Singapore's character.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
+
         <p class="story-number">04</p>
-        <h3>Sentosa</h3>
+
+        <h3>
+            Sentosa
+        </h3>
+
         <p>
             When the weekend calls for something simple, Sentosa
             gives us an easy escape from the city without really
             leaving Singapore.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
+
         <p class="story-number">05</p>
-        <h3>The food scene</h3>
+
+        <h3>
+            The food scene
+        </h3>
+
         <p>
             From hawker centres to some of Asia's best restaurants,
             eating is one of the great pleasures of living here.
             It is one of the things we never tire of.
         </p>
+
     </article>
 
 </div>

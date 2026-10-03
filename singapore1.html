@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,110 +27,15 @@
 
 /* =========================================================
    SINGAPORE 1
-   Editorial home-based Edition
-   Cream editorial master experiment
-========================================================= */
-
-
-/* =========================================================
-   COLOUR SYSTEM
-========================================================= */
-
-:root {
-
-    --sg-bg: #F3EFE6;
-    --sg-bg-soft: #EAE4D8;
-
-    --sg-text: #292824;
-    --sg-muted: #706C64;
-
-    --sg-accent: #A58A57;
-
-    --sg-line: rgba(41,40,36,.14);
-    --sg-line-strong: rgba(41,40,36,.20);
-
-    --sg-width: min(1400px, calc(100% - 80px));
-    --sg-wide: min(1500px, calc(100% - 80px));
-    --sg-gap: 22px;
-}
-
-
-/* =========================================================
-   PAGE
-========================================================= */
-
-body.edition-page {
-
-    background: var(--sg-bg);
-    color: var(--sg-text);
-}
-
-
-/* =========================================================
-   DESKTOP / MOBILE SWITCH
+   Editorial home-based Edition / master template
 ========================================================= */
 
 .singapore-desktop {
-    display: block;
+    display:block;
 }
 
 .singapore-mobile {
-    display: none;
-}
-
-
-/* =========================================================
-   SHARED CREAM COLOUR
-========================================================= */
-
-body.edition-page p,
-body.edition-page h1,
-body.edition-page h2,
-body.edition-page h3 {
-    color: var(--sg-text);
-}
-
-body.edition-page .section-label,
-body.edition-page .eyebrow {
-    color: var(--sg-accent);
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-body.edition-page .site-header {
-    background: var(--sg-bg);
-    color: var(--sg-text);
-}
-
-body.edition-page .site-logo,
-body.edition-page .site-nav a {
-    color: var(--sg-text);
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-body.edition-page .site-footer {
-
-    background: var(--sg-bg);
-
-    color: var(--sg-text);
-
-    border-top:
-        1px solid var(--sg-line);
-}
-
-body.edition-page .footer-logo,
-body.edition-page .footer-nav a,
-body.edition-page .footer-social,
-body.edition-page .footer-description,
-body.edition-page .footer-copyright {
-    color: var(--sg-text);
+    display:none;
 }
 
 
@@ -139,153 +43,92 @@ body.edition-page .footer-copyright {
    DESKTOP
 ========================================================= */
 
-@media (min-width: 769px) {
+@media (min-width:769px) {
+
+    :root {
+        --sg-width:min(1400px, calc(100% - 80px));
+        --sg-wide:min(1500px, calc(100% - 80px));
+        --sg-gap:22px;
+        --sg-line:rgba(255,255,255,.12);
+        --sg-line-strong:rgba(255,255,255,.16);
+        --sg-gold:#d4af37;
+    }
 
 
     /* -----------------------------------------------------
-       OPENING SPREAD
+       OPENING
     ----------------------------------------------------- */
 
     .sg-opening {
+        width:var(--sg-wide);
+        margin:0 auto;
+        padding:0 0 90px;
 
-        width: var(--sg-wide);
-
-        margin: 0 auto;
-
-        padding: 0 0 90px;
-
-        display: grid;
-
-        grid-template-columns:
-            1.25fr 0.75fr;
-
-        gap: 75px;
-
-        align-items: center;
+        display:grid;
+        grid-template-columns:1.25fr .75fr;
+        gap:75px;
+        align-items:center;
     }
-
-
-    /* -----------------------------------------------------
-       HERO
-    ----------------------------------------------------- */
 
     .sg-opening-hero {
-
-        position: relative;
-
-        overflow: hidden;
-
-        width: 100%;
-
-        background: var(--sg-bg);
+        position:relative;
+        overflow:hidden;
+        width:100%;
+        background:#090909;
     }
-
 
     .sg-opening-hero img {
-
-        display: block;
-
-        width: 100%;
-
-        height: auto;
+        display:block;
+        width:100%;
+        height:auto;
     }
-
-
-    /* -----------------------------------------------------
-       HERO BOTTOM FADE
-    ----------------------------------------------------- */
 
     .sg-opening-hero::after {
+        content:"";
+        position:absolute;
+        z-index:1;
+        inset:auto 0 0;
+        height:28%;
+        pointer-events:none;
 
-        content: "";
-
-        position: absolute;
-
-        z-index: 1;
-
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-        height: 28%;
-
-        pointer-events: none;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(243,239,230,0),
-                rgba(243,239,230,.04) 25%,
-                rgba(243,239,230,.32) 55%,
-                rgba(243,239,230,.78) 82%,
-                rgba(243,239,230,1) 100%
-            );
+        background:linear-gradient(
+            to bottom,
+            rgba(9,9,9,0),
+            rgba(9,9,9,.35) 35%,
+            rgba(9,9,9,.82) 75%,
+            rgba(9,9,9,1)
+        );
     }
-
-
-    /* -----------------------------------------------------
-       HERO TEXT
-    ----------------------------------------------------- */
 
     .sg-opening-hero .edition-hero-overlay {
-
-        position: absolute;
-
-        z-index: 2;
-
-        left: 55px;
-        right: 55px;
-        bottom: 50px;
+        position:absolute;
+        z-index:2;
+        left:55px;
+        right:55px;
+        bottom:50px;
     }
-
-
-    .sg-opening-hero .edition-hero-overlay h1,
-    .sg-opening-hero .edition-hero-overlay p {
-
-        color: #ffffff;
-    }
-
-
-    /* -----------------------------------------------------
-       INTRODUCTION
-    ----------------------------------------------------- */
 
     .sg-opening-intro {
-
-        display: flex;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        padding:
-            50px
-            35px
-            50px
-            5px;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:50px 35px 50px 5px;
     }
-
 
     .sg-opening-intro h2 {
-
-        margin:
-            0
-            0
-            28px;
+        margin:0 0 28px;
     }
-
 
     .sg-opening-intro-copy {
-
-        max-width: 560px;
+        max-width:560px;
     }
 
-
     .sg-opening-intro-copy p {
+        margin:0 0 20px;
+    }
 
-        margin-top: 0;
-
-        margin-bottom: 20px;
+    .sg-opening-intro-copy p:last-child {
+        margin-bottom:0;
     }
 
 
@@ -294,506 +137,520 @@ body.edition-page .footer-copyright {
     ----------------------------------------------------- */
 
     .sg-editorial {
-
-        width: var(--sg-width);
-
-        margin: 0 auto;
+        width:var(--sg-width);
+        margin:0 auto;
     }
-
 
     .sg-editorial-section {
-
-        padding:
-            70px
-            0;
+        padding:70px 0;
     }
-
-
-    /* -----------------------------------------------------
-       EDITORIAL GRID
-    ----------------------------------------------------- */
 
     .sg-grid,
     .sg-final-grid {
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(
-                12,
-                minmax(0,1fr)
-            );
-
-        column-gap: var(--sg-gap);
-
-        row-gap: 42px;
-
-        align-items: start;
+        display:grid;
+        grid-template-columns:repeat(12,minmax(0,1fr));
+        column-gap:var(--sg-gap);
+        row-gap:42px;
+        align-items:start;
     }
-
 
     .sg-grid img,
     .sg-final-grid img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
 
-        display: block;
+    .sg-text {
+        align-self:center;
+    }
 
-        width: 100%;
+    .sg-text p {
+        margin-top:0;
+    }
 
-        height: auto;
+    .sg-text h2,
+    .sg-text h3 {
+        margin-top:0;
+    }
+
+    .sg-text .section-label {
+        margin-bottom:12px;
+    }
+
+    .sg-rule {
+        width:42px;
+        height:1px;
+        margin:20px 0;
+        background:currentColor;
+        opacity:.65;
     }
 
 
     /* -----------------------------------------------------
-       TEXT
+       EDITORIAL ROWS
     ----------------------------------------------------- */
 
-    .sg-text {
-
-        align-self: center;
-    }
-
-
-    .sg-text p {
-
-        margin-top: 0;
-    }
-
-
-    .sg-text h2,
-    .sg-text h3 {
-
-        margin-top: 0;
-    }
-
-
-    .sg-text .section-label {
-
-        margin-bottom: 12px;
-    }
-
-
-    .sg-rule {
-
-        width: 42px;
-
-        height: 1px;
-
-        margin:
-            20px
-            0;
-
-        background: var(--sg-text);
-
-        opacity: .55;
-    }
-
-
-    /* =====================================================
-       ROW 1
-    ===================================================== */
-
     .sg-r1-text {
-
-        grid-column:
-            1 / span 3;
+        grid-column:1 / span 3;
     }
-
 
     .sg-r1-img1 {
-
-        grid-column:
-            4 / span 5;
-
-        width: 88%;
+        grid-column:4 / span 5;
+        width:88%;
     }
-
 
     .sg-r1-img2 {
-
-        grid-column:
-            9 / span 4;
-
-        width: 90%;
-
-        margin-left: auto;
-
-        padding-top: 55px;
+        grid-column:9 / span 4;
+        width:90%;
+        margin-left:auto;
+        padding-top:55px;
     }
 
-
-    /* =====================================================
-       ROW 2
-    ===================================================== */
 
     .sg-r2-img1 {
-
-        grid-column:
-            1 / span 3;
-
-        padding-top: 25px;
+        grid-column:1 / span 3;
+        padding-top:25px;
     }
-
 
     .sg-r2-text {
-
-        grid-column:
-            4 / span 3;
-
-        padding:
-            0
-            8px;
+        grid-column:4 / span 3;
+        padding:0 8px;
     }
-
 
     .sg-r2-img2 {
-
-        grid-column:
-            7 / span 3;
+        grid-column:7 / span 3;
     }
-
 
     .sg-r2-text2 {
-
-        grid-column:
-            10 / span 3;
-
-        padding-top: 55px;
+        grid-column:10 / span 3;
+        padding-top:55px;
     }
 
-
-    /* =====================================================
-       ROW 3
-    ===================================================== */
 
     .sg-r3-text {
-
-        grid-column:
-            1 / span 3;
-
-        padding-top: 20px;
+        grid-column:1 / span 3;
+        padding-top:20px;
     }
-
 
     .sg-r3-img1 {
-
-        grid-column:
-            4 / span 4;
+        grid-column:4 / span 4;
     }
-
 
     .sg-r3-img2 {
-
-        grid-column:
-            8 / span 2;
-
-        padding-top: 55px;
+        grid-column:8 / span 2;
+        padding-top:55px;
     }
-
 
     .sg-r3-img3 {
-
-        grid-column:
-            10 / span 3;
-
-        padding-top: 10px;
+        grid-column:10 / span 3;
+        padding-top:10px;
     }
 
-
-    /* =====================================================
-       ROW 4
-    ===================================================== */
 
     .sg-r4-img1 {
-
-        grid-column:
-            1 / span 4;
+        grid-column:1 / span 4;
     }
-
 
     .sg-r4-text {
-
-        grid-column:
-            5 / span 3;
-
-        padding:
-            20px
-            5px
-            0;
+        grid-column:5 / span 3;
+        padding:20px 5px 0;
     }
-
 
     .sg-r4-img2 {
-
-        grid-column:
-            8 / span 5;
-
-        padding-top: 40px;
+        grid-column:8 / span 5;
+        padding-top:40px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        LOCAL INFORMATION
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .sg-info {
-
-        margin:
-            20px
-            0
-            70px;
-
-        padding:
-            60px
-            0;
-
-        border-top:
-            1px solid var(--sg-line);
-
-        border-bottom:
-            1px solid var(--sg-line);
+        margin:20px 0 70px;
+        padding:60px 0;
+        border-top:1px solid var(--sg-line);
+        border-bottom:1px solid var(--sg-line);
     }
-
 
     .sg-info-grid {
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(3,1fr);
-
-        gap: 70px;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:70px;
     }
-
 
     .sg-info-item h3 {
-
-        margin:
-            10px
-            0
-            12px;
+        margin:10px 0 12px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        RECOMMENDATIONS
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .sg-recommendations {
-
-        padding:
-            20px
-            0
-            100px;
+        padding:20px 0 100px;
     }
-
 
     .sg-recommendations-heading {
-
-        margin-bottom: 50px;
+        margin-bottom:50px;
     }
-
 
     .sg-recommendation-list {
-
-        max-width: 950px;
-
-        border-top:
-            1px solid var(--sg-line-strong);
+        max-width:950px;
+        border-top:1px solid var(--sg-line-strong);
     }
-
 
     .sg-recommendation {
+        display:grid;
+        grid-template-columns:70px 280px 1fr;
+        column-gap:35px;
+        align-items:start;
 
-        display: grid;
-
-        grid-template-columns:
-            70px
-            280px
-            1fr;
-
-        column-gap: 35px;
-
-        align-items: start;
-
-        padding:
-            30px
-            0;
-
-        border-bottom:
-            1px solid var(--sg-line-strong);
+        padding:30px 0;
+        border-bottom:1px solid var(--sg-line-strong);
     }
-
 
     .sg-rec-number {
-
-        padding-top: 7px;
-
-        font-size: .72rem;
-
-        letter-spacing: .14em;
-
-        color: var(--sg-muted);
-
-        opacity: .75;
+        padding-top:7px;
+        font-size:.72rem;
+        letter-spacing:.14em;
+        opacity:.6;
     }
-
 
     .sg-recommendation h3 {
-
-        margin: 0;
-
-        font-size: 1.35rem;
+        margin:0;
+        font-size:1.35rem;
     }
-
 
     .sg-recommendation p {
-
-        margin: 0;
-
-        max-width: 520px;
+        margin:0;
+        max-width:520px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        JOURNAL
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .sg-journal {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:90px;
+        align-items:center;
 
-        display: grid;
-
-        grid-template-columns:
-            1fr
-            1fr;
-
-        gap: 90px;
-
-        align-items: center;
-
-        padding:
-            70px
-            0;
-
-        border-top:
-            1px solid var(--sg-line);
+        padding:70px 0;
+        border-top:1px solid var(--sg-line);
     }
-
 
     .sg-journal-copy p {
-
-        margin-top: 0;
+        margin-top:0;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        FINAL PHOTOGRAPHIC FIELD
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .sg-final-heading {
-
-        grid-column:
-            1 / span 3;
-
-        padding-top: 30px;
+        grid-column:1 / span 3;
+        padding-top:30px;
     }
-
 
     .sg-final-img1 {
-
-        grid-column:
-            4 / span 4;
+        grid-column:4 / span 4;
     }
-
 
     .sg-final-img2 {
-
-        grid-column:
-            8 / span 2;
-
-        padding-top: 45px;
+        grid-column:8 / span 2;
+        padding-top:45px;
     }
-
 
     .sg-final-img3 {
-
-        grid-column:
-            10 / span 3;
+        grid-column:10 / span 3;
     }
-
 
     .sg-final-img4 {
-
-        grid-column:
-            1 / span 3;
-
-        padding-top: 25px;
+        grid-column:1 / span 3;
+        padding-top:25px;
     }
-
 
     .sg-final-img5 {
-
-        grid-column:
-            4 / span 3;
-
-        padding-top: 55px;
+        grid-column:4 / span 3;
+        padding-top:55px;
     }
-
 
     .sg-final-img6 {
-
-        grid-column:
-            7 / span 3;
+        grid-column:7 / span 3;
     }
-
 
     .sg-final-img7 {
-
-        grid-column:
-            10 / span 3;
-
-        padding-top: 30px;
+        grid-column:10 / span 3;
+        padding-top:30px;
     }
 
 
-    /* =====================================================
-       MAP
-    ===================================================== */
+    /* -----------------------------------------------------
+       OUR MAP
+    ----------------------------------------------------- */
 
     .sg-map {
+        padding:100px 0 90px;
+        border-top:1px solid var(--sg-line);
+    }
 
-        padding:
-            80px
-            0
-            70px;
+    .sg-map-header {
+        margin-bottom:55px;
+    }
+
+    .sg-map-header h2 {
+        margin:0 0 18px;
+    }
+
+    .sg-map-header p {
+        max-width:620px;
+        margin:0;
+    }
+
+    .sg-map-layout {
+        display:grid;
+        grid-template-columns:minmax(0,1fr) 330px;
+        gap:55px;
+        align-items:stretch;
     }
 
 
-    .sg-map-inner {
+    /* MAP GRAPHIC */
 
-        max-width: 650px;
+    .sg-map-graphic {
+        position:relative;
+        min-height:560px;
+        overflow:hidden;
+
+        background:
+            radial-gradient(
+                circle at 52% 48%,
+                rgba(212,175,55,.08),
+                transparent 52%
+            ),
+            #090909;
+
+        border:1px solid var(--sg-line);
+    }
+
+    .sg-map-graphic svg {
+        position:absolute;
+        inset:0;
+        width:100%;
+        height:100%;
     }
 
 
-    /* =====================================================
+    /* MAP LABELS */
+
+    .sg-map-label {
+        position:absolute;
+
+        color:rgba(255,255,255,.28);
+
+        font-size:.58rem;
+        letter-spacing:.18em;
+        text-transform:uppercase;
+
+        white-space:nowrap;
+        pointer-events:none;
+    }
+
+    .sg-map-label.central {
+        left:52%;
+        top:53%;
+    }
+
+    .sg-map-label.orchard {
+        left:48%;
+        top:40%;
+    }
+
+    .sg-map-label.east {
+        left:72%;
+        top:54%;
+    }
+
+    .sg-map-label.north {
+        left:51%;
+        top:20%;
+    }
+
+    .sg-map-label.west {
+        left:25%;
+        top:48%;
+    }
+
+    .sg-map-label.sentosa {
+        left:48%;
+        top:78%;
+    }
+
+
+    /* GOLD MARKERS */
+
+    .sg-map-marker {
+        position:absolute;
+
+        width:34px;
+        height:34px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        border:1px solid var(--sg-gold);
+        border-radius:50%;
+
+        background:#17130b;
+        color:var(--sg-gold);
+
+        font-family:Inter,sans-serif;
+        font-size:.72rem;
+        font-weight:500;
+
+        transform:translate(-50%,-50%);
+
+        box-shadow:
+            0 0 0 5px rgba(212,175,55,.06);
+
+        z-index:3;
+    }
+
+    .sg-map-marker:hover {
+        background:var(--sg-gold);
+        color:#090909;
+    }
+
+    .sg-map-marker.m1 {
+        left:54%;
+        top:53%;
+    }
+
+    .sg-map-marker.m2 {
+        left:49%;
+        top:42%;
+    }
+
+    .sg-map-marker.m3 {
+        left:57%;
+        top:44%;
+    }
+
+    .sg-map-marker.m4 {
+        left:69%;
+        top:57%;
+    }
+
+    .sg-map-marker.m5 {
+        left:53%;
+        top:26%;
+    }
+
+    .sg-map-marker.m6 {
+        left:87%;
+        top:39%;
+    }
+
+    .sg-map-marker.m7 {
+        left:62%;
+        top:52%;
+    }
+
+    .sg-map-marker.m8 {
+        left:51%;
+        top:76%;
+    }
+
+
+    /* PLACES LIST */
+
+    .sg-map-places {
+        border-top:1px solid var(--sg-line-strong);
+    }
+
+    .sg-map-places-heading {
+        padding:15px 0 18px;
+
+        color:var(--sg-gold);
+
+        font-size:.7rem;
+        letter-spacing:.22em;
+        text-transform:uppercase;
+    }
+
+    .sg-map-place {
+        display:grid;
+        grid-template-columns:36px 1fr;
+        gap:14px;
+        padding:18px 0;
+
+        border-bottom:1px solid var(--sg-line);
+    }
+
+    .sg-map-place-number {
+        width:28px;
+        height:28px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        border:1px solid rgba(212,175,55,.7);
+        border-radius:50%;
+
+        color:var(--sg-gold);
+        font-size:.68rem;
+    }
+
+    .sg-map-place h3 {
+        margin:0 0 5px;
+        font-size:1.05rem;
+    }
+
+    .sg-map-place p {
+        margin:0;
+        font-size:.82rem;
+        line-height:1.55;
+        opacity:.68;
+    }
+
+    .sg-map-place-category {
+        display:block;
+        margin-bottom:4px;
+
+        color:var(--sg-gold);
+
+        font-size:.58rem;
+        letter-spacing:.16em;
+        text-transform:uppercase;
+    }
+
+    .sg-map-closing {
+        margin-top:28px;
+        max-width:700px;
+
+        font-size:.88rem;
+        line-height:1.7;
+        opacity:.65;
+    }
+
+
+    /* -----------------------------------------------------
        END NAVIGATION
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .sg-end {
+        display:flex;
+        justify-content:space-between;
 
-        display: flex;
-
-        justify-content: space-between;
-
-        padding:
-            35px
-            0
-            70px;
-    }
-
-
-    .sg-end .text-link {
-
-        color: var(--sg-text);
+        padding:35px 0 70px;
     }
 
 }
@@ -806,164 +663,171 @@ body.edition-page .footer-copyright {
 @media (max-width:768px) {
 
     .singapore-desktop {
-        display: none;
+        display:none;
     }
 
     .singapore-mobile {
-        display: block;
-    }
-
-
-    body.edition-page {
-
-        background:
-            var(--sg-bg);
-
-        color:
-            var(--sg-text);
+        display:block;
     }
 
 
     /* -----------------------------------------------------
-       MOBILE HEADER
+       MOBILE MAP
     ----------------------------------------------------- */
 
-    body.edition-page .site-header {
-
-        background:
-            var(--sg-bg);
-
-        color:
-            var(--sg-text);
+    .edition-map {
+        border-top:1px solid rgba(255,255,255,.12);
     }
 
+    .edition-map-inner > p:last-of-type {
+        max-width:520px;
+    }
 
-    body.edition-page .site-logo,
-    body.edition-page .site-nav a {
+    .edition-map-graphic {
+        position:relative;
 
-        color:
-            var(--sg-text);
+        width:100%;
+        aspect-ratio:1 / .82;
+
+        margin:35px 0 30px;
+
+        overflow:hidden;
+
+        background:
+            radial-gradient(
+                circle at 52% 48%,
+                rgba(212,175,55,.08),
+                transparent 55%
+            ),
+            #090909;
+
+        border:1px solid rgba(255,255,255,.12);
+    }
+
+    .edition-map-graphic svg {
+        position:absolute;
+        inset:0;
+
+        width:100%;
+        height:100%;
+    }
+
+    .edition-map-marker {
+        position:absolute;
+
+        width:29px;
+        height:29px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        border:1px solid #d4af37;
+        border-radius:50%;
+
+        background:#17130b;
+        color:#d4af37;
+
+        font-family:Inter,sans-serif;
+        font-size:.65rem;
+
+        transform:translate(-50%,-50%);
+    }
+
+    .edition-map-marker.m1 {
+        left:55%;
+        top:52%;
+    }
+
+    .edition-map-marker.m2 {
+        left:49%;
+        top:40%;
+    }
+
+    .edition-map-marker.m3 {
+        left:58%;
+        top:43%;
+    }
+
+    .edition-map-marker.m4 {
+        left:72%;
+        top:57%;
+    }
+
+    .edition-map-marker.m5 {
+        left:53%;
+        top:25%;
+    }
+
+    .edition-map-marker.m6 {
+        left:87%;
+        top:38%;
+    }
+
+    .edition-map-marker.m7 {
+        left:64%;
+        top:52%;
+    }
+
+    .edition-map-marker.m8 {
+        left:51%;
+        top:76%;
+    }
+
+    .edition-map-list {
+        border-top:1px solid rgba(255,255,255,.14);
+    }
+
+    .edition-map-list > div {
+        display:grid;
+        grid-template-columns:40px 1fr auto;
+        gap:12px;
+        align-items:center;
+
+        padding:15px 0;
+
+        border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .edition-map-list span {
+        color:#d4af37;
+
+        font-size:.68rem;
+        letter-spacing:.12em;
+    }
+
+    .edition-map-list strong {
+        font-family:Cormorant Garamond,serif;
+
+        font-size:1.15rem;
+        font-weight:500;
+    }
+
+    .edition-map-list small {
+        color:#d4af37;
+
+        font-size:.56rem;
+        letter-spacing:.1em;
+        text-transform:uppercase;
     }
 
 
     /* -----------------------------------------------------
-       MOBILE HERO
+       REDUCED MOTION
     ----------------------------------------------------- */
 
-    .edition-hero {
+    @media (prefers-reduced-motion:reduce) {
 
-        position: relative;
+        *,
+        *::before,
+        *::after {
+            scroll-behavior:auto !important;
+            transition:none !important;
+            animation:none !important;
+        }
 
-        background-color:
-            var(--sg-bg);
     }
 
-
-    .edition-hero::after {
-
-        content: "";
-
-        position: absolute;
-
-        left: 0;
-        right: 0;
-        bottom: 0;
-
-        height: 25%;
-
-        pointer-events: none;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(243,239,230,0),
-                rgba(243,239,230,.45) 60%,
-                rgba(243,239,230,1) 100%
-            );
-    }
-
-
-    .edition-hero-overlay {
-
-        z-index: 2;
-    }
-
-
-    .edition-hero-overlay h1,
-    .edition-hero-overlay p {
-
-        color:
-            #ffffff;
-    }
-
-
-    /* -----------------------------------------------------
-       MOBILE SECTIONS
-    ----------------------------------------------------- */
-
-    .edition-intro,
-    .edition-photo-story,
-    .edition-local-info,
-    .edition-recommendations,
-    .edition-journal,
-    .edition-gallery,
-    .edition-map,
-    .edition-end {
-
-        background:
-            var(--sg-bg);
-
-        color:
-            var(--sg-text);
-    }
-
-
-    body.edition-page .edition-local-info {
-
-        border-color:
-            var(--sg-line);
-    }
-
-
-    /* -----------------------------------------------------
-       MOBILE FOOTER
-    ----------------------------------------------------- */
-
-    body.edition-page .site-footer {
-
-        background:
-            var(--sg-bg);
-
-        color:
-            var(--sg-text);
-    }
-
-}
-
-
-/* =========================================================
-   FINAL NAVIGATION / LINKS
-========================================================= */
-
-body.edition-page .text-link {
-
-    color:
-        var(--sg-text);
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-
-        scroll-behavior: auto !important;
-    }
 }
 
 </style>
@@ -985,7 +849,6 @@ body.edition-page .text-link {
         THE EXPAT EDITS
     </a>
 
-
     <nav class="site-nav">
 
         <a href="editions.html">
@@ -1005,7 +868,6 @@ body.edition-page .text-link {
         </a>
 
     </nav>
-
 
     <button
         class="menu-toggle"
@@ -1035,9 +897,6 @@ body.edition-page .text-link {
 
 <section class="sg-opening">
 
-
-    <!-- HERO -->
-
     <div class="sg-opening-hero">
 
         <img
@@ -1045,7 +904,6 @@ body.edition-page .text-link {
             alt="Singapore skyline at night"
             loading="eager"
         >
-
 
         <div class="edition-hero-overlay">
 
@@ -1066,8 +924,6 @@ body.edition-page .text-link {
     </div>
 
 
-    <!-- INTRODUCTION -->
-
     <div class="sg-opening-intro">
 
         <p class="section-label">
@@ -1077,7 +933,6 @@ body.edition-page .text-link {
         <h2>
             A new lease on life.
         </h2>
-
 
         <div class="sg-opening-intro-copy">
 
@@ -1115,7 +970,6 @@ body.edition-page .text-link {
 ====================================================== -->
 
 <section class="sg-editorial-section">
-
 
 <div class="section-heading">
 
@@ -1163,7 +1017,6 @@ body.edition-page .text-link {
         alt="Singapore skyline through the trees"
         loading="eager"
     >
-
 
     <img
         class="sg-r1-img2"
@@ -1264,14 +1117,12 @@ body.edition-page .text-link {
         loading="lazy"
     >
 
-
     <img
         class="sg-r3-img2"
         src="singapore15.jpeg"
         alt="DJing by the waterfront in Singapore"
         loading="lazy"
     >
-
 
     <img
         class="sg-r3-img3"
@@ -1329,9 +1180,7 @@ body.edition-page .text-link {
 
 <section class="sg-info">
 
-
 <div class="sg-info-grid">
-
 
     <div class="sg-info-item">
 
@@ -1387,7 +1236,6 @@ body.edition-page .text-link {
 
     </div>
 
-
 </div>
 
 </section>
@@ -1398,7 +1246,6 @@ body.edition-page .text-link {
 ====================================================== -->
 
 <section class="sg-recommendations">
-
 
 <div class="sg-recommendations-heading">
 
@@ -1415,12 +1262,9 @@ body.edition-page .text-link {
 
 <div class="sg-recommendation-list">
 
-
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">
-            01
-        </span>
+        <span class="sg-rec-number">01</span>
 
         <h3>
             The Singapore Edition
@@ -1438,9 +1282,7 @@ body.edition-page .text-link {
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">
-            02
-        </span>
+        <span class="sg-rec-number">02</span>
 
         <h3>
             Grand Hyatt
@@ -1457,9 +1299,7 @@ body.edition-page .text-link {
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">
-            03
-        </span>
+        <span class="sg-rec-number">03</span>
 
         <h3>
             Raffles
@@ -1477,9 +1317,7 @@ body.edition-page .text-link {
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">
-            04
-        </span>
+        <span class="sg-rec-number">04</span>
 
         <h3>
             Sentosa
@@ -1496,9 +1334,7 @@ body.edition-page .text-link {
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">
-            05
-        </span>
+        <span class="sg-rec-number">05</span>
 
         <h3>
             The food scene
@@ -1512,7 +1348,6 @@ body.edition-page .text-link {
 
     </article>
 
-
 </div>
 
 </section>
@@ -1523,7 +1358,6 @@ body.edition-page .text-link {
 ====================================================== -->
 
 <section class="sg-journal">
-
 
 <div>
 
@@ -1554,7 +1388,6 @@ body.edition-page .text-link {
 
 </div>
 
-
 </section>
 
 
@@ -1564,9 +1397,7 @@ body.edition-page .text-link {
 
 <section class="sg-editorial-section">
 
-
 <div class="sg-final-grid">
-
 
     <div class="sg-final-heading">
 
@@ -1588,14 +1419,12 @@ body.edition-page .text-link {
         loading="lazy"
     >
 
-
     <img
         class="sg-final-img2"
         src="singapore13.jpeg"
         alt="Singapore skyline at night"
         loading="lazy"
     >
-
 
     <img
         class="sg-final-img3"
@@ -1604,14 +1433,12 @@ body.edition-page .text-link {
         loading="lazy"
     >
 
-
     <img
         class="sg-final-img4"
         src="singapore21.jpeg"
         alt="Snake in Singapore"
         loading="lazy"
     >
-
 
     <img
         class="sg-final-img5"
@@ -1620,14 +1447,12 @@ body.edition-page .text-link {
         loading="lazy"
     >
 
-
     <img
         class="sg-final-img6"
         src="singapore20.jpeg"
         alt="Bananas growing in our garden in Singapore"
         loading="lazy"
     >
-
 
     <img
         class="sg-final-img7"
@@ -1636,20 +1461,18 @@ body.edition-page .text-link {
         loading="lazy"
     >
 
-
 </div>
 
 </section>
 
 
 <!-- =====================================================
-     MAP
+     OUR MAP
 ====================================================== -->
 
 <section class="sg-map">
 
-
-<div class="sg-map-inner">
+<div class="sg-map-header">
 
     <p class="section-label">
         OUR MAP
@@ -1660,12 +1483,377 @@ body.edition-page .text-link {
     </h2>
 
     <p>
-        The places that make up our Singapore life will
-        eventually live here on our wider travel map.
+        The places that make up our Singapore life.
+        From the city centre to the coast, these are
+        some of the places we return to, recommend
+        and remember.
     </p>
 
 </div>
 
+
+<div class="sg-map-layout">
+
+
+    <!-- MAP -->
+
+    <div
+        class="sg-map-graphic"
+        aria-label="Illustrated map of Singapore"
+    >
+
+        <svg
+            viewBox="0 0 900 560"
+            preserveAspectRatio="xMidYMid meet"
+            aria-hidden="true"
+        >
+
+            <!-- Main island -->
+
+            <path
+                d="
+                M145 350
+                C175 310 205 292 250 276
+                C302 258 340 248 386 231
+                C430 214 474 202 526 193
+                C584 184 640 178 697 189
+                C746 198 782 219 800 245
+                C815 269 807 292 783 308
+                C754 327 730 341 702 356
+                C669 374 638 389 600 401
+                C559 415 523 428 480 438
+                C430 450 378 456 326 451
+                C274 446 230 432 194 412
+                C166 396 145 374 145 350 Z
+                "
+                fill="rgba(255,255,255,.025)"
+                stroke="rgba(212,175,55,.20)"
+                stroke-width="2"
+            />
+
+            <!-- Map lines -->
+
+            <path
+                d="M180 345 C300 330 420 315 535 292 C640 271 720 259 790 267"
+                fill="none"
+                stroke="rgba(255,255,255,.08)"
+                stroke-width="1"
+            />
+
+            <path
+                d="M235 400 C320 355 405 330 495 315 C600 296 695 300 770 325"
+                fill="none"
+                stroke="rgba(255,255,255,.07)"
+                stroke-width="1"
+            />
+
+            <path
+                d="M350 230 C370 275 390 315 414 355 C437 391 456 420 480 440"
+                fill="none"
+                stroke="rgba(255,255,255,.07)"
+                stroke-width="1"
+            />
+
+            <path
+                d="M535 194 C550 245 565 300 578 350 C586 378 594 397 600 401"
+                fill="none"
+                stroke="rgba(255,255,255,.07)"
+                stroke-width="1"
+            />
+
+            <path
+                d="M675 190 C660 245 654 295 660 350 C666 372 680 390 702 410"
+                fill="none"
+                stroke="rgba(255,255,255,.07)"
+                stroke-width="1"
+            />
+
+            <!-- Sentosa -->
+
+            <path
+                d="
+                M395 468
+                C425 456 463 458 492 470
+                C505 477 504 491 488 499
+                C455 511 416 507 394 494
+                C382 486 383 474 395 468 Z
+                "
+                fill="rgba(255,255,255,.025)"
+                stroke="rgba(212,175,55,.16)"
+                stroke-width="1.5"
+            />
+
+            <!-- Surrounding islands -->
+
+            <circle
+                cx="690"
+                cy="458"
+                r="10"
+                fill="rgba(255,255,255,.025)"
+                stroke="rgba(255,255,255,.08)"
+            />
+
+            <circle
+                cx="720"
+                cy="475"
+                r="6"
+                fill="rgba(255,255,255,.025)"
+                stroke="rgba(255,255,255,.08)"
+            />
+
+        </svg>
+
+
+        <span class="sg-map-label central">
+            Marina Bay
+        </span>
+
+        <span class="sg-map-label orchard">
+            Orchard
+        </span>
+
+        <span class="sg-map-label east">
+            East Coast
+        </span>
+
+        <span class="sg-map-label.north">
+            Singapore
+        </span>
+
+        <span class="sg-map-label west">
+            Bukit Timah
+        </span>
+
+        <span class="sg-map-label sentosa">
+            Sentosa
+        </span>
+
+
+        <!-- GOLD MARKERS -->
+
+        <span class="sg-map-marker m1">1</span>
+        <span class="sg-map-marker m2">2</span>
+        <span class="sg-map-marker m3">3</span>
+        <span class="sg-map-marker m4">4</span>
+        <span class="sg-map-marker m5">5</span>
+        <span class="sg-map-marker m6">6</span>
+        <span class="sg-map-marker m7">7</span>
+        <span class="sg-map-marker m8">8</span>
+
+    </div>
+
+
+    <!-- PLACES -->
+
+    <div class="sg-map-places">
+
+        <p class="sg-map-places-heading">
+            Our Places
+        </p>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">1</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    City
+                </span>
+
+                <h3>
+                    Marina Bay
+                </h3>
+
+                <p>
+                    Skyline, waterfront walks and the
+                    Singapore we never get tired of seeing.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">2</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    Neighbourhood
+                </span>
+
+                <h3>
+                    Orchard
+                </h3>
+
+                <p>
+                    Shopping, hotels, restaurants and
+                    another familiar side of the city.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">3</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    Hotel
+                </span>
+
+                <h3>
+                    Raffles
+                </h3>
+
+                <p>
+                    A Singapore classic and one of the
+                    places we return to.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">4</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    Parks &amp; Nature
+                </span>
+
+                <h3>
+                    East Coast
+                </h3>
+
+                <p>
+                    Beaches, cycling and a slower side
+                    of Singapore.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">5</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    Nature
+                </span>
+
+                <h3>
+                    Botanic Gardens
+                </h3>
+
+                <p>
+                    One of our favourite places to escape
+                    the pace of the city.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">6</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    Essentials
+                </span>
+
+                <h3>
+                    Changi
+                </h3>
+
+                <p>
+                    The airport that makes Singapore such
+                    an extraordinary base for travel.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">7</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    Restaurants &amp; Bars
+                </span>
+
+                <h3>
+                    Clarke Quay
+                </h3>
+
+                <p>
+                    Waterfront evenings, restaurants
+                    and drinks.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="sg-map-place">
+
+            <span class="sg-map-place-number">8</span>
+
+            <div>
+
+                <span class="sg-map-place-category">
+                    Beaches
+                </span>
+
+                <h3>
+                    Sentosa
+                </h3>
+
+                <p>
+                    Our easy escape without really
+                    leaving Singapore.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+
+<p class="sg-map-closing">
+    This is the beginning of our Singapore map.
+    As the Edition grows, these places can become
+    the starting point for deeper stories, hotels,
+    restaurants and experiences.
+</p>
 
 </section>
 
@@ -1685,7 +1873,6 @@ body.edition-page .text-link {
 </a>
 
 </section>
-
 
 </div>
 
@@ -1725,7 +1912,9 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- INTRODUCTION -->
+<!-- =====================================================
+     INTRODUCTION
+====================================================== -->
 
 <section class="edition-intro section">
 
@@ -1767,7 +1956,9 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- PHOTOGRAPHIC STORY -->
+<!-- =====================================================
+     PHOTOGRAPHIC STORY
+====================================================== -->
 
 <section class="edition-photo-story section">
 
@@ -1788,71 +1979,17 @@ body.edition-page .text-link {
 
 <div class="edition-photo-mosaic">
 
-    <img
-        src="singapore2.jpeg"
-        alt="Singapore skyline through the trees"
-        loading="eager"
-    >
-
-    <img
-        src="singapore3.jpeg"
-        alt="Marina Bay surrounded by tropical greenery"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore4.jpeg"
-        alt="Singapore architecture framed by trees"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore5.jpeg"
-        alt="Orchard Road, Singapore"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore6.jpeg"
-        alt="Singapore skyline reflected across the water"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore15.jpeg"
-        alt="DJing by the waterfront in Singapore"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore17.jpeg"
-        alt="Monitor lizard in Singapore"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore18.jpeg"
-        alt="Snake in the trees in Singapore"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore19.jpeg"
-        alt="Monitor lizards by the water in Singapore"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore20.jpeg"
-        alt="Bananas growing in our garden in Singapore"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore22.jpeg"
-        alt="Durian fruit in Singapore"
-        loading="lazy"
-    >
+    <img src="singapore2.jpeg" alt="Singapore skyline through the trees" loading="eager">
+    <img src="singapore3.jpeg" alt="Marina Bay surrounded by tropical greenery" loading="lazy">
+    <img src="singapore4.jpeg" alt="Singapore architecture framed by trees" loading="lazy">
+    <img src="singapore5.jpeg" alt="Orchard Road, Singapore" loading="lazy">
+    <img src="singapore6.jpeg" alt="Singapore skyline reflected across the water" loading="lazy">
+    <img src="singapore15.jpeg" alt="DJing by the waterfront in Singapore" loading="lazy">
+    <img src="singapore17.jpeg" alt="Monitor lizard in Singapore" loading="lazy">
+    <img src="singapore18.jpeg" alt="Snake in the trees in Singapore" loading="lazy">
+    <img src="singapore19.jpeg" alt="Monitor lizards by the water in Singapore" loading="lazy">
+    <img src="singapore20.jpeg" alt="Bananas growing in our garden in Singapore" loading="lazy">
+    <img src="singapore22.jpeg" alt="Durian fruit in Singapore" loading="lazy">
 
 </div>
 
@@ -1861,14 +1998,15 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- LOCAL INFORMATION -->
+<!-- =====================================================
+     LOCAL INFORMATION
+====================================================== -->
 
 <section class="edition-local-info">
 
 <div class="container">
 
 <div class="edition-local-info-grid">
-
 
     <div class="edition-local-info-item">
 
@@ -1924,7 +2062,6 @@ body.edition-page .text-link {
 
     </div>
 
-
 </div>
 
 </div>
@@ -1932,7 +2069,9 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- RECOMMENDATIONS -->
+<!-- =====================================================
+     RECOMMENDATIONS
+====================================================== -->
 
 <section class="edition-recommendations section">
 
@@ -1952,7 +2091,6 @@ body.edition-page .text-link {
 
 
 <div class="edition-recommendations-grid">
-
 
     <article class="edition-recommendation">
 
@@ -2050,7 +2188,6 @@ body.edition-page .text-link {
 
     </article>
 
-
 </div>
 
 </div>
@@ -2058,14 +2195,15 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- JOURNAL -->
+<!-- =====================================================
+     JOURNAL
+====================================================== -->
 
 <section class="edition-journal section">
 
 <div class="container">
 
 <div class="edition-journal-inner">
-
 
     <div>
 
@@ -2096,7 +2234,6 @@ body.edition-page .text-link {
 
     </div>
 
-
 </div>
 
 </div>
@@ -2104,7 +2241,9 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- MORE FROM CAMERA -->
+<!-- =====================================================
+     MORE FROM CAMERA
+====================================================== -->
 
 <section class="edition-gallery section">
 
@@ -2125,49 +2264,13 @@ body.edition-page .text-link {
 
 <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
 
-
-    <img
-        src="singapore7.jpeg"
-        alt="Singapore beach at sunset"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore8.jpeg"
-        alt="Singapore architectural detail"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore9.jpeg"
-        alt="Water lilies and sculpture in Singapore"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore12.jpeg"
-        alt="Singapore city detail"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore13.jpeg"
-        alt="Singapore skyline at night"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore14.jpeg"
-        alt="Singapore waterfront at night"
-        loading="lazy"
-    >
-
-    <img
-        src="singapore21.jpeg"
-        alt="Snake in Singapore"
-        loading="lazy"
-    >
-
+    <img src="singapore7.jpeg" alt="Singapore beach at sunset" loading="lazy">
+    <img src="singapore8.jpeg" alt="Singapore architectural detail" loading="lazy">
+    <img src="singapore9.jpeg" alt="Water lilies and sculpture in Singapore" loading="lazy">
+    <img src="singapore12.jpeg" alt="Singapore city detail" loading="lazy">
+    <img src="singapore13.jpeg" alt="Singapore skyline at night" loading="lazy">
+    <img src="singapore14.jpeg" alt="Singapore waterfront at night" loading="lazy">
+    <img src="singapore21.jpeg" alt="Snake in Singapore" loading="lazy">
 
 </div>
 
@@ -2176,7 +2279,9 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- MAP -->
+<!-- =====================================================
+     MOBILE MAP
+====================================================== -->
 
 <section class="edition-map section">
 
@@ -2193,9 +2298,133 @@ body.edition-page .text-link {
     </h2>
 
     <p>
-        The places that make up our Singapore life will
-        eventually live here on our wider travel map.
+        The places that make up our Singapore life.
+        These are some of the places we return to,
+        recommend and remember.
     </p>
+
+
+    <div
+        class="edition-map-graphic"
+        aria-label="Illustrated map of Singapore"
+    >
+
+        <svg
+            viewBox="0 0 700 520"
+            preserveAspectRatio="xMidYMid meet"
+            aria-hidden="true"
+        >
+
+            <path
+                d="
+                M100 325
+                C145 275 205 260 270 235
+                C340 208 420 182 505 185
+                C575 188 625 216 640 253
+                C650 278 625 300 590 321
+                C540 351 485 375 420 398
+                C345 425 270 432 205 412
+                C145 393 105 360 100 325 Z
+                "
+                fill="rgba(255,255,255,.025)"
+                stroke="rgba(212,175,55,.22)"
+                stroke-width="2"
+            />
+
+            <path
+                d="M125 322 C270 300 410 268 625 258"
+                fill="none"
+                stroke="rgba(255,255,255,.08)"
+                stroke-width="1"
+            />
+
+            <path
+                d="M210 395 C315 330 415 305 585 312"
+                fill="none"
+                stroke="rgba(255,255,255,.07)"
+                stroke-width="1"
+            />
+
+            <path
+                d="M390 190 C385 260 400 330 420 398"
+                fill="none"
+                stroke="rgba(255,255,255,.07)"
+                stroke-width="1"
+            />
+
+            <path
+                d="M520 190 C505 245 520 300 540 351"
+                fill="none"
+                stroke="rgba(255,255,255,.07)"
+                stroke-width="1"
+            />
+
+        </svg>
+
+
+        <span class="edition-map-marker m1">1</span>
+        <span class="edition-map-marker m2">2</span>
+        <span class="edition-map-marker m3">3</span>
+        <span class="edition-map-marker m4">4</span>
+        <span class="edition-map-marker m5">5</span>
+        <span class="edition-map-marker m6">6</span>
+        <span class="edition-map-marker m7">7</span>
+        <span class="edition-map-marker m8">8</span>
+
+    </div>
+
+
+    <div class="edition-map-list">
+
+        <div>
+            <span>01</span>
+            <strong>Marina Bay</strong>
+            <small>City</small>
+        </div>
+
+        <div>
+            <span>02</span>
+            <strong>Orchard</strong>
+            <small>Neighbourhood</small>
+        </div>
+
+        <div>
+            <span>03</span>
+            <strong>Raffles</strong>
+            <small>Hotel</small>
+        </div>
+
+        <div>
+            <span>04</span>
+            <strong>East Coast</strong>
+            <small>Parks &amp; Nature</small>
+        </div>
+
+        <div>
+            <span>05</span>
+            <strong>Botanic Gardens</strong>
+            <small>Nature</small>
+        </div>
+
+        <div>
+            <span>06</span>
+            <strong>Changi</strong>
+            <small>Essentials</small>
+        </div>
+
+        <div>
+            <span>07</span>
+            <strong>Clarke Quay</strong>
+            <small>Restaurants &amp; Bars</small>
+        </div>
+
+        <div>
+            <span>08</span>
+            <strong>Sentosa</strong>
+            <small>Beaches</small>
+        </div>
+
+    </div>
 
 </div>
 
@@ -2204,7 +2433,9 @@ body.edition-page .text-link {
 </section>
 
 
-<!-- END -->
+<!-- =====================================================
+     END
+====================================================== -->
 
 <section class="edition-end">
 
@@ -2218,7 +2449,6 @@ body.edition-page .text-link {
 
 </section>
 
-
 </main>
 
 
@@ -2229,7 +2459,6 @@ body.edition-page .text-link {
 <footer class="site-footer">
 
 <div class="site-footer-inner">
-
 
     <div>
 
@@ -2278,7 +2507,6 @@ body.edition-page .text-link {
     <p class="footer-copyright">
         © The Expat Edits
     </p>
-
 
 </div>
 

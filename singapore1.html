@@ -421,7 +421,9 @@
     }
 
 
-    /* MAP GRAPHIC */
+    /* -----------------------------------------------------
+       MAP GRAPHIC
+    ----------------------------------------------------- */
 
     .sg-map-graphic {
         position:relative;
@@ -439,61 +441,39 @@
         border:1px solid var(--sg-line);
     }
 
-    .sg-map-graphic svg {
+    .sg-map-outline {
         position:absolute;
         inset:0;
+
         width:100%;
         height:100%;
-    }
 
+        object-fit:contain;
 
-    /* MAP LABELS */
+        opacity:.52;
 
-    .sg-map-label {
-        position:absolute;
+        /*
+           The source outline is black.
+           This converts it into the restrained gold
+           used throughout the Edition.
+        */
+        filter:
+            brightness(0)
+            saturate(100%)
+            invert(72%)
+            sepia(31%)
+            saturate(620%)
+            hue-rotate(5deg)
+            brightness(88%)
+            contrast(86%);
 
-        color:rgba(255,255,255,.28);
-
-        font-size:.58rem;
-        letter-spacing:.18em;
-        text-transform:uppercase;
-
-        white-space:nowrap;
         pointer-events:none;
     }
 
-    .sg-map-label.central {
-        left:52%;
-        top:53%;
-    }
 
-    .sg-map-label.orchard {
-        left:48%;
-        top:40%;
-    }
-
-    .sg-map-label.east {
-        left:72%;
-        top:54%;
-    }
-
-    .sg-map-label.north {
-        left:51%;
-        top:20%;
-    }
-
-    .sg-map-label.west {
-        left:25%;
-        top:48%;
-    }
-
-    .sg-map-label.sentosa {
-        left:48%;
-        top:78%;
-    }
-
-
-    /* GOLD MARKERS */
+    /* -----------------------------------------------------
+       GOLD MAP MARKERS
+    ----------------------------------------------------- */
 
     .sg-map-marker {
         position:absolute;
@@ -528,48 +508,67 @@
         color:#090909;
     }
 
+
+    /*
+       Geographic positions.
+
+       These are positioned against the real Singapore
+       outline rather than the old illustrated shape.
+
+       1 Marina Bay
+       2 Orchard
+       3 Raffles
+       4 East Coast
+       5 Botanic Gardens
+       6 Changi
+       7 Clarke Quay
+       8 Sentosa
+    */
+
     .sg-map-marker.m1 {
-        left:54%;
-        top:53%;
+        left:56.2%;
+        top:73.3%;
     }
 
     .sg-map-marker.m2 {
-        left:49%;
-        top:42%;
+        left:51.4%;
+        top:66.1%;
     }
 
     .sg-map-marker.m3 {
-        left:57%;
-        top:44%;
+        left:56.4%;
+        top:70.2%;
     }
 
     .sg-map-marker.m4 {
-        left:69%;
-        top:57%;
+        left:68.3%;
+        top:67.7%;
     }
 
     .sg-map-marker.m5 {
-        left:53%;
-        top:26%;
+        left:48.1%;
+        top:62.5%;
     }
 
     .sg-map-marker.m6 {
-        left:87%;
-        top:39%;
+        left:85%;
+        top:42.2%;
     }
 
     .sg-map-marker.m7 {
-        left:62%;
-        top:52%;
+        left:54.5%;
+        top:72.4%;
     }
 
     .sg-map-marker.m8 {
-        left:51%;
-        top:76%;
+        left:51.1%;
+        top:88.2%;
     }
 
 
-    /* PLACES LIST */
+    /* -----------------------------------------------------
+       PLACES LIST
+    ----------------------------------------------------- */
 
     .sg-map-places {
         border-top:1px solid var(--sg-line-strong);
@@ -704,13 +703,34 @@
         border:1px solid rgba(255,255,255,.12);
     }
 
-    .edition-map-graphic svg {
+    .edition-map-outline {
         position:absolute;
         inset:0;
 
         width:100%;
         height:100%;
+
+        object-fit:contain;
+
+        opacity:.52;
+
+        filter:
+            brightness(0)
+            saturate(100%)
+            invert(72%)
+            sepia(31%)
+            saturate(620%)
+            hue-rotate(5deg)
+            brightness(88%)
+            contrast(86%);
+
+        pointer-events:none;
     }
+
+
+    /* -----------------------------------------------------
+       MOBILE MAP MARKERS
+    ----------------------------------------------------- */
 
     .edition-map-marker {
         position:absolute;
@@ -732,47 +752,61 @@
         font-size:.65rem;
 
         transform:translate(-50%,-50%);
+
+        z-index:3;
     }
 
+
+    /*
+       The mobile map box is taller than the actual
+       geographic outline, so these positions compensate
+       for the contain spacing around the real map.
+    */
+
     .edition-map-marker.m1 {
-        left:55%;
-        top:52%;
+        left:56.6%;
+        top:68.7%;
     }
 
     .edition-map-marker.m2 {
-        left:49%;
-        top:40%;
+        left:51.5%;
+        top:62.9%;
     }
 
     .edition-map-marker.m3 {
-        left:58%;
-        top:43%;
+        left:56.8%;
+        top:66.2%;
     }
 
     .edition-map-marker.m4 {
-        left:72%;
-        top:57%;
+        left:69.4%;
+        top:64.2%;
     }
 
     .edition-map-marker.m5 {
-        left:53%;
-        top:25%;
+        left:48%;
+        top:60%;
     }
 
     .edition-map-marker.m6 {
         left:87%;
-        top:38%;
+        top:43.7%;
     }
 
     .edition-map-marker.m7 {
-        left:64%;
-        top:52%;
+        left:54.8%;
+        top:68%;
     }
 
     .edition-map-marker.m8 {
-        left:51%;
-        top:76%;
+        left:51.2%;
+        top:80.7%;
     }
+
+
+    /* -----------------------------------------------------
+       MOBILE MAP LIST
+    ----------------------------------------------------- */
 
     .edition-map-list {
         border-top:1px solid rgba(255,255,255,.14);
@@ -1495,155 +1529,70 @@
 <div class="sg-map-layout">
 
 
-    <!-- MAP -->
+    <!-- =================================================
+         REAL SINGAPORE OUTLINE
+    ================================================== -->
 
     <div
         class="sg-map-graphic"
-        aria-label="Illustrated map of Singapore"
+        aria-label="Map of Singapore showing our places"
     >
 
-        <svg
-            viewBox="0 0 900 560"
-            preserveAspectRatio="xMidYMid meet"
-            aria-hidden="true"
+        <img
+            src="singapore-outline.svg"
+            alt="Outline map of Singapore"
+            class="sg-map-outline"
         >
-
-            <!-- Main island -->
-
-            <path
-                d="
-                M145 350
-                C175 310 205 292 250 276
-                C302 258 340 248 386 231
-                C430 214 474 202 526 193
-                C584 184 640 178 697 189
-                C746 198 782 219 800 245
-                C815 269 807 292 783 308
-                C754 327 730 341 702 356
-                C669 374 638 389 600 401
-                C559 415 523 428 480 438
-                C430 450 378 456 326 451
-                C274 446 230 432 194 412
-                C166 396 145 374 145 350 Z
-                "
-                fill="rgba(255,255,255,.025)"
-                stroke="rgba(212,175,55,.20)"
-                stroke-width="2"
-            />
-
-            <!-- Map lines -->
-
-            <path
-                d="M180 345 C300 330 420 315 535 292 C640 271 720 259 790 267"
-                fill="none"
-                stroke="rgba(255,255,255,.08)"
-                stroke-width="1"
-            />
-
-            <path
-                d="M235 400 C320 355 405 330 495 315 C600 296 695 300 770 325"
-                fill="none"
-                stroke="rgba(255,255,255,.07)"
-                stroke-width="1"
-            />
-
-            <path
-                d="M350 230 C370 275 390 315 414 355 C437 391 456 420 480 440"
-                fill="none"
-                stroke="rgba(255,255,255,.07)"
-                stroke-width="1"
-            />
-
-            <path
-                d="M535 194 C550 245 565 300 578 350 C586 378 594 397 600 401"
-                fill="none"
-                stroke="rgba(255,255,255,.07)"
-                stroke-width="1"
-            />
-
-            <path
-                d="M675 190 C660 245 654 295 660 350 C666 372 680 390 702 410"
-                fill="none"
-                stroke="rgba(255,255,255,.07)"
-                stroke-width="1"
-            />
-
-            <!-- Sentosa -->
-
-            <path
-                d="
-                M395 468
-                C425 456 463 458 492 470
-                C505 477 504 491 488 499
-                C455 511 416 507 394 494
-                C382 486 383 474 395 468 Z
-                "
-                fill="rgba(255,255,255,.025)"
-                stroke="rgba(212,175,55,.16)"
-                stroke-width="1.5"
-            />
-
-            <!-- Surrounding islands -->
-
-            <circle
-                cx="690"
-                cy="458"
-                r="10"
-                fill="rgba(255,255,255,.025)"
-                stroke="rgba(255,255,255,.08)"
-            />
-
-            <circle
-                cx="720"
-                cy="475"
-                r="6"
-                fill="rgba(255,255,255,.025)"
-                stroke="rgba(255,255,255,.08)"
-            />
-
-        </svg>
-
-
-        <span class="sg-map-label central">
-            Marina Bay
-        </span>
-
-        <span class="sg-map-label orchard">
-            Orchard
-        </span>
-
-        <span class="sg-map-label east">
-            East Coast
-        </span>
-
-        <span class="sg-map-label.north">
-            Singapore
-        </span>
-
-        <span class="sg-map-label west">
-            Bukit Timah
-        </span>
-
-        <span class="sg-map-label sentosa">
-            Sentosa
-        </span>
 
 
         <!-- GOLD MARKERS -->
 
-        <span class="sg-map-marker m1">1</span>
-        <span class="sg-map-marker m2">2</span>
-        <span class="sg-map-marker m3">3</span>
-        <span class="sg-map-marker m4">4</span>
-        <span class="sg-map-marker m5">5</span>
-        <span class="sg-map-marker m6">6</span>
-        <span class="sg-map-marker m7">7</span>
-        <span class="sg-map-marker m8">8</span>
+        <span
+            class="sg-map-marker m1"
+            aria-label="1 Marina Bay"
+        >1</span>
+
+        <span
+            class="sg-map-marker m2"
+            aria-label="2 Orchard"
+        >2</span>
+
+        <span
+            class="sg-map-marker m3"
+            aria-label="3 Raffles"
+        >3</span>
+
+        <span
+            class="sg-map-marker m4"
+            aria-label="4 East Coast"
+        >4</span>
+
+        <span
+            class="sg-map-marker m5"
+            aria-label="5 Botanic Gardens"
+        >5</span>
+
+        <span
+            class="sg-map-marker m6"
+            aria-label="6 Changi"
+        >6</span>
+
+        <span
+            class="sg-map-marker m7"
+            aria-label="7 Clarke Quay"
+        >7</span>
+
+        <span
+            class="sg-map-marker m8"
+            aria-label="8 Sentosa"
+        >8</span>
 
     </div>
 
 
-    <!-- PLACES -->
+    <!-- =================================================
+         PLACES
+    ================================================== -->
 
     <div class="sg-map-places">
 
@@ -1886,7 +1835,9 @@
 <main class="singapore-mobile">
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+====================================================== -->
 
 <section
     class="edition-hero"
@@ -2304,72 +2255,61 @@
     </p>
 
 
+    <!-- =================================================
+         REAL SINGAPORE OUTLINE
+    ================================================== -->
+
     <div
         class="edition-map-graphic"
-        aria-label="Illustrated map of Singapore"
+        aria-label="Map of Singapore showing our places"
     >
 
-        <svg
-            viewBox="0 0 700 520"
-            preserveAspectRatio="xMidYMid meet"
-            aria-hidden="true"
+        <img
+            src="singapore-outline.svg"
+            alt="Outline map of Singapore"
+            class="edition-map-outline"
         >
 
-            <path
-                d="
-                M100 325
-                C145 275 205 260 270 235
-                C340 208 420 182 505 185
-                C575 188 625 216 640 253
-                C650 278 625 300 590 321
-                C540 351 485 375 420 398
-                C345 425 270 432 205 412
-                C145 393 105 360 100 325 Z
-                "
-                fill="rgba(255,255,255,.025)"
-                stroke="rgba(212,175,55,.22)"
-                stroke-width="2"
-            />
 
-            <path
-                d="M125 322 C270 300 410 268 625 258"
-                fill="none"
-                stroke="rgba(255,255,255,.08)"
-                stroke-width="1"
-            />
+        <span
+            class="edition-map-marker m1"
+            aria-label="1 Marina Bay"
+        >1</span>
 
-            <path
-                d="M210 395 C315 330 415 305 585 312"
-                fill="none"
-                stroke="rgba(255,255,255,.07)"
-                stroke-width="1"
-            />
+        <span
+            class="edition-map-marker m2"
+            aria-label="2 Orchard"
+        >2</span>
 
-            <path
-                d="M390 190 C385 260 400 330 420 398"
-                fill="none"
-                stroke="rgba(255,255,255,.07)"
-                stroke-width="1"
-            />
+        <span
+            class="edition-map-marker m3"
+            aria-label="3 Raffles"
+        >3</span>
 
-            <path
-                d="M520 190 C505 245 520 300 540 351"
-                fill="none"
-                stroke="rgba(255,255,255,.07)"
-                stroke-width="1"
-            />
+        <span
+            class="edition-map-marker m4"
+            aria-label="4 East Coast"
+        >4</span>
 
-        </svg>
+        <span
+            class="edition-map-marker m5"
+            aria-label="5 Botanic Gardens"
+        >5</span>
 
+        <span
+            class="edition-map-marker m6"
+            aria-label="6 Changi"
+        >6</span>
 
-        <span class="edition-map-marker m1">1</span>
-        <span class="edition-map-marker m2">2</span>
-        <span class="edition-map-marker m3">3</span>
-        <span class="edition-map-marker m4">4</span>
-        <span class="edition-map-marker m5">5</span>
-        <span class="edition-map-marker m6">6</span>
-        <span class="edition-map-marker m7">7</span>
-        <span class="edition-map-marker m8">8</span>
+        <span
+            class="edition-map-marker m7"
+            aria-label="7 Clarke Quay"
+        >7</span>
+
+        <span
+            class="edition-map-marker m8"
+            aria-label="8 Sentosa"
+        >8</span>
 
     </div>
 

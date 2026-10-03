@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -27,99 +28,264 @@
 
 /* =========================================================
    SINGAPORE 1
-   Editorial home-based Edition / master template
+   Editorial home-based Edition
+   Cream editorial master experiment
 ========================================================= */
 
-.singapore-desktop { display:block; }
-.singapore-mobile { display:none; }
+
+/* =========================================================
+   COLOUR SYSTEM
+========================================================= */
+
+:root {
+
+    --sg-bg: #F3EFE6;
+    --sg-bg-soft: #EAE4D8;
+
+    --sg-text: #292824;
+    --sg-muted: #706C64;
+
+    --sg-accent: #A58A57;
+
+    --sg-line: rgba(41,40,36,.14);
+    --sg-line-strong: rgba(41,40,36,.20);
+
+    --sg-width: min(1400px, calc(100% - 80px));
+    --sg-wide: min(1500px, calc(100% - 80px));
+    --sg-gap: 22px;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+body.edition-page {
+
+    background: var(--sg-bg);
+    color: var(--sg-text);
+}
+
+
+/* =========================================================
+   DESKTOP / MOBILE SWITCH
+========================================================= */
+
+.singapore-desktop {
+    display: block;
+}
+
+.singapore-mobile {
+    display: none;
+}
+
+
+/* =========================================================
+   SHARED CREAM COLOUR
+========================================================= */
+
+body.edition-page p,
+body.edition-page h1,
+body.edition-page h2,
+body.edition-page h3 {
+    color: var(--sg-text);
+}
+
+body.edition-page .section-label,
+body.edition-page .eyebrow {
+    color: var(--sg-accent);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+body.edition-page .site-header {
+    background: var(--sg-bg);
+    color: var(--sg-text);
+}
+
+body.edition-page .site-logo,
+body.edition-page .site-nav a {
+    color: var(--sg-text);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+body.edition-page .site-footer {
+
+    background: var(--sg-bg);
+
+    color: var(--sg-text);
+
+    border-top:
+        1px solid var(--sg-line);
+}
+
+body.edition-page .footer-logo,
+body.edition-page .footer-nav a,
+body.edition-page .footer-social,
+body.edition-page .footer-description,
+body.edition-page .footer-copyright {
+    color: var(--sg-text);
+}
 
 
 /* =========================================================
    DESKTOP
 ========================================================= */
 
-@media (min-width:769px) {
+@media (min-width: 769px) {
 
-    :root {
-        --sg-width: min(1400px, calc(100% - 80px));
-        --sg-wide: min(1500px, calc(100% - 80px));
-        --sg-gap: 22px;
-        --sg-line: rgba(255,255,255,.12);
-        --sg-line-strong: rgba(255,255,255,.16);
+
+    /* -----------------------------------------------------
+       OPENING SPREAD
+    ----------------------------------------------------- */
+
+    .sg-opening {
+
+        width: var(--sg-wide);
+
+        margin: 0 auto;
+
+        padding: 0 0 90px;
+
+        display: grid;
+
+        grid-template-columns:
+            1.25fr 0.75fr;
+
+        gap: 75px;
+
+        align-items: center;
     }
 
 
     /* -----------------------------------------------------
-       OPENING
+       HERO
     ----------------------------------------------------- */
 
-    .sg-opening {
-        width:var(--sg-wide);
-        margin:0 auto;
-        padding:0 0 90px;
-
-        display:grid;
-        grid-template-columns:1.25fr .75fr;
-        gap:75px;
-        align-items:center;
-    }
-
     .sg-opening-hero {
-        position:relative;
-        overflow:hidden;
-        width:100%;
-        background:#090909;
+
+        position: relative;
+
+        overflow: hidden;
+
+        width: 100%;
+
+        background: var(--sg-bg);
     }
+
 
     .sg-opening-hero img {
-        display:block;
-        width:100%;
-        height:auto;
+
+        display: block;
+
+        width: 100%;
+
+        height: auto;
     }
 
-    /* Softly dissolves the photograph into the page */
+
+    /* -----------------------------------------------------
+       HERO BOTTOM FADE
+    ----------------------------------------------------- */
+
     .sg-opening-hero::after {
-        content:"";
-        position:absolute;
-        z-index:1;
-        inset:auto 0 0;
-        height:28%;
-        pointer-events:none;
 
-        background:linear-gradient(
-            to bottom,
-            rgba(9,9,9,0),
-            rgba(9,9,9,.35) 35%,
-            rgba(9,9,9,.82) 75%,
-            rgba(9,9,9,1)
-        );
+        content: "";
+
+        position: absolute;
+
+        z-index: 1;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 28%;
+
+        pointer-events: none;
+
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(243,239,230,0),
+                rgba(243,239,230,.04) 25%,
+                rgba(243,239,230,.32) 55%,
+                rgba(243,239,230,.78) 82%,
+                rgba(243,239,230,1) 100%
+            );
     }
+
+
+    /* -----------------------------------------------------
+       HERO TEXT
+    ----------------------------------------------------- */
 
     .sg-opening-hero .edition-hero-overlay {
-        position:absolute;
-        z-index:2;
-        left:55px;
-        right:55px;
-        bottom:50px;
+
+        position: absolute;
+
+        z-index: 2;
+
+        left: 55px;
+        right: 55px;
+        bottom: 50px;
     }
+
+
+    .sg-opening-hero .edition-hero-overlay h1,
+    .sg-opening-hero .edition-hero-overlay p {
+
+        color: #ffffff;
+    }
+
+
+    /* -----------------------------------------------------
+       INTRODUCTION
+    ----------------------------------------------------- */
 
     .sg-opening-intro {
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        padding:50px 35px 50px 5px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding:
+            50px
+            35px
+            50px
+            5px;
     }
+
 
     .sg-opening-intro h2 {
-        margin:0 0 28px;
+
+        margin:
+            0
+            0
+            28px;
     }
+
 
     .sg-opening-intro-copy {
-        max-width:560px;
+
+        max-width: 560px;
     }
 
+
     .sg-opening-intro-copy p {
-        margin:0;
+
+        margin-top: 0;
+
+        margin-bottom: 20px;
     }
 
 
@@ -128,298 +294,676 @@
     ----------------------------------------------------- */
 
     .sg-editorial {
-        width:var(--sg-width);
-        margin:0 auto;
+
+        width: var(--sg-width);
+
+        margin: 0 auto;
     }
 
+
     .sg-editorial-section {
-        padding:70px 0;
+
+        padding:
+            70px
+            0;
     }
+
+
+    /* -----------------------------------------------------
+       EDITORIAL GRID
+    ----------------------------------------------------- */
 
     .sg-grid,
     .sg-final-grid {
-        display:grid;
-        grid-template-columns:repeat(12,minmax(0,1fr));
-        column-gap:var(--sg-gap);
-        row-gap:42px;
-        align-items:start;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                12,
+                minmax(0,1fr)
+            );
+
+        column-gap: var(--sg-gap);
+
+        row-gap: 42px;
+
+        align-items: start;
     }
+
 
     .sg-grid img,
     .sg-final-grid img {
-        display:block;
-        width:100%;
-        height:auto;
+
+        display: block;
+
+        width: 100%;
+
+        height: auto;
     }
+
+
+    /* -----------------------------------------------------
+       TEXT
+    ----------------------------------------------------- */
 
     .sg-text {
-        align-self:center;
+
+        align-self: center;
     }
 
+
     .sg-text p {
-        margin-top:0;
+
+        margin-top: 0;
     }
+
 
     .sg-text h2,
     .sg-text h3 {
-        margin-top:0;
+
+        margin-top: 0;
     }
+
 
     .sg-text .section-label {
-        margin-bottom:12px;
+
+        margin-bottom: 12px;
     }
+
 
     .sg-rule {
-        width:42px;
-        height:1px;
-        margin:20px 0;
-        background:currentColor;
-        opacity:.65;
+
+        width: 42px;
+
+        height: 1px;
+
+        margin:
+            20px
+            0;
+
+        background: var(--sg-text);
+
+        opacity: .55;
     }
 
 
-    /* -----------------------------------------------------
-       EDITORIAL ROWS
-    ----------------------------------------------------- */
+    /* =====================================================
+       ROW 1
+    ===================================================== */
 
-    .sg-r1-text  { grid-column:1 / span 3; }
+    .sg-r1-text {
+
+        grid-column:
+            1 / span 3;
+    }
+
 
     .sg-r1-img1 {
-        grid-column:4 / span 5;
-        width:88%;
+
+        grid-column:
+            4 / span 5;
+
+        width: 88%;
     }
+
 
     .sg-r1-img2 {
-        grid-column:9 / span 4;
-        width:90%;
-        margin-left:auto;
-        padding-top:55px;
+
+        grid-column:
+            9 / span 4;
+
+        width: 90%;
+
+        margin-left: auto;
+
+        padding-top: 55px;
     }
 
+
+    /* =====================================================
+       ROW 2
+    ===================================================== */
 
     .sg-r2-img1 {
-        grid-column:1 / span 3;
-        padding-top:25px;
+
+        grid-column:
+            1 / span 3;
+
+        padding-top: 25px;
     }
+
 
     .sg-r2-text {
-        grid-column:4 / span 3;
-        padding:0 8px;
+
+        grid-column:
+            4 / span 3;
+
+        padding:
+            0
+            8px;
     }
+
 
     .sg-r2-img2 {
-        grid-column:7 / span 3;
+
+        grid-column:
+            7 / span 3;
     }
+
 
     .sg-r2-text2 {
-        grid-column:10 / span 3;
-        padding-top:55px;
+
+        grid-column:
+            10 / span 3;
+
+        padding-top: 55px;
     }
 
+
+    /* =====================================================
+       ROW 3
+    ===================================================== */
 
     .sg-r3-text {
-        grid-column:1 / span 3;
-        padding-top:20px;
+
+        grid-column:
+            1 / span 3;
+
+        padding-top: 20px;
     }
+
 
     .sg-r3-img1 {
-        grid-column:4 / span 4;
+
+        grid-column:
+            4 / span 4;
     }
+
 
     .sg-r3-img2 {
-        grid-column:8 / span 2;
-        padding-top:55px;
+
+        grid-column:
+            8 / span 2;
+
+        padding-top: 55px;
     }
+
 
     .sg-r3-img3 {
-        grid-column:10 / span 3;
-        padding-top:10px;
+
+        grid-column:
+            10 / span 3;
+
+        padding-top: 10px;
     }
 
+
+    /* =====================================================
+       ROW 4
+    ===================================================== */
 
     .sg-r4-img1 {
-        grid-column:1 / span 4;
+
+        grid-column:
+            1 / span 4;
     }
+
 
     .sg-r4-text {
-        grid-column:5 / span 3;
-        padding:20px 5px 0;
+
+        grid-column:
+            5 / span 3;
+
+        padding:
+            20px
+            5px
+            0;
     }
+
 
     .sg-r4-img2 {
-        grid-column:8 / span 5;
-        padding-top:40px;
+
+        grid-column:
+            8 / span 5;
+
+        padding-top: 40px;
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        LOCAL INFORMATION
-    ----------------------------------------------------- */
+    ===================================================== */
 
     .sg-info {
-        margin:20px 0 70px;
-        padding:60px 0;
-        border-top:1px solid var(--sg-line);
-        border-bottom:1px solid var(--sg-line);
+
+        margin:
+            20px
+            0
+            70px;
+
+        padding:
+            60px
+            0;
+
+        border-top:
+            1px solid var(--sg-line);
+
+        border-bottom:
+            1px solid var(--sg-line);
     }
+
 
     .sg-info-grid {
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:70px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+        gap: 70px;
     }
+
 
     .sg-info-item h3 {
-        margin:10px 0 12px;
+
+        margin:
+            10px
+            0
+            12px;
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        RECOMMENDATIONS
-    ----------------------------------------------------- */
+    ===================================================== */
 
     .sg-recommendations {
-        padding:20px 0 100px;
+
+        padding:
+            20px
+            0
+            100px;
     }
+
 
     .sg-recommendations-heading {
-        margin-bottom:50px;
+
+        margin-bottom: 50px;
     }
+
 
     .sg-recommendation-list {
-        max-width:950px;
-        border-top:1px solid var(--sg-line-strong);
+
+        max-width: 950px;
+
+        border-top:
+            1px solid var(--sg-line-strong);
     }
+
 
     .sg-recommendation {
-        display:grid;
-        grid-template-columns:70px 280px 1fr;
-        column-gap:35px;
-        align-items:start;
 
-        padding:30px 0;
-        border-bottom:1px solid var(--sg-line-strong);
+        display: grid;
+
+        grid-template-columns:
+            70px
+            280px
+            1fr;
+
+        column-gap: 35px;
+
+        align-items: start;
+
+        padding:
+            30px
+            0;
+
+        border-bottom:
+            1px solid var(--sg-line-strong);
     }
+
 
     .sg-rec-number {
-        padding-top:7px;
-        font-size:.72rem;
-        letter-spacing:.14em;
-        opacity:.6;
+
+        padding-top: 7px;
+
+        font-size: .72rem;
+
+        letter-spacing: .14em;
+
+        color: var(--sg-muted);
+
+        opacity: .75;
     }
+
 
     .sg-recommendation h3 {
-        margin:0;
-        font-size:1.35rem;
+
+        margin: 0;
+
+        font-size: 1.35rem;
     }
+
 
     .sg-recommendation p {
-        margin:0;
-        max-width:520px;
+
+        margin: 0;
+
+        max-width: 520px;
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        JOURNAL
-    ----------------------------------------------------- */
+    ===================================================== */
 
     .sg-journal {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:90px;
-        align-items:center;
 
-        padding:70px 0;
-        border-top:1px solid var(--sg-line);
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 90px;
+
+        align-items: center;
+
+        padding:
+            70px
+            0;
+
+        border-top:
+            1px solid var(--sg-line);
     }
+
 
     .sg-journal-copy p {
-        margin-top:0;
+
+        margin-top: 0;
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        FINAL PHOTOGRAPHIC FIELD
-    ----------------------------------------------------- */
+    ===================================================== */
 
     .sg-final-heading {
-        grid-column:1 / span 3;
-        padding-top:30px;
+
+        grid-column:
+            1 / span 3;
+
+        padding-top: 30px;
     }
+
 
     .sg-final-img1 {
-        grid-column:4 / span 4;
+
+        grid-column:
+            4 / span 4;
     }
+
 
     .sg-final-img2 {
-        grid-column:8 / span 2;
-        padding-top:45px;
+
+        grid-column:
+            8 / span 2;
+
+        padding-top: 45px;
     }
+
 
     .sg-final-img3 {
-        grid-column:10 / span 3;
+
+        grid-column:
+            10 / span 3;
     }
+
 
     .sg-final-img4 {
-        grid-column:1 / span 3;
-        padding-top:25px;
+
+        grid-column:
+            1 / span 3;
+
+        padding-top: 25px;
     }
+
 
     .sg-final-img5 {
-        grid-column:4 / span 3;
-        padding-top:55px;
+
+        grid-column:
+            4 / span 3;
+
+        padding-top: 55px;
     }
+
 
     .sg-final-img6 {
-        grid-column:7 / span 3;
+
+        grid-column:
+            7 / span 3;
     }
+
 
     .sg-final-img7 {
-        grid-column:10 / span 3;
-        padding-top:30px;
+
+        grid-column:
+            10 / span 3;
+
+        padding-top: 30px;
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        MAP
-    ----------------------------------------------------- */
+    ===================================================== */
 
     .sg-map {
-        padding:80px 0 70px;
+
+        padding:
+            80px
+            0
+            70px;
     }
+
 
     .sg-map-inner {
-        max-width:650px;
+
+        max-width: 650px;
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        END NAVIGATION
-    ----------------------------------------------------- */
+    ===================================================== */
 
     .sg-end {
-        display:flex;
-        justify-content:space-between;
-        padding:35px 0 70px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        padding:
+            35px
+            0
+            70px;
     }
+
+
+    .sg-end .text-link {
+
+        color: var(--sg-text);
+    }
+
 }
 
 
 /* =========================================================
    MOBILE
-   Original Edition structure retained.
 ========================================================= */
 
 @media (max-width:768px) {
 
     .singapore-desktop {
-        display:none;
+        display: none;
     }
 
     .singapore-mobile {
-        display:block;
+        display: block;
     }
 
+
+    body.edition-page {
+
+        background:
+            var(--sg-bg);
+
+        color:
+            var(--sg-text);
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE HEADER
+    ----------------------------------------------------- */
+
+    body.edition-page .site-header {
+
+        background:
+            var(--sg-bg);
+
+        color:
+            var(--sg-text);
+    }
+
+
+    body.edition-page .site-logo,
+    body.edition-page .site-nav a {
+
+        color:
+            var(--sg-text);
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE HERO
+    ----------------------------------------------------- */
+
+    .edition-hero {
+
+        position: relative;
+
+        background-color:
+            var(--sg-bg);
+    }
+
+
+    .edition-hero::after {
+
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 25%;
+
+        pointer-events: none;
+
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(243,239,230,0),
+                rgba(243,239,230,.45) 60%,
+                rgba(243,239,230,1) 100%
+            );
+    }
+
+
+    .edition-hero-overlay {
+
+        z-index: 2;
+    }
+
+
+    .edition-hero-overlay h1,
+    .edition-hero-overlay p {
+
+        color:
+            #ffffff;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE SECTIONS
+    ----------------------------------------------------- */
+
+    .edition-intro,
+    .edition-photo-story,
+    .edition-local-info,
+    .edition-recommendations,
+    .edition-journal,
+    .edition-gallery,
+    .edition-map,
+    .edition-end {
+
+        background:
+            var(--sg-bg);
+
+        color:
+            var(--sg-text);
+    }
+
+
+    body.edition-page .edition-local-info {
+
+        border-color:
+            var(--sg-line);
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE FOOTER
+    ----------------------------------------------------- */
+
+    body.edition-page .site-footer {
+
+        background:
+            var(--sg-bg);
+
+        color:
+            var(--sg-text);
+    }
+
+}
+
+
+/* =========================================================
+   FINAL NAVIGATION / LINKS
+========================================================= */
+
+body.edition-page .text-link {
+
+    color:
+        var(--sg-text);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+    }
 }
 
 </style>
@@ -441,6 +985,7 @@
         THE EXPAT EDITS
     </a>
 
+
     <nav class="site-nav">
 
         <a href="editions.html">
@@ -455,12 +1000,12 @@
             Map
         </a>
 
-        <!-- FIXED: standalone About page -->
         <a href="about.html">
             About
         </a>
 
     </nav>
+
 
     <button
         class="menu-toggle"
@@ -490,6 +1035,9 @@
 
 <section class="sg-opening">
 
+
+    <!-- HERO -->
+
     <div class="sg-opening-hero">
 
         <img
@@ -497,6 +1045,7 @@
             alt="Singapore skyline at night"
             loading="eager"
         >
+
 
         <div class="edition-hero-overlay">
 
@@ -517,6 +1066,8 @@
     </div>
 
 
+    <!-- INTRODUCTION -->
+
     <div class="sg-opening-intro">
 
         <p class="section-label">
@@ -526,6 +1077,7 @@
         <h2>
             A new lease on life.
         </h2>
+
 
         <div class="sg-opening-intro-copy">
 
@@ -563,6 +1115,7 @@
 ====================================================== -->
 
 <section class="sg-editorial-section">
+
 
 <div class="section-heading">
 
@@ -610,6 +1163,7 @@
         alt="Singapore skyline through the trees"
         loading="eager"
     >
+
 
     <img
         class="sg-r1-img2"
@@ -710,12 +1264,14 @@
         loading="lazy"
     >
 
+
     <img
         class="sg-r3-img2"
         src="singapore15.jpeg"
         alt="DJing by the waterfront in Singapore"
         loading="lazy"
     >
+
 
     <img
         class="sg-r3-img3"
@@ -773,7 +1329,9 @@
 
 <section class="sg-info">
 
+
 <div class="sg-info-grid">
+
 
     <div class="sg-info-item">
 
@@ -829,6 +1387,7 @@
 
     </div>
 
+
 </div>
 
 </section>
@@ -839,6 +1398,7 @@
 ====================================================== -->
 
 <section class="sg-recommendations">
+
 
 <div class="sg-recommendations-heading">
 
@@ -855,9 +1415,12 @@
 
 <div class="sg-recommendation-list">
 
+
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">01</span>
+        <span class="sg-rec-number">
+            01
+        </span>
 
         <h3>
             The Singapore Edition
@@ -875,7 +1438,9 @@
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">02</span>
+        <span class="sg-rec-number">
+            02
+        </span>
 
         <h3>
             Grand Hyatt
@@ -892,7 +1457,9 @@
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">03</span>
+        <span class="sg-rec-number">
+            03
+        </span>
 
         <h3>
             Raffles
@@ -910,7 +1477,9 @@
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">04</span>
+        <span class="sg-rec-number">
+            04
+        </span>
 
         <h3>
             Sentosa
@@ -927,7 +1496,9 @@
 
     <article class="sg-recommendation">
 
-        <span class="sg-rec-number">05</span>
+        <span class="sg-rec-number">
+            05
+        </span>
 
         <h3>
             The food scene
@@ -941,6 +1512,7 @@
 
     </article>
 
+
 </div>
 
 </section>
@@ -951,6 +1523,7 @@
 ====================================================== -->
 
 <section class="sg-journal">
+
 
 <div>
 
@@ -981,6 +1554,7 @@
 
 </div>
 
+
 </section>
 
 
@@ -990,7 +1564,9 @@
 
 <section class="sg-editorial-section">
 
+
 <div class="sg-final-grid">
+
 
     <div class="sg-final-heading">
 
@@ -1012,12 +1588,14 @@
         loading="lazy"
     >
 
+
     <img
         class="sg-final-img2"
         src="singapore13.jpeg"
         alt="Singapore skyline at night"
         loading="lazy"
     >
+
 
     <img
         class="sg-final-img3"
@@ -1026,12 +1604,14 @@
         loading="lazy"
     >
 
+
     <img
         class="sg-final-img4"
         src="singapore21.jpeg"
         alt="Snake in Singapore"
         loading="lazy"
     >
+
 
     <img
         class="sg-final-img5"
@@ -1040,6 +1620,7 @@
         loading="lazy"
     >
 
+
     <img
         class="sg-final-img6"
         src="singapore20.jpeg"
@@ -1047,12 +1628,14 @@
         loading="lazy"
     >
 
+
     <img
         class="sg-final-img7"
         src="singapore22.jpeg"
         alt="Durian fruit in Singapore"
         loading="lazy"
     >
+
 
 </div>
 
@@ -1064,6 +1647,7 @@
 ====================================================== -->
 
 <section class="sg-map">
+
 
 <div class="sg-map-inner">
 
@@ -1081,6 +1665,7 @@
     </p>
 
 </div>
+
 
 </section>
 
@@ -1101,18 +1686,20 @@
 
 </section>
 
+
 </div>
 
 </main>
 
 
 <!-- =====================================================
-     MOBILE
-     Existing structure retained
+     MOBILE EDITION
 ====================================================== -->
 
 <main class="singapore-mobile">
 
+
+<!-- HERO -->
 
 <section
     class="edition-hero"
@@ -1201,17 +1788,71 @@
 
 <div class="edition-photo-mosaic">
 
-    <img src="singapore2.jpeg" alt="Singapore skyline through the trees" loading="eager">
-    <img src="singapore3.jpeg" alt="Marina Bay surrounded by tropical greenery" loading="lazy">
-    <img src="singapore4.jpeg" alt="Singapore architecture framed by trees" loading="lazy">
-    <img src="singapore5.jpeg" alt="Orchard Road, Singapore" loading="lazy">
-    <img src="singapore6.jpeg" alt="Singapore skyline reflected across the water" loading="lazy">
-    <img src="singapore15.jpeg" alt="DJing by the waterfront in Singapore" loading="lazy">
-    <img src="singapore17.jpeg" alt="Monitor lizard in Singapore" loading="lazy">
-    <img src="singapore18.jpeg" alt="Snake in the trees in Singapore" loading="lazy">
-    <img src="singapore19.jpeg" alt="Monitor lizards by the water in Singapore" loading="lazy">
-    <img src="singapore20.jpeg" alt="Bananas growing in our garden in Singapore" loading="lazy">
-    <img src="singapore22.jpeg" alt="Durian fruit in Singapore" loading="lazy">
+    <img
+        src="singapore2.jpeg"
+        alt="Singapore skyline through the trees"
+        loading="eager"
+    >
+
+    <img
+        src="singapore3.jpeg"
+        alt="Marina Bay surrounded by tropical greenery"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore4.jpeg"
+        alt="Singapore architecture framed by trees"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore5.jpeg"
+        alt="Orchard Road, Singapore"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore6.jpeg"
+        alt="Singapore skyline reflected across the water"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore15.jpeg"
+        alt="DJing by the waterfront in Singapore"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore17.jpeg"
+        alt="Monitor lizard in Singapore"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore18.jpeg"
+        alt="Snake in the trees in Singapore"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore19.jpeg"
+        alt="Monitor lizards by the water in Singapore"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore20.jpeg"
+        alt="Bananas growing in our garden in Singapore"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore22.jpeg"
+        alt="Durian fruit in Singapore"
+        loading="lazy"
+    >
 
 </div>
 
@@ -1228,11 +1869,16 @@
 
 <div class="edition-local-info-grid">
 
+
     <div class="edition-local-info-item">
 
-        <p class="section-label">BEST TIME</p>
+        <p class="section-label">
+            BEST TIME
+        </p>
 
-        <h3>Year round</h3>
+        <h3>
+            Year round
+        </h3>
 
         <p>
             Singapore is warm and tropical throughout the year.
@@ -1244,9 +1890,13 @@
 
     <div class="edition-local-info-item">
 
-        <p class="section-label">WEATHER</p>
+        <p class="section-label">
+            WEATHER
+        </p>
 
-        <h3>Tropical</h3>
+        <h3>
+            Tropical
+        </h3>
 
         <p>
             Expect heat, humidity and regular rain — usually
@@ -1258,9 +1908,13 @@
 
     <div class="edition-local-info-item">
 
-        <p class="section-label">GETTING AROUND</p>
+        <p class="section-label">
+            GETTING AROUND
+        </p>
 
-        <h3>Effortless</h3>
+        <h3>
+            Effortless
+        </h3>
 
         <p>
             A compact city, excellent transport and Changi
@@ -1269,6 +1923,7 @@
         </p>
 
     </div>
+
 
 </div>
 
@@ -1298,57 +1953,103 @@
 
 <div class="edition-recommendations-grid">
 
+
     <article class="edition-recommendation">
-        <p class="story-number">01</p>
-        <h3>The Singapore Edition</h3>
+
+        <p class="story-number">
+            01
+        </p>
+
+        <h3>
+            The Singapore Edition
+        </h3>
+
         <p>
             One of the hotels that has become part of our local
             rotation. It feels like somewhere that fits naturally
             into life in the city rather than somewhere we need
             to make a special occasion of.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
-        <p class="story-number">02</p>
-        <h3>Grand Hyatt</h3>
+
+        <p class="story-number">
+            02
+        </p>
+
+        <h3>
+            Grand Hyatt
+        </h3>
+
         <p>
             Sometimes the best Singapore experience is doing very
             little at all. A poolside drink and a slow afternoon
             is one of our favourite ways to enjoy the city.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
-        <p class="story-number">03</p>
-        <h3>Raffles</h3>
+
+        <p class="story-number">
+            03
+        </p>
+
+        <h3>
+            Raffles
+        </h3>
+
         <p>
             A Singapore classic. We particularly enjoy the
             courtyard — a peaceful setting in the middle of the
             city and one of the places that captures something
             of Singapore's character.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
-        <p class="story-number">04</p>
-        <h3>Sentosa</h3>
+
+        <p class="story-number">
+            04
+        </p>
+
+        <h3>
+            Sentosa
+        </h3>
+
         <p>
             When the weekend calls for something simple, Sentosa
             gives us an easy escape from the city without really
             leaving Singapore.
         </p>
+
     </article>
 
+
     <article class="edition-recommendation">
-        <p class="story-number">05</p>
-        <h3>The food scene</h3>
+
+        <p class="story-number">
+            05
+        </p>
+
+        <h3>
+            The food scene
+        </h3>
+
         <p>
             From hawker centres to some of Asia's best restaurants,
             eating is one of the great pleasures of living here.
             It is one of the things we never tire of.
         </p>
+
     </article>
+
 
 </div>
 
@@ -1365,6 +2066,7 @@
 
 <div class="edition-journal-inner">
 
+
     <div>
 
         <p class="section-label">
@@ -1376,6 +2078,7 @@
         </h2>
 
     </div>
+
 
     <div class="edition-journal-copy">
 
@@ -1392,6 +2095,7 @@
         </p>
 
     </div>
+
 
 </div>
 
@@ -1421,13 +2125,49 @@
 
 <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
 
-    <img src="singapore7.jpeg" alt="Singapore beach at sunset" loading="lazy">
-    <img src="singapore8.jpeg" alt="Singapore architectural detail" loading="lazy">
-    <img src="singapore9.jpeg" alt="Water lilies and sculpture in Singapore" loading="lazy">
-    <img src="singapore12.jpeg" alt="Singapore city detail" loading="lazy">
-    <img src="singapore13.jpeg" alt="Singapore skyline at night" loading="lazy">
-    <img src="singapore14.jpeg" alt="Singapore waterfront at night" loading="lazy">
-    <img src="singapore21.jpeg" alt="Snake in Singapore" loading="lazy">
+
+    <img
+        src="singapore7.jpeg"
+        alt="Singapore beach at sunset"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore8.jpeg"
+        alt="Singapore architectural detail"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore9.jpeg"
+        alt="Water lilies and sculpture in Singapore"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore12.jpeg"
+        alt="Singapore city detail"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore13.jpeg"
+        alt="Singapore skyline at night"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore14.jpeg"
+        alt="Singapore waterfront at night"
+        loading="lazy"
+    >
+
+    <img
+        src="singapore21.jpeg"
+        alt="Snake in Singapore"
+        loading="lazy"
+    >
+
 
 </div>
 
@@ -1478,6 +2218,7 @@
 
 </section>
 
+
 </main>
 
 
@@ -1488,6 +2229,7 @@
 <footer class="site-footer">
 
 <div class="site-footer-inner">
+
 
     <div>
 
@@ -1537,9 +2279,11 @@
         © The Expat Edits
     </p>
 
+
 </div>
 
 </footer>
+
 
 </body>
 </html>

@@ -14,7 +14,7 @@
 
     <meta
         name="description"
-        content="Phuket — beach days, boat adventures, crystal-clear water, great beach bars and the best places to stay around Kamala and Bang Tao."
+        content="Phuket — a regular escape from Singapore, from Kamala and Bang Tao to boat days, beach clubs, great food and the islands of the Andaman Sea."
     >
 
     <!-- Google Fonts -->
@@ -23,7 +23,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.gstatic.com"
+        href="https://fonts.googleapis.com"
         crossorigin
     >
 
@@ -46,6 +46,484 @@
         href="style-editions-new.css"
     >
 
+
+    <!-- =====================================================
+         SINGAPORE1 DESKTOP MASTER
+    ====================================================== -->
+
+    <style>
+
+        .phuket-desktop {
+            display: block;
+        }
+
+        .phuket-mobile {
+            display: none;
+        }
+
+
+        @media (min-width: 769px) {
+
+            :root {
+                --sg-width: min(1400px, calc(100% - 80px));
+                --sg-wide: min(1500px, calc(100% - 80px));
+                --sg-gap: 22px;
+                --sg-line: rgba(255,255,255,.12);
+                --sg-line-strong: rgba(255,255,255,.16);
+            }
+
+
+            /* =================================================
+               HEADER
+            ================================================= */
+
+            .phuket-desktop .site-header {
+                position: relative;
+            }
+
+
+            /* =================================================
+               OPENING SPREAD
+            ================================================= */
+
+            .sg-opening {
+                width: var(--sg-wide);
+                margin: 0 auto;
+                padding: 0 0 90px;
+                display: grid;
+                grid-template-columns: 1.25fr .75fr;
+                gap: 75px;
+                align-items: center;
+            }
+
+
+            .sg-opening-hero {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                background: #090909;
+            }
+
+
+            .sg-opening-hero img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+
+            .sg-opening-hero::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 42%;
+                background: linear-gradient(
+                    to top,
+                    rgba(0,0,0,.78),
+                    rgba(0,0,0,0)
+                );
+                pointer-events: none;
+            }
+
+
+            .sg-opening-hero .edition-hero-overlay {
+                position: absolute;
+                z-index: 2;
+                left: 55px;
+                right: 55px;
+                bottom: 50px;
+            }
+
+
+            .sg-opening-intro {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 50px 35px 50px 5px;
+            }
+
+
+            .sg-opening-intro h2 {
+                margin: 0 0 28px;
+            }
+
+
+            .sg-opening-intro-copy {
+                max-width: 560px;
+            }
+
+
+            .sg-opening-intro-copy p {
+                margin: 0 0 22px;
+            }
+
+
+            .sg-opening-intro-copy p:last-child {
+                margin-bottom: 0;
+            }
+
+
+            /* =================================================
+               EDITORIAL CANVAS
+            ================================================= */
+
+            .sg-editorial {
+                width: var(--sg-width);
+                margin: 0 auto;
+            }
+
+
+            .sg-editorial-section {
+                padding: 70px 0;
+            }
+
+
+            .sg-grid,
+            .sg-final-grid {
+                display: grid;
+                grid-template-columns: repeat(12,minmax(0,1fr));
+                column-gap: var(--sg-gap);
+                row-gap: 42px;
+                align-items: start;
+            }
+
+
+            .sg-grid img,
+            .sg-final-grid img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+
+            .sg-text {
+                align-self: center;
+            }
+
+
+            .sg-text p {
+                margin-top: 0;
+            }
+
+
+            .sg-text h2,
+            .sg-text h3 {
+                margin-top: 0;
+            }
+
+
+            .sg-text .section-label {
+                margin-bottom: 12px;
+            }
+
+
+            .sg-rule {
+                width: 42px;
+                height: 1px;
+                margin: 20px 0;
+                background: currentColor;
+                opacity: .65;
+            }
+
+
+            /* =================================================
+               EDITORIAL ROW 1
+            ================================================= */
+
+            .sg-r1-text {
+                grid-column: 1 / span 3;
+            }
+
+
+            .sg-r1-img1 {
+                grid-column: 4 / span 5;
+                width: 88%;
+            }
+
+
+            .sg-r1-img2 {
+                grid-column: 9 / span 4;
+                width: 90%;
+                margin-left: auto;
+                padding-top: 55px;
+            }
+
+
+            /* =================================================
+               EDITORIAL ROW 2
+            ================================================= */
+
+            .sg-r2-img1 {
+                grid-column: 1 / span 3;
+                padding-top: 25px;
+            }
+
+
+            .sg-r2-text {
+                grid-column: 4 / span 3;
+                padding: 0 8px;
+            }
+
+
+            .sg-r2-img2 {
+                grid-column: 7 / span 3;
+            }
+
+
+            .sg-r2-text2 {
+                grid-column: 10 / span 3;
+                padding-top: 55px;
+            }
+
+
+            /* =================================================
+               EDITORIAL ROW 3
+            ================================================= */
+
+            .sg-r3-text {
+                grid-column: 1 / span 3;
+                padding-top: 20px;
+            }
+
+
+            .sg-r3-img1 {
+                grid-column: 4 / span 4;
+            }
+
+
+            .sg-r3-img2 {
+                grid-column: 8 / span 2;
+                padding-top: 55px;
+            }
+
+
+            .sg-r3-img3 {
+                grid-column: 10 / span 3;
+                padding-top: 10px;
+            }
+
+
+            /* =================================================
+               EDITORIAL ROW 4
+            ================================================= */
+
+            .sg-r4-img1 {
+                grid-column: 1 / span 4;
+            }
+
+
+            .sg-r4-text {
+                grid-column: 5 / span 3;
+                padding: 20px 5px 0;
+            }
+
+
+            .sg-r4-img2 {
+                grid-column: 8 / span 5;
+                padding-top: 40px;
+            }
+
+
+            /* =================================================
+               LOCAL INFORMATION
+            ================================================= */
+
+            .sg-info {
+                margin: 20px 0 70px;
+                padding: 60px 0;
+                border-top: 1px solid var(--sg-line);
+                border-bottom: 1px solid var(--sg-line);
+            }
+
+
+            .sg-info-grid {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 70px;
+            }
+
+
+            .sg-info-item h3 {
+                margin: 10px 0 12px;
+            }
+
+
+            .sg-info-item p {
+                margin-top: 0;
+            }
+
+
+            /* =================================================
+               RECOMMENDATIONS
+            ================================================= */
+
+            .sg-recommendations {
+                padding: 20px 0 100px;
+            }
+
+
+            .sg-recommendations-heading {
+                margin-bottom: 50px;
+            }
+
+
+            .sg-recommendation-list {
+                max-width: 950px;
+                border-top: 1px solid var(--sg-line-strong);
+            }
+
+
+            .sg-recommendation {
+                display: grid;
+                grid-template-columns: 70px 280px 1fr;
+                column-gap: 35px;
+                align-items: start;
+                padding: 30px 0;
+                border-bottom: 1px solid var(--sg-line-strong);
+            }
+
+
+            .sg-rec-number {
+                padding-top: 7px;
+                font-size: .72rem;
+                letter-spacing: .14em;
+                opacity: .6;
+            }
+
+
+            .sg-recommendation h3 {
+                margin: 0;
+                font-size: 1.35rem;
+            }
+
+
+            .sg-recommendation p {
+                margin: 0;
+                max-width: 520px;
+            }
+
+
+            /* =================================================
+               JOURNAL
+            ================================================= */
+
+            .sg-journal {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 90px;
+                align-items: center;
+                padding: 70px 0;
+                border-top: 1px solid var(--sg-line);
+            }
+
+
+            .sg-journal-copy p {
+                margin-top: 0;
+            }
+
+
+            .sg-journal-copy p:last-child {
+                margin-bottom: 0;
+            }
+
+
+            /* =================================================
+               FINAL PHOTOGRAPHIC FIELD
+            ================================================= */
+
+            .sg-final-heading {
+                grid-column: 1 / span 3;
+                padding-top: 30px;
+            }
+
+
+            .sg-final-img1 {
+                grid-column: 4 / span 4;
+            }
+
+
+            .sg-final-img2 {
+                grid-column: 8 / span 2;
+                padding-top: 45px;
+            }
+
+
+            .sg-final-img3 {
+                grid-column: 10 / span 3;
+            }
+
+
+            .sg-final-img4 {
+                grid-column: 1 / span 3;
+                padding-top: 25px;
+            }
+
+
+            .sg-final-img5 {
+                grid-column: 4 / span 3;
+                padding-top: 55px;
+            }
+
+
+            .sg-final-img6 {
+                grid-column: 7 / span 3;
+            }
+
+
+            .sg-final-img7 {
+                grid-column: 10 / span 3;
+                padding-top: 30px;
+            }
+
+
+            /* =================================================
+               MAP
+            ================================================= */
+
+            .sg-map {
+                padding: 80px 0 70px;
+            }
+
+
+            .sg-map-inner {
+                max-width: 650px;
+            }
+
+
+            /* =================================================
+               END NAVIGATION
+            ================================================= */
+
+            .sg-end {
+                display: flex;
+                justify-content: space-between;
+                padding: 35px 0 70px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .phuket-desktop {
+                display: none;
+            }
+
+            .phuket-mobile {
+                display: block;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -53,8 +531,914 @@
 
 
 <!-- =====================================================
-     FIXED HEADER
+     DESKTOP VERSION
+     SINGAPORE1 MASTER ARCHITECTURE
 ====================================================== -->
+
+<div class="phuket-desktop">
+
+
+<header class="site-header">
+
+    <div class="site-header-inner">
+
+        <a
+            href="/"
+            class="site-logo"
+        >
+            THE EXPAT EDITS
+        </a>
+
+        <nav class="site-nav">
+
+            <a href="editions.html">
+                Editions
+            </a>
+
+            <a href="index-new.html#journal">
+                Journal
+            </a>
+
+            <a href="index-new.html#map">
+                Map
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     OPENING SPREAD
+====================================================== -->
+
+<section class="sg-opening">
+
+
+    <div class="sg-opening-hero">
+
+        <img
+            src="phukethero.jpeg"
+            alt="Phuket coastline"
+        >
+
+        <div class="edition-hero-overlay">
+
+            <p class="eyebrow">
+                THAILAND
+            </p>
+
+            <h1>
+                Phuket
+            </h1>
+
+            <p class="edition-hero-subtitle">
+                Beaches, boats, music and an easy escape from Singapore.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="sg-opening-intro">
+
+        <p class="section-label">
+            OUR PHUKET
+        </p>
+
+        <h2>
+            Our favourite kind of weekend escape.
+        </h2>
+
+        <div class="sg-opening-intro-copy">
+
+            <p>
+                We go to Phuket frequently. From Singapore it is
+                remarkably easy to get to, which makes it one of those
+                places we can return to without needing to turn it into
+                a major trip.
+            </p>
+
+            <p>
+                We tend to base ourselves around Kamala, usually at the
+                InterContinental, where being so close to Café del Mar
+                makes it particularly easy to move from beach days into
+                long afternoons and nights of music.
+            </p>
+
+            <p>
+                But Phuket is much more than the beach in front of the
+                hotel. We love getting out on the water, exploring the
+                national park, finding quieter stretches of coastline,
+                eating well and spending time around Bang Tao too.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDITORIAL PHOTOGRAPHIC STORY
+====================================================== -->
+
+<section class="sg-editorial">
+
+    <div class="sg-editorial-section">
+
+
+        <div class="section-heading">
+
+            <p>
+                FROM OUR CAMERA
+            </p>
+
+            <h2>
+                Phuket, as we see it.
+            </h2>
+
+        </div>
+
+
+        <!-- =============================================
+             ROW 1
+        ============================================== -->
+
+        <div class="sg-grid">
+
+
+            <div class="sg-text sg-r1-text">
+
+                <p class="section-label">
+                    THE ESCAPE
+                </p>
+
+                <h3>
+                    Easy to reach. Easy to love.
+                </h3>
+
+                <div class="sg-rule"></div>
+
+                <p>
+                    One of the reasons Phuket keeps pulling us back is
+                    simply how easy it is from Singapore. A short flight
+                    can take us from city life to the Andaman Sea,
+                    without sacrificing good hotels, restaurants or
+                    things to do once we arrive.
+                </p>
+
+            </div>
+
+
+            <div class="sg-r1-img1">
+
+                <img
+                    src="phuket1.jpeg"
+                    alt="Phuket"
+                    loading="eager"
+                >
+
+            </div>
+
+
+            <div class="sg-r1-img2">
+
+                <img
+                    src="phuket2.jpeg"
+                    alt="Boat day exploring the Andaman Sea"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =============================================
+             ROW 2
+        ============================================== -->
+
+        <div class="sg-grid">
+
+
+            <div class="sg-r2-img1">
+
+                <img
+                    src="phuket3.jpeg"
+                    alt="Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-text sg-r2-text">
+
+                <p class="section-label">
+                    KAMALA
+                </p>
+
+                <h3>
+                    Our usual base.
+                </h3>
+
+                <p>
+                    We tend to stay at the InterContinental. Its
+                    position on Kamala Beach works perfectly for us,
+                    particularly because Café del Mar is right next
+                    door.
+                </p>
+
+            </div>
+
+
+            <div class="sg-r2-img2">
+
+                <img
+                    src="phuket4.jpeg"
+                    alt="Phuket coastline"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-text sg-r2-text2">
+
+                <p class="section-label">
+                    THE BEACH CLUBS
+                </p>
+
+                <h3>
+                    From afternoon into night.
+                </h3>
+
+                <p>
+                    Phuket's beach-club scene has become a big part of
+                    its appeal. Café del Mar gives Kamala an easy place
+                    to settle in as the sun goes down.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =============================================
+             ROW 3
+        ============================================== -->
+
+        <div class="sg-grid">
+
+
+            <div class="sg-text sg-r3-text">
+
+                <p class="section-label">
+                    MUSIC
+                </p>
+
+                <h3>
+                    The Ibiza of Asia?
+                </h3>
+
+                <div class="sg-rule"></div>
+
+                <p>
+                    Phuket is increasingly becoming one of Asia's big
+                    destinations for electronic music. More and more
+                    international DJs are coming through, and we love
+                    the fact that a beach weekend can turn into a very
+                    good night out.
+                </p>
+
+            </div>
+
+
+            <div class="sg-r3-img1">
+
+                <img
+                    src="phuket5.jpeg"
+                    alt="Boat day around Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-r3-img2">
+
+                <img
+                    src="phuket6.jpeg"
+                    alt="Boat on the Andaman Sea"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-r3-img3">
+
+                <img
+                    src="phuket7.jpeg"
+                    alt="Island scenery near Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =============================================
+             ROW 4
+        ============================================== -->
+
+        <div class="sg-grid">
+
+
+            <div class="sg-r4-img1">
+
+                <img
+                    src="phuket8.jpeg"
+                    alt="Beach day in Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-text sg-r4-text">
+
+                <p class="section-label">
+                    BANG TAO
+                </p>
+
+                <h3>
+                    A different side of Phuket.
+                </h3>
+
+                <p>
+                    We also enjoy spending time around Bang Tao. There
+                    is a slightly different rhythm here, with good
+                    restaurants, beach spots and plenty of reasons to
+                    stay for the afternoon.
+                </p>
+
+            </div>
+
+
+            <div class="sg-r4-img2">
+
+                <img
+                    src="phuket9.jpeg"
+                    alt="Evening in Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================================
+         LOCAL INFORMATION
+    ================================================== -->
+
+    <section class="sg-info">
+
+
+        <div class="sg-info-grid">
+
+
+            <div class="sg-info-item">
+
+                <p class="section-label">
+                    WHERE WE STAY
+                </p>
+
+                <h3>
+                    InterContinental
+                </h3>
+
+                <p>
+                    Our usual base around Kamala. We particularly like
+                    the location because Café del Mar is next door and
+                    the beach is right outside.
+                </p>
+
+            </div>
+
+
+            <div class="sg-info-item">
+
+                <p class="section-label">
+                    OTHER HOTELS
+                </p>
+
+                <h3>
+                    Rosewood &amp; Cape Sienna
+                </h3>
+
+                <p>
+                    We have also stayed at the Rosewood and Cape Sienna.
+                    Both give you a different perspective on the west
+                    coast and are worth knowing when planning a Phuket
+                    stay.
+                </p>
+
+            </div>
+
+
+            <div class="sg-info-item">
+
+                <p class="section-label">
+                    THE OTHER SIDE
+                </p>
+
+                <h3>
+                    By boat
+                </h3>
+
+                <p>
+                    Some of our favourite Phuket days are spent away
+                    from the island itself, exploring the national park,
+                    caves, coastline and clear water by boat.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         RECOMMENDATIONS
+    ================================================== -->
+
+    <section class="sg-recommendations">
+
+
+        <div class="sg-recommendations-heading">
+
+            <p class="section-label">
+                OUR RECOMMENDATIONS
+            </p>
+
+            <h2>
+                Places and experiences we return to.
+            </h2>
+
+        </div>
+
+
+        <div class="sg-recommendation-list">
+
+
+            <article class="sg-recommendation">
+
+                <p class="sg-rec-number">
+                    01
+                </p>
+
+                <h3>
+                    InterContinental Phuket
+                </h3>
+
+                <p>
+                    Our usual choice around Kamala. The beach location
+                    and proximity to Café del Mar make it particularly
+                    good for the way we like to do Phuket.
+                </p>
+
+            </article>
+
+
+            <article class="sg-recommendation">
+
+                <p class="sg-rec-number">
+                    02
+                </p>
+
+                <h3>
+                    Café del Mar
+                </h3>
+
+                <p>
+                    Right on Kamala Beach and one of the reasons we
+                    like staying at the InterContinental. A natural
+                    transition from beach afternoon to evening.
+                </p>
+
+            </article>
+
+
+            <article class="sg-recommendation">
+
+                <p class="sg-rec-number">
+                    03
+                </p>
+
+                <h3>
+                    The Phuket music scene
+                </h3>
+
+                <p>
+                    Phuket is becoming increasingly important on the
+                    Asian DJ circuit, with more major international
+                    names appearing. We enjoy making a night of it.
+                </p>
+
+            </article>
+
+
+            <article class="sg-recommendation">
+
+                <p class="sg-rec-number">
+                    04
+                </p>
+
+                <h3>
+                    Bang Tao Beach
+                </h3>
+
+                <p>
+                    A favourite change of scene from Kamala, with good
+                    restaurants and a relaxed beach atmosphere.
+                </p>
+
+            </article>
+
+
+            <article class="sg-recommendation">
+
+                <p class="sg-rec-number">
+                    05
+                </p>
+
+                <h3>
+                    Rosewood Phuket
+                </h3>
+
+                <p>
+                    Another hotel we have stayed at and a very
+                    different experience from the InterContinental,
+                    particularly if you want something more secluded.
+                </p>
+
+            </article>
+
+
+            <article class="sg-recommendation">
+
+                <p class="sg-rec-number">
+                    06
+                </p>
+
+                <h3>
+                    Cape Sienna
+                </h3>
+
+                <p>
+                    Another hotel we have experienced around the west
+                    coast and one worth considering when comparing
+                    different bases.
+                </p>
+
+            </article>
+
+
+            <article class="sg-recommendation">
+
+                <p class="sg-rec-number">
+                    07
+                </p>
+
+                <h3>
+                    A day on the water
+                </h3>
+
+                <p>
+                    Take a boat into the national park. Exploring the
+                    caves, islands and coastline and swimming in the
+                    crystal-clear water is one of our favourite ways
+                    to experience Phuket.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         JOURNAL
+    ================================================== -->
+
+    <section class="sg-journal">
+
+
+        <div class="sg-journal-heading">
+
+            <p class="section-label">
+                OUR EDIT
+            </p>
+
+            <h2>
+                Phuket works because it never needs to be just one thing.
+            </h2>
+
+        </div>
+
+
+        <div class="sg-journal-copy">
+
+            <p>
+                We come back to Phuket because it gives us the
+                combination we want from a short break. There is the
+                beach, the food, the hotels and enough going on at
+                night to make the trip feel like more than simply
+                lying by a pool.
+            </p>
+
+            <p>
+                Kamala is our usual base, largely because the
+                InterContinental puts us directly beside the beach and
+                Café del Mar. We like being able to walk from a
+                relaxed afternoon into an evening of music, and Phuket
+                is increasingly attracting some of the biggest DJs in
+                Asia.
+            </p>
+
+            <p>
+                But we also like to escape the developed parts of the
+                island. A boat day into the national park gives you
+                caves, islands, coastline and exceptionally clear
+                water. Add Bang Tao, some very good food and the fact
+                that Singapore is only a short flight away, and it is
+                easy to understand why Phuket has become one of our
+                regular escapes.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         FINAL PHOTOGRAPHIC FIELD
+    ================================================== -->
+
+    <div class="sg-editorial-section">
+
+
+        <div class="sg-final-grid">
+
+
+            <div class="sg-final-heading">
+
+                <p class="section-label">
+                    MORE FROM OUR CAMERA
+                </p>
+
+                <h2>
+                    More from Phuket.
+                </h2>
+
+            </div>
+
+
+            <div class="sg-final-img1">
+
+                <img
+                    src="phuket10.jpeg"
+                    alt="Phuket nightlife"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-final-img2">
+
+                <img
+                    src="phuket11.jpeg"
+                    alt="Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-final-img3">
+
+                <img
+                    src="phuket12.jpeg"
+                    alt="Phuket sunset"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-final-img4">
+
+                <img
+                    src="phuket13.jpeg"
+                    alt="Beach club afternoon in Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-final-img5">
+
+                <img
+                    src="phuket14.jpeg"
+                    alt="Quiet moment by the sea in Phuket"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="sg-final-img6">
+
+                <img
+                    src="phuket15.jpeg"
+                    alt="Phuket beach"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         MAP
+    ================================================== -->
+
+    <section class="sg-map">
+
+
+        <div class="sg-map-inner">
+
+            <p class="section-label">
+                OUR MAP
+            </p>
+
+            <h2>
+                Phuket.
+            </h2>
+
+            <p>
+                Kamala, Bang Tao and the coastline and islands we
+                keep returning to around Phuket — from our favourite
+                beaches and hotels to the places we explore by boat.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- =====================================================
+     END NAVIGATION
+====================================================== -->
+
+<section class="sg-end">
+
+    <a
+        href="/"
+        class="text-link"
+    >
+        ← Back to Home
+    </a>
+
+    <a
+        href="editions.html"
+        class="text-link"
+    >
+        View All Editions →
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <div>
+
+            <div class="footer-logo">
+                THE EXPAT EDITS
+            </div>
+
+            <p class="footer-description">
+                Travel, places &amp; observations from life abroad.
+            </p>
+
+        </div>
+
+
+        <nav class="footer-nav">
+
+            <a href="editions.html">
+                Editions
+            </a>
+
+            <a href="index-new.html#journal">
+                Journal
+            </a>
+
+            <a href="index-new.html#map">
+                Map
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+        </nav>
+
+
+        <a
+            href="https://www.instagram.com/theexpatedits/"
+            class="footer-social"
+            target="_blank"
+            rel="noopener"
+        >
+            Instagram
+        </a>
+
+
+        <p class="footer-copyright">
+            © The Expat Edits
+        </p>
+
+    </div>
+
+</footer>
+
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE VERSION
+     ORIGINAL PHUKET STRUCTURE RETAINED
+====================================================== -->
+
+<div class="phuket-mobile">
+
 
 <header class="site-header">
 
@@ -738,6 +2122,9 @@
     </div>
 
 </footer>
+
+
+</div>
 
 
 </body>

@@ -3,530 +3,477 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Lombok | The Expat Edits</title>
-
-    <meta
-        name="description"
-        content="Lombok — from the southern coast to the Gili Islands, with beautiful stays, beaches, boats, surf, food and laid-back island life."
-    >
-
-    <!-- Google Fonts -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- MASTER SITE CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style-new.css"
-    >
-
-    <!-- EDITION MASTER CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style-editions-new.css"
-    >
-
-
-    <style>
-
-        /* =====================================================
-           LOMBOK — SINGAPORE1 EDITORIAL ARCHITECTURE
-        ====================================================== */
-
-        .lombok-desktop {
-            display: block;
-            background: #f5f2eb;
-            color: #242320;
-        }
-
-        .lombok-mobile {
-            display: none;
-        }
-
-        .lb-width {
-            width: min(1180px, calc(100% - 80px));
-            margin: 0 auto;
-        }
-
-        .lb-wide {
-            width: min(1380px, calc(100% - 60px));
-            margin: 0 auto;
-        }
-
-
-        /* =====================================================
-           OPENING
-        ====================================================== */
-
-        .lb-opening {
-            padding: 55px 0 90px;
-        }
-
-        .lb-opening-grid {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: 70px;
-            align-items: end;
-        }
-
-        .lb-opening-image img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .lb-opening-copy {
-            padding-bottom: 15px;
-        }
-
-        .lb-kicker {
-            margin: 0 0 22px;
-            font-family: Inter, sans-serif;
-            font-size: 11px;
-            letter-spacing: 0.18em;
-            font-weight: 500;
-        }
-
-        .lb-opening-copy h1 {
-            margin: 0 0 24px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(64px, 8vw, 118px);
-            line-height: 0.82;
-            font-weight: 500;
-        }
-
-        .lb-opening-copy .lb-deck {
-            max-width: 480px;
-            margin: 0;
-            font-family: Inter, sans-serif;
-            font-size: 17px;
-            line-height: 1.75;
-            font-weight: 300;
-        }
-
-
-        /* =====================================================
-           EDITORIAL INTRO
-        ====================================================== */
-
-        .lb-editorial {
-            padding: 90px 0 105px;
-        }
-
-        .lb-editorial-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 100px;
-        }
-
-        .lb-label {
-            margin: 0 0 22px;
-            font-family: Inter, sans-serif;
-            font-size: 10px;
-            letter-spacing: 0.18em;
-            font-weight: 500;
-        }
-
-        .lb-editorial h2 {
-            margin: 0;
-            max-width: 500px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(42px, 5vw, 72px);
-            line-height: 0.95;
-            font-weight: 500;
-        }
-
-        .lb-editorial-copy {
-            max-width: 650px;
-        }
-
-        .lb-editorial-copy p {
-            margin: 0 0 26px;
-            font-family: Inter, sans-serif;
-            font-size: 16px;
-            line-height: 1.85;
-            font-weight: 300;
-        }
-
-        .lb-editorial-copy p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* =====================================================
-           PHOTO STORY
-        ====================================================== */
-
-        .lb-story {
-            padding: 0 0 120px;
-        }
-
-        .lb-story-heading {
-            width: min(1180px, calc(100% - 80px));
-            margin: 0 auto 55px;
-        }
-
-        .lb-story-heading h2 {
-            margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(42px, 5vw, 68px);
-            line-height: 0.95;
-            font-weight: 500;
-        }
-
-        .lb-story-row {
-            width: min(1380px, calc(100% - 60px));
-            margin: 0 auto 35px;
-            display: grid;
-            gap: 35px;
-            align-items: start;
-        }
-
-        .lb-story-row img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .lb-r1 {
-            grid-template-columns: 1.45fr 0.75fr;
-        }
-
-        .lb-r2 {
-            grid-template-columns: 0.72fr 1.28fr;
-            align-items: end;
-        }
-
-        .lb-r3 {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .lb-r4 {
-            grid-template-columns: 0.8fr 1.2fr;
-            align-items: center;
-        }
-
-
-        /* =====================================================
-           STORY TEXT
-        ====================================================== */
-
-        .lb-story-text {
-            padding: 25px 30px;
-            max-width: 430px;
-        }
-
-        .lb-story-text .lb-label {
-            margin-bottom: 18px;
-        }
-
-        .lb-story-text h3 {
-            margin: 0 0 18px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 40px;
-            line-height: 0.98;
-            font-weight: 500;
-        }
-
-        .lb-story-text p {
-            margin: 0 0 18px;
-            font-family: Inter, sans-serif;
-            font-size: 14px;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        .lb-story-text p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* =====================================================
-           LOCAL INFORMATION
-        ====================================================== */
-
-        .lb-info {
-            padding: 100px 0;
-            border-top: 1px solid rgba(36, 35, 32, 0.16);
-            border-bottom: 1px solid rgba(36, 35, 32, 0.16);
-        }
-
-        .lb-info-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 55px;
-        }
-
-        .lb-info-item h3 {
-            margin: 0 0 12px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 34px;
-            line-height: 1;
-            font-weight: 500;
-        }
-
-        .lb-info-item p:last-child {
-            margin: 0;
-            max-width: 310px;
-            font-family: Inter, sans-serif;
-            font-size: 14px;
-            line-height: 1.75;
-            font-weight: 300;
-        }
-
-
-        /* =====================================================
-           RECOMMENDATIONS
-        ====================================================== */
-
-        .lb-recommendations {
-            padding: 115px 0 100px;
-        }
-
-        .lb-section-heading {
-            margin-bottom: 60px;
-        }
-
-        .lb-section-heading h2 {
-            margin: 0;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(46px, 5vw, 70px);
-            line-height: 0.95;
-            font-weight: 500;
-        }
-
-        .lb-recommendations-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 70px 55px;
-        }
-
-        .lb-recommendation-number {
-            margin: 0 0 16px;
-            font-family: Inter, sans-serif;
-            font-size: 10px;
-            letter-spacing: 0.16em;
-        }
-
-        .lb-recommendation h3 {
-            margin: 0 0 14px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 35px;
-            line-height: 1;
-            font-weight: 500;
-        }
-
-        .lb-recommendation p {
-            margin: 0;
-            font-family: Inter, sans-serif;
-            font-size: 14px;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-
-        /* =====================================================
-           OUR EDIT
-        ====================================================== */
-
-        .lb-edit {
-            padding: 110px 0;
-            background: #242320;
-            color: #f5f2eb;
-        }
-
-        .lb-edit-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 100px;
-        }
-
-        .lb-edit h2 {
-            margin: 0;
-            max-width: 470px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(46px, 5vw, 72px);
-            line-height: 0.92;
-            font-weight: 500;
-        }
-
-        .lb-edit-copy {
-            max-width: 650px;
-        }
-
-        .lb-edit-copy p {
-            margin: 0 0 25px;
-            font-family: Inter, sans-serif;
-            font-size: 16px;
-            line-height: 1.85;
-            font-weight: 300;
-        }
-
-        .lb-edit-copy p:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* =====================================================
-           FINAL GALLERY
-        ====================================================== */
-
-        .lb-final-gallery {
-            padding: 115px 0 100px;
-        }
-
-        .lb-final-grid {
-            width: min(1380px, calc(100% - 60px));
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .lb-final-grid img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-
-        /* =====================================================
-           MAP
-        ====================================================== */
-
-        .lb-map {
-            padding: 110px 0 120px;
-            border-top: 1px solid rgba(36, 35, 32, 0.16);
-        }
-
-        .lb-map-inner {
-            max-width: 700px;
-        }
-
-        .lb-map h2 {
-            margin: 0 0 25px;
-            font-family: "Cormorant Garamond", serif;
-            font-size: clamp(48px, 6vw, 78px);
-            line-height: 0.92;
-            font-weight: 500;
-        }
-
-        .lb-map p:last-child {
-            margin: 0;
-            max-width: 600px;
-            font-family: Inter, sans-serif;
-            font-size: 16px;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-
-        /* =====================================================
-           END NAVIGATION
-        ====================================================== */
-
-        .lb-end {
-            width: min(1180px, calc(100% - 80px));
-            margin: 0 auto;
-            padding: 0 0 90px;
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .lb-end a {
-            font-family: Inter, sans-serif;
-            font-size: 12px;
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            color: inherit;
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ====================================================== */
-
-        @media (max-width: 800px) {
-
-            .lombok-desktop {
-                display: none;
-            }
-
-            .lombok-mobile {
-                display: block;
-            }
-
-        }
-
-
-        /* =====================================================
-           DESKTOP ONLY
-        ====================================================== */
-
-        @media (min-width: 801px) {
-
-            .edition-page > main {
-                background: #f5f2eb;
-            }
-
-        }
-
-
-        /* =====================================================
-           TABLET / SMALL DESKTOP
-        ====================================================== */
-
-        @media (max-width: 1050px) and (min-width: 801px) {
-
-            .lb-width,
-            .lb-story-heading,
-            .lb-end {
-                width: min(100% - 50px, 900px);
-            }
-
-            .lb-wide,
-            .lb-story-row,
-            .lb-final-grid {
-                width: min(100% - 40px, 1000px);
-            }
-
-            .lb-opening-grid,
-            .lb-editorial-grid,
-            .lb-edit-grid {
-                gap: 50px;
-            }
-
-            .lb-recommendations-grid {
-                gap: 45px 30px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Lombok | The Expat Edits</title>
+
+<meta
+    name="description"
+    content="Lombok — from the southern coast to the Gili Islands, with beautiful stays, beaches, boats, surf, food and laid-back island life."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-editions-new.css">
+
+
+<style>
+
+/* =========================================================
+   LOMBOK
+   Singapore1 editorial architecture
+========================================================= */
+
+.lombok-desktop {
+    display:block;
+}
+
+.lombok-mobile {
+    display:none;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width:769px) {
+
+    :root {
+        --lb-width:min(1400px, calc(100% - 80px));
+        --lb-wide:min(1500px, calc(100% - 80px));
+        --lb-gap:22px;
+        --lb-line:rgba(255,255,255,.12);
+        --lb-line-strong:rgba(255,255,255,.16);
+    }
+
+
+    /* -----------------------------------------------------
+       OPENING
+    ----------------------------------------------------- */
+
+    .lb-opening {
+        width:var(--lb-wide);
+        margin:0 auto;
+        padding:0 0 90px;
+
+        display:grid;
+        grid-template-columns:1.25fr .75fr;
+        gap:75px;
+        align-items:center;
+    }
+
+    .lb-opening-hero {
+        position:relative;
+        overflow:hidden;
+        width:100%;
+        background:#090909;
+    }
+
+    .lb-opening-hero img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+    .lb-opening-hero::after {
+        content:"";
+        position:absolute;
+        z-index:1;
+        left:0;
+        right:0;
+        bottom:0;
+        height:38%;
+        pointer-events:none;
+
+        background:linear-gradient(
+            to bottom,
+            rgba(9,9,9,0) 0%,
+            rgba(9,9,9,.22) 28%,
+            rgba(9,9,9,.55) 55%,
+            rgba(9,9,9,.82) 78%,
+            #242320 100%
+        );
+    }
+
+    .lb-opening-hero .edition-hero-overlay {
+        position:absolute;
+        z-index:2;
+        left:55px;
+        right:55px;
+        bottom:50px;
+    }
+
+    .lb-opening-intro {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:50px 35px 50px 5px;
+    }
+
+    .lb-opening-intro h2 {
+        margin:0 0 28px;
+    }
+
+    .lb-opening-intro-copy {
+        max-width:560px;
+    }
+
+    .lb-opening-intro-copy p {
+        margin:0 0 22px;
+    }
+
+    .lb-opening-intro-copy p:last-child {
+        margin-bottom:0;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN EDITORIAL CANVAS
+    ----------------------------------------------------- */
+
+    .lb-editorial {
+        width:var(--lb-width);
+        margin:0 auto;
+    }
+
+    .lb-editorial-section {
+        padding:70px 0;
+    }
+
+    .lb-grid,
+    .lb-final-grid {
+        display:grid;
+        grid-template-columns:repeat(12,minmax(0,1fr));
+        column-gap:var(--lb-gap);
+        row-gap:42px;
+        align-items:start;
+    }
+
+    .lb-grid img,
+    .lb-final-grid img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+    .lb-text {
+        align-self:center;
+    }
+
+    .lb-text p {
+        margin-top:0;
+    }
+
+    .lb-text h2,
+    .lb-text h3 {
+        margin-top:0;
+    }
+
+    .lb-text .section-label {
+        margin-bottom:12px;
+    }
+
+    .lb-rule {
+        width:42px;
+        height:1px;
+        margin:20px 0;
+        background:currentColor;
+        opacity:.65;
+    }
+
+
+    /* -----------------------------------------------------
+       EDITORIAL ROW 1
+    ----------------------------------------------------- */
+
+    .lb-r1-text {
+        grid-column:1 / span 3;
+    }
+
+    .lb-r1-img1 {
+        grid-column:4 / span 5;
+        width:88%;
+    }
+
+    .lb-r1-img2 {
+        grid-column:9 / span 4;
+        width:90%;
+        margin-left:auto;
+        padding-top:55px;
+    }
+
+
+    /* -----------------------------------------------------
+       EDITORIAL ROW 2
+    ----------------------------------------------------- */
+
+    .lb-r2-img1 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .lb-r2-text {
+        grid-column:4 / span 3;
+        padding:0 8px;
+    }
+
+    .lb-r2-img2 {
+        grid-column:7 / span 3;
+    }
+
+    .lb-r2-text2 {
+        grid-column:10 / span 3;
+        padding-top:55px;
+    }
+
+
+    /* -----------------------------------------------------
+       EDITORIAL ROW 3
+    ----------------------------------------------------- */
+
+    .lb-r3-text {
+        grid-column:1 / span 3;
+        padding-top:20px;
+    }
+
+    .lb-r3-img1 {
+        grid-column:4 / span 4;
+    }
+
+    .lb-r3-img2 {
+        grid-column:8 / span 2;
+        padding-top:55px;
+    }
+
+    .lb-r3-img3 {
+        grid-column:10 / span 3;
+        padding-top:10px;
+    }
+
+
+    /* -----------------------------------------------------
+       EDITORIAL ROW 4
+    ----------------------------------------------------- */
+
+    .lb-r4-img1 {
+        grid-column:1 / span 4;
+    }
+
+    .lb-r4-text {
+        grid-column:5 / span 3;
+        padding:20px 5px 0;
+    }
+
+    .lb-r4-img2 {
+        grid-column:8 / span 5;
+        padding-top:40px;
+    }
+
+
+    /* -----------------------------------------------------
+       EDITORIAL ROW 5
+    ----------------------------------------------------- */
+
+    .lb-r5-text {
+        grid-column:1 / span 3;
+        padding-top:20px;
+    }
+
+    .lb-r5-img1 {
+        grid-column:4 / span 5;
+    }
+
+    .lb-r5-img2 {
+        grid-column:9 / span 4;
+        padding-top:45px;
+    }
+
+
+    /* -----------------------------------------------------
+       LOCAL INFORMATION
+    ----------------------------------------------------- */
+
+    .lb-info {
+        margin:20px 0 70px;
+        padding:60px 0;
+        border-top:1px solid var(--lb-line);
+        border-bottom:1px solid var(--lb-line);
+    }
+
+    .lb-info-grid {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:70px;
+    }
+
+    .lb-info-item h3 {
+        margin:10px 0 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       RECOMMENDATIONS
+    ----------------------------------------------------- */
+
+    .lb-recommendations {
+        padding:20px 0 100px;
+    }
+
+    .lb-recommendations-heading {
+        margin-bottom:50px;
+    }
+
+    .lb-recommendation-list {
+        max-width:950px;
+        border-top:1px solid var(--lb-line-strong);
+    }
+
+    .lb-recommendation {
+        display:grid;
+        grid-template-columns:70px 280px 1fr;
+        column-gap:35px;
+        align-items:start;
+
+        padding:30px 0;
+        border-bottom:1px solid var(--lb-line-strong);
+    }
+
+    .lb-rec-number {
+        padding-top:7px;
+        font-size:.72rem;
+        letter-spacing:.14em;
+        opacity:.6;
+    }
+
+    .lb-recommendation h3 {
+        margin:0;
+        font-size:1.35rem;
+    }
+
+    .lb-recommendation p {
+        margin:0;
+        max-width:520px;
+    }
+
+
+    /* -----------------------------------------------------
+       JOURNAL / OUR EDIT
+    ----------------------------------------------------- */
+
+    .lb-journal {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:90px;
+        align-items:center;
+
+        padding:70px 0;
+        border-top:1px solid var(--lb-line);
+    }
+
+    .lb-journal-copy p {
+        margin-top:0;
+    }
+
+
+    /* -----------------------------------------------------
+       FINAL PHOTOGRAPHIC FIELD
+    ----------------------------------------------------- */
+
+    .lb-final-heading {
+        grid-column:1 / span 3;
+        padding-top:30px;
+    }
+
+    .lb-final-img1 {
+        grid-column:4 / span 4;
+    }
+
+    .lb-final-img2 {
+        grid-column:8 / span 2;
+        padding-top:45px;
+    }
+
+    .lb-final-img3 {
+        grid-column:10 / span 3;
+    }
+
+    .lb-final-img4 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .lb-final-img5 {
+        grid-column:4 / span 3;
+        padding-top:55px;
+    }
+
+    .lb-final-img6 {
+        grid-column:7 / span 3;
+    }
+
+    .lb-final-img7 {
+        grid-column:10 / span 3;
+        padding-top:30px;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP
+    ----------------------------------------------------- */
+
+    .lb-map {
+        padding:80px 0 70px;
+    }
+
+    .lb-map-inner {
+        max-width:650px;
+    }
+
+
+    /* -----------------------------------------------------
+       END NAVIGATION
+    ----------------------------------------------------- */
+
+    .lb-end {
+        display:flex;
+        justify-content:space-between;
+        padding:35px 0 70px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   Existing Edition structure retained
+========================================================= */
+
+@media (max-width:768px) {
+
+    .lombok-desktop {
+        display:none;
+    }
+
+    .lombok-mobile {
+        display:block;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -535,65 +482,57 @@
 
 
 <!-- =====================================================
-     DESKTOP — SINGAPORE1 EDITORIAL VERSION
-====================================================== -->
-
-<div class="lombok-desktop">
-
-
-<!-- =====================================================
      HEADER
 ====================================================== -->
 
 <header class="site-header">
 
-    <div class="site-header-inner">
+<div class="site-header-inner">
 
-        <a
-            href="/"
-            class="site-logo"
-        >
-            THE EXPAT EDITS
+    <a href="/" class="site-logo">
+        THE EXPAT EDITS
+    </a>
+
+    <nav class="site-nav">
+
+        <a href="editions.html">
+            Editions
         </a>
 
-        <nav class="site-nav">
+        <a href="index-new.html#journal">
+            Journal
+        </a>
 
-            <a href="editions.html">
-                Editions
-            </a>
+        <a href="index-new.html#map">
+            Map
+        </a>
 
-            <a href="index-new.html#journal">
-                Journal
-            </a>
+        <a href="about.html">
+            About
+        </a>
 
-            <a href="index-new.html#map">
-                Map
-            </a>
+    </nav>
 
-            <a href="index-new.html#about">
-                About
-            </a>
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        </nav>
-
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
+</div>
 
 </header>
 
 
-<main>
+<!-- =====================================================
+     DESKTOP EDITION
+====================================================== -->
+
+<main class="lombok-desktop">
 
 
 <!-- =====================================================
@@ -602,21 +541,17 @@
 
 <section class="lb-opening">
 
-    <div class="lb-opening-grid lb-width">
+    <div class="lb-opening-hero">
 
-        <div class="lb-opening-image">
+        <img
+            src="lombokhero.jpeg"
+            alt="Lombok"
+            loading="eager"
+        >
 
-            <img
-                src="lombokhero.jpeg"
-                alt="Lombok"
-            >
+        <div class="edition-hero-overlay">
 
-        </div>
-
-
-        <div class="lb-opening-copy">
-
-            <p class="lb-kicker">
+            <p class="eyebrow">
                 INDONESIA
             </p>
 
@@ -624,47 +559,32 @@
                 Lombok
             </h1>
 
-            <p class="lb-deck">
-                Beaches, islands, surf and the slower side of Indonesia.
-                An island that rewards getting out on the road and seeing
-                what is around the next corner.
+            <p class="edition-hero-subtitle">
+                Beaches, islands &amp; the slower side of Indonesia.
             </p>
 
         </div>
 
     </div>
 
-</section>
 
+    <div class="lb-opening-intro">
 
-<!-- =====================================================
-     INTRODUCTION
-====================================================== -->
+        <p class="section-label">
+            OUR LOMBOK
+        </p>
 
-<section class="lb-editorial">
+        <h2>
+            An island made for exploring.
+        </h2>
 
-    <div class="lb-editorial-grid lb-width">
-
-        <div>
-
-            <p class="lb-label">
-                OUR LOMBOK
-            </p>
-
-            <h2>
-                An island made for exploring.
-            </h2>
-
-        </div>
-
-
-        <div class="lb-editorial-copy">
+        <div class="lb-opening-intro-copy">
 
             <p>
-                Lombok is a great island to explore and we loved getting
-                to all parts of it. Rather than staying in one place, we
-                moved around the island and found that each part had
-                something different to offer.
+                Lombok is a great island to explore and we loved
+                getting to all parts of it. Rather than staying in
+                one place, we moved around the island and found that
+                each part had something different to offer.
             </p>
 
             <p>
@@ -696,297 +616,361 @@
 </section>
 
 
+<div class="lb-editorial">
+
+
 <!-- =====================================================
-     PHOTOGRAPHIC STORY
+     FROM OUR CAMERA
 ====================================================== -->
 
-<section class="lb-story">
+<section class="lb-editorial-section">
 
-    <div class="lb-story-heading">
+<div class="section-heading">
 
-        <p class="lb-label">
-            FROM OUR CAMERA
-        </p>
+    <p>
+        FROM OUR CAMERA
+    </p>
 
-        <h2>
-            Lombok, as we experienced it.
-        </h2>
+    <h2>
+        Lombok, as we experienced it.
+    </h2>
 
-    </div>
+</div>
+
+
+<div class="lb-grid">
 
 
     <!-- ROW 1 -->
 
-    <div class="lb-story-row lb-r1">
+    <div class="lb-text lb-r1-text">
 
-        <img
-            src="lombok2.jpeg"
-            alt="Lombok"
-            loading="lazy"
-        >
+        <p class="section-label">
+            SOUTH EAST
+        </p>
 
-        <div class="lb-story-text">
+        <h3>
+            Start by getting off the beaten track.
+        </h3>
 
-            <p class="lb-label">
-                SOUTH EAST
-            </p>
+        <div class="lb-rule"></div>
 
-            <h3>
-                Start by getting off the beaten track.
-            </h3>
-
-            <p>
-                We began at Lobster Bay in the south east, a private
-                villa resort that felt wonderfully removed from
-                everything.
-            </p>
-
-            <p>
-                The sunsets were a particular highlight and it was
-                exactly the kind of place that made us want to slow
-                down before moving on again.
-            </p>
-
-        </div>
+        <p>
+            We began at Lobster Bay in the south east, a private
+            villa resort that felt wonderfully removed from
+            everything. The sunsets were a particular highlight
+            and it was exactly the kind of place that made us want
+            to slow down before moving on again.
+        </p>
 
     </div>
 
 
+    <img
+        class="lb-r1-img1"
+        src="lombok2.jpeg"
+        alt="Lombok"
+        loading="eager"
+    >
+
+    <img
+        class="lb-r1-img2"
+        src="lombok3.jpeg"
+        alt="Lombok coastline"
+        loading="lazy"
+    >
+
+
     <!-- ROW 2 -->
 
-    <div class="lb-story-row lb-r2">
-
-        <div class="lb-story-text">
-
-            <p class="lb-label">
-                THE ROAD
-            </p>
-
-            <h3>
-                Half the fun is seeing what happens next.
-            </h3>
-
-            <p>
-                Travelling around Lombok gives you plenty of moments
-                you simply couldn't plan.
-            </p>
-
-            <p>
-                We bumped into buffalo on the roads, found little
-                stretches of coastline and jumped on a boat to reach
-                a tiny beach that, for a while, felt like it belonged
-                entirely to us.
-            </p>
-
-            <p>
-                There are also plenty of simple beach warungs along
-                the way. Nothing complicated — just good food, cold
-                drinks and somewhere to sit for a while.
-            </p>
-
-        </div>
+    <img
+        class="lb-r2-img1"
+        src="lombok4.jpeg"
+        alt="Lombok"
+        loading="lazy"
+    >
 
 
-        <img
-            src="lombok3.jpeg"
-            alt="Lombok coastline"
-            loading="lazy"
-        >
+    <div class="lb-text lb-r2-text">
+
+        <p class="section-label">
+            THE ROAD
+        </p>
+
+        <h3>
+            Half the fun is seeing what happens next.
+        </h3>
+
+        <div class="lb-rule"></div>
+
+        <p>
+            Travelling around Lombok gives you plenty of moments
+            you simply couldn't plan. We bumped into buffalo on
+            the roads, found little stretches of coastline and
+            jumped on a boat to reach a tiny beach that, for a
+            while, felt like it belonged entirely to us.
+        </p>
+
+    </div>
+
+
+    <img
+        class="lb-r2-img2"
+        src="lombok5.jpeg"
+        alt="Lombok"
+        loading="lazy"
+    >
+
+
+    <div class="lb-text lb-r2-text2">
+
+        <p class="section-label">
+            SIMPLE STOPS
+        </p>
+
+        <h3>
+            Good food, cold drinks and somewhere to sit.
+        </h3>
+
+        <p>
+            There are plenty of simple beach warungs along the way.
+            Nothing complicated — just good food, cold drinks and
+            somewhere to sit for a while.
+        </p>
 
     </div>
 
 
     <!-- ROW 3 -->
 
-    <div class="lb-story-row lb-r3">
+    <div class="lb-text lb-r3-text">
 
-        <img
-            src="lombok4.jpeg"
-            alt="Lombok"
-            loading="lazy"
-        >
+        <p class="section-label">
+            SEGARA
+        </p>
 
-        <img
-            src="lombok5.jpeg"
-            alt="Lombok"
-            loading="lazy"
-        >
+        <h3>
+            Small huts and a slower pace.
+        </h3>
+
+        <div class="lb-rule"></div>
+
+        <p>
+            Moving west along the southern coast brought us to
+            Segara, another boutique stay that we really enjoyed.
+            The small, comfortable huts suited the relaxed feel
+            of the place, but the restaurant was a real highlight.
+        </p>
 
     </div>
+
+
+    <img
+        class="lb-r3-img1"
+        src="lombok6.jpeg"
+        alt="Segara, Lombok"
+        loading="lazy"
+    >
+
+    <img
+        class="lb-r3-img2"
+        src="lombok7.jpeg"
+        alt="Lombok"
+        loading="lazy"
+    >
+
+    <img
+        class="lb-r3-img3"
+        src="lombok8.jpeg"
+        alt="Lombok"
+        loading="lazy"
+    >
 
 
     <!-- ROW 4 -->
 
-    <div class="lb-story-row lb-r4">
+    <img
+        class="lb-r4-img1"
+        src="lombok9.jpeg"
+        alt="Gili Islands"
+        loading="lazy"
+    >
 
-        <img
-            src="lombok6.jpeg"
-            alt="Lombok"
-            loading="lazy"
-        >
 
-        <div class="lb-story-text">
+    <div class="lb-text lb-r4-text">
 
-            <p class="lb-label">
-                SEGARA
-            </p>
+        <p class="section-label">
+            THE GILIS
+        </p>
 
-            <h3>
-                Good food, small huts and a slower pace.
-            </h3>
+        <h3>
+            Three islands. Three completely different feels.
+        </h3>
 
-            <p>
-                Moving west along the southern coast brought us to
-                Segara, another boutique stay that we really enjoyed.
-            </p>
-
-            <p>
-                The small, comfortable huts suited the relaxed feel
-                of the place, but the restaurant was a real highlight.
-                The food was superb and gave us another reason to
-                linger.
-            </p>
-
-        </div>
+        <p>
+            Further north, the Oberoi was a great base for exploring
+            the three Gili Islands. We jumped between them by spider
+            boat and quickly realised that each Gili has its own
+            character.
+        </p>
 
     </div>
+
+
+    <img
+        class="lb-r4-img2"
+        src="lombok10.jpeg"
+        alt="Gili Islands"
+        loading="lazy"
+    >
 
 
     <!-- ROW 5 -->
 
-    <div class="lb-story-row lb-r1">
+    <div class="lb-text lb-r5-text">
 
-        <div class="lb-story-text">
+        <p class="section-label">
+            ON THE WATER
+        </p>
 
-            <p class="lb-label">
-                THE GILIS
-            </p>
+        <h3>
+            Turtles, clear water and island days.
+        </h3>
 
-            <h3>
-                Three islands. Three completely different feels.
-            </h3>
+        <div class="lb-rule"></div>
 
-            <p>
-                Further north, the Oberoi was a great base for
-                exploring the three Gili Islands.
-            </p>
-
-            <p>
-                We jumped between them by spider boat and quickly
-                realised that each Gili has its own character.
-                Exploring them all rather than choosing just one
-                made the experience much more interesting.
-            </p>
-
-        </div>
-
-
-        <img
-            src="lombok7.jpeg"
-            alt="Gili Islands"
-            loading="lazy"
-        >
+        <p>
+            The Gilis are made for getting in the water. We saw
+            turtles and spent time exploring the reefs around the
+            islands. On land, the pace was just as appealing:
+            beach warungs, simple bars and the feeling that there
+            was nowhere else you needed to be.
+        </p>
 
     </div>
 
 
+    <img
+        class="lb-r5-img1"
+        src="lombok11.jpeg"
+        alt="Gili Islands"
+        loading="lazy"
+    >
+
+    <img
+        class="lb-r5-img2"
+        src="lombok12.jpeg"
+        alt="Kuta Lombok"
+        loading="lazy"
+    >
+
+
     <!-- ROW 6 -->
 
-    <div class="lb-story-row lb-r2">
+    <img
+        class="lb-r2-img1"
+        src="lombok13.jpeg"
+        alt="Kuta Lombok"
+        loading="lazy"
+    >
 
-        <img
-            src="lombok8.jpeg"
-            alt="Gili Islands"
-            loading="lazy"
-        >
 
-        <div class="lb-story-text">
+    <div class="lb-text lb-r2-text">
 
-            <p class="lb-label">
-                ON THE WATER
-            </p>
+        <p class="section-label">
+            KUTA
+        </p>
 
-            <h3>
-                Turtles, clear water and island days.
-            </h3>
+        <h3>
+            Coffee, surf and people watching.
+        </h3>
 
-            <p>
-                The Gilis are made for getting in the water. We saw
-                turtles and spent time exploring the reefs around the
-                islands.
-            </p>
+        <div class="lb-rule"></div>
 
-            <p>
-                On land, the pace was just as appealing. Beach
-                warungs, simple bars and the feeling that there was
-                nowhere else you needed to be.
-            </p>
+        <p>
+            We really loved Kuta. It has a relaxed, youthful energy
+            that makes it very easy to settle into. We spent plenty
+            of time sitting in coffee shops, watching the town go by
+            and heading over to Tribe to watch the skateboarders.
+        </p>
 
-        </div>
+    </div>
+
+
+    <img
+        class="lb-r2-img2"
+        src="lombok14.jpeg"
+        alt="Kuta Lombok"
+        loading="lazy"
+    >
+
+
+    <div class="lb-text lb-r2-text2">
+
+        <p class="section-label">
+            SURF
+        </p>
+
+        <h3>
+            Learning the rhythm of the coast.
+        </h3>
+
+        <p>
+            We loved watching the boys learning to surf. Between
+            the surf, beaches and cafés, Kuta became somewhere
+            we were very happy simply spending time.
+        </p>
 
     </div>
 
 
     <!-- ROW 7 -->
 
-    <div class="lb-story-row lb-r3">
+    <div class="lb-text lb-r3-text">
 
-        <img
-            src="lombok9.jpeg"
-            alt="Gili Islands"
-            loading="lazy"
-        >
+        <p class="section-label">
+            ACTIVE LOMBOK
+        </p>
 
-        <img
-            src="lombok10.jpeg"
-            alt="Gili Islands"
-            loading="lazy"
-        >
+        <h3>
+            Even the gyms have character.
+        </h3>
 
-    </div>
+        <div class="lb-rule"></div>
 
-
-    <!-- ROW 8 -->
-
-    <div class="lb-story-row lb-r4">
-
-        <div class="lb-story-text">
-
-            <p class="lb-label">
-                GILI T
-            </p>
-
-            <h3>
-                Horse carts, dive shops and a beer.
-            </h3>
-
-            <p>
-                Gili T has a different energy again. Horse and carts
-                replace cars and bikes, while the beach is lined with
-                places to stop for a drink.
-            </p>
-
-            <p>
-                We enjoyed wandering into the dive shops, having a
-                beer and generally embracing the very relaxed island
-                rhythm.
-            </p>
-
-            <p>
-                Pondok Santi was our choice here, with exactly the
-                chilled beach atmosphere we were looking for.
-            </p>
-
-        </div>
-
-
-        <img
-            src="lombok11.jpeg"
-            alt="Gili Trawangan"
-            loading="lazy"
-        >
+        <p>
+            For anyone who wants to keep moving, there are some
+            surprisingly good options around the island. Xeno Fit,
+            with its bamboo gym setting, was a memorable example.
+            Locker Gym was another useful stop for keeping training
+            in the routine while travelling.
+        </p>
 
     </div>
+
+
+    <img
+        class="lb-r3-img1"
+        src="lombok15.jpeg"
+        alt="Lombok"
+        loading="lazy"
+    >
+
+    <img
+        class="lb-r3-img2"
+        src="lombok16.jpeg"
+        alt="Lombok"
+        loading="lazy"
+    >
+
+    <img
+        class="lb-r3-img3"
+        src="lombok17.jpeg"
+        alt="Lombok coast"
+        loading="lazy"
+    >
+
+</div>
 
 </section>
 
@@ -997,242 +981,62 @@
 
 <section class="lb-info">
 
-    <div class="lb-width">
+<div class="lb-info-grid">
 
-        <div class="lb-info-grid">
+    <div class="lb-info-item">
 
-
-            <div class="lb-info-item">
-
-                <p class="lb-label">
-                    BEST TIME
-                </p>
-
-                <h3>
-                    Dry season
-                </h3>
-
-                <p>
-                    The drier months are a great time to explore the
-                    island, beaches and Gili Islands.
-                </p>
-
-            </div>
-
-
-            <div class="lb-info-item">
-
-                <p class="lb-label">
-                    WEATHER
-                </p>
-
-                <h3>
-                    Tropical
-                </h3>
-
-                <p>
-                    Expect warm temperatures and plenty of sunshine,
-                    with seasonal rain.
-                </p>
-
-            </div>
-
-
-            <div class="lb-info-item">
-
-                <p class="lb-label">
-                    GETTING AROUND
-                </p>
-
-                <h3>
-                    Explore
-                </h3>
-
-                <p>
-                    Lombok rewards getting out and about, while boats
-                    make exploring the Gili Islands part of the fun.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     KUTA STORY
-====================================================== -->
-
-<section class="lb-story">
-
-    <div class="lb-story-heading">
-
-        <p class="lb-label">
-            SOUTH LOMBOK
+        <p class="section-label">
+            BEST TIME
         </p>
 
-        <h2>
-            Kuta was one of our favourite stops.
-        </h2>
+        <h3>
+            Dry season
+        </h3>
+
+        <p>
+            The drier months are a great time to explore the
+            island, beaches and Gili Islands.
+        </p>
 
     </div>
 
 
-    <div class="lb-story-row lb-r1">
+    <div class="lb-info-item">
 
-        <img
-            src="lombok12.jpeg"
-            alt="Kuta Lombok"
-            loading="lazy"
-        >
+        <p class="section-label">
+            WEATHER
+        </p>
 
-        <div class="lb-story-text">
+        <h3>
+            Tropical
+        </h3>
 
-            <p class="lb-label">
-                KUTA
-            </p>
-
-            <h3>
-                Coffee, surf and people watching.
-            </h3>
-
-            <p>
-                We really loved Kuta. It has a relaxed, youthful energy
-                that makes it very easy to settle into.
-            </p>
-
-            <p>
-                We spent plenty of time sitting in coffee shops,
-                watching the town go by and heading over to Tribe to
-                watch the skateboarders.
-            </p>
-
-        </div>
+        <p>
+            Expect warm temperatures and plenty of sunshine,
+            with seasonal rain.
+        </p>
 
     </div>
 
 
-    <div class="lb-story-row lb-r2">
+    <div class="lb-info-item">
 
-        <div class="lb-story-text">
+        <p class="section-label">
+            GETTING AROUND
+        </p>
 
-            <p class="lb-label">
-                SURF
-            </p>
+        <h3>
+            Explore
+        </h3>
 
-            <h3>
-                Learning the rhythm of the coast.
-            </h3>
-
-            <p>
-                We loved watching the boys learning to surf. There is
-                something about seeing people starting out on the water
-                that captures the easy-going spirit of the place.
-            </p>
-
-            <p>
-                Between the surf, the beaches and the cafés, Kuta became
-                somewhere we were very happy simply spending time.
-            </p>
-
-        </div>
-
-
-        <img
-            src="lombok13.jpeg"
-            alt="Kuta Lombok"
-            loading="lazy"
-        >
+        <p>
+            Lombok rewards getting out and about, while boats
+            make exploring the Gili Islands part of the fun.
+        </p>
 
     </div>
 
-
-    <div class="lb-story-row lb-r3">
-
-        <img
-            src="lombok14.jpeg"
-            alt="Lombok"
-            loading="lazy"
-        >
-
-        <img
-            src="lombok15.jpeg"
-            alt="Lombok"
-            loading="lazy"
-        >
-
-    </div>
-
-
-    <div class="lb-story-row lb-r4">
-
-        <img
-            src="lombok16.jpeg"
-            alt="Lombok"
-            loading="lazy"
-        >
-
-        <div class="lb-story-text">
-
-            <p class="lb-label">
-                ACTIVE LOMBOK
-            </p>
-
-            <h3>
-                Even the gyms have character.
-            </h3>
-
-            <p>
-                For anyone who wants to keep moving, there are some
-                surprisingly good options around the island.
-            </p>
-
-            <p>
-                Xeno Fit, with its bamboo gym setting, was a memorable
-                example. Locker Gym was another useful stop for keeping
-                training in the routine while travelling.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="lb-story-row lb-r1">
-
-        <div class="lb-story-text">
-
-            <p class="lb-label">
-                THE SIMPLE THINGS
-            </p>
-
-            <h3>
-                Sometimes there is nowhere better to be.
-            </h3>
-
-            <p>
-                A boat to a tiny beach. A warung by the water. A beer
-                in a dive shop. A coffee while watching skateboarders.
-            </p>
-
-            <p>
-                These were the little moments that made Lombok such an
-                enjoyable island to explore.
-            </p>
-
-        </div>
-
-
-        <img
-            src="lombok17.jpeg"
-            alt="Lombok coast"
-            loading="lazy"
-        >
-
-    </div>
+</div>
 
 </section>
 
@@ -1243,192 +1047,169 @@
 
 <section class="lb-recommendations">
 
-    <div class="lb-width">
+<div class="lb-recommendations-heading">
 
-        <div class="lb-section-heading">
+    <p class="section-label">
+        OUR RECOMMENDATIONS
+    </p>
 
-            <p class="lb-label">
-                OUR RECOMMENDATIONS
-            </p>
+    <h2>
+        Places and experiences we loved.
+    </h2>
 
-            <h2>
-                Places and experiences we loved.
-            </h2>
-
-        </div>
+</div>
 
 
-        <div class="lb-recommendations-grid">
+<div class="lb-recommendation-list">
+
+    <article class="lb-recommendation">
+
+        <span class="lb-rec-number">01</span>
+
+        <h3>
+            Lobster Bay
+        </h3>
+
+        <p>
+            A private villa resort in the south east with an
+            amazing setting and beautiful sunsets. We'd highly
+            recommend it.
+        </p>
+
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    01
-                </p>
+        <span class="lb-rec-number">02</span>
 
-                <h3>
-                    Lobster Bay
-                </h3>
+        <h3>
+            Segara
+        </h3>
 
-                <p>
-                    A private villa resort in the south east with an
-                    amazing setting and beautiful sunsets. We'd highly
-                    recommend it.
-                </p>
+        <p>
+            A superb boutique hotel further west along the
+            southern coast, with comfortable huts and some
+            excellent food at its restaurant.
+        </p>
 
-            </article>
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    02
-                </p>
+        <span class="lb-rec-number">03</span>
 
-                <h3>
-                    Segara
-                </h3>
+        <h3>
+            The Oberoi
+        </h3>
 
-                <p>
-                    A superb boutique hotel further west along the
-                    southern coast, with comfortable huts and some
-                    excellent food at its restaurant.
-                </p>
+        <p>
+            A great choice further north because of its
+            proximity to the Gili Islands.
+        </p>
 
-            </article>
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    03
-                </p>
+        <span class="lb-rec-number">04</span>
 
-                <h3>
-                    The Oberoi
-                </h3>
+        <h3>
+            The three Gilis
+        </h3>
 
-                <p>
-                    A great choice further north because of its
-                    proximity to the Gili Islands.
-                </p>
+        <p>
+            Explore all three. Each has its own feel and
+            jumping between them by spider boat makes it part
+            of the adventure.
+        </p>
 
-            </article>
-
-
-            <article class="lb-recommendation">
-
-                <p class="lb-recommendation-number">
-                    04
-                </p>
-
-                <h3>
-                    The three Gilis
-                </h3>
-
-                <p>
-                    Explore all three. Each has its own feel and
-                    jumping between them by spider boat makes it part
-                    of the adventure.
-                </p>
-
-            </article>
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    05
-                </p>
+        <span class="lb-rec-number">05</span>
 
-                <h3>
-                    Pondok Santi
-                </h3>
+        <h3>
+            Pondok Santi
+        </h3>
 
-                <p>
-                    Our choice on Gili T for laid-back beach vibes,
-                    easy island days and a relaxed atmosphere.
-                </p>
+        <p>
+            Our choice on Gili T for laid-back beach vibes,
+            easy island days and a relaxed atmosphere.
+        </p>
 
-            </article>
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    06
-                </p>
+        <span class="lb-rec-number">06</span>
 
-                <h3>
-                    Tribe
-                </h3>
+        <h3>
+            Tribe
+        </h3>
 
-                <p>
-                    In Kuta, grab a coffee, sit back and watch the
-                    skateboarders while the world goes by.
-                </p>
+        <p>
+            In Kuta, grab a coffee, sit back and watch the
+            skateboarders while the world goes by.
+        </p>
 
-            </article>
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    07
-                </p>
+        <span class="lb-rec-number">07</span>
 
-                <h3>
-                    The beach warungs
-                </h3>
+        <h3>
+            The beach warungs
+        </h3>
 
-                <p>
-                    Don't overlook the simple places along the coast.
-                    They are part of what makes exploring Lombok so
-                    enjoyable.
-                </p>
+        <p>
+            Don't overlook the simple places along the coast.
+            They are part of what makes exploring Lombok so
+            enjoyable.
+        </p>
 
-            </article>
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    08
-                </p>
+        <span class="lb-rec-number">08</span>
 
-                <h3>
-                    Xeno Fit
-                </h3>
+        <h3>
+            Xeno Fit
+        </h3>
 
-                <p>
-                    A memorable bamboo gym for keeping active while
-                    you're travelling.
-                </p>
+        <p>
+            A memorable bamboo gym for keeping active while
+            you're travelling.
+        </p>
 
-            </article>
+    </article>
 
 
-            <article class="lb-recommendation">
+    <article class="lb-recommendation">
 
-                <p class="lb-recommendation-number">
-                    09
-                </p>
+        <span class="lb-rec-number">09</span>
 
-                <h3>
-                    Locker Gym
-                </h3>
+        <h3>
+            Locker Gym
+        </h3>
 
-                <p>
-                    Another useful option if you want to keep training
-                    while exploring the island.
-                </p>
+        <p>
+            Another useful option if you want to keep training
+            while exploring the island.
+        </p>
 
-            </article>
+    </article>
 
-        </div>
-
-    </div>
+</div>
 
 </section>
 
@@ -1437,64 +1218,60 @@
      OUR EDIT
 ====================================================== -->
 
-<section class="lb-edit">
+<section class="lb-journal">
 
-    <div class="lb-edit-grid lb-width">
+    <div>
 
-        <div>
+        <p class="section-label">
+            OUR EDIT
+        </p>
 
-            <p class="lb-label">
-                OUR EDIT
-            </p>
+        <h2>
+            Don't stay in one place.
+        </h2>
 
-            <h2>
-                Don't stay in one place.
-            </h2>
-
-        </div>
+    </div>
 
 
-        <div class="lb-edit-copy">
+    <div class="lb-journal-copy">
 
-            <p>
-                Lombok is an island we'd recommend exploring properly.
-                We loved getting to different parts of it rather than
-                simply choosing one resort and staying there.
-            </p>
+        <p>
+            Lombok is an island we'd recommend exploring properly.
+            We loved getting to different parts of it rather than
+            simply choosing one resort and staying there.
+        </p>
 
-            <p>
-                Lobster Bay in the south east was a highlight,
-                particularly for the sunsets. Moving west to Segara
-                gave us another superb stay and some great food along
-                the way.
-            </p>
+        <p>
+            Lobster Bay in the south east was a highlight,
+            particularly for the sunsets. Moving west to Segara
+            gave us another superb stay and some great food along
+            the way.
+        </p>
 
-            <p>
-                Further north, the Oberoi worked brilliantly as a base
-                for the Gili Islands. We loved jumping between all
-                three by spider boat, discovering that each island had
-                its own personality.
-            </p>
+        <p>
+            Further north, the Oberoi worked brilliantly as a base
+            for the Gili Islands. We loved jumping between all
+            three by spider boat, discovering that each island had
+            its own personality.
+        </p>
 
-            <p>
-                There were turtles in the water, horses and carts on
-                Gili T and plenty of places to stop for a beer in the
-                dive shops.
-            </p>
+        <p>
+            There were turtles in the water, horses and carts on
+            Gili T and plenty of places to stop for a beer in the
+            dive shops.
+        </p>
 
-            <p>
-                And then there was Kuta. We loved sitting in coffee
-                shops, watching the skateboarders at Tribe and seeing
-                the boys learning to surf.
-            </p>
+        <p>
+            And then there was Kuta. We loved sitting in coffee
+            shops, watching the skateboarders at Tribe and seeing
+            the boys learning to surf.
+        </p>
 
-            <p>
-                Lombok gave us the kind of trip we like most: beautiful
-                places, great food, plenty of movement and enough
-                unexpected moments to make the memories feel personal.
-            </p>
-
-        </div>
+        <p>
+            Lombok gave us the kind of trip we like most: beautiful
+            places, great food, plenty of movement and enough
+            unexpected moments to make the memories feel personal.
+        </p>
 
     </div>
 
@@ -1502,14 +1279,16 @@
 
 
 <!-- =====================================================
-     FINAL PHOTOGRAPHS
+     MORE FROM OUR CAMERA
 ====================================================== -->
 
-<section class="lb-final-gallery">
+<section class="lb-editorial-section">
 
-    <div class="lb-section-heading lb-width">
+<div class="lb-final-grid">
 
-        <p class="lb-label">
+    <div class="lb-final-heading">
+
+        <p class="section-label">
             MORE FROM OUR CAMERA
         </p>
 
@@ -1520,39 +1299,42 @@
     </div>
 
 
-    <div class="lb-final-grid">
+    <img
+        class="lb-final-img1"
+        src="lombok18.jpeg"
+        alt="South Lombok"
+        loading="lazy"
+    >
 
-        <img
-            src="lombok18.jpeg"
-            alt="South Lombok"
-            loading="lazy"
-        >
+    <img
+        class="lb-final-img2"
+        src="lombok19.jpeg"
+        alt="Lobster Bay, Lombok"
+        loading="lazy"
+    >
 
-        <img
-            src="lombok19.jpeg"
-            alt="Lobster Bay, Lombok"
-            loading="lazy"
-        >
+    <img
+        class="lb-final-img3"
+        src="lombok20.jpeg"
+        alt="Kuta Lombok"
+        loading="lazy"
+    >
 
-        <img
-            src="lombok20.jpeg"
-            alt="Kuta Lombok"
-            loading="lazy"
-        >
+    <img
+        class="lb-final-img4"
+        src="lombok21.jpeg"
+        alt="Kuta Lombok"
+        loading="lazy"
+    >
 
-        <img
-            src="lombok21.jpeg"
-            alt="Kuta Lombok"
-            loading="lazy"
-        >
+    <img
+        class="lb-final-img5"
+        src="lombok22.jpeg"
+        alt="Kuta Lombok"
+        loading="lazy"
+    >
 
-        <img
-            src="lombok22.jpeg"
-            alt="Kuta Lombok"
-            loading="lazy"
-        >
-
-    </div>
+</div>
 
 </section>
 
@@ -1563,50 +1345,491 @@
 
 <section class="lb-map">
 
-    <div class="lb-width">
+<div class="lb-map-inner">
 
-        <div class="lb-map-inner">
+    <p class="section-label">
+        OUR MAP
+    </p>
 
-            <p class="lb-label">
-                OUR MAP
-            </p>
+    <h2>
+        Lombok &amp; the Gilis.
+    </h2>
 
-            <h2>
-                Lombok &amp; the Gilis.
-            </h2>
+    <p>
+        From the southern coast to the Gili Islands, Lombok
+        is best experienced by moving around and seeing what
+        each part of the island has to offer.
+    </p>
 
-            <p>
-                From the southern coast to the Gili Islands, Lombok
-                is best experienced by moving around and seeing what
-                each part of the island has to offer.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 <!-- =====================================================
-     END NAVIGATION
+     END
 ====================================================== -->
 
-<div class="lb-end">
+<section class="lb-end">
 
-    <a
-        href="/"
-    >
-        ← Back to Home
-    </a>
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
 
-    <a
-        href="editions.html"
-    >
-        View All Editions →
-    </a>
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+
+</section>
 
 </div>
+
+</main>
+
+
+<!-- =====================================================
+     MOBILE
+     Existing Lombok structure retained
+====================================================== -->
+
+<main class="lombok-mobile">
+
+
+<section
+    class="edition-hero"
+    style="background-image:url('lombokhero.jpeg');"
+>
+
+<div class="edition-hero-overlay">
+
+    <p class="eyebrow">
+        INDONESIA
+    </p>
+
+    <h1>
+        Lombok
+    </h1>
+
+    <p class="edition-hero-subtitle">
+        Beaches, islands &amp; the slower side of Indonesia.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+
+<section class="edition-intro section">
+
+<div class="container">
+
+<div class="edition-intro-inner">
+
+    <p class="section-label">
+        OUR LOMBOK
+    </p>
+
+    <h2>
+        An island made for exploring.
+    </h2>
+
+    <div class="edition-intro-text">
+
+        <p>
+            Lombok is a great island to explore and we loved
+            getting to all parts of it. Rather than staying in
+            one place, we moved around the island and found that
+            each part had something different to offer.
+        </p>
+
+        <p>
+            We started in the south east at Lobster Bay, a
+            private villa resort with some amazing sunsets.
+            From there we moved west along the southern coast
+            to Segara, another superb boutique hotel with great
+            food at its restaurant.
+        </p>
+
+        <p>
+            Further north, the Oberoi gave us a great base for
+            exploring the three Gili Islands. We loved popping
+            between all three by spider boat, before spending
+            time in Kuta, sitting in coffee shops and watching
+            the world go by.
+        </p>
+
+        <p>
+            We loved Kuta, watching skateboarders at Tribe,
+            seeing the boys learning to surf and finding the
+            little moments that made Lombok feel so relaxed.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PHOTOGRAPHIC STORY -->
+
+<section class="edition-photo-story section">
+
+<div class="container">
+
+<div class="section-heading edition-photo-heading">
+
+    <p>
+        FROM OUR CAMERA
+    </p>
+
+    <h2>
+        Lombok, as we experienced it.
+    </h2>
+
+</div>
+
+
+<div class="edition-photo-mosaic">
+
+    <img src="lombok2.jpeg" alt="Lombok" loading="lazy">
+    <img src="lombok3.jpeg" alt="Lombok coastline" loading="lazy">
+    <img src="lombok4.jpeg" alt="Lombok" loading="lazy">
+    <img src="lombok5.jpeg" alt="Lombok" loading="lazy">
+    <img src="lombok6.jpeg" alt="Segara, Lombok" loading="lazy">
+    <img src="lombok7.jpeg" alt="Lombok" loading="lazy">
+    <img src="lombok8.jpeg" alt="Lombok" loading="lazy">
+    <img src="lombok9.jpeg" alt="Gili Islands" loading="lazy">
+    <img src="lombok10.jpeg" alt="Gili Islands" loading="lazy">
+    <img src="lombok11.jpeg" alt="Gili Islands" loading="lazy">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LOCAL INFORMATION -->
+
+<section class="edition-local-info">
+
+<div class="container">
+
+<div class="edition-local-info-grid">
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">BEST TIME</p>
+
+        <h3>Dry season</h3>
+
+        <p>
+            The drier months are a great time to explore the
+            island, beaches and Gili Islands.
+        </p>
+
+    </div>
+
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">WEATHER</p>
+
+        <h3>Tropical</h3>
+
+        <p>
+            Expect warm temperatures and plenty of sunshine,
+            with seasonal rain.
+        </p>
+
+    </div>
+
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">GETTING AROUND</p>
+
+        <h3>Explore</h3>
+
+        <p>
+            Lombok rewards getting out and about, while boats
+            make exploring the Gili Islands part of the fun.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RECOMMENDATIONS -->
+
+<section class="edition-recommendations section">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>
+        OUR RECOMMENDATIONS
+    </p>
+
+    <h2>
+        Places we loved.
+    </h2>
+
+</div>
+
+
+<div class="edition-recommendations-grid">
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">01</p>
+
+        <h3>Lobster Bay</h3>
+
+        <p>
+            A private villa resort in the south east with an
+            amazing setting and beautiful sunsets.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">02</p>
+
+        <h3>Segara</h3>
+
+        <p>
+            A superb boutique hotel further west along the
+            southern coast, with comfortable huts and great
+            food at its restaurant.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">03</p>
+
+        <h3>The Oberoi</h3>
+
+        <p>
+            A great base further north for exploring the
+            Gili Islands.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">04</p>
+
+        <h3>The three Gilis</h3>
+
+        <p>
+            Explore all three and discover the different
+            character of each island.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">05</p>
+
+        <h3>Pondok Santi</h3>
+
+        <p>
+            Our choice on Gili T for laid-back beach vibes
+            and an easy island atmosphere.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">06</p>
+
+        <h3>Tribe</h3>
+
+        <p>
+            Grab a coffee in Kuta and watch the skateboarders
+            while the world goes by.
+        </p>
+
+    </article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OUR EDIT -->
+
+<section class="edition-journal section">
+
+<div class="container">
+
+<div class="edition-journal-inner">
+
+    <div>
+
+        <p class="section-label">
+            OUR EDIT
+        </p>
+
+        <h2>
+            Don't stay in one place.
+        </h2>
+
+    </div>
+
+
+    <div class="edition-journal-copy">
+
+        <p>
+            Lombok is an island we'd recommend exploring
+            properly. We loved getting to different parts of
+            it rather than simply choosing one resort and
+            staying there.
+        </p>
+
+        <p>
+            Lobster Bay in the south east was a highlight,
+            particularly for the sunsets. Moving west to
+            Segara gave us another superb stay and some great
+            food along the way.
+        </p>
+
+        <p>
+            Further north, the Oberoi worked brilliantly as
+            a base for the Gili Islands. We loved jumping
+            between all three by spider boat, with each island
+            having its own feel.
+        </p>
+
+        <p>
+            We saw turtles, watched the boys learning to surf,
+            rode alongside horse and carts on Gili T and even
+            enjoyed beers in the dive shops.
+        </p>
+
+        <p>
+            And in Kuta, we were very happy simply sitting
+            in coffee shops and watching the world go by.
+            Tribe was perfect for that, particularly with the
+            skateboarders providing the entertainment.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MORE FROM CAMERA -->
+
+<section class="edition-gallery section">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>
+        MORE FROM OUR CAMERA
+    </p>
+
+    <h2>
+        More from Lombok.
+    </h2>
+
+</div>
+
+
+<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
+
+    <img src="lombok12.jpeg" alt="Kuta Lombok" loading="lazy">
+    <img src="lombok13.jpeg" alt="Kuta Lombok" loading="lazy">
+    <img src="lombok14.jpeg" alt="Kuta Lombok" loading="lazy">
+    <img src="lombok15.jpeg" alt="Lombok" loading="lazy">
+    <img src="lombok16.jpeg" alt="Lombok" loading="lazy">
+    <img src="lombok17.jpeg" alt="Lombok coast" loading="lazy">
+    <img src="lombok18.jpeg" alt="South Lombok" loading="lazy">
+    <img src="lombok19.jpeg" alt="Lobster Bay, Lombok" loading="lazy">
+    <img src="lombok20.jpeg" alt="Kuta Lombok" loading="lazy">
+    <img src="lombok21.jpeg" alt="Kuta Lombok" loading="lazy">
+    <img src="lombok22.jpeg" alt="Kuta Lombok" loading="lazy">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MAP -->
+
+<section class="edition-map section">
+
+<div class="container">
+
+<div class="edition-map-inner">
+
+    <p class="section-label">
+        OUR MAP
+    </p>
+
+    <h2>
+        Lombok &amp; the Gilis.
+    </h2>
+
+    <p>
+        From the southern coast to the Gili Islands, Lombok
+        is best experienced by moving around and seeing what
+        each part of the island has to offer.
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- END -->
+
+<section class="edition-end">
+
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+
+</section>
 
 
 </main>
@@ -1618,753 +1841,61 @@
 
 <footer class="site-footer">
 
-    <div class="site-footer-inner">
+<div class="site-footer-inner">
 
-        <div>
+    <div>
 
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-
-            <p class="footer-description">
-                Travel, places &amp; observations from life abroad.
-            </p>
-
-        </div>
-
-
-        <nav class="footer-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="index-new.html#about">
-                About
-            </a>
-
-        </nav>
-
-
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-
-
-        <p class="footer-copyright">
-            © The Expat Edits
-        </p>
-
-    </div>
-
-</footer>
-
-
-</div>
-
-
-<!-- =====================================================
-     MOBILE — ORIGINAL EDITION STRUCTURE
-====================================================== -->
-
-<div class="lombok-mobile">
-
-
-<header class="site-header">
-
-    <div class="site-header-inner">
-
-        <a
-            href="/"
-            class="site-logo"
-        >
+        <div class="footer-logo">
             THE EXPAT EDITS
+        </div>
+
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
+        </p>
+
+    </div>
+
+
+    <nav class="footer-nav">
+
+        <a href="editions.html">
+            Editions
         </a>
 
-        <nav class="site-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="index-new.html#about">
-                About
-            </a>
-
-        </nav>
-
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
-
-</header>
-
-
-<main>
-
-
-<section
-    class="edition-hero"
-    style="background-image: url('lombokhero.jpeg');"
->
-
-    <div class="edition-hero-overlay">
-
-        <p class="eyebrow">
-            INDONESIA
-        </p>
-
-        <h1>
-            Lombok
-        </h1>
-
-        <p class="edition-hero-subtitle">
-            Beaches, islands &amp; the slower side of Indonesia.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="edition-intro section">
-
-    <div class="container">
-
-        <div class="edition-intro-inner">
-
-            <p class="section-label">
-                OUR LOMBOK
-            </p>
-
-            <h2>
-                An island made for exploring.
-            </h2>
-
-            <div class="edition-intro-text">
-
-                <p>
-                    Lombok is a great island to explore and we loved
-                    getting to all parts of it. Rather than staying in
-                    one place, we moved around the island and found that
-                    each part had something different to offer.
-                </p>
-
-                <p>
-                    We started in the south east at Lobster Bay, a
-                    private villa resort with some amazing sunsets.
-                    From there we moved west along the southern coast
-                    to Segara, another superb boutique hotel with great
-                    food at its restaurant.
-                </p>
-
-                <p>
-                    Further north, the Oberoi gave us a great base for
-                    exploring the three Gili Islands. We loved popping
-                    between all three by spider boat, before spending
-                    time in Kuta, sitting in coffee shops and watching
-                    the world go by.
-                </p>
-
-                <p>
-                    We loved Kuta, watching skateboarders at Tribe,
-                    seeing the boys learning to surf and finding the
-                    little moments that made Lombok feel so relaxed.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="edition-photo-story section">
-
-    <div class="container">
-
-        <div class="section-heading edition-photo-heading">
-
-            <p>
-                FROM OUR CAMERA
-            </p>
-
-            <h2>
-                Lombok, as we experienced it.
-            </h2>
-
-        </div>
-
-
-        <div class="edition-photo-mosaic">
-
-            <img
-                src="lombok2.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok3.jpeg"
-                alt="Lombok coastline"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok4.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok5.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok6.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok7.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok8.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok9.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok10.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok11.jpeg"
-                alt="Gili Islands"
-                loading="lazy"
-            >
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="edition-local-info">
-
-    <div class="container">
-
-        <div class="edition-local-info-grid">
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    BEST TIME
-                </p>
-
-                <h3>
-                    Dry season
-                </h3>
-
-                <p>
-                    The drier months are a great time to explore the
-                    island, beaches and Gili Islands.
-                </p>
-
-            </div>
-
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    WEATHER
-                </p>
-
-                <h3>
-                    Tropical
-                </h3>
-
-                <p>
-                    Expect warm temperatures and plenty of sunshine,
-                    with seasonal rain.
-                </p>
-
-            </div>
-
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    GETTING AROUND
-                </p>
-
-                <h3>
-                    Explore
-                </h3>
-
-                <p>
-                    Lombok rewards getting out and about, while boats
-                    make exploring the Gili Islands part of the fun.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="edition-recommendations section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p>
-                OUR RECOMMENDATIONS
-            </p>
-
-            <h2>
-                Places we loved.
-            </h2>
-
-        </div>
-
-
-        <div class="edition-recommendations-grid">
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    01
-                </p>
-
-                <h3>
-                    Lobster Bay
-                </h3>
-
-                <p>
-                    A private villa resort in the south east with an
-                    amazing setting and beautiful sunsets.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    02
-                </p>
-
-                <h3>
-                    Segara
-                </h3>
-
-                <p>
-                    A superb boutique hotel further west along the
-                    southern coast, with comfortable huts and great
-                    food at its restaurant.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    03
-                </p>
-
-                <h3>
-                    The Oberoi
-                </h3>
-
-                <p>
-                    A great base further north for exploring the
-                    Gili Islands.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    04
-                </p>
-
-                <h3>
-                    The three Gilis
-                </h3>
-
-                <p>
-                    Explore all three and discover the different
-                    character of each island.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    05
-                </p>
-
-                <h3>
-                    Pondok Santi
-                </h3>
-
-                <p>
-                    Our choice on Gili T for laid-back beach vibes
-                    and an easy island atmosphere.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    06
-                </p>
-
-                <h3>
-                    Tribe
-                </h3>
-
-                <p>
-                    Grab a coffee in Kuta and watch the skateboarders
-                    while the world goes by.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="edition-journal section">
-
-    <div class="container">
-
-        <div class="edition-journal-inner">
-
-            <div>
-
-                <p class="section-label">
-                    OUR EDIT
-                </p>
-
-                <h2>
-                    Don't stay in one place.
-                </h2>
-
-            </div>
-
-
-            <div class="edition-journal-copy">
-
-                <p>
-                    Lombok is an island we'd recommend exploring
-                    properly. We loved getting to different parts of
-                    it rather than simply choosing one resort and
-                    staying there.
-                </p>
-
-                <p>
-                    Lobster Bay in the south east was a highlight,
-                    particularly for the sunsets. Moving west to
-                    Segara gave us another superb stay and some great
-                    food along the way.
-                </p>
-
-                <p>
-                    Further north, the Oberoi worked brilliantly as
-                    a base for the Gili Islands. We loved jumping
-                    between all three by spider boat, with each island
-                    having its own feel.
-                </p>
-
-                <p>
-                    We saw turtles, watched the boys learning to surf,
-                    rode alongside horse and carts on Gili T and even
-                    enjoyed beers in the dive shops.
-                </p>
-
-                <p>
-                    And in Kuta, we were very happy simply sitting
-                    in coffee shops and watching the world go by.
-                    Tribe was perfect for that, particularly with the
-                    skateboarders providing the entertainment.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="edition-gallery section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p>
-                MORE FROM OUR CAMERA
-            </p>
-
-            <h2>
-                More from Lombok.
-            </h2>
-
-        </div>
-
-
-        <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-
-
-            <img
-                src="lombok12.jpeg"
-                alt="Gili Islands"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok13.jpeg"
-                alt="Gili Islands"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok14.jpeg"
-                alt="Gili island"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok15.jpeg"
-                alt="Gili Islands"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok16.jpeg"
-                alt="Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok17.jpeg"
-                alt="Lombok coast"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok18.jpeg"
-                alt="South Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok19.jpeg"
-                alt="Lobster Bay, Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok20.jpeg"
-                alt="Kuta Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok21.jpeg"
-                alt="Kuta Lombok"
-                loading="lazy"
-            >
-
-            <img
-                src="lombok22.jpeg"
-                alt="Kuta Lombok"
-                loading="lazy"
-            >
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="edition-map section">
-
-    <div class="container">
-
-        <div class="edition-map-inner">
-
-            <p class="section-label">
-                OUR MAP
-            </p>
-
-            <h2>
-                Lombok &amp; the Gilis.
-            </h2>
-
-            <p>
-                From the southern coast to the Gili Islands, Lombok
-                is best experienced by moving around and seeing what
-                each part of the island has to offer.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="edition-end">
-
-    <a
-        href="/"
-        class="text-link"
-    >
-        ← Back to Home
-    </a>
-
-    <a
-        href="editions.html"
-        class="text-link"
-    >
-        View All Editions →
-    </a>
-
-</section>
-
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="site-footer-inner">
-
-        <div>
-
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-
-            <p class="footer-description">
-                Travel, places &amp; observations from life abroad.
-            </p>
-
-        </div>
-
-
-        <nav class="footer-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="index-new.html#about">
-                About
-            </a>
-
-        </nav>
-
-
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
+        <a href="index-new.html#journal">
+            Journal
         </a>
 
+        <a href="index-new.html#map">
+            Map
+        </a>
 
-        <p class="footer-copyright">
-            © The Expat Edits
-        </p>
+        <a href="about.html">
+            About
+        </a>
 
-    </div>
+    </nav>
 
-</footer>
 
+    <a
+        href="https://www.instagram.com/theexpatedits/"
+        class="footer-social"
+        target="_blank"
+        rel="noopener"
+    >
+        Instagram
+    </a>
+
+
+    <p class="footer-copyright">
+        © The Expat Edits
+    </p>
 
 </div>
 
+</footer>
+
+</div>
 
 </body>
-
 </html>

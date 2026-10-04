@@ -1,567 +1,1950 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-    <title>Komodo | The Expat Edits</title>
-    <meta
-        name="description"
-        content="Komodo — three days sailing between islands, waking in different bays, meeting Komodo dragons and experiencing one of our favourite trips."
-    >
-    <!-- Google Fonts -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        crossorigin
-    >
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-    <!-- MASTER SITE CSS -->
-    <link
-        rel="stylesheet"
-        href="style-new.css"
-    >
-    <!-- EDITION MASTER CSS -->
-    <link
-        rel="stylesheet"
-        href="style-editions-new.css"
-    >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Komodo | The Expat Edits</title>
+
+<meta
+    name="description"
+    content="Komodo — three days sailing between islands, waking in different bays, meeting Komodo dragons and experiencing one of our favourite trips."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-editions-new.css">
+
+
+<style>
+
+/* =========================================================
+   KOMODO
+   Editorial Edition / Singapore1 desktop architecture
+========================================================= */
+
+.komodo-desktop { display:block; }
+.komodo-mobile { display:none; }
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width:769px) {
+
+    :root {
+        --ko-width: min(1400px, calc(100% - 80px));
+        --ko-wide: min(1500px, calc(100% - 80px));
+        --ko-gap: 22px;
+        --ko-line: rgba(255,255,255,.12);
+        --ko-line-strong: rgba(255,255,255,.16);
+    }
+
+
+    /* -----------------------------------------------------
+       OPENING
+    ----------------------------------------------------- */
+
+    .ko-opening {
+        width:var(--ko-wide);
+        margin:0 auto;
+        padding:0 0 90px;
+
+        display:grid;
+        grid-template-columns:1.25fr .75fr;
+        gap:75px;
+        align-items:center;
+    }
+
+    .ko-opening-hero {
+        position:relative;
+        overflow:hidden;
+        width:100%;
+        background:#090909;
+    }
+
+    .ko-opening-hero img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+    .ko-opening-hero::after {
+        content:"";
+        position:absolute;
+        z-index:1;
+        left:0;
+        right:0;
+        bottom:0;
+        height:38%;
+        pointer-events:none;
+
+        background:linear-gradient(
+            to bottom,
+            rgba(9,9,9,0) 0%,
+            rgba(9,9,9,.22) 28%,
+            rgba(9,9,9,.55) 55%,
+            rgba(9,9,9,.82) 78%,
+            #242320 100%
+        );
+    }
+
+    .ko-opening-hero .edition-hero-overlay {
+        position:absolute;
+        z-index:2;
+        left:55px;
+        right:55px;
+        bottom:50px;
+    }
+
+    .ko-opening-intro {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:50px 35px 50px 5px;
+    }
+
+    .ko-opening-intro h2 {
+        margin:0 0 28px;
+    }
+
+    .ko-opening-intro-copy {
+        max-width:560px;
+    }
+
+    .ko-opening-intro-copy p {
+        margin:0 0 20px;
+    }
+
+    .ko-opening-intro-copy p:last-child {
+        margin-bottom:0;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN EDITORIAL CANVAS
+    ----------------------------------------------------- */
+
+    .ko-editorial {
+        width:var(--ko-width);
+        margin:0 auto;
+    }
+
+    .ko-editorial-section {
+        padding:70px 0;
+    }
+
+    .ko-grid,
+    .ko-final-grid {
+        display:grid;
+        grid-template-columns:repeat(12,minmax(0,1fr));
+        column-gap:var(--ko-gap);
+        row-gap:42px;
+        align-items:start;
+    }
+
+    .ko-grid img,
+    .ko-final-grid img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+    .ko-text {
+        align-self:center;
+    }
+
+    .ko-text p {
+        margin-top:0;
+    }
+
+    .ko-text h2,
+    .ko-text h3 {
+        margin-top:0;
+    }
+
+    .ko-text .section-label {
+        margin-bottom:12px;
+    }
+
+    .ko-rule {
+        width:42px;
+        height:1px;
+        margin:20px 0;
+        background:currentColor;
+        opacity:.65;
+    }
+
+
+    /* -----------------------------------------------------
+       STORY ROW 1 — THE JOURNEY BEGINS
+    ----------------------------------------------------- */
+
+    .ko-r1-text {
+        grid-column:1 / span 3;
+    }
+
+    .ko-r1-img1 {
+        grid-column:4 / span 5;
+        width:88%;
+    }
+
+    .ko-r1-img2 {
+        grid-column:9 / span 4;
+        width:90%;
+        margin-left:auto;
+        padding-top:55px;
+    }
+
+
+    /* -----------------------------------------------------
+       STORY ROW 2 — LIFE ON THE WATER
+    ----------------------------------------------------- */
+
+    .ko-r2-img1 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .ko-r2-text {
+        grid-column:4 / span 3;
+        padding:0 8px;
+    }
+
+    .ko-r2-img2 {
+        grid-column:7 / span 3;
+    }
+
+    .ko-r2-text2 {
+        grid-column:10 / span 3;
+        padding-top:55px;
+    }
+
+
+    /* -----------------------------------------------------
+       STORY ROW 3 — UNDERWATER WORLD
+    ----------------------------------------------------- */
+
+    .ko-r3-text {
+        grid-column:1 / span 3;
+        padding-top:20px;
+    }
+
+    .ko-r3-img1 {
+        grid-column:4 / span 4;
+    }
+
+    .ko-r3-img2 {
+        grid-column:8 / span 2;
+        padding-top:55px;
+    }
+
+    .ko-r3-img3 {
+        grid-column:10 / span 3;
+        padding-top:10px;
+    }
+
+
+    /* -----------------------------------------------------
+       STORY ROW 4 — ISLANDS / PADAR / PINK BEACH
+    ----------------------------------------------------- */
+
+    .ko-r4-img1 {
+        grid-column:1 / span 4;
+    }
+
+    .ko-r4-text {
+        grid-column:5 / span 3;
+        padding:20px 5px 0;
+    }
+
+    .ko-r4-img2 {
+        grid-column:8 / span 5;
+        padding-top:40px;
+    }
+
+
+    /* -----------------------------------------------------
+       STORY ROW 5 — DRAGONS & WILDLIFE
+    ----------------------------------------------------- */
+
+    .ko-r5-text {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .ko-r5-img1 {
+        grid-column:4 / span 4;
+    }
+
+    .ko-r5-img2 {
+        grid-column:8 / span 2;
+        padding-top:50px;
+    }
+
+    .ko-r5-img3 {
+        grid-column:10 / span 3;
+        padding-top:15px;
+    }
+
+
+    /* -----------------------------------------------------
+       STORY ROW 6 — THE REMOTE ISLANDS
+    ----------------------------------------------------- */
+
+    .ko-r6-img1 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .ko-r6-text {
+        grid-column:4 / span 3;
+        padding:10px 8px 0;
+    }
+
+    .ko-r6-img2 {
+        grid-column:7 / span 3;
+    }
+
+    .ko-r6-img3 {
+        grid-column:10 / span 3;
+        padding-top:45px;
+    }
+
+
+    /* -----------------------------------------------------
+       FINAL PHOTOGRAPHIC FIELD
+    ----------------------------------------------------- */
+
+    .ko-final-heading {
+        grid-column:1 / span 3;
+        padding-top:30px;
+    }
+
+    .ko-final-img1 {
+        grid-column:4 / span 4;
+    }
+
+    .ko-final-img2 {
+        grid-column:8 / span 2;
+        padding-top:45px;
+    }
+
+    .ko-final-img3 {
+        grid-column:10 / span 3;
+    }
+
+    .ko-final-img4 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+
+    .ko-final-img5 {
+        grid-column:4 / span 3;
+        padding-top:55px;
+    }
+
+    .ko-final-img6 {
+        grid-column:7 / span 3;
+    }
+
+    .ko-final-img7 {
+        grid-column:10 / span 3;
+        padding-top:30px;
+    }
+
+
+    /* -----------------------------------------------------
+       LOCAL INFORMATION
+    ----------------------------------------------------- */
+
+    .ko-info {
+        margin:20px 0 70px;
+        padding:60px 0;
+        border-top:1px solid var(--ko-line);
+        border-bottom:1px solid var(--ko-line);
+    }
+
+    .ko-info-grid {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:70px;
+    }
+
+    .ko-info-item h3 {
+        margin:10px 0 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       RECOMMENDATIONS
+    ----------------------------------------------------- */
+
+    .ko-recommendations {
+        padding:20px 0 100px;
+    }
+
+    .ko-recommendations-heading {
+        margin-bottom:50px;
+    }
+
+    .ko-recommendation-list {
+        max-width:950px;
+        border-top:1px solid var(--ko-line-strong);
+    }
+
+    .ko-recommendation {
+        display:grid;
+        grid-template-columns:70px 280px 1fr;
+        column-gap:35px;
+        align-items:start;
+
+        padding:30px 0;
+        border-bottom:1px solid var(--ko-line-strong);
+    }
+
+    .ko-rec-number {
+        padding-top:7px;
+        font-size:.72rem;
+        letter-spacing:.14em;
+        opacity:.6;
+    }
+
+    .ko-recommendation h3 {
+        margin:0;
+        font-size:1.35rem;
+    }
+
+    .ko-recommendation p {
+        margin:0;
+        max-width:520px;
+    }
+
+
+    /* -----------------------------------------------------
+       JOURNAL
+    ----------------------------------------------------- */
+
+    .ko-journal {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:90px;
+        align-items:center;
+
+        padding:70px 0;
+        border-top:1px solid var(--ko-line);
+    }
+
+    .ko-journal-copy p {
+        margin-top:0;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP
+    ----------------------------------------------------- */
+
+    .ko-map {
+        padding:80px 0 70px;
+    }
+
+    .ko-map-inner {
+        max-width:650px;
+    }
+
+
+    /* -----------------------------------------------------
+       END NAVIGATION
+    ----------------------------------------------------- */
+
+    .ko-end {
+        display:flex;
+        justify-content:space-between;
+        padding:35px 0 70px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   Original Komodo structure retained
+========================================================= */
+
+@media (max-width:768px) {
+
+    .komodo-desktop {
+        display:none;
+    }
+
+    .komodo-mobile {
+        display:block;
+    }
+
+}
+
+</style>
 </head>
+
+
 <body class="edition-page">
+
+
 <!-- =====================================================
      HEADER
 ====================================================== -->
+
 <header class="site-header">
-    <div class="site-header-inner">
-        <a
-            href="/"
-            class="site-logo"
-        >
-            THE EXPAT EDITS
+
+<div class="site-header-inner">
+
+    <a href="/" class="site-logo">
+        THE EXPAT EDITS
+    </a>
+
+    <nav class="site-nav">
+
+        <a href="editions.html">
+            Editions
         </a>
-        <nav class="site-nav">
-            <a href="editions.html">
-                Editions
-            </a>
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-            <a href="index-new.html#map">
-                Map
-            </a>
-            <a href="index-new.html#about">
-                About
-            </a>
-        </nav>
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
+
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+
+        <a href="index-new.html#map">
+            Map
+        </a>
+
+        <a href="index-new.html#about">
+            About
+        </a>
+
+    </nav>
+
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</div>
+
 </header>
-<main>
+
+
 <!-- =====================================================
-     HERO
+     DESKTOP EDITION
 ====================================================== -->
+
+<main class="komodo-desktop">
+
+
+<!-- =====================================================
+     OPENING SPREAD
+====================================================== -->
+
+<section class="ko-opening">
+
+    <div class="ko-opening-hero">
+
+        <img
+            src="komodohero.jpeg"
+            alt="Komodo islands and surrounding sea"
+            loading="eager"
+        >
+
+        <div class="edition-hero-overlay">
+
+            <p class="eyebrow">
+                OUR KOMODO
+            </p>
+
+            <h1>
+                Komodo
+            </h1>
+
+            <p class="edition-hero-subtitle">
+                Islands, ocean &amp; one unforgettable adventure.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="ko-opening-intro">
+
+        <p class="section-label">
+            OUR KOMODO
+        </p>
+
+        <h2>
+            One of our best trips.
+        </h2>
+
+        <div class="ko-opening-intro-copy">
+
+            <p>
+                Komodo was one of the best trips we've done. We used
+                Ayana in Labuan Bajo as our base, with its beautiful
+                pier stretching out into the sea. It was from there
+                that Samara came to collect us, making the beginning
+                of the adventure wonderfully easy.
+            </p>
+
+            <p>
+                Then we spent three days sailing between the islands,
+                waking in a different bay each morning. We loved the
+                remoteness of it — the feeling that the world had
+                suddenly become islands, ocean and the next place
+                waiting to be discovered.
+            </p>
+
+            <p>
+                Samara was fantastic. The staff were brilliant, the
+                food was superb and everything was taken care of.
+                It made the journey itself feel like part of the
+                destination.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="ko-editorial">
+
+
+<!-- =====================================================
+     FROM OUR CAMERA
+====================================================== -->
+
+<section class="ko-editorial-section">
+
+<div class="section-heading">
+
+    <p>
+        FROM OUR CAMERA
+    </p>
+
+    <h2>
+        Komodo, as we saw it.
+    </h2>
+
+</div>
+
+
+<div class="ko-grid">
+
+
+    <!-- ROW 1 — THE JOURNEY -->
+
+    <div class="ko-text ko-r1-text">
+
+        <p class="section-label">
+            THE JOURNEY
+        </p>
+
+        <h3>
+            Out on the water.
+        </h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            The great pleasure of Komodo is that the journey never
+            feels separate from the destination. Every morning there
+            was another bay, another island and another stretch of
+            impossibly clear water waiting outside our cabin.
+        </p>
+
+    </div>
+
+
+    <img
+        class="ko-r1-img1"
+        src="komodo2.jpeg"
+        alt="Komodo islands and sea"
+        loading="eager"
+    >
+
+    <img
+        class="ko-r1-img2"
+        src="komodo3.jpeg"
+        alt="Komodo island landscape"
+        loading="eager"
+    >
+
+
+    <!-- ROW 2 — SAMARA -->
+
+    <img
+        class="ko-r2-img1"
+        src="komodo4.jpeg"
+        alt="Komodo coastline"
+        loading="lazy"
+    >
+
+
+    <div class="ko-text ko-r2-text">
+
+        <p class="section-label">
+            SAMARA
+        </p>
+
+        <h3>
+            The boat was part of the adventure.
+        </h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            Samara gave the trip its rhythm. We would explore,
+            swim and head ashore during the day, then return to
+            the boat and watch another incredible landscape slip
+            past. The staff were brilliant and the food was
+            genuinely superb.
+        </p>
+
+    </div>
+
+
+    <img
+        class="ko-r2-img2"
+        src="komodo5.jpeg"
+        alt="Clear water around the Komodo islands"
+        loading="lazy"
+    >
+
+
+    <div class="ko-text ko-r2-text2">
+
+        <p class="section-label">
+            REMOTE
+        </p>
+
+        <h3>
+            This is what we loved most.
+        </h3>
+
+        <p>
+            There is something wonderfully disconnected about
+            being out here. No roads, no schedule and very little
+            between you and the islands. Just the boat, the sea
+            and the next place on the horizon.
+        </p>
+
+    </div>
+
+
+    <!-- ROW 3 — UNDERWATER -->
+
+    <div class="ko-text ko-r3-text">
+
+        <p class="section-label">
+            BELOW THE SURFACE
+        </p>
+
+        <h3>
+            Another world underwater.
+        </h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            Some of our favourite moments happened in the water.
+            The coral reefs were extraordinary, with turtles,
+            manta rays and smaller marine life everywhere. At one
+            stop, baby sharks were swimming between our feet.
+        </p>
+
+    </div>
+
+
+    <img
+        class="ko-r3-img1"
+        src="komodo6.jpeg"
+        alt="Komodo island scenery"
+        loading="lazy"
+    >
+
+    <img
+        class="ko-r3-img2"
+        src="komodo7.jpeg"
+        alt="Komodo landscape and sea"
+        loading="lazy"
+    >
+
+    <img
+        class="ko-r3-img3"
+        src="komodo8.jpeg"
+        alt="Komodo islands"
+        loading="lazy"
+    >
+
+
+    <!-- ROW 4 — ISLANDS -->
+
+    <img
+        class="ko-r4-img1"
+        src="komodo9.jpeg"
+        alt="Komodo scenery"
+        loading="lazy"
+    >
+
+
+    <div class="ko-text ko-r4-text">
+
+        <p class="section-label">
+            THE ISLANDS
+        </p>
+
+        <h3>
+            Pink beaches and extraordinary landscapes.
+        </h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            Pink Beach is exactly the kind of place that makes
+            Komodo feel almost unreal. The colour of the sand,
+            clear water and dry hills around it create a landscape
+            unlike anywhere else we've travelled.
+        </p>
+
+    </div>
+
+
+    <img
+        class="ko-r4-img2"
+        src="komodo10.jpeg"
+        alt="Komodo coastline and ocean"
+        loading="lazy"
+    >
+
+
+    <!-- =================================================
+         SECONDARY STORY FIELD
+    ================================================= -->
+
+    <div class="ko-text" style="grid-column:1 / span 3; padding-top:25px;">
+
+        <p class="section-label">
+            LIFE ABOARD
+        </p>
+
+        <h3>
+            Wake somewhere new.
+        </h3>
+
+        <p>
+            Three days on Samara meant that every morning began
+            differently. We never quite knew what would be outside
+            when we opened the door — another island, another bay,
+            another reason to jump straight into the water.
+        </p>
+
+    </div>
+
+
+    <img
+        style="grid-column:4 / span 3;"
+        src="komodo11.jpeg"
+        alt="Samara liveaboard in Komodo"
+        loading="lazy"
+    >
+
+    <img
+        style="grid-column:7 / span 2; padding-top:50px;"
+        src="komodo12.jpeg"
+        alt="Samara liveaboard"
+        loading="lazy"
+    >
+
+    <img
+        style="grid-column:9 / span 4; padding-top:15px;"
+        src="komodo13.jpeg"
+        alt="Komodo waters"
+        loading="lazy"
+    >
+
+
+    <!-- ROW 6 — PADAR -->
+
+    <img
+        style="grid-column:1 / span 4; padding-top:25px;"
+        src="komodo14.jpeg"
+        alt="Komodo islands"
+        loading="lazy"
+    >
+
+    <div
+        class="ko-text"
+        style="grid-column:5 / span 3; padding:20px 5px 0;"
+    >
+
+        <p class="section-label">
+            PADAR ISLAND
+        </p>
+
+        <h3>
+            The view is worth the climb.
+        </h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            Padar is one of those places that looks almost too
+            perfect from above. The climb is worth it for the
+            extraordinary view across its distinctive bays and
+            the islands beyond.
+        </p>
+
+    </div>
+
+
+    <img
+        style="grid-column:8 / span 5; padding-top:40px;"
+        src="komodo15.jpeg"
+        alt="Komodo coastline"
+        loading="lazy"
+    >
+
+
+    <!-- ROW 7 — WILDLIFE -->
+
+    <div
+        class="ko-text"
+        style="grid-column:1 / span 3; padding-top:20px;"
+    >
+
+        <p class="section-label">
+            WILDLIFE
+        </p>
+
+        <h3>
+            Dragons, flying foxes and turtles.
+        </h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            The wildlife is another reason Komodo feels so special.
+            We saw Komodo dragons in their natural environment,
+            turtles in the water and flying foxes crossing the
+            evening sky. It never felt like we were simply ticking
+            things off a list — the wildlife was part of the place.
+        </p>
+
+    </div>
+
+
+    <img
+        style="grid-column:4 / span 4;"
+        src="komodo16.jpeg"
+        alt="Komodo sea"
+        loading="lazy"
+    >
+
+    <img
+        style="grid-column:8 / span 2; padding-top:55px;"
+        src="komodo17.jpeg"
+        alt="Komodo landscape"
+        loading="lazy"
+    >
+
+    <img
+        style="grid-column:10 / span 3; padding-top:10px;"
+        src="komodo18.jpeg"
+        alt="Komodo scenery"
+        loading="lazy"
+    >
+
+
+    <!-- ROW 8 — DRAGONS -->
+
+    <img
+        style="grid-column:1 / span 4;"
+        src="komodo19.jpeg"
+        alt="Komodo islands"
+        loading="lazy"
+    >
+
+    <div
+        class="ko-text"
+        style="grid-column:5 / span 3; padding:20px 5px 0;"
+    >
+
+        <p class="section-label">
+            KOMODO DRAGONS
+        </p>
+
+        <h3>
+            Seeing them where they belong.
+        </h3>
+
+        <p>
+            Meeting the Komodo dragons in their natural environment
+            was one of the moments that made the whole trip feel
+            genuinely extraordinary. They are as impressive in
+            person as you would imagine.
+        </p>
+
+    </div>
+
+    <img
+        style="grid-column:8 / span 5; padding-top:40px;"
+        src="komodo20.jpeg"
+        alt="Ayana Komodo"
+        loading="lazy"
+    >
+
+
+    <!-- ROW 9 — LABUAN BAJO -->
+
+    <div
+        class="ko-text"
+        style="grid-column:1 / span 3; padding-top:25px;"
+    >
+
+        <p class="section-label">
+            BACK ON LAND
+        </p>
+
+        <h3>
+            Labuan Bajo.
+        </h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            Ayana made a beautiful base before and after the sailing
+            trip. We also enjoyed getting out to Le Bajo, which gave
+            us a different feel for Labuan Bajo away from the hotel.
+        </p>
+
+    </div>
+
+
+    <img
+        style="grid-column:4 / span 4;"
+        src="komodo21.jpeg"
+        alt="Komodo hotel"
+        loading="lazy"
+    >
+
+    <img
+        style="grid-column:8 / span 2; padding-top:45px;"
+        src="komodo22.jpeg"
+        alt="Le Bajo in Labuan Bajo"
+        loading="lazy"
+    >
+
+    <img
+        style="grid-column:10 / span 3;"
+        src="komodo23.jpeg"
+        alt="Komodo islands"
+        loading="lazy"
+    >
+
+
+    <!-- ROW 10 — FINAL ISLANDS -->
+
+    <img
+        style="grid-column:1 / span 3; padding-top:25px;"
+        src="komodo24.jpeg"
+        alt="Komodo sea"
+        loading="lazy"
+    >
+
+    <div
+        class="ko-text"
+        style="grid-column:4 / span 3; padding:10px 8px 0;"
+    >
+
+        <p class="section-label">
+            THE MEMORY
+        </p>
+
+        <h3>
+            A trip that was about more than the highlights.
+        </h3>
+
+        <p>
+            Pink Beach, Padar, dragons, manta rays and coral reefs
+            are the obvious memories. But what stays with us most
+            is the feeling of being completely away from everything,
+            moving slowly between islands and waking somewhere new.
+        </p>
+
+    </div>
+
+    <img
+        style="grid-column:7 / span 3;"
+        src="komodo25.jpeg"
+        alt="Komodo coastline"
+        loading="lazy"
+    >
+
+    <img
+        style="grid-column:10 / span 3; padding-top:45px;"
+        src="komodo26.jpeg"
+        alt="Samara in Komodo"
+        loading="lazy"
+    >
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LOCAL INFORMATION
+====================================================== -->
+
+<section class="ko-info">
+
+<div class="ko-info-grid">
+
+    <div class="ko-info-item">
+
+        <p class="section-label">
+            BEST TIME
+        </p>
+
+        <h3>
+            April – October
+        </h3>
+
+        <p>
+            The dry season is generally the best time to explore
+            the islands, particularly if you're planning to spend
+            several days on the water.
+        </p>
+
+    </div>
+
+
+    <div class="ko-info-item">
+
+        <p class="section-label">
+            WEATHER
+        </p>
+
+        <h3>
+            Hot &amp; dry
+        </h3>
+
+        <p>
+            Warm, sunny conditions and dry island landscapes make
+            Komodo feel completely different from much of
+            tropical Indonesia.
+        </p>
+
+    </div>
+
+
+    <div class="ko-info-item">
+
+        <p class="section-label">
+            GETTING AROUND
+        </p>
+
+        <h3>
+            By boat
+        </h3>
+
+        <p>
+            The real Komodo experience happens on the water.
+            A liveaboard gives you the freedom to move between
+            islands and wake somewhere new each morning.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     RECOMMENDATIONS
+====================================================== -->
+
+<section class="ko-recommendations">
+
+<div class="ko-recommendations-heading">
+
+    <p class="section-label">
+        OUR RECOMMENDATIONS
+    </p>
+
+    <h2>
+        Places &amp; experiences we loved.
+    </h2>
+
+</div>
+
+
+<div class="ko-recommendation-list">
+
+    <article class="ko-recommendation">
+
+        <span class="ko-rec-number">01</span>
+
+        <h3>
+            Ayana
+        </h3>
+
+        <p>
+            A beautiful base in Labuan Bajo. The huge pier stretching
+            into the sea was particularly memorable and made our
+            transfer onto Samara wonderfully easy.
+        </p>
+
+    </article>
+
+
+    <article class="ko-recommendation">
+
+        <span class="ko-rec-number">02</span>
+
+        <h3>
+            Samara
+        </h3>
+
+        <p>
+            The real highlight of the trip. Three days sailing
+            between the islands, with excellent food, fantastic
+            staff and a different bay waiting for us each morning.
+        </p>
+
+    </article>
+
+
+    <article class="ko-recommendation">
+
+        <span class="ko-rec-number">03</span>
+
+        <h3>
+            Komodo dragons
+        </h3>
+
+        <p>
+            Seeing the dragons in their natural environment was
+            one of the experiences that made the trip feel truly
+            special.
+        </p>
+
+    </article>
+
+
+    <article class="ko-recommendation">
+
+        <span class="ko-rec-number">04</span>
+
+        <h3>
+            Pink Beach
+        </h3>
+
+        <p>
+            Walking down onto Pink Beach was another highlight.
+            The colour of the sand against the clear water makes
+            for an extraordinary setting.
+        </p>
+
+    </article>
+
+
+    <article class="ko-recommendation">
+
+        <span class="ko-rec-number">05</span>
+
+        <h3>
+            Padar Island
+        </h3>
+
+        <p>
+            The climb is worth the effort. Looking out across the
+            distinctive bays and surrounding islands gives you
+            one of the great views of the whole trip.
+        </p>
+
+    </article>
+
+
+    <article class="ko-recommendation">
+
+        <span class="ko-rec-number">06</span>
+
+        <h3>
+            Le Bajo
+        </h3>
+
+        <p>
+            A great place to head out to when you're back in
+            Labuan Bajo. It gave us a reason to leave the hotel
+            and enjoy a different side of the town.
+        </p>
+
+    </article>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     JOURNAL / OUR EDIT
+====================================================== -->
+
+<section class="ko-journal">
+
+<div>
+
+    <p class="section-label">
+        OUR EDIT
+    </p>
+
+    <h2>
+        Stay on the water.
+    </h2>
+
+</div>
+
+
+<div class="ko-journal-copy">
+
+    <p>
+        If you're coming to Komodo, we'd make the time to get
+        properly out onto the water. For us, three days on Samara
+        turned a beautiful destination into a genuinely
+        unforgettable trip.
+    </p>
+
+    <p>
+        Waking in a different bay each morning, heading ashore
+        to explore and then returning to the boat made the
+        journey itself the experience. Add in the coral reefs,
+        turtles, manta rays, dragons and sheer remoteness, and
+        it is hard to imagine a better way to see these islands.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MAP
+====================================================== -->
+
+<section class="ko-map">
+
+<div class="ko-map-inner">
+
+    <p class="section-label">
+        OUR MAP
+    </p>
+
+    <h2>
+        Komodo.
+    </h2>
+
+    <p>
+        The islands, bays, beaches and places that made this one
+        of our favourite trips will eventually live here on our
+        wider travel map.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     END
+====================================================== -->
+
+<section class="ko-end">
+
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+
+</section>
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     MOBILE
+     Existing Komodo structure retained
+====================================================== -->
+
+<main class="komodo-mobile">
+
+
 <section
     class="edition-hero"
     style="background-image: url('komodohero.jpeg');"
 >
-    <div class="edition-hero-overlay">
-        <p class="eyebrow">
-            OUR KOMODO
-        </p>
-        <h1>
-            Komodo
-        </h1>
-        <p class="edition-hero-subtitle">
-            Islands, ocean &amp; one unforgettable adventure.
-        </p>
-    </div>
+
+<div class="edition-hero-overlay">
+
+    <p class="eyebrow">
+        OUR KOMODO
+    </p>
+
+    <h1>
+        Komodo
+    </h1>
+
+    <p class="edition-hero-subtitle">
+        Islands, ocean &amp; one unforgettable adventure.
+    </p>
+
+</div>
+
 </section>
-<!-- =====================================================
-     INTRODUCTION
-====================================================== -->
+
+
+<!-- INTRODUCTION -->
+
 <section class="edition-intro section">
-    <div class="container">
-        <div class="edition-intro-inner">
-            <p class="section-label">
-                OUR KOMODO
-            </p>
-            <h2>
-                One of our best trips.
-            </h2>
-            <div class="edition-intro-text">
-                <p>
-                    Komodo was one of the best trips we've done. We used
-                    Ayana in Labuan Bajo as our base, a hugely picturesque
-                    hotel with a beautiful pier stretching out into the
-                    sea. It was from that pier that Samara came to collect
-                    us, making the start of our adventure incredibly easy.
-                </p>
-                <p>
-                    We then spent three days sailing around the region,
-                    waking up in a different bay each morning and watching
-                    the landscape change around us. The islands, clear
-                    water and dry hills were stunning, but it was the
-                    feeling of being out on the water that really made
-                    the trip.
-                </p>
-                <p>
-                    Samara was fantastic. The staff were brilliant, the
-                    food was excellent and everything was taken care of.
-                    Days were spent exploring the islands, swimming and
-                    taking in the scenery, before returning to the boat
-                    and waking somewhere completely different the next
-                    morning.
-                </p>
-                <p>
-                    We saw Komodo dragons, walked down Pink Beach and
-                    climbed Padar Island, but some of our favourite
-                    memories are simply waking up surrounded by another
-                    beautiful bay. Back in Labuan Bajo, Le Bajo was a
-                    great place to head out to away from the hotel.
-                </p>
-                <p>
-                    We also visited the Marriott, but found it a little
-                    too quiet for us. In the end we were very pleased
-                    that we'd chosen Ayana. The combination of the hotel,
-                    the pier and three days on Samara made this a trip
-                    we'll remember for a long time.
-                </p>
-            </div>
-        </div>
+
+<div class="container">
+
+<div class="edition-intro-inner">
+
+    <p class="section-label">
+        OUR KOMODO
+    </p>
+
+    <h2>
+        One of our best trips.
+    </h2>
+
+    <div class="edition-intro-text">
+
+        <p>
+            Komodo was one of the best trips we've done. We used
+            Ayana in Labuan Bajo as our base, a hugely picturesque
+            hotel with a beautiful pier stretching out into the
+            sea. It was from that pier that Samara came to collect
+            us, making the start of our adventure incredibly easy.
+        </p>
+
+        <p>
+            We then spent three days sailing around the region,
+            waking up in a different bay each morning and watching
+            the landscape change around us. The islands, clear
+            water and dry hills were stunning, but it was the
+            feeling of being out on the water that really made
+            the trip.
+        </p>
+
+        <p>
+            Samara was fantastic. The staff were brilliant, the
+            food was excellent and everything was taken care of.
+            Days were spent exploring the islands, swimming and
+            taking in the scenery, before returning to the boat
+            and waking somewhere completely different the next
+            morning.
+        </p>
+
+        <p>
+            We saw Komodo dragons, walked down Pink Beach and
+            climbed Padar Island, but some of our favourite
+            memories are simply waking up surrounded by another
+            beautiful bay. Back in Labuan Bajo, Le Bajo was a
+            great place to head out to away from the hotel.
+        </p>
+
+        <p>
+            We also visited the Marriott, but found it a little
+            too quiet for us. In the end we were very pleased
+            that we'd chosen Ayana. The combination of the hotel,
+            the pier and three days on Samara made this a trip
+            we'll remember for a long time.
+        </p>
+
     </div>
+
+</div>
+
+</div>
+
 </section>
-<!-- =====================================================
-     PHOTOGRAPHIC STORY
-====================================================== -->
+
+
+<!-- PHOTOGRAPHIC STORY -->
+
 <section class="edition-photo-story section">
-    <div class="container">
-        <div class="section-heading edition-photo-heading">
-            <p>
-                FROM OUR CAMERA
-            </p>
-            <h2>
-                Komodo, as we saw it.
-            </h2>
-        </div>
-        <div class="edition-photo-mosaic">
-            <img
-                src="komodo1.jpeg"
-                alt="Komodo landscape"
-                loading="eager"
-            >
-            <img
-                src="komodo2.jpeg"
-                alt="Komodo islands and sea"
-                loading="lazy"
-            >
-            <img
-                src="komodo3.jpeg"
-                alt="Komodo island landscape"
-                loading="lazy"
-            >
-            <img
-                src="komodo4.jpeg"
-                alt="Komodo coastline"
-                loading="lazy"
-            >
-            <img
-                src="komodo5.jpeg"
-                alt="Clear water around the Komodo islands"
-                loading="lazy"
-            >
-            <img
-                src="komodo6.jpeg"
-                alt="Komodo island scenery"
-                loading="lazy"
-            >
-            <img
-                src="komodo7.jpeg"
-                alt="Komodo landscape and sea"
-                loading="lazy"
-            >
-            <img
-                src="komodo8.jpeg"
-                alt="Komodo islands"
-                loading="lazy"
-            >
-            <img
-                src="komodo9.jpeg"
-                alt="Komodo scenery"
-                loading="lazy"
-            >
-            <img
-                src="komodo10.jpeg"
-                alt="Komodo coastline and ocean"
-                loading="lazy"
-            >
-        </div>
-    </div>
+
+<div class="container">
+
+<div class="section-heading edition-photo-heading">
+
+    <p>
+        FROM OUR CAMERA
+    </p>
+
+    <h2>
+        Komodo, as we saw it.
+    </h2>
+
+</div>
+
+
+<div class="edition-photo-mosaic">
+
+    <img src="komodo1.jpeg" alt="Komodo landscape" loading="eager">
+    <img src="komodo2.jpeg" alt="Komodo islands and sea" loading="lazy">
+    <img src="komodo3.jpeg" alt="Komodo island landscape" loading="lazy">
+    <img src="komodo4.jpeg" alt="Komodo coastline" loading="lazy">
+    <img src="komodo5.jpeg" alt="Clear water around the Komodo islands" loading="lazy">
+    <img src="komodo6.jpeg" alt="Komodo island scenery" loading="lazy">
+    <img src="komodo7.jpeg" alt="Komodo landscape and sea" loading="lazy">
+    <img src="komodo8.jpeg" alt="Komodo islands" loading="lazy">
+    <img src="komodo9.jpeg" alt="Komodo scenery" loading="lazy">
+    <img src="komodo10.jpeg" alt="Komodo coastline and ocean" loading="lazy">
+
+</div>
+
+</div>
+
 </section>
-<!-- =====================================================
-     LOCAL INFORMATION
-====================================================== -->
+
+
+<!-- LOCAL INFORMATION -->
+
 <section class="edition-local-info">
-    <div class="container">
-        <div class="edition-local-info-grid">
-            <div class="edition-local-info-item">
-                <p class="section-label">
-                    BEST TIME
-                </p>
-                <h3>
-                    April – October
-                </h3>
-                <p>
-                    The dry season is generally the best time to explore
-                    the islands, particularly if you're planning to spend
-                    several days on the water.
-                </p>
-            </div>
-            <div class="edition-local-info-item">
-                <p class="section-label">
-                    WEATHER
-                </p>
-                <h3>
-                    Hot &amp; dry
-                </h3>
-                <p>
-                    Warm, sunny conditions and dry island landscapes
-                    make Komodo feel completely different from much of
-                    tropical Indonesia.
-                </p>
-            </div>
-            <div class="edition-local-info-item">
-                <p class="section-label">
-                    GETTING AROUND
-                </p>
-                <h3>
-                    By boat
-                </h3>
-                <p>
-                    The real Komodo experience happens on the water.
-                    A liveaboard gives you the freedom to move between
-                    islands and wake somewhere new each morning.
-                </p>
-            </div>
-        </div>
+
+<div class="container">
+
+<div class="edition-local-info-grid">
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">
+            BEST TIME
+        </p>
+
+        <h3>
+            April – October
+        </h3>
+
+        <p>
+            The dry season is generally the best time to explore
+            the islands, particularly if you're planning to spend
+            several days on the water.
+        </p>
+
     </div>
+
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">
+            WEATHER
+        </p>
+
+        <h3>
+            Hot &amp; dry
+        </h3>
+
+        <p>
+            Warm, sunny conditions and dry island landscapes
+            make Komodo feel completely different from much of
+            tropical Indonesia.
+        </p>
+
+    </div>
+
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">
+            GETTING AROUND
+        </p>
+
+        <h3>
+            By boat
+        </h3>
+
+        <p>
+            The real Komodo experience happens on the water.
+            A liveaboard gives you the freedom to move between
+            islands and wake somewhere new each morning.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
 </section>
-<!-- =====================================================
-     OUR RECOMMENDATIONS
-====================================================== -->
+
+
+<!-- RECOMMENDATIONS -->
+
 <section class="edition-recommendations section">
-    <div class="container">
-        <div class="section-heading">
-            <p>
-                OUR RECOMMENDATIONS
-            </p>
-            <h2>
-                Places &amp; experiences we loved.
-            </h2>
-        </div>
-        <div class="edition-recommendations-grid">
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    01
-                </p>
-                <h3>
-                    Ayana
-                </h3>
-                <p>
-                    A beautiful base in Labuan Bajo. The huge pier
-                    stretching into the sea was particularly memorable
-                    and made our transfer onto Samara wonderfully easy.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    02
-                </p>
-                <h3>
-                    Samara
-                </h3>
-                <p>
-                    The real highlight of the trip. Three days sailing
-                    between the islands, with excellent food, fantastic
-                    staff and a different bay waiting for us each morning.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    03
-                </p>
-                <h3>
-                    Komodo dragons
-                </h3>
-                <p>
-                    Seeing the dragons in their natural environment was
-                    one of the experiences that made the trip feel truly
-                    special.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    04
-                </p>
-                <h3>
-                    Pink Beach
-                </h3>
-                <p>
-                    Walking down onto Pink Beach was another highlight.
-                    The colour of the sand against the clear water makes
-                    for an extraordinary setting.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    05
-                </p>
-                <h3>
-                    Padar Island
-                </h3>
-                <p>
-                    The climb is worth the effort. Looking out across
-                    the distinctive bays and surrounding islands gives
-                    you one of the great views of the whole trip.
-                </p>
-            </article>
-            <article class="edition-recommendation">
-                <p class="story-number">
-                    06
-                </p>
-                <h3>
-                    Le Bajo
-                </h3>
-                <p>
-                    A great place to head out to when you're back in
-                    Labuan Bajo. It gave us a reason to leave the hotel
-                    and enjoy a different side of the town.
-                </p>
-            </article>
-        </div>
-    </div>
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>
+        OUR RECOMMENDATIONS
+    </p>
+
+    <h2>
+        Places &amp; experiences we loved.
+    </h2>
+
+</div>
+
+
+<div class="edition-recommendations-grid">
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            01
+        </p>
+
+        <h3>
+            Ayana
+        </h3>
+
+        <p>
+            A beautiful base in Labuan Bajo. The huge pier
+            stretching into the sea was particularly memorable
+            and made our transfer onto Samara wonderfully easy.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            02
+        </p>
+
+        <h3>
+            Samara
+        </h3>
+
+        <p>
+            The real highlight of the trip. Three days sailing
+            between the islands, with excellent food, fantastic
+            staff and a different bay waiting for us each morning.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            03
+        </p>
+
+        <h3>
+            Komodo dragons
+        </h3>
+
+        <p>
+            Seeing the dragons in their natural environment was
+            one of the experiences that made the trip feel truly
+            special.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            04
+        </p>
+
+        <h3>
+            Pink Beach
+        </h3>
+
+        <p>
+            Walking down onto Pink Beach was another highlight.
+            The colour of the sand against the clear water makes
+            for an extraordinary setting.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            05
+        </p>
+
+        <h3>
+            Padar Island
+        </h3>
+
+        <p>
+            The climb is worth the effort. Looking out across
+            the distinctive bays and surrounding islands gives
+            you one of the great views of the whole trip.
+        </p>
+
+    </article>
+
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">
+            06
+        </p>
+
+        <h3>
+            Le Bajo
+        </h3>
+
+        <p>
+            A great place to head out to when you're back in
+            Labuan Bajo. It gave us a reason to leave the hotel
+            and enjoy a different side of the town.
+        </p>
+
+    </article>
+
+</div>
+
+</div>
+
 </section>
-<!-- =====================================================
-     OUR EDIT
-====================================================== -->
+
+
+<!-- OUR EDIT -->
+
 <section class="edition-journal section">
-    <div class="container">
-        <div class="edition-journal-inner">
-            <div>
-                <p class="section-label">
-                    OUR EDIT
-                </p>
-                <h2>
-                    Stay on the water.
-                </h2>
-            </div>
-            <div class="edition-journal-copy">
-                <p>
-                    If you're coming to Komodo, we'd make the time to
-                    get properly out onto the water. For us, three days
-                    on Samara turned a beautiful destination into a
-                    genuinely unforgettable trip.
-                </p>
-                <p>
-                    Waking up in a different bay each morning, heading
-                    ashore to explore and then returning to the boat
-                    made the journey itself the experience. It is hard
-                    to imagine a better way to see these islands.
-                </p>
-            </div>
-        </div>
+
+<div class="container">
+
+<div class="edition-journal-inner">
+
+    <div>
+
+        <p class="section-label">
+            OUR EDIT
+        </p>
+
+        <h2>
+            Stay on the water.
+        </h2>
+
     </div>
+
+
+    <div class="edition-journal-copy">
+
+        <p>
+            If you're coming to Komodo, we'd make the time to
+            get properly out onto the water. For us, three days
+            on Samara turned a beautiful destination into a
+            genuinely unforgettable trip.
+        </p>
+
+        <p>
+            Waking up in a different bay each morning, heading
+            ashore to explore and then returning to the boat
+            made the journey itself the experience. It is hard
+            to imagine a better way to see these islands.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
 </section>
-<!-- =====================================================
-     MORE FROM OUR CAMERA
-====================================================== -->
+
+
+<!-- MORE FROM CAMERA -->
+
 <section class="edition-gallery section">
-    <div class="container">
-        <div class="section-heading">
-            <p>
-                MORE FROM OUR CAMERA
-            </p>
-            <h2>
-                More from Komodo.
-            </h2>
-        </div>
-        <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-            <img
-                src="komodo11.jpeg"
-                alt="Samara liveaboard in Komodo"
-                loading="lazy"
-            >
-            <img
-                src="komodo12.jpeg"
-                alt="Samara liveaboard"
-                loading="lazy"
-            >
-            <img
-                src="komodo13.jpeg"
-                alt="Komodo waters"
-                loading="lazy"
-            >
-            <img
-                src="komodo14.jpeg"
-                alt="Komodo islands"
-                loading="lazy"
-            >
-            <img
-                src="komodo15.jpeg"
-                alt="Komodo coastline"
-                loading="lazy"
-            >
-            <img
-                src="komodo16.jpeg"
-                alt="Komodo sea"
-                loading="lazy"
-            >
-            <img
-                src="komodo17.jpeg"
-                alt="Komodo landscape"
-                loading="lazy"
-            >
-            <img
-                src="komodo18.jpeg"
-                alt="Komodo scenery"
-                loading="lazy"
-            >
-            <img
-                src="komodo19.jpeg"
-                alt="Komodo islands"
-                loading="lazy"
-            >
-            <img
-                src="komodo20.jpeg"
-                alt="Ayana Komodo"
-                loading="lazy"
-            >
-            <img
-                src="komodo21.jpeg"
-                alt="Komodo hotel"
-                loading="lazy"
-            >
-            <img
-                src="komodo22.jpeg"
-                alt="Le Bajo in Labuan Bajo"
-                loading="lazy"
-            >
-            <img
-                src="komodo23.jpeg"
-                alt="Komodo islands"
-                loading="lazy"
-            >
-            <img
-                src="komodo24.jpeg"
-                alt="Komodo sea"
-                loading="lazy"
-            >
-            <img
-                src="komodo25.jpeg"
-                alt="Komodo coastline"
-                loading="lazy"
-            >
-            <img
-                src="komodo26.jpeg"
-                alt="Samara in Komodo"
-                loading="lazy"
-            >
-        </div>
-    </div>
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>
+        MORE FROM OUR CAMERA
+    </p>
+
+    <h2>
+        More from Komodo.
+    </h2>
+
+</div>
+
+
+<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
+
+    <img src="komodo11.jpeg" alt="Samara liveaboard in Komodo" loading="lazy">
+    <img src="komodo12.jpeg" alt="Samara liveaboard" loading="lazy">
+    <img src="komodo13.jpeg" alt="Komodo waters" loading="lazy">
+    <img src="komodo14.jpeg" alt="Komodo islands" loading="lazy">
+    <img src="komodo15.jpeg" alt="Komodo coastline" loading="lazy">
+    <img src="komodo16.jpeg" alt="Komodo sea" loading="lazy">
+    <img src="komodo17.jpeg" alt="Komodo landscape" loading="lazy">
+    <img src="komodo18.jpeg" alt="Komodo scenery" loading="lazy">
+    <img src="komodo19.jpeg" alt="Komodo islands" loading="lazy">
+    <img src="komodo20.jpeg" alt="Ayana Komodo" loading="lazy">
+    <img src="komodo21.jpeg" alt="Komodo hotel" loading="lazy">
+    <img src="komodo22.jpeg" alt="Le Bajo in Labuan Bajo" loading="lazy">
+    <img src="komodo23.jpeg" alt="Komodo islands" loading="lazy">
+    <img src="komodo24.jpeg" alt="Komodo sea" loading="lazy">
+    <img src="komodo25.jpeg" alt="Komodo coastline" loading="lazy">
+    <img src="komodo26.jpeg" alt="Samara in Komodo" loading="lazy">
+
+</div>
+
+</div>
+
 </section>
-<!-- =====================================================
-     MAP
-====================================================== -->
+
+
+<!-- MAP -->
+
 <section class="edition-map section">
-    <div class="container">
-        <div class="edition-map-inner">
-            <p class="section-label">
-                OUR MAP
-            </p>
-            <h2>
-                Komodo.
-            </h2>
-            <p>
-                The islands, bays, beaches and places that made this
-                one of our favourite trips will eventually live here
-                on our wider travel map.
-            </p>
-        </div>
-    </div>
+
+<div class="container">
+
+<div class="edition-map-inner">
+
+    <p class="section-label">
+        OUR MAP
+    </p>
+
+    <h2>
+        Komodo.
+    </h2>
+
+    <p>
+        The islands, bays, beaches and places that made this
+        one of our favourite trips will eventually live here
+        on our wider travel map.
+    </p>
+
+</div>
+
+</div>
+
 </section>
-<!-- =====================================================
-     END NAVIGATION
-====================================================== -->
+
+
+<!-- END -->
+
 <section class="edition-end">
-    <a
-        href="/"
-        class="text-link"
-    >
-        ← Back to Home
-    </a>
-    <a
-        href="editions.html"
-        class="text-link"
-    >
-        View All Editions →
-    </a>
+
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+
 </section>
+
 </main>
+
+
 <!-- =====================================================
      FOOTER
 ====================================================== -->
+
 <footer class="site-footer">
-    <div class="site-footer-inner">
-        <div>
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-            <p class="footer-description">
-                Travel, places &amp; observations from life abroad.
-            </p>
+
+<div class="site-footer-inner">
+
+    <div>
+
+        <div class="footer-logo">
+            THE EXPAT EDITS
         </div>
-        <nav class="footer-nav">
-            <a href="editions.html">
-                Editions
-            </a>
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-            <a href="index-new.html#map">
-                Map
-            </a>
-            <a href="index-new.html#about">
-                About
-            </a>
-        </nav>
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-        <p class="footer-copyright">
-            © The Expat Edits
+
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
         </p>
+
     </div>
+
+
+    <nav class="footer-nav">
+
+        <a href="editions.html">
+            Editions
+        </a>
+
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+
+        <a href="index-new.html#map">
+            Map
+        </a>
+
+        <a href="index-new.html#about">
+            About
+        </a>
+
+    </nav>
+
+
+    <a
+        href="https://www.instagram.com/theexpatedits/"
+        class="footer-social"
+        target="_blank"
+        rel="noopener"
+    >
+        Instagram
+    </a>
+
+
+    <p class="footer-copyright">
+        © The Expat Edits
+    </p>
+
+</div>
+
 </footer>
+
 </body>
 </html>

@@ -1,761 +1,1214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Hoi An | The Expat Edits</title>
-
-    <meta
-        name="description"
-        content="Vietnam — from Da Nang and My Khe Beach to the beautiful streets, shopping, food and family-friendly hotels of Hoi An."
-    >
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- MASTER SITE CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style-new.css"
-    >
-
-    <!-- EDITION CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style-editions-new.css"
-    >
-
-</head>
-
-
-<body class="edition-page">
-
-
-<!-- =====================================================
-     FIXED HEADER
-====================================================== -->
-
-<header class="site-header">
-
-    <div class="site-header-inner">
-
-        <a
-            href="/"
-            class="site-logo"
-        >
-            THE EXPAT EDITS
-        </a>
-
-        <nav class="site-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="index-new.html#about">
-                About
-            </a>
-
-        </nav>
-
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
-
-</header>
-
-
-<main>
-
-
-<!-- =====================================================
-     HOI AN — HERO
-====================================================== -->
-
-<section
-    class="edition-hero"
-    style="background-image: url('vietnamhero.jpeg');"
+<meta charset="UTF-8">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
 >
-
-    <div class="edition-hero-overlay">
-
-        <p class="eyebrow">
-            VIETNAM
-        </p>
-
-        <h1>
-            Hoi An
-        </h1>
-
-        <p class="edition-hero-subtitle">
-            Beautiful streets, great food and a slower rhythm.
-        </p>
-
-    </div>
-
-</section>
-
-
+<title>Hoi An | The Expat Edits</title>
+<meta
+    name="description"
+    content="Hoi An — beautiful old streets, leather and art shops, rooftop sundowners, great food and family adventures through the surrounding countryside."
+>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-editions-new.css">
+<style>
+/* =========================================================
+   HOI AN
+   Singapore1 editorial template
+========================================================= */
+.hoi-an-desktop { display:block; }
+.hoi-an-mobile { display:none; }
+/* =========================================================
+   DESKTOP
+========================================================= */
+@media (min-width:769px) {
+    :root {
+        --ha-width: min(1400px, calc(100% - 80px));
+        --ha-wide: min(1500px, calc(100% - 80px));
+        --ha-gap: 22px;
+        --ha-line: rgba(255,255,255,.12);
+        --ha-line-strong: rgba(255,255,255,.16);
+    }
+    /* -----------------------------------------------------
+       OPENING
+    ----------------------------------------------------- */
+    .ha-opening {
+        width:var(--ha-wide);
+        margin:0 auto;
+        padding:0 0 90px;
+        display:grid;
+        grid-template-columns:1.25fr .75fr;
+        gap:75px;
+        align-items:center;
+    }
+    .ha-opening-hero {
+        position:relative;
+        overflow:hidden;
+        width:100%;
+        background:#090909;
+    }
+    .ha-opening-hero img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+    .ha-opening-hero::after {
+        content:"";
+        position:absolute;
+        z-index:1;
+        left:0;
+        right:0;
+        bottom:0;
+        height:38%;
+        pointer-events:none;
+        background:linear-gradient(
+            to bottom,
+            rgba(9,9,9,0) 0%,
+            rgba(9,9,9,.22) 28%,
+            rgba(9,9,9,.55) 55%,
+            rgba(9,9,9,.82) 78%,
+            #242320 100%
+        );
+    }
+    .ha-opening-hero .edition-hero-overlay {
+        position:absolute;
+        z-index:2;
+        left:55px;
+        right:55px;
+        bottom:50px;
+    }
+    .ha-opening-intro {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:50px 35px 50px 5px;
+    }
+    .ha-opening-intro h2 {
+        margin:0 0 28px;
+    }
+    .ha-opening-intro-copy {
+        max-width:560px;
+    }
+    .ha-opening-intro-copy p {
+        margin:0 0 20px;
+    }
+    .ha-opening-intro-copy p:last-child {
+        margin-bottom:0;
+    }
+    /* -----------------------------------------------------
+       MAIN EDITORIAL CANVAS
+    ----------------------------------------------------- */
+    .ha-editorial {
+        width:var(--ha-width);
+        margin:0 auto;
+    }
+    .ha-editorial-section {
+        padding:70px 0;
+    }
+    .ha-grid,
+    .ha-final-grid {
+        display:grid;
+        grid-template-columns:repeat(12,minmax(0,1fr));
+        column-gap:var(--ha-gap);
+        row-gap:42px;
+        align-items:start;
+    }
+    .ha-grid img,
+    .ha-final-grid img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+    .ha-text {
+        align-self:center;
+    }
+    .ha-text p {
+        margin-top:0;
+    }
+    .ha-text h2,
+    .ha-text h3 {
+        margin-top:0;
+    }
+    .ha-text .section-label {
+        margin-bottom:12px;
+    }
+    .ha-rule {
+        width:42px;
+        height:1px;
+        margin:20px 0;
+        background:currentColor;
+        opacity:.65;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 1
+    ----------------------------------------------------- */
+    .ha-r1-text {
+        grid-column:1 / span 3;
+    }
+    .ha-r1-img1 {
+        grid-column:4 / span 5;
+        width:88%;
+    }
+    .ha-r1-img2 {
+        grid-column:9 / span 4;
+        width:90%;
+        margin-left:auto;
+        padding-top:55px;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 2
+    ----------------------------------------------------- */
+    .ha-r2-img1 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+    .ha-r2-text {
+        grid-column:4 / span 3;
+        padding:0 8px;
+    }
+    .ha-r2-img2 {
+        grid-column:7 / span 3;
+    }
+    .ha-r2-text2 {
+        grid-column:10 / span 3;
+        padding-top:55px;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 3
+    ----------------------------------------------------- */
+    .ha-r3-text {
+        grid-column:1 / span 3;
+        padding-top:20px;
+    }
+    .ha-r3-img1 {
+        grid-column:4 / span 4;
+    }
+    .ha-r3-img2 {
+        grid-column:8 / span 2;
+        padding-top:55px;
+    }
+    .ha-r3-img3 {
+        grid-column:10 / span 3;
+        padding-top:10px;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 4
+    ----------------------------------------------------- */
+    .ha-r4-img1 {
+        grid-column:1 / span 4;
+    }
+    .ha-r4-text {
+        grid-column:5 / span 3;
+        padding:20px 5px 0;
+    }
+    .ha-r4-img2 {
+        grid-column:8 / span 5;
+        padding-top:40px;
+    }
+    /* -----------------------------------------------------
+       LOCAL INFORMATION
+    ----------------------------------------------------- */
+    .ha-info {
+        margin:20px 0 70px;
+        padding:60px 0;
+        border-top:1px solid var(--ha-line);
+        border-bottom:1px solid var(--ha-line);
+    }
+    .ha-info-grid {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:70px;
+    }
+    .ha-info-item h3 {
+        margin:10px 0 12px;
+    }
+    /* -----------------------------------------------------
+       RECOMMENDATIONS
+    ----------------------------------------------------- */
+    .ha-recommendations {
+        padding:20px 0 100px;
+    }
+    .ha-recommendations-heading {
+        margin-bottom:50px;
+    }
+    .ha-recommendation-list {
+        max-width:950px;
+        border-top:1px solid var(--ha-line-strong);
+    }
+    .ha-recommendation {
+        display:grid;
+        grid-template-columns:70px 280px 1fr;
+        column-gap:35px;
+        align-items:start;
+        padding:30px 0;
+        border-bottom:1px solid var(--ha-line-strong);
+    }
+    .ha-rec-number {
+        padding-top:7px;
+        font-size:.72rem;
+        letter-spacing:.14em;
+        opacity:.6;
+    }
+    .ha-recommendation h3 {
+        margin:0;
+        font-size:1.35rem;
+    }
+    .ha-recommendation p {
+        margin:0;
+        max-width:520px;
+    }
+    /* -----------------------------------------------------
+       OUR EDIT
+    ----------------------------------------------------- */
+    .ha-journal {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:90px;
+        align-items:center;
+        padding:70px 0;
+        border-top:1px solid var(--ha-line);
+    }
+    .ha-journal-copy p {
+        margin-top:0;
+    }
+    /* -----------------------------------------------------
+       FINAL PHOTOGRAPHIC FIELD
+    ----------------------------------------------------- */
+    .ha-final-heading {
+        grid-column:1 / span 3;
+        padding-top:30px;
+    }
+    .ha-final-img1 {
+        grid-column:4 / span 4;
+    }
+    .ha-final-img2 {
+        grid-column:8 / span 2;
+        padding-top:45px;
+    }
+    .ha-final-img3 {
+        grid-column:10 / span 3;
+    }
+    .ha-final-img4 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+    .ha-final-img5 {
+        grid-column:4 / span 3;
+        padding-top:55px;
+    }
+    .ha-final-img6 {
+        grid-column:7 / span 3;
+    }
+    .ha-final-img7 {
+        grid-column:10 / span 3;
+        padding-top:30px;
+    }
+    /* -----------------------------------------------------
+       MAP
+    ----------------------------------------------------- */
+    .ha-map {
+        padding:80px 0 70px;
+    }
+    .ha-map-inner {
+        max-width:650px;
+    }
+    /* -----------------------------------------------------
+       END NAVIGATION
+    ----------------------------------------------------- */
+    .ha-end {
+        display:flex;
+        justify-content:space-between;
+        padding:35px 0 70px;
+    }
+}
+/* =========================================================
+   MOBILE
+   Singapore1 structure retained
+========================================================= */
+@media (max-width:768px) {
+    .hoi-an-desktop {
+        display:none;
+    }
+    .hoi-an-mobile {
+        display:block;
+    }
+}
+</style>
+</head>
+<body class="edition-page">
 <!-- =====================================================
-     INTRODUCTION
+     HEADER
 ====================================================== -->
-
-<section class="edition-intro section">
-
-    <div class="container">
-
-        <div class="edition-intro-inner">
-
-            <p class="section-label">
-                OUR VIETNAM
+<header class="site-header">
+<div class="site-header-inner">
+    <a href="/" class="site-logo">
+        THE EXPAT EDITS
+    </a>
+    <nav class="site-nav">
+        <a href="editions.html">
+            Editions
+        </a>
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+        <a href="index-new.html#map">
+            Map
+        </a>
+        <a href="index-new.html#about">
+            About
+        </a>
+    </nav>
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+</header>
+<!-- =====================================================
+     DESKTOP EDITION
+====================================================== -->
+<main class="hoi-an-desktop">
+<!-- =====================================================
+     OPENING SPREAD
+====================================================== -->
+<section class="ha-opening">
+    <div class="ha-opening-hero">
+        <img
+            src="vietnamhero.jpeg"
+            alt="Hoi An"
+            loading="eager"
+        >
+        <div class="edition-hero-overlay">
+            <p class="eyebrow">
+                VIETNAM
             </p>
-
-            <h2>
-                Falling for Hoi An.
-            </h2>
-
-            <div class="edition-intro-text">
-
-                <p>
-                    We started our trip in Da Nang and spent a couple
-                    of days enjoying walks up and down My Khe Beach.
-                    It was a relaxed start, but the trip really
-                    ramped up when we arrived in Hoi An.
-                </p>
-
-                <p>
-                    We were blown away by the beautiful shopping
-                    streets and the bougainvillea growing and
-                    flowering almost everywhere. It was one of those
-                    places where simply walking around became part of
-                    the experience.
-                </p>
-
-                <p>
-                    We had clothes made, bought handmade leather goods
-                    and picked up some art, while the restaurants were
-                    another highlight. There always seemed to be
-                    another shop, restaurant or beautiful street worth
-                    exploring.
-                </p>
-
-                <p>
-                    We stayed at Grand Signature Resort by M Village,
-                    just a short taxi ride from the Old Town. We can't
-                    speak highly enough of this hotel. The room product
-                    was great, there were multiple swimming pools and
-                    the kids loved playing paddle and pool. Most of
-                    all, they really looked after us there.
-                </p>
-
-            </div>
-
+            <h1>
+                Hoi An
+            </h1>
+            <p class="edition-hero-subtitle">
+                Beautiful streets, great food &amp; a slower rhythm.
+            </p>
         </div>
-
     </div>
-
-</section>
-
-
-<!-- =====================================================
-     PHOTOGRAPHIC STORY
-====================================================== -->
-
-<section class="edition-photo-story section">
-
-    <div class="container">
-
-        <div class="section-heading edition-photo-heading">
-
+    <div class="ha-opening-intro">
+        <p class="section-label">
+            OUR VIETNAM
+        </p>
+        <h2>
+            Falling for Hoi An.
+        </h2>
+        <div class="ha-opening-intro-copy">
             <p>
-                FROM OUR CAMERA
+                We started our Vietnam trip in Da Nang, spending a
+                couple of days walking My Khe Beach before heading
+                to Hoi An. That was when the trip really came alive.
             </p>
-
-            <h2>
-                Vietnam, as we saw it.
-            </h2>
-
+            <p>
+                Hoi An is one of those places where simply wandering
+                becomes the experience. We loved the beautiful Old
+                Town, the leather shops and the art shops, and spent
+                many evenings strolling from one shop to the next.
+            </p>
+            <p>
+                The bars and restaurants seemed endless, and we found
+                some great rooftop spots for sundowners. As the sun
+                started to disappear, the streets and old walls seemed
+                to come alive, with a warm glow falling across the
+                whole town.
+            </p>
         </div>
-
-
-        <div class="edition-photo-mosaic">
-
-            <img
-                src="vietnam1.jpeg"
-                alt="Vietnam"
-                loading="eager"
-            >
-
-            <img
-                src="vietnam2.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam3.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam4.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam5.jpeg"
-                alt="Hoi An countryside"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam6.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam7.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam8.jpeg"
-                alt="Grand Signature Resort by M Village"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam9.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam10.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam11.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-        </div>
-
     </div>
-
 </section>
-
-
+<div class="ha-editorial">
+<!-- =====================================================
+     FROM OUR CAMERA
+====================================================== -->
+<section class="ha-editorial-section">
+<div class="section-heading">
+    <p>
+        FROM OUR CAMERA
+    </p>
+    <h2>
+        Hoi An, as we saw it.
+    </h2>
+</div>
+<div class="ha-grid">
+    <!-- ROW 1 -->
+    <div class="ha-text ha-r1-text">
+        <p class="section-label">
+            THE OLD TOWN
+        </p>
+        <h3>
+            A town made for wandering.
+        </h3>
+        <div class="ha-rule"></div>
+        <p>
+            Our favourite thing about Hoi An was simply walking.
+            The old streets are incredibly picturesque, with
+            colourful walls, flowers and beautiful old buildings
+            around almost every corner.
+        </p>
+        <p>
+            We could spend hours wandering without really having
+            anywhere we needed to be.
+        </p>
+    </div>
+    <img
+        class="ha-r1-img1"
+        src="vietnam1.jpeg"
+        alt="Hoi An Old Town"
+        loading="eager"
+    >
+    <img
+        class="ha-r1-img2"
+        src="vietnam2.jpeg"
+        alt="Hoi An street"
+        loading="lazy"
+    >
+    <!-- ROW 2 -->
+    <img
+        class="ha-r2-img1"
+        src="vietnam3.jpeg"
+        alt="Hoi An architecture and streets"
+        loading="lazy"
+    >
+    <div class="ha-text ha-r2-text">
+        <p class="section-label">
+            SHOPPING
+        </p>
+        <h3>
+            Leather, art &amp; a reason to keep walking.
+        </h3>
+        <div class="ha-rule"></div>
+        <p>
+            Hoi An's shopping became part of our evenings. We loved
+            looking through the leather shops and discovering
+            handmade pieces, while the art shops gave us another
+            reason to slow down and look around.
+        </p>
+    </div>
+    <img
+        class="ha-r2-img2"
+        src="vietnam4.jpeg"
+        alt="Hoi An Old Town shops"
+        loading="lazy"
+    >
+    <div class="ha-text ha-r2-text2">
+        <p class="section-label">
+            MADE HERE
+        </p>
+        <h3>
+            Shopping never felt like a chore.
+        </h3>
+        <p>
+            We had clothes made, bought handmade leather goods and
+            picked up some art. The pleasure was in the process —
+            wandering, choosing and discovering something that we
+            would not have found anywhere else.
+        </p>
+    </div>
+    <!-- ROW 3 -->
+    <div class="ha-text ha-r3-text">
+        <p class="section-label">
+            BEYOND THE OLD TOWN
+        </p>
+        <h3>
+            Into the countryside.
+        </h3>
+        <div class="ha-rule"></div>
+        <p>
+            One of our favourite family experiences was getting out
+            on bikes and riding through the paddy fields around Hoi
+            An. It was a completely different side of the destination
+            — quiet roads, open countryside and buffalo along the way.
+        </p>
+    </div>
+    <img
+        class="ha-r3-img1"
+        src="vietnam5.jpeg"
+        alt="Cycling through the Hoi An countryside"
+        loading="lazy"
+    >
+    <img
+        class="ha-r3-img2"
+        src="vietnam6.jpeg"
+        alt="Buffalo in the countryside near Hoi An"
+        loading="lazy"
+    >
+    <img
+        class="ha-r3-img3"
+        src="vietnam7.jpeg"
+        alt="Hoi An countryside"
+        loading="lazy"
+    >
+    <!-- ROW 4 -->
+    <img
+        class="ha-r4-img1"
+        src="vietnam8.jpeg"
+        alt="Grand Signature Resort by M Village"
+        loading="lazy"
+    >
+    <div class="ha-text ha-r4-text">
+        <p class="section-label">
+            FAMILY TIME
+        </p>
+        <h3>
+            Grand Signature was a great base.
+        </h3>
+        <div class="ha-rule"></div>
+        <p>
+            Grand Signature Resort by M Village was a real highlight
+            for us. The rooms were great, there were multiple pools
+            and the kids loved playing paddle and pool.
+        </p>
+        <p>
+            Most importantly, the team really looked after us.
+            It gave us somewhere relaxed to come back to after
+            evenings in the Old Town.
+        </p>
+    </div>
+    <img
+        class="ha-r4-img2"
+        src="vietnam9.jpeg"
+        alt="Grand Signature Resort and family stay"
+        loading="lazy"
+    >
+    <!-- ROW 5 -->
+    <div class="ha-text ha-r1-text">
+        <p class="section-label">
+            AFTER DARK
+        </p>
+        <h3>
+            Hoi An glows at sunset.
+        </h3>
+        <div class="ha-rule"></div>
+        <p>
+            The town changes character as the sun goes down. The
+            old walls take on a warm glow, the streets become even
+            more atmospheric and the restaurants and rooftop bars
+            start to fill.
+        </p>
+        <p>
+            We spent many evenings doing exactly what Hoi An seems
+            to encourage — walking, stopping for a drink, finding
+            somewhere to eat and carrying on exploring.
+        </p>
+    </div>
+    <img
+        class="ha-r1-img1"
+        src="vietnam10.jpeg"
+        alt="Hoi An streets at sunset"
+        loading="lazy"
+    >
+    <img
+        class="ha-r1-img2"
+        src="vietnam11.jpeg"
+        alt="Hoi An Old Town in the evening"
+        loading="lazy"
+    >
+</div>
+</section>
 <!-- =====================================================
      LOCAL INFORMATION
 ====================================================== -->
-
-<section class="edition-local-info">
-
-    <div class="container">
-
-        <div class="edition-local-info-grid">
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    WHERE TO STAY
-                </p>
-
-                <h3>
-                    Grand Signature
-                </h3>
-
-                <p>
-                    Grand Signature Resort by M Village was a standout
-                    for us, with great rooms, multiple pools and
-                    genuinely excellent service.
-                </p>
-
-            </div>
-
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    THE OLD TOWN
-                </p>
-
-                <h3>
-                    Just a short taxi ride
-                </h3>
-
-                <p>
-                    The hotel gave us a peaceful base while keeping
-                    the beautiful streets, shops and restaurants of
-                    Hoi An's Old Town easy to reach.
-                </p>
-
-            </div>
-
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    WITH THE FAMILY
-                </p>
-
-                <h3>
-                    Pools &amp; paddle
-                </h3>
-
-                <p>
-                    The kids loved the multiple swimming pools and
-                    playing paddle and pool, while the hotel staff
-                    really looked after us throughout our stay.
-                </p>
-
-            </div>
-
-        </div>
-
+<section class="ha-info">
+<div class="ha-info-grid">
+    <div class="ha-info-item">
+        <p class="section-label">
+            WHERE TO STAY
+        </p>
+        <h3>
+            Grand Signature
+        </h3>
+        <p>
+            Grand Signature Resort by M Village was a standout for
+            our family, with great rooms, multiple swimming pools
+            and genuinely excellent service.
+        </p>
     </div>
-
+    <div class="ha-info-item">
+        <p class="section-label">
+            THE OLD TOWN
+        </p>
+        <h3>
+            Walk everywhere
+        </h3>
+        <p>
+            The Old Town is best experienced slowly. Give yourself
+            time to wander the streets, browse the shops, stop for
+            food and let the town reveal itself.
+        </p>
+    </div>
+    <div class="ha-info-item">
+        <p class="section-label">
+            WITH THE FAMILY
+        </p>
+        <h3>
+            Bikes &amp; countryside
+        </h3>
+        <p>
+            Cycling through the paddy fields gave us a completely
+            different perspective on Hoi An, while the hotel kept
+            the kids entertained back at base.
+        </p>
+    </div>
+</div>
 </section>
-
-
 <!-- =====================================================
      RECOMMENDATIONS
 ====================================================== -->
-
-<section class="edition-recommendations section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p>
-                OUR RECOMMENDATIONS
-            </p>
-
-            <h2>
-                Places &amp; experiences we loved.
-            </h2>
-
-        </div>
-
-
-        <div class="edition-recommendations-grid">
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    01
-                </p>
-
-                <h3>
-                    Grand Signature Resort
-                </h3>
-
-                <p>
-                    Our standout hotel in Hoi An. Great room product,
-                    multiple pools and fantastic service made it a
-                    brilliant choice for our family.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    02
-                </p>
-
-                <h3>
-                    Hoi An Old Town
-                </h3>
-
-                <p>
-                    Spend time simply wandering the beautiful streets.
-                    The shopping, architecture and flowering
-                    bougainvillea make every walk feel special.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    03
-                </p>
-
-                <h3>
-                    Made-to-measure clothes
-                </h3>
-
-                <p>
-                    Hoi An is a great place to have clothes made.
-                    Shopping becomes part of the experience rather
-                    than something you need to rush through.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    04
-                </p>
-
-                <h3>
-                    Handmade leather
-                </h3>
-
-                <p>
-                    We bought handmade leather goods and loved
-                    discovering the different shops and makers around
-                    the town.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    05
-                </p>
-
-                <h3>
-                    The restaurants
-                </h3>
-
-                <p>
-                    Food was a big part of what made Hoi An work for
-                    us. There are plenty of restaurants to discover
-                    while wandering around town.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    06
-                </p>
-
-                <h3>
-                    My Khe Beach
-                </h3>
-
-                <p>
-                    Start the trip with a couple of days in Da Nang,
-                    walking My Khe Beach and easing into the slower
-                    pace before heading to Hoi An.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
+<section class="ha-recommendations">
+<div class="ha-recommendations-heading">
+    <p class="section-label">
+        OUR RECOMMENDATIONS
+    </p>
+    <h2>
+        Places &amp; experiences we loved.
+    </h2>
+</div>
+<div class="ha-recommendation-list">
+    <article class="ha-recommendation">
+        <span class="ha-rec-number">01</span>
+        <h3>
+            Grand Signature Resort
+        </h3>
+        <p>
+            A brilliant family base with great rooms, multiple pools,
+            paddle and pool for the kids and a team who genuinely
+            looked after us.
+        </p>
+    </article>
+    <article class="ha-recommendation">
+        <span class="ha-rec-number">02</span>
+        <h3>
+            Hoi An Old Town
+        </h3>
+        <p>
+            The place to simply wander. Beautiful streets, old walls,
+            shops, restaurants and flowers make it one of the most
+            picturesque towns we have visited.
+        </p>
+    </article>
+    <article class="ha-recommendation">
+        <span class="ha-rec-number">03</span>
+        <h3>
+            Leather shops
+        </h3>
+        <p>
+            We loved exploring the leather shops and discovering
+            handmade goods. Shopping here feels like part of the
+            travel experience.
+        </p>
+    </article>
+    <article class="ha-recommendation">
+        <span class="ha-rec-number">04</span>
+        <h3>
+            Art shops
+        </h3>
+        <p>
+            Hoi An's art shops are another reason to take your time.
+            We enjoyed browsing and finding pieces that reminded us
+            of the town after we left.
+        </p>
+    </article>
+    <article class="ha-recommendation">
+        <span class="ha-rec-number">05</span>
+        <h3>
+            Rooftop sundowners
+        </h3>
+        <p>
+            Find a rooftop, order a drink and watch the town change
+            as the sun goes down. The warm evening light is one of
+            Hoi An's great pleasures.
+        </p>
+    </article>
+    <article class="ha-recommendation">
+        <span class="ha-rec-number">06</span>
+        <h3>
+            Cycling the paddy fields
+        </h3>
+        <p>
+            Head outside the Old Town and ride through the countryside.
+            We saw buffalo and loved the quieter, greener side of
+            Hoi An.
+        </p>
+    </article>
+</div>
 </section>
-
-
 <!-- =====================================================
      OUR EDIT
 ====================================================== -->
-
-<section class="edition-journal section">
-
-    <div class="container">
-
-        <div class="edition-journal-inner">
-
-            <div>
-
-                <p class="section-label">
-                    OUR EDIT
-                </p>
-
-                <h2>
-                    Give Hoi An time to wander.
-                </h2>
-
-            </div>
-
-
-            <div class="edition-journal-copy">
-
-                <p>
-                    The real magic for us was not one particular sight.
-                    It was walking through the streets and seeing the
-                    bougainvillea flowering almost everywhere, stopping
-                    to look in shops and finding another restaurant
-                    whenever we felt like eating.
-                </p>
-
-                <p>
-                    We loved having clothes made and picking up
-                    handmade leather goods and art. Hoi An makes
-                    shopping feel personal and enjoyable rather than
-                    like a checklist of things to buy.
-                </p>
-
-                <p>
-                    And having Grand Signature Resort by M Village as
-                    our base made the whole experience even better.
-                    It was close enough to the Old Town by taxi, but
-                    gave us somewhere fantastic to return to, with
-                    great rooms, multiple pools and staff who really
-                    looked after us.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="ha-journal">
+<div>
+    <p class="section-label">
+        OUR EDIT
+    </p>
+    <h2>
+        Give Hoi An time to wander.
+    </h2>
+</div>
+<div class="ha-journal-copy">
+    <p>
+        Hoi An is a destination where the best experiences are often
+        the unplanned ones. We spent hours walking the Old Town,
+        looking through leather and art shops and stopping whenever
+        something caught our eye.
+    </p>
+    <p>
+        As evening arrived, the whole town seemed to change. The
+        streets and old walls took on a warm glow, rooftop bars
+        became perfect places for sundowners and there was always
+        another restaurant or street waiting to be explored.
+    </p>
+    <p>
+        We also loved getting out into the countryside by bike.
+        Riding through the paddy fields and seeing buffalo gave us
+        a completely different view of Hoi An.
+    </p>
+    <p>
+        Grand Signature Resort by M Village made the trip work
+        particularly well for our family. It was a great place for
+        the kids, while giving us an easy base from which to enjoy
+        the Old Town.
+    </p>
+</div>
 </section>
-
-
 <!-- =====================================================
-     SECONDARY GALLERY
+     MORE FROM OUR CAMERA
 ====================================================== -->
-
-<section class="edition-gallery section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p>
-                MORE FROM OUR CAMERA
-            </p>
-
-            <h2>
-                More from Hoi An.
-            </h2>
-
-        </div>
-
-
-        <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-
-            <img
-                src="vietnam12.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam13.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam14.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam15.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam16.jpeg"
-                alt="Hoi An streets"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam17.jpeg"
-                alt="Hoi An"
-                loading="lazy"
-            >
-
-            <img
-                src="vietnam18.jpeg"
-                alt="Hoi An architecture and flowers"
-                loading="lazy"
-            >
-
-        </div>
-
+<section class="ha-editorial-section">
+<div class="ha-final-grid">
+    <div class="ha-final-heading">
+        <p class="section-label">
+            MORE FROM OUR CAMERA
+        </p>
+        <h2>
+            More from Hoi An.
+        </h2>
     </div>
-
+    <img
+        class="ha-final-img1"
+        src="vietnam12.jpeg"
+        alt="Hoi An Old Town"
+        loading="lazy"
+    >
+    <img
+        class="ha-final-img2"
+        src="vietnam13.jpeg"
+        alt="Hoi An street scene"
+        loading="lazy"
+    >
+    <img
+        class="ha-final-img3"
+        src="vietnam14.jpeg"
+        alt="Hoi An architecture"
+        loading="lazy"
+    >
+    <img
+        class="ha-final-img4"
+        src="vietnam15.jpeg"
+        alt="Hoi An evening"
+        loading="lazy"
+    >
+    <img
+        class="ha-final-img5"
+        src="vietnam16.jpeg"
+        alt="Hoi An streets"
+        loading="lazy"
+    >
+    <img
+        class="ha-final-img6"
+        src="vietnam17.jpeg"
+        alt="Hoi An Old Town"
+        loading="lazy"
+    >
+    <img
+        class="ha-final-img7"
+        src="vietnam18.jpeg"
+        alt="Hoi An architecture and flowers"
+        loading="lazy"
+    >
+</div>
 </section>
-
-
 <!-- =====================================================
      MAP
 ====================================================== -->
-
-<section class="edition-map section">
-
-    <div class="container">
-
-        <div class="edition-map-inner">
-
-            <p class="section-label">
-                OUR MAP
-            </p>
-
-            <h2>
-                Hoi An.
-            </h2>
-
-            <p>
-                Da Nang, My Khe Beach and the streets, shops, hotels
-                and restaurants that made Hoi An such a memorable
-                family trip.
-            </p>
-
-        </div>
-
-    </div>
-
+<section class="ha-map">
+<div class="ha-map-inner">
+    <p class="section-label">
+        OUR MAP
+    </p>
+    <h2>
+        Hoi An.
+    </h2>
+    <p>
+        Da Nang, My Khe Beach, the beautiful streets of the Old Town,
+        the surrounding paddy fields and the places that made Hoi An
+        such a memorable family trip.
+    </p>
+</div>
 </section>
-
-
-</main>
-
-
 <!-- =====================================================
-     EDITION END NAV
+     END
 ====================================================== -->
-
-<section class="edition-end">
-
-    <a
-        href="/"
-        class="text-link"
-    >
-        ← Back to Home
-    </a>
-
-    <a
-        href="editions.html"
-        class="text-link"
-    >
-        View All Editions →
-    </a>
-
+<section class="ha-end">
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
 </section>
-
-
+</div>
+</main>
+<!-- =====================================================
+     MOBILE
+====================================================== -->
+<main class="hoi-an-mobile">
+<section
+    class="edition-hero"
+    style="background-image:url('vietnamhero.jpeg');"
+>
+<div class="edition-hero-overlay">
+    <p class="eyebrow">
+        VIETNAM
+    </p>
+    <h1>
+        Hoi An
+    </h1>
+    <p class="edition-hero-subtitle">
+        Beautiful streets, great food &amp; a slower rhythm.
+    </p>
+</div>
+</section>
+<!-- INTRODUCTION -->
+<section class="edition-intro section">
+<div class="container">
+<div class="edition-intro-inner">
+    <p class="section-label">
+        OUR VIETNAM
+    </p>
+    <h2>
+        Falling for Hoi An.
+    </h2>
+    <div class="edition-intro-text">
+        <p>
+            We started our Vietnam trip in Da Nang, spending a couple
+            of days walking My Khe Beach before heading to Hoi An.
+            That was when the trip really came alive.
+        </p>
+        <p>
+            Hoi An is one of those places where simply wandering
+            becomes the experience. We loved the beautiful Old Town,
+            the leather shops and the art shops, and spent many
+            evenings strolling from one shop to the next.
+        </p>
+        <p>
+            The bars and restaurants seemed endless, and we found
+            some great rooftop spots for sundowners. As the sun
+            started to disappear, the streets and old walls seemed
+            to come alive, with a warm glow falling across the
+            whole town.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+<!-- PHOTOGRAPHIC STORY -->
+<section class="edition-photo-story section">
+<div class="container">
+<div class="section-heading edition-photo-heading">
+    <p>
+        FROM OUR CAMERA
+    </p>
+    <h2>
+        Hoi An, as we saw it.
+    </h2>
+</div>
+<div class="edition-photo-mosaic">
+    <img src="vietnam1.jpeg" alt="Hoi An Old Town" loading="eager">
+    <img src="vietnam2.jpeg" alt="Hoi An street" loading="lazy">
+    <img src="vietnam3.jpeg" alt="Hoi An architecture and streets" loading="lazy">
+    <img src="vietnam4.jpeg" alt="Hoi An Old Town shops" loading="lazy">
+    <img src="vietnam5.jpeg" alt="Cycling through the Hoi An countryside" loading="lazy">
+    <img src="vietnam6.jpeg" alt="Buffalo in the countryside near Hoi An" loading="lazy">
+    <img src="vietnam7.jpeg" alt="Hoi An countryside" loading="lazy">
+    <img src="vietnam8.jpeg" alt="Grand Signature Resort by M Village" loading="lazy">
+    <img src="vietnam9.jpeg" alt="Grand Signature Resort and family stay" loading="lazy">
+    <img src="vietnam10.jpeg" alt="Hoi An streets at sunset" loading="lazy">
+    <img src="vietnam11.jpeg" alt="Hoi An Old Town in the evening" loading="lazy">
+</div>
+</div>
+</section>
+<!-- LOCAL INFORMATION -->
+<section class="edition-local-info">
+<div class="container">
+<div class="edition-local-info-grid">
+    <div class="edition-local-info-item">
+        <p class="section-label">
+            WHERE TO STAY
+        </p>
+        <h3>
+            Grand Signature
+        </h3>
+        <p>
+            Grand Signature Resort by M Village was a standout for
+            our family, with great rooms, multiple swimming pools
+            and genuinely excellent service.
+        </p>
+    </div>
+    <div class="edition-local-info-item">
+        <p class="section-label">
+            THE OLD TOWN
+        </p>
+        <h3>
+            Walk everywhere
+        </h3>
+        <p>
+            Give yourself time to wander the beautiful streets,
+            browse the leather and art shops and stop whenever
+            something catches your eye.
+        </p>
+    </div>
+    <div class="edition-local-info-item">
+        <p class="section-label">
+            WITH THE FAMILY
+        </p>
+        <h3>
+            Bikes &amp; countryside
+        </h3>
+        <p>
+            Cycling through the paddy fields gave us a completely
+            different perspective on Hoi An, while the hotel kept
+            the kids entertained back at base.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+<!-- RECOMMENDATIONS -->
+<section class="edition-recommendations section">
+<div class="container">
+<div class="section-heading">
+    <p>
+        OUR RECOMMENDATIONS
+    </p>
+    <h2>
+        Places &amp; experiences we loved.
+    </h2>
+</div>
+<div class="edition-recommendations-grid">
+    <article class="edition-recommendation">
+        <p class="story-number">01</p>
+        <h3>
+            Grand Signature Resort
+        </h3>
+        <p>
+            A brilliant family base with great rooms, multiple pools,
+            paddle and pool for the kids and a team who genuinely
+            looked after us.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">02</p>
+        <h3>
+            Hoi An Old Town
+        </h3>
+        <p>
+            The place to simply wander. Beautiful streets, old walls,
+            shops, restaurants and flowers make it one of the most
+            picturesque towns we have visited.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">03</p>
+        <h3>
+            Leather shops
+        </h3>
+        <p>
+            We loved exploring the leather shops and discovering
+            handmade goods. Shopping here feels like part of the
+            travel experience.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">04</p>
+        <h3>
+            Art shops
+        </h3>
+        <p>
+            Hoi An's art shops are another reason to take your time.
+            We enjoyed browsing and finding pieces that reminded us
+            of the town after we left.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">05</p>
+        <h3>
+            Rooftop sundowners
+        </h3>
+        <p>
+            Find a rooftop, order a drink and watch the town change
+            as the sun goes down. The warm evening light is one of
+            Hoi An's great pleasures.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">06</p>
+        <h3>
+            Cycling the paddy fields
+        </h3>
+        <p>
+            Head outside the Old Town and ride through the countryside.
+            We saw buffalo and loved the quieter, greener side of
+            Hoi An.
+        </p>
+    </article>
+</div>
+</div>
+</section>
+<!-- OUR EDIT -->
+<section class="edition-journal section">
+<div class="container">
+<div class="edition-journal-inner">
+    <div>
+        <p class="section-label">
+            OUR EDIT
+        </p>
+        <h2>
+            Give Hoi An time to wander.
+        </h2>
+    </div>
+    <div class="edition-journal-copy">
+        <p>
+            Hoi An is a destination where the best experiences are
+            often the unplanned ones. We spent hours walking the
+            Old Town, looking through leather and art shops and
+            stopping whenever something caught our eye.
+        </p>
+        <p>
+            As evening arrived, the whole town seemed to change.
+            The streets and old walls took on a warm glow, rooftop
+            bars became perfect places for sundowners and there was
+            always another restaurant or street waiting to be explored.
+        </p>
+        <p>
+            We also loved getting out into the countryside by bike.
+            Riding through the paddy fields and seeing buffalo gave
+            us a completely different view of Hoi An.
+        </p>
+        <p>
+            Grand Signature Resort by M Village made the trip work
+            particularly well for our family. It was a great place
+            for the kids, while giving us an easy base from which
+            to enjoy the Old Town.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+<!-- MORE FROM CAMERA -->
+<section class="edition-gallery section">
+<div class="container">
+<div class="section-heading">
+    <p>
+        MORE FROM OUR CAMERA
+    </p>
+    <h2>
+        More from Hoi An.
+    </h2>
+</div>
+<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
+    <img src="vietnam12.jpeg" alt="Hoi An Old Town" loading="lazy">
+    <img src="vietnam13.jpeg" alt="Hoi An street scene" loading="lazy">
+    <img src="vietnam14.jpeg" alt="Hoi An architecture" loading="lazy">
+    <img src="vietnam15.jpeg" alt="Hoi An evening" loading="lazy">
+    <img src="vietnam16.jpeg" alt="Hoi An streets" loading="lazy">
+    <img src="vietnam17.jpeg" alt="Hoi An Old Town" loading="lazy">
+    <img src="vietnam18.jpeg" alt="Hoi An architecture and flowers" loading="lazy">
+</div>
+</div>
+</section>
+<!-- MAP -->
+<section class="edition-map section">
+<div class="container">
+<div class="edition-map-inner">
+    <p class="section-label">
+        OUR MAP
+    </p>
+    <h2>
+        Hoi An.
+    </h2>
+    <p>
+        Da Nang, My Khe Beach, the beautiful streets of the Old Town,
+        the surrounding paddy fields and the places that made Hoi An
+        such a memorable family trip.
+    </p>
+</div>
+</div>
+</section>
+<!-- END -->
+<section class="edition-end">
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+</section>
+</main>
 <!-- =====================================================
      FOOTER
 ====================================================== -->
-
 <footer class="site-footer">
-
-    <div class="site-footer-inner">
-
-        <div>
-
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-
-            <p class="footer-description">
-                Travel, places &amp; observations from life abroad.
-            </p>
-
+<div class="site-footer-inner">
+    <div>
+        <div class="footer-logo">
+            THE EXPAT EDITS
         </div>
-
-
-        <nav class="footer-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="index-new.html#about">
-                About
-            </a>
-
-        </nav>
-
-
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-
-
-        <p class="footer-copyright">
-            © The Expat Edits
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
         </p>
-
     </div>
-
+    <nav class="footer-nav">
+        <a href="editions.html">
+            Editions
+        </a>
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+        <a href="index-new.html#map">
+            Map
+        </a>
+        <a href="index-new.html#about">
+            About
+        </a>
+    </nav>
+    <a
+        href="https://www.instagram.com/theexpatedits/"
+        class="footer-social"
+        target="_blank"
+        rel="noopener"
+    >
+        Instagram
+    </a>
+    <p class="footer-copyright">
+        © The Expat Edits
+    </p>
+</div>
 </footer>
-
-
 </body>
-
 </html>

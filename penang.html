@@ -1,754 +1,1213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Penang | The Expat Edits</title>
-
-    <meta
-        name="description"
-        content="Penang — walking George Town, discovering great restaurants, staying at The Blue Mansion and exploring Penang Hill."
-    >
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- MASTER SITE CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style-new.css"
-    >
-
-    <!-- EDITION CSS -->
-
-    <link
-        rel="stylesheet"
-        href="style-editions-new.css"
-    >
-
-</head>
-
-
-<body class="edition-page">
-
-
-<!-- =====================================================
-     FIXED HEADER
-====================================================== -->
-
-<header class="site-header">
-
-    <div class="site-header-inner">
-
-        <a
-            href="/"
-            class="site-logo"
-        >
-            THE EXPAT EDITS
-        </a>
-
-        <nav class="site-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="index-new.html#about">
-                About
-            </a>
-
-        </nav>
-
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
-
-</header>
-
-
-<main>
-
-
-<!-- =====================================================
-     PENANG — HERO
-====================================================== -->
-
-<section
-    class="edition-hero"
-    style="background-image: url('../images/home/penang-hero.jpeg');"
+<meta charset="UTF-8">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
 >
-
-    <div class="edition-hero-overlay">
-
-        <p class="eyebrow">
-            MALAYSIA
-        </p>
-
-        <h1>
-            Penang
-        </h1>
-
-        <p class="edition-hero-subtitle">
-            Walk, eat and discover George Town.
-        </p>
-
-    </div>
-
-</section>
-
-
+<title>Penang | The Expat Edits</title>
+<meta
+    name="description"
+    content="Penang — wandering the beautiful streets of George Town, discovering street art and old shophouses, eating well and exploring Penang Hill."
+>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-editions-new.css">
+<style>
+/* =========================================================
+   PENANG
+   Singapore1 editorial template
+========================================================= */
+.penang-desktop { display:block; }
+.penang-mobile { display:none; }
+/* =========================================================
+   DESKTOP
+========================================================= */
+@media (min-width:769px) {
+    :root {
+        --pg-width: min(1400px, calc(100% - 80px));
+        --pg-wide: min(1500px, calc(100% - 80px));
+        --pg-gap: 22px;
+        --pg-line: rgba(255,255,255,.12);
+        --pg-line-strong: rgba(255,255,255,.16);
+    }
+    /* -----------------------------------------------------
+       OPENING
+    ----------------------------------------------------- */
+    .pg-opening {
+        width:var(--pg-wide);
+        margin:0 auto;
+        padding:0 0 90px;
+        display:grid;
+        grid-template-columns:1.25fr .75fr;
+        gap:75px;
+        align-items:center;
+    }
+    .pg-opening-hero {
+        position:relative;
+        overflow:hidden;
+        width:100%;
+        background:#090909;
+    }
+    .pg-opening-hero img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+    .pg-opening-hero::after {
+        content:"";
+        position:absolute;
+        z-index:1;
+        left:0;
+        right:0;
+        bottom:0;
+        height:38%;
+        pointer-events:none;
+        background:linear-gradient(
+            to bottom,
+            rgba(9,9,9,0) 0%,
+            rgba(9,9,9,.22) 28%,
+            rgba(9,9,9,.55) 55%,
+            rgba(9,9,9,.82) 78%,
+            #242320 100%
+        );
+    }
+    .pg-opening-hero .edition-hero-overlay {
+        position:absolute;
+        z-index:2;
+        left:55px;
+        right:55px;
+        bottom:50px;
+    }
+    .pg-opening-intro {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:50px 35px 50px 5px;
+    }
+    .pg-opening-intro h2 {
+        margin:0 0 28px;
+    }
+    .pg-opening-intro-copy {
+        max-width:560px;
+    }
+    .pg-opening-intro-copy p {
+        margin:0 0 20px;
+    }
+    .pg-opening-intro-copy p:last-child {
+        margin-bottom:0;
+    }
+    /* -----------------------------------------------------
+       MAIN EDITORIAL CANVAS
+    ----------------------------------------------------- */
+    .pg-editorial {
+        width:var(--pg-width);
+        margin:0 auto;
+    }
+    .pg-editorial-section {
+        padding:70px 0;
+    }
+    .pg-grid,
+    .pg-final-grid {
+        display:grid;
+        grid-template-columns:repeat(12,minmax(0,1fr));
+        column-gap:var(--pg-gap);
+        row-gap:42px;
+        align-items:start;
+    }
+    .pg-grid img,
+    .pg-final-grid img {
+        display:block;
+        width:100%;
+        height:auto;
+    }
+    .pg-text {
+        align-self:center;
+    }
+    .pg-text p {
+        margin-top:0;
+    }
+    .pg-text h2,
+    .pg-text h3 {
+        margin-top:0;
+    }
+    .pg-text .section-label {
+        margin-bottom:12px;
+    }
+    .pg-rule {
+        width:42px;
+        height:1px;
+        margin:20px 0;
+        background:currentColor;
+        opacity:.65;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 1
+    ----------------------------------------------------- */
+    .pg-r1-text {
+        grid-column:1 / span 3;
+    }
+    .pg-r1-img1 {
+        grid-column:4 / span 5;
+        width:88%;
+    }
+    .pg-r1-img2 {
+        grid-column:9 / span 4;
+        width:90%;
+        margin-left:auto;
+        padding-top:55px;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 2
+    ----------------------------------------------------- */
+    .pg-r2-img1 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+    .pg-r2-text {
+        grid-column:4 / span 3;
+        padding:0 8px;
+    }
+    .pg-r2-img2 {
+        grid-column:7 / span 3;
+    }
+    .pg-r2-text2 {
+        grid-column:10 / span 3;
+        padding-top:55px;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 3
+    ----------------------------------------------------- */
+    .pg-r3-text {
+        grid-column:1 / span 3;
+        padding-top:20px;
+    }
+    .pg-r3-img1 {
+        grid-column:4 / span 4;
+    }
+    .pg-r3-img2 {
+        grid-column:8 / span 2;
+        padding-top:55px;
+    }
+    .pg-r3-img3 {
+        grid-column:10 / span 3;
+        padding-top:10px;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 4
+    ----------------------------------------------------- */
+    .pg-r4-img1 {
+        grid-column:1 / span 4;
+    }
+    .pg-r4-text {
+        grid-column:5 / span 3;
+        padding:20px 5px 0;
+    }
+    .pg-r4-img2 {
+        grid-column:8 / span 5;
+        padding-top:40px;
+    }
+    /* -----------------------------------------------------
+       EDITORIAL ROW 5
+    ----------------------------------------------------- */
+    .pg-r5-text {
+        grid-column:1 / span 3;
+        padding-top:20px;
+    }
+    .pg-r5-img1 {
+        grid-column:4 / span 5;
+        width:88%;
+    }
+    .pg-r5-img2 {
+        grid-column:9 / span 4;
+        width:90%;
+        margin-left:auto;
+        padding-top:55px;
+    }
+    /* -----------------------------------------------------
+       LOCAL INFORMATION
+    ----------------------------------------------------- */
+    .pg-info {
+        margin:20px 0 70px;
+        padding:60px 0;
+        border-top:1px solid var(--pg-line);
+        border-bottom:1px solid var(--pg-line);
+    }
+    .pg-info-grid {
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:70px;
+    }
+    .pg-info-item h3 {
+        margin:10px 0 12px;
+    }
+    /* -----------------------------------------------------
+       RECOMMENDATIONS
+    ----------------------------------------------------- */
+    .pg-recommendations {
+        padding:20px 0 100px;
+    }
+    .pg-recommendations-heading {
+        margin-bottom:50px;
+    }
+    .pg-recommendation-list {
+        max-width:950px;
+        border-top:1px solid var(--pg-line-strong);
+    }
+    .pg-recommendation {
+        display:grid;
+        grid-template-columns:70px 280px 1fr;
+        column-gap:35px;
+        align-items:start;
+        padding:30px 0;
+        border-bottom:1px solid var(--pg-line-strong);
+    }
+    .pg-rec-number {
+        padding-top:7px;
+        font-size:.72rem;
+        letter-spacing:.14em;
+        opacity:.6;
+    }
+    .pg-recommendation h3 {
+        margin:0;
+        font-size:1.35rem;
+    }
+    .pg-recommendation p {
+        margin:0;
+        max-width:520px;
+    }
+    /* -----------------------------------------------------
+       OUR EDIT
+    ----------------------------------------------------- */
+    .pg-journal {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:90px;
+        align-items:center;
+        padding:70px 0;
+        border-top:1px solid var(--pg-line);
+    }
+    .pg-journal-copy p {
+        margin-top:0;
+    }
+    /* -----------------------------------------------------
+       FINAL PHOTOGRAPHIC FIELD
+    ----------------------------------------------------- */
+    .pg-final-heading {
+        grid-column:1 / span 3;
+        padding-top:30px;
+    }
+    .pg-final-img1 {
+        grid-column:4 / span 4;
+    }
+    .pg-final-img2 {
+        grid-column:8 / span 2;
+        padding-top:45px;
+    }
+    .pg-final-img3 {
+        grid-column:10 / span 3;
+    }
+    .pg-final-img4 {
+        grid-column:1 / span 3;
+        padding-top:25px;
+    }
+    .pg-final-img5 {
+        grid-column:4 / span 3;
+        padding-top:55px;
+    }
+    .pg-final-img6 {
+        grid-column:7 / span 3;
+    }
+    .pg-final-img7 {
+        grid-column:10 / span 3;
+        padding-top:30px;
+    }
+    /* -----------------------------------------------------
+       MAP
+    ----------------------------------------------------- */
+    .pg-map {
+        padding:80px 0 70px;
+    }
+    .pg-map-inner {
+        max-width:650px;
+    }
+    /* -----------------------------------------------------
+       END NAVIGATION
+    ----------------------------------------------------- */
+    .pg-end {
+        display:flex;
+        justify-content:space-between;
+        padding:35px 0 70px;
+    }
+}
+/* =========================================================
+   MOBILE
+   Existing Edition mobile system retained
+========================================================= */
+@media (max-width:768px) {
+    .penang-desktop {
+        display:none;
+    }
+    .penang-mobile {
+        display:block;
+    }
+}
+</style>
+</head>
+<body class="edition-page">
 <!-- =====================================================
-     INTRODUCTION
+     HEADER
 ====================================================== -->
-
-<section class="edition-intro section">
-
-    <div class="container">
-
-        <div class="edition-intro-inner">
-
-            <p class="section-label">
-                OUR PENANG
+<header class="site-header">
+<div class="site-header-inner">
+    <a href="/" class="site-logo">
+        THE EXPAT EDITS
+    </a>
+    <nav class="site-nav">
+        <a href="editions.html">
+            Editions
+        </a>
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+        <a href="index-new.html#map">
+            Map
+        </a>
+        <a href="index-new.html#about">
+            About
+        </a>
+    </nav>
+    <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+</header>
+<!-- =====================================================
+     DESKTOP EDITION
+====================================================== -->
+<main class="penang-desktop">
+<!-- =====================================================
+     OPENING SPREAD
+====================================================== -->
+<section class="pg-opening">
+    <div class="pg-opening-hero">
+        <img
+            src="../images/home/penang-hero.jpeg"
+            alt="Penang"
+            loading="eager"
+        >
+        <div class="edition-hero-overlay">
+            <p class="eyebrow">
+                MALAYSIA
             </p>
-
-            <h2>
-                Walk, eat, discover.
-            </h2>
-
-            <div class="edition-intro-text">
-
-                <p>
-                    We loved walking around Penang. George Town is the
-                    sort of place that rewards you for taking your time,
-                    with beautiful streets, small shops, street art and
-                    something interesting appearing around almost every
-                    corner.
-                </p>
-
-                <p>
-                    We stayed at The Blue Mansion — Cheong Fatt Tze,
-                    which gave us a great base for exploring the city.
-                    But it was really the combination of wandering and
-                    eating that made Penang work so well for us.
-                </p>
-
-                <p>
-                    We had an amazing dinner at Peninsula House and
-                    particularly enjoyed hearing about their vegetable
-                    growing room. We ate at the communal table and then
-                    stayed for some after-dinner wine upstairs. It was
-                    one of those meals that became part of the experience
-                    rather than simply somewhere to eat.
-                </p>
-
-                <p>
-                    We also enjoyed a nice lunch at the Eastern &amp;
-                    Oriental Hotel and spent a day up on Penang Hill,
-                    where we had fantastic views over the city and saw
-                    plenty of wildlife and monkeys.
-                </p>
-
-            </div>
-
+            <h1>
+                Penang
+            </h1>
+            <p class="edition-hero-subtitle">
+                Walk, eat &amp; discover George Town.
+            </p>
         </div>
-
     </div>
-
-</section>
-
-
-<!-- =====================================================
-     PHOTOGRAPHIC STORY
-====================================================== -->
-
-<section class="edition-photo-story section">
-
-    <div class="container">
-
-        <div class="section-heading edition-photo-heading">
-
+    <div class="pg-opening-intro">
+        <p class="section-label">
+            OUR PENANG
+        </p>
+        <h2>
+            Walk, eat, discover.
+        </h2>
+        <div class="pg-opening-intro-copy">
             <p>
-                FROM OUR CAMERA
+                We loved walking around Penang. George Town is the
+                sort of place that rewards you for taking your time,
+                with beautiful streets, old shophouses, street art
+                and something interesting appearing around almost
+                every corner.
             </p>
-
-            <h2>
-                Penang, as we saw it.
-            </h2>
-
+            <p>
+                We stayed at The Blue Mansion, which gave us a great
+                base for exploring the city. But it was really the
+                combination of wandering, eating and discovering
+                that made Penang work so well for us.
+            </p>
+            <p>
+                We also spent a day up on Penang Hill. The views over
+                the whole city were fantastic, but the wildlife made
+                the experience even more memorable — we saw monkeys
+                while walking through the hills.
+            </p>
         </div>
-
-
-        <div class="edition-photo-mosaic">
-
-            <img
-                src="penang1.jpeg"
-                alt="George Town, Penang"
-                loading="eager"
-            >
-
-            <img
-                src="penang2.jpeg"
-                alt="George Town, Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang3.jpeg"
-                alt="George Town, Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang7.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang8.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang9.jpeg"
-                alt="Penang streets"
-                loading="lazy"
-            >
-
-            <img
-                src="penang10.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang11.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang12.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang13.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang14.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-        </div>
-
     </div>
-
 </section>
-
-
+<div class="pg-editorial">
+<!-- =====================================================
+     FROM OUR CAMERA
+====================================================== -->
+<section class="pg-editorial-section">
+<div class="section-heading">
+    <p>
+        FROM OUR CAMERA
+    </p>
+    <h2>
+        Penang, as we saw it.
+    </h2>
+</div>
+<div class="pg-grid">
+    <!-- ROW 1 -->
+    <div class="pg-text pg-r1-text">
+        <p class="section-label">
+            GEORGE TOWN
+        </p>
+        <h3>
+            A city made for wandering.
+        </h3>
+        <div class="pg-rule"></div>
+        <p>
+            Our favourite way to see George Town was simply on foot.
+            We would head out with no particular plan and let the
+            streets decide where we went next.
+        </p>
+        <p>
+            The old shophouse buildings were gorgeous, with their
+            colours, details and layers of history giving the city
+            a character that is difficult to reproduce anywhere else.
+        </p>
+    </div>
+    <img
+        class="pg-r1-img1"
+        src="penang1.jpeg"
+        alt="George Town streets and old shophouses"
+        loading="eager"
+    >
+    <img
+        class="pg-r1-img2"
+        src="penang2.jpeg"
+        alt="Historic George Town architecture"
+        loading="lazy"
+    >
+    <!-- ROW 2 -->
+    <img
+        class="pg-r2-img1"
+        src="penang3.jpeg"
+        alt="Street art in George Town"
+        loading="lazy"
+    >
+    <div class="pg-text pg-r2-text">
+        <p class="section-label">
+            STREET ART
+        </p>
+        <h3>
+            Always look up, around and behind you.
+        </h3>
+        <div class="pg-rule"></div>
+        <p>
+            One of the fun things about walking George Town was
+            spotting the street art. It never felt like we were
+            following a checklist — there was always another piece
+            appearing as we wandered through the city.
+        </p>
+    </div>
+    <img
+        class="pg-r2-img2"
+        src="penang7.jpeg"
+        alt="George Town street art and architecture"
+        loading="lazy"
+    >
+    <div class="pg-text pg-r2-text2">
+        <p class="section-label">
+            THE OLD CITY
+        </p>
+        <h3>
+            Beautiful details everywhere.
+        </h3>
+        <p>
+            Temples, old shopfronts, colourful facades and tiny
+            details make George Town incredibly photogenic. The
+            pleasure is in moving slowly enough to notice them.
+        </p>
+    </div>
+    <!-- ROW 3 -->
+    <div class="pg-text pg-r3-text">
+        <p class="section-label">
+            TEMPLES &amp; LANDMARKS
+        </p>
+        <h3>
+            History around every corner.
+        </h3>
+        <div class="pg-rule"></div>
+        <p>
+            Some of the temples we came across were beautiful and
+            added another layer to the city. Then there are the
+            landmarks that become part of the Penang experience —
+            including the famous fire station.
+        </p>
+    </div>
+    <img
+        class="pg-r3-img1"
+        src="penang8.jpeg"
+        alt="Temple in Penang"
+        loading="lazy"
+    >
+    <img
+        class="pg-r3-img2"
+        src="penang9.jpeg"
+        alt="Historic Penang building"
+        loading="lazy"
+    >
+    <img
+        class="pg-r3-img3"
+        src="penang10.jpeg"
+        alt="Famous fire station in George Town"
+        loading="lazy"
+    >
+    <!-- ROW 4 -->
+    <img
+        class="pg-r4-img1"
+        src="penang11.jpeg"
+        alt="The Blue Mansion in Penang"
+        loading="lazy"
+    >
+    <div class="pg-text pg-r4-text">
+        <p class="section-label">
+            WHERE WE STAYED
+        </p>
+        <h3>
+            The Blue Mansion.
+        </h3>
+        <div class="pg-rule"></div>
+        <p>
+            Cheong Fatt Tze — The Blue Mansion gave us a memorable
+            base in George Town and fitted perfectly with the
+            character of the city around it.
+        </p>
+        <p>
+            It was a lovely place to return to after a day spent
+            walking, eating and exploring.
+        </p>
+    </div>
+    <img
+        class="pg-r4-img2"
+        src="penang12.jpeg"
+        alt="The Blue Mansion and Penang architecture"
+        loading="lazy"
+    >
+    <!-- ROW 5 -->
+    <div class="pg-text pg-r5-text">
+        <p class="section-label">
+            UP IN THE HILLS
+        </p>
+        <h3>
+            A different view of Penang.
+        </h3>
+        <div class="pg-rule"></div>
+        <p>
+            Penang Hill was one of our favourite days. The views
+            back over the whole city were fantastic and gave us a
+            completely different perspective on George Town.
+        </p>
+        <p>
+            And then there were the monkeys. Seeing them while
+            walking through the hills made the day feel much more
+            like an adventure than a sightseeing trip.
+        </p>
+    </div>
+    <img
+        class="pg-r5-img1"
+        src="penang13.jpeg"
+        alt="View over George Town from Penang Hill"
+        loading="lazy"
+    >
+    <img
+        class="pg-r5-img2"
+        src="penang14.jpeg"
+        alt="Monkey on Penang Hill"
+        loading="lazy"
+    >
+</div>
+</section>
 <!-- =====================================================
      LOCAL INFORMATION
 ====================================================== -->
-
-<section class="edition-local-info">
-
-    <div class="container">
-
-        <div class="edition-local-info-grid">
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    WHERE WE STAYED
-                </p>
-
-                <h3>
-                    The Blue Mansion
-                </h3>
-
-                <p>
-                    Cheong Fatt Tze — The Blue Mansion gave us a
-                    memorable base in George Town and put us right
-                    into the character of Penang.
-                </p>
-
-            </div>
-
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    OUR FAVOURITE DAY
-                </p>
-
-                <h3>
-                    Penang Hill
-                </h3>
-
-                <p>
-                    Head up for great views across the city and keep
-                    an eye out for the wildlife and monkeys along the
-                    way.
-                </p>
-
-            </div>
-
-
-            <div class="edition-local-info-item">
-
-                <p class="section-label">
-                    THE BEST WAY AROUND
-                </p>
-
-                <h3>
-                    On foot
-                </h3>
-
-                <p>
-                    We loved walking the streets, discovering street
-                    art, small shops, old buildings and whatever else
-                    happened to be around the next corner.
-                </p>
-
-            </div>
-
-        </div>
-
+<section class="pg-info">
+<div class="pg-info-grid">
+    <div class="pg-info-item">
+        <p class="section-label">
+            WHERE WE STAYED
+        </p>
+        <h3>
+            The Blue Mansion
+        </h3>
+        <p>
+            Cheong Fatt Tze — The Blue Mansion gave us a memorable
+            base in George Town and put us right into the character
+            of Penang.
+        </p>
     </div>
-
+    <div class="pg-info-item">
+        <p class="section-label">
+            OUR FAVOURITE DAY
+        </p>
+        <h3>
+            Penang Hill
+        </h3>
+        <p>
+            Head into the hills for fantastic views across George
+            Town and keep an eye out for the monkeys and other
+            wildlife along the way.
+        </p>
+    </div>
+    <div class="pg-info-item">
+        <p class="section-label">
+            THE BEST WAY AROUND
+        </p>
+        <h3>
+            On foot
+        </h3>
+        <p>
+            We loved walking the streets, spotting street art,
+            admiring old shophouses and discovering temples,
+            landmarks and restaurants along the way.
+        </p>
+    </div>
+</div>
 </section>
-
-
 <!-- =====================================================
      RECOMMENDATIONS
 ====================================================== -->
-
-<section class="edition-recommendations section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p>
-                OUR RECOMMENDATIONS
-            </p>
-
-            <h2>
-                Places we loved.
-            </h2>
-
-        </div>
-
-
-        <div class="edition-recommendations-grid">
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    01
-                </p>
-
-                <h3>
-                    The Blue Mansion
-                </h3>
-
-                <p>
-                    Cheong Fatt Tze — The Blue Mansion was where we
-                    stayed and made a memorable base for exploring
-                    George Town.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    02
-                </p>
-
-                <h3>
-                    Peninsula House
-                </h3>
-
-                <p>
-                    An amazing dinner and one of our favourite
-                    experiences in Penang. We loved hearing about
-                    their vegetable growing room, eating at the
-                    communal table and enjoying wine upstairs
-                    afterwards.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    03
-                </p>
-
-                <h3>
-                    Eastern &amp; Oriental
-                </h3>
-
-                <p>
-                    We enjoyed a nice lunch at the E&amp;O and would
-                    definitely include it when exploring George Town.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    04
-                </p>
-
-                <h3>
-                    George Town
-                </h3>
-
-                <p>
-                    The best way to experience it is simply to walk.
-                    Street art, small shops and beautiful old streets
-                    make wandering part of the attraction.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    05
-                </p>
-
-                <h3>
-                    Penang Hill
-                </h3>
-
-                <p>
-                    A great day out above the city, with fantastic
-                    views and plenty of wildlife and monkeys to keep
-                    things interesting.
-                </p>
-
-            </article>
-
-
-            <article class="edition-recommendation">
-
-                <p class="story-number">
-                    06
-                </p>
-
-                <h3>
-                    The food
-                </h3>
-
-                <p>
-                    Penang has some amazing restaurants and food
-                    quickly became one of the main reasons we enjoyed
-                    the trip so much.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
+<section class="pg-recommendations">
+<div class="pg-recommendations-heading">
+    <p class="section-label">
+        OUR RECOMMENDATIONS
+    </p>
+    <h2>
+        Places &amp; experiences we loved.
+    </h2>
+</div>
+<div class="pg-recommendation-list">
+    <article class="pg-recommendation">
+        <span class="pg-rec-number">01</span>
+        <h3>
+            The Blue Mansion
+        </h3>
+        <p>
+            Cheong Fatt Tze — The Blue Mansion was where we stayed
+            and made a memorable base for exploring George Town.
+        </p>
+    </article>
+    <article class="pg-recommendation">
+        <span class="pg-rec-number">02</span>
+        <h3>
+            George Town
+        </h3>
+        <p>
+            The best way to experience the city is simply to walk.
+            Beautiful old shophouses, street art, temples and
+            unexpected details make wandering part of the attraction.
+        </p>
+    </article>
+    <article class="pg-recommendation">
+        <span class="pg-rec-number">03</span>
+        <h3>
+            Peninsula House
+        </h3>
+        <p>
+            An amazing dinner and one of our favourite experiences.
+            We loved hearing about their vegetable growing room,
+            eating at the communal table and staying for wine upstairs.
+        </p>
+    </article>
+    <article class="pg-recommendation">
+        <span class="pg-rec-number">04</span>
+        <h3>
+            Eastern &amp; Oriental
+        </h3>
+        <p>
+            We enjoyed a lovely lunch at the E&amp;O and would
+            definitely include it when exploring George Town.
+        </p>
+    </article>
+    <article class="pg-recommendation">
+        <span class="pg-rec-number">05</span>
+        <h3>
+            Penang Hill
+        </h3>
+        <p>
+            Fantastic views over the city, beautiful hill scenery
+            and the added excitement of seeing monkeys while
+            walking around.
+        </p>
+    </article>
+    <article class="pg-recommendation">
+        <span class="pg-rec-number">06</span>
+        <h3>
+            The food
+        </h3>
+        <p>
+            Food was a big part of what made Penang work for us,
+            from memorable restaurants to the pleasure of simply
+            finding somewhere interesting while wandering.
+        </p>
+    </article>
+</div>
 </section>
-
-
 <!-- =====================================================
      OUR EDIT
 ====================================================== -->
-
-<section class="edition-journal section">
-
-    <div class="container">
-
-        <div class="edition-journal-inner">
-
-            <div>
-
-                <p class="section-label">
-                    OUR EDIT
-                </p>
-
-                <h2>
-                    Leave plenty of time to wander.
-                </h2>
-
-            </div>
-
-
-            <div class="edition-journal-copy">
-
-                <p>
-                    What we loved most about Penang was how easy it was
-                    to spend a day without much of a plan. We would
-                    walk the streets of George Town, stop to look at
-                    street art, wander into small shops and eventually
-                    find somewhere good to eat.
-                </p>
-
-                <p>
-                    Peninsula House was a particular highlight. The
-                    vegetable growing room was fascinating to hear
-                    about, and sitting at the communal table before
-                    heading upstairs for some after-dinner wine made
-                    the whole evening feel very personal.
-                </p>
-
-                <p>
-                    Then there was Penang Hill, which gave us a
-                    completely different perspective on the city.
-                    The views were fantastic, but the wildlife and
-                    monkeys made the day just as memorable.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="pg-journal">
+<div>
+    <p class="section-label">
+        OUR EDIT
+    </p>
+    <h2>
+        Leave plenty of time to wander.
+    </h2>
+</div>
+<div class="pg-journal-copy">
+    <p>
+        What we loved most about Penang was how easy it was to
+        spend a day without much of a plan. We would walk through
+        George Town, spot street art, admire the old shophouses
+        and discover another temple or landmark along the way.
+    </p>
+    <p>
+        The city is incredibly photogenic. The old buildings,
+        colourful details and famous fire station all became part
+        of the fun of simply seeing what was around the next corner.
+    </p>
+    <p>
+        Food was another big part of the experience. Peninsula House
+        was a particular highlight, while lunch at the Eastern &amp;
+        Oriental added another memorable stop.
+    </p>
+    <p>
+        And then there was Penang Hill. The views back over the
+        whole city were superb, but seeing monkeys while walking
+        through the hills made the day even more memorable.
+    </p>
+</div>
 </section>
-
-
 <!-- =====================================================
-     SECONDARY GALLERY
+     MORE FROM OUR CAMERA
 ====================================================== -->
-
-<section class="edition-gallery section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p>
-                MORE FROM OUR CAMERA
-            </p>
-
-            <h2>
-                More from Penang.
-            </h2>
-
-        </div>
-
-
-        <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-
-            <img
-                src="penang15.jpeg"
-                alt="Food in Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang16.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang17.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang18.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang19.jpeg"
-                alt="Penang"
-                loading="lazy"
-            >
-
-            <img
-                src="penang20.jpeg"
-                alt="Penang restaurant and food"
-                loading="lazy"
-            >
-
-        </div>
-
+<section class="pg-editorial-section">
+<div class="pg-final-grid">
+    <div class="pg-final-heading">
+        <p class="section-label">
+            MORE FROM OUR CAMERA
+        </p>
+        <h2>
+            More from Penang.
+        </h2>
     </div>
-
+    <img
+        class="pg-final-img1"
+        src="penang15.jpeg"
+        alt="Food in Penang"
+        loading="lazy"
+    >
+    <img
+        class="pg-final-img2"
+        src="penang16.jpeg"
+        alt="Penang street scene"
+        loading="lazy"
+    >
+    <img
+        class="pg-final-img3"
+        src="penang17.jpeg"
+        alt="Penang architecture"
+        loading="lazy"
+    >
+    <img
+        class="pg-final-img4"
+        src="penang18.jpeg"
+        alt="Penang street and old buildings"
+        loading="lazy"
+    >
+    <img
+        class="pg-final-img5"
+        src="penang19.jpeg"
+        alt="Penang restaurant and food"
+        loading="lazy"
+    >
+    <img
+        class="pg-final-img6"
+        src="penang20.jpeg"
+        alt="Penang food and dining"
+        loading="lazy"
+    >
+</div>
 </section>
-
-
 <!-- =====================================================
      MAP
 ====================================================== -->
-
-<section class="edition-map section">
-
-    <div class="container">
-
-        <div class="edition-map-inner">
-
-            <p class="section-label">
-                OUR MAP
-            </p>
-
-            <h2>
-                Penang.
-            </h2>
-
-            <p>
-                George Town, The Blue Mansion, Penang Hill and the
-                restaurants, streets and places that made this trip
-                such a pleasure to explore.
-            </p>
-
-        </div>
-
-    </div>
-
+<section class="pg-map">
+<div class="pg-map-inner">
+    <p class="section-label">
+        OUR MAP
+    </p>
+    <h2>
+        Penang.
+    </h2>
+    <p>
+        George Town, The Blue Mansion, Penang Hill and the
+        restaurants, streets, temples and places that made this
+        such a pleasure to explore.
+    </p>
+</div>
 </section>
-
-
-</main>
-
-
 <!-- =====================================================
-     EDITION END NAV
+     END
 ====================================================== -->
-
-<section class="edition-end">
-
-    <a
-        href="/"
-        class="text-link"
-    >
-        ← Back to Home
-    </a>
-
-    <a
-        href="editions.html"
-        class="text-link"
-    >
-        View All Editions →
-    </a>
-
+<section class="pg-end">
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
 </section>
-
-
+</div>
+</main>
+<!-- =====================================================
+     MOBILE
+====================================================== -->
+<main class="penang-mobile">
+<section
+    class="edition-hero"
+    style="background-image:url('../images/home/penang-hero.jpeg');"
+>
+<div class="edition-hero-overlay">
+    <p class="eyebrow">
+        MALAYSIA
+    </p>
+    <h1>
+        Penang
+    </h1>
+    <p class="edition-hero-subtitle">
+        Walk, eat &amp; discover George Town.
+    </p>
+</div>
+</section>
+<!-- INTRODUCTION -->
+<section class="edition-intro section">
+<div class="container">
+<div class="edition-intro-inner">
+    <p class="section-label">
+        OUR PENANG
+    </p>
+    <h2>
+        Walk, eat, discover.
+    </h2>
+    <div class="edition-intro-text">
+        <p>
+            We loved walking around Penang. George Town is the sort
+            of place that rewards you for taking your time, with
+            beautiful streets, old shophouses, street art and
+            something interesting appearing around almost every corner.
+        </p>
+        <p>
+            We stayed at The Blue Mansion, which gave us a great base
+            for exploring the city. But it was really the combination
+            of wandering, eating and discovering that made Penang
+            work so well for us.
+        </p>
+        <p>
+            We also spent a day up on Penang Hill. The views over
+            the whole city were fantastic, but the wildlife made the
+            experience even more memorable — we saw monkeys while
+            walking through the hills.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+<!-- PHOTOGRAPHIC STORY -->
+<section class="edition-photo-story section">
+<div class="container">
+<div class="section-heading edition-photo-heading">
+    <p>
+        FROM OUR CAMERA
+    </p>
+    <h2>
+        Penang, as we saw it.
+    </h2>
+</div>
+<div class="edition-photo-mosaic">
+    <img src="penang1.jpeg" alt="George Town streets and old shophouses" loading="eager">
+    <img src="penang2.jpeg" alt="Historic George Town architecture" loading="lazy">
+    <img src="penang3.jpeg" alt="Street art in George Town" loading="lazy">
+    <img src="penang7.jpeg" alt="George Town street art and architecture" loading="lazy">
+    <img src="penang8.jpeg" alt="Temple in Penang" loading="lazy">
+    <img src="penang9.jpeg" alt="Historic Penang building" loading="lazy">
+    <img src="penang10.jpeg" alt="Famous fire station in George Town" loading="lazy">
+    <img src="penang11.jpeg" alt="The Blue Mansion in Penang" loading="lazy">
+    <img src="penang12.jpeg" alt="The Blue Mansion and Penang architecture" loading="lazy">
+    <img src="penang13.jpeg" alt="View over George Town from Penang Hill" loading="lazy">
+    <img src="penang14.jpeg" alt="Monkey on Penang Hill" loading="lazy">
+</div>
+</div>
+</section>
+<!-- LOCAL INFORMATION -->
+<section class="edition-local-info">
+<div class="container">
+<div class="edition-local-info-grid">
+    <div class="edition-local-info-item">
+        <p class="section-label">
+            WHERE WE STAYED
+        </p>
+        <h3>
+            The Blue Mansion
+        </h3>
+        <p>
+            Cheong Fatt Tze — The Blue Mansion gave us a memorable
+            base in George Town and put us right into the character
+            of Penang.
+        </p>
+    </div>
+    <div class="edition-local-info-item">
+        <p class="section-label">
+            OUR FAVOURITE DAY
+        </p>
+        <h3>
+            Penang Hill
+        </h3>
+        <p>
+            Head into the hills for fantastic views across George
+            Town and keep an eye out for monkeys and other wildlife.
+        </p>
+    </div>
+    <div class="edition-local-info-item">
+        <p class="section-label">
+            THE BEST WAY AROUND
+        </p>
+        <h3>
+            On foot
+        </h3>
+        <p>
+            We loved walking the streets, spotting street art,
+            admiring old shophouses and discovering temples,
+            landmarks and restaurants along the way.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+<!-- RECOMMENDATIONS -->
+<section class="edition-recommendations section">
+<div class="container">
+<div class="section-heading">
+    <p>
+        OUR RECOMMENDATIONS
+    </p>
+    <h2>
+        Places &amp; experiences we loved.
+    </h2>
+</div>
+<div class="edition-recommendations-grid">
+    <article class="edition-recommendation">
+        <p class="story-number">01</p>
+        <h3>
+            The Blue Mansion
+        </h3>
+        <p>
+            Cheong Fatt Tze — The Blue Mansion was where we stayed
+            and made a memorable base for exploring George Town.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">02</p>
+        <h3>
+            George Town
+        </h3>
+        <p>
+            The best way to experience the city is simply to walk.
+            Beautiful old shophouses, street art, temples and
+            unexpected details make wandering part of the attraction.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">03</p>
+        <h3>
+            Peninsula House
+        </h3>
+        <p>
+            An amazing dinner and one of our favourite experiences.
+            We loved hearing about their vegetable growing room,
+            eating at the communal table and staying for wine upstairs.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">04</p>
+        <h3>
+            Eastern &amp; Oriental
+        </h3>
+        <p>
+            We enjoyed a lovely lunch at the E&amp;O and would
+            definitely include it when exploring George Town.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">05</p>
+        <h3>
+            Penang Hill
+        </h3>
+        <p>
+            Fantastic views over the city, beautiful hill scenery
+            and the added excitement of seeing monkeys while
+            walking around.
+        </p>
+    </article>
+    <article class="edition-recommendation">
+        <p class="story-number">06</p>
+        <h3>
+            The food
+        </h3>
+        <p>
+            Food was a big part of what made Penang work for us,
+            from memorable restaurants to the pleasure of simply
+            finding somewhere interesting while wandering.
+        </p>
+    </article>
+</div>
+</div>
+</section>
+<!-- OUR EDIT -->
+<section class="edition-journal section">
+<div class="container">
+<div class="edition-journal-inner">
+    <div>
+        <p class="section-label">
+            OUR EDIT
+        </p>
+        <h2>
+            Leave plenty of time to wander.
+        </h2>
+    </div>
+    <div class="edition-journal-copy">
+        <p>
+            What we loved most about Penang was how easy it was to
+            spend a day without much of a plan. We would walk through
+            George Town, spot street art, admire the old shophouses
+            and discover another temple or landmark along the way.
+        </p>
+        <p>
+            The city is incredibly photogenic. The old buildings,
+            colourful details and famous fire station all became part
+            of the fun of simply seeing what was around the next corner.
+        </p>
+        <p>
+            Food was another big part of the experience. Peninsula
+            House was a particular highlight, while lunch at the
+            Eastern &amp; Oriental added another memorable stop.
+        </p>
+        <p>
+            And then there was Penang Hill. The views back over the
+            whole city were superb, but seeing monkeys while walking
+            through the hills made the day even more memorable.
+        </p>
+    </div>
+</div>
+</div>
+</section>
+<!-- MORE FROM CAMERA -->
+<section class="edition-gallery section">
+<div class="container">
+<div class="section-heading">
+    <p>
+        MORE FROM OUR CAMERA
+    </p>
+    <h2>
+        More from Penang.
+    </h2>
+</div>
+<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
+    <img src="penang15.jpeg" alt="Food in Penang" loading="lazy">
+    <img src="penang16.jpeg" alt="Penang street scene" loading="lazy">
+    <img src="penang17.jpeg" alt="Penang architecture" loading="lazy">
+    <img src="penang18.jpeg" alt="Penang street and old buildings" loading="lazy">
+    <img src="penang19.jpeg" alt="Penang restaurant and food" loading="lazy">
+    <img src="penang20.jpeg" alt="Penang food and dining" loading="lazy">
+</div>
+</div>
+</section>
+<!-- MAP -->
+<section class="edition-map section">
+<div class="container">
+<div class="edition-map-inner">
+    <p class="section-label">
+        OUR MAP
+    </p>
+    <h2>
+        Penang.
+    </h2>
+    <p>
+        George Town, The Blue Mansion, Penang Hill and the
+        restaurants, streets, temples and places that made this
+        such a pleasure to explore.
+    </p>
+</div>
+</div>
+</section>
+<!-- END -->
+<section class="edition-end">
+<a href="/" class="text-link">
+    ← Back to Home
+</a>
+<a href="editions.html" class="text-link">
+    View All Editions →
+</a>
+</section>
+</main>
 <!-- =====================================================
      FOOTER
 ====================================================== -->
-
 <footer class="site-footer">
-
-    <div class="site-footer-inner">
-
-        <div>
-
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-
-            <p class="footer-description">
-                Travel, places &amp; observations from life abroad.
-            </p>
-
+<div class="site-footer-inner">
+    <div>
+        <div class="footer-logo">
+            THE EXPAT EDITS
         </div>
-
-
-        <nav class="footer-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="index-new.html#about">
-                About
-            </a>
-
-        </nav>
-
-
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-
-
-        <p class="footer-copyright">
-            © The Expat Edits
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
         </p>
-
     </div>
-
+    <nav class="footer-nav">
+        <a href="editions.html">
+            Editions
+        </a>
+        <a href="index-new.html#journal">
+            Journal
+        </a>
+        <a href="index-new.html#map">
+            Map
+        </a>
+        <a href="index-new.html#about">
+            About
+        </a>
+    </nav>
+    <a
+        href="https://www.instagram.com/theexpatedits/"
+        class="footer-social"
+        target="_blank"
+        rel="noopener"
+    >
+        Instagram
+    </a>
+    <p class="footer-copyright">
+        © The Expat Edits
+    </p>
+</div>
 </footer>
-
-
 </body>
-
 </html>

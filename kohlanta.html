@@ -1,167 +1,770 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
-
     <title>Koh Lanta | The Expat Edits</title>
-
     <meta
         name="description"
-        content="Koh Lanta — beautiful beaches, slow days, Muay Thai, great food and a spacious private pool villa at Pimalai Resort & Spa."
+        content="Koh Lanta — slow island days, warm water, Muay Thai and a beautiful private pool villa at Pimalai Resort & Spa."
     >
-
     <!-- Google Fonts -->
-
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
     >
-
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
         crossorigin
     >
-
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet"
     >
-
     <!-- MASTER SITE CSS -->
-
     <link
         rel="stylesheet"
         href="style-new.css"
     >
-
     <!-- EDITION MASTER CSS -->
-
     <link
         rel="stylesheet"
         href="style-editions-new.css"
     >
-
+    <style>
+        /* =====================================================
+           KOH LANTA — SINGAPORE1 EDITORIAL TEMPLATE
+        ====================================================== */
+        .lanta-desktop {
+            display: block;
+        }
+        .lanta-mobile {
+            display: none;
+        }
+        .lanta-wrap {
+            width: min(1400px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+        .lanta-wide {
+            width: min(1500px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+        .lanta-opening {
+            display: grid;
+            grid-template-columns: 1.25fr .75fr;
+            gap: 75px;
+            align-items: end;
+            width: min(1500px, calc(100% - 80px));
+            margin: 90px auto 130px;
+        }
+        .lanta-opening-hero {
+            position: relative;
+        }
+        .lanta-opening-hero img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .lanta-opening-hero::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 38%;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,.58),
+                rgba(0,0,0,0)
+            );
+            pointer-events: none;
+        }
+        .lanta-opening-caption {
+            position: absolute;
+            left: 34px;
+            bottom: 30px;
+            z-index: 2;
+            color: #fff;
+            max-width: 80%;
+        }
+        .lanta-opening-caption .eyebrow {
+            margin-bottom: 8px;
+        }
+        .lanta-opening-caption h1 {
+            margin: 0;
+        }
+        .lanta-opening-intro {
+            padding-bottom: 8px;
+        }
+        .lanta-opening-intro .section-label {
+            margin-bottom: 18px;
+        }
+        .lanta-opening-intro h2 {
+            margin-bottom: 28px;
+        }
+        .lanta-opening-intro p {
+            max-width: 520px;
+        }
+        .lanta-editorial {
+            width: min(1400px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+        .lanta-section {
+            margin-bottom: 115px;
+        }
+        .lanta-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 28px;
+            row-gap: 42px;
+            align-items: center;
+        }
+        .lanta-grid img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .lanta-text {
+            align-self: center;
+        }
+        .lanta-text .section-label {
+            margin-bottom: 14px;
+        }
+        .lanta-text h2 {
+            margin-bottom: 18px;
+        }
+        .lanta-text p {
+            max-width: 470px;
+        }
+        /* ROW 1 */
+        .lanta-r1-text {
+            grid-column: 1 / 5;
+        }
+        .lanta-r1-img1 {
+            grid-column: 6 / 9;
+        }
+        .lanta-r1-img2 {
+            grid-column: 9 / 13;
+        }
+        /* ROW 2 */
+        .lanta-r2-img1 {
+            grid-column: 1 / 5;
+        }
+        .lanta-r2-text1 {
+            grid-column: 5 / 8;
+        }
+        .lanta-r2-img2 {
+            grid-column: 8 / 10;
+        }
+        .lanta-r2-text2 {
+            grid-column: 10 / 13;
+        }
+        /* ROW 3 */
+        .lanta-r3-text {
+            grid-column: 1 / 5;
+        }
+        .lanta-r3-img1 {
+            grid-column: 5 / 8;
+        }
+        .lanta-r3-img2 {
+            grid-column: 8 / 10;
+        }
+        .lanta-r3-img3 {
+            grid-column: 10 / 13;
+        }
+        /* ROW 4 */
+        .lanta-r4-img1 {
+            grid-column: 1 / 5;
+        }
+        .lanta-r4-text {
+            grid-column: 5 / 9;
+        }
+        .lanta-r4-img2 {
+            grid-column: 9 / 13;
+        }
+        /* FINAL PHOTO FIELD */
+        .lanta-final {
+            margin: 130px auto 120px;
+        }
+        .lanta-final-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+        .lanta-final-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .lanta-final-grid img:nth-child(2),
+        .lanta-final-grid img:nth-child(4) {
+            margin-top: 55px;
+        }
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .lanta-desktop {
+                display: none;
+            }
+            .lanta-mobile {
+                display: block;
+            }
+        }
+    </style>
 </head>
-
-
 <body class="edition-page">
-
-
 <!-- =====================================================
      HEADER
 ====================================================== -->
-
 <header class="site-header">
-
     <div class="site-header-inner">
-
         <a
             href="/"
             class="site-logo"
         >
             THE EXPAT EDITS
         </a>
-
-
         <nav class="site-nav">
-
             <a href="editions.html">
                 Editions
             </a>
-
             <a href="index-new.html#journal">
                 Journal
             </a>
-
             <a href="index-new.html#map">
                 Map
             </a>
-
             <a href="index-new.html#about">
                 About
             </a>
-
         </nav>
-
-
         <button
             class="menu-toggle"
             type="button"
             aria-label="Open navigation"
         >
-
             <span></span>
             <span></span>
             <span></span>
-
         </button>
-
     </div>
-
 </header>
-
-
-
 <main>
-
-
 <!-- =====================================================
-     HERO
+     DESKTOP — SINGAPORE1 EDITORIAL VERSION
 ====================================================== -->
-
+<div class="lanta-desktop">
+<!-- =====================================================
+     OPENING SPREAD
+====================================================== -->
+<section class="lanta-opening">
+    <div class="lanta-opening-hero">
+        <img
+            src="lanta-hero.jpeg"
+            alt="Koh Lanta"
+            loading="eager"
+        >
+        <div class="lanta-opening-caption">
+            <p class="eyebrow">
+                THAILAND
+            </p>
+            <h1>
+                Koh Lanta
+            </h1>
+        </div>
+    </div>
+    <div class="lanta-opening-intro">
+        <p class="section-label">
+            OUR KOH LANTA
+        </p>
+        <h2>
+            The island where doing very little felt like exactly the right thing.
+        </h2>
+        <p>
+            Koh Lanta was never about racing around the island ticking
+            things off. We found ourselves happily staying close to
+            Pimalai, where the villa, pool, beach and warm Andaman water
+            gave us more than enough for a few wonderfully slow days.
+        </p>
+    </div>
+</section>
+<!-- =====================================================
+     EDITORIAL STORY
+====================================================== -->
+<section class="lanta-editorial">
+<!-- =====================================================
+     ROW 1 — THE VILLA
+====================================================== -->
+<div class="lanta-section">
+    <div class="lanta-grid">
+        <div class="lanta-text lanta-r1-text">
+            <p class="section-label">
+                THE BASE
+            </p>
+            <h2>
+                Our own little corner of the island.
+            </h2>
+            <p>
+                We stayed at Pimalai Resort &amp; Spa in a spacious duplex
+                private pool villa, and it quickly became the centre of
+                the holiday. There was something particularly easy about
+                having a beautiful space to retreat to — somewhere for
+                lazy mornings, swims and long stretches of absolutely
+                nothing.
+            </p>
+        </div>
+        <div class="lanta-r1-img1">
+            <img
+                src="lanta1.jpeg"
+                alt="Koh Lanta coastline"
+                loading="lazy"
+            >
+        </div>
+        <div class="lanta-r1-img2">
+            <img
+                src="lanta2.jpeg"
+                alt="Tropical Koh Lanta scenery"
+                loading="lazy"
+            >
+        </div>
+    </div>
+</div>
+<!-- =====================================================
+     ROW 2 — SLOW DAYS
+====================================================== -->
+<div class="lanta-section">
+    <div class="lanta-grid">
+        <div class="lanta-r2-img1">
+            <img
+                src="lanta3.jpeg"
+                alt="Beach on Koh Lanta"
+                loading="lazy"
+            >
+        </div>
+        <div class="lanta-text lanta-r2-text1">
+            <p class="section-label">
+                SLOW DAYS
+            </p>
+            <h2>
+                We didn't really need to go anywhere.
+            </h2>
+            <p>
+                That became the beauty of Koh Lanta for us. Days slipped
+                naturally from the pool to the beach and back again.
+                There was no pressure to make an itinerary work when
+                the surroundings were already doing the job.
+            </p>
+        </div>
+        <div class="lanta-r2-img2">
+            <img
+                src="lanta4.jpeg"
+                alt="Koh Lanta beach and sea"
+                loading="lazy"
+            >
+        </div>
+        <div class="lanta-text lanta-r2-text2">
+            <p>
+                We would wander down towards the water, settle into the
+                warmth and let the day unfold. It was the kind of holiday
+                rhythm that is surprisingly difficult to manufacture —
+                and wonderfully easy to fall into here.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- =====================================================
+     ROW 3 — MUAY THAI / BEACH / FAMILY
+====================================================== -->
+<div class="lanta-section">
+    <div class="lanta-grid">
+        <div class="lanta-text lanta-r3-text">
+            <p class="section-label">
+                THE ROUTINE
+            </p>
+            <h2>
+                A little energy before the island slowed us down again.
+            </h2>
+            <p>
+                Daily Muay Thai lessons gave the mornings some structure.
+                It was a brilliant way to start the day — a little effort,
+                plenty of energy, and then back into holiday mode.
+            </p>
+        </div>
+        <div class="lanta-r3-img1">
+            <img
+                src="lanta5.jpeg"
+                alt="Koh Lanta island life"
+                loading="lazy"
+            >
+        </div>
+        <div class="lanta-r3-img2">
+            <img
+                src="lanta6.jpeg"
+                alt="Tropical landscape on Koh Lanta"
+                loading="lazy"
+            >
+        </div>
+        <div class="lanta-r3-img3">
+            <img
+                src="lanta7.jpeg"
+                alt="Relaxing around Koh Lanta"
+                loading="lazy"
+            >
+        </div>
+    </div>
+</div>
+<!-- =====================================================
+     ROW 4 — FOOD / BEACH / VILLA
+====================================================== -->
+<div class="lanta-section">
+    <div class="lanta-grid">
+        <div class="lanta-r4-img1">
+            <img
+                src="lanta8.jpeg"
+                alt="Koh Lanta beach"
+                loading="lazy"
+            >
+        </div>
+        <div class="lanta-text lanta-r4-text">
+            <p class="section-label">
+                LONG LUNCHES &amp; DINNERS
+            </p>
+            <h2>
+                Evenings were made for good food.
+            </h2>
+            <p>
+                One of the highlights was having a chef come and cook for
+                us on the terrace. It turned an ordinary evening at the
+                villa into something memorable — good food, warm air and
+                nowhere else we needed to be.
+            </p>
+            <p>
+                That became part of what made the stay feel so easy.
+                Meals were never rushed and evenings didn't need much
+                planning. On Koh Lanta, the simplest plans often turned
+                out to be the best ones.
+            </p>
+        </div>
+        <div class="lanta-r4-img2">
+            <img
+                src="lanta9.jpeg"
+                alt="Koh Lanta island surroundings"
+                loading="lazy"
+            >
+        </div>
+    </div>
+</div>
+<!-- =====================================================
+     ROW 5 — THE ISLAND
+====================================================== -->
+<div class="lanta-section">
+    <div class="lanta-grid">
+        <div class="lanta-text lanta-r1-text">
+            <p class="section-label">
+                BEYOND THE VILLA
+            </p>
+            <h2>
+                And when we did venture out...
+            </h2>
+            <p>
+                Koh Lanta has plenty to explore when you feel like moving.
+                The island stretches between long beaches and forested
+                hills, with quieter corners and local life appearing
+                whenever you head away from the main resort areas.
+            </p>
+            <p>
+                But perhaps the best thing about the island was knowing
+                that none of it was compulsory. We could explore when we
+                wanted to — and happily return to the pool when we didn't.
+            </p>
+        </div>
+        <div class="lanta-r1-img1">
+            <img
+                src="lanta10.jpeg"
+                alt="Koh Lanta landscape"
+                loading="lazy"
+            >
+        </div>
+        <div class="lanta-r1-img2">
+            <img
+                src="lanta11.jpeg"
+                alt="Koh Lanta beach and island life"
+                loading="lazy"
+            >
+        </div>
+    </div>
+</div>
+<!-- =====================================================
+     LOCAL INFORMATION
+====================================================== -->
+<section class="edition-local-info">
+    <div class="container">
+        <div class="edition-local-info-grid">
+            <div class="edition-local-info-item">
+                <p class="section-label">
+                    BEST TIME
+                </p>
+                <h3>
+                    November – April
+                </h3>
+                <p>
+                    The dry season is generally the best time to enjoy
+                    Koh Lanta, with sunnier days and calmer seas.
+                </p>
+            </div>
+            <div class="edition-local-info-item">
+                <p class="section-label">
+                    THE FEELING
+                </p>
+                <h3>
+                    Slow &amp; relaxed
+                </h3>
+                <p>
+                    Long beaches, warm water and a wonderfully unhurried
+                    island rhythm.
+                </p>
+            </div>
+            <div class="edition-local-info-item">
+                <p class="section-label">
+                    GETTING AROUND
+                </p>
+                <h3>
+                    Easy island life
+                </h3>
+                <p>
+                    There is plenty to explore, but Koh Lanta is equally
+                    rewarding when you decide not to go anywhere at all.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     RECOMMENDATIONS
+====================================================== -->
+<section class="edition-recommendations section">
+    <div class="container">
+        <div class="section-heading">
+            <p>
+                OUR RECOMMENDATIONS
+            </p>
+            <h2>
+                The things that made our stay.
+            </h2>
+        </div>
+        <div class="edition-recommendations-grid">
+            <article class="edition-recommendation">
+                <p class="story-number">
+                    01
+                </p>
+                <h3>
+                    Pimalai Resort &amp; Spa
+                </h3>
+                <p>
+                    Our base on Koh Lanta. The spacious duplex private pool
+                    villa made it very easy to settle in and stay awhile.
+                </p>
+            </article>
+            <article class="edition-recommendation">
+                <p class="story-number">
+                    02
+                </p>
+                <h3>
+                    The beach
+                </h3>
+                <p>
+                    Warm water, long stretches of sand and the simple
+                    pleasure of walking down to the sea without needing
+                    a plan.
+                </p>
+            </article>
+            <article class="edition-recommendation">
+                <p class="story-number">
+                    03
+                </p>
+                <h3>
+                    A chef at the villa
+                </h3>
+                <p>
+                    Having dinner prepared for us on the terrace was one
+                    of the most memorable evenings of the trip.
+                </p>
+            </article>
+            <article class="edition-recommendation">
+                <p class="story-number">
+                    04
+                </p>
+                <h3>
+                    Muay Thai
+                </h3>
+                <p>
+                    Daily lessons gave the mornings some energy before
+                    returning to the slower pace of the island.
+                </p>
+            </article>
+            <article class="edition-recommendation">
+                <p class="story-number">
+                    05
+                </p>
+                <h3>
+                    Lanta Old Town
+                </h3>
+                <p>
+                    The east coast offers a different side of the island,
+                    with traditional wooden buildings and a quieter local
+                    atmosphere.
+                </p>
+            </article>
+            <article class="edition-recommendation">
+                <p class="story-number">
+                    06
+                </p>
+                <h3>
+                    The National Park
+                </h3>
+                <p>
+                    Forest, coastline and a wilder southern edge of the
+                    island for the days when you do feel like exploring.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     JOURNAL
+====================================================== -->
+<section class="edition-journal section">
+    <div class="container">
+        <div class="edition-journal-inner">
+            <div>
+                <p class="section-label">
+                    FROM THE JOURNAL
+                </p>
+                <h2>
+                    Sometimes the best island holiday is the one where you do less.
+                </h2>
+            </div>
+            <div class="edition-journal-copy">
+                <p>
+                    Koh Lanta wasn't the sort of place where we felt we
+                    needed to be out every morning discovering something
+                    new. Quite the opposite. We had arrived looking for
+                    an island escape, and Pimalai gave us exactly that.
+                </p>
+                <p>
+                    Our duplex villa became our little world for a few
+                    days. There were swims, beach time, Muay Thai lessons,
+                    relaxed meals and afternoons where nobody seemed
+                    particularly interested in knowing what time it was.
+                </p>
+                <p>
+                    Having a chef come and cook for us on the terrace was
+                    one of those small luxuries that stayed with us.
+                    Dinner stretched into the evening and there was no
+                    reason to go anywhere afterwards.
+                </p>
+                <p>
+                    And perhaps that is what we remember most. Koh Lanta
+                    gave us permission to slow down. There was more of the
+                    island we could have explored, of course — but some
+                    holidays are better when you don't feel obliged to.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     FINAL PHOTOGRAPHIC FIELD
+====================================================== -->
+<section class="lanta-final lanta-wide">
+    <div class="section-heading">
+        <p>
+            MORE FROM OUR CAMERA
+        </p>
+        <h2>
+            Koh Lanta, slowly.
+        </h2>
+    </div>
+    <div class="lanta-final-grid">
+        <img
+            src="lanta12.jpeg"
+            alt="Koh Lanta"
+            loading="lazy"
+        >
+    </div>
+</section>
+<!-- =====================================================
+     MAP
+====================================================== -->
+<section class="edition-map section">
+    <div class="container">
+        <div class="edition-map-inner">
+            <p class="section-label">
+                OUR MAP
+            </p>
+            <h2>
+                Koh Lanta.
+            </h2>
+            <p>
+                An island of long beaches, jungle-covered hills and slow
+                days on Thailand's Andaman coast. Koh Lanta joins the
+                places we've explored across Asia.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- =====================================================
+     END NAVIGATION
+====================================================== -->
+<section class="edition-end">
+    <a
+        href="/"
+        class="text-link"
+    >
+        ← Back to Home
+    </a>
+    <a
+        href="editions.html"
+        class="text-link"
+    >
+        View All Editions →
+    </a>
+</section>
+</div>
+<!-- =====================================================
+     MOBILE — ORIGINAL EDITION STRUCTURE
+====================================================== -->
+<div class="lanta-mobile">
 <section
     class="edition-hero"
     style="background-image: url('lanta-hero.jpeg');"
 >
-
     <div class="edition-hero-overlay">
-
         <p class="eyebrow">
             THAILAND
         </p>
-
         <h1>
             Koh Lanta
         </h1>
-
         <p class="edition-hero-subtitle">
             Slow days, warm water &amp; island life.
         </p>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     INTRODUCTION
-====================================================== -->
-
 <section class="edition-intro section">
-
     <div class="container">
-
         <div class="edition-intro-inner">
-
             <p class="section-label">
                 OUR KOH LANTA
             </p>
-
             <h2>
                 An island escape at an easier pace.
             </h2>
-
             <div class="edition-intro-text">
-
                 <p>
                     Koh Lanta felt like exactly the kind of island escape
                     we were looking for. Beautiful beaches, warm water and
@@ -169,537 +772,284 @@
                     without feeling that we needed to fill every day.
                     We stayed at Pimalai Resort &amp; Spa in a spacious
                     duplex private pool villa, which quickly became our
-                    own little retreat. Days developed an easy rhythm —
-                    swims, time around the villa, daily Muay Thai lessons,
-                    relaxed meals down the beach and plenty of time simply
-                    enjoying being together.
+                    own little retreat.
                 </p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     PHOTOGRAPHIC STORY
-====================================================== -->
-
 <section class="edition-photo-story section">
-
     <div class="container">
-
         <div class="section-heading edition-photo-heading">
-
             <p>
                 FROM OUR CAMERA
             </p>
-
             <h2>
                 Koh Lanta, as we saw it.
             </h2>
-
         </div>
-
-
         <div class="edition-photo-mosaic">
-
-
-            <img
-                src="lanta1.jpeg"
-                alt="Koh Lanta beach and tropical coastline"
-                loading="eager"
-            >
-
-            <img
-                src="lanta2.jpeg"
-                alt="Tropical scenery on Koh Lanta"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta3.jpeg"
-                alt="Beach life on Koh Lanta"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta4.jpeg"
-                alt="Koh Lanta coastline"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta5.jpeg"
-                alt="Island scenery on Koh Lanta"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta6.jpeg"
-                alt="Tropical landscape on Koh Lanta"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta7.jpeg"
-                alt="Life around Koh Lanta"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta8.jpeg"
-                alt="Koh Lanta beach and sea"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta9.jpeg"
-                alt="Island life on Koh Lanta"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta10.jpeg"
-                alt="Koh Lanta surroundings"
-                loading="lazy"
-            >
-
-            <img
-                src="lanta11.jpeg"
-                alt="Relaxing on Koh Lanta"
-                loading="lazy"
-            >
-
+            <img src="lanta1.jpeg" alt="Koh Lanta coastline" loading="eager">
+            <img src="lanta2.jpeg" alt="Tropical Koh Lanta scenery" loading="lazy">
+            <img src="lanta3.jpeg" alt="Koh Lanta beach" loading="lazy">
+            <img src="lanta4.jpeg" alt="Koh Lanta beach and sea" loading="lazy">
+            <img src="lanta5.jpeg" alt="Koh Lanta island life" loading="lazy">
+            <img src="lanta6.jpeg" alt="Tropical landscape on Koh Lanta" loading="lazy">
+            <img src="lanta7.jpeg" alt="Relaxing around Koh Lanta" loading="lazy">
+            <img src="lanta8.jpeg" alt="Koh Lanta beach" loading="lazy">
+            <img src="lanta9.jpeg" alt="Koh Lanta island surroundings" loading="lazy">
+            <img src="lanta10.jpeg" alt="Koh Lanta landscape" loading="lazy">
+            <img src="lanta11.jpeg" alt="Koh Lanta beach and island life" loading="lazy">
+            <img src="lanta12.jpeg" alt="Koh Lanta" loading="lazy">
         </div>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     LOCAL INFORMATION
-====================================================== -->
-
 <section class="edition-local-info">
-
     <div class="container">
-
         <div class="edition-local-info-grid">
-
             <div class="edition-local-info-item">
-
                 <p class="section-label">
                     BEST TIME
                 </p>
-
                 <h3>
                     November – April
                 </h3>
-
                 <p>
                     The dry season is generally the best time to enjoy
-                    Koh Lanta, with warmer, sunnier days and calmer seas.
+                    Koh Lanta, with sunnier days and calmer seas.
                 </p>
-
             </div>
-
-
             <div class="edition-local-info-item">
-
                 <p class="section-label">
                     THE FEELING
                 </p>
-
                 <h3>
                     Slow &amp; relaxed
                 </h3>
-
                 <p>
-                    Koh Lanta has a wonderfully unhurried feel. Long
-                    beaches, warm water and evenings that don't need a plan.
+                    Long beaches, warm water and a wonderfully unhurried
+                    island rhythm.
                 </p>
-
             </div>
-
-
             <div class="edition-local-info-item">
-
                 <p class="section-label">
                     GETTING AROUND
                 </p>
-
                 <h3>
                     Easy island life
                 </h3>
-
                 <p>
-                    Scooters, cars and local transfers make exploring the
-                    island straightforward, while many of the best days
-                    require very little travelling at all.
+                    There is plenty to explore, but Koh Lanta is equally
+                    rewarding when you decide not to go anywhere at all.
                 </p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     OUR RECOMMENDATIONS
-====================================================== -->
-
 <section class="edition-recommendations section">
-
     <div class="container">
-
         <div class="section-heading">
-
             <p>
                 OUR RECOMMENDATIONS
             </p>
-
             <h2>
-                Places &amp; experiences we loved.
+                The things that made our stay.
             </h2>
-
         </div>
-
-
         <div class="edition-recommendations-grid">
-
-
             <article class="edition-recommendation">
-
                 <p class="story-number">
                     01
                 </p>
-
                 <h3>
                     Pimalai Resort &amp; Spa
                 </h3>
-
                 <p>
-                    Our base on Koh Lanta. We stayed in a spacious duplex
-                    private pool villa, giving us somewhere to properly
-                    switch off between swims, meals and island adventures.
+                    Our base on Koh Lanta. The spacious duplex private pool
+                    villa made it very easy to settle in and stay awhile.
                 </p>
-
             </article>
-
-
             <article class="edition-recommendation">
-
                 <p class="story-number">
                     02
                 </p>
-
                 <h3>
-                    Life by the beach
+                    The beach
                 </h3>
-
                 <p>
-                    Some of our favourite moments were the simplest ones —
-                    swimming, wandering down the beach and settling into a
-                    relaxed meal as the day started to cool.
+                    Warm water, long stretches of sand and the simple
+                    pleasure of walking down to the sea.
                 </p>
-
             </article>
-
-
             <article class="edition-recommendation">
-
                 <p class="story-number">
                     03
                 </p>
-
                 <h3>
                     A chef at the villa
                 </h3>
-
                 <p>
-                    Having a chef come and cook for us on the terrace was
-                    one of the highlights of the stay. It turned an evening
-                    at the villa into something that felt genuinely special.
+                    Having dinner prepared for us on the terrace was one
+                    of the most memorable evenings of the trip.
                 </p>
-
             </article>
-
-
             <article class="edition-recommendation">
-
                 <p class="story-number">
                     04
                 </p>
-
                 <h3>
                     Muay Thai
                 </h3>
-
                 <p>
-                    Daily Muay Thai lessons became part of our island
-                    routine. A brilliant way to start the day before heading
-                    back to the pool, beach or breakfast.
+                    Daily lessons gave the mornings some energy before
+                    returning to the slower pace of the island.
                 </p>
-
             </article>
-
-
             <article class="edition-recommendation">
-
                 <p class="story-number">
                     05
                 </p>
-
                 <h3>
-                    Old Town
+                    Lanta Old Town
                 </h3>
-
                 <p>
-                    Koh Lanta's east coast offers a completely different
-                    side of the island, with traditional wooden buildings,
-                    small restaurants and a quieter local atmosphere.
+                    Traditional wooden buildings and a quieter local
+                    atmosphere on the east coast.
                 </p>
-
             </article>
-
-
             <article class="edition-recommendation">
-
                 <p class="story-number">
                     06
                 </p>
-
                 <h3>
-                    Koh Lanta National Park
+                    The National Park
                 </h3>
-
                 <p>
-                    At the southern end of the island, the national park
-                    brings together forest, coastline and a wilder side of
-                    Koh Lanta that feels far removed from the resort life.
+                    Forest, coastline and a wilder southern edge of
+                    Koh Lanta for when you feel like exploring.
                 </p>
-
             </article>
-
-
         </div>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     FROM THE JOURNAL
-====================================================== -->
-
 <section class="edition-journal section">
-
     <div class="container">
-
         <div class="edition-journal-inner">
-
             <div>
-
                 <p class="section-label">
                     FROM THE JOURNAL
                 </p>
-
                 <h2>
-                    Koh Lanta, our way.
+                    Sometimes the best island holiday is the one where you do less.
                 </h2>
-
             </div>
-
-
             <div class="edition-journal-copy">
-
                 <p>
-                    Koh Lanta felt like exactly the kind of island escape
-                    we had been looking for. Beautiful beaches, warm water
-                    and a slower pace made it easy to settle into holiday
-                    mode without feeling that we needed to fill every day.
+                    Koh Lanta wasn't the sort of place where we felt we
+                    needed to be out every morning discovering something
+                    new. We had arrived looking for an island escape, and
+                    Pimalai gave us exactly that.
                 </p>
-
                 <p>
-                    Our days developed their own rhythm. Daily Muay Thai
-                    lessons, swims, relaxed meals down the beach and time
-                    around the villa were enough. One of the highlights was
-                    having a chef come and cook for us on the terrace —
-                    the sort of evening that makes a family holiday feel
-                    very different from everyday life.
+                    Our days developed their own rhythm — swims, beach
+                    time, Muay Thai lessons, relaxed meals and afternoons
+                    where nobody seemed particularly interested in knowing
+                    what time it was.
                 </p>
-
                 <p>
-                    Perhaps that was what we liked most about Koh Lanta.
-                    There was always somewhere to go or something to see,
-                    but there was never any pressure to do it. Sometimes
-                    the best island days were simply the ones where we
-                    stayed close to the water.
+                    Having a chef come and cook for us on the terrace was
+                    one of those small luxuries that stayed with us.
+                    Dinner stretched into the evening and there was no
+                    reason to go anywhere afterwards.
                 </p>
-
+                <p>
+                    Koh Lanta gave us permission to slow down. There was
+                    more of the island we could have explored, but some
+                    holidays are better when you don't feel obliged to.
+                </p>
             </div>
-
         </div>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     MORE FROM OUR CAMERA
-====================================================== -->
-
 <section class="edition-gallery section">
-
     <div class="container">
-
         <div class="section-heading">
-
             <p>
                 MORE FROM OUR CAMERA
             </p>
-
             <h2>
-                More from Koh Lanta.
+                Koh Lanta, slowly.
             </h2>
-
         </div>
-
-
         <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-
-
             <img
                 src="lanta12.jpeg"
-                alt="Koh Lanta island scenery"
+                alt="Koh Lanta"
                 loading="lazy"
             >
-
         </div>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     MAP
-====================================================== -->
-
 <section class="edition-map section">
-
     <div class="container">
-
         <div class="edition-map-inner">
-
             <p class="section-label">
                 OUR MAP
             </p>
-
             <h2>
                 Koh Lanta.
             </h2>
-
             <p>
                 An island of long beaches, jungle-covered hills and slow
-                days on Thailand's Andaman coast. Koh Lanta now joins the
+                days on Thailand's Andaman coast. Koh Lanta joins the
                 places we've explored across Asia.
             </p>
-
         </div>
-
     </div>
-
 </section>
-
-
-
-<!-- =====================================================
-     END NAVIGATION
-====================================================== -->
-
 <section class="edition-end">
-
     <a
         href="/"
         class="text-link"
     >
         ← Back to Home
     </a>
-
     <a
         href="editions.html"
         class="text-link"
     >
         View All Editions →
     </a>
-
 </section>
-
-
+</div>
 </main>
-
-
-
 <!-- =====================================================
      FOOTER
 ====================================================== -->
-
 <footer class="site-footer">
-
     <div class="site-footer-inner">
-
-
         <div>
-
             <div class="footer-logo">
                 THE EXPAT EDITS
             </div>
-
             <p class="footer-description">
                 Travel, places &amp; observations from life abroad.
             </p>
-
         </div>
-
-
         <nav class="footer-nav">
-
             <a href="editions.html">
                 Editions
             </a>
-
             <a href="index-new.html#journal">
                 Journal
             </a>
-
             <a href="index-new.html#map">
                 Map
             </a>
-
             <a href="index-new.html#about">
                 About
             </a>
-
         </nav>
-
-
         <a
             href="https://www.instagram.com/theexpatedits/"
             class="footer-social"
@@ -708,17 +1058,10 @@
         >
             Instagram
         </a>
-
-
         <p class="footer-copyright">
             © The Expat Edits
         </p>
-
     </div>
-
 </footer>
-
-
 </body>
-
 </html>

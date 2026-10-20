@@ -1,1 +1,1137 @@
 
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hanoi &amp; Bai Tu Long Bay | The Expat Edits</title>
+
+<meta name="description" content="Our family trip to Hanoi and Bai Tu Long Bay: rooftop restaurants, egg coffee, a brilliant city hotel and two days cruising quieter waters.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style-new.css">
+
+<link rel="stylesheet" href="style-editions-new.css">
+
+<style>
+
+/* =========================================================
+
+   HANOI & BAI TU LONG BAY
+
+   Editorial Edition — Singapore master approach
+
+========================================================= */
+
+.hanoi-desktop { display:block; }
+
+.hanoi-mobile { display:none; }
+
+@media (min-width:769px) {
+
+    :root {
+
+        --hn-width:min(1400px,calc(100% - 80px));
+
+        --hn-wide:min(1500px,calc(100% - 80px));
+
+        --hn-gap:22px;
+
+        --hn-line:rgba(255,255,255,.12);
+
+        --hn-line-strong:rgba(255,255,255,.16);
+
+    }
+
+    .hn-opening {
+
+        width:var(--hn-wide);
+
+        margin:0 auto;
+
+        padding:0 0 90px;
+
+        display:grid;
+
+        grid-template-columns:1.25fr .75fr;
+
+        gap:75px;
+
+        align-items:center;
+
+    }
+
+    .hn-opening-hero {
+
+        position:relative;
+
+        overflow:hidden;
+
+        width:100%;
+
+        background:#090909;
+
+    }
+
+    .hn-opening-hero img {
+
+        display:block;
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+    .hn-opening-hero::after {
+
+        content:"";
+
+        position:absolute;
+
+        z-index:1;
+
+        left:0;
+
+        right:0;
+
+        bottom:0;
+
+        height:38%;
+
+        pointer-events:none;
+
+        background:linear-gradient(
+
+            to bottom,
+
+            rgba(9,9,9,0) 0%,
+
+            rgba(9,9,9,.22) 28%,
+
+            rgba(9,9,9,.55) 55%,
+
+            rgba(9,9,9,.82) 78%,
+
+            #242320 100%
+
+        );
+
+    }
+
+    .hn-opening-hero .edition-hero-overlay {
+
+        position:absolute;
+
+        z-index:2;
+
+        left:45px;
+
+        right:45px;
+
+        bottom:38px;
+
+    }
+
+    .hn-opening-intro {
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        padding:45px 30px 45px 0;
+
+    }
+
+    .hn-opening-intro h2 { margin:0 0 25px; }
+
+    .hn-opening-intro-copy { max-width:560px; }
+
+    .hn-opening-intro-copy p { margin:0 0 15px; }
+
+    .hn-editorial { width:var(--hn-width); margin:0 auto; }
+
+    .hn-editorial-section { padding:65px 0; }
+
+    .hn-grid,
+
+    .hn-final-grid {
+
+        display:grid;
+
+        grid-template-columns:repeat(12,minmax(0,1fr));
+
+        column-gap:var(--hn-gap);
+
+        row-gap:38px;
+
+        align-items:start;
+
+    }
+
+    .hn-grid img,
+
+    .hn-final-grid img {
+
+        display:block;
+
+        width:100%;
+
+        height:auto;
+
+    }
+
+    .hn-text { align-self:center; }
+
+    .hn-text p { margin-top:0; }
+
+    .hn-text h2,.hn-text h3 { margin-top:0; }
+
+    .hn-text .section-label { margin-bottom:12px; }
+
+    .hn-rule { width:42px; height:1px; margin:20px 0; background:currentColor; opacity:.65; }
+
+    .hn-r1-text { grid-column:1 / span 3; }
+
+    .hn-r1-img1 { grid-column:4 / span 5; width:88%; }
+
+    .hn-r1-img2 { grid-column:9 / span 4; width:90%; margin-left:auto; padding-top:48px; }
+
+    .hn-r2-img1 { grid-column:1 / span 3; padding-top:20px; }
+
+    .hn-r2-text { grid-column:4 / span 3; padding:0 8px; }
+
+    .hn-r2-img2 { grid-column:7 / span 3; }
+
+    .hn-r2-text2 { grid-column:10 / span 3; padding-top:45px; }
+
+    .hn-r3-text { grid-column:1 / span 3; padding-top:15px; }
+
+    .hn-r3-img1 { grid-column:4 / span 4; }
+
+    .hn-r3-img2 { grid-column:8 / span 2; padding-top:45px; }
+
+    .hn-r3-img3 { grid-column:10 / span 3; padding-top:10px; }
+
+    .hn-r4-img1 { grid-column:1 / span 4; }
+
+    .hn-r4-text { grid-column:5 / span 3; padding:20px 5px 0; }
+
+    .hn-r4-img2 { grid-column:8 / span 5; padding-top:35px; }
+
+    .hn-info {
+
+        margin:20px 0 65px;
+
+        padding:55px 0;
+
+        border-top:1px solid var(--hn-line);
+
+        border-bottom:1px solid var(--hn-line);
+
+    }
+
+    .hn-info-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:65px; }
+
+    .hn-info-item h3 { margin:10px 0 12px; }
+
+    .hn-recommendations { padding:20px 0 90px; }
+
+    .hn-recommendations-heading { margin-bottom:45px; }
+
+    .hn-recommendation-list { max-width:1000px; border-top:1px solid var(--hn-line-strong); }
+
+    .hn-recommendation {
+
+        display:grid;
+
+        grid-template-columns:70px 280px 1fr;
+
+        column-gap:35px;
+
+        align-items:start;
+
+        padding:27px 0;
+
+        border-bottom:1px solid var(--hn-line-strong);
+
+    }
+
+    .hn-rec-number { padding-top:7px; font-size:.72rem; letter-spacing:.14em; opacity:.6; }
+
+    .hn-recommendation h3 { margin:0; font-size:1.3rem; }
+
+    .hn-recommendation p { margin:0; max-width:560px; }
+
+    .hn-journal {
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:85px;
+
+        align-items:center;
+
+        padding:65px 0;
+
+        border-top:1px solid var(--hn-line);
+
+    }
+
+    .hn-journal-copy p { margin-top:0; }
+
+    .hn-final-heading { grid-column:1 / span 3; padding-top:25px; }
+
+    .hn-final-img1 { grid-column:4 / span 4; }
+
+    .hn-final-img2 { grid-column:8 / span 2; padding-top:40px; }
+
+    .hn-final-img3 { grid-column:10 / span 3; }
+
+    .hn-final-img4 { grid-column:1 / span 3; padding-top:25px; }
+
+    .hn-final-img5 { grid-column:4 / span 3; padding-top:45px; }
+
+    .hn-final-img6 { grid-column:7 / span 3; }
+
+    .hn-final-img7 { grid-column:10 / span 3; padding-top:25px; }
+
+    .hn-extra-grid {
+
+        display:grid;
+
+        grid-template-columns:repeat(5,minmax(0,1fr));
+
+        gap:22px;
+
+        margin-top:42px;
+
+        align-items:start;
+
+    }
+
+    .hn-extra-grid img { display:block; width:100%; height:auto; }
+
+    .hn-map { padding:75px 0 65px; }
+
+    .hn-map-inner { max-width:680px; }
+
+    .hn-end { display:flex; justify-content:space-between; padding:35px 0 70px; }
+
+}
+
+@media (max-width:768px) {
+
+    .hanoi-desktop { display:none; }
+
+    .hanoi-mobile { display:block; }
+
+}
+
+</style>
+
+</head>
+
+<body class="edition-page">
+
+<header class="site-header">
+
+<div class="site-header-inner">
+
+    <a href="/" class="site-logo">THE EXPAT EDITS</a>
+
+    <nav class="site-nav">
+
+        <a href="editions.html">Editions</a>
+
+        <a href="index-new.html#journal">Journal</a>
+
+        <a href="index-new.html#map">Map</a>
+
+        <a href="about.html">About</a>
+
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation">
+
+        <span></span><span></span><span></span>
+
+    </button>
+
+</div>
+
+</header>
+
+<!-- =====================================================
+
+     DESKTOP EDITION
+
+====================================================== -->
+
+<main class="hanoi-desktop">
+
+<section class="hn-opening">
+
+    <div class="hn-opening-hero">
+
+        <img src="hanoihero.jpeg" alt="A Vietnamese flag hanging above a Hanoi street" loading="eager">
+
+        <div class="edition-hero-overlay">
+
+            <p class="eyebrow">VIETNAM · OUR EDITION</p>
+
+            <h1>Hanoi &amp; Bai Tu Long Bay</h1>
+
+            <p class="edition-hero-subtitle">Rooftops, old streets &amp; the quieter side of the bay.</p>
+
+        </div>
+
+    </div>
+
+    <div class="hn-opening-intro">
+
+        <p class="section-label">OUR HANOI &amp; BAI TU LONG BAY</p>
+
+        <h2>Always look up. Then slow right down.</h2>
+
+        <div class="hn-opening-intro-copy">
+
+            <p>Hanoi was a brilliant city to explore on foot. We stayed at La Sinfonía del Rey Hotel &amp; Spa, which was wonderfully located for the Old Quarter and the places we wanted to see. Between flower sellers, temples, busy streets and little cafés, there was always something to catch our eye.</p>
+
+            <p>We also found ourselves looking upwards all the time: Hanoi has rooftop bars and restaurants everywhere. Then we headed out for a couple of days aboard the Prince with Indochina Boats, cruising Bai Tu Long Bay — quieter than Ha Long Bay, and every bit as spectacular, with limestone cliffs rising from emerald water.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="hn-editorial">
+
+<section class="hn-editorial-section">
+
+<div class="section-heading">
+
+    <p>FROM OUR CAMERA</p>
+
+    <h2>From Hanoi’s rooftops to Bai Tu Long Bay.</h2>
+
+</div>
+
+<div class="hn-grid">
+
+    <div class="hn-text hn-r1-text">
+
+        <p class="section-label">THE OLD QUARTER</p>
+
+        <h3>A city that rewards wandering.</h3>
+
+        <div class="hn-rule"></div>
+
+        <p>Produce spills onto the pavement, flower sellers brighten the streets and everyday life unfolds just beyond the shopfronts. We loved the energy of the Old Quarter and the fact that so much of it was within walking distance of our hotel.</p>
+
+    </div>
+
+    <img class="hn-r1-img1" src="hanoi20.jpeg" alt="A street vendor moving through Hanoi's lively market streets" loading="lazy">
+
+    <img class="hn-r1-img2" src="hanoi18.jpeg" alt="A flower seller surrounded by colourful bouquets in Hanoi" loading="lazy">
+
+    <img class="hn-r2-img1" src="hanoi21.jpeg" alt="Ornate traditional Vietnamese temple architecture" loading="lazy">
+
+    <div class="hn-text hn-r2-text">
+
+        <p class="section-label">HIDDEN DETAILS</p>
+
+        <h3>Look beyond the bustle.</h3>
+
+        <div class="hn-rule"></div>
+
+        <p>Temples, ornate gateways and small details sit alongside the city’s constant movement. We enjoyed taking our time and letting the streets lead us from one discovery to the next.</p>
+
+    </div>
+
+    <img class="hn-r2-img2" src="hanoi19.jpeg" alt="The red bridge crossing the green waters of Hoan Kiem Lake" loading="lazy">
+
+    <div class="hn-text hn-r2-text2">
+
+        <p class="section-label">HOAN KIEM</p>
+
+        <h3>A little breathing space.</h3>
+
+        <p>Hoan Kiem Lake and its famous red bridge offered a greener, calmer side of the city — a welcome contrast to the lively streets around it.</p>
+
+    </div>
+
+    <div class="hn-text hn-r3-text">
+
+        <p class="section-label">BAI TU LONG BAY</p>
+
+        <h3>The baby dragon.</h3>
+
+        <div class="hn-rule"></div>
+
+        <p>Bai Tu Long Bay is often described as the “baby dragon” to Ha Long Bay’s “dragon”. We were really pleased we chose it: the scenery was epic, but the bay felt quieter, with limestone cliffs rising from emerald water and room to appreciate the view.</p>
+
+    </div>
+
+    <img class="hn-r3-img1" src="hanoi11.jpeg" alt="Limestone karsts rising from the water in Bai Tu Long Bay" loading="lazy">
+
+    <img class="hn-r3-img2" src="hanoi10.jpeg" alt="A quiet passage between limestone cliffs on the bay" loading="lazy">
+
+    <img class="hn-r3-img3" src="hanoi12.jpeg" alt="A boat cruising beneath the limestone cliffs of Bai Tu Long Bay" loading="lazy">
+
+    <img class="hn-r4-img1" src="hanoi14.jpeg" alt="Kayaking between limestone islands in Bai Tu Long Bay" loading="lazy">
+
+    <div class="hn-text hn-r4-text">
+
+        <p class="section-label">LIFE ON BOARD</p>
+
+        <h3>Kayaking, quiet beaches and open water.</h3>
+
+        <p>We discovered a lovely quiet beach and went canoeing straight from the boat. The food was plentiful, the scenery changed around every bend, and the days had that rare feeling of having nowhere else to be. I even tried sleeping under the stars on deck — until the rain sent me back to the cabin.</p>
+
+    </div>
+
+    <img class="hn-r4-img2" src="hanoi15.jpeg" alt="Warm evening light settling over the limestone islands" loading="lazy">
+
+</div>
+
+</section>
+
+<!-- LOCAL INFORMATION -->
+
+<section class="hn-info">
+
+<div class="hn-info-grid">
+
+    <div class="hn-info-item">
+
+        <p class="section-label">WHEN TO GO</p>
+
+        <h3>Choose the season</h3>
+
+        <p>Northern Vietnam has distinct seasonal changes. Check conditions for your dates, particularly before an overnight cruise, when weather can affect the experience on the water.</p>
+
+    </div>
+
+    <div class="hn-info-item">
+
+        <p class="section-label">THE FEEL</p>
+
+        <h3>Contrasts</h3>
+
+        <p>Expect busy streets, rooftop terraces and a lively food scene in Hanoi, followed by quiet coves, emerald water and dramatic limestone scenery in Bai Tu Long Bay.</p>
+
+    </div>
+
+    <div class="hn-info-item">
+
+        <p class="section-label">GETTING AROUND</p>
+
+        <h3>On foot and by boat</h3>
+
+        <p>Hanoi’s central sights are easy to explore on foot. For the bay, arrange the transfer with your cruise operator and allow the boat journey to set the pace.</p>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- RECOMMENDATIONS -->
+
+<section class="hn-recommendations">
+
+<div class="hn-recommendations-heading">
+
+    <p class="section-label">OUR RECOMMENDATIONS</p>
+
+    <h2>Places we loved.</h2>
+
+</div>
+
+<div class="hn-recommendation-list">
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">01</span>
+
+        <h3>Hanoi’s Old Quarter</h3>
+
+        <p>Come ready to wander. The streets are full of small discoveries, from food and flowers to shopfronts, architecture and the everyday theatre of city life.</p>
+
+    </article>
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">02</span>
+
+        <h3>Hoan Kiem Lake</h3>
+
+        <p>A lovely counterpoint to the surrounding streets. Walk the lake edge, take in the red bridge and enjoy a quieter view of the city.</p>
+
+    </article>
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">03</span>
+
+        <h3>La Sinfonía del Rey Hotel &amp; Spa</h3>
+
+        <p>A brilliant base within walking distance of the places we wanted to visit. The rooms were well appointed, the rooftop was popular, and the spa massages were excellent. The team also kindly upgraded the kids’ room after our website outreach.</p>
+
+    </article>
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">04</span>
+
+        <h3>Blank</h3>
+
+        <p>A really good spot for food and atmosphere, with a live DJ and the sort of lively energy that makes you want to stay a little longer.</p>
+
+    </article>
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">05</span>
+
+        <h3>Hanoi Garden</h3>
+
+        <p>A lovely courtyard restaurant and a great place for the kids to try Vietnamese food in a relaxed setting.</p>
+
+    </article>
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">06</span>
+
+        <h3>Saha</h3>
+
+        <p>A lovely little coffee shop near the hotel, and a good place to try local egg coffee.</p>
+
+    </article>
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">07</span>
+
+        <h3>Prince by Indochina Boats</h3>
+
+        <p>Our two days cruising Bai Tu Long Bay included extraordinary limestone scenery, a quiet beach, canoeing and plentiful food — a memorable way to experience the quieter side of the bay.</p>
+
+    </article>
+
+    <article class="hn-recommendation">
+
+        <span class="hn-rec-number">08</span>
+
+        <h3>Hanoi Train Street</h3>
+
+        <p>A memorable stop back in the city. The kids put bottle caps on the tracks and brought home a flattened souvenir after the train had passed.</p>
+
+    </article>
+
+</div>
+
+</section>
+
+<!-- JOURNAL -->
+
+<section class="hn-journal">
+
+<div>
+
+    <p class="section-label">FROM THE JOURNAL</p>
+
+    <h2>A trip of two very different rhythms.</h2>
+
+</div>
+
+<div class="hn-journal-copy">
+
+    <p>In Hanoi, we were always looking up for the next rooftop, finding a good meal or stopping for egg coffee. Blank brought food and a live DJ; Hanoi Garden gave us a lovely courtyard setting; and the hotel spa was a welcome pause between exploring.</p>
+
+    <p>Then came two days aboard the Prince in Bai Tu Long Bay: quiet beaches, canoeing, plentiful food and limestone cliffs rising out of emerald water. My attempt to sleep under the stars ended with a retreat to the cabin in the rain. Back in Hanoi, Train Street and the kids’ flattened bottle-cap souvenir brought the trip back to street level.</p>
+
+</div>
+
+</section>
+
+<!-- MORE FROM OUR CAMERA -->
+
+<section class="hn-editorial-section">
+
+<div class="hn-final-grid">
+
+    <div class="hn-final-heading">
+
+        <p class="section-label">MORE FROM OUR CAMERA</p>
+
+        <h2>More from our time in Vietnam.</h2>
+
+    </div>
+
+    <img class="hn-final-img1" src="hanoi2.jpeg" alt="A traditional boat sailing between limestone islands" loading="lazy">
+
+    <img class="hn-final-img2" src="hanoi13.jpeg" alt="A quiet sandy beach beneath the limestone karsts" loading="lazy">
+
+    <img class="hn-final-img3" src="hanoi16.jpeg" alt="Sunlight breaking over the limestone cliffs" loading="lazy">
+
+    <img class="hn-final-img4" src="hanoi17.jpeg" alt="The sun setting behind the islands of the bay" loading="lazy">
+
+    <img class="hn-final-img5" src="hanoi3.jpeg" alt="A traditional wooden boat on the emerald water" loading="lazy">
+
+    <img class="hn-final-img6" src="hanoi4.jpeg" alt="A colourful Hanoi street at night beside the railway" loading="lazy">
+
+    <img class="hn-final-img7" src="hanoi8.jpeg" alt="A local vendor selling produce on a Hanoi street" loading="lazy">
+
+</div>
+
+<div class="hn-extra-grid">
+
+    <img src="hanoi1.jpeg" alt="A table set for a meal overlooking the bay" loading="lazy">
+
+    <img src="hanoi5.jpeg" alt="Temple and greenery beside Hoan Kiem Lake" loading="lazy">
+
+    <img src="hanoi6.jpeg" alt="A statue in a leafy Hanoi setting" loading="lazy">
+
+    <img src="hanoi7.jpeg" alt="A temple tower among trees" loading="lazy">
+
+    <img src="hanoi9.jpeg" alt="A close view of a traditional Hanoi shopfront" loading="lazy">
+
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section class="hn-map">
+
+<div class="hn-map-inner">
+
+    <p class="section-label">OUR MAP</p>
+
+    <h2>Hanoi &amp; Bai Tu Long Bay.</h2>
+
+    <p>From Hanoi’s Old Quarter and rooftop spots to the quieter waters of Bai Tu Long Bay, this was a trip of contrasts — and one we’ll remember for its food, family moments and extraordinary scenery.</p>
+
+</div>
+
+</section>
+
+<section class="hn-end">
+
+    <a href="/" class="text-link">← Back to Home</a>
+
+    <a href="editions.html" class="text-link">View All Editions →</a>
+
+</section>
+
+</div>
+
+</main>
+
+<!-- =====================================================
+
+     MOBILE EDITION
+
+====================================================== -->
+
+<main class="hanoi-mobile">
+
+<section class="edition-hero" style="background-image:url('hanoihero.jpeg');">
+
+<div class="edition-hero-overlay">
+
+    <p class="eyebrow">VIETNAM · OUR EDITION</p>
+
+    <h1>Hanoi &amp; Bai Tu Long Bay</h1>
+
+    <p class="edition-hero-subtitle">Rooftops, old streets &amp; the quieter side of the bay.</p>
+
+</div>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="edition-intro section">
+
+<div class="container">
+
+<div class="edition-intro-inner">
+
+    <p class="section-label">OUR HANOI &amp; BAI TU LONG BAY</p>
+
+    <h2>Always look up. Then slow right down.</h2>
+
+    <div class="edition-intro-text">
+
+        <p>Hanoi was a brilliant city to explore on foot, and La Sinfonía del Rey Hotel &amp; Spa put us within easy reach of the places we wanted to see. We loved the flower sellers, temples, busy streets and little cafés — and kept looking upwards for the next rooftop bar or restaurant. Then we headed out aboard the Prince with Indochina Boats to discover the quieter waters of Bai Tu Long Bay.</p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PHOTOGRAPHIC STORY -->
+
+<section class="edition-photo-story section">
+
+<div class="container">
+
+<div class="section-heading edition-photo-heading">
+
+    <p>FROM OUR CAMERA</p>
+
+    <h2>From Hanoi’s rooftops to Bai Tu Long Bay.</h2>
+
+</div>
+
+<div class="edition-photo-mosaic">
+
+    <img src="hanoi20.jpeg" alt="A street vendor moving through Hanoi’s market streets" loading="lazy">
+
+    <img src="hanoi18.jpeg" alt="A flower seller surrounded by colourful bouquets in Hanoi" loading="lazy">
+
+    <img src="hanoi21.jpeg" alt="Ornate traditional Vietnamese temple architecture" loading="lazy">
+
+    <img src="hanoi19.jpeg" alt="The red bridge crossing the green waters of Hoan Kiem Lake" loading="lazy">
+
+    <img src="hanoi5.jpeg" alt="Temple and greenery beside Hoan Kiem Lake" loading="lazy">
+
+    <img src="hanoi6.jpeg" alt="A statue in a leafy Hanoi setting" loading="lazy">
+
+    <img src="hanoi7.jpeg" alt="A temple tower among trees" loading="lazy">
+
+    <img src="hanoi8.jpeg" alt="A local vendor selling produce on a Hanoi street" loading="lazy">
+
+    <img src="hanoi9.jpeg" alt="A close view of a traditional Hanoi shopfront" loading="lazy">
+
+    <img src="hanoi4.jpeg" alt="Hanoi Train Street lit up in the evening" loading="lazy">
+
+    <img src="hanoi3.jpeg" alt="The Prince cruise boat on the water" loading="lazy">
+
+    <img src="hanoi2.jpeg" alt="A traditional boat sailing between limestone islands" loading="lazy">
+
+    <img src="hanoi11.jpeg" alt="Limestone karsts rising from Bai Tu Long Bay" loading="lazy">
+
+    <img src="hanoi10.jpeg" alt="A quiet passage between limestone cliffs on the bay" loading="lazy">
+
+    <img src="hanoi12.jpeg" alt="A boat cruising beneath the limestone cliffs of Bai Tu Long Bay" loading="lazy">
+
+    <img src="hanoi14.jpeg" alt="Canoeing between limestone islands in Bai Tu Long Bay" loading="lazy">
+
+    <img src="hanoi13.jpeg" alt="A quiet sandy beach beneath the limestone karsts" loading="lazy">
+
+    <img src="hanoi15.jpeg" alt="Warm evening light settling over limestone islands" loading="lazy">
+
+    <img src="hanoi16.jpeg" alt="Sunlight breaking over the limestone cliffs" loading="lazy">
+
+    <img src="hanoi17.jpeg" alt="The sun setting behind the islands of Bai Tu Long Bay" loading="lazy">
+
+    <img src="hanoi1.jpeg" alt="A table set for a meal overlooking the bay" loading="lazy">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LOCAL INFORMATION -->
+
+<section class="edition-local-info">
+
+<div class="container">
+
+<div class="edition-local-info-grid">
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">WHEN TO GO</p>
+
+        <h3>Choose the season</h3>
+
+        <p>Northern Vietnam has distinct seasonal changes. Check conditions for your dates, particularly before an overnight cruise, when weather can affect the experience on the water.</p>
+
+    </div>
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">THE FEEL</p>
+
+        <h3>Contrasts</h3>
+
+        <p>Expect busy streets, rooftop terraces and a lively food scene in Hanoi, followed by quiet coves, emerald water and dramatic limestone scenery in Bai Tu Long Bay.</p>
+
+    </div>
+
+    <div class="edition-local-info-item">
+
+        <p class="section-label">GETTING AROUND</p>
+
+        <h3>On foot and by boat</h3>
+
+        <p>Hanoi’s central sights are easy to explore on foot. For the bay, arrange the transfer with your cruise operator and allow the boat journey to set the pace.</p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RECOMMENDATIONS -->
+
+<section class="edition-recommendations section">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>OUR RECOMMENDATIONS</p>
+
+    <h2>Places we loved.</h2>
+
+</div>
+
+<div class="edition-recommendations-grid">
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">01</p>
+
+        <h3>Hanoi’s Old Quarter</h3>
+
+        <p>Come ready to wander. The streets are full of small discoveries, from food and flowers to shopfronts, architecture and the everyday theatre of city life.</p>
+
+    </article>
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">02</p>
+
+        <h3>Hoan Kiem Lake</h3>
+
+        <p>A lovely counterpoint to the surrounding streets. Walk the lake edge, take in the red bridge and enjoy a quieter view of the city.</p>
+
+    </article>
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">03</p>
+
+        <h3>La Sinfonía del Rey Hotel &amp; Spa</h3>
+
+        <p>A brilliant base within walking distance of the places we wanted to visit, with well-appointed rooms, a popular rooftop and excellent massages. The hotel kindly upgraded the kids’ room after our website outreach.</p>
+
+    </article>
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">04</p>
+
+        <h3>Blank</h3>
+
+        <p>A lively spot with great food and a live DJ — one of our favourite places to eat and soak up Hanoi’s atmosphere.</p>
+
+    </article>
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">05</p>
+
+        <h3>Hanoi Garden</h3>
+
+        <p>A lovely courtyard restaurant where the kids enjoyed trying Vietnamese food.</p>
+
+    </article>
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">06</p>
+
+        <h3>Saha</h3>
+
+        <p>A lovely coffee shop near the hotel for trying local egg coffee.</p>
+
+    </article>
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">07</p>
+
+        <h3>Prince by Indochina Boats</h3>
+
+        <p>Our two days cruising Bai Tu Long Bay brought limestone cliffs, a quiet beach, canoeing and plentiful food.</p>
+
+    </article>
+
+    <article class="edition-recommendation">
+
+        <p class="story-number">08</p>
+
+        <h3>Hanoi Train Street</h3>
+
+        <p>The kids put bottle caps on the tracks and brought home a flattened souvenir after the train passed — a memorable family moment.</p>
+
+    </article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- JOURNAL -->
+
+<section class="edition-journal section">
+
+<div class="container">
+
+<div class="edition-journal-inner">
+
+    <div>
+
+        <p class="section-label">FROM THE JOURNAL</p>
+
+        <h2>A trip of two very different rhythms.</h2>
+
+    </div>
+
+    <div class="edition-journal-copy">
+
+        <p>In Hanoi, we were always looking up for the next rooftop, finding a good meal or stopping for egg coffee. Blank brought food and a live DJ; Hanoi Garden gave us a lovely courtyard setting; and the hotel spa was a welcome pause between exploring.</p>
+
+        <p>Then came two days aboard the Prince in Bai Tu Long Bay: quiet beaches, canoeing, plentiful food and limestone cliffs rising out of emerald water. My attempt to sleep under the stars ended with a retreat to the cabin in the rain. Back in Hanoi, Train Street and the kids’ flattened bottle-cap souvenir brought the trip back to street level.</p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MORE FROM OUR CAMERA -->
+
+<section class="edition-gallery section">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <p>MORE FROM OUR CAMERA</p>
+
+    <h2>Little details, lasting memories.</h2>
+
+</div>
+
+<p>From the flower markets and temple details of Hanoi to the last light over Bai Tu Long Bay, these are the moments that made the trip ours.</p>
+
+<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
+
+    <img src="hanoi10.jpeg" alt="Limestone scenery in Bai Tu Long Bay" loading="lazy">
+
+    <img src="hanoi12.jpeg" alt="The Prince cruising among limestone cliffs" loading="lazy">
+
+    <img src="hanoi13.jpeg" alt="A quiet beach beneath limestone karsts" loading="lazy">
+
+    <img src="hanoi14.jpeg" alt="Canoeing in Bai Tu Long Bay" loading="lazy">
+
+    <img src="hanoi15.jpeg" alt="Evening light over the bay" loading="lazy">
+
+    <img src="hanoi16.jpeg" alt="Sunlight over limestone cliffs" loading="lazy">
+
+    <img src="hanoi17.jpeg" alt="Sunset over Bai Tu Long Bay" loading="lazy">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section class="edition-map section">
+
+<div class="container">
+
+<div class="edition-map-inner">
+
+    <p class="section-label">OUR MAP</p>
+
+    <h2>Hanoi &amp; Bai Tu Long Bay.</h2>
+
+    <p>From Hanoi’s Old Quarter and rooftop spots to the quieter waters of Bai Tu Long Bay, this was a trip of contrasts — and one we’ll remember for its food, family moments and extraordinary scenery.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="edition-end">
+
+    <a href="/" class="text-link">← Back to Home</a>
+
+    <a href="editions.html" class="text-link">View All Editions →</a>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="site-footer-inner">
+
+    <div>
+
+        <div class="footer-logo">THE EXPAT EDITS</div>
+
+        <p class="footer-description">Travel, places &amp; observations from life abroad.</p>
+
+    </div>
+
+    <nav class="footer-nav">
+
+        <a href="editions.html">Editions</a>
+
+        <a href="index-new.html#journal">Journal</a>
+
+        <a href="index-new.html#map">Map</a>
+
+        <a href="about.html">About</a>
+
+    </nav>
+
+    <a href="https://www.instagram.com/theexpatedits/" class="footer-social" target="_blank" rel="noopener">Instagram</a>
+
+    <p class="footer-copyright">© The Expat Edits</p>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>

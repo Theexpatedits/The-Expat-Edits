@@ -8,671 +8,215 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
 
-    <title>A Life on the Water — The Expat Edits Journal</title>
+        name="viewport"
 
-    <meta name="description"
+        content="width=device-width, initial-scale=1.0"
 
-          content="Three boats, three journeys and one extraordinary region. A travel journal through Komodo, Phuket and Bai Tu Long Bay.">
+    >
+
+    <title>A Life on the Water | The Expat Edits Journal</title>
+
+    <meta
+
+        name="description"
+
+        content="Three boat journeys through Komodo, Phuket and Bai Tu Long Bay. A travel journal about wilderness, family adventures and the quieter beauty of travelling by water."
+
+    >
+
+    <!-- GOOGLE FONTS -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="preconnect"
 
-          rel="stylesheet">
+        href="https://fonts.gstatic.com"
 
-    <!-- Existing global stylesheet: leave the master CSS untouched -->
+        crossorigin
 
-    <link rel="stylesheet" href="style-new.css">
+    >
+
+    <link
+
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+
+        rel="stylesheet"
+
+    >
+
+    <!-- MASTER SITE CSS -->
+
+    <link
+
+        rel="stylesheet"
+
+        href="style-new.css"
+
+    >
+
+    <!-- EXISTING EDITORIAL NOTES CSS -->
+
+    <link
+
+        rel="stylesheet"
+
+        href="style-notes.css"
+
+    >
+
+    <!-- JOURNAL-SPECIFIC IMAGE LAYOUT ONLY -->
 
     <style>
 
-        /* =========================================
+        .water-photo {
 
-           THE EXPAT EDITS JOURNAL
+            width: 100%;
 
-           Page-specific styling only
-
-        ========================================= */
-
-        :root {
-
-            --journal-cream: #f5f2eb;
-
-            --journal-charcoal: #242320;
-
-            --journal-ochre: #c6a15b;
-
-            --journal-muted: #77736b;
-
-            --journal-line: #d9d2c5;
-
-            --journal-white: #fffdf8;
+            margin: 36px 0;
 
         }
 
-        .otw-page,
-
-        .otw-page * {
-
-            box-sizing: border-box;
-
-        }
-
-        .otw-page {
-
-            margin: 0;
-
-            background: var(--journal-cream);
-
-            color: var(--journal-charcoal);
-
-            font-family: 'Inter', sans-serif;
-
-            font-weight: 300;
-
-            line-height: 1.8;
-
-        }
-
-        .otw-page a {
-
-            color: inherit;
-
-            text-decoration: none;
-
-        }
-
-        .otw-page img {
+        .water-photo img {
 
             display: block;
 
-            max-width: 100%;
+            width: 100%;
+
+            height: auto;
 
         }
 
-        .otw-shell {
+        .water-photo figcaption {
 
-            width: min(1120px, 88%);
+            margin-top: 10px;
 
-            margin-inline: auto;
+            font-size: 11px;
+
+            line-height: 1.7;
 
         }
 
-        /* Navigation */
+        .water-cover-image {
 
-        .otw-nav {
+            width: 100%;
+
+            margin: 34px 0 0;
+
+        }
+
+        .water-cover-image img {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+        }
+
+        .water-story-divider {
+
+            width: 48px;
+
+            height: 1px;
+
+            margin: 52px auto;
+
+            background: currentColor;
+
+            opacity: 0.4;
+
+        }
+
+        .water-story-heading {
+
+            margin-bottom: 34px;
+
+        }
+
+        .water-story-heading h2 {
+
+            margin-top: 8px;
+
+        }
+
+        .water-story-heading .section-label {
+
+            margin-bottom: 10px;
+
+        }
+
+        .water-story-number {
+
+            display: block;
+
+            margin-bottom: 12px;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+        }
+
+        .water-story-content p {
+
+            margin-bottom: 24px;
+
+        }
+
+        .water-pullquote {
+
+            margin: 42px 0;
+
+            padding: 0 0 0 20px;
+
+            border-left: 1px solid currentColor;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 27px;
+
+            line-height: 1.45;
+
+        }
+
+        .water-end {
 
             display: flex;
-
-            align-items: center;
 
             justify-content: space-between;
 
-            gap: 24px;
-
-            padding: 25px 0;
-
-            border-bottom: 1px solid var(--journal-line);
-
-        }
-
-        .otw-wordmark {
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: 19px;
-
-            font-weight: 600;
-
-            letter-spacing: 3px;
-
-            line-height: 1.2;
-
-            white-space: nowrap;
-
-        }
-
-        .otw-nav-links {
-
-            display: flex;
-
             flex-wrap: wrap;
 
-            gap: 25px;
+            gap: 18px;
 
-            font-size: 10px;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
+            padding: 32px 0;
 
         }
 
-        .otw-nav-links a:hover {
+        @media (max-width: 600px) {
 
-            color: var(--journal-ochre);
+            .water-photo {
 
-        }
-
-        /* Editorial cover */
-
-        .otw-cover {
-
-            padding: 76px 0 52px;
-
-            text-align: center;
-
-        }
-
-        .otw-eyebrow {
-
-            margin: 0 0 20px;
-
-            color: var(--journal-muted);
-
-            font-size: 10px;
-
-            font-weight: 500;
-
-            letter-spacing: 4px;
-
-            text-transform: uppercase;
-
-        }
-
-        .otw-rule {
-
-            width: 52px;
-
-            height: 2px;
-
-            margin: 0 auto 22px;
-
-            background: var(--journal-ochre);
-
-        }
-
-        .otw-cover h1 {
-
-            max-width: 900px;
-
-            margin: 0 auto;
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: clamp(58px, 10vw, 112px);
-
-            font-weight: 500;
-
-            letter-spacing: -2px;
-
-            line-height: .91;
-
-        }
-
-        .otw-subtitle {
-
-            max-width: 520px;
-
-            margin: 25px auto 0;
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: clamp(20px, 3vw, 28px);
-
-            font-style: italic;
-
-            line-height: 1.4;
-
-        }
-
-        .otw-location {
-
-            margin: 27px 0 0;
-
-            color: var(--journal-muted);
-
-            font-size: 9px;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-
-        }
-
-        /* Hero photography */
-
-        .otw-cover-image {
-
-            margin: 0 auto 80px;
-
-        }
-
-        .otw-cover-image img {
-
-            width: 100%;
-
-            height: auto;
-
-            max-height: 720px;
-
-            object-fit: cover;
-
-        }
-
-        .otw-caption {
-
-            margin-top: 12px;
-
-            color: var(--journal-muted);
-
-            font-size: 10px;
-
-            letter-spacing: .5px;
-
-        }
-
-        /* Introduction */
-
-        .otw-intro {
-
-            max-width: 680px;
-
-            margin: 0 auto 100px;
-
-            padding: 0 12px;
-
-            text-align: center;
-
-        }
-
-        .otw-intro p {
-
-            margin: 0 0 22px;
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: clamp(23px, 3.2vw, 31px);
-
-            line-height: 1.55;
-
-        }
-
-        .otw-intro .otw-small {
-
-            font-family: 'Inter', sans-serif;
-
-            font-size: 13px;
-
-            line-height: 2;
-
-        }
-
-        /* Story sections */
-
-        .otw-story {
-
-            padding: 78px 0 90px;
-
-            border-top: 1px solid var(--journal-line);
-
-        }
-
-        .otw-story-header {
-
-            max-width: 750px;
-
-            margin: 0 auto 46px;
-
-            padding: 0 12px;
-
-            text-align: center;
-
-        }
-
-        .otw-number {
-
-            display: block;
-
-            margin-bottom: 16px;
-
-            color: var(--journal-ochre);
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: 18px;
-
-            letter-spacing: 3px;
-
-        }
-
-        .otw-story-header h2 {
-
-            margin: 0;
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: clamp(43px, 7vw, 72px);
-
-            font-weight: 500;
-
-            line-height: 1.05;
-
-        }
-
-        .otw-story-header p {
-
-            margin: 18px 0 0;
-
-            color: var(--journal-muted);
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: 22px;
-
-            font-style: italic;
-
-        }
-
-        .otw-prose {
-
-            max-width: 660px;
-
-            margin: 0 auto;
-
-            padding: 0 12px;
-
-        }
-
-        .otw-prose p {
-
-            margin: 0 0 25px;
-
-            font-size: 14px;
-
-            line-height: 2.05;
-
-        }
-
-        .otw-prose p:first-child::first-letter {
-
-            float: left;
-
-            padding: 5px 9px 0 0;
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: 64px;
-
-            line-height: .8;
-
-        }
-
-        .otw-pullquote {
-
-            max-width: 700px;
-
-            margin: 55px auto;
-
-            padding: 0 22px;
-
-            text-align: center;
-
-        }
-
-        .otw-pullquote p {
-
-            margin: 0;
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: clamp(29px, 4vw, 42px);
-
-            font-weight: 500;
-
-            line-height: 1.35;
-
-        }
-
-        .otw-pullquote::after {
-
-            display: block;
-
-            width: 42px;
-
-            height: 2px;
-
-            margin: 25px auto 0;
-
-            background: var(--journal-ochre);
-
-            content: "";
-
-        }
-
-        /* Images within stories */
-
-        .otw-photo {
-
-            width: min(900px, 88%);
-
-            margin: 55px auto;
-
-        }
-
-        .otw-photo img {
-
-            width: 100%;
-
-            height: auto;
-
-        }
-
-        .otw-photo--wide {
-
-            width: min(1080px, 94%);
-
-        }
-
-        .otw-photo--portrait {
-
-            width: min(660px, 88%);
-
-        }
-
-        /* Closing reflection */
-
-        .otw-ending {
-
-            padding: 100px 0;
-
-            border-top: 1px solid var(--journal-line);
-
-            text-align: center;
-
-        }
-
-        .otw-ending h2 {
-
-            max-width: 750px;
-
-            margin: 0 auto 30px;
-
-            font-family: 'Cormorant Garamond', serif;
-
-            font-size: clamp(42px, 7vw, 70px);
-
-            font-weight: 500;
-
-            line-height: 1.08;
-
-        }
-
-        .otw-ending p {
-
-            max-width: 650px;
-
-            margin: 0 auto 22px;
-
-            padding: 0 12px;
-
-            font-size: 14px;
-
-            line-height: 2;
-
-        }
-
-        /* Footer */
-
-        .otw-footer {
-
-            padding: 42px 0 35px;
-
-            border-top: 1px solid var(--journal-line);
-
-            text-align: center;
-
-        }
-
-        .otw-footer .otw-wordmark {
-
-            margin-bottom: 14px;
-
-        }
-
-        .otw-footer p {
-
-            margin: 8px 0;
-
-            color: var(--journal-muted);
-
-            font-size: 10px;
-
-            letter-spacing: 1px;
-
-        }
-
-        .otw-footer-links {
-
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 24px;
-
-            margin-top: 22px;
-
-            font-size: 10px;
-
-            letter-spacing: 1.5px;
-
-            text-transform: uppercase;
-
-        }
-
-        /* Mobile */
-
-        @media (max-width: 650px) {
-
-            .otw-shell {
-
-                width: 90%;
+                margin: 28px 0;
 
             }
 
-            .otw-nav {
+            .water-pullquote {
 
-                align-items: flex-start;
+                font-size: 24px;
+
+            }
+
+            .water-end {
 
                 flex-direction: column;
 
-                gap: 17px;
-
-                padding: 20px 0;
-
-            }
-
-            .otw-nav-links {
-
                 gap: 16px;
-
-                font-size: 9px;
-
-            }
-
-            .otw-cover {
-
-                padding: 58px 0 38px;
-
-            }
-
-            .otw-cover h1 {
-
-                letter-spacing: -1px;
-
-            }
-
-            .otw-cover-image {
-
-                margin-bottom: 65px;
-
-            }
-
-            .otw-intro {
-
-                margin-bottom: 65px;
-
-            }
-
-            .otw-story {
-
-                padding: 65px 0 60px;
-
-            }
-
-            .otw-story-header {
-
-                margin-bottom: 34px;
-
-            }
-
-            .otw-prose p {
-
-                font-size: 13px;
-
-                line-height: 2;
-
-            }
-
-            .otw-photo {
-
-                width: 90%;
-
-                margin: 38px auto;
-
-            }
-
-            .otw-photo--wide {
-
-                width: 96%;
-
-            }
-
-            .otw-pullquote {
-
-                margin: 42px auto;
-
-            }
-
-            .otw-ending {
-
-                padding: 75px 0;
 
             }
 
@@ -682,49 +226,107 @@
 
 </head>
 
-<body>
+<body class="note-page">
 
-<div class="otw-page">
+<!-- =====================================================
 
-    <!-- NAVIGATION -->
+     HEADER — MATCHES THE EXISTING SITE
 
-    <div class="otw-shell">
+====================================================== -->
 
-        <header class="otw-nav">
+<header class="site-header">
 
-            <a class="otw-wordmark" href="index.html">
+    <div class="site-header-inner">
 
-                THE EXPAT EDITS
+        <a
+
+            href="index-new.html"
+
+            class="site-logo"
+
+        >
+
+            THE EXPAT EDITS
+
+        </a>
+
+        <nav class="site-nav">
+
+            <a href="editions.html">
+
+                Editions
 
             </a>
 
-            <nav class="otw-nav-links" aria-label="Main navigation">
+            <a href="index-new.html#journal">
 
-                <a href="index.html">Home</a>
+                Journal
 
-                <a href="editions.html">Editions</a>
+            </a>
 
-                <a href="index.html#journal">Journal</a>
+            <a href="index-new.html#map">
 
-            </nav>
+                Map
 
-        </header>
+            </a>
+
+            <a href="index-new.html#about">
+
+                About
+
+            </a>
+
+        </nav>
+
+        <button
+
+            class="menu-toggle"
+
+            type="button"
+
+            aria-label="Open navigation"
+
+        >
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </button>
 
     </div>
 
-    <main>
+</header>
 
-        <!-- JOURNAL COVER -->
+<main>
 
-        <section class="otw-shell otw-cover">
+<!-- =====================================================
 
-            <p class="otw-eyebrow">The Journal</p>
+     JOURNAL INTRO
 
-            <div class="otw-rule"></div>
+====================================================== -->
 
-            <h1>A Life on<br>the Water</h1>
+<section class="note-intro">
 
-            <p class="otw-subtitle">
+    <div class="container">
+
+        <div class="note-intro-inner">
+
+            <p class="section-label">
+
+                THE JOURNAL
+
+            </p>
+
+            <h1>
+
+                A Life on the Water
+
+            </h1>
+
+            <p class="note-subtitle">
 
                 Three boats. Three journeys.
 
@@ -732,89 +334,109 @@
 
             </p>
 
-            <p class="otw-location">
+            <div class="note-opening">
 
-                Southeast Asia · Indonesia · Thailand · Vietnam
+                <p>
 
-            </p>
+                    There is a particular freedom to travelling by boat.
 
-        </section>
+                    The world slows down, the shoreline becomes a moving
 
-        <!-- COVER IMAGE
+                    picture, and the next discovery is never quite where
 
-             Replace the image path with the chosen boat photograph. -->
+                    you expect it to be.
 
-        <figure class="otw-cover-image otw-photo--wide">
+                </p>
 
-            <img
+                <p>
 
-                src="images/on-the-water-cover.jpg"
+                    From the wild currents of Indonesia's Komodo
 
-                alt="A boat travelling through a spectacular island landscape"
+                    archipelago to the limestone islands of Thailand
 
-                fetchpriority="high"
+                    and Vietnam, these three journeys reminded us
 
-            >
+                    that sometimes the best way to discover a place
 
-            <figcaption class="otw-caption">
+                    is to let the water lead the way.
 
-                A different perspective on life between the islands.
+                </p>
 
-            </figcaption>
+            </div>
 
-        </figure>
+            <!--
 
-        <!-- OPENING -->
+                IMAGE PLACEHOLDER
 
-        <section class="otw-shell otw-intro">
+                Add the chosen Journal cover photograph here.
 
-            <p>
+                Replace the filename once the image is in GitHub.
 
-                There is a particular freedom to travelling by boat.
+            -->
 
-                The world slows down, the shoreline becomes a moving
+            <figure class="water-cover-image">
 
-                picture, and the next discovery is never quite where
+                <img
 
-                you expect it to be.
+                    src="images/on-the-water-cover.jpg"
 
-            </p>
+                    alt="A boat travelling through an extraordinary island landscape"
 
-            <p class="otw-small">
+                    fetchpriority="high"
 
-                From the wild currents of Indonesia's Komodo
+                >
 
-                archipelago to the limestone islands of Thailand and
+            </figure>
 
-                Vietnam, these three journeys reminded us that
+        </div>
 
-                sometimes the best way to discover a place is to let
+    </div>
 
-                the water lead the way.
+</section>
 
-            </p>
+<!-- =====================================================
 
-        </section>
+     STORY ONE — KOMODO
 
-        <!-- =====================================
+====================================================== -->
 
-             STORY ONE: KOMODO
+<section class="note-day" id="komodo">
 
-        ====================================== -->
+    <div class="container">
 
-        <article class="otw-story" id="komodo">
+        <div class="note-day-grid">
 
-            <header class="otw-story-header">
+            <div class="note-day-heading">
 
-                <span class="otw-number">01</span>
+                <p class="note-day-number">
 
-                <h2>Into the Wild Blue</h2>
+                    01 — INDONESIA
 
-                <p>Komodo · Indonesia</p>
+                </p>
 
-            </header>
+                <div class="note-rule"></div>
 
-            <div class="otw-prose">
+                <h2>
+
+                    Into the Wild Blue
+
+                </h2>
+
+                <p class="note-day-route">
+
+                    Ayana<br>
+
+                    Padar Island<br>
+
+                    Pink Beach<br>
+
+                    Komodo
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
 
                 <p>
 
@@ -852,11 +474,19 @@
 
                     than that, they had taken the time to understand
 
-                    how we wanted to spend our days. Before we had
+                    how we wanted to spend our days.
 
-                    even set sail, they had carefully shaped an
+                </p>
 
-                    itinerary around our preferences.
+                <p>
+
+                    Before we had even set sail, they had carefully
+
+                    shaped an itinerary around our preferences.
+
+                    We could settle into life on the water knowing
+
+                    that the journey had been planned around us.
 
                 </p>
 
@@ -866,33 +496,15 @@
 
                 </p>
 
-            </div>
-
-            <figure class="otw-photo otw-photo--wide">
-
-                <img
-
-                    src="images/komodo-landscape.jpg"
-
-                    alt="The dramatic islands and waters of Komodo"
-
-                    loading="lazy"
-
-                >
-
-            </figure>
-
-            <div class="otw-prose">
-
                 <p>
 
                     The waters shifted constantly beneath us. At
 
-                    times, the surface was so calm and glasslike that
+                    times, the surface was so calm and glasslike
 
-                    the world seemed reflected in it. Elsewhere, the
+                    that the world seemed reflected in it. Elsewhere,
 
-                    currents churned and swirled into a bubbling
+                    the currents churned and swirled into a bubbling
 
                     cauldron, a reminder of the extraordinary forces
 
@@ -930,39 +542,49 @@
 
             </div>
 
-            <blockquote class="otw-pullquote">
+        </div>
 
-                <p>
+        <!-- KOMODO IMAGE PLACEHOLDER -->
 
-                    The greatest luxury was simply being somewhere
+        <figure class="water-photo">
 
-                    so beautiful, with nowhere else we needed to be.
+            <img
+
+                src="images/komodo-landscape.jpg"
+
+                alt="The dramatic islands and open waters of Komodo"
+
+                loading="lazy"
+
+            >
+
+        </figure>
+
+        <div class="note-day-grid">
+
+            <div class="note-day-heading">
+
+                <p class="note-day-number">
+
+                    THE ISLANDS
 
                 </p>
 
-            </blockquote>
+                <div class="note-rule"></div>
 
-            <figure class="otw-photo">
+                <p class="note-day-route">
 
-                <img
+                    Quiet bays<br>
 
-                    src="images/komodo-pad ar.jpg"
+                    Remote beaches<br>
 
-                    alt="A view across the ridgelines and bays of Padar Island"
+                    Extraordinary views
 
-                    loading="lazy"
+                </p>
 
-                >
+            </div>
 
-                <figcaption class="otw-caption">
-
-                    The view from Padar Island.
-
-                </figcaption>
-
-            </figure>
-
-            <div class="otw-prose">
+            <div class="note-day-content water-story-content">
 
                 <p>
 
@@ -980,6 +602,18 @@
 
                 <p>
 
+                    There was no need to fill every hour with an
+
+                    activity. Sometimes the greatest luxury was
+
+                    simply being somewhere so beautiful, with
+
+                    nowhere else we needed to be.
+
+                </p>
+
+                <p>
+
                     Padar Island offered a different perspective.
 
                     We hiked up the hillside, gradually gaining
@@ -990,11 +624,17 @@
 
                     revealed the extraordinary geography of the
 
-                    region. It was one of those places where
+                    region.
 
-                    photographs can only go so far towards
+                </p>
 
-                    explaining what it feels like to stand there.
+                <p>
+
+                    It was one of those places where photographs
+
+                    can only go so far towards explaining what
+
+                    it feels like to stand there.
 
                 </p>
 
@@ -1006,23 +646,23 @@
 
                     colour of the shoreline and the beautiful bay
 
-                    beyond it. A stop at a local warung provided
-
-                    the perfect excuse for a beer, while the boys
-
-                    headed out on their paddleboards to explore
-
-                    the water.
+                    beyond it.
 
                 </p>
 
                 <p>
 
-                    It was an uncomplicated afternoon, and all the
+                    A stop at a local warung provided the perfect
 
-                    better for it: a little local character, a
+                    excuse for a beer, while the boys headed out
 
-                    beautiful beach and time to enjoy the place
+                    on their paddleboards to explore the water.
+
+                    It was an uncomplicated afternoon, and all
+
+                    the better for it: a little local character,
+
+                    a beautiful beach and time to enjoy the place
 
                     at our own pace.
 
@@ -1030,21 +670,49 @@
 
             </div>
 
-            <figure class="otw-photo otw-photo--portrait">
+        </div>
 
-                <img
+        <figure class="water-photo">
 
-                    src="images/komodo-pink-beach.jpg"
+            <img
 
-                    alt="The beach and clear water of Komodo"
+                src="images/komodo-padar.jpg"
 
-                    loading="lazy"
+                alt="The ridgelines and bays of Padar Island"
 
-                >
+                loading="lazy"
 
-            </figure>
+            >
 
-            <div class="otw-prose">
+        </figure>
+
+        <div class="water-story-divider"></div>
+
+        <div class="note-day-grid">
+
+            <div class="note-day-heading">
+
+                <p class="note-day-number">
+
+                    WILDERNESS
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <p class="note-day-route">
+
+                    Komodo dragons<br>
+
+                    Flying foxes<br>
+
+                    Blacktip reef sharks
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
 
                 <p>
 
@@ -1074,13 +742,19 @@
 
                     coincide with a delicious meal prepared by the
 
-                    crew. The food became part of the rhythm of the
+                    crew.
 
-                    trip: an invitation to gather, eat well and
+                </p>
 
-                    reflect on the day's adventures before the next
+                <p>
 
-                    stretch of water carried us somewhere new.
+                    The food became part of the rhythm of the trip:
+
+                    an invitation to gather, eat well and reflect
+
+                    on the day's adventures before the next stretch
+
+                    of water carried us somewhere new.
 
                 </p>
 
@@ -1098,35 +772,29 @@
 
                     millions of flying foxes emerge into the sky,
 
-                    streaming out towards the evening darkness in
+                    streaming out towards the evening darkness
 
-                    search of food. Against the fading light, the
+                    in search of food. Against the fading light,
 
-                    bats moved in vast numbers from their roosts,
+                    the bats moved in vast numbers from their
 
-                    transforming the evening into a spectacle of
+                    roosts, transforming the evening into a
 
-                    nature on an immense scale.
+                    spectacle of nature on an immense scale.
 
                 </p>
 
-            </div>
+                <p>
 
-            <figure class="otw-photo otw-photo--wide">
+                    We stayed and watched as the procession
 
-                <img
+                    continued, reminded once again that the most
 
-                    src="images/komodo-evening.jpg"
+                    remarkable experiences often arrive when
 
-                    alt="The islands of Komodo in the evening light"
+                    you simply stop and pay attention.
 
-                    loading="lazy"
-
-                >
-
-            </figure>
-
-            <div class="otw-prose">
+                </p>
 
                 <p>
 
@@ -1139,6 +807,10 @@
                     occupied the sheltered shallows before growing
 
                     large enough to venture into deeper water.
+
+                </p>
+
+                <p>
 
                     It was a fascinating glimpse into the delicate
 
@@ -1178,20 +850,6 @@
 
                 <p>
 
-                    The Komodo archipelago is spectacular, but it
-
-                    is also a place that makes you feel small in
-
-                    the best possible way. Its distances, currents,
-
-                    wildlife and immense open spaces offer a rare
-
-                    sense of perspective.
-
-                </p>
-
-                <p>
-
                     We had come to explore the islands. We left
 
                     with the feeling that we had experienced
@@ -1206,27 +864,55 @@
 
             </div>
 
-        </article>
+        </div>
 
-        <!-- =====================================
+    </div>
 
-             STORY TWO: PHUKET
+</section>
 
-        ====================================== -->
+<!-- =====================================================
 
-        <article class="otw-story" id="phuket">
+     STORY TWO — PHUKET
 
-            <header class="otw-story-header">
+====================================================== -->
 
-                <span class="otw-number">02</span>
+<section class="note-day" id="phuket">
 
-                <h2>A Floating Playground</h2>
+    <div class="container">
 
-                <p>Phuket · Thailand</p>
+        <div class="note-day-grid">
 
-            </header>
+            <div class="note-day-heading">
 
-            <div class="otw-prose">
+                <p class="note-day-number">
+
+                    02 — THAILAND
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <h2>
+
+                    A Floating Playground
+
+                </h2>
+
+                <p class="note-day-route">
+
+                    Phuket Harbour<br>
+
+                    Laem Had Beach<br>
+
+                    Limestone islands<br>
+
+                    Bat Island
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
 
                 <p>
 
@@ -1274,67 +960,93 @@
 
                 <p>
 
-                    Our first stop took us to Laem Had Beach, a
+                    Our first stop took us to Laem Had Beach,
 
-                    shallow spit where the sea stretched out in
+                    a shallow spit where the sea stretched out
 
-                    clear, inviting shallows. We spent time walking
+                    in clear, inviting shallows. We spent time
 
-                    through the water, enjoying the sunshine and
+                    walking through the water, enjoying the
 
-                    taking in the surroundings before returning to
+                    sunshine and taking in the surroundings
 
-                    the boat and continuing our journey.
+                    before returning to the boat.
 
                 </p>
-
-            </div>
-
-            <figure class="otw-photo otw-photo--wide">
-
-                <img
-
-                    src="images/phuket-coastline.jpg"
-
-                    alt="Emerald water and limestone islands around Phuket"
-
-                    loading="lazy"
-
-                >
-
-            </figure>
-
-            <div class="otw-prose">
 
                 <p>
 
                     The coastline around these islands is
 
-                    extraordinary. We sailed around Lao Bile Island,
+                    extraordinary. We sailed around Lao Bile
 
-                    passing emerald water framed by towering
+                    Island, passing emerald water framed by
 
-                    limestone cliffs. The rock faces rose sharply
+                    towering limestone cliffs. The rock faces
 
-                    from the sea, topped with dense green
+                    rose sharply from the sea, topped with
 
-                    vegetation that softened their dramatic
+                    dense green vegetation that softened
 
-                    outlines.
+                    their dramatic outlines.
 
                 </p>
 
                 <p>
 
-                    It was a landscape that seemed designed for
+                    It was a landscape that seemed designed
 
-                    exploration by boat, with every headland
+                    for exploration by boat, with every headland
 
                     suggesting another hidden bay or passage
 
                     waiting around the corner.
 
                 </p>
+
+            </div>
+
+        </div>
+
+        <figure class="water-photo">
+
+            <img
+
+                src="images/phuket-coastline.jpg"
+
+                alt="Emerald water and limestone cliffs around Phuket"
+
+                loading="lazy"
+
+            >
+
+        </figure>
+
+        <div class="note-day-grid">
+
+            <div class="note-day-heading">
+
+                <p class="note-day-number">
+
+                    EXPLORATION
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <p class="note-day-route">
+
+                    Kayaks<br>
+
+                    Hidden caves<br>
+
+                    Lunch on board
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
 
                 <p>
 
@@ -1354,27 +1066,23 @@
 
                 <p>
 
-                    But the best part came when we returned.
+                    Away from the main boat, the experience felt
+
+                    more intimate: the water close beneath us,
+
+                    the limestone walls rising around us, and
+
+                    the quiet sense of venturing into somewhere
+
+                    a little less familiar.
 
                 </p>
 
-            </div>
+                <p>
 
-            <figure class="otw-photo">
+                    But the best part came when we returned.
 
-                <img
-
-                    src="images/phuket-yacht.jpg"
-
-                    alt="The yacht anchored in the clear waters of Thailand"
-
-                    loading="lazy"
-
-                >
-
-            </figure>
-
-            <div class="otw-prose">
+                </p>
 
                 <p>
 
@@ -1384,15 +1092,19 @@
 
                     After the exertion of kayaking, it was a
 
-                    brilliant surprise. Lunch became a wonderfully
+                    brilliant surprise.
 
-                    informal affair, with food enjoyed between
+                </p>
 
-                    swims, people diving straight off the boat
+                <p>
 
-                    and everyone drifting between the water and
+                    Lunch became a wonderfully informal affair,
 
-                    the deck.
+                    with food enjoyed between swims, people diving
+
+                    straight off the boat and everyone drifting
+
+                    between the water and the deck.
 
                 </p>
 
@@ -1400,11 +1112,13 @@
 
                     There was no need to get dressed up, rush
 
-                    anywhere or follow a schedule. The yacht had
+                    anywhere or follow a schedule. The yacht
 
-                    become our own private base for the day, and
+                    had become our own private base for the day,
 
-                    the sea was right there whenever we wanted it.
+                    and the sea was right there whenever we
+
+                    wanted it.
 
                 </p>
 
@@ -1422,6 +1136,52 @@
 
                 </p>
 
+            </div>
+
+        </div>
+
+        <figure class="water-photo">
+
+            <img
+
+                src="images/phuket-yacht.jpg"
+
+                alt="The yacht at anchor in the clear waters of Thailand"
+
+                loading="lazy"
+
+            >
+
+        </figure>
+
+        <div class="water-story-divider"></div>
+
+        <div class="note-day-grid">
+
+            <div class="note-day-heading">
+
+                <p class="note-day-number">
+
+                    THE FINAL STOP
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <p class="note-day-route">
+
+                    Bat Island<br>
+
+                    A slide into the sea<br>
+
+                    Family time
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
+
                 <p>
 
                     Later, as we sailed by Bat Island, the trees
@@ -1437,38 +1197,6 @@
                     places, with their own wildlife and rhythms.
 
                 </p>
-
-            </div>
-
-            <blockquote class="otw-pullquote">
-
-                <p>
-
-                    The yacht became our own private playground,
-
-                    and the sea provided an endless supply
-
-                    of entertainment.
-
-                </p>
-
-            </blockquote>
-
-            <figure class="otw-photo otw-photo--wide">
-
-                <img
-
-                    src="images/phuket-slide.jpg"
-
-                    alt="A family enjoying the water beside the yacht"
-
-                    loading="lazy"
-
-                >
-
-            </figure>
-
-            <div class="otw-prose">
 
                 <p>
 
@@ -1492,9 +1220,9 @@
 
                     racing down the slide and plunging into the
 
-                    water, climbing back aboard and doing it all
+                    water, climbing back aboard and doing it
 
-                    over again.
+                    all over again.
 
                 </p>
 
@@ -1570,27 +1298,55 @@
 
             </div>
 
-        </article>
+        </div>
 
-        <!-- =====================================
+    </div>
 
-             STORY THREE: BAI TU LONG BAY
+</section>
 
-        ====================================== -->
+<!-- =====================================================
 
-        <article class="otw-story" id="bai-tu-long">
+     STORY THREE — BAI TU LONG BAY
 
-            <header class="otw-story-header">
+====================================================== -->
 
-                <span class="otw-number">03</span>
+<section class="note-day" id="bai-tu-long">
 
-                <h2>A Quieter Kind of Wonder</h2>
+    <div class="container">
 
-                <p>Bai Tu Long Bay · Vietnam</p>
+        <div class="note-day-grid">
 
-            </header>
+            <div class="note-day-heading">
 
-            <div class="otw-prose">
+                <p class="note-day-number">
+
+                    03 — VIETNAM
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <h2>
+
+                    A Quieter Kind of Wonder
+
+                </h2>
+
+                <p class="note-day-route">
+
+                    Bai Tu Long Bay<br>
+
+                    Limestone islands<br>
+
+                    Hidden caves<br>
+
+                    Pearl farm
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
 
                 <p>
 
@@ -1630,31 +1386,15 @@
 
                 <p>
 
-                    We moved between them, gradually leaving the
+                    We moved between them, gradually leaving
 
-                    busier world behind and entering a place that
+                    the busier world behind and entering a place
 
-                    felt more secluded with every passing mile.
+                    that felt more secluded with every passing
+
+                    mile.
 
                 </p>
-
-            </div>
-
-            <figure class="otw-photo otw-photo--wide">
-
-                <img
-
-                    src="images/bai-tu-long-bay.jpg"
-
-                    alt="Limestone karst islands rising out of the emerald waters of Bai Tu Long Bay"
-
-                    loading="lazy"
-
-                >
-
-            </figure>
-
-            <div class="otw-prose">
 
                 <p>
 
@@ -1666,21 +1406,29 @@
 
                 <p>
 
-                    We had chosen Bai Tu Long Bay because we wanted
+                    We had chosen Bai Tu Long Bay because we
 
-                    to experience this extraordinary landscape
+                    wanted to experience this extraordinary
 
-                    without the crowds we had been told to expect
+                    landscape without the crowds we had been
 
-                    elsewhere. We were not disappointed. The
+                    told to expect elsewhere. We were not
 
-                    atmosphere was peaceful, and the sounds of the
+                    disappointed.
 
-                    natural world seemed to take over. Above us,
+                </p>
 
-                    eagles called out as they circled overhead,
+                <p>
 
-                    their cries carrying across the water.
+                    The atmosphere was peaceful, and the sounds
+
+                    of the natural world seemed to take over.
+
+                    Above us, eagles called out as they circled
+
+                    overhead, their cries carrying across
+
+                    the water.
 
                 </p>
 
@@ -1695,6 +1443,50 @@
                     seemed to invite it.
 
                 </p>
+
+            </div>
+
+        </div>
+
+        <figure class="water-photo">
+
+            <img
+
+                src="images/bai-tu-long-bay.jpg"
+
+                alt="Limestone islands rising from the emerald waters of Bai Tu Long Bay"
+
+                loading="lazy"
+
+            >
+
+        </figure>
+
+        <div class="note-day-grid">
+
+            <div class="note-day-heading">
+
+                <p class="note-day-number">
+
+                    ON BOARD
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <p class="note-day-route">
+
+                    Prince 2<br>
+
+                    Cooking demonstration<br>
+
+                    Sunset at anchor
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
 
                 <p>
 
@@ -1718,43 +1510,19 @@
 
                     the preparation behind the food we were
 
-                    enjoying. It was a lovely way to bring local
+                    enjoying. It was a lovely way to bring
 
-                    culture into life aboard the boat.
+                    local culture into life aboard the boat.
 
                 </p>
 
                 <p>
 
-                    That evening, we anchored in the bay and
+                    That evening, we anchored in the bay
 
-                    watched the sunset.
+                    and watched the sunset.
 
                 </p>
-
-            </div>
-
-            <figure class="otw-photo otw-photo--wide">
-
-                <img
-
-                    src="images/bai-tu-long-sunset.jpg"
-
-                    alt="Sunset over the limestone islands of Bai Tu Long Bay"
-
-                    loading="lazy"
-
-                >
-
-                <figcaption class="otw-caption">
-
-                    Evening settling over the bay.
-
-                </figcaption>
-
-            </figure>
-
-            <div class="otw-prose">
 
                 <p>
 
@@ -1766,9 +1534,9 @@
 
                     became silhouettes against the fading sky,
 
-                    and the water reflected the colours of the
+                    and the water reflected the colours of
 
-                    evening.
+                    the evening.
 
                 </p>
 
@@ -1778,27 +1546,79 @@
 
                     a good vantage point, the company of those
 
-                    around us and enough time to watch the light
+                    around us and enough time to watch the
 
-                    disappear.
+                    light disappear.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <figure class="water-photo">
+
+            <img
+
+                src="images/bai-tu-long-sunset.jpg"
+
+                alt="Sunset over the limestone islands of Bai Tu Long Bay"
+
+                loading="lazy"
+
+            >
+
+        </figure>
+
+        <div class="water-story-divider"></div>
+
+        <div class="note-day-grid">
+
+            <div class="note-day-heading">
+
+                <p class="note-day-number">
+
+                    DISCOVERY
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <p class="note-day-route">
+
+                    A giant cave<br>
+
+                    Secluded beach<br>
+
+                    Canoes and coastlines
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
+
+                <p>
+
+                    The following day brought an adventure on
+
+                    land. We made our way into one of the bays
+
+                    and climbed a hillside towards a vast cave
+
+                    hidden within the limestone.
 
                 </p>
 
                 <p>
 
-                    The following day brought an adventure on land.
+                    The ascent was worth the effort. Inside,
 
-                    We made our way into one of the bays and
+                    the scale of the cavern was extraordinary,
 
-                    climbed a hillside towards a vast cave hidden
+                    the rock enclosing a space that felt far
 
-                    within the limestone. The ascent was worth
-
-                    the effort. Inside, the scale of the cavern
-
-                    was extraordinary, the rock enclosing a space
-
-                    that felt far removed from the open water below.
+                    removed from the open water below.
 
                 </p>
 
@@ -1815,24 +1635,6 @@
                     a quiet corner of the bay.
 
                 </p>
-
-            </div>
-
-            <figure class="otw-photo">
-
-                <img
-
-                    src="images/bai-tu-long-beach.jpg"
-
-                    alt="A secluded beach beneath the green limestone hills"
-
-                    loading="lazy"
-
-                >
-
-            </figure>
-
-            <div class="otw-prose">
 
                 <p>
 
@@ -1862,15 +1664,59 @@
 
                 </p>
 
+            </div>
+
+        </div>
+
+        <figure class="water-photo">
+
+            <img
+
+                src="images/bai-tu-long-cave.jpg"
+
+                alt="A cave within the limestone landscape of Bai Tu Long Bay"
+
+                loading="lazy"
+
+            >
+
+        </figure>
+
+        <div class="note-day-grid">
+
+            <div class="note-day-heading">
+
+                <p class="note-day-number">
+
+                    LOCAL LIFE
+
+                </p>
+
+                <div class="note-rule"></div>
+
+                <p class="note-day-route">
+
+                    Pho for breakfast<br>
+
+                    Pearl cultivation<br>
+
+                    Life on the bay
+
+                </p>
+
+            </div>
+
+            <div class="note-day-content water-story-content">
+
                 <p>
 
                     Back on board, the crew continued to make
 
-                    every return feel like a treat. The food was
+                    every return feel like a treat. The food
 
-                    a real highlight throughout the trip, with
+                    was a real highlight throughout the trip,
 
-                    care taken over each meal.
+                    with care taken over each meal.
 
                 </p>
 
@@ -1894,9 +1740,9 @@
 
                     the local industry and the work involved in
 
-                    cultivating pearls, adding another layer to a
+                    cultivating pearls, adding another layer to
 
-                    journey that had already combined scenery,
+                    a journey that had already combined scenery,
 
                     nature, food and exploration.
 
@@ -1904,9 +1750,9 @@
 
                 <p>
 
-                    What stayed with us most, however, was the
+                    What stayed with us most, however, was
 
-                    feeling of space.
+                    the feeling of space.
 
                 </p>
 
@@ -1940,119 +1786,181 @@
 
                 <p>
 
-                    Bai Tu Long Bay managed to do both. It was a
+                    Bai Tu Long Bay managed to do both. It was
 
-                    landscape of extraordinary proportions, yet
+                    a landscape of extraordinary proportions,
 
-                    our memories of it are also remarkably quiet
+                    yet our memories of it are also remarkably
 
-                    ones. A sunset, a canoe gliding past limestone
+                    quiet ones. A sunset, a canoe gliding past
 
-                    walls, a secluded beach and the sound of eagles
+                    limestone walls, a secluded beach and the
 
-                    above the water.
-
-                </p>
-
-            </div>
-
-        </article>
-
-        <!-- =====================================
-
-             CLOSING REFLECTION
-
-        ====================================== -->
-
-        <section class="otw-ending">
-
-            <div class="otw-shell">
-
-                <p class="otw-eyebrow">A final thought</p>
-
-                <div class="otw-rule"></div>
-
-                <h2>The pleasure of<br>finding your own way</h2>
-
-                <p>
-
-                    Three journeys, three very different landscapes.
-
-                    In Komodo, we found wilderness on an extraordinary
-
-                    scale. Around Phuket, we discovered the joy of
-
-                    having the sea as our own family playground.
-
-                    In Bai Tu Long Bay, we found the kind of quiet
-
-                    that allows a place to reveal itself slowly.
-
-                </p>
-
-                <p>
-
-                    What connected them was the freedom of travelling
-
-                    by boat: the ability to linger, to explore a
-
-                    little further, to return to a welcoming crew
-
-                    and to watch the world change from the water.
-
-                </p>
-
-                <p>
-
-                    Sometimes the greatest luxury a journey can
-
-                    offer is not extravagance, but the freedom to
-
-                    experience somewhere extraordinary in your
-
-                    own time.
+                    sound of eagles above the water.
 
                 </p>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
 
-    <!-- FOOTER -->
+</section>
 
-    <footer class="otw-footer">
+<!-- =====================================================
 
-        <div class="otw-shell">
+     THE EXPAT EDIT
 
-            <div class="otw-wordmark">THE EXPAT EDITS</div>
+====================================================== -->
 
-            <p>TRAVEL · STAYS · EXPERIENCES</p>
+<section class="note-closing">
 
-            <div class="otw-rule" style="margin-top: 22px;"></div>
+    <div class="container">
 
-            <div class="otw-footer-links">
+        <div class="note-closing-inner">
 
-                <a href="index.html">Home</a>
+            <p class="section-label">
 
-                <a href="editions.html">Explore the Editions</a>
+                THE EXPAT EDIT
 
-                <a href="partners.html">Hotels &amp; Experiences</a>
+            </p>
 
-            </div>
+            <p class="note-closing-quote">
 
-            <p style="margin-top: 28px;">
+                Sometimes the greatest luxury a journey can offer
 
-                © The Expat Edits
+                is not extravagance, but the freedom to experience
+
+                somewhere extraordinary in your own time.
 
             </p>
 
         </div>
 
-    </footer>
+    </div>
 
-</div>
+</section>
+
+<!-- =====================================================
+
+     END NAVIGATION
+
+====================================================== -->
+
+<section class="container">
+
+    <div class="water-end">
+
+        <a
+
+            href="index-new.html"
+
+            class="text-link"
+
+        >
+
+            ← Back to Home
+
+        </a>
+
+        <a
+
+            href="editions.html"
+
+            class="text-link"
+
+        >
+
+            View All Editions →
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =====================================================
+
+     FOOTER — MATCHES THE EXISTING SITE
+
+====================================================== -->
+
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <div>
+
+            <div class="footer-logo">
+
+                THE EXPAT EDITS
+
+            </div>
+
+            <p class="footer-description">
+
+                Travel, places &amp; observations from life abroad.
+
+            </p>
+
+        </div>
+
+        <nav class="footer-nav">
+
+            <a href="editions.html">
+
+                Editions
+
+            </a>
+
+            <a href="index-new.html#journal">
+
+                Journal
+
+            </a>
+
+            <a href="index-new.html#map">
+
+                Map
+
+            </a>
+
+            <a href="index-new.html#about">
+
+                About
+
+            </a>
+
+        </nav>
+
+        <a
+
+            href="https://www.instagram.com/theexpatedits/"
+
+            class="footer-social"
+
+            target="_blank"
+
+            rel="noopener"
+
+        >
+
+            Instagram
+
+        </a>
+
+        <p class="footer-copyright">
+
+            © The Expat Edits
+
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
 

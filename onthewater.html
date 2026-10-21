@@ -1,1 +1,2059 @@
 
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Life on the Water — The Expat Edits Journal</title>
+
+    <meta name="description"
+
+          content="Three boats, three journeys and one extraordinary region. A travel journal through Komodo, Phuket and Bai Tu Long Bay.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+
+          rel="stylesheet">
+
+    <!-- Existing global stylesheet: leave the master CSS untouched -->
+
+    <link rel="stylesheet" href="style-new.css">
+
+    <style>
+
+        /* =========================================
+
+           THE EXPAT EDITS JOURNAL
+
+           Page-specific styling only
+
+        ========================================= */
+
+        :root {
+
+            --journal-cream: #f5f2eb;
+
+            --journal-charcoal: #242320;
+
+            --journal-ochre: #c6a15b;
+
+            --journal-muted: #77736b;
+
+            --journal-line: #d9d2c5;
+
+            --journal-white: #fffdf8;
+
+        }
+
+        .otw-page,
+
+        .otw-page * {
+
+            box-sizing: border-box;
+
+        }
+
+        .otw-page {
+
+            margin: 0;
+
+            background: var(--journal-cream);
+
+            color: var(--journal-charcoal);
+
+            font-family: 'Inter', sans-serif;
+
+            font-weight: 300;
+
+            line-height: 1.8;
+
+        }
+
+        .otw-page a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+        .otw-page img {
+
+            display: block;
+
+            max-width: 100%;
+
+        }
+
+        .otw-shell {
+
+            width: min(1120px, 88%);
+
+            margin-inline: auto;
+
+        }
+
+        /* Navigation */
+
+        .otw-nav {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 24px;
+
+            padding: 25px 0;
+
+            border-bottom: 1px solid var(--journal-line);
+
+        }
+
+        .otw-wordmark {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 19px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            line-height: 1.2;
+
+            white-space: nowrap;
+
+        }
+
+        .otw-nav-links {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+        }
+
+        .otw-nav-links a:hover {
+
+            color: var(--journal-ochre);
+
+        }
+
+        /* Editorial cover */
+
+        .otw-cover {
+
+            padding: 76px 0 52px;
+
+            text-align: center;
+
+        }
+
+        .otw-eyebrow {
+
+            margin: 0 0 20px;
+
+            color: var(--journal-muted);
+
+            font-size: 10px;
+
+            font-weight: 500;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+        }
+
+        .otw-rule {
+
+            width: 52px;
+
+            height: 2px;
+
+            margin: 0 auto 22px;
+
+            background: var(--journal-ochre);
+
+        }
+
+        .otw-cover h1 {
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(58px, 10vw, 112px);
+
+            font-weight: 500;
+
+            letter-spacing: -2px;
+
+            line-height: .91;
+
+        }
+
+        .otw-subtitle {
+
+            max-width: 520px;
+
+            margin: 25px auto 0;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(20px, 3vw, 28px);
+
+            font-style: italic;
+
+            line-height: 1.4;
+
+        }
+
+        .otw-location {
+
+            margin: 27px 0 0;
+
+            color: var(--journal-muted);
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+        }
+
+        /* Hero photography */
+
+        .otw-cover-image {
+
+            margin: 0 auto 80px;
+
+        }
+
+        .otw-cover-image img {
+
+            width: 100%;
+
+            height: auto;
+
+            max-height: 720px;
+
+            object-fit: cover;
+
+        }
+
+        .otw-caption {
+
+            margin-top: 12px;
+
+            color: var(--journal-muted);
+
+            font-size: 10px;
+
+            letter-spacing: .5px;
+
+        }
+
+        /* Introduction */
+
+        .otw-intro {
+
+            max-width: 680px;
+
+            margin: 0 auto 100px;
+
+            padding: 0 12px;
+
+            text-align: center;
+
+        }
+
+        .otw-intro p {
+
+            margin: 0 0 22px;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(23px, 3.2vw, 31px);
+
+            line-height: 1.55;
+
+        }
+
+        .otw-intro .otw-small {
+
+            font-family: 'Inter', sans-serif;
+
+            font-size: 13px;
+
+            line-height: 2;
+
+        }
+
+        /* Story sections */
+
+        .otw-story {
+
+            padding: 78px 0 90px;
+
+            border-top: 1px solid var(--journal-line);
+
+        }
+
+        .otw-story-header {
+
+            max-width: 750px;
+
+            margin: 0 auto 46px;
+
+            padding: 0 12px;
+
+            text-align: center;
+
+        }
+
+        .otw-number {
+
+            display: block;
+
+            margin-bottom: 16px;
+
+            color: var(--journal-ochre);
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 18px;
+
+            letter-spacing: 3px;
+
+        }
+
+        .otw-story-header h2 {
+
+            margin: 0;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(43px, 7vw, 72px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+        }
+
+        .otw-story-header p {
+
+            margin: 18px 0 0;
+
+            color: var(--journal-muted);
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 22px;
+
+            font-style: italic;
+
+        }
+
+        .otw-prose {
+
+            max-width: 660px;
+
+            margin: 0 auto;
+
+            padding: 0 12px;
+
+        }
+
+        .otw-prose p {
+
+            margin: 0 0 25px;
+
+            font-size: 14px;
+
+            line-height: 2.05;
+
+        }
+
+        .otw-prose p:first-child::first-letter {
+
+            float: left;
+
+            padding: 5px 9px 0 0;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 64px;
+
+            line-height: .8;
+
+        }
+
+        .otw-pullquote {
+
+            max-width: 700px;
+
+            margin: 55px auto;
+
+            padding: 0 22px;
+
+            text-align: center;
+
+        }
+
+        .otw-pullquote p {
+
+            margin: 0;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(29px, 4vw, 42px);
+
+            font-weight: 500;
+
+            line-height: 1.35;
+
+        }
+
+        .otw-pullquote::after {
+
+            display: block;
+
+            width: 42px;
+
+            height: 2px;
+
+            margin: 25px auto 0;
+
+            background: var(--journal-ochre);
+
+            content: "";
+
+        }
+
+        /* Images within stories */
+
+        .otw-photo {
+
+            width: min(900px, 88%);
+
+            margin: 55px auto;
+
+        }
+
+        .otw-photo img {
+
+            width: 100%;
+
+            height: auto;
+
+        }
+
+        .otw-photo--wide {
+
+            width: min(1080px, 94%);
+
+        }
+
+        .otw-photo--portrait {
+
+            width: min(660px, 88%);
+
+        }
+
+        /* Closing reflection */
+
+        .otw-ending {
+
+            padding: 100px 0;
+
+            border-top: 1px solid var(--journal-line);
+
+            text-align: center;
+
+        }
+
+        .otw-ending h2 {
+
+            max-width: 750px;
+
+            margin: 0 auto 30px;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(42px, 7vw, 70px);
+
+            font-weight: 500;
+
+            line-height: 1.08;
+
+        }
+
+        .otw-ending p {
+
+            max-width: 650px;
+
+            margin: 0 auto 22px;
+
+            padding: 0 12px;
+
+            font-size: 14px;
+
+            line-height: 2;
+
+        }
+
+        /* Footer */
+
+        .otw-footer {
+
+            padding: 42px 0 35px;
+
+            border-top: 1px solid var(--journal-line);
+
+            text-align: center;
+
+        }
+
+        .otw-footer .otw-wordmark {
+
+            margin-bottom: 14px;
+
+        }
+
+        .otw-footer p {
+
+            margin: 8px 0;
+
+            color: var(--journal-muted);
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+        }
+
+        .otw-footer-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 24px;
+
+            margin-top: 22px;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+
+            .otw-shell {
+
+                width: 90%;
+
+            }
+
+            .otw-nav {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                gap: 17px;
+
+                padding: 20px 0;
+
+            }
+
+            .otw-nav-links {
+
+                gap: 16px;
+
+                font-size: 9px;
+
+            }
+
+            .otw-cover {
+
+                padding: 58px 0 38px;
+
+            }
+
+            .otw-cover h1 {
+
+                letter-spacing: -1px;
+
+            }
+
+            .otw-cover-image {
+
+                margin-bottom: 65px;
+
+            }
+
+            .otw-intro {
+
+                margin-bottom: 65px;
+
+            }
+
+            .otw-story {
+
+                padding: 65px 0 60px;
+
+            }
+
+            .otw-story-header {
+
+                margin-bottom: 34px;
+
+            }
+
+            .otw-prose p {
+
+                font-size: 13px;
+
+                line-height: 2;
+
+            }
+
+            .otw-photo {
+
+                width: 90%;
+
+                margin: 38px auto;
+
+            }
+
+            .otw-photo--wide {
+
+                width: 96%;
+
+            }
+
+            .otw-pullquote {
+
+                margin: 42px auto;
+
+            }
+
+            .otw-ending {
+
+                padding: 75px 0;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="otw-page">
+
+    <!-- NAVIGATION -->
+
+    <div class="otw-shell">
+
+        <header class="otw-nav">
+
+            <a class="otw-wordmark" href="index.html">
+
+                THE EXPAT EDITS
+
+            </a>
+
+            <nav class="otw-nav-links" aria-label="Main navigation">
+
+                <a href="index.html">Home</a>
+
+                <a href="editions.html">Editions</a>
+
+                <a href="index.html#journal">Journal</a>
+
+            </nav>
+
+        </header>
+
+    </div>
+
+    <main>
+
+        <!-- JOURNAL COVER -->
+
+        <section class="otw-shell otw-cover">
+
+            <p class="otw-eyebrow">The Journal</p>
+
+            <div class="otw-rule"></div>
+
+            <h1>A Life on<br>the Water</h1>
+
+            <p class="otw-subtitle">
+
+                Three boats. Three journeys.
+
+                One extraordinary region.
+
+            </p>
+
+            <p class="otw-location">
+
+                Southeast Asia · Indonesia · Thailand · Vietnam
+
+            </p>
+
+        </section>
+
+        <!-- COVER IMAGE
+
+             Replace the image path with the chosen boat photograph. -->
+
+        <figure class="otw-cover-image otw-photo--wide">
+
+            <img
+
+                src="images/on-the-water-cover.jpg"
+
+                alt="A boat travelling through a spectacular island landscape"
+
+                fetchpriority="high"
+
+            >
+
+            <figcaption class="otw-caption">
+
+                A different perspective on life between the islands.
+
+            </figcaption>
+
+        </figure>
+
+        <!-- OPENING -->
+
+        <section class="otw-shell otw-intro">
+
+            <p>
+
+                There is a particular freedom to travelling by boat.
+
+                The world slows down, the shoreline becomes a moving
+
+                picture, and the next discovery is never quite where
+
+                you expect it to be.
+
+            </p>
+
+            <p class="otw-small">
+
+                From the wild currents of Indonesia's Komodo
+
+                archipelago to the limestone islands of Thailand and
+
+                Vietnam, these three journeys reminded us that
+
+                sometimes the best way to discover a place is to let
+
+                the water lead the way.
+
+            </p>
+
+        </section>
+
+        <!-- =====================================
+
+             STORY ONE: KOMODO
+
+        ====================================== -->
+
+        <article class="otw-story" id="komodo">
+
+            <header class="otw-story-header">
+
+                <span class="otw-number">01</span>
+
+                <h2>Into the Wild Blue</h2>
+
+                <p>Komodo · Indonesia</p>
+
+            </header>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    There are places that reward you for arriving
+
+                    slowly. The Komodo archipelago is one of them.
+
+                </p>
+
+                <p>
+
+                    Our journey began at the private jetty of Ayana,
+
+                    a wonderful launch pad from which to explore this
+
+                    extraordinary corner of Indonesia. The Samara
+
+                    crew kindly arranged to collect us directly from
+
+                    the hotel, allowing the adventure to begin almost
+
+                    at our doorstep.
+
+                </p>
+
+                <p>
+
+                    From the moment we stepped aboard
+
+                    <em>Samara 2</em>, we sensed that this would be
+
+                    something special. The crew welcomed us warmly
+
+                    and seemed to anticipate our every need. More
+
+                    than that, they had taken the time to understand
+
+                    how we wanted to spend our days. Before we had
+
+                    even set sail, they had carefully shaped an
+
+                    itinerary around our preferences.
+
+                </p>
+
+                <p>
+
+                    And what a landscape we had entered.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo otw-photo--wide">
+
+                <img
+
+                    src="images/komodo-landscape.jpg"
+
+                    alt="The dramatic islands and waters of Komodo"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    The waters shifted constantly beneath us. At
+
+                    times, the surface was so calm and glasslike that
+
+                    the world seemed reflected in it. Elsewhere, the
+
+                    currents churned and swirled into a bubbling
+
+                    cauldron, a reminder of the extraordinary forces
+
+                    moving through these islands.
+
+                </p>
+
+                <p>
+
+                    Limestone hills rose from the sea, their rugged
+
+                    outlines punctuating an immense expanse of blue.
+
+                    With every turn came another view, another
+
+                    secluded bay, another stretch of coastline that
+
+                    seemed to belong entirely to us.
+
+                </p>
+
+                <p>
+
+                    I have rarely experienced such a powerful sense
+
+                    of remoteness. Here, the distances between
+
+                    islands felt greater than they appeared on a map,
+
+                    and the world beyond the horizon seemed
+
+                    wonderfully far away.
+
+                </p>
+
+            </div>
+
+            <blockquote class="otw-pullquote">
+
+                <p>
+
+                    The greatest luxury was simply being somewhere
+
+                    so beautiful, with nowhere else we needed to be.
+
+                </p>
+
+            </blockquote>
+
+            <figure class="otw-photo">
+
+                <img
+
+                    src="images/komodo-pad ar.jpg"
+
+                    alt="A view across the ridgelines and bays of Padar Island"
+
+                    loading="lazy"
+
+                >
+
+                <figcaption class="otw-caption">
+
+                    The view from Padar Island.
+
+                </figcaption>
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    Some of our favourite moments were also the
+
+                    simplest. We found tiny sand spits, little
+
+                    ribbons of pale sand surrounded by clear water,
+
+                    where we could slip into the sea and spend time
+
+                    doing very little at all.
+
+                </p>
+
+                <p>
+
+                    Padar Island offered a different perspective.
+
+                    We hiked up the hillside, gradually gaining
+
+                    height until the surrounding landscape opened
+
+                    out before us. The dramatic ridgelines and bays
+
+                    revealed the extraordinary geography of the
+
+                    region. It was one of those places where
+
+                    photographs can only go so far towards
+
+                    explaining what it feels like to stand there.
+
+                </p>
+
+                <p>
+
+                    Then there was Pink Beach. We wandered along
+
+                    the length of the sand, taking in the unusual
+
+                    colour of the shoreline and the beautiful bay
+
+                    beyond it. A stop at a local warung provided
+
+                    the perfect excuse for a beer, while the boys
+
+                    headed out on their paddleboards to explore
+
+                    the water.
+
+                </p>
+
+                <p>
+
+                    It was an uncomplicated afternoon, and all the
+
+                    better for it: a little local character, a
+
+                    beautiful beach and time to enjoy the place
+
+                    at our own pace.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo otw-photo--portrait">
+
+                <img
+
+                    src="images/komodo-pink-beach.jpg"
+
+                    alt="The beach and clear water of Komodo"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    Komodo itself brought us face to face with the
+
+                    archipelago's most famous residents. Seeing the
+
+                    dragons in their natural habitat was a reminder
+
+                    that this is not simply a destination of
+
+                    spectacular scenery. It is also an extraordinary
+
+                    living ecosystem, with wildlife that feels
+
+                    entirely at home in a landscape that remains
+
+                    wonderfully untamed.
+
+                </p>
+
+                <p>
+
+                    Back aboard <em>Samara 2</em>, another pleasure
+
+                    awaited us. Every return to the boat seemed to
+
+                    coincide with a delicious meal prepared by the
+
+                    crew. The food became part of the rhythm of the
+
+                    trip: an invitation to gather, eat well and
+
+                    reflect on the day's adventures before the next
+
+                    stretch of water carried us somewhere new.
+
+                </p>
+
+                <p>
+
+                    Some of the most memorable experiences came
+
+                    when the day began to fade.
+
+                </p>
+
+                <p>
+
+                    One evening, we anchored in a bay and watched
+
+                    millions of flying foxes emerge into the sky,
+
+                    streaming out towards the evening darkness in
+
+                    search of food. Against the fading light, the
+
+                    bats moved in vast numbers from their roosts,
+
+                    transforming the evening into a spectacle of
+
+                    nature on an immense scale.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo otw-photo--wide">
+
+                <img
+
+                    src="images/komodo-evening.jpg"
+
+                    alt="The islands of Komodo in the evening light"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    Another day brought us to a shallow-water
+
+                    nursery where young blacktip reef sharks
+
+                    gathered for protection. The small sharks
+
+                    occupied the sheltered shallows before growing
+
+                    large enough to venture into deeper water.
+
+                    It was a fascinating glimpse into the delicate
+
+                    stages of marine life, and another reminder of
+
+                    how much is happening beneath the surface in
+
+                    these remote waters.
+
+                </p>
+
+                <p>
+
+                    By the end of the journey, it was difficult to
+
+                    choose a single highlight. The panoramic views
+
+                    from Padar, the pink sand beneath our feet,
+
+                    the dragons, the flying foxes and the young
+
+                    sharks all offered something different.
+
+                </p>
+
+                <p>
+
+                    Yet what connected them was the privilege of
+
+                    reaching these places by boat, with the freedom
+
+                    to linger where we wanted and move on when
+
+                    we were ready.
+
+                </p>
+
+                <p>
+
+                    The Komodo archipelago is spectacular, but it
+
+                    is also a place that makes you feel small in
+
+                    the best possible way. Its distances, currents,
+
+                    wildlife and immense open spaces offer a rare
+
+                    sense of perspective.
+
+                </p>
+
+                <p>
+
+                    We had come to explore the islands. We left
+
+                    with the feeling that we had experienced
+
+                    something harder to put into words: the simple,
+
+                    lasting pleasure of being far away from
+
+                    everything else.
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <!-- =====================================
+
+             STORY TWO: PHUKET
+
+        ====================================== -->
+
+        <article class="otw-story" id="phuket">
+
+            <header class="otw-story-header">
+
+                <span class="otw-number">02</span>
+
+                <h2>A Floating Playground</h2>
+
+                <p>Phuket · Thailand</p>
+
+            </header>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    Some boat journeys are about getting away from
+
+                    the world. Others are about bringing everyone
+
+                    together.
+
+                </p>
+
+                <p>
+
+                    Our time on the water around Phuket was very
+
+                    much the latter. With family visiting, we hired
+
+                    a modern, well-equipped yacht and set out from
+
+                    Phuket harbour for a few days of exploring
+
+                    islands, swimming in inviting water and
+
+                    discovering just how much fun a boat can be
+
+                    when it becomes your own floating playground.
+
+                </p>
+
+                <p>
+
+                    From the beginning, the crew set the tone.
+
+                    We were welcomed aboard and treated to some
+
+                    fantastic food, an early indication that the
+
+                    days ahead would be as much about enjoying
+
+                    ourselves on the yacht as they would be about
+
+                    the places we visited.
+
+                </p>
+
+                <p>
+
+                    Our first stop took us to Laem Had Beach, a
+
+                    shallow spit where the sea stretched out in
+
+                    clear, inviting shallows. We spent time walking
+
+                    through the water, enjoying the sunshine and
+
+                    taking in the surroundings before returning to
+
+                    the boat and continuing our journey.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo otw-photo--wide">
+
+                <img
+
+                    src="images/phuket-coastline.jpg"
+
+                    alt="Emerald water and limestone islands around Phuket"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    The coastline around these islands is
+
+                    extraordinary. We sailed around Lao Bile Island,
+
+                    passing emerald water framed by towering
+
+                    limestone cliffs. The rock faces rose sharply
+
+                    from the sea, topped with dense green
+
+                    vegetation that softened their dramatic
+
+                    outlines.
+
+                </p>
+
+                <p>
+
+                    It was a landscape that seemed designed for
+
+                    exploration by boat, with every headland
+
+                    suggesting another hidden bay or passage
+
+                    waiting around the corner.
+
+                </p>
+
+                <p>
+
+                    One of the pleasures of having a well-equipped
+
+                    yacht was the freedom to get off the boat and
+
+                    investigate the coastline at close quarters.
+
+                    We took the kayaks out and made our way into
+
+                    a cave system, discovering a different
+
+                    perspective on the islands.
+
+                </p>
+
+                <p>
+
+                    But the best part came when we returned.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo">
+
+                <img
+
+                    src="images/phuket-yacht.jpg"
+
+                    alt="The yacht anchored in the clear waters of Thailand"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    The crew had transformed the back of the yacht
+
+                    into a swimming pool, ready for us to enjoy.
+
+                    After the exertion of kayaking, it was a
+
+                    brilliant surprise. Lunch became a wonderfully
+
+                    informal affair, with food enjoyed between
+
+                    swims, people diving straight off the boat
+
+                    and everyone drifting between the water and
+
+                    the deck.
+
+                </p>
+
+                <p>
+
+                    There was no need to get dressed up, rush
+
+                    anywhere or follow a schedule. The yacht had
+
+                    become our own private base for the day, and
+
+                    the sea was right there whenever we wanted it.
+
+                </p>
+
+                <p>
+
+                    It was a particularly good way to spend time
+
+                    with family. Everyone could find their own
+
+                    version of the perfect afternoon, whether
+
+                    that meant relaxing on board, swimming, eating
+
+                    or simply watching the islands drift past.
+
+                </p>
+
+                <p>
+
+                    Later, as we sailed by Bat Island, the trees
+
+                    gave away the presence of its inhabitants.
+
+                    We could hear the bats calling from the
+
+                    canopy, a reminder that these islands are
+
+                    not just beautiful backdrops but living
+
+                    places, with their own wildlife and rhythms.
+
+                </p>
+
+            </div>
+
+            <blockquote class="otw-pullquote">
+
+                <p>
+
+                    The yacht became our own private playground,
+
+                    and the sea provided an endless supply
+
+                    of entertainment.
+
+                </p>
+
+            </blockquote>
+
+            <figure class="otw-photo otw-photo--wide">
+
+                <img
+
+                    src="images/phuket-slide.jpg"
+
+                    alt="A family enjoying the water beside the yacht"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    We eventually anchored for one last stop,
+
+                    and the crew produced perhaps the most
+
+                    universally appealing entertainment of the
+
+                    trip: a slide running off the side of the
+
+                    yacht and straight into the sea.
+
+                </p>
+
+                <p>
+
+                    The children needed little encouragement.
+
+                    Before long, they were spending the afternoon
+
+                    racing down the slide and plunging into the
+
+                    water, climbing back aboard and doing it all
+
+                    over again.
+
+                </p>
+
+                <p>
+
+                    The yacht became a floating amusement park,
+
+                    and the sea provided an endless supply of
+
+                    entertainment. It was noisy, energetic and
+
+                    completely carefree — exactly the sort of
+
+                    afternoon that makes a family trip memorable
+
+                    long after the details of the itinerary
+
+                    have faded.
+
+                </p>
+
+                <p>
+
+                    Looking back, what stands out about our time
+
+                    around Phuket is the variety. There were
+
+                    beautiful beaches and dramatic limestone
+
+                    scenery, quiet moments on the water and
+
+                    opportunities to explore caves by kayak.
+
+                    There was excellent food, thoughtful
+
+                    hospitality and the simple pleasure of being
+
+                    able to swim whenever the mood took us.
+
+                </p>
+
+                <p>
+
+                    Yet it was the flexibility of the experience
+
+                    that made it special. We could spend the
+
+                    morning exploring, the afternoon eating and
+
+                    swimming, and the final hours of the day
+
+                    laughing as the children hurled themselves
+
+                    into the sea.
+
+                </p>
+
+                <p>
+
+                    Sometimes the best travel memories are not
+
+                    made at a famous viewpoint or a celebrated
+
+                    landmark. Sometimes they are made on the back
+
+                    of a boat, with lunch on the table, the sea
+
+                    all around you and the children already
+
+                    lining up for another go on the slide.
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <!-- =====================================
+
+             STORY THREE: BAI TU LONG BAY
+
+        ====================================== -->
+
+        <article class="otw-story" id="bai-tu-long">
+
+            <header class="otw-story-header">
+
+                <span class="otw-number">03</span>
+
+                <h2>A Quieter Kind of Wonder</h2>
+
+                <p>Bai Tu Long Bay · Vietnam</p>
+
+            </header>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    We had heard that Bai Tu Long Bay offered a
+
+                    quieter alternative to its more famous
+
+                    neighbour, Ha Long Bay. It sounded appealing
+
+                    in theory, but it was only once we collected
+
+                    <em>Prince 2</em> and headed out into the water
+
+                    that we understood quite how much that
+
+                    distinction would shape the experience.
+
+                </p>
+
+                <p>
+
+                    The limestone islands rose from the emerald
+
+                    sea in every direction, their steep sides
+
+                    climbing towards the sky and their summits
+
+                    covered in lush vegetation. The formations
+
+                    seemed almost impossibly vertical, as though
+
+                    the landscape had been lifted straight out
+
+                    of the water.
+
+                </p>
+
+                <p>
+
+                    We moved between them, gradually leaving the
+
+                    busier world behind and entering a place that
+
+                    felt more secluded with every passing mile.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo otw-photo--wide">
+
+                <img
+
+                    src="images/bai-tu-long-bay.jpg"
+
+                    alt="Limestone karst islands rising out of the emerald waters of Bai Tu Long Bay"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    But it was the quiet that made the strongest
+
+                    impression.
+
+                </p>
+
+                <p>
+
+                    We had chosen Bai Tu Long Bay because we wanted
+
+                    to experience this extraordinary landscape
+
+                    without the crowds we had been told to expect
+
+                    elsewhere. We were not disappointed. The
+
+                    atmosphere was peaceful, and the sounds of the
+
+                    natural world seemed to take over. Above us,
+
+                    eagles called out as they circled overhead,
+
+                    their cries carrying across the water.
+
+                </p>
+
+                <p>
+
+                    It was the sort of place where you found
+
+                    yourself speaking more quietly, not because
+
+                    you needed to, but because the surroundings
+
+                    seemed to invite it.
+
+                </p>
+
+                <p>
+
+                    The crew aboard <em>Prince 2</em> helped make
+
+                    the journey feel both relaxed and personal.
+
+                    They were attentive without intruding, and
+
+                    there was a genuine effort to make each part
+
+                    of the experience memorable.
+
+                </p>
+
+                <p>
+
+                    Before dinner, they arranged a cooking
+
+                    demonstration, offering us a glimpse into
+
+                    the preparation behind the food we were
+
+                    enjoying. It was a lovely way to bring local
+
+                    culture into life aboard the boat.
+
+                </p>
+
+                <p>
+
+                    That evening, we anchored in the bay and
+
+                    watched the sunset.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo otw-photo--wide">
+
+                <img
+
+                    src="images/bai-tu-long-sunset.jpg"
+
+                    alt="Sunset over the limestone islands of Bai Tu Long Bay"
+
+                    loading="lazy"
+
+                >
+
+                <figcaption class="otw-caption">
+
+                    Evening settling over the bay.
+
+                </figcaption>
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    As the light changed over the limestone
+
+                    islands, the landscape took on a different
+
+                    character. The sharp outlines of the karsts
+
+                    became silhouettes against the fading sky,
+
+                    and the water reflected the colours of the
+
+                    evening.
+
+                </p>
+
+                <p>
+
+                    It was a moment that called for very little:
+
+                    a good vantage point, the company of those
+
+                    around us and enough time to watch the light
+
+                    disappear.
+
+                </p>
+
+                <p>
+
+                    The following day brought an adventure on land.
+
+                    We made our way into one of the bays and
+
+                    climbed a hillside towards a vast cave hidden
+
+                    within the limestone. The ascent was worth
+
+                    the effort. Inside, the scale of the cavern
+
+                    was extraordinary, the rock enclosing a space
+
+                    that felt far removed from the open water below.
+
+                </p>
+
+                <p>
+
+                    At the foot of the hill, we found a secluded
+
+                    beach. After the climb and the cave, it was
+
+                    a perfect place to pause, take in the view
+
+                    and enjoy the feeling of having discovered
+
+                    a quiet corner of the bay.
+
+                </p>
+
+            </div>
+
+            <figure class="otw-photo">
+
+                <img
+
+                    src="images/bai-tu-long-beach.jpg"
+
+                    alt="A secluded beach beneath the green limestone hills"
+
+                    loading="lazy"
+
+                >
+
+            </figure>
+
+            <div class="otw-prose">
+
+                <p>
+
+                    There was more exploring to come. We took
+
+                    canoes out around one of the islands and
+
+                    paddled along the coastline, discovering
+
+                    further caves and sheltered passages.
+
+                </p>
+
+                <p>
+
+                    Moving at that slower pace offered a different
+
+                    intimacy with the surroundings. Rather than
+
+                    watching the islands glide past from the deck,
+
+                    we could approach the rock faces, look into
+
+                    openings along the shore and explore the spaces
+
+                    between the formations.
+
+                </p>
+
+                <p>
+
+                    Back on board, the crew continued to make
+
+                    every return feel like a treat. The food was
+
+                    a real highlight throughout the trip, with
+
+                    care taken over each meal.
+
+                </p>
+
+                <p>
+
+                    One morning, they prepared pho for breakfast
+
+                    before we headed out to visit a pearl farm.
+
+                    It was a fitting start to the day: a delicious
+
+                    bowl of something warming before an excursion
+
+                    that offered another perspective on the region.
+
+                </p>
+
+                <p>
+
+                    The pearl farm was an interesting insight into
+
+                    the local industry and the work involved in
+
+                    cultivating pearls, adding another layer to a
+
+                    journey that had already combined scenery,
+
+                    nature, food and exploration.
+
+                </p>
+
+                <p>
+
+                    What stayed with us most, however, was the
+
+                    feeling of space.
+
+                </p>
+
+                <p>
+
+                    Bai Tu Long Bay gave us the opportunity to
+
+                    experience one of Vietnam's most extraordinary
+
+                    landscapes without feeling hurried through it.
+
+                    We could spend time watching the eagles, take
+
+                    in the sunset from the anchorage, climb towards
+
+                    a giant cave, relax on a secluded beach and
+
+                    paddle around the islands at our own pace.
+
+                </p>
+
+                <p>
+
+                    Some destinations impress you through their
+
+                    scale. Others stay with you because of how
+
+                    they make you feel.
+
+                </p>
+
+                <p>
+
+                    Bai Tu Long Bay managed to do both. It was a
+
+                    landscape of extraordinary proportions, yet
+
+                    our memories of it are also remarkably quiet
+
+                    ones. A sunset, a canoe gliding past limestone
+
+                    walls, a secluded beach and the sound of eagles
+
+                    above the water.
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <!-- =====================================
+
+             CLOSING REFLECTION
+
+        ====================================== -->
+
+        <section class="otw-ending">
+
+            <div class="otw-shell">
+
+                <p class="otw-eyebrow">A final thought</p>
+
+                <div class="otw-rule"></div>
+
+                <h2>The pleasure of<br>finding your own way</h2>
+
+                <p>
+
+                    Three journeys, three very different landscapes.
+
+                    In Komodo, we found wilderness on an extraordinary
+
+                    scale. Around Phuket, we discovered the joy of
+
+                    having the sea as our own family playground.
+
+                    In Bai Tu Long Bay, we found the kind of quiet
+
+                    that allows a place to reveal itself slowly.
+
+                </p>
+
+                <p>
+
+                    What connected them was the freedom of travelling
+
+                    by boat: the ability to linger, to explore a
+
+                    little further, to return to a welcoming crew
+
+                    and to watch the world change from the water.
+
+                </p>
+
+                <p>
+
+                    Sometimes the greatest luxury a journey can
+
+                    offer is not extravagance, but the freedom to
+
+                    experience somewhere extraordinary in your
+
+                    own time.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="otw-footer">
+
+        <div class="otw-shell">
+
+            <div class="otw-wordmark">THE EXPAT EDITS</div>
+
+            <p>TRAVEL · STAYS · EXPERIENCES</p>
+
+            <div class="otw-rule" style="margin-top: 22px;"></div>
+
+            <div class="otw-footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="editions.html">Explore the Editions</a>
+
+                <a href="partners.html">Hotels &amp; Experiences</a>
+
+            </div>
+
+            <p style="margin-top: 28px;">
+
+                © The Expat Edits
+
+            </p>
+
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>

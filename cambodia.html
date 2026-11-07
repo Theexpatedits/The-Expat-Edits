@@ -4,1277 +4,683 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cambodia | The Expat Edits</title>
-<meta
-    name="description"
-    content="Cambodia — Angkor Wat, Siem Reap, extraordinary temples, great food, markets and one of our favourite short breaks."
->
+<meta name="description" content="Come for Angkor. Stay for Siem Reap. Our first-hand Cambodia guide to Angkor Wat, Bayon, Navutu Dreams, Raffles and the markets, restaurants and evenings of Siem Reap.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style-new.css">
 <link rel="stylesheet" href="style-editions-new.css">
 <style>
 /* =========================================================
-   CAMBODIA
-   Editorial Edition / Singapore1 master template
+   CAMBODIA — HOTEL-LED EDITORIAL EDITION
+   Built from the approved Komodo Edition architecture.
+   Shared master CSS files are intentionally untouched.
 ========================================================= */
-.cambodia-desktop { display:block; }
-.cambodia-mobile { display:none; }
-/* =========================================================
-   DESKTOP
-========================================================= */
-@media (min-width:769px) {
-    :root {
-        --kh-width: min(1400px, calc(100% - 80px));
-        --kh-wide: min(1500px, calc(100% - 80px));
-        --kh-gap: 22px;
-        --kh-line: rgba(255,255,255,.12);
-        --kh-line-strong: rgba(255,255,255,.16);
-    }
-    /* -----------------------------------------------------
-       OPENING
-    ----------------------------------------------------- */
-    .kh-opening {
-        width:var(--kh-wide);
-        margin:0 auto;
-        padding:0 0 90px;
-        display:grid;
-        grid-template-columns:1.25fr .75fr;
-        gap:75px;
-        align-items:center;
-    }
-    .kh-opening-hero {
-        position:relative;
-        overflow:hidden;
-        width:100%;
-        background:#090909;
-    }
-    .kh-opening-hero img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-    .kh-opening-hero::after {
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:0;
-        right:0;
-        bottom:0;
-        height:38%;
-        pointer-events:none;
-        background:linear-gradient(
-            to bottom,
-            rgba(9,9,9,0) 0%,
-            rgba(9,9,9,.22) 28%,
-            rgba(9,9,9,.55) 55%,
-            rgba(9,9,9,.82) 78%,
-            #242320 100%
-        );
-    }
-    .kh-opening-hero .edition-hero-overlay {
-        position:absolute;
-        z-index:2;
-        left:55px;
-        right:55px;
-        bottom:50px;
-    }
-    .kh-opening-intro {
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        padding:50px 35px 50px 5px;
-    }
-    .kh-opening-intro h2 {
-        margin:0 0 28px;
-    }
-    .kh-opening-intro-copy {
-        max-width:560px;
-    }
-    .kh-opening-intro-copy p {
-        margin:0 0 22px;
-    }
-    /* -----------------------------------------------------
-       MAIN EDITORIAL CANVAS
-    ----------------------------------------------------- */
-    .kh-editorial {
-        width:var(--kh-width);
-        margin:0 auto;
-    }
-    .kh-editorial-section {
-        padding:70px 0;
-    }
-    .kh-grid,
-    .kh-final-grid {
-        display:grid;
-        grid-template-columns:repeat(12,minmax(0,1fr));
-        column-gap:var(--kh-gap);
-        row-gap:42px;
-        align-items:start;
-    }
-    .kh-grid img,
-    .kh-final-grid img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-    .kh-text {
-        align-self:center;
-    }
-    .kh-text p {
-        margin-top:0;
-    }
-    .kh-text h2,
-    .kh-text h3 {
-        margin-top:0;
-    }
-    .kh-text .section-label {
-        margin-bottom:12px;
-    }
-    .kh-rule {
-        width:42px;
-        height:1px;
-        margin:20px 0;
-        background:currentColor;
-        opacity:.65;
-    }
-    /* -----------------------------------------------------
-       EDITORIAL ROWS
-    ----------------------------------------------------- */
-    .kh-r1-text {
-        grid-column:1 / span 3;
-    }
-    .kh-r1-img1 {
-        grid-column:4 / span 5;
-        width:88%;
-    }
-    .kh-r1-img2 {
-        grid-column:9 / span 4;
-        width:90%;
-        margin-left:auto;
-        padding-top:55px;
-    }
-    .kh-r2-img1 {
-        grid-column:1 / span 3;
-        padding-top:25px;
-    }
-    .kh-r2-text {
-        grid-column:4 / span 3;
-        padding:0 8px;
-    }
-    .kh-r2-img2 {
-        grid-column:7 / span 3;
-    }
-    .kh-r2-text2 {
-        grid-column:10 / span 3;
-        padding-top:55px;
-    }
-    .kh-r3-text {
-        grid-column:1 / span 3;
-        padding-top:20px;
-    }
-    .kh-r3-img1 {
-        grid-column:4 / span 4;
-    }
-    .kh-r3-img2 {
-        grid-column:8 / span 2;
-        padding-top:55px;
-    }
-    .kh-r3-img3 {
-        grid-column:10 / span 3;
-        padding-top:10px;
-    }
-    .kh-r4-img1 {
-        grid-column:1 / span 4;
-    }
-    .kh-r4-text {
-        grid-column:5 / span 3;
-        padding:20px 5px 0;
-    }
-    .kh-r4-img2 {
-        grid-column:8 / span 5;
-        padding-top:40px;
-    }
-    /* -----------------------------------------------------
-       LOCAL INFORMATION
-    ----------------------------------------------------- */
-    .kh-info {
-        margin:20px 0 70px;
-        padding:60px 0;
-        border-top:1px solid var(--kh-line);
-        border-bottom:1px solid var(--kh-line);
-    }
-    .kh-info-grid {
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:70px;
-    }
-    .kh-info-item h3 {
-        margin:10px 0 12px;
-    }
-    /* -----------------------------------------------------
-       RECOMMENDATIONS
-    ----------------------------------------------------- */
-    .kh-recommendations {
-        padding:20px 0 100px;
-    }
-    .kh-recommendations-heading {
-        margin-bottom:50px;
-    }
-    .kh-recommendation-list {
-        max-width:950px;
-        border-top:1px solid var(--kh-line-strong);
-    }
-    .kh-recommendation {
-        display:grid;
-        grid-template-columns:70px 280px 1fr;
-        column-gap:35px;
-        align-items:start;
-        padding:30px 0;
-        border-bottom:1px solid var(--kh-line-strong);
-    }
-    .kh-rec-number {
-        padding-top:7px;
-        font-size:.72rem;
-        letter-spacing:.14em;
-        opacity:.6;
-    }
-    .kh-recommendation h3 {
-        margin:0;
-        font-size:1.35rem;
-    }
-    .kh-recommendation p {
-        margin:0;
-        max-width:520px;
-    }
-    /* -----------------------------------------------------
-       JOURNAL / OUR EDIT
-    ----------------------------------------------------- */
-    .kh-journal {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:90px;
-        align-items:center;
-        padding:70px 0;
-        border-top:1px solid var(--kh-line);
-    }
-    .kh-journal-copy p {
-        margin-top:0;
-    }
-    /* -----------------------------------------------------
-       FINAL PHOTOGRAPHIC FIELD
-    ----------------------------------------------------- */
-    .kh-final-heading {
-        grid-column:1 / span 3;
-        padding-top:30px;
-    }
-    .kh-final-img1 {
-        grid-column:4 / span 4;
-    }
-    .kh-final-img2 {
-        grid-column:8 / span 2;
-        padding-top:45px;
-    }
-    .kh-final-img3 {
-        grid-column:10 / span 3;
-    }
-    .kh-final-img4 {
-        grid-column:1 / span 3;
-        padding-top:25px;
-    }
-    .kh-final-img5 {
-        grid-column:4 / span 3;
-        padding-top:55px;
-    }
-    .kh-final-img6 {
-        grid-column:7 / span 3;
-    }
-    .kh-final-img7 {
-        grid-column:10 / span 3;
-        padding-top:30px;
-    }
-    /* -----------------------------------------------------
-       MAP
-    ----------------------------------------------------- */
-    .kh-map {
-        padding:80px 0 70px;
-    }
-    .kh-map-inner {
-        max-width:650px;
-    }
-    /* -----------------------------------------------------
-       END NAVIGATION
-    ----------------------------------------------------- */
-    .kh-end {
-        display:flex;
-        justify-content:space-between;
-        padding:35px 0 70px;
-    }
+.cambodia-desktop{display:block}.cambodia-mobile{display:none}
+.ca-opening,.ca-editorial,.ca-info,.ca-recommendations,.ca-journal,.ca-map,.ca-end{box-sizing:border-box}
+.ca-editorial img{display:block;width:100%;height:auto}
+.ca-rule{width:42px;height:1px;margin:20px 0;background:currentColor;opacity:.65}
+.ca-kicker{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.ca-text p{margin-top:0}.ca-text h2,.ca-text h3{margin-top:0}
+
+@media(min-width:769px){
+:root{--ca-width:min(1400px,calc(100% - 80px));--ca-wide:min(1500px,calc(100% - 80px));--ca-gap:22px;--ca-line:rgba(255,255,255,.12);--ca-line-strong:rgba(255,255,255,.16)}
+.ca-opening{width:var(--ca-wide);margin:0 auto;padding:0 0 100px;display:grid;grid-template-columns:1.25fr .75fr;gap:75px;align-items:center}
+.ca-opening-hero{position:relative;overflow:hidden;width:100%;background:#090909}
+.ca-opening-hero img{display:block;width:100%;height:auto}
+.ca-opening-hero:after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:38%;pointer-events:none;background:linear-gradient(to bottom,rgba(9,9,9,0),rgba(9,9,9,.22) 28%,rgba(9,9,9,.55) 55%,rgba(9,9,9,.82) 78%,#242320 100%)}
+.ca-opening-hero .edition-hero-overlay{position:absolute;z-index:2;left:55px;right:55px;bottom:50px}
+.ca-opening-intro{display:flex;flex-direction:column;justify-content:center;padding:50px 35px 50px 5px}
+.ca-opening-intro h2{margin:0 0 28px}.ca-opening-intro-copy{max-width:560px}.ca-opening-intro-copy p{margin:0 0 20px}.ca-opening-intro-copy p:last-child{margin-bottom:0}
+.ca-editorial{width:var(--ca-width);margin:0 auto}
+.ca-hotel{padding:90px 0 100px;border-top:1px solid var(--ca-line)}
+.ca-hotel-heading{max-width:760px;margin-bottom:60px}.ca-hotel-heading h2{margin-bottom:20px}
+.ca-hotel-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:75px;align-items:center}
+.ca-hotel-images{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.ca-hotel-images img{display:block;width:100%;height:auto}.ca-hotel-images img:last-child{margin-top:65px}
+.ca-hotel-copy{max-width:550px}.ca-hotel-copy h3{margin-top:0}.ca-hotel-copy p{margin-top:0}.ca-hotel-note{margin-top:30px;padding-top:22px;border-top:1px solid var(--ca-line)}
+.ca-hotel-setting{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px;align-items:start;padding:30px 0 90px}
+.ca-setting-text{grid-column:2/span 3;padding-top:30px}.ca-setting-img1{grid-column:5/span 4}.ca-setting-img2{grid-column:9/span 4;padding-top:70px}
+.ca-raffles{padding:90px 0;border-top:1px solid var(--ca-line)}
+.ca-raffles-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:center}
+.ca-raffles-copy{max-width:540px}.ca-raffles-images{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.ca-raffles-images img{display:block;width:100%;height:auto}.ca-raffles-images img:last-child{margin-top:65px}
+.ca-destination{padding:90px 0;border-top:1px solid var(--ca-line)}
+.ca-destination-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--ca-gap);row-gap:55px;align-items:start}
+.ca-destination-grid img{display:block;width:100%;height:auto}
+.ca-a-text{grid-column:1/span 3;padding-top:25px}.ca-a-img1{grid-column:4/span 5}.ca-a-img2{grid-column:9/span 4;padding-top:60px}
+.ca-b-img1{grid-column:1/span 4}.ca-b-text{grid-column:5/span 3;padding:20px 5px 0}.ca-b-img2{grid-column:8/span 5;padding-top:45px}
+.ca-c-text{grid-column:1/span 3;padding-top:20px}.ca-c-img1{grid-column:4/span 4}.ca-c-img2{grid-column:8/span 2;padding-top:55px}.ca-c-img3{grid-column:10/span 3;padding-top:10px}
+.ca-d-img1{grid-column:1/span 4;padding-top:25px}.ca-d-text{grid-column:5/span 3;padding:15px 8px 0}.ca-d-img2{grid-column:8/span 5;padding-top:40px}
+.ca-e-text{grid-column:1/span 3;padding-top:25px}.ca-e-img1{grid-column:4/span 4}.ca-e-img2{grid-column:8/span 5;padding-top:50px}
+.ca-f-img1{grid-column:1/span 4}.ca-f-text{grid-column:5/span 3;padding:20px 5px 0}.ca-f-img2{grid-column:8/span 5;padding-top:40px}
+.ca-panorama{padding:25px 0 90px}.ca-panorama img{display:block;width:100%;height:auto}
+.ca-town{padding:90px 0;border-top:1px solid var(--ca-line)}
+.ca-town-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.ca-town-images{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.ca-town-images img{display:block;width:100%;height:auto}.ca-town-images img:last-child{margin-top:60px}
+.ca-evenings{padding:80px 0;border-top:1px solid var(--ca-line)}
+.ca-evenings-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px;align-items:start}
+.ca-evenings-copy{grid-column:1/span 4;padding-top:20px}.ca-evenings-img1{grid-column:5/span 4}.ca-evenings-img2{grid-column:9/span 4;padding-top:65px}
+.ca-info{margin:30px 0 70px;padding:65px 0;border-top:1px solid var(--ca-line);border-bottom:1px solid var(--ca-line)}
+.ca-info-heading{max-width:680px;margin-bottom:45px}.ca-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:65px}.ca-info-item h3{margin:10px 0 12px}.ca-info-item p{max-width:370px}
+.ca-recommendations{padding:30px 0 100px}.ca-recommendations-heading{margin-bottom:50px}.ca-recommendation-list{max-width:1050px;border-top:1px solid var(--ca-line-strong)}
+.ca-recommendation{display:grid;grid-template-columns:70px 280px 1fr;column-gap:35px;align-items:start;padding:30px 0;border-bottom:1px solid var(--ca-line-strong)}
+.ca-rec-number{padding-top:7px;font-size:.72rem;letter-spacing:.14em;opacity:.6}.ca-recommendation h3{margin:0;font-size:1.35rem}.ca-recommendation p{margin:0;max-width:600px}
+.ca-journal{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center;padding:75px 0;border-top:1px solid var(--ca-line)}.ca-journal-copy p{margin-top:0}
+.ca-map{padding:80px 0 70px}.ca-map-inner{max-width:650px}
+.ca-end{display:flex;justify-content:space-between;padding:35px 0 70px}
 }
-/* =========================================================
-   MOBILE
-   Original Edition architecture retained
-========================================================= */
-@media (max-width:768px) {
-    .cambodia-desktop {
-        display:none;
-    }
-    .cambodia-mobile {
-        display:block;
-    }
+
+@media(max-width:768px){
+.cambodia-desktop{display:none}.cambodia-mobile{display:block}
+.ca-mobile-hotel,.ca-mobile-raffles,.ca-mobile-story,.ca-mobile-town,.ca-mobile-evenings,.ca-mobile-info,.ca-mobile-recommendations,.ca-mobile-journal{padding:55px 0}
+.ca-mobile-hotel img,.ca-mobile-raffles img,.ca-mobile-story img,.ca-mobile-town img,.ca-mobile-evenings img{display:block;width:100%;height:auto;margin-bottom:22px}
+.ca-mobile-copy{padding:20px 0 30px}.ca-mobile-info-item{margin-bottom:35px}.ca-mobile-info-item:last-child{margin-bottom:0}
+.ca-mobile-recommendation{padding:25px 0;border-bottom:1px solid rgba(255,255,255,.16)}.ca-mobile-recommendation h3{margin:8px 0 12px}
+.ca-mobile-panorama{padding:15px 0 55px}.ca-mobile-panorama img{display:block;width:100%;height:auto}
 }
 </style>
 </head>
+
 <body class="edition-page">
-<!-- =====================================================
-     HEADER
-====================================================== -->
+
 <header class="site-header">
 <div class="site-header-inner">
-    <a href="/" class="site-logo">
-        THE EXPAT EDITS
-    </a>
-    <nav class="site-nav">
-        <a href="editions.html">
-            Editions
-        </a>
-        <a href="index-new.html#journal">
-            Journal
-        </a>
-        <a href="index-new.html#map">
-            Map
-        </a>
-        <a href="about.html">
-            About
-        </a>
-    </nav>
-    <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation"
-    >
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+<a href="/" class="site-logo">THE EXPAT EDITS</a>
+<nav class="site-nav">
+<a href="editions.html">Editions</a>
+<a href="index-new.html#journal">Journal</a>
+<a href="index-new.html#map">Map</a>
+<a href="index-new.html#about">About</a>
+</nav>
+<button class="menu-toggle" type="button" aria-label="Open navigation">
+<span></span><span></span><span></span>
+</button>
 </div>
 </header>
+
 <!-- =====================================================
      DESKTOP EDITION
 ====================================================== -->
+
 <main class="cambodia-desktop">
-<!-- =====================================================
-     OPENING SPREAD
-====================================================== -->
-<section class="kh-opening">
-    <div class="kh-opening-hero">
-        <img
-            src="cambodia-hero.jpeg"
-            alt="Cambodia"
-            loading="eager"
-        >
-        <div class="edition-hero-overlay">
-            <p class="eyebrow">
-                OUR CAMBODIA
-            </p>
-            <h1>
-                Cambodia
-            </h1>
-            <p class="edition-hero-subtitle">
-                Temples, Siem Reap &amp; unforgettable evenings.
-            </p>
-        </div>
-    </div>
-    <div class="kh-opening-intro">
-        <p class="section-label">
-            OUR CAMBODIA
-        </p>
-        <h2>
-            Come for the temples. Stay for Siem Reap.
-        </h2>
-        <div class="kh-opening-intro-copy">
-            <p>
-                Cambodia was somewhere we'd wanted to visit for a
-                while, and Angkor Wat was obviously a big part of
-                the reason for going. But what surprised us most
-                was just how much we loved Siem Reap itself.
-            </p>
-            <p>
-                It turned out to be a superb short break — great
-                temples during the day, a relaxed hotel to come
-                back to, and lively evenings filled with markets,
-                restaurants, bars and the streets around Pub Street.
-            </p>
-        </div>
-    </div>
+
+<section class="ca-opening">
+<div class="ca-opening-hero">
+<img src="cambodia-hero.jpeg" alt="Angkor Wat framed by tropical foliage" loading="eager">
+<div class="edition-hero-overlay">
+<p class="eyebrow">OUR CAMBODIA</p>
+<h1>Cambodia</h1>
+<p class="edition-hero-subtitle">Come for Angkor. Stay for Siem Reap.</p>
+</div>
+</div>
+
+<div class="ca-opening-intro">
+<p class="section-label">OUR CAMBODIA</p>
+<h2>Ancient temples, lovely places to stay and a town full of character.</h2>
+<div class="ca-opening-intro-copy">
+<p>Angkor Wat was the reason we came to Cambodia, but Siem Reap gave us plenty of reasons to enjoy staying a little longer. The temples were every bit as extraordinary as we had hoped: atmospheric, intricate and almost impossible to take in all at once.</p>
+<p>We loved beginning the day among the ancient temples, then returning to a comfortable hotel and spending the later hours exploring the markets, restaurants and bars around town.</p>
+<p>We stayed at two very different hotels, Navutu Dreams and Raffles, and enjoyed both for different reasons. For us, Cambodia became a wonderful mix of history, relaxed days and lively evenings.</p>
+</div>
+</div>
 </section>
-<div class="kh-editorial">
-<!-- =====================================================
-     FROM OUR CAMERA
-====================================================== -->
-<section class="kh-editorial-section">
+
+<div class="ca-editorial">
+
+<!-- NAVUTU DREAMS -->
+<section class="ca-hotel">
+<div class="ca-hotel-heading">
+<p class="section-label">THE STAY · OUR BARGAIN PICK</p>
+<h2>Navutu Dreams.</h2>
+<p>A lovely family-run hotel and a superb base for exploring Angkor.</p>
+</div>
+
+<div class="ca-hotel-layout">
+<div class="ca-hotel-images">
+<img src="cambodia19.jpeg" alt="The pool and tropical gardens at Navutu Dreams" loading="lazy">
+<img src="cambodia20.jpeg" alt="A relaxed poolside moment at Navutu Dreams" loading="lazy">
+</div>
+
+<div class="ca-hotel-copy">
+<p class="section-label">OUR EXPERIENCE</p>
+<h3>A little oasis outside the centre.</h3>
+<div class="ca-rule"></div>
+<p>Navutu Dreams was our bargain pick, and we were genuinely very happy there. It is a family-run hotel set within a small, beautifully planted compound, with a relaxed atmosphere that made it easy to switch off after a day exploring the temples.</p>
+<p>The rooms were great, the pools were lovely and the whole place had a welcoming, personal feel. It was an easy tuk-tuk ride into town, so we could enjoy the restaurants and markets without staying right in the middle of the evening bustle.</p>
+<p>Most importantly, it worked brilliantly as a base for visiting Angkor Wat and the surrounding temples. We would happily recommend it to anyone looking for somewhere comfortable, characterful and good value in Siem Reap.</p>
+<div class="ca-hotel-note">
+<p>Our verdict: a genuinely good-value find. We liked the intimate, family-run feel and were very pleased with our choice.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- RAFFLES -->
+<section class="ca-raffles">
+<div class="ca-hotel-heading">
+<p class="section-label">THE OTHER SIDE OF OUR STAY</p>
+<h2>Raffles Grand Hotel d'Angkor.</h2>
+<p>A classic hotel, a magnificent pool and a lovely place to linger over breakfast.</p>
+</div>
+
+<div class="ca-raffles-layout">
+<div class="ca-raffles-copy">
+<p class="section-label">OUR EXPERIENCE</p>
+<h3>A familiar name, in a very different setting.</h3>
+<div class="ca-rule"></div>
+<p>We chose Raffles partly because we know the Raffles experience so well from Singapore. We wanted to see how it compared in Siem Reap, and we were very happy we made the visit.</p>
+<p>The pool is enormous and makes a real impression. The terrace is another highlight, particularly for breakfast, with a beautiful setting in which to take your time before heading out for the day.</p>
+<p>It is a very different proposition from Navutu: more grand-hotel in feel, with the scale and heritage you would expect from the Raffles name. We enjoyed it very much and it made a lovely counterpoint to our stay at Navutu.</p>
+<p>Having experienced both, we would happily recommend either. They offer different styles of stay, rather than one simply replacing the other.</p>
+</div>
+
+<div class="ca-raffles-images">
+<img src="cambodia21.jpeg" alt="Raffles Grand Hotel d'Angkor sign and gardens" loading="lazy">
+<img src="cambodia22.jpeg" alt="The large swimming pool at Raffles Grand Hotel d'Angkor" loading="lazy">
+</div>
+</div>
+</section>
+
+<!-- ANGKOR STORY -->
+<section class="ca-destination">
 <div class="section-heading">
-    <p>
-        FROM OUR CAMERA
-    </p>
-    <h2>
-        Cambodia, as we saw it.
-    </h2>
+<p>THE REASON WE CAME</p>
+<h2>Discovering Angkor.</h2>
 </div>
-<div class="kh-grid">
-    <!-- ROW 1 -->
-    <div class="kh-text kh-r1-text">
-        <p class="section-label">
-            ANGKOR
-        </p>
-        <h3>
-            Extraordinary, even when you've seen the pictures.
-        </h3>
-        <div class="kh-rule"></div>
-        <p>
-            Angkor Wat completely lived up to the expectation.
-            Seeing it in person — particularly around sunrise —
-            makes you appreciate the enormous scale of the
-            civilisation that created it.
-        </p>
-    </div>
-    <img
-        class="kh-r1-img1"
-        src="cambodia1.jpeg"
-        alt="Angkor Wat"
-        loading="eager"
-    >
-    <img
-        class="kh-r1-img2"
-        src="cambodia2.jpeg"
-        alt="Angkor Wat temple architecture"
-        loading="eager"
-    >
-    <!-- ROW 2 -->
-    <img
-        class="kh-r2-img1"
-        src="cambodia3.jpeg"
-        alt="Angkor temple architecture"
-        loading="lazy"
-    >
-    <div class="kh-text kh-r2-text">
-        <p class="section-label">
-            THE TEMPLES
-        </p>
-        <h3>
-            Angkor is so much more than one temple.
-        </h3>
-        <div class="kh-rule"></div>
-        <p>
-            Angkor Wat may be the obvious headline, but exploring
-            the wider complex is where the trip really comes alive.
-            Bayon Temple was one of our favourites, with its
-            extraordinary faces and sense of scale.
-        </p>
-    </div>
-    <img
-        class="kh-r2-img2"
-        src="cambodia4.jpeg"
-        alt="Temple ruins in Cambodia"
-        loading="lazy"
-    >
-    <div class="kh-text kh-r2-text2">
-        <p class="section-label">
-            BEYOND ANGKOR
-        </p>
-        <h3>
-            Give yourself time to explore.
-        </h3>
-        <p>
-            The ruins, trees and ancient walls constantly change
-            as you move through the complex. It is easy to spend
-            the whole day exploring and still feel as though you've
-            only scratched the surface.
-        </p>
-    </div>
-    <!-- ROW 3 -->
-    <div class="kh-text kh-r3-text">
-        <p class="section-label">
-            SIEM REAP
-        </p>
-        <h3>
-            We loved the town as much as the temples.
-        </h3>
-        <div class="kh-rule"></div>
-        <p>
-            This was perhaps our biggest surprise. Siem Reap has
-            an easy, relaxed energy and is genuinely enjoyable
-            once you're back from the temples. We loved wandering
-            through the markets, heading towards Pub Street and
-            seeing where the evening took us.
-        </p>
-    </div>
-    <img
-        class="kh-r3-img1"
-        src="cambodia5.jpeg"
-        alt="Cambodia temple"
-        loading="lazy"
-    >
-    <img
-        class="kh-r3-img2"
-        src="cambodia6.jpeg"
-        alt="Angkor architecture"
-        loading="lazy"
-    >
-    <img
-        class="kh-r3-img3"
-        src="cambodia7.jpeg"
-        alt="Cambodian landscape"
-        loading="lazy"
-    >
-    <!-- ROW 4 -->
-    <img
-        class="kh-r4-img1"
-        src="cambodia8.jpeg"
-        alt="Navutu Dreams"
-        loading="lazy"
-    >
-    <div class="kh-text kh-r4-text">
-        <p class="section-label">
-            NAVUTU DREAMS
-        </p>
-        <h3>
-            The perfect place to come back to.
-        </h3>
-        <p>
-            We stayed at Navutu Dreams and thought it was superb.
-            Peaceful, relaxed and with a boutique feel, it was a
-            great contrast to the heat and activity of the temples.
-            For us, it was exactly the right place to stay.
-        </p>
-    </div>
-    <img
-        class="kh-r4-img2"
-        src="cambodia9.jpeg"
-        alt="Siem Reap"
-        loading="lazy"
-    >
+
+<div class="ca-destination-grid">
+
+<div class="ca-text ca-a-text">
+<p class="section-label">ANGKOR WAT</p>
+<h3>Worth the early start.</h3>
+<div class="ca-rule"></div>
+<p>Seeing Angkor Wat at sunrise was one of the defining moments of our Cambodia trip. The light gradually builds over the temple, and the reflection across the water makes the scene feel almost unreal.</p>
+<p>It is an early start, but one we would absolutely recommend. Arriving before the day gets going gives the place a very different atmosphere.</p>
+</div>
+<img class="ca-a-img1" src="cambodia1.jpeg" alt="Visitors walking towards Angkor Wat at sunrise" loading="lazy">
+<img class="ca-a-img2" src="cambodia6.jpeg" alt="Angkor Wat silhouetted against the morning sky" loading="lazy">
+
+<img class="ca-b-img1" src="cambodia3.jpeg" alt="The ancient stone architecture of Angkor" loading="lazy">
+<div class="ca-text ca-b-text">
+<p class="section-label">THE TEMPLES</p>
+<h3>A vast world to explore.</h3>
+<div class="ca-rule"></div>
+<p>Angkor is much more than one famous temple. The wider complex is full of extraordinary buildings, passageways, carved stone and details that reward taking your time.</p>
+<p>We loved wandering through it rather than treating the visit as a quick stop for a photograph.</p>
+</div>
+<img class="ca-b-img2" src="cambodia8.jpeg" alt="A sweeping view of Angkor temple architecture" loading="lazy">
+
+<div class="ca-text ca-c-text">
+<p class="section-label">BAYON</p>
+<h3>Faces that seem to follow you.</h3>
+<div class="ca-rule"></div>
+<p>Bayon was another highlight. Its towers and enormous carved faces give it a completely different character from Angkor Wat. It is one of those places that feels almost otherworldly when you are standing among the stonework.</p>
+</div>
+<img class="ca-c-img1" src="cambodia10.jpeg" alt="The carved stone faces of Bayon Temple" loading="lazy">
+<img class="ca-c-img2" src="cambodia5.jpeg" alt="A visitor taking in the stone faces at Bayon" loading="lazy">
+<img class="ca-c-img3" src="cambodia9.jpeg" alt="Intricate stone carvings and temple details" loading="lazy">
+
+<img class="ca-d-img1" src="cambodia11.jpeg" alt="A view through the ancient temple complex" loading="lazy">
+<div class="ca-text ca-d-text">
+<p class="section-label">ANCIENT DETAILS</p>
+<h3>History in every corner.</h3>
+<div class="ca-rule"></div>
+<p>Some of the most memorable moments came from looking a little closer: the carved windows, weathered stone and layers of architecture. There is an extraordinary amount to discover beyond the best-known viewpoints.</p>
+</div>
+<img class="ca-d-img2" src="cambodia16.jpeg" alt="An ancient temple tower in the warm evening light" loading="lazy">
+
+<div class="ca-text ca-e-text">
+<p class="section-label">THE LANDSCAPE</p>
+<h3>Temples reclaimed by nature.</h3>
+<div class="ca-rule"></div>
+<p>Part of the magic is the way the temples sit within the landscape. Trees, roots and foliage frame the old stonework, creating scenes that feel as though they have barely changed over centuries.</p>
+</div>
+<img class="ca-e-img1" src="cambodia12.jpeg" alt="Temple architecture surrounded by tropical trees" loading="lazy">
+<img class="ca-e-img2" src="cambodia18.jpeg" alt="A distant view across the forest and temple landscape" loading="lazy">
+
+<img class="ca-f-img1" src="cambodia2.jpeg" alt="A quiet moment among the Angkor temples" loading="lazy">
+<div class="ca-text ca-f-text">
+<p class="section-label">TAKE YOUR TIME</p>
+<h3>More than a single stop.</h3>
+<div class="ca-rule"></div>
+<p>We loved Angkor Wat and Bayon, but the wider temple area is what makes the experience so special. Allow time to explore, pause and take in the scale of what was built here.</p>
+</div>
+<img class="ca-f-img2" src="cambodia7.jpeg" alt="Angkor Wat and its reflection in the early morning" loading="lazy">
+
 </div>
 </section>
-<!-- =====================================================
-     LOCAL INFORMATION
-====================================================== -->
-<section class="kh-info">
-<div class="kh-info-grid">
-    <div class="kh-info-item">
-        <p class="section-label">
-            BEST TIME
-        </p>
-        <h3>
-            November – February
-        </h3>
-        <p>
-            The cooler, drier months are particularly enjoyable
-            for exploring the temples and spending time walking
-            around Siem Reap.
-        </p>
-    </div>
-    <div class="kh-info-item">
-        <p class="section-label">
-            WEATHER
-        </p>
-        <h3>
-            Hot &amp; tropical
-        </h3>
-        <p>
-            Cambodia is hot for much of the year, with a distinct
-            wet season. The greener months can be beautiful too,
-            but the heat is something to plan around.
-        </p>
-    </div>
-    <div class="kh-info-item">
-        <p class="section-label">
-            GETTING AROUND
-        </p>
-        <h3>
-            Tuk-tuk &amp; walk
-        </h3>
-        <p>
-            Siem Reap is easy to explore, while a tuk-tuk makes
-            getting between the town and the temples simple,
-            inexpensive and enjoyable.
-        </p>
-    </div>
+
+<!-- PANORAMIC IMAGE -->
+<section class="ca-panorama">
+<div class="section-heading">
+<p>A MOMENT TO TAKE IN</p>
+<h2>Angkor, in the quiet of the morning.</h2>
+</div>
+<img src="cambodia23.jpeg" alt="Panoramic view of Angkor Wat reflected across the water at sunrise" loading="lazy">
+</section>
+
+<!-- SIEM REAP -->
+<section class="ca-town">
+<div class="section-heading">
+<p>BEYOND THE TEMPLES</p>
+<h2>Getting to know Siem Reap.</h2>
+</div>
+
+<div class="ca-town-grid">
+<div class="ca-text">
+<p class="section-label">THE TOWN</p>
+<h3>A city break in its own right.</h3>
+<div class="ca-rule"></div>
+<p>One of the things we loved about Siem Reap was that it offered so much more than a place to sleep between temple visits. We enjoyed wandering around the markets, looking at the local produce and taking in the everyday life of the town.</p>
+<p>The markets are colourful, busy and full of interest. They are well worth exploring, even if you are not looking to buy anything in particular.</p>
+<p>We also found the contrast between the relaxed daytime pace and the livelier evenings around Pub Street particularly enjoyable.</p>
+</div>
+
+<div class="ca-town-images">
+<img src="cambodia4.jpeg" alt="Fresh produce at a Siem Reap market" loading="lazy">
+<img src="cambodia14.jpeg" alt="Colourful ingredients and produce at the market" loading="lazy">
+</div>
 </div>
 </section>
-<!-- =====================================================
-     RECOMMENDATIONS
-====================================================== -->
-<section class="kh-recommendations">
-<div class="kh-recommendations-heading">
-    <p class="section-label">
-        OUR RECOMMENDATIONS
-    </p>
-    <h2>
-        Places &amp; experiences we loved.
-    </h2>
+
+<!-- MARKET LIFE -->
+<section class="ca-evenings">
+<div class="ca-evenings-grid">
+<div class="ca-text ca-evenings-copy">
+<p class="section-label">LOCAL LIFE</p>
+<h3>A market worth wandering.</h3>
+<div class="ca-rule"></div>
+<p>We enjoyed getting away from the main sights and simply exploring. The markets give you a glimpse of local life, with stalls selling fresh produce and all sorts of things you might not see at home.</p>
+<p>We even tried tarantula during our time in Siem Reap — certainly one of the more unusual food memories from the trip.</p>
 </div>
-<div class="kh-recommendation-list">
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">01</span>
-        <h3>
-            Angkor Wat
-        </h3>
-        <p>
-            The obvious reason to come — and it completely lives
-            up to the expectation. Give yourself time to explore
-            beyond the famous views and appreciate the scale of
-            the whole complex.
-        </p>
-    </article>
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">02</span>
-        <h3>
-            Bayon Temple
-        </h3>
-        <p>
-            One of our favourites within the wider Angkor complex.
-            The extraordinary faces and architecture make it one
-            of those places that stays with you.
-        </p>
-    </article>
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">03</span>
-        <h3>
-            Navutu Dreams
-        </h3>
-        <p>
-            A small boutique hotel and an excellent choice for us.
-            Peaceful, relaxed and a great place to come back to
-            after exploring the temples.
-        </p>
-    </article>
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">04</span>
-        <h3>
-            Sokkhak River Restaurant
-        </h3>
-        <p>
-            One of the places we really enjoyed eating in Siem
-            Reap. A lovely setting and exactly the sort of relaxed
-            evening we were looking for after a day exploring.
-        </p>
-    </article>
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">05</span>
-        <h3>
-            Pub Street &amp; the night market
-        </h3>
-        <p>
-            We loved heading into town in the evening. The night
-            market, Pub Street and the surrounding streets gave
-            Siem Reap a lively atmosphere without making it feel
-            too overwhelming.
-        </p>
-    </article>
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">06</span>
-        <h3>
-            Lost City Pizza
-        </h3>
-        <p>
-            A surprisingly good find and exactly the sort of
-            relaxed place we enjoy discovering when we're away.
-            Worth putting on the list.
-        </p>
-    </article>
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">07</span>
-        <h3>
-            The night market
-        </h3>
-        <p>
-            One of the fun parts of exploring Siem Reap after dark.
-            And yes, this was also where we found ourselves eating
-            tarantulas — not something we expected to be doing when
-            we booked the trip.
-        </p>
-    </article>
-    <article class="kh-recommendation">
-        <span class="kh-rec-number">08</span>
-        <h3>
-            Raffles
-        </h3>
-        <p>
-            We visited for lunch and enjoyed it, particularly the
-            enormous swimming pool. It was a great place to see,
-            although ultimately we were happier with our choice of
-            Navutu Dreams.
-        </p>
-    </article>
+<img class="ca-evenings-img1" src="cambodia15.jpeg" alt="A local market seller in Siem Reap" loading="lazy">
+<img class="ca-evenings-img2" src="cambodia25.jpeg" alt="The warm colours of sunset over Siem Reap" loading="lazy">
 </div>
 </section>
-<!-- =====================================================
-     OUR EDIT
-====================================================== -->
-<section class="kh-journal">
+
+<!-- EVENINGS AND FOOD -->
+<section class="ca-town">
+<div class="ca-town-grid">
+<div class="ca-town-images">
+<img src="cambodia24.jpeg" alt="Evening view over Siem Reap" loading="lazy">
+</div>
+<div class="ca-text">
+<p class="section-label">EVENINGS IN TOWN</p>
+<h3>From market strolls to lively nights.</h3>
+<div class="ca-rule"></div>
+<p>After the early starts and temple visits, Siem Reap was a lovely place to enjoy the evenings. Pub Street and the surrounding lanes have plenty of energy, with bars and restaurants close together and an easygoing atmosphere.</p>
+<p>We particularly enjoyed Miss Wong for cocktails and Madam Fan for a drink. For food, Lost City Pizza was a favourite, as was Elia Greek near the market. We also enjoyed Sokkhak River Restaurant.</p>
+<p>It was a great balance: relaxed days exploring, followed by the option of a much livelier evening whenever we felt like heading out.</p>
+</div>
+</div>
+</section>
+
+<!-- TRAVEL INFORMATION -->
+<section class="ca-info">
+<div class="ca-info-heading">
+<p class="section-label">PLANNING YOUR VISIT</p>
+<h2>How to make the most of Siem Reap.</h2>
+<p>A few practical thoughts from our time here, to help you plan a stay that includes more than just the headline sights.</p>
+</div>
+
+<div class="ca-info-grid">
+<div class="ca-info-item">
+<p class="section-label">HOW LONG TO STAY</p>
+<h3>Three to four nights</h3>
+<p>We would allow enough time for an early visit to Angkor Wat, the wider temple complex and Bayon, with time left over to enjoy the town, markets and restaurants without rushing.</p>
+</div>
+<div class="ca-info-item">
+<p class="section-label">GETTING AROUND</p>
+<h3>Tuk-tuks make it easy</h3>
+<p>We found tuk-tuks a convenient way to get between the hotel and town. For the temples, arrange transport for the day so you can move between the different sites at your own pace.</p>
+</div>
+<div class="ca-info-item">
+<p class="section-label">THE TEMPLE VISIT</p>
+<h3>Start early</h3>
+<p>Angkor Wat at sunrise is worth the early alarm. Give yourself time for the wider temple area too; Angkor is a collection of remarkable places, not just one viewpoint.</p>
+</div>
+<div class="ca-info-item">
+<p class="section-label">WHERE TO STAY</p>
+<h3>Choose your atmosphere</h3>
+<p>Navutu Dreams is a lovely, good-value boutique option with a family-run feel. Raffles offers a grander hotel experience, a huge pool and a beautiful breakfast terrace.</p>
+</div>
+<div class="ca-info-item">
+<p class="section-label">DAYTIME &amp; EVENINGS</p>
+<h3>A good balance</h3>
+<p>Spend the day among the temples and markets, then head into town for dinner or a drink. Pub Street and the surrounding streets are particularly lively in the evening.</p>
+</div>
+<div class="ca-info-item">
+<p class="section-label">WHO WILL LOVE IT</p>
+<h3>Culture with character</h3>
+<p>Siem Reap is a rewarding break for anyone who enjoys history, architecture, local food and a town with plenty of places to explore after the sightseeing is done.</p>
+</div>
+</div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+<section class="ca-recommendations">
+<div class="ca-recommendations-heading">
+<p class="section-label">OUR RECOMMENDATIONS</p>
+<h2>Places &amp; experiences we loved.</h2>
+</div>
+
+<div class="ca-recommendation-list">
+<article class="ca-recommendation"><span class="ca-rec-number">01</span><h3>Navutu Dreams</h3><p>Our bargain pick: a welcoming family-run hotel with lovely rooms, pools and beautifully planted grounds. A superb base for visiting Angkor.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">02</span><h3>Raffles Grand Hotel d'Angkor</h3><p>A classic hotel with a huge pool and a lovely breakfast terrace. We enjoyed comparing it with the Raffles we know in Singapore.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">03</span><h3>Angkor Wat at sunrise</h3><p>An early start, but one of the defining experiences of the trip. Allow time to enjoy the wider temple complex afterwards.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">04</span><h3>Bayon Temple</h3><p>Its remarkable carved faces and distinctive towers made it one of our favourite stops in the Angkor complex.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">05</span><h3>Miss Wong</h3><p>A great cocktail bar and a lovely choice for an evening drink in Siem Reap.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">06</span><h3>Madam Fan</h3><p>Another bar we enjoyed discovering while exploring the town in the evening.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">07</span><h3>Lost City Pizza</h3><p>A favourite food stop during our time in Siem Reap.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">08</span><h3>Elia Greek</h3><p>A good restaurant near the market that we were very happy to find.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">09</span><h3>Sokkhak River Restaurant</h3><p>Another restaurant we enjoyed during our stay. Worth adding to your Siem Reap list.</p></article>
+<article class="ca-recommendation"><span class="ca-rec-number">10</span><h3>The markets &amp; Pub Street</h3><p>Make time to wander the markets during the day and explore the lively streets around Pub Street after dark.</p></article>
+</div>
+</section>
+
+<!-- OUR EDIT -->
+<section class="ca-journal">
 <div>
-    <p class="section-label">
-        OUR EDIT
-    </p>
-    <h2>
-        Don't just see the temples.
-    </h2>
+<p class="section-label">OUR EDIT</p>
+<h2>Come for Angkor. Stay for Siem Reap.</h2>
 </div>
-<div class="kh-journal-copy">
-    <p>
-        Angkor Wat may be the reason you book the flight, but we'd
-        give yourself time to enjoy Siem Reap too. The markets,
-        restaurants, bars and streets around Pub Street give the
-        trip a completely different rhythm once you're back from
-        the temples.
-    </p>
-    <p>
-        For us, the combination was what made the trip work:
-        extraordinary history during the day, a superb little hotel
-        to come back to, and relaxed, lively evenings in town.
-        Even eating tarantulas somehow became part of the story.
-    </p>
-    <p>
-        Cambodia ended up being one of those trips where the
-        destination was every bit as enjoyable as the reason we
-        initially went.
-    </p>
+<div class="ca-journal-copy">
+<p>Angkor Wat was always going to be the centrepiece of this trip, and it absolutely lived up to expectations. The sunrise, the scale of the temples and the extraordinary details at Bayon made it a genuinely memorable experience.</p>
+<p>But what made Cambodia such a good break was everything around it. Navutu Dreams gave us a lovely, good-value base; Raffles offered a different take on the classic hotel experience; and Siem Reap itself was full of places to eat, drink and explore.</p>
+<p>We would come back for the temples, but we would also come back for the town. Our advice is simple: don't treat Siem Reap as somewhere to sleep between temple visits. Give it a little time of its own.</p>
 </div>
 </section>
-<!-- =====================================================
-     MORE FROM OUR CAMERA
-====================================================== -->
-<section class="kh-editorial-section">
-<div class="kh-final-grid">
-    <div class="kh-final-heading">
-        <p class="section-label">
-            MORE FROM OUR CAMERA
-        </p>
-        <h2>
-            More from Cambodia.
-        </h2>
-    </div>
-    <img
-        class="kh-final-img1"
-        src="cambodia10.jpeg"
-        alt="Siem Reap street"
-        loading="lazy"
-    >
-    <img
-        class="kh-final-img2"
-        src="cambodia11.jpeg"
-        alt="Siem Reap"
-        loading="lazy"
-    >
-    <img
-        class="kh-final-img3"
-        src="cambodia12.jpeg"
-        alt="Siem Reap street life"
-        loading="lazy"
-    >
-    <img
-        class="kh-final-img4"
-        src="cambodia13.jpeg"
-        alt="Siem Reap"
-        loading="lazy"
-    >
-    <img
-        class="kh-final-img5"
-        src="cambodia14.jpeg"
-        alt="Siem Reap evening"
-        loading="lazy"
-    >
-    <img
-        class="kh-final-img6"
-        src="cambodia15.jpeg"
-        alt="Siem Reap at night"
-        loading="lazy"
-    >
-    <img
-        class="kh-final-img7"
-        src="cambodia16.jpeg"
-        alt="Cambodia hotel"
-        loading="lazy"
-    >
+
+<section class="ca-map">
+<div class="ca-map-inner">
+<p class="section-label">OUR MAP</p>
+<h2>Siem Reap, Cambodia.</h2>
+<p>The hotels, temples, markets, restaurants and bars that made this such a memorable city break. We'll continue building out our wider travel map as The Expat Edits grows.</p>
 </div>
 </section>
-<!-- =====================================================
-     MAP
-====================================================== -->
-<section class="kh-map">
-<div class="kh-map-inner">
-    <p class="section-label">
-        OUR MAP
-    </p>
-    <h2>
-        Cambodia.
-    </h2>
-    <p>
-        The temples, streets, hotels, restaurants and places that
-        shaped our Siem Reap trip will eventually live here on our
-        wider travel map.
-    </p>
-</div>
+
+<section class="ca-end">
+<a href="/" class="text-link">← Back to Home</a>
+<a href="editions.html" class="text-link">View All Editions →</a>
 </section>
-<!-- =====================================================
-     END NAVIGATION
-====================================================== -->
-<section class="kh-end">
-<a href="/" class="text-link">
-    ← Back to Home
-</a>
-<a href="editions.html" class="text-link">
-    View All Editions →
-</a>
-</section>
+
 </div>
 </main>
+
 <!-- =====================================================
      MOBILE EDITION
 ====================================================== -->
+
 <main class="cambodia-mobile">
-<section
-    class="edition-hero"
-    style="background-image:url('cambodia-hero.jpeg');"
->
+
+<section class="edition-hero" style="background-image:url('cambodia-hero.jpeg')">
 <div class="edition-hero-overlay">
-    <p class="eyebrow">
-        OUR CAMBODIA
-    </p>
-    <h1>
-        Cambodia
-    </h1>
-    <p class="edition-hero-subtitle">
-        Temples, Siem Reap &amp; unforgettable evenings.
-    </p>
+<p class="eyebrow">OUR CAMBODIA</p>
+<h1>Cambodia</h1>
+<p class="edition-hero-subtitle">Come for Angkor. Stay for Siem Reap.</p>
 </div>
 </section>
-<!-- INTRODUCTION -->
+
 <section class="edition-intro section">
 <div class="container">
 <div class="edition-intro-inner">
-    <p class="section-label">
-        OUR CAMBODIA
-    </p>
-    <h2>
-        Come for the temples. Stay for Siem Reap.
-    </h2>
-    <div class="edition-intro-text">
-        <p>
-            Cambodia was somewhere we'd wanted to visit for a
-            while, and Angkor Wat was obviously a big part of
-            the reason for going. But what surprised us most
-            was just how much we loved Siem Reap itself.
-        </p>
-        <p>
-            It turned out to be a superb short break — great
-            temples during the day, a relaxed hotel to come
-            back to, and lively evenings filled with markets,
-            restaurants, bars and the streets around Pub Street.
-        </p>
-        <p>
-            We stayed at Navutu Dreams and thought it was superb.
-            Peaceful and relaxed, it was a great place to come
-            back to after the heat and activity of the temples.
-        </p>
-        <p>
-            We loved Angkor Wat and Bayon Temple, but we also
-            loved the completely different experience of Siem
-            Reap itself — wandering the night market, exploring
-            around Pub Street, eating great food and even trying
-            tarantulas.
-        </p>
-    </div>
+<p class="section-label">OUR CAMBODIA</p>
+<h2>Ancient temples, lovely places to stay and a town full of character.</h2>
+<div class="edition-intro-text">
+<p>Angkor Wat was the reason we came to Cambodia, but Siem Reap gave us plenty of reasons to enjoy staying a little longer. The temples were every bit as extraordinary as we had hoped: atmospheric, intricate and almost impossible to take in all at once.</p>
+<p>We loved beginning the day among the ancient temples, then returning to a comfortable hotel and spending the later hours exploring the markets, restaurants and bars around town.</p>
+<p>We stayed at two very different hotels, Navutu Dreams and Raffles, and enjoyed both for different reasons. For us, Cambodia became a wonderful mix of history, relaxed days and lively evenings.</p>
+</div>
 </div>
 </div>
 </section>
-<!-- PHOTOGRAPHIC STORY -->
-<section class="edition-photo-story section">
+
+<!-- NAVUTU DREAMS -->
+<section class="ca-mobile-hotel section">
 <div class="container">
-<div class="section-heading edition-photo-heading">
-    <p>
-        FROM OUR CAMERA
-    </p>
-    <h2>
-        Cambodia, as we saw it.
-    </h2>
+<p class="section-label">THE STAY · OUR BARGAIN PICK</p>
+<h2>Navutu Dreams.</h2>
+<p>A lovely family-run hotel and a superb base for exploring Angkor.</p>
+<img src="cambodia19.jpeg" alt="The pool and tropical gardens at Navutu Dreams" loading="lazy">
+<img src="cambodia20.jpeg" alt="A relaxed poolside moment at Navutu Dreams" loading="lazy">
+<div class="ca-mobile-copy">
+<p class="section-label">OUR EXPERIENCE</p>
+<h3>A little oasis outside the centre.</h3>
+<p>Navutu Dreams was our bargain pick, and we were genuinely very happy there. It is a family-run hotel set within a small, beautifully planted compound, with a relaxed atmosphere that made it easy to switch off after a day exploring the temples.</p>
+<p>The rooms were great, the pools were lovely and the whole place had a welcoming, personal feel. It was an easy tuk-tuk ride into town, so we could enjoy the restaurants and markets without staying right in the middle of the evening bustle.</p>
+<p>Most importantly, it worked brilliantly as a base for visiting Angkor Wat and the surrounding temples. We would happily recommend it to anyone looking for somewhere comfortable, characterful and good value in Siem Reap.</p>
 </div>
-<div class="edition-photo-mosaic">
-    <img
-        src="cambodia1.jpeg"
-        alt="Angkor Wat"
-        loading="eager"
-    >
-    <img
-        src="cambodia2.jpeg"
-        alt="Angkor Wat temple"
-        loading="lazy"
-    >
-    <img
-        src="cambodia3.jpeg"
-        alt="Angkor temple architecture"
-        loading="lazy"
-    >
-    <img
-        src="cambodia4.jpeg"
-        alt="Temple ruins in Cambodia"
-        loading="lazy"
-    >
-    <img
-        src="cambodia5.jpeg"
-        alt="Cambodia temple"
-        loading="lazy"
-    >
-    <img
-        src="cambodia6.jpeg"
-        alt="Angkor architecture"
-        loading="lazy"
-    >
-    <img
-        src="cambodia7.jpeg"
-        alt="Cambodian landscape"
-        loading="lazy"
-    >
-    <img
-        src="cambodia8.jpeg"
-        alt="Navutu Dreams"
-        loading="lazy"
-    >
-    <img
-        src="cambodia9.jpeg"
-        alt="Siem Reap"
-        loading="lazy"
-    >
-    <img
-        src="cambodia10.jpeg"
-        alt="Siem Reap street"
-        loading="lazy"
-    >
-    <img
-        src="cambodia11.jpeg"
-        alt="Siem Reap"
-        loading="lazy"
-    >
-</div>
+<p class="section-label">THE SETTING</p>
+<h3>Green, peaceful and well placed.</h3>
+<p>The appeal of Navutu was its sense of calm. Once back inside the grounds, the planting and pool areas made it feel a world away from the activity of town. And when we wanted to head out, a tuk-tuk made getting into Siem Reap straightforward.</p>
 </div>
 </section>
-<!-- LOCAL INFORMATION -->
-<section class="edition-local-info">
+
+<!-- RAFFLES -->
+<section class="ca-mobile-raffles section">
 <div class="container">
-<div class="edition-local-info-grid">
-    <div class="edition-local-info-item">
-        <p class="section-label">
-            BEST TIME
-        </p>
-        <h3>
-            November – February
-        </h3>
-        <p>
-            The cooler, drier months are particularly enjoyable
-            for exploring the temples and spending time walking
-            around Siem Reap.
-        </p>
-    </div>
-    <div class="edition-local-info-item">
-        <p class="section-label">
-            WEATHER
-        </p>
-        <h3>
-            Hot &amp; tropical
-        </h3>
-        <p>
-            Cambodia is hot for much of the year, with a distinct
-            wet season. The greener months can be beautiful too,
-            but the heat is something to plan around.
-        </p>
-    </div>
-    <div class="edition-local-info-item">
-        <p class="section-label">
-            GETTING AROUND
-        </p>
-        <h3>
-            Tuk-tuk &amp; walk
-        </h3>
-        <p>
-            Siem Reap is easy to explore, while a tuk-tuk makes
-            getting between the town and the temples simple,
-            inexpensive and enjoyable.
-        </p>
-    </div>
+<p class="section-label">THE OTHER SIDE OF OUR STAY</p>
+<h2>Raffles Grand Hotel d'Angkor.</h2>
+<p>A classic hotel, a magnificent pool and a lovely place to linger over breakfast.</p>
+<img src="cambodia21.jpeg" alt="Raffles Grand Hotel d'Angkor sign and gardens" loading="lazy">
+<img src="cambodia22.jpeg" alt="The large swimming pool at Raffles Grand Hotel d'Angkor" loading="lazy">
+<div class="ca-mobile-copy">
+<p class="section-label">OUR EXPERIENCE</p>
+<h3>A familiar name, in a very different setting.</h3>
+<p>We chose Raffles partly because we know the Raffles experience so well from Singapore. We wanted to see how it compared in Siem Reap, and we were very happy we made the visit.</p>
+<p>The pool is enormous and makes a real impression. The terrace is another highlight, particularly for breakfast, with a beautiful setting in which to take your time before heading out for the day.</p>
+<p>It is a very different proposition from Navutu: more grand-hotel in feel, with the scale and heritage you would expect from the Raffles name. We enjoyed it very much and it made a lovely counterpoint to our stay at Navutu.</p>
+<p>Having experienced both, we would happily recommend either. They offer different styles of stay, rather than one simply replacing the other.</p>
 </div>
 </div>
 </section>
+
+<!-- DESTINATION STORY -->
+<section class="ca-mobile-story section">
+<div class="container">
+<div class="section-heading">
+<p>THE REASON WE CAME</p>
+<h2>Discovering Angkor.</h2>
+</div>
+
+<div class="ca-mobile-copy">
+<p class="section-label">ANGKOR WAT</p>
+<h3>Worth the early start.</h3>
+<p>Seeing Angkor Wat at sunrise was one of the defining moments of our Cambodia trip. The light gradually builds over the temple, and the reflection across the water makes the scene feel almost unreal. It is an early start, but one we would absolutely recommend.</p>
+</div>
+<img src="cambodia1.jpeg" alt="Visitors walking towards Angkor Wat at sunrise" loading="lazy">
+<img src="cambodia6.jpeg" alt="Angkor Wat silhouetted against the morning sky" loading="lazy">
+
+<div class="ca-mobile-copy">
+<p class="section-label">THE TEMPLES</p>
+<h3>A vast world to explore.</h3>
+<p>Angkor is much more than one famous temple. The wider complex is full of extraordinary buildings, passageways, carved stone and details that reward taking your time. We loved wandering through it rather than treating the visit as a quick stop for a photograph.</p>
+</div>
+<img src="cambodia3.jpeg" alt="Ancient stone architecture at Angkor" loading="lazy">
+<img src="cambodia8.jpeg" alt="A sweeping view of Angkor temple architecture" loading="lazy">
+
+<div class="ca-mobile-copy">
+<p class="section-label">BAYON</p>
+<h3>Faces that seem to follow you.</h3>
+<p>Bayon was another highlight. Its towers and enormous carved faces give it a completely different character from Angkor Wat. It is one of those places that feels almost otherworldly when you are standing among the stonework.</p>
+</div>
+<img src="cambodia10.jpeg" alt="The carved stone faces of Bayon Temple" loading="lazy">
+<img src="cambodia5.jpeg" alt="A visitor taking in the stone faces at Bayon" loading="lazy">
+<img src="cambodia9.jpeg" alt="Intricate stone carvings and temple details" loading="lazy">
+
+<div class="ca-mobile-copy">
+<p class="section-label">ANCIENT DETAILS</p>
+<h3>History in every corner.</h3>
+<p>Some of the most memorable moments came from looking a little closer: the carved windows, weathered stone and layers of architecture. There is an extraordinary amount to discover beyond the best-known viewpoints.</p>
+</div>
+<img src="cambodia11.jpeg" alt="A view through the ancient temple complex" loading="lazy">
+<img src="cambodia16.jpeg" alt="An ancient temple tower in warm evening light" loading="lazy">
+
+<div class="ca-mobile-copy">
+<p class="section-label">THE LANDSCAPE</p>
+<h3>Temples reclaimed by nature.</h3>
+<p>Part of the magic is the way the temples sit within the landscape. Trees, roots and foliage frame the old stonework, creating scenes that feel as though they have barely changed over centuries.</p>
+</div>
+<img src="cambodia12.jpeg" alt="Temple architecture surrounded by tropical trees" loading="lazy">
+<img src="cambodia18.jpeg" alt="A distant view across the forest and temple landscape" loading="lazy">
+<img src="cambodia2.jpeg" alt="A quiet moment among the Angkor temples" loading="lazy">
+<img src="cambodia7.jpeg" alt="Angkor Wat and its reflection in the early morning" loading="lazy">
+</div>
+</section>
+
+<!-- PANORAMIC IMAGE -->
+<section class="ca-mobile-panorama">
+<div class="container">
+<p class="section-label">A MOMENT TO TAKE IN</p>
+<h2>Angkor, in the quiet of the morning.</h2>
+<img src="cambodia23.jpeg" alt="Panoramic view of Angkor Wat reflected across the water at sunrise" loading="lazy">
+</div>
+</section>
+
+<!-- SIEM REAP -->
+<section class="ca-mobile-town section">
+<div class="container">
+<p class="section-label">BEYOND THE TEMPLES</p>
+<h2>Getting to know Siem Reap.</h2>
+<div class="ca-mobile-copy">
+<h3>A city break in its own right.</h3>
+<p>One of the things we loved about Siem Reap was that it offered so much more than a place to sleep between temple visits. We enjoyed wandering around the markets, looking at the local produce and taking in the everyday life of the town.</p>
+<p>The markets are colourful, busy and full of interest. They are well worth exploring, even if you are not looking to buy anything in particular.</p>
+<p>We also found the contrast between the relaxed daytime pace and the livelier evenings around Pub Street particularly enjoyable.</p>
+</div>
+<img src="cambodia4.jpeg" alt="Fresh produce at a Siem Reap market" loading="lazy">
+<img src="cambodia14.jpeg" alt="Colourful ingredients and produce at the market" loading="lazy">
+
+<div class="ca-mobile-copy">
+<p class="section-label">LOCAL LIFE</p>
+<h3>A market worth wandering.</h3>
+<p>We enjoyed getting away from the main sights and simply exploring. The markets give you a glimpse of local life, with stalls selling fresh produce and all sorts of things you might not see at home. We even tried tarantula during our time in Siem Reap — certainly one of the more unusual food memories from the trip.</p>
+</div>
+<img src="cambodia15.jpeg" alt="A local market seller in Siem Reap" loading="lazy">
+<img src="cambodia25.jpeg" alt="The warm colours of sunset over Siem Reap" loading="lazy">
+</div>
+</section>
+
+<!-- EVENINGS -->
+<section class="ca-mobile-evenings section">
+<div class="container">
+<p class="section-label">EVENINGS IN TOWN</p>
+<h2>From market strolls to lively nights.</h2>
+<img src="cambodia24.jpeg" alt="Evening view over Siem Reap" loading="lazy">
+<p>After the early starts and temple visits, Siem Reap was a lovely place to enjoy the evenings. Pub Street and the surrounding lanes have plenty of energy, with bars and restaurants close together and an easygoing atmosphere.</p>
+<p>We particularly enjoyed Miss Wong for cocktails and Madam Fan for a drink. For food, Lost City Pizza was a favourite, as was Elia Greek near the market. We also enjoyed Sokkhak River Restaurant.</p>
+<p>It was a great balance: relaxed days exploring, followed by the option of a much livelier evening whenever we felt like heading out.</p>
+</div>
+</section>
+
+<!-- PLANNING YOUR VISIT -->
+<section class="ca-mobile-info section">
+<div class="container">
+<p class="section-label">PLANNING YOUR VISIT</p>
+<h2>How to make the most of Siem Reap.</h2>
+<p>A few practical thoughts from our time here, to help you plan a stay that includes more than just the headline sights.</p>
+
+<div class="ca-mobile-info-item">
+<p class="section-label">HOW LONG TO STAY</p>
+<h3>Three to four nights</h3>
+<p>Allow enough time for an early visit to Angkor Wat, the wider temple complex and Bayon, with time left over to enjoy the town, markets and restaurants without rushing.</p>
+</div>
+<div class="ca-mobile-info-item">
+<p class="section-label">GETTING AROUND</p>
+<h3>Tuk-tuks make it easy</h3>
+<p>We found tuk-tuks a convenient way to get between the hotel and town. For the temples, arrange transport for the day so you can move between the different sites at your own pace.</p>
+</div>
+<div class="ca-mobile-info-item">
+<p class="section-label">THE TEMPLE VISIT</p>
+<h3>Start early</h3>
+<p>Angkor Wat at sunrise is worth the early alarm. Give yourself time for the wider temple area too; Angkor is a collection of remarkable places, not just one viewpoint.</p>
+</div>
+<div class="ca-mobile-info-item">
+<p class="section-label">WHERE TO STAY</p>
+<h3>Choose your atmosphere</h3>
+<p>Navutu Dreams is a lovely, good-value boutique option with a family-run feel. Raffles offers a grander hotel experience, a huge pool and a beautiful breakfast terrace.</p>
+</div>
+<div class="ca-mobile-info-item">
+<p class="section-label">DAYTIME &amp; EVENINGS</p>
+<h3>A good balance</h3>
+<p>Spend the day among the temples and markets, then head into town for dinner or a drink. Pub Street and the surrounding streets are particularly lively in the evening.</p>
+</div>
+<div class="ca-mobile-info-item">
+<p class="section-label">WHO WILL LOVE IT</p>
+<h3>Culture with character</h3>
+<p>Siem Reap is a rewarding break for anyone who enjoys history, architecture, local food and a town with plenty of places to explore after the sightseeing is done.</p>
+</div>
+</div>
+</section>
+
 <!-- RECOMMENDATIONS -->
-<section class="edition-recommendations section">
+<section class="ca-mobile-recommendations section">
 <div class="container">
 <div class="section-heading">
-    <p>
-        OUR RECOMMENDATIONS
-    </p>
-    <h2>
-        Places &amp; experiences we loved.
-    </h2>
+<p>OUR RECOMMENDATIONS</p>
+<h2>Places &amp; experiences we loved.</h2>
 </div>
-<div class="edition-recommendations-grid">
-    <article class="edition-recommendation">
-        <p class="story-number">
-            01
-        </p>
-        <h3>
-            Angkor Wat
-        </h3>
-        <p>
-            The obvious reason to come, and it completely lives
-            up to the expectation. Give yourself time to explore
-            beyond the famous views.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            02
-        </p>
-        <h3>
-            Bayon Temple
-        </h3>
-        <p>
-            One of our favourites within the wider Angkor complex.
-            The faces and extraordinary architecture make it
-            unforgettable.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            03
-        </p>
-        <h3>
-            Navutu Dreams
-        </h3>
-        <p>
-            A superb boutique hotel and exactly the sort of
-            peaceful base we wanted after exploring the temples.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            04
-        </p>
-        <h3>
-            Sokkhak River Restaurant
-        </h3>
-        <p>
-            A lovely Siem Reap setting and one of the places
-            we really enjoyed eating.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            05
-        </p>
-        <h3>
-            Pub Street &amp; the night market
-        </h3>
-        <p>
-            A fun part of Siem Reap after dark, with plenty of
-            atmosphere and lots to explore.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            06
-        </p>
-        <h3>
-            Lost City Pizza
-        </h3>
-        <p>
-            A surprisingly good find and exactly the sort of
-            relaxed place we enjoy discovering when we're away.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            07
-        </p>
-        <h3>
-            Eating tarantulas
-        </h3>
-        <p>
-            Definitely one for the travel memories. Not something
-            we expected to be doing when we booked the trip, but
-            it became part of the Siem Reap experience.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            08
-        </p>
-        <h3>
-            Raffles
-        </h3>
-        <p>
-            We visited for lunch and enjoyed the enormous pool,
-            although ultimately Navutu Dreams was the better fit
-            for us.
-        </p>
-    </article>
-</div>
+
+<article class="ca-mobile-recommendation"><p class="story-number">01</p><h3>Navutu Dreams</h3><p>Our bargain pick: a welcoming family-run hotel with lovely rooms, pools and beautifully planted grounds. A superb base for visiting Angkor.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">02</p><h3>Raffles Grand Hotel d'Angkor</h3><p>A classic hotel with a huge pool and a lovely breakfast terrace. We enjoyed comparing it with the Raffles we know in Singapore.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">03</p><h3>Angkor Wat at sunrise</h3><p>An early start, but one of the defining experiences of the trip. Allow time to enjoy the wider temple complex afterwards.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">04</p><h3>Bayon Temple</h3><p>Its remarkable carved faces and distinctive towers made it one of our favourite stops in the Angkor complex.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">05</p><h3>Miss Wong</h3><p>A great cocktail bar and a lovely choice for an evening drink in Siem Reap.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">06</p><h3>Madam Fan</h3><p>Another bar we enjoyed discovering while exploring the town in the evening.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">07</p><h3>Lost City Pizza</h3><p>A favourite food stop during our time in Siem Reap.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">08</p><h3>Elia Greek</h3><p>A good restaurant near the market that we were very happy to find.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">09</p><h3>Sokkhak River Restaurant</h3><p>Another restaurant we enjoyed during our stay. Worth adding to your Siem Reap list.</p></article>
+<article class="ca-mobile-recommendation"><p class="story-number">10</p><h3>The markets &amp; Pub Street</h3><p>Make time to wander the markets during the day and explore the lively streets around Pub Street after dark.</p></article>
 </div>
 </section>
+
 <!-- OUR EDIT -->
-<section class="edition-journal section">
+<section class="ca-mobile-journal section">
 <div class="container">
-<div class="edition-journal-inner">
-    <div>
-        <p class="section-label">
-            OUR EDIT
-        </p>
-        <h2>
-            Don't just see the temples.
-        </h2>
-    </div>
-    <div class="edition-journal-copy">
-        <p>
-            Angkor Wat may be the reason you book the flight,
-            but we'd give yourself time to enjoy Siem Reap too.
-            The markets, restaurants, bars and streets around
-            Pub Street give the trip a completely different
-            rhythm once you're back from the temples.
-        </p>
-        <p>
-            For us, the combination was what made the trip work:
-            extraordinary history during the day, a superb little
-            hotel to come back to, and relaxed, lively evenings
-            in town.
-        </p>
-        <p>
-            Cambodia ended up being one of those trips where the
-            destination was every bit as enjoyable as the reason
-            we initially went.
-        </p>
-    </div>
-</div>
+<p class="section-label">OUR EDIT</p>
+<h2>Come for Angkor. Stay for Siem Reap.</h2>
+<p>Angkor Wat was always going to be the centrepiece of this trip, and it absolutely lived up to expectations. The sunrise, the scale of the temples and the extraordinary details at Bayon made it a genuinely memorable experience.</p>
+<p>But what made Cambodia such a good break was everything around it. Navutu Dreams gave us a lovely, good-value base; Raffles offered a different take on the classic hotel experience; and Siem Reap itself was full of places to eat, drink and explore.</p>
+<p>We would come back for the temples, but we would also come back for the town. Our advice is simple: don't treat Siem Reap as somewhere to sleep between temple visits. Give it a little time of its own.</p>
 </div>
 </section>
-<!-- MORE FROM CAMERA -->
-<section class="edition-gallery section">
-<div class="container">
-<div class="section-heading">
-    <p>
-        MORE FROM OUR CAMERA
-    </p>
-    <h2>
-        More from Cambodia.
-    </h2>
-</div>
-<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-    <img
-        src="cambodia12.jpeg"
-        alt="Siem Reap street life"
-        loading="lazy"
-    >
-    <img
-        src="cambodia13.jpeg"
-        alt="Siem Reap"
-        loading="lazy"
-    >
-    <img
-        src="cambodia14.jpeg"
-        alt="Siem Reap evening"
-        loading="lazy"
-    >
-    <img
-        src="cambodia15.jpeg"
-        alt="Siem Reap at night"
-        loading="lazy"
-    >
-    <img
-        src="cambodia16.jpeg"
-        alt="Cambodia hotel"
-        loading="lazy"
-    >
-    <img
-        src="cambodia17.jpeg"
-        alt="View towards Angkor Wat"
-        loading="lazy"
-    >
-    <img
-        src="cambodia18.jpeg"
-        alt="Siem Reap street"
-        loading="lazy"
-    >
-</div>
-</div>
-</section>
+
 <!-- MAP -->
 <section class="edition-map section">
 <div class="container">
 <div class="edition-map-inner">
-    <p class="section-label">
-        OUR MAP
-    </p>
-    <h2>
-        Cambodia.
-    </h2>
-    <p>
-        The temples, streets, hotels, restaurants and places
-        that shaped our Siem Reap trip will eventually live
-        here on our wider travel map.
-    </p>
+<p class="section-label">OUR MAP</p>
+<h2>Siem Reap, Cambodia.</h2>
+<p>The hotels, temples, markets, restaurants and bars that made this such a memorable city break. We'll continue building out our wider travel map as The Expat Edits grows.</p>
 </div>
 </div>
 </section>
+
 <!-- END -->
 <section class="edition-end">
-<a href="/" class="text-link">
-    ← Back to Home
-</a>
-<a href="editions.html" class="text-link">
-    View All Editions →
-</a>
+<a href="/" class="text-link">← Back to Home</a>
+<a href="editions.html" class="text-link">View All Editions →</a>
 </section>
+
 </main>
-<!-- =====================================================
-     FOOTER
-====================================================== -->
+
 <footer class="site-footer">
 <div class="site-footer-inner">
-    <div>
-        <div class="footer-logo">
-            THE EXPAT EDITS
-        </div>
-        <p class="footer-description">
-            Travel, places &amp; observations from life abroad.
-        </p>
-    </div>
-    <nav class="footer-nav">
-        <a href="editions.html">
-            Editions
-        </a>
-        <a href="index-new.html#journal">
-            Journal
-        </a>
-        <a href="index-new.html#map">
-            Map
-        </a>
-        <a href="about.html">
-            About
-        </a>
-    </nav>
-    <a
-        href="https://www.instagram.com/theexpatedits/"
-        class="footer-social"
-        target="_blank"
-        rel="noopener"
-    >
-        Instagram
-    </a>
-    <p class="footer-copyright">
-        © The Expat Edits
-    </p>
+<div>
+<div class="footer-logo">THE EXPAT EDITS</div>
+<p class="footer-description">Travel, places &amp; observations from life abroad.</p>
+</div>
+<nav class="footer-nav">
+<a href="editions.html">Editions</a>
+<a href="index-new.html#journal">Journal</a>
+<a href="index-new.html#map">Map</a>
+<a href="index-new.html#about">About</a>
+</nav>
+<a href="https://www.instagram.com/theexpatedits/" class="footer-social" target="_blank" rel="noopener">Instagram</a>
+<p class="footer-copyright">© The Expat Edits</p>
 </div>
 </footer>
+
 </body>
 </html>

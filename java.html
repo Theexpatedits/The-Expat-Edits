@@ -10,7 +10,7 @@
 
 <title>Java | The Expat Edits</title>
 
-<meta name="description" content="Discover Java through Borobudur, coffee plantations, volcanic landscapes and memorable stays at MesaStila, Le Temple and Amanjiwo.">
+<meta name="description" content="Java — Borobudur, coffee plantations, volcanic landscapes and memorable hotel experiences at Le Temple, MesaStila and Amanjiwo.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -22,25 +22,799 @@
 
 <link rel="stylesheet" href="style-editions-new.css">
 
+<style>
+
+/* =====================================================
+
+   JAVA — EDITORIAL ARCHITECTURE
+
+===================================================== */
+
+.java-page {
+
+    --java-ink:#242320;
+
+    --java-muted:rgba(36,35,32,.65);
+
+    --java-line:rgba(36,35,32,.18);
+
+    --java-accent:#a68a54;
+
+    --java-width:1280px;
+
+    color:var(--java-ink);
+
+}
+
+.java-page img {
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.java-container {
+
+    width:min(var(--java-width), calc(100% - 48px));
+
+    margin:0 auto;
+
+}
+
+.java-label {
+
+    font-size:.68rem;
+
+    letter-spacing:.17em;
+
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+
+}
+
+.java-heading {
+
+    margin-bottom:42px;
+
+}
+
+.java-heading h2 {
+
+    margin:0;
+
+}
+
+.java-heading p:last-child {
+
+    max-width:600px;
+
+    margin-top:16px;
+
+}
+
+.java-section {
+
+    padding:85px 0;
+
+}
+
+.java-copy {
+
+    max-width:570px;
+
+}
+
+.java-copy p {
+
+    margin-top:0;
+
+}
+
+.java-divider {
+
+    width:42px;
+
+    height:1px;
+
+    background:var(--java-accent);
+
+    margin:24px 0;
+
+}
+
+/* HERO */
+
+.java-hero {
+
+    position:relative;
+
+    min-height:620px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:flex-end;
+
+}
+
+.java-hero::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to top,
+
+        rgba(0,0,0,.72),
+
+        rgba(0,0,0,.05) 65%
+
+    );
+
+}
+
+.java-hero-content {
+
+    position:relative;
+
+    z-index:1;
+
+    width:min(var(--java-width),calc(100% - 48px));
+
+    margin:0 auto;
+
+    padding:90px 0 75px;
+
+    color:white;
+
+}
+
+.java-hero-content h1 {
+
+    margin:0;
+
+    font-size:clamp(4rem,9vw,8rem);
+
+    line-height:.95;
+
+}
+
+.java-hero-content p {
+
+    letter-spacing:.08em;
+
+}
+
+/* INTRO */
+
+.java-intro {
+
+    padding:90px 0 75px;
+
+}
+
+.java-intro-inner {
+
+    max-width:850px;
+
+}
+
+.java-intro-inner h2 {
+
+    margin:0 0 25px;
+
+}
+
+.java-intro-text {
+
+    columns:2;
+
+    column-gap:55px;
+
+}
+
+.java-intro-text p {
+
+    margin-top:0;
+
+    break-inside:avoid;
+
+}
+
+/* =====================================================
+
+   HOTEL FEATURES — PRIME POSITION
+
+===================================================== */
+
+.java-hotels {
+
+    padding:75px 0 100px;
+
+    border-top:1px solid var(--java-line);
+
+    border-bottom:1px solid var(--java-line);
+
+}
+
+.java-hotels-heading {
+
+    max-width:760px;
+
+    margin-bottom:50px;
+
+}
+
+.java-hotels-heading h2 {
+
+    margin:0 0 18px;
+
+}
+
+.java-hotel-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:28px;
+
+}
+
+.java-hotel {
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.java-hotel-image {
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+
+    background:#eee;
+
+}
+
+.java-hotel-image img {
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.java-hotel-copy {
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.java-hotel-copy h3 {
+
+    font-size:1.8rem;
+
+    margin:0 0 16px;
+
+}
+
+.java-hotel-copy p {
+
+    margin-top:0;
+
+}
+
+.java-hotel-location {
+
+    font-size:.68rem;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+    color:var(--java-muted);
+
+}
+
+.java-hotel-note {
+
+    margin-top:auto;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--java-line);
+
+    font-size:.9rem;
+
+    line-height:1.7;
+
+}
+
+.java-hotel-note strong {
+
+    font-weight:600;
+
+}
+
+/* STORY LAYOUT */
+
+.java-story {
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:75px;
+
+    align-items:center;
+
+    margin-bottom:90px;
+
+}
+
+.java-story.reverse .java-story-image {
+
+    order:2;
+
+}
+
+.java-story.reverse .java-story-copy {
+
+    order:1;
+
+}
+
+.java-story-image img {
+
+    width:100%;
+
+    height:auto;
+
+}
+
+.java-story-copy h2 {
+
+    margin:0 0 22px;
+
+}
+
+.java-story-copy p {
+
+    margin-top:0;
+
+}
+
+.java-caption {
+
+    font-size:.75rem;
+
+    letter-spacing:.08em;
+
+    color:var(--java-muted);
+
+    margin-top:12px;
+
+}
+
+/* PHOTOGRAPHIC GROUPS */
+
+.java-gallery {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:24px;
+
+    align-items:start;
+
+    margin:55px 0 90px;
+
+}
+
+.java-gallery figure {
+
+    margin:0;
+
+}
+
+.java-gallery figure:nth-child(2) {
+
+    padding-top:55px;
+
+}
+
+.java-gallery figure:nth-child(3) {
+
+    padding-top:20px;
+
+}
+
+.java-gallery img {
+
+    width:100%;
+
+    height:auto;
+
+}
+
+/* WIDE PHOTOGRAPH */
+
+.java-wide-image {
+
+    width:100%;
+
+    margin:70px 0;
+
+}
+
+.java-wide-image img {
+
+    width:100%;
+
+    height:auto;
+
+}
+
+/* HOTEL ALTERNATIVE */
+
+.java-editorial-note {
+
+    max-width:850px;
+
+    margin:70px auto;
+
+    padding:35px 0;
+
+    border-top:1px solid var(--java-line);
+
+    border-bottom:1px solid var(--java-line);
+
+}
+
+.java-editorial-note h3 {
+
+    margin:0 0 18px;
+
+}
+
+/* PRACTICAL INFORMATION */
+
+.java-information {
+
+    padding:75px 0;
+
+    border-top:1px solid var(--java-line);
+
+    border-bottom:1px solid var(--java-line);
+
+}
+
+.java-information-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:55px;
+
+}
+
+.java-information-item h3 {
+
+    margin:0 0 15px;
+
+}
+
+/* RECOMMENDATIONS */
+
+.java-recommendations {
+
+    padding:90px 0;
+
+}
+
+.java-recommendation-list {
+
+    max-width:1000px;
+
+    border-top:1px solid var(--java-line);
+
+}
+
+.java-recommendation {
+
+    display:grid;
+
+    grid-template-columns:65px 260px 1fr;
+
+    gap:30px;
+
+    padding:28px 0;
+
+    border-bottom:1px solid var(--java-line);
+
+    align-items:start;
+
+}
+
+.java-recommendation-number {
+
+    font-size:.75rem;
+
+    letter-spacing:.12em;
+
+    opacity:.65;
+
+}
+
+.java-recommendation h3 {
+
+    margin:0;
+
+}
+
+.java-recommendation p {
+
+    margin:0;
+
+}
+
+/* CLOSING */
+
+.java-closing {
+
+    padding:80px 0;
+
+    border-top:1px solid var(--java-line);
+
+}
+
+.java-closing-inner {
+
+    display:grid;
+
+    grid-template-columns:.8fr 1.2fr;
+
+    gap:90px;
+
+    align-items:start;
+
+}
+
+.java-closing-inner h2 {
+
+    margin:0;
+
+}
+
+.java-closing-copy p {
+
+    margin-top:0;
+
+}
+
+/* MAP AND END */
+
+.java-map {
+
+    padding:65px 0;
+
+    border-top:1px solid var(--java-line);
+
+}
+
+.java-map-inner {
+
+    max-width:650px;
+
+}
+
+.java-end {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:35px 0 70px;
+
+}
+
+/* =====================================================
+
+   MOBILE
+
+===================================================== */
+
+@media(max-width:768px) {
+
+    .java-container {
+
+        width:calc(100% - 38px);
+
+    }
+
+    .java-section {
+
+        padding:55px 0;
+
+    }
+
+    .java-hero {
+
+        min-height:540px;
+
+    }
+
+    .java-hero-content {
+
+        width:calc(100% - 38px);
+
+        padding-bottom:50px;
+
+    }
+
+    .java-intro {
+
+        padding:55px 0;
+
+    }
+
+    .java-intro-text {
+
+        columns:1;
+
+    }
+
+    .java-hotels {
+
+        padding:55px 0 65px;
+
+    }
+
+    .java-hotel-grid {
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+
+    }
+
+    .java-hotel-image {
+
+        margin-bottom:20px;
+
+    }
+
+    .java-hotel-copy h3 {
+
+        font-size:1.7rem;
+
+    }
+
+    .java-story {
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        margin-bottom:60px;
+
+    }
+
+    .java-story.reverse .java-story-image,
+
+    .java-story.reverse .java-story-copy {
+
+        order:initial;
+
+    }
+
+    .java-gallery {
+
+        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        gap:14px;
+
+        margin:35px 0 60px;
+
+    }
+
+    .java-gallery figure:nth-child(2),
+
+    .java-gallery figure:nth-child(3) {
+
+        padding-top:0;
+
+    }
+
+    .java-wide-image {
+
+        margin:40px 0;
+
+    }
+
+    .java-information-grid {
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+    .java-recommendation {
+
+        grid-template-columns:35px 1fr;
+
+        gap:12px;
+
+    }
+
+    .java-recommendation p {
+
+        grid-column:2;
+
+    }
+
+    .java-closing-inner {
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .java-end {
+
+        padding:30px 0 50px;
+
+    }
+
+}
+
+@media(max-width:380px) {
+
+    .java-gallery {
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
+
 </head>
 
-<body class="edition-page">
+<body class="edition-page java-page">
 
-<!-- =====================================================
-
-     HEADER
-
-====================================================== -->
+<!-- HEADER -->
 
 <header class="site-header">
 
 <div class="site-header-inner">
 
-    <a href="/" class="site-logo">
-
-        THE EXPAT EDITS
-
-    </a>
+    <a href="/" class="site-logo">THE EXPAT EDITS</a>
 
     <nav class="site-nav">
 
@@ -56,11 +830,7 @@
 
     <button class="menu-toggle" type="button" aria-label="Open navigation">
 
-        <span></span>
-
-        <span></span>
-
-        <span></span>
+        <span></span><span></span><span></span>
 
     </button>
 
@@ -68,27 +838,29 @@
 
 </header>
 
+<main>
+
 <!-- =====================================================
 
      HERO
 
-====================================================== -->
+===================================================== -->
 
-<main>
-
-<section class="edition-hero"
+<section class="java-hero"
 
     style="background-image:url('javahero.jpeg');">
 
-    <div class="edition-hero-overlay">
+    <div class="java-hero-content">
 
         <p class="eyebrow">INDONESIA</p>
 
         <h1>Java</h1>
 
-        <p class="edition-hero-subtitle">
+        <p>
 
-            Ancient temples, coffee country &amp; the quieter side of Indonesia.
+            Ancient temples, coffee country &amp; the quieter
+
+            side of Indonesia.
 
         </p>
 
@@ -100,33 +872,21 @@
 
      INTRODUCTION
 
-====================================================== -->
+===================================================== -->
 
-<section class="edition-intro section">
+<section class="java-intro">
 
-<div class="container">
+<div class="java-container java-intro-inner">
 
-<div class="edition-intro-inner">
+    <p class="java-label">OUR JAVA</p>
 
-    <p class="section-label">
+    <h2>A different side of Indonesia.</h2>
 
-        OUR JAVA
-
-    </p>
-
-    <h2>
-
-        A different side of Indonesia.
-
-    </h2>
-
-    <div class="edition-intro-text">
+    <div class="java-intro-text">
 
         <p>
 
             Java was a journey of contrasts. We began at Borobudur,
-
-            one of Indonesia's most extraordinary historic sites,
 
             arriving before sunrise to watch the temple emerge
 
@@ -136,13 +896,11 @@
 
         <p>
 
-            From there, we moved away from the crowds and into
+            From there, we moved into the greener countryside,
 
-            the greener countryside, where villages, plantations
+            where villages, plantations and volcanic mountains
 
-            and volcanic mountains gradually became the defining
-
-            features of the trip.
+            gradually became the defining features of the trip.
 
         </p>
 
@@ -150,19 +908,15 @@
 
             Our stays at Le Temple and MesaStila gave us two
 
-            very different experiences. We also enjoyed a special
+            very different experiences. We also enjoyed a
 
-            lunch at Amanjiwo, which deserves a mention in its
-
-            own right.
+            memorable lunch at Amanjiwo.
 
         </p>
 
         <p>
 
-            What we remember most, however, is the pace of Java.
-
-            It is a destination that rewards taking your time.
+            What we remember most is the pace of Java.
 
             Long lunches, walks through coffee plantations,
 
@@ -176,289 +930,225 @@
 
 </div>
 
-</div>
-
 </section>
 
 <!-- =====================================================
 
-     THE JOURNEY
+     THREE HOTELS — PRIME EDITORIAL POSITION
 
-====================================================== -->
+===================================================== -->
 
-<section class="edition-photo-story section">
+<section class="java-hotels">
 
-<div class="container">
+<div class="java-container">
 
-<div class="section-heading edition-photo-heading">
+    <div class="java-hotels-heading">
 
-    <p>THE JOURNEY</p>
+        <p class="java-label">WHERE WE STAYED &amp; WHAT WE DISCOVERED</p>
 
-    <h2>
-
-        Where the story begins.
-
-    </h2>
-
-</div>
-
-<!-- BOROBUDUR -->
-
-<article class="edition-story-block">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            01 / BOROBUDUR
-
-        </p>
-
-        <h2>
-
-            Before the world wakes up.
-
-        </h2>
+        <h2>Three very different experiences.</h2>
 
         <p>
 
-            Borobudur was the natural starting point for our
+            From a convenient base for Borobudur to a memorable
 
-            Java journey. We arrived before sunrise, when the
+            countryside retreat and a special lunch at one of
 
-            atmosphere was still quiet and the surrounding
-
-            landscape was gradually coming into view.
-
-        </p>
-
-        <p>
-
-            Watching the first light settle over the temple
-
-            was one of those travel experiences that makes
-
-            an early start entirely worthwhile.
-
-        </p>
-
-        <p>
-
-            The architecture, the stonework and the enormous
-
-            scale of the monument are impressive enough during
-
-            the day. But seeing it at first light gives the
-
-            experience a completely different feeling.
+            Java's most distinctive properties.
 
         </p>
 
     </div>
 
-    <div class="edition-story-image">
+    <div class="java-hotel-grid">
 
-        <img src="java1.jpeg"
+        <!-- LE TEMPLE -->
 
-             alt="The stone architecture of Borobudur"
+        <article class="java-hotel">
 
-             loading="lazy">
+            <div class="java-hotel-image">
+
+                <img src="java29.jpeg"
+
+                     alt="Le Temple hotel in Java"
+
+                     loading="lazy">
+
+            </div>
+
+            <div class="java-hotel-copy">
+
+                <p class="java-hotel-location">
+
+                    BOROBUDUR
+
+                </p>
+
+                <h3>Le Temple</h3>
+
+                <p>
+
+                    Our base for exploring Borobudur. The
+
+                    location worked well for an early temple
+
+                    visit, and the room configuration was
+
+                    particularly practical for us as a family.
+
+                </p>
+
+                <p>
+
+                    There were some things we felt could be
+
+                    improved, particularly the pool area,
+
+                    where the seating wasn't especially
+
+                    practical for relaxing together.
+
+                </p>
+
+                <div class="java-hotel-note">
+
+                    <strong>Our edit:</strong> We enjoyed
+
+                    lunches at Plataran and would choose
+
+                    to stay there if returning to the area.
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- MESASTILA -->
+
+        <article class="java-hotel">
+
+            <div class="java-hotel-image">
+
+                <img src="java30.jpeg"
+
+                     alt="MesaStila resort in the Java countryside"
+
+                     loading="lazy">
+
+            </div>
+
+            <div class="java-hotel-copy">
+
+                <p class="java-hotel-location">
+
+                    COFFEE COUNTRY
+
+                </p>
+
+                <h3>MesaStila</h3>
+
+                <p>
+
+                    One of our highlights in Java. We were
+
+                    fortunate enough to receive an upgrade
+
+                    to the former owner's house, an enormous
+
+                    residence that made the stay particularly
+
+                    memorable.
+
+                </p>
+
+                <p>
+
+                    We loved exploring the coffee plantation,
+
+                    enjoying the hammam and taking in the
+
+                    beautiful mountain surroundings.
+
+                </p>
+
+                <div class="java-hotel-note">
+
+                    <strong>Our edit:</strong> Allow time
+
+                    to enjoy the property itself. This is
+
+                    somewhere to slow down rather than rush.
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- AMANJIWO -->
+
+        <article class="java-hotel">
+
+            <div class="java-hotel-image">
+
+                <img src="java31.jpeg"
+
+                     alt="Amanjiwo property in Java"
+
+                     loading="lazy">
+
+            </div>
+
+            <div class="java-hotel-copy">
+
+                <p class="java-hotel-location">
+
+                    NEAR BOROBUDUR
+
+                </p>
+
+                <h3>Amanjiwo</h3>
+
+                <p>
+
+                    We didn't stay at Amanjiwo, but enjoyed
+
+                    a particularly memorable lunch there.
+
+                    It is a special property, with a setting
+
+                    that makes the experience feel quite
+
+                    different from an ordinary hotel visit.
+
+                </p>
+
+                <p>
+
+                    It is certainly a splurge, but if the
+
+                    budget stretches that far, we would
+
+                    recommend experiencing it.
+
+                </p>
+
+                <div class="java-hotel-note">
+
+                    <strong>Our edit:</strong> Even if you
+
+                    aren't staying, consider making time
+
+                    for lunch and experiencing the property.
+
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
-
-</article>
-
-<div class="edition-gallery">
-
-    <div class="edition-gallery-grid">
-
-        <img src="java2.jpeg"
-
-             alt="Borobudur at sunrise"
-
-             loading="lazy">
-
-        <img src="java3.jpeg"
-
-             alt="The temple complex in the morning light"
-
-             loading="lazy">
-
-        <img src="java4.jpeg"
-
-             alt="Borobudur from above"
-
-             loading="lazy">
-
-    </div>
-
-</div>
-
-<!-- THE TEMPLE -->
-
-<article class="edition-story-block reverse">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            THE EXPERIENCE
-
-        </p>
-
-        <h2>
-
-            A place worth taking your time over.
-
-        </h2>
-
-        <p>
-
-            One of the things we enjoyed about Borobudur was
-
-            the opportunity to explore rather than simply
-
-            arrive, take a photograph and leave.
-
-        </p>
-
-        <p>
-
-            There is so much detail in the architecture,
-
-            from the individual stone reliefs to the
-
-            distinctive stupas that make the temple
-
-            instantly recognisable.
-
-        </p>
-
-        <p>
-
-            We would absolutely recommend planning an early
-
-            visit and allowing enough time to appreciate
-
-            the wider setting as well as the monument itself.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java8.jpeg"
-
-             alt="Borobudur stupa against the morning sky"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-<div class="edition-gallery">
-
-    <div class="edition-gallery-grid">
-
-        <img src="java9.jpeg"
-
-             alt="Borobudur during the early morning"
-
-             loading="lazy">
-
-        <img src="java11.jpeg"
-
-             alt="The temple silhouettes at sunrise"
-
-             loading="lazy">
-
-        <img src="java14.jpeg"
-
-             alt="A closer look at the Buddha sculptures"
-
-             loading="lazy">
-
-    </div>
-
-</div>
-
-<article class="edition-story-block">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            LOOKING BACK
-
-        </p>
-
-        <h2>
-
-            The temple never really leaves the view.
-
-        </h2>
-
-        <p>
-
-            Even after leaving Borobudur, the temple continued
-
-            to appear in the distance as we travelled through
-
-            the surrounding countryside.
-
-        </p>
-
-        <p>
-
-            It is a remarkable setting, and the relationship
-
-            between the temple and the landscape is a big part
-
-            of what makes this part of Java so special.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java15.jpeg"
-
-             alt="Borobudur silhouetted against the sunrise"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-<div class="edition-gallery">
-
-    <div class="edition-gallery-grid">
-
-        <img src="java17.jpeg"
-
-             alt="Borobudur stonework"
-
-             loading="lazy">
-
-        <img src="java28.jpeg"
-
-             alt="An ancient temple structure in Java"
-
-             loading="lazy">
-
-        <img src="java10.jpeg"
-
-             alt="The intricate stone architecture"
-
-             loading="lazy">
-
-    </div>
-
-</div>
 
 </div>
 
@@ -466,1325 +1156,767 @@
 
 <!-- =====================================================
 
-     LEAVING BOROBUDUR
+     BOROBUDUR
 
-====================================================== -->
+===================================================== -->
 
-<section class="section">
+<section class="java-section">
 
-<div class="container">
+<div class="java-container">
 
-<div class="section-heading">
+    <div class="java-heading">
 
-    <p>02 / BEYOND THE TEMPLE</p>
+        <p class="java-label">01 / THE BEGINNING</p>
 
-    <h2>
-
-        The journey becomes the destination.
-
-    </h2>
-
-</div>
-
-<article class="edition-story-block">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            ON THE ROAD
-
-        </p>
-
-        <h2>
-
-            A greener, quieter Java.
-
-        </h2>
-
-        <p>
-
-            Leaving Borobudur, we headed north towards the
-
-            mountains and the countryside around MesaStila.
-
-        </p>
-
-        <p>
-
-            This was where Java began to feel very different.
-
-            The scenery became increasingly green, with
-
-            villages, agricultural land and mountain views
-
-            appearing along the way.
-
-        </p>
-
-        <p>
-
-            Having a private driver made the journey between
-
-            our different stops straightforward. We could
-
-            enjoy the scenery and take our time rather than
-
-            worrying about navigating the roads ourselves.
-
-        </p>
+        <h2>Borobudur before the day begins.</h2>
 
     </div>
 
-    <div class="edition-story-image">
+    <article class="java-story">
 
-        <img src="java18.jpeg"
+        <div class="java-story-copy">
 
-             alt="A Buddha sculpture overlooking the Java landscape"
+            <p class="java-label">SUNRISE</p>
 
-             loading="lazy">
+            <h2>An unforgettable start.</h2>
 
-    </div>
+            <div class="java-divider"></div>
 
-</article>
+            <p>
 
-<div class="edition-gallery">
+                Borobudur was the natural starting point for
 
-    <div class="edition-gallery-grid">
+                our Java journey. We arrived before sunrise,
 
-        <img src="java19.jpeg"
+                when the atmosphere was quiet and the
 
-             alt="Borobudur viewed across the surrounding fields"
+                surrounding landscape was gradually coming
 
-             loading="lazy">
+                into view.
 
-        <img src="java20.jpeg"
+            </p>
 
-             alt="An ancient temple viewed through the trees"
+            <p>
 
-             loading="lazy">
+                Watching the first light settle over the
 
-        <img src="java21.jpeg"
+                temple was one of those travel experiences
 
-             alt="Terraced agricultural fields in Java"
+                that makes an early start entirely worthwhile.
 
-             loading="lazy">
+            </p>
 
-    </div>
+            <p>
 
-</div>
+                The architecture and scale of the monument
 
-<article class="edition-story-block reverse">
+                are impressive enough during the day, but
 
-    <div class="edition-story-copy">
+                seeing it at first light gives the experience
 
-        <p class="section-label">
+                a completely different feeling.
 
-            THE LANDSCAPE
+            </p>
 
-        </p>
+        </div>
 
-        <h2>
+        <div class="java-story-image">
 
-            Mountains, plantations &amp; village life.
+            <img src="java1.jpeg"
 
-        </h2>
+                 alt="Borobudur Buddha sculpture"
 
-        <p>
+                 loading="lazy">
 
-            Java is an island of enormous scale and variety.
-
-            The landscape changes constantly, with fertile
-
-            farmland, tropical vegetation and volcanic
-
-            mountains providing a beautiful backdrop.
-
-        </p>
-
-        <p>
-
-            We particularly enjoyed the quieter moments
-
-            away from the main attractions. Seeing how
-
-            the countryside changes as you travel through
-
-            it is part of the appeal.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java23.jpeg"
-
-             alt="Tropical vegetation and a mountain backdrop"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-<div class="edition-gallery">
-
-    <div class="edition-gallery-grid">
-
-        <img src="java24.jpeg"
-
-             alt="Banana plants growing in the Java countryside"
-
-             loading="lazy">
-
-        <img src="java25.jpeg"
-
-             alt="Layers of volcanic mountains in Java"
-
-             loading="lazy">
-
-        <img src="java33.jpeg"
-
-             alt="Green terraced fields framed by tropical vegetation"
-
-             loading="lazy">
-
-    </div>
-
-</div>
-
-<article class="edition-story-block">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            A DIFFERENT PACE
-
-        </p>
-
-        <h2>
-
-            Sometimes the best moments are the simplest.
-
-        </h2>
-
-        <p>
-
-            Not every part of a trip needs to be an excursion.
-
-            Some of our favourite memories came from simply
-
-            stopping, enjoying the scenery and taking in
-
-            the atmosphere.
-
-        </p>
-
-        <p>
-
-            Java is particularly good for that. It has a
-
-            wonderful ability to slow things down.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java27.jpeg"
-
-             alt="A quiet moment overlooking the Borobudur landscape"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-
-     STAY — LE TEMPLE
-
-====================================================== -->
-
-<section class="section edition-stay">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <p>03 / WHERE WE STAYED</p>
-
-    <h2>
-
-        Le Temple.
-
-    </h2>
-
-</div>
-
-<div class="edition-feature">
-
-    <div class="edition-feature-image">
-
-        <img src="java29.jpeg"
-
-             alt="Le Temple hotel in Java"
-
-             loading="lazy">
-
-    </div>
-
-    <div class="edition-feature-copy">
-
-        <p class="section-label">
-
-            OUR EXPERIENCE
-
-        </p>
-
-        <h2>
-
-            A convenient base for Borobudur.
-
-        </h2>
-
-        <p>
-
-            We stayed at Le Temple during our time around
-
-            Borobudur. Its location worked well for visiting
-
-            the temple, particularly with an early start
-
-            on the itinerary.
-
-        </p>
-
-        <p>
-
-            The room configuration also worked well for us
-
-            as a family. Having the right amount of space
-
-            and a practical arrangement makes a difference
-
-            when travelling with children.
-
-        </p>
-
-        <p>
-
-            There were a few things we felt could be better,
-
-            particularly the pool area, where the seating
-
-            wasn't especially practical for spending time
-
-            relaxing together.
-
-        </p>
-
-        <p>
-
-            Overall, it served its purpose, but having
-
-            experienced some of the other properties
-
-            nearby, we would make a different choice
-
-            if returning.
-
-        </p>
-
-    </div>
-
-</div>
-
-<div class="edition-feature-note">
-
-    <p class="section-label">
-
-        OUR ALTERNATIVE
-
-    </p>
-
-    <h3>
-
-        Plataran.
-
-    </h3>
-
-    <p>
-
-        We enjoyed a couple of lunches at Plataran and
-
-        really liked the setting. Having experienced
-
-        the property, it is where we would look to stay
-
-        next time we visit the Borobudur area.
-
-    </p>
-
-    <p>
-
-        If you are planning a visit and choosing a hotel
-
-        around the temple, Plataran would be our first
-
-        recommendation to investigate.
-
-    </p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-
-     MESASTILA
-
-====================================================== -->
-
-<section class="section edition-stay">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <p>04 / OUR STAY</p>
-
-    <h2>
-
-        MesaStila.
-
-    </h2>
-
-</div>
-
-<div class="edition-feature reverse">
-
-    <div class="edition-feature-image">
-
-        <img src="java30.jpeg"
-
-             alt="The pool and tropical gardens at MesaStila"
-
-             loading="lazy">
-
-    </div>
-
-    <div class="edition-feature-copy">
-
-        <p class="section-label">
-
-            A MEMORABLE STAY
-
-        </p>
-
-        <h2>
-
-            A little more room to settle in.
-
-        </h2>
-
-        <p>
-
-            MesaStila was one of the highlights of our Java
-
-            trip, and we were fortunate enough to receive
-
-            a wonderful upgrade.
-
-        </p>
-
-        <p>
-
-            We were moved into the former owner's house,
-
-            which was an absolutely enormous residence.
-
-            It was a very special place to spend time and
-
-            a rather unexpected upgrade that made the
-
-            stay particularly memorable.
-
-        </p>
-
-        <p>
-
-            The property itself has a very different
-
-            atmosphere from the Borobudur area. Surrounded
-
-            by mountains, plantations and greenery, it
-
-            is somewhere you can genuinely slow down.
-
-        </p>
-
-    </div>
-
-</div>
-
-<!-- THE HOUSE -->
-
-<article class="edition-story-block">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            THE PROPERTY
-
-        </p>
-
-        <h2>
-
-            Space, character &amp; a sense of history.
-
-        </h2>
-
-        <p>
-
-            The upgrade to the former owner's house was
-
-            a real highlight. Its enormous proportions
-
-            and character made it feel very different
-
-            from a conventional hotel room.
-
-        </p>
-
-        <p>
-
-            It also gave us the opportunity to enjoy
-
-            the property at a much more relaxed pace.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java31.jpeg"
-
-             alt="A traditional architectural feature at Amanjiwo"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-<!-- COFFEE PLANTATION -->
-
-<div class="edition-feature-note">
-
-    <p class="section-label">
-
-        ONE OF OUR FAVOURITE EXPERIENCES
-
-    </p>
-
-    <h2>
-
-        Into the coffee plantation.
-
-    </h2>
-
-    <p>
-
-        One of the things we particularly enjoyed at
-
-        MesaStila was exploring the coffee plantation.
-
-        It is a lovely way to spend time outdoors and
-
-        gives you a much better appreciation of the
-
-        agricultural landscape surrounding the resort.
-
-    </p>
-
-    <p>
-
-        We also enjoyed exploring the vegetable gardens
-
-        and the surrounding countryside. It was a
-
-        completely different experience from our
-
-        earlier days around Borobudur.
-
-    </p>
-
-</div>
-
-<div class="edition-gallery">
-
-    <div class="edition-gallery-grid">
-
-        <img src="java7.jpeg"
-
-             alt="Tropical vegetation in Java"
-
-             loading="lazy">
-
-        <img src="java12.jpeg"
-
-             alt="The Java landscape viewed from above"
-
-             loading="lazy">
-
-        <img src="java13.jpeg"
-
-             alt="A volcanic mountain in the evening light"
-
-             loading="lazy">
-
-    </div>
-
-</div>
-
-<!-- HAMMAM -->
-
-<article class="edition-story-block reverse">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            WELLNESS
-
-        </p>
-
-        <h2>
-
-            Make time for the hammam.
-
-        </h2>
-
-        <p>
-
-            Another experience we really enjoyed was the
-
-            hammam at MesaStila.
-
-        </p>
-
-        <p>
-
-            After exploring the plantation and spending
-
-            time outdoors, it was a lovely way to unwind.
-
-            It is one of those experiences that adds
-
-            something beyond simply having a comfortable
-
-            hotel room.
-
-        </p>
-
-        <p>
-
-            Between the hammam, the walks and the peaceful
-
-            setting, MesaStila was a property where we
-
-            could happily have spent longer.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java32.jpeg"
-
-             alt="A waterfall in the lush Java countryside"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-
-     AMANJIWO
-
-====================================================== -->
-
-<section class="section edition-feature-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <p>05 / A SPECIAL EXPERIENCE</p>
-
-    <h2>
-
-        Amanjiwo.
-
-    </h2>
-
-</div>
-
-<div class="edition-feature">
-
-    <div class="edition-feature-image">
-
-        <img src="java6.jpeg"
-
-             alt="The volcanic mountain landscape surrounding Java"
-
-             loading="lazy">
-
-    </div>
-
-    <div class="edition-feature-copy">
-
-        <p class="section-label">
-
-            WORTH THE SPLURGE
-
-        </p>
-
-        <h2>
-
-            A memorable lunch.
-
-        </h2>
-
-        <p>
-
-            We didn't stay at Amanjiwo, but we did enjoy
-
-            a particularly good lunch there.
-
-        </p>
-
-        <p>
-
-            It is undoubtedly a special property and
-
-            one of those places where the setting is
-
-            just as important as the experience itself.
-
-        </p>
-
-        <p>
-
-            It is certainly a splurge, but if your
-
-            budget stretches that far, we would
-
-            recommend making the effort to visit.
-
-        </p>
-
-        <p>
-
-            Even if you aren't planning to stay,
-
-            experiencing the property over lunch
-
-            is a lovely way to see what makes it
-
-            so distinctive.
-
-        </p>
-
-    </div>
-
-</div>
-
-<div class="edition-feature-note">
-
-    <p class="section-label">
-
-        OUR THOUGHTS
-
-    </p>
-
-    <h3>
-
-        Sometimes a special lunch is enough.
-
-    </h3>
-
-    <p>
-
-        We always enjoy discovering hotels and restaurants
-
-        that offer something a little different. Amanjiwo
-
-        was one of those experiences, and it was a lovely
-
-        addition to our time around Borobudur.
-
-    </p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-
-     THE LANDSCAPE
-
-====================================================== -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <p>06 / THE LANDSCAPE</p>
-
-    <h2>
-
-        A land of volcanoes.
-
-    </h2>
-
-</div>
-
-<article class="edition-story-block">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            FROM THE GROUND
-
-        </p>
-
-        <h2>
-
-            Mountains at every turn.
-
-        </h2>
-
-        <p>
-
-            One of the defining features of Java is its
-
-            volcanic landscape. The mountains appear
-
-            throughout the journey, sometimes in the
-
-            distance and sometimes dominating the horizon.
-
-        </p>
-
-        <p>
-
-            The combination of fertile land, tropical
-
-            vegetation and dramatic mountain scenery
-
-            gives the island a character all of its own.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java5.jpeg"
-
-             alt="Volcanic mountain ranges across Java"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-<div class="edition-gallery">
-
-    <div class="edition-gallery-grid">
-
-        <img src="java25.jpeg"
-
-             alt="Layers of mountains in Java"
-
-             loading="lazy">
-
-        <img src="java23.jpeg"
-
-             alt="Volcanic scenery and tropical gardens"
-
-             loading="lazy">
-
-        <img src="java21.jpeg"
-
-             alt="Green agricultural terraces"
-
-             loading="lazy">
-
-    </div>
-
-</div>
-
-<article class="edition-story-block reverse">
-
-    <div class="edition-story-copy">
-
-        <p class="section-label">
-
-            THE JOURNEY HOME
-
-        </p>
-
-        <h2>
-
-            One last look from above.
-
-        </h2>
-
-        <p>
-
-            Having spent much of the trip surrounded by
-
-            mountains and volcanoes, it was lovely to
-
-            see the landscape again from the air.
-
-        </p>
-
-        <p>
-
-            The scale of the island becomes even more
-
-            apparent from above, with the volcanic
-
-            peaks rising out of the surrounding land.
-
-        </p>
-
-        <p>
-
-            It was a fitting end to a journey that had
-
-            taken us from ancient temples into some
-
-            of the quieter and greener corners of Indonesia.
-
-        </p>
-
-    </div>
-
-    <div class="edition-story-image">
-
-        <img src="java25.jpeg"
-
-             alt="Java's volcanic mountain ranges"
-
-             loading="lazy">
-
-    </div>
-
-</article>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-
-     MORE FROM THE CAMERA
-
-====================================================== -->
-
-<section class="edition-gallery section">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <p>MORE FROM OUR CAMERA</p>
-
-    <h2>
-
-        The little moments.
-
-    </h2>
-
-    <p>
-
-        Some of the photographs that remind us why
-
-        we enjoyed taking our time in Java.
-
-    </p>
-
-</div>
-
-<div class="edition-gallery-grid">
-
-    <img src="java26.jpeg"
-
-         alt="A relaxed stop during our Java journey"
-
-         loading="lazy">
-
-    <img src="java24.jpeg"
-
-         alt="Tropical plants in the Java countryside"
-
-         loading="lazy">
-
-    <img src="java33.jpeg"
-
-         alt="Green fields in the mountains"
-
-         loading="lazy">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-
-     STAY / TRAVEL INFORMATION
-
-====================================================== -->
-
-<section class="edition-local-info section">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <p>PLANNING YOUR VISIT</p>
-
-    <h2>
-
-        A few things worth knowing.
-
-    </h2>
-
-</div>
-
-<div class="edition-local-info-grid">
-
-    <div class="edition-local-info-item">
-
-        <p class="section-label">
-
-            BEST TIME
-
-        </p>
-
-        <h3>
-
-            May – October
-
-        </h3>
-
-        <p>
-
-            The drier season is generally the best
-
-            time to explore Java, particularly if
-
-            you are planning temple visits, walking
-
-            and time in the mountains.
-
-        </p>
-
-    </div>
-
-    <div class="edition-local-info-item">
-
-        <p class="section-label">
-
-            GETTING AROUND
-
-        </p>
-
-        <h3>
-
-            Private driver
-
-        </h3>
-
-        <p>
-
-            We found having a driver particularly
-
-            useful when travelling between Borobudur
-
-            and the surrounding countryside.
-
-            It makes the journey much more relaxed.
-
-        </p>
-
-    </div>
-
-    <div class="edition-local-info-item">
-
-        <p class="section-label">
-
-            HOW LONG
-
-        </p>
-
-        <h3>
-
-            Don't rush it
-
-        </h3>
-
-        <p>
-
-            Allow time to enjoy both the temple area
-
-            and the countryside. The journey between
-
-            the different locations is part of
-
-            the experience.
-
-        </p>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =====================================================
-
-     DON'T MISS
-
-====================================================== -->
-
-<section class="edition-not-miss section">
-
-<div class="container">
-
-<div class="section-heading">
-
-    <p>THE EXPAT EDITS</p>
-
-    <h2>
-
-        Our Java shortlist.
-
-    </h2>
-
-    <p>
-
-        If we were planning our trip again,
-
-        these would be high on our list.
-
-    </p>
-
-</div>
-
-<div class="edition-recommendations-grid">
-
-    <article class="edition-recommendation">
-
-        <p class="story-number">01</p>
-
-        <h3>
-
-            Borobudur at sunrise
-
-        </h3>
-
-        <p>
-
-            An early start is absolutely worthwhile.
-
-            One of the most memorable experiences
-
-            of our time in Java.
-
-        </p>
+        </div>
 
     </article>
 
-    <article class="edition-recommendation">
+    <div class="java-gallery">
 
-        <p class="story-number">02</p>
+        <figure>
 
-        <h3>
+            <img src="java2.jpeg" alt="Buddha silhouette at Borobudur" loading="lazy">
 
-            Stay at Plataran
+        </figure>
 
-        </h3>
+        <figure>
 
-        <p>
+            <img src="java3.jpeg" alt="Visitors looking towards Borobudur" loading="lazy">
 
-            We enjoyed our lunches there and would
+        </figure>
 
-            choose it over Le Temple if returning
+        <figure>
 
-            to the Borobudur area.
+            <img src="java4.jpeg" alt="Borobudur stone architecture" loading="lazy">
 
-        </p>
+        </figure>
 
-    </article>
+    </div>
 
-    <article class="edition-recommendation">
+    <article class="java-story reverse">
 
-        <p class="story-number">03</p>
+        <div class="java-story-copy">
 
-        <h3>
+            <p class="java-label">THE TEMPLE</p>
 
-            Experience Amanjiwo
+            <h2>History in every direction.</h2>
 
-        </h3>
+            <p>
 
-        <p>
+                One of the things we enjoyed about Borobudur
 
-            We enjoyed a wonderful lunch. A special
+                was the opportunity to explore rather than
 
-            property and worth considering if the
+                simply arrive, take a photograph and leave.
 
-            budget allows.
+            </p>
 
-        </p>
+            <p>
 
-    </article>
+                There is so much detail in the architecture,
 
-    <article class="edition-recommendation">
+                from the individual stone reliefs to the
 
-        <p class="story-number">04</p>
+                distinctive stupas that make the temple
 
-        <h3>
+                instantly recognisable.
 
-            MesaStila
+            </p>
 
-        </h3>
+            <p>
 
-        <p>
+                Allow enough time to appreciate the monument
 
-            One of our favourite stays. The setting,
+                itself and its wider setting.
 
-            the property and the unexpected upgrade
+            </p>
 
-            made it particularly memorable.
+        </div>
 
-        </p>
+        <div class="java-story-image">
 
-    </article>
+            <img src="java8.jpeg"
 
-    <article class="edition-recommendation">
+                 alt="Borobudur Buddha silhouette"
 
-        <p class="story-number">05</p>
+                 loading="lazy">
 
-        <h3>
-
-            Walk the plantation
-
-        </h3>
-
-        <p>
-
-            Don't miss the opportunity to explore
-
-            the coffee plantation at MesaStila.
-
-            A lovely way to spend time outdoors.
-
-        </p>
+        </div>
 
     </article>
 
-    <article class="edition-recommendation">
+    <div class="java-gallery">
 
-        <p class="story-number">06</p>
+        <figure>
 
-        <h3>
+            <img src="java9.jpeg" alt="Borobudur at sunrise" loading="lazy">
 
-            Enjoy the slower pace
+        </figure>
 
-        </h3>
+        <figure>
 
-        <p>
+            <img src="java10.jpeg" alt="Intricate Buddha sculpture" loading="lazy">
 
-            Leave room for the countryside, the
+        </figure>
 
-            mountain views and the experiences
+        <figure>
 
-            that happen between destinations.
+            <img src="java11.jpeg" alt="Temple silhouettes at sunrise" loading="lazy">
 
-        </p>
+        </figure>
+
+    </div>
+
+    <article class="java-story">
+
+        <div class="java-story-copy">
+
+            <p class="java-label">A DIFFERENT PERSPECTIVE</p>
+
+            <h2>The temple and its surroundings.</h2>
+
+            <p>
+
+                The surrounding countryside is a big part
+
+                of what makes this area so special.
+
+                Borobudur feels connected to the landscape
+
+                rather than separated from it.
+
+            </p>
+
+            <p>
+
+                We particularly enjoyed seeing the temple
+
+                from different angles as the light changed
+
+                throughout the morning.
+
+            </p>
+
+        </div>
+
+        <div class="java-story-image">
+
+            <img src="java12.jpeg"
+
+                 alt="The wider Borobudur landscape"
+
+                 loading="lazy">
+
+        </div>
+
+    </article>
+
+    <div class="java-gallery">
+
+        <figure>
+
+            <img src="java13.jpeg" alt="Borobudur against the evening light" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java14.jpeg" alt="Buddha sculpture at Borobudur" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java15.jpeg" alt="Borobudur at sunrise" loading="lazy">
+
+        </figure>
+
+    </div>
+
+    <article class="java-story reverse">
+
+        <div class="java-story-copy">
+
+            <p class="java-label">LOOKING BACK</p>
+
+            <h2>A place that stays with you.</h2>
+
+            <p>
+
+                Even after leaving the temple, Borobudur
+
+                continued to appear in the distance as
+
+                we travelled through the surrounding
+
+                countryside.
+
+            </p>
+
+            <p>
+
+                It is a remarkable setting, and the
+
+                relationship between the temple and
+
+                the landscape is a big part of what
+
+                makes this part of Java so special.
+
+            </p>
+
+        </div>
+
+        <div class="java-story-image">
+
+            <img src="java17.jpeg"
+
+                 alt="Borobudur stone structure"
+
+                 loading="lazy">
+
+        </div>
+
+    </article>
+
+    <div class="java-gallery">
+
+        <figure>
+
+            <img src="java18.jpeg" alt="Buddha overlooking the countryside" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java19.jpeg" alt="Borobudur viewed from the surrounding fields" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java20.jpeg" alt="Temple landscape in Java" loading="lazy">
+
+        </figure>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+
+     COUNTRYSIDE
+
+===================================================== -->
+
+<section class="java-section">
+
+<div class="java-container">
+
+    <div class="java-heading">
+
+        <p class="java-label">02 / BEYOND THE TEMPLE</p>
+
+        <h2>The journey becomes the destination.</h2>
+
+    </div>
+
+    <article class="java-story">
+
+        <div class="java-story-copy">
+
+            <p class="java-label">ON THE ROAD</p>
+
+            <h2>A greener, quieter Java.</h2>
+
+            <p>
+
+                Leaving Borobudur, we headed north towards
+
+                the countryside and the mountains around
+
+                MesaStila.
+
+            </p>
+
+            <p>
+
+                The scenery became increasingly green,
+
+                with agricultural land, villages and
+
+                mountain views appearing along the way.
+
+            </p>
+
+            <p>
+
+                Having a private driver made the journey
+
+                between our different stops straightforward.
+
+                We could enjoy the scenery rather than
+
+                worry about navigating the roads.
+
+            </p>
+
+        </div>
+
+        <div class="java-story-image">
+
+            <img src="java21.jpeg"
+
+                 alt="Terraced rice fields in Java"
+
+                 loading="lazy">
+
+        </div>
+
+    </article>
+
+    <div class="java-gallery">
+
+        <figure>
+
+            <img src="java23.jpeg" alt="Mountain scenery and tropical vegetation" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java24.jpeg" alt="Banana plants in rural Java" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java25.jpeg" alt="Layers of volcanic mountains" loading="lazy">
+
+        </figure>
+
+    </div>
+
+    <article class="java-story reverse">
+
+        <div class="java-story-copy">
+
+            <p class="java-label">THE PEOPLE &amp; PLACES</p>
+
+            <h2>A different pace of life.</h2>
+
+            <p>
+
+                Not every part of a trip needs to be
+
+                an organised excursion. Some of our
+
+                favourite memories came from simply
+
+                stopping, enjoying the scenery and
+
+                taking in the atmosphere.
+
+            </p>
+
+            <p>
+
+                Java has a wonderful ability to slow
+
+                things down. The countryside is
+
+                a big part of that feeling.
+
+            </p>
+
+        </div>
+
+        <div class="java-story-image">
+
+            <img src="java26.jpeg"
+
+                 alt="A small moment from our Java journey"
+
+                 loading="lazy">
+
+        </div>
+
+    </article>
+
+    <div class="java-gallery">
+
+        <figure>
+
+            <img src="java27.jpeg" alt="Visitors enjoying the Borobudur landscape" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java28.jpeg" alt="Ancient temple architecture in Java" loading="lazy">
+
+        </figure>
+
+        <figure>
+
+            <img src="java32.jpeg" alt="Waterfall in the Java countryside" loading="lazy">
+
+        </figure>
+
+    </div>
+
+    <article class="java-story">
+
+        <div class="java-story-copy">
+
+            <p class="java-label">THE GREEN LANDSCAPE</p>
+
+            <h2>Somewhere to simply stop and look.</h2>
+
+            <p>
+
+                The scenery around Java's mountain areas
+
+                is full of contrasts: cultivated fields,
+
+                tropical gardens and dramatic volcanic
+
+                peaks.
+
+            </p>
+
+            <p>
+
+                It is the sort of landscape that makes
+
+                the journey between destinations just
+
+                as interesting as the destinations themselves.
+
+            </p>
+
+        </div>
+
+        <div class="java-story-image">
+
+            <img src="java33.jpeg"
+
+                 alt="Green terraced landscape viewed through tropical trees"
+
+                 loading="lazy">
+
+        </div>
 
     </article>
 
 </div>
 
+</section>
+
+<!-- =====================================================
+
+     PRACTICAL INFORMATION
+
+===================================================== -->
+
+<section class="java-information">
+
+<div class="java-container">
+
+    <div class="java-heading">
+
+        <p class="java-label">PLANNING YOUR VISIT</p>
+
+        <h2>A few things worth knowing.</h2>
+
+    </div>
+
+    <div class="java-information-grid">
+
+        <div class="java-information-item">
+
+            <p class="java-label">BEST TIME</p>
+
+            <h3>May – October</h3>
+
+            <p>
+
+                The drier season is generally the best
+
+                time to explore Java, particularly if
+
+                you are planning temple visits, walking
+
+                and time in the mountains.
+
+            </p>
+
+        </div>
+
+        <div class="java-information-item">
+
+            <p class="java-label">GETTING AROUND</p>
+
+            <h3>Private driver</h3>
+
+            <p>
+
+                We found having a driver particularly
+
+                useful when travelling between Borobudur
+
+                and the surrounding countryside.
+
+            </p>
+
+        </div>
+
+        <div class="java-information-item">
+
+            <p class="java-label">OUR ADVICE</p>
+
+            <h3>Don't rush it</h3>
+
+            <p>
+
+                Allow time to enjoy both the temple area
+
+                and the countryside. The journey between
+
+                the different locations is part of
+
+                the experience.
+
+            </p>
+
+        </div>
+
+    </div>
+
 </div>
 
 </section>
 
 <!-- =====================================================
 
-     OUR TAKE
+     RECOMMENDATIONS
 
-====================================================== -->
+===================================================== -->
 
-<section class="edition-closing section">
+<section class="java-recommendations">
 
-<div class="container">
+<div class="java-container">
 
-<div class="edition-journal-inner">
+    <div class="java-heading">
+
+        <p class="java-label">THE EXPAT EDITS</p>
+
+        <h2>Our Java shortlist.</h2>
+
+        <p>
+
+            If we were planning our trip again,
+
+            these would be high on our list.
+
+        </p>
+
+    </div>
+
+    <div class="java-recommendation-list">
+
+        <article class="java-recommendation">
+
+            <span class="java-recommendation-number">01</span>
+
+            <h3>Borobudur at sunrise</h3>
+
+            <p>
+
+                An early start is absolutely worthwhile.
+
+                One of the most memorable experiences
+
+                of our time in Java.
+
+            </p>
+
+        </article>
+
+        <article class="java-recommendation">
+
+            <span class="java-recommendation-number">02</span>
+
+            <h3>Plataran</h3>
+
+            <p>
+
+                We enjoyed our lunches there and would
+
+                choose to stay there if returning
+
+                to the Borobudur area.
+
+            </p>
+
+        </article>
+
+        <article class="java-recommendation">
+
+            <span class="java-recommendation-number">03</span>
+
+            <h3>Amanjiwo</h3>
+
+            <p>
+
+                A memorable lunch and a special property
+
+                worth experiencing if the budget allows.
+
+            </p>
+
+        </article>
+
+        <article class="java-recommendation">
+
+            <span class="java-recommendation-number">04</span>
+
+            <h3>MesaStila</h3>
+
+            <p>
+
+                One of our favourite stays. The property,
+
+                setting and unexpected upgrade made it
+
+                particularly memorable.
+
+            </p>
+
+        </article>
+
+        <article class="java-recommendation">
+
+            <span class="java-recommendation-number">05</span>
+
+            <h3>Walk the coffee plantation</h3>
+
+            <p>
+
+                Don't miss the opportunity to explore
+
+                the plantation at MesaStila.
+
+            </p>
+
+        </article>
+
+        <article class="java-recommendation">
+
+            <span class="java-recommendation-number">06</span>
+
+            <h3>Enjoy the slower pace</h3>
+
+            <p>
+
+                Leave room for the countryside,
+
+                the mountain views and the experiences
+
+                between destinations.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+
+     CLOSING EDITORIAL
+
+===================================================== -->
+
+<section class="java-closing">
+
+<div class="java-container java-closing-inner">
 
     <div>
 
-        <p class="section-label">
+        <p class="java-label">OUR TAKE</p>
 
-            OUR TAKE
-
-        </p>
-
-        <h2>
-
-            Java rewards slowing down.
-
-        </h2>
+        <h2>Java rewards slowing down.</h2>
 
     </div>
 
-    <div class="edition-journal-copy">
+    <div class="java-closing-copy">
 
         <p>
 
@@ -1840,33 +1972,21 @@
 
 </div>
 
-</div>
-
 </section>
 
 <!-- =====================================================
 
      MAP
 
-====================================================== -->
+===================================================== -->
 
-<section class="edition-map section" id="map">
+<section class="java-map" id="map">
 
-<div class="container">
+<div class="java-container java-map-inner">
 
-<div class="edition-map-inner">
+    <p class="java-label">OUR MAP</p>
 
-    <p class="section-label">
-
-        OUR MAP
-
-    </p>
-
-    <h2>
-
-        Java, Indonesia.
-
-    </h2>
+    <h2>Java, Indonesia.</h2>
 
     <p>
 
@@ -1882,17 +2002,11 @@
 
 </div>
 
-</div>
-
 </section>
 
-<!-- =====================================================
+<!-- END -->
 
-     END NAVIGATION
-
-====================================================== -->
-
-<section class="edition-end">
+<section class="java-end java-container">
 
     <a href="/" class="text-link">
 
@@ -1910,11 +2024,7 @@
 
 </main>
 
-<!-- =====================================================
-
-     FOOTER
-
-====================================================== -->
+<!-- FOOTER -->
 
 <footer class="site-footer">
 

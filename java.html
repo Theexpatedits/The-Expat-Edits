@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,28 +17,14 @@
 
 <style>
 /* =========================================================
-   JAVA — KOMODO EDITORIAL SYSTEM
-   Page-level styling only. Shared CSS remains untouched.
+   JAVA — KOMODO EDITORIAL TEMPLATE
+   Shared master CSS files remain untouched.
 ========================================================= */
 
-.java-edition {
-    color:#242320;
-}
-
-.java-edition img {
-    display:block;
-    width:100%;
-    height:auto;
-}
-
-.java-container {
-    width:min(1400px,calc(100% - 80px));
-    margin:0 auto;
-}
-
 .java-opening,
+.java-editorial,
 .java-hotels,
-.java-story-section,
+.java-story,
 .java-information,
 .java-recommendations,
 .java-closing,
@@ -45,6 +32,8 @@
 .java-end {
     box-sizing:border-box;
 }
+
+/* OPENING — MATCHES KOMODO */
 
 .java-opening {
     width:min(1500px,calc(100% - 80px));
@@ -59,6 +48,7 @@
 .java-opening-hero {
     position:relative;
     overflow:hidden;
+    width:100%;
     background:#090909;
 }
 
@@ -71,6 +61,7 @@
 .java-opening-hero::after {
     content:"";
     position:absolute;
+    z-index:1;
     left:0;
     right:0;
     bottom:0;
@@ -117,21 +108,28 @@
     margin-bottom:0;
 }
 
+/* EDITORIAL CANVAS */
+
+.java-editorial {
+    width:min(1280px,calc(100% - 80px));
+    margin:0 auto;
+}
+
 /* HOTEL FEATURES */
 
 .java-hotels {
     padding:85px 0 100px;
-    border-top:1px solid rgba(36,35,32,.16);
-    border-bottom:1px solid rgba(36,35,32,.16);
+    border-top:1px solid rgba(255,255,255,.12);
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 .java-hotels-heading {
-    max-width:760px;
+    max-width:750px;
     margin-bottom:55px;
 }
 
 .java-hotels-heading h2 {
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
 .java-hotel-grid {
@@ -142,6 +140,7 @@
 }
 
 .java-hotel-card img {
+    display:block;
     width:100%;
     height:auto;
     margin-bottom:25px;
@@ -160,34 +159,35 @@
     font-size:.68rem;
     letter-spacing:.14em;
     text-transform:uppercase;
-    opacity:.65;
+    opacity:.7;
     margin-bottom:12px !important;
 }
 
 .java-hotel-note {
     margin-top:25px;
     padding-top:18px;
-    border-top:1px solid rgba(36,35,32,.16);
+    border-top:1px solid rgba(255,255,255,.16);
     font-size:.9rem;
     line-height:1.7;
 }
 
-/* EDITORIAL STORY */
+/* STORY */
 
-.java-story-section {
+.java-story {
     padding:90px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
-.java-section-heading {
+.java-story-heading {
     max-width:750px;
     margin-bottom:55px;
 }
 
-.java-section-heading h2 {
+.java-story-heading h2 {
     margin-bottom:18px;
 }
 
-.java-story-grid {
+.java-grid {
     display:grid;
     grid-template-columns:repeat(12,minmax(0,1fr));
     column-gap:22px;
@@ -195,103 +195,94 @@
     align-items:start;
 }
 
-.java-story-grid img {
+.java-grid img {
+    display:block;
     width:100%;
     height:auto;
 }
 
-.java-story-copy {
+.java-copy {
     align-self:center;
 }
 
-.java-story-copy h3 {
+.java-copy h3 {
     margin:0 0 20px;
 }
 
-.java-story-copy p {
+.java-copy p {
     margin-top:0;
 }
 
 .java-rule {
     width:42px;
     height:1px;
-    background:currentColor;
-    opacity:.55;
     margin:22px 0;
+    background:currentColor;
+    opacity:.65;
 }
 
-/* BOROBUDUR */
+/* BOROBUDUR STORY POSITIONS */
 
-.java-b1-copy { grid-column:1 / span 4; padding:20px 15px 0 0; }
-.java-b1-image { grid-column:5 / span 8; }
+.j-b1-copy { grid-column:1 / span 4; padding:20px 15px 0 0; }
+.j-b1-image { grid-column:5 / span 8; }
 
-.java-b2-image { grid-column:1 / span 5; }
-.java-b2-copy { grid-column:7 / span 5; padding:30px 15px 0 0; }
+.j-b2-image { grid-column:1 / span 5; }
+.j-b2-copy { grid-column:7 / span 5; padding:25px 10px 0 0; }
 
-.java-b3-copy { grid-column:1 / span 3; padding-top:25px; }
-.java-b3-image1 { grid-column:4 / span 5; }
-.java-b3-image2 { grid-column:9 / span 4; padding-top:55px; }
+.j-b3-copy { grid-column:1 / span 3; padding-top:25px; }
+.j-b3-image1 { grid-column:4 / span 5; }
+.j-b3-image2 { grid-column:9 / span 4; padding-top:55px; }
 
-.java-b4-image { grid-column:1 / span 4; padding-top:20px; }
-.java-b4-copy { grid-column:5 / span 3; padding:25px 8px 0; }
-.java-b4-image2 { grid-column:8 / span 5; padding-top:50px; }
+.j-b4-image { grid-column:1 / span 4; padding-top:20px; }
+.j-b4-copy { grid-column:5 / span 3; padding:25px 8px 0; }
+.j-b4-image2 { grid-column:8 / span 5; padding-top:50px; }
 
-.java-b5-copy { grid-column:1 / span 3; padding-top:25px; }
-.java-b5-image1 { grid-column:4 / span 4; }
-.java-b5-image2 { grid-column:8 / span 5; padding-top:45px; }
+.j-b5-copy { grid-column:1 / span 3; padding-top:25px; }
+.j-b5-image1 { grid-column:4 / span 4; }
+.j-b5-image2 { grid-column:8 / span 5; padding-top:45px; }
 
-/* COUNTRYSIDE */
+.j-b6-image1 { grid-column:1 / span 4; }
+.j-b6-image2 { grid-column:5 / span 4; padding-top:45px; }
+.j-b6-image3 { grid-column:9 / span 4; padding-top:15px; }
 
-.java-c1-copy { grid-column:1 / span 4; padding:20px 15px 0 0; }
-.java-c1-image { grid-column:5 / span 8; }
+/* COUNTRYSIDE STORY POSITIONS */
 
-.java-c2-image1 { grid-column:1 / span 4; }
-.java-c2-copy { grid-column:5 / span 3; padding:25px 8px 0; }
-.java-c2-image2 { grid-column:8 / span 5; padding-top:45px; }
+.j-c1-copy { grid-column:1 / span 4; padding:20px 15px 0 0; }
+.j-c1-image { grid-column:5 / span 8; }
 
-.java-c3-copy { grid-column:1 / span 3; padding-top:25px; }
-.java-c3-image1 { grid-column:4 / span 5; }
-.java-c3-image2 { grid-column:9 / span 4; padding-top:55px; }
+.j-c2-image1 { grid-column:1 / span 4; }
+.j-c2-copy { grid-column:5 / span 3; padding:25px 8px 0; }
+.j-c2-image2 { grid-column:8 / span 5; padding-top:45px; }
 
-.java-c4-image { grid-column:1 / span 5; }
-.java-c4-copy { grid-column:7 / span 5; padding:30px 10px 0 0; }
+.j-c3-copy { grid-column:1 / span 3; padding-top:25px; }
+.j-c3-image1 { grid-column:4 / span 5; }
+.j-c3-image2 { grid-column:9 / span 4; padding-top:55px; }
 
-/* FINAL PHOTOGRAPHY */
+.j-c4-image { grid-column:1 / span 5; }
+.j-c4-copy { grid-column:7 / span 5; padding:30px 10px 0 0; }
 
-.java-final-gallery {
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:22px;
-    align-items:start;
-    margin-top:65px;
-}
-
-.java-final-gallery img:nth-child(2) {
-    padding-top:55px;
-}
-
-.java-final-gallery img:nth-child(3) {
-    padding-top:20px;
-}
+.j-c5-image1 { grid-column:1 / span 4; }
+.j-c5-image2 { grid-column:5 / span 4; padding-top:45px; }
+.j-c5-image3 { grid-column:9 / span 4; padding-top:15px; }
 
 /* PRACTICAL INFORMATION */
 
 .java-information {
     margin:30px 0 70px;
     padding:65px 0;
-    border-top:1px solid rgba(36,35,32,.16);
-    border-bottom:1px solid rgba(36,35,32,.16);
+    border-top:1px solid rgba(255,255,255,.12);
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 .java-information-heading {
-    max-width:700px;
+    max-width:650px;
     margin-bottom:45px;
 }
 
 .java-information-grid {
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:60px;
+    gap:65px;
 }
 
 .java-information-item h3 {
@@ -314,7 +305,7 @@
 
 .java-recommendation-list {
     max-width:1000px;
-    border-top:1px solid rgba(36,35,32,.2);
+    border-top:1px solid rgba(255,255,255,.16);
 }
 
 .java-recommendation {
@@ -323,7 +314,7 @@
     column-gap:35px;
     align-items:start;
     padding:30px 0;
-    border-bottom:1px solid rgba(36,35,32,.2);
+    border-bottom:1px solid rgba(255,255,255,.16);
 }
 
 .java-recommendation-number {
@@ -351,7 +342,7 @@
     gap:90px;
     align-items:start;
     padding:75px 0;
-    border-top:1px solid rgba(36,35,32,.16);
+    border-top:1px solid rgba(255,255,255,.12);
 }
 
 .java-closing-copy p {
@@ -362,7 +353,7 @@
 
 .java-map {
     padding:80px 0 70px;
-    border-top:1px solid rgba(36,35,32,.16);
+    border-top:1px solid rgba(255,255,255,.12);
 }
 
 .java-map-inner {
@@ -375,16 +366,16 @@
     padding:35px 0 70px;
 }
 
-/* RESPONSIVE */
+/* TABLET */
 
-@media(max-width:900px) {
+@media(max-width:1000px) {
     .java-opening {
         grid-template-columns:1fr;
         gap:35px;
     }
 
     .java-opening-intro {
-        padding:15px 0 0;
+        padding:20px 0 0;
     }
 
     .java-hotel-grid {
@@ -394,55 +385,63 @@
     .java-information-grid {
         gap:35px;
     }
-
-    .java-recommendation {
-        grid-template-columns:55px 220px 1fr;
-        gap:22px;
-    }
 }
 
+/* MOBILE — KOMODO STYLE */
+
 @media(max-width:768px) {
-    .java-container {
-        width:calc(100% - 38px);
-    }
 
     .java-opening {
         width:100%;
+        display:block;
         padding:0 0 55px;
-        gap:25px;
     }
 
     .java-opening-hero {
-        min-height:540px;
-        display:flex;
-        align-items:flex-end;
-        background:#090909;
+        height:540px;
+        min-height:0;
+        overflow:hidden;
     }
 
     .java-opening-hero img {
-        position:absolute;
-        inset:0;
         width:100%;
         height:100%;
         object-fit:cover;
+        object-position:center;
+    }
+
+    .java-opening-hero::after {
+        height:45%;
     }
 
     .java-opening-hero .edition-hero-overlay {
         left:22px;
         right:22px;
-        bottom:35px;
+        bottom:45px;
+        text-align:center;
     }
 
     .java-opening-intro {
-        padding:25px 19px 0;
+        padding:55px 30px 0;
+        text-align:center;
     }
 
     .java-opening-intro h2 {
-        margin-bottom:20px;
+        margin:0 auto 28px;
+        max-width:520px;
+    }
+
+    .java-opening-intro-copy {
+        max-width:600px;
+        margin:0 auto;
     }
 
     .java-opening-intro-copy p {
-        margin-bottom:16px;
+        margin-bottom:18px;
+    }
+
+    .java-editorial {
+        width:calc(100% - 38px);
     }
 
     .java-hotels {
@@ -466,37 +465,26 @@
         font-size:1.7rem;
     }
 
-    .java-story-section {
+    .java-story {
         padding:60px 0;
     }
 
-    .java-section-heading {
+    .java-story-heading {
         margin-bottom:35px;
     }
 
-    .java-story-grid {
+    .java-grid {
         grid-template-columns:1fr;
         row-gap:25px;
     }
 
-    .java-story-grid > * {
+    .java-grid > * {
         grid-column:1 !important;
         padding-top:0 !important;
     }
 
-    .java-story-copy {
-        padding:10px 0 5px !important;
-    }
-
-    .java-final-gallery {
-        grid-template-columns:1fr;
-        gap:22px;
-        margin-top:35px;
-    }
-
-    .java-final-gallery img:nth-child(2),
-    .java-final-gallery img:nth-child(3) {
-        padding-top:0;
+    .java-copy {
+        padding:12px 0 5px !important;
     }
 
     .java-information {
@@ -538,16 +526,10 @@
         gap:20px;
     }
 }
-
-@media(max-width:380px) {
-    .java-opening-hero {
-        min-height:490px;
-    }
-}
 </style>
 </head>
 
-<body class="edition-page java-edition">
+<body class="edition-page">
 
 <!-- HEADER -->
 
@@ -577,7 +559,7 @@
 <section class="java-opening">
 
     <div class="java-opening-hero">
-        <img src="javahero.jpeg" alt="The landscape of Java, Indonesia" loading="eager">
+        <img src="javahero.jpeg" alt="The ancient stone architecture of Borobudur" loading="eager">
 
         <div class="edition-hero-overlay">
             <p class="eyebrow">INDONESIA</p>
@@ -623,9 +605,9 @@
 
 </section>
 
-<div class="java-container">
+<div class="java-editorial">
 
-<!-- THREE HOTEL FEATURES -->
+<!-- HOTEL FEATURES -->
 
 <section class="java-hotels">
 
@@ -726,16 +708,16 @@
 
 <!-- BOROBUDUR -->
 
-<section class="java-story-section">
+<section class="java-story">
 
-    <div class="java-section-heading">
+    <div class="java-story-heading">
         <p class="section-label">01 / THE BEGINNING</p>
         <h2>Borobudur before the day begins.</h2>
     </div>
 
-    <div class="java-story-grid">
+    <div class="java-grid">
 
-        <div class="java-story-copy java-b1-copy">
+        <div class="java-copy j-b1-copy">
             <p class="section-label">SUNRISE</p>
             <h3>An unforgettable start.</h3>
             <div class="java-rule"></div>
@@ -762,11 +744,11 @@
             </p>
         </div>
 
-        <img class="java-b1-image" src="java1.jpeg" alt="Borobudur Buddha sculpture" loading="lazy">
+        <img class="j-b1-image" src="java1.jpeg" alt="Borobudur Buddha sculpture" loading="lazy">
 
-        <img class="java-b2-image" src="java2.jpeg" alt="Buddha silhouette at Borobudur" loading="lazy">
+        <img class="j-b2-image" src="java2.jpeg" alt="Buddha silhouette at Borobudur" loading="lazy">
 
-        <div class="java-story-copy java-b2-copy">
+        <div class="java-copy j-b2-copy">
             <p class="section-label">THE TEMPLE</p>
             <h3>History in every direction.</h3>
             <div class="java-rule"></div>
@@ -790,7 +772,7 @@
             </p>
         </div>
 
-        <div class="java-story-copy java-b3-copy">
+        <div class="java-copy j-b3-copy">
             <p class="section-label">A DIFFERENT PERSPECTIVE</p>
             <h3>The temple and its surroundings.</h3>
             <div class="java-rule"></div>
@@ -809,12 +791,12 @@
             </p>
         </div>
 
-        <img class="java-b3-image1" src="java3.jpeg" alt="Visitors looking towards Borobudur" loading="lazy">
-        <img class="java-b3-image2" src="java4.jpeg" alt="Borobudur stone architecture" loading="lazy">
+        <img class="j-b3-image1" src="java3.jpeg" alt="Visitors looking towards Borobudur" loading="lazy">
+        <img class="j-b3-image2" src="java4.jpeg" alt="Borobudur stone architecture" loading="lazy">
 
-        <img class="java-b4-image" src="java8.jpeg" alt="Borobudur Buddha silhouette" loading="lazy">
+        <img class="j-b4-image" src="java8.jpeg" alt="Borobudur Buddha silhouette" loading="lazy">
 
-        <div class="java-story-copy java-b4-copy">
+        <div class="java-copy j-b4-copy">
             <p class="section-label">LOOKING BACK</p>
             <h3>A place that stays with you.</h3>
             <div class="java-rule"></div>
@@ -834,9 +816,9 @@
             </p>
         </div>
 
-        <img class="java-b4-image2" src="java9.jpeg" alt="Borobudur at sunrise" loading="lazy">
+        <img class="j-b4-image2" src="java9.jpeg" alt="Borobudur at sunrise" loading="lazy">
 
-        <div class="java-story-copy java-b5-copy">
+        <div class="java-copy j-b5-copy">
             <p class="section-label">THE DETAIL</p>
             <h3>Architecture, atmosphere and light.</h3>
             <div class="java-rule"></div>
@@ -849,42 +831,36 @@
             </p>
         </div>
 
-        <img class="java-b5-image1" src="java10.jpeg" alt="Intricate Buddha sculpture" loading="lazy">
-        <img class="java-b5-image2" src="java11.jpeg" alt="Temple silhouettes at sunrise" loading="lazy">
+        <img class="j-b5-image1" src="java10.jpeg" alt="Intricate Buddha sculpture" loading="lazy">
+        <img class="j-b5-image2" src="java11.jpeg" alt="Temple silhouettes at sunrise" loading="lazy">
 
-    </div>
+        <img class="j-b6-image1" src="java12.jpeg" alt="The wider Borobudur landscape" loading="lazy">
+        <img class="j-b6-image2" src="java13.jpeg" alt="Borobudur against the evening light" loading="lazy">
+        <img class="j-b6-image3" src="java14.jpeg" alt="Buddha sculpture at Borobudur" loading="lazy">
 
-    <div class="java-final-gallery">
-        <img src="java12.jpeg" alt="The wider Borobudur landscape" loading="lazy">
-        <img src="java13.jpeg" alt="Borobudur against the evening light" loading="lazy">
-        <img src="java14.jpeg" alt="Buddha sculpture at Borobudur" loading="lazy">
-    </div>
+        <img class="j-b6-image1" src="java15.jpeg" alt="Borobudur at sunrise" loading="lazy">
+        <img class="j-b6-image2" src="java17.jpeg" alt="Borobudur stone structure" loading="lazy">
+        <img class="j-b6-image3" src="java18.jpeg" alt="Buddha overlooking the countryside" loading="lazy">
 
-    <div class="java-final-gallery">
-        <img src="java15.jpeg" alt="Borobudur at sunrise" loading="lazy">
-        <img src="java17.jpeg" alt="Borobudur stone structure" loading="lazy">
-        <img src="java18.jpeg" alt="Buddha overlooking the countryside" loading="lazy">
-    </div>
+        <img class="j-b6-image1" src="java19.jpeg" alt="Borobudur viewed from the surrounding fields" loading="lazy">
+        <img class="j-b6-image2" src="java20.jpeg" alt="Temple landscape in Java" loading="lazy">
 
-    <div class="java-final-gallery">
-        <img src="java19.jpeg" alt="Borobudur viewed from the surrounding fields" loading="lazy">
-        <img src="java20.jpeg" alt="Temple landscape in Java" loading="lazy">
     </div>
 
 </section>
 
 <!-- COUNTRYSIDE -->
 
-<section class="java-story-section">
+<section class="java-story">
 
-    <div class="java-section-heading">
+    <div class="java-story-heading">
         <p class="section-label">02 / BEYOND THE TEMPLE</p>
         <h2>The journey becomes the destination.</h2>
     </div>
 
-    <div class="java-story-grid">
+    <div class="java-grid">
 
-        <div class="java-story-copy java-c1-copy">
+        <div class="java-copy j-c1-copy">
             <p class="section-label">ON THE ROAD</p>
             <h3>A greener, quieter Java.</h3>
             <div class="java-rule"></div>
@@ -909,11 +885,11 @@
             </p>
         </div>
 
-        <img class="java-c1-image" src="java21.jpeg" alt="Terraced rice fields in Java" loading="lazy">
+        <img class="j-c1-image" src="java21.jpeg" alt="Terraced rice fields in Java" loading="lazy">
 
-        <img class="java-c2-image1" src="java23.jpeg" alt="Mountain scenery and tropical vegetation" loading="lazy">
+        <img class="j-c2-image1" src="java23.jpeg" alt="Mountain scenery and tropical vegetation" loading="lazy">
 
-        <div class="java-story-copy java-c2-copy">
+        <div class="java-copy j-c2-copy">
             <p class="section-label">THE PEOPLE &amp; PLACES</p>
             <h3>A different pace of life.</h3>
             <div class="java-rule"></div>
@@ -933,9 +909,9 @@
             </p>
         </div>
 
-        <img class="java-c2-image2" src="java24.jpeg" alt="Banana plants in rural Java" loading="lazy">
+        <img class="j-c2-image2" src="java24.jpeg" alt="Banana plants in rural Java" loading="lazy">
 
-        <div class="java-story-copy java-c3-copy">
+        <div class="java-copy j-c3-copy">
             <p class="section-label">THE GREEN LANDSCAPE</p>
             <h3>Somewhere to simply stop and look.</h3>
             <div class="java-rule"></div>
@@ -954,12 +930,12 @@
             </p>
         </div>
 
-        <img class="java-c3-image1" src="java25.jpeg" alt="Layers of volcanic mountains" loading="lazy">
-        <img class="java-c3-image2" src="java26.jpeg" alt="A small moment from our Java journey" loading="lazy">
+        <img class="j-c3-image1" src="java25.jpeg" alt="Layers of volcanic mountains" loading="lazy">
+        <img class="j-c3-image2" src="java26.jpeg" alt="A small moment from our Java journey" loading="lazy">
 
-        <img class="java-c4-image" src="java27.jpeg" alt="Visitors enjoying the Borobudur landscape" loading="lazy">
+        <img class="j-c4-image" src="java27.jpeg" alt="Visitors enjoying the Borobudur landscape" loading="lazy">
 
-        <div class="java-story-copy java-c4-copy">
+        <div class="java-copy j-c4-copy">
             <p class="section-label">THE LANDSCAPE</p>
             <h3>More to discover beyond the temples.</h3>
             <div class="java-rule"></div>
@@ -979,13 +955,10 @@
             </p>
         </div>
 
-        <img class="java-c3-image1" src="java28.jpeg" alt="Ancient temple architecture in Java" loading="lazy">
-        <img class="java-c3-image2" src="java32.jpeg" alt="Waterfall in the Java countryside" loading="lazy">
+        <img class="j-c5-image1" src="java28.jpeg" alt="Ancient temple architecture in Java" loading="lazy">
+        <img class="j-c5-image2" src="java32.jpeg" alt="Waterfall in the Java countryside" loading="lazy">
+        <img class="j-c5-image3" src="java33.jpeg" alt="Green terraced landscape viewed through tropical trees" loading="lazy">
 
-    </div>
-
-    <div class="java-final-gallery">
-        <img src="java33.jpeg" alt="Green terraced landscape viewed through tropical trees" loading="lazy">
     </div>
 
 </section>

@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Thailand Islands | The Expat Edits</title>
-
-<meta name="description" content="Three islands, three different rhythms. Exploring Koh Samui, Koh Phangan and Koh Tao — from quiet beaches and boat adventures to unforgettable sunsets and slower island days.">
+<meta name="description" content="Three islands, three different rhythms. Our first-hand guide to Koh Samui, Koh Phangan and Koh Tao.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,86 +13,1001 @@
 <link rel="stylesheet" href="style-new.css">
 <link rel="stylesheet" href="style-editions-new.css">
 
+<style>
+/* =========================================================
+   THAILAND ISLANDS
+   KOMODO EDITORIAL ARCHITECTURE
+========================================================= */
+
+.thailand-desktop { display:block; }
+.thailand-mobile { display:none; }
+
+.th-opening,
+.th-editorial,
+.th-hotel,
+.th-info,
+.th-recommendations,
+.th-journal,
+.th-map,
+.th-end { box-sizing:border-box; }
+
+.th-editorial img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.th-editorial-section { padding:70px 0; }
+
+.th-text p { margin-top:0; }
+.th-text h2,
+.th-text h3 { margin-top:0; }
+
+.th-rule {
+    width:42px;
+    height:1px;
+    margin:20px 0;
+    background:currentColor;
+    opacity:.65;
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width:769px) {
+
+:root {
+    --th-width:min(1400px,calc(100% - 80px));
+    --th-wide:min(1500px,calc(100% - 80px));
+    --th-gap:22px;
+    --th-line:rgba(255,255,255,.12);
+    --th-line-strong:rgba(255,255,255,.16);
+}
+
+/* OPENING */
+
+.th-opening {
+    width:var(--th-wide);
+    margin:0 auto;
+    padding:0 0 100px;
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:75px;
+    align-items:center;
+}
+
+.th-opening-hero {
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    background:#090909;
+}
+
+.th-opening-hero img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.th-opening-hero::after {
+    content:"";
+    position:absolute;
+    z-index:1;
+    left:0;
+    right:0;
+    bottom:0;
+    height:38%;
+    pointer-events:none;
+    background:linear-gradient(
+        to bottom,
+        rgba(9,9,9,0) 0%,
+        rgba(9,9,9,.22) 28%,
+        rgba(9,9,9,.55) 55%,
+        rgba(9,9,9,.82) 78%,
+        #242320 100%
+    );
+}
+
+.th-opening-hero .edition-hero-overlay {
+    position:absolute;
+    z-index:2;
+    left:55px;
+    right:55px;
+    bottom:50px;
+}
+
+.th-opening-intro {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:50px 35px 50px 5px;
+}
+
+.th-opening-intro h2 { margin:0 0 28px; }
+
+.th-opening-intro-copy { max-width:560px; }
+
+.th-opening-intro-copy p { margin:0 0 20px; }
+
+.th-opening-intro-copy p:last-child { margin-bottom:0; }
+
+/* EDITORIAL CANVAS */
+
+.th-editorial {
+    width:var(--th-width);
+    margin:0 auto;
+}
+
+.th-grid {
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--th-gap);
+    row-gap:55px;
+    align-items:start;
+}
+
+.th-grid img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.th-text { align-self:center; }
+
+.th-text .section-label { margin-bottom:12px; }
+
+/* HOTEL FEATURE */
+
+.th-hotel {
+    padding:90px 0 100px;
+    border-top:1px solid var(--th-line);
+}
+
+.th-hotel-heading {
+    max-width:750px;
+    margin-bottom:60px;
+}
+
+.th-hotel-layout {
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:75px;
+    align-items:center;
+}
+
+.th-hotel-images {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    align-items:start;
+}
+
+.th-hotel-images img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.th-hotel-images img:last-child { margin-top:65px; }
+
+.th-hotel-copy { max-width:550px; }
+
+.th-hotel-copy h3 { margin-top:0; }
+
+.th-hotel-copy p { margin-top:0; }
+
+.th-hotel-note {
+    margin-top:30px;
+    padding-top:22px;
+    border-top:1px solid var(--th-line);
+}
+
+.th-hotel-secondary {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    padding:75px 0;
+    border-top:1px solid var(--th-line);
+}
+
+.th-hotel-secondary article { max-width:520px; }
+
+/* DESTINATION STORY */
+
+.th-destination {
+    padding:90px 0;
+    border-top:1px solid var(--th-line);
+}
+
+.th-destination-grid {
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--th-gap);
+    row-gap:55px;
+    align-items:start;
+}
+
+.th-destination-grid img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* SAMUI */
+
+.th-d1-text { grid-column:1 / span 3; padding-top:25px; }
+.th-d1-img1 { grid-column:4 / span 5; }
+.th-d1-img2 { grid-column:9 / span 4; padding-top:60px; }
+
+.th-d2-img1 { grid-column:1 / span 4; }
+.th-d2-text { grid-column:5 / span 3; padding:20px 5px 0; }
+.th-d2-img2 { grid-column:8 / span 5; padding-top:45px; }
+
+/* PHANGAN */
+
+.th-d3-text { grid-column:1 / span 3; padding-top:20px; }
+.th-d3-img1 { grid-column:4 / span 4; }
+.th-d3-img2 { grid-column:8 / span 2; padding-top:55px; }
+.th-d3-img3 { grid-column:10 / span 3; padding-top:10px; }
+
+.th-d4-img1 { grid-column:1 / span 3; padding-top:25px; }
+.th-d4-text { grid-column:4 / span 3; padding:15px 8px 0; }
+.th-d4-img2 { grid-column:7 / span 3; }
+.th-d4-img3 { grid-column:10 / span 3; padding-top:50px; }
+
+.th-d5-text { grid-column:1 / span 3; padding-top:25px; }
+.th-d5-img1 { grid-column:4 / span 4; }
+.th-d5-img2 { grid-column:8 / span 2; padding-top:50px; }
+.th-d5-img3 { grid-column:10 / span 3; padding-top:15px; }
+
+.th-d6-img1 { grid-column:1 / span 4; }
+.th-d6-text { grid-column:5 / span 3; padding:20px 5px 0; }
+.th-d6-img2 { grid-column:8 / span 5; padding-top:40px; }
+
+/* KOH TAO */
+
+.th-d7-text { grid-column:1 / span 3; padding-top:25px; }
+.th-d7-img1 { grid-column:4 / span 5; }
+.th-d7-img2 { grid-column:9 / span 4; padding-top:60px; }
+
+/* TRAVEL INFORMATION */
+
+.th-info {
+    margin:30px 0 70px;
+    padding:65px 0;
+    border-top:1px solid var(--th-line);
+    border-bottom:1px solid var(--th-line);
+}
+
+.th-info-heading {
+    max-width:650px;
+    margin-bottom:45px;
+}
+
+.th-info-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:65px;
+}
+
+.th-info-item h3 { margin:10px 0 12px; }
+
+.th-info-item p { max-width:370px; }
+
+/* RECOMMENDATIONS */
+
+.th-recommendations { padding:30px 0 100px; }
+
+.th-recommendations-heading { margin-bottom:50px; }
+
+.th-recommendation-list {
+    max-width:1000px;
+    border-top:1px solid var(--th-line-strong);
+}
+
+.th-recommendation {
+    display:grid;
+    grid-template-columns:70px 280px 1fr;
+    column-gap:35px;
+    align-items:start;
+    padding:30px 0;
+    border-bottom:1px solid var(--th-line-strong);
+}
+
+.th-rec-number {
+    padding-top:7px;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    opacity:.6;
+}
+
+.th-recommendation h3 {
+    margin:0;
+    font-size:1.35rem;
+}
+
+.th-recommendation p {
+    margin:0;
+    max-width:550px;
+}
+
+/* OUR EDIT */
+
+.th-journal {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+    padding:75px 0;
+    border-top:1px solid var(--th-line);
+}
+
+.th-journal-copy p { margin-top:0; }
+
+/* MAP */
+
+.th-map { padding:80px 0 70px; }
+
+.th-map-inner { max-width:650px; }
+
+/* END */
+
+.th-end {
+    display:flex;
+    justify-content:space-between;
+    padding:35px 0 70px;
+}
+
+}
+
+/* =========================================================
+   MOBILE — SEPARATE KOMODO-STYLE LAYOUT
+========================================================= */
+
+@media (max-width:768px) {
+
+.thailand-desktop { display:none; }
+
+.thailand-mobile { display:block; }
+
+.th-mobile-hotel { padding:55px 0; }
+
+.th-mobile-hotel img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:22px;
+}
+
+.th-mobile-hotel-copy { padding:25px 0 0; }
+
+.th-mobile-stay {
+    padding:35px 0;
+    border-top:1px solid rgba(255,255,255,.14);
+}
+
+.th-mobile-story { padding:55px 0; }
+
+.th-mobile-story img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:22px;
+}
+
+.th-mobile-story-copy { padding:20px 0 30px; }
+
+.th-mobile-info { padding:55px 0; }
+
+.th-mobile-info-item { margin-bottom:35px; }
+
+.th-mobile-info-item:last-child { margin-bottom:0; }
+
+.th-mobile-recommendations { padding:55px 0; }
+
+.th-mobile-recommendation {
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.th-mobile-recommendation h3 { margin:8px 0 12px; }
+
+.th-mobile-journal { padding:55px 0; }
+
+}
+</style>
 </head>
 
 <body class="edition-page">
 
-<!-- =====================================================
-     HEADER
-====================================================== -->
+<!-- HEADER -->
 
 <header class="site-header">
-    <div class="site-header-inner">
-
-        <a href="/" class="site-logo">
-            THE EXPAT EDITS
-        </a>
-
-        <nav class="site-nav">
-            <a href="editions.html">Editions</a>
-            <a href="index-new.html#journal">Journal</a>
-            <a href="index-new.html#map">Map</a>
-            <a href="index-new.html#about">About</a>
-        </nav>
-
-        <button class="menu-toggle" type="button" aria-label="Open navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </div>
+<div class="site-header-inner">
+    <a href="/" class="site-logo">THE EXPAT EDITS</a>
+    <nav class="site-nav">
+        <a href="editions.html">Editions</a>
+        <a href="index-new.html#journal">Journal</a>
+        <a href="index-new.html#map">Map</a>
+        <a href="index-new.html#about">About</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+    </button>
+</div>
 </header>
 
-
-<main>
-
 <!-- =====================================================
-     HERO
+     DESKTOP EDITION
 ====================================================== -->
 
-<section class="edition-hero">
+<main class="thailand-desktop">
 
-    <div class="edition-hero-image">
-        <img
-            src="../images/home/samuihero.jpeg"
-            alt="Colourful guardian statue in Thailand"
-            loading="eager"
-        >
+<!-- OPENING -->
+
+<section class="th-opening">
+
+    <div class="th-opening-hero">
+        <img src="samuihero.jpeg" alt="Thailand island guardian statue" loading="eager">
+        <div class="edition-hero-overlay">
+            <p class="eyebrow">THAILAND</p>
+            <h1>Island Life</h1>
+            <p class="edition-hero-subtitle">
+                Three islands, hidden beaches and a slower rhythm.
+            </p>
+        </div>
     </div>
 
-    <div class="edition-hero-overlay">
-        <p class="eyebrow">THAILAND</p>
+    <div class="th-opening-intro">
+        <p class="section-label">THE EXPERIENCE</p>
+        <h2>Three islands, one unforgettable escape.</h2>
+        <div class="th-opening-intro-copy">
+            <p>
+                There is something rather special about travelling
+                between the islands in the Gulf of Thailand. We
+                managed to experience three on this trip — Koh
+                Samui, Koh Phangan and Koh Tao — and each offered
+                something quite different.
+            </p>
+            <p>
+                We began in the north of Koh Samui, where a quiet
+                beachfront hotel gave us a lovely base for exploring
+                the island by car. From there, Koh Phangan became
+                an adventure of boats, beaches and sunsets, before
+                finishing in Koh Tao, where the pace slowed down
+                once again.
+            </p>
+            <p>
+                Looking back, it was the contrast between the
+                three islands that made the trip work so well.
+                We wouldn't have wanted to choose just one.
+            </p>
+        </div>
+    </div>
 
-        <h1>Island Life</h1>
+</section>
 
-        <p class="edition-hero-subtitle">
-            Three islands, hidden beaches and a slower rhythm.
+<div class="th-editorial">
+
+<!-- =====================================================
+     THE STAYS
+====================================================== -->
+
+<section class="th-hotel">
+
+    <div class="th-hotel-heading">
+        <p class="section-label">WHERE WE STAYED</p>
+        <h2>Three islands, three different bases.</h2>
+        <p>
+            Each island had its own character, and having a
+            different base on each gave us the chance to
+            experience them at their own pace.
+        </p>
+    </div>
+
+    <div class="th-hotel-layout">
+
+        <div class="th-hotel-images">
+            <img src="samui2.jpeg" alt="Sarei Samui" loading="lazy">
+        </div>
+
+        <div class="th-hotel-copy">
+            <p class="section-label">KOH SAMUI — THE STAY</p>
+            <h3>Sarei Samui.</h3>
+            <div class="th-rule"></div>
+            <p>
+                We stayed in the north of Samui at Sarei Samui,
+                and it turned out to be a lovely choice. The
+                setting was peaceful, with the hotel sitting
+                directly on a beautiful, quiet beach.
+            </p>
+            <p>
+                The pool was great, but one of our favourite
+                parts of the stay was breakfast at the
+                beachfront restaurant. It was a lovely way
+                to start the day before heading out to explore
+                the island.
+            </p>
+            <p>
+                The north worked particularly well as a base.
+                It gave us the quieter side of Samui while
+                keeping the rest of the island within easy
+                reach by car.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="th-hotel-secondary">
+
+        <article>
+            <p class="section-label">KOH PHANGAN — THE STAY</p>
+            <h3>Varivana.</h3>
+            <div class="th-rule"></div>
+            <p>
+                Our base on Koh Phangan was Varivana. This
+                was the island where we spent much of our
+                time exploring, getting out on the water
+                and discovering different stretches of
+                coastline.
+            </p>
+            <p>
+                Koh Phangan is a superb island to explore.
+                We found that arranging transport every day
+                could become eye-wateringly expensive, so
+                getting out by boat became a much more
+                enjoyable way to discover the island.
+            </p>
+        </article>
+
+        <article>
+            <p class="section-label">KOH TAO — THE STAY</p>
+            <h3>The Heritage Hideaway.</h3>
+            <div class="th-rule"></div>
+            <p>
+                We finished the trip at The Heritage Hideaway
+                on Koh Tao. After the exploring and boat
+                adventures of the previous islands, this
+                was a lovely place to settle into a slower
+                rhythm.
+            </p>
+            <p>
+                Koh Tao was all about taking things a little
+                easier, wandering the streets, spending
+                time on the beaches and enjoying some
+                well-earned downtime.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     DESTINATION STORY
+====================================================== -->
+
+<section class="th-destination">
+
+    <div class="section-heading">
+        <p>BEYOND THE HOTELS</p>
+        <h2>Three islands, three different rhythms.</h2>
+    </div>
+
+    <div class="th-destination-grid">
+
+        <!-- SAMUI -->
+
+        <div class="th-text th-d1-text">
+            <p class="section-label">01 — KOH SAMUI</p>
+            <h3>The quieter side of Samui.</h3>
+            <div class="th-rule"></div>
+            <p>
+                The north of Koh Samui was exactly what we
+                wanted at the start of the trip. Peaceful,
+                relaxed and right on the beach, it gave us
+                a chance to settle in before exploring
+                further afield.
+            </p>
+        </div>
+
+        <img class="th-d1-img1" src="samui1.png" alt="Koh Samui island scenery" loading="lazy">
+        <img class="th-d1-img2" src="samui3.jpeg" alt="Quiet beach on Koh Samui" loading="lazy">
+
+        <img class="th-d2-img1" src="samui4.jpeg" alt="Koh Samui coastline" loading="lazy">
+
+        <div class="th-text th-d2-text">
+            <p class="section-label">EXPLORING BY CAR</p>
+            <h3>Freedom to find your own way.</h3>
+            <div class="th-rule"></div>
+            <p>
+                We hired a car and loved having the freedom
+                to explore at our own pace. It made discovering
+                different parts of the island easy, with no
+                need to plan every stop in advance.
+            </p>
+        </div>
+
+        <img class="th-d2-img2" src="samui7.jpeg" alt="Koh Samui island sign surrounded by tropical greenery" loading="lazy">
+
+        <!-- FISHERMAN'S VILLAGE -->
+
+        <div class="th-text th-d3-text">
+            <p class="section-label">FISHERMAN'S VILLAGE</p>
+            <h3>Evenings by the water.</h3>
+            <div class="th-rule"></div>
+            <p>
+                In the evenings we loved heading to
+                Fisherman's Village. It was a great place
+                to spend time eating, wandering around
+                the shops and enjoying a different side
+                of Samui after a day exploring.
+            </p>
+        </div>
+
+        <img class="th-d3-img1" src="samui16.jpeg" alt="Shaded tropical walkway" loading="lazy">
+        <img class="th-d3-img2" src="samui18.jpeg" alt="Swimming pool surrounded by tropical greenery" loading="lazy">
+        <img class="th-d3-img3" src="samui19.jpeg" alt="Colourful island signpost beside the sea" loading="lazy">
+
+        <!-- PHANGAN -->
+
+        <img class="th-d4-img1" src="samui21.jpeg" alt="Tropical sea and island coastline" loading="lazy">
+
+        <div class="th-text th-d4-text">
+            <p class="section-label">02 — KOH PHANGAN</p>
+            <h3>The island adventure.</h3>
+            <div class="th-rule"></div>
+            <p>
+                Koh Phangan was probably the island we
+                enjoyed exploring most. Getting around
+                by boat allowed us to discover beaches
+                that would otherwise have been much
+                harder to reach.
+            </p>
+        </div>
+
+        <img class="th-d4-img2" src="samui12.jpeg" alt="Traditional longtail boat on a tropical beach" loading="lazy">
+        <img class="th-d4-img3" src="samui6.jpeg" alt="Secluded beach on Koh Phangan" loading="lazy">
+
+        <div class="th-text th-d5-text">
+            <p class="section-label">BOTTLE BEACH &amp; SECRET BEACH</p>
+            <h3>One beach after another.</h3>
+            <div class="th-rule"></div>
+            <p>
+                We loved Bottle Beach and Secret Beach.
+                Simply bounding around the coast, stopping
+                at different beaches and seeing what each
+                one had to offer, was a joy.
+            </p>
+        </div>
+
+        <img class="th-d5-img1" src="samui5.jpeg" alt="Coastal view across the islands" loading="lazy">
+        <img class="th-d5-img2" src="samui8.jpeg" alt="Clear turquoise water and sandy beach" loading="lazy">
+        <img class="th-d5-img3" src="samui13.jpeg" alt="Sunset gathering overlooking the sea" loading="lazy">
+
+        <!-- MA ISLAND AND SUNSET -->
+
+        <img class="th-d6-img1" src="samui17.jpeg" alt="Sun setting over the sea framed by palm trees" loading="lazy">
+
+        <div class="th-text th-d6-text">
+            <p class="section-label">MA ISLAND &amp; AMSTERDAM BAR</p>
+            <h3>A day on the water, then a remarkable sunset.</h3>
+            <div class="th-rule"></div>
+            <p>
+                We also took a boat over to Ma Island.
+                It was a fun day exploring another beautiful
+                part of the coastline.
+            </p>
+            <p>
+                We found Amsterdam Bar and all agreed
+                that it was possibly the best sunset bar
+                in the world. The atmosphere, the music
+                and the view made it one of those places
+                that stays with you.
+            </p>
+        </div>
+
+        <img class="th-d6-img2" src="samui9.jpeg" alt="Golden sunset across a tropical beach" loading="lazy">
+
+        <!-- KOH TAO -->
+
+        <div class="th-text th-d7-text">
+            <p class="section-label">03 — KOH TAO</p>
+            <h3>A slower finish.</h3>
+            <div class="th-rule"></div>
+            <p>
+                By the time we reached Koh Tao, we were
+                ready for a slightly slower pace. We
+                enjoyed walking around the cobbled
+                streets, discovering the island and
+                spending time relaxing on the beaches.
+            </p>
+            <p>
+                It felt like a different world again,
+                with a much more laid-back atmosphere
+                and plenty of time to simply enjoy
+                being there.
+            </p>
+        </div>
+
+        <img class="th-d7-img1" src="samui22.jpeg" alt="Elevated view over a turquoise bay on Koh Tao" loading="lazy">
+        <img class="th-d7-img2" src="samui20.jpeg" alt="Quiet sandy beach on a Thai island" loading="lazy">
+
+    </div>
+
+</section>
+
+<!-- ADDITIONAL PHOTOGRAPHY -->
+
+<section class="th-editorial-section">
+
+    <div class="section-heading">
+        <p>THE LITTLE DETAILS</p>
+        <h2>More moments from the islands.</h2>
+    </div>
+
+    <div class="th-grid">
+
+        <div class="th-text" style="grid-column:1 / span 3; padding-top:25px;">
+            <p class="section-label">GOOD FOOD &amp; EVENINGS</p>
+            <h3>Places that made the journey.</h3>
+            <p>
+                From breakfast by the beach at Sarei to
+                dinner at Alcove and evenings around
+                Fisherman's Village, good food and
+                relaxed places were part of the trip.
+            </p>
+        </div>
+
+        <img style="grid-column:4 / span 4;" src="samui14.jpeg" alt="Fresh fruit bowl" loading="lazy">
+        <img style="grid-column:8 / span 2; padding-top:50px;" src="samui15.jpeg" alt="Alcove restaurant artwork" loading="lazy">
+        <img style="grid-column:10 / span 3; padding-top:15px;" src="samui10.jpeg" alt="Sunset over the water" loading="lazy">
+
+        <img style="grid-column:1 / span 4; padding-top:25px;" src="samui11.jpeg" alt="Warm evening sunset over the sea" loading="lazy">
+
+    </div>
+
+</section>
+
+<!-- PLANNING -->
+
+<section class="th-info">
+
+    <div class="th-info-heading">
+        <p class="section-label">PLANNING YOUR VISIT</p>
+        <h2>Making the most of the Gulf Islands.</h2>
+        <p>
+            A few things we learned along the way that
+            helped make our time across the three islands
+            so enjoyable.
+        </p>
+    </div>
+
+    <div class="th-info-grid">
+
+        <div class="th-info-item">
+            <p class="section-label">KOH SAMUI</p>
+            <h3>Stay in the north</h3>
+            <p>
+                We loved the peaceful feel of the north.
+                Staying by a quiet beach gave us a lovely
+                base, while hiring a car made exploring
+                the island straightforward.
+            </p>
+        </div>
+
+        <div class="th-info-item">
+            <p class="section-label">KOH PHANGAN</p>
+            <h3>Explore by boat</h3>
+            <p>
+                Taxis were eye-wateringly expensive
+                every day. Exploring the coastline by
+                boat was much more enjoyable and gave
+                us the freedom to discover different
+                beaches.
+            </p>
+        </div>
+
+        <div class="th-info-item">
+            <p class="section-label">KOH TAO</p>
+            <h3>Leave time to slow down</h3>
+            <p>
+                Koh Tao was a lovely place to finish.
+                Enjoy the beaches, wander around the
+                streets and take the opportunity
+                to relax.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RECOMMENDATIONS -->
+
+<section class="th-recommendations">
+
+    <div class="th-recommendations-heading">
+        <p class="section-label">OUR RECOMMENDATIONS</p>
+        <h2>The places and experiences we loved.</h2>
+    </div>
+
+    <div class="th-recommendation-list">
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">01</span>
+            <h3>Sarei Samui</h3>
+            <p>
+                A peaceful northern base, directly on
+                a beautiful quiet beach. We loved the
+                pool and especially breakfast at the
+                beachfront restaurant.
+            </p>
+        </article>
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">02</span>
+            <h3>Fisherman's Village</h3>
+            <p>
+                A lovely place to spend the evening
+                on Samui, with restaurants, shopping
+                and plenty to wander around and discover.
+            </p>
+        </article>
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">03</span>
+            <h3>Varivana</h3>
+            <p>
+                Our base on Koh Phangan while exploring
+                the island and its beautiful coastline.
+            </p>
+        </article>
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">04</span>
+            <h3>Bottle Beach &amp; Secret Beach</h3>
+            <p>
+                Two of our favourite discoveries on
+                Koh Phangan. Exploring the coast and
+                finding different beaches was a
+                highlight of the trip.
+            </p>
+        </article>
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">05</span>
+            <h3>Ma Island</h3>
+            <p>
+                A fun boat trip and a great way
+                to spend a day exploring the
+                surrounding coastline.
+            </p>
+        </article>
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">06</span>
+            <h3>Amsterdam Bar</h3>
+            <p>
+                Possibly the best sunset bar in the
+                world. Great music, a wonderful
+                atmosphere and a view that made it
+                one of the highlights of the trip.
+            </p>
+        </article>
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">07</span>
+            <h3>Alcove</h3>
+            <p>
+                A great place for dinner on
+                Koh Phangan and one we were
+                very happy to discover.
+            </p>
+        </article>
+
+        <article class="th-recommendation">
+            <span class="th-rec-number">08</span>
+            <h3>The Heritage Hideaway</h3>
+            <p>
+                Our Koh Tao base for the final,
+                slower chapter of the trip.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- OUR EDIT -->
+
+<section class="th-journal">
+
+    <div>
+        <p class="section-label">OUR EDIT</p>
+        <h2>Don't just stay on one island.</h2>
+    </div>
+
+    <div class="th-journal-copy">
+        <p>
+            If we were planning this trip again,
+            we wouldn't change the idea of visiting
+            all three islands.
+        </p>
+        <p>
+            Samui gave us the peaceful beachfront
+            base and the freedom to explore by car.
+            Koh Phangan brought the adventure:
+            boats, hidden beaches, Ma Island and
+            that extraordinary sunset at Amsterdam Bar.
+        </p>
+        <p>
+            Then Koh Tao gave us the chance to
+            slow everything down, wander the
+            streets and enjoy some time on the beach.
+        </p>
+        <p>
+            Three islands, each with its own
+            personality. Together, they made
+            a wonderful trip.
         </p>
     </div>
 
 </section>
 
+<!-- MAP -->
+
+<section class="th-map">
+    <div class="th-map-inner">
+        <p class="section-label">OUR MAP</p>
+        <h2>The Gulf Islands.</h2>
+        <p>
+            Koh Samui, Koh Phangan and Koh Tao.
+            Three islands in the Gulf of Thailand,
+            each offering something different —
+            from quiet beaches and boat adventures
+            to great sunsets and a slower way of life.
+        </p>
+    </div>
+</section>
+
+<!-- END -->
+
+<section class="th-end">
+    <a href="/" class="text-link">← Back to Home</a>
+    <a href="editions.html" class="text-link">View All Editions →</a>
+</section>
+
+</div>
+</main>
 
 <!-- =====================================================
-     INTRODUCTION
+     MOBILE EDITION
 ====================================================== -->
 
+<main class="thailand-mobile">
+
+<!-- HERO -->
+
+<section class="edition-hero" style="background-image:url('samuihero.jpeg');">
+    <div class="edition-hero-overlay">
+        <p class="eyebrow">THAILAND</p>
+        <h1>Island Life</h1>
+        <p class="edition-hero-subtitle">
+            Three islands, hidden beaches and a slower rhythm.
+        </p>
+    </div>
+</section>
+
+<!-- INTRO -->
+
 <section class="edition-intro section">
-
     <div class="container">
-
         <div class="edition-intro-inner">
-
             <p class="section-label">THE EXPERIENCE</p>
-
-            <h2>
-                Three islands,<br>
-                one unforgettable escape.
-            </h2>
-
+            <h2>Three islands, one unforgettable escape.</h2>
             <div class="edition-intro-text">
-
                 <p>
                     There is something rather special about travelling
                     between the islands in the Gulf of Thailand. We
@@ -102,7 +1015,6 @@
                     Samui, Koh Phangan and Koh Tao — and each offered
                     something quite different.
                 </p>
-
                 <p>
                     We began in the north of Koh Samui, where a quiet
                     beachfront hotel gave us a lovely base for exploring
@@ -111,1082 +1023,480 @@
                     finishing in Koh Tao, where the pace slowed down
                     once again.
                 </p>
-
                 <p>
                     Looking back, it was the contrast between the
                     three islands that made the trip work so well.
                     We wouldn't have wanted to choose just one.
                 </p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
+<!-- HOTEL STAYS -->
 
-<!-- =====================================================
-     HOTEL STAYS
-====================================================== -->
-
-<section class="edition-stay section">
-
+<section class="th-mobile-hotel section">
     <div class="container">
 
-        <div class="section-heading">
-            <p>WHERE WE STAYED</p>
-            <h2>Three islands, three different bases.</h2>
+        <p class="section-label">WHERE WE STAYED</p>
+        <h2>Three islands, three different bases.</h2>
+
+        <p class="section-label">KOH SAMUI — THE STAY</p>
+        <h3>Sarei Samui.</h3>
+        <img src="samui2.jpeg" alt="Sarei Samui" loading="lazy">
+
+        <div class="th-mobile-hotel-copy">
+            <p>
+                We stayed in the north of Samui at Sarei Samui,
+                and it turned out to be a lovely choice. The
+                setting was peaceful, with the hotel sitting
+                directly on a beautiful, quiet beach.
+            </p>
+            <p>
+                The pool was great, but one of our favourite
+                parts of the stay was breakfast at the
+                beachfront restaurant. It was a lovely way
+                to start the day before heading out to explore
+                the island.
+            </p>
+            <p>
+                The north worked particularly well as a base.
+                It gave us the quieter side of Samui while
+                keeping the rest of the island within easy
+                reach by car.
+            </p>
         </div>
 
-
-        <!-- SAREI SAMUI -->
-
-        <div class="edition-stay-card">
-
-            <div class="edition-stay-image">
-                <img
-                    src="samui2.jpeg"
-                    alt="Beachfront setting at Sarei Samui"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-stay-copy">
-
-                <p class="section-label">KOH SAMUI</p>
-
-                <h3>Sarei Samui</h3>
-
-                <p>
-                    We stayed in the north of Samui at Sarei Samui,
-                    and it turned out to be a lovely choice. The
-                    setting was peaceful, with the hotel sitting
-                    directly on a beautiful, quiet beach.
-                </p>
-
-                <p>
-                    The pool was great, but one of our favourite
-                    parts of the stay was breakfast at the
-                    beachfront restaurant. It was a lovely way
-                    to start the day before heading out to explore
-                    the island.
-                </p>
-
-                <p>
-                    The north worked particularly well as a base.
-                    It gave us the quieter side of Samui while
-                    keeping the rest of the island within easy
-                    reach by car.
-                </p>
-
-            </div>
-
+        <div class="th-mobile-stay">
+            <p class="section-label">KOH PHANGAN — THE STAY</p>
+            <h3>Varivana.</h3>
+            <p>
+                Our base on Koh Phangan was Varivana. This
+                was the island where we spent much of our
+                time exploring, getting out on the water
+                and discovering different stretches of
+                coastline.
+            </p>
+            <p>
+                Koh Phangan is a superb island to explore.
+                We found that arranging transport every day
+                could become eye-wateringly expensive, so
+                getting out by boat became a much more
+                enjoyable way to discover the island.
+            </p>
         </div>
 
-
-        <!-- VARIVANA -->
-
-        <div class="edition-stay-card">
-
-            <div class="edition-stay-copy">
-
-                <p class="section-label">KOH PHANGAN</p>
-
-                <h3>Varivana</h3>
-
-                <p>
-                    Our base on Koh Phangan was Varivana. This
-                    was the island where we spent much of our
-                    time exploring, getting out on the water
-                    and discovering different stretches of
-                    coastline.
-                </p>
-
-                <p>
-                    Koh Phangan is a superb island to explore.
-                    We found that arranging transport every day
-                    could become eye-wateringly expensive, so
-                    getting out by boat became a much more
-                    enjoyable way to discover the island.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- HERITAGE HIDEAWAY -->
-
-        <div class="edition-stay-card">
-
-            <div class="edition-stay-copy">
-
-                <p class="section-label">KOH TAO</p>
-
-                <h3>The Heritage Hideaway</h3>
-
-                <p>
-                    We finished the trip at The Heritage Hideaway
-                    on Koh Tao. After the exploring and boat
-                    adventures of the previous islands, this
-                    was a lovely place to settle into a slower
-                    rhythm.
-                </p>
-
-                <p>
-                    Koh Tao was all about taking things a little
-                    easier, wandering the streets, spending
-                    time on the beaches and enjoying some
-                    well-earned downtime.
-                </p>
-
-            </div>
-
+        <div class="th-mobile-stay">
+            <p class="section-label">KOH TAO — THE STAY</p>
+            <h3>The Heritage Hideaway.</h3>
+            <p>
+                We finished the trip at The Heritage Hideaway
+                on Koh Tao. After the exploring and boat
+                adventures of the previous islands, this
+                was a lovely place to settle into a slower
+                rhythm.
+            </p>
+            <p>
+                Koh Tao was all about taking things a little
+                easier, wandering the streets, spending
+                time on the beaches and enjoying some
+                well-earned downtime.
+            </p>
         </div>
 
     </div>
-
 </section>
 
+<!-- DESTINATION STORY -->
 
-<!-- =====================================================
-     KOH SAMUI
-====================================================== -->
+<section class="th-mobile-story section">
+<div class="container">
 
-<section class="edition-photo-story section">
-
-    <div class="container">
-
-        <div class="section-heading edition-photo-heading">
-            <p>01 — KOH SAMUI</p>
-            <h2>The quieter side of Samui.</h2>
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui7.jpeg"
-                    alt="Koh Samui island sign surrounded by tropical greenery"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">OUR FIRST STOP</p>
-
-                <h3>A lovely place to begin.</h3>
-
-                <p>
-                    The north of Koh Samui was exactly what we
-                    wanted at the start of the trip. Peaceful,
-                    relaxed and right on the beach, it gave us
-                    a chance to settle in before exploring
-                    further afield.
-                </p>
-
-                <p>
-                    We hired a car and loved having the freedom
-                    to explore at our own pace. It made discovering
-                    different parts of the island easy, with no
-                    need to plan every stop in advance.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block reverse">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui1.png"
-                    alt="Turquoise water and tropical beach on Koh Samui"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">ISLAND EXPLORING</p>
-
-                <h3>Beaches, roads and little discoveries.</h3>
-
-                <p>
-                    We enjoyed getting out and seeing more of
-                    Samui. Having the car meant we could explore
-                    different beaches and corners of the island
-                    without having to think too much about
-                    getting around.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui3.jpeg"
-                    alt="Quiet sandy beach beneath the trees"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">A QUIETER MOMENT</p>
-
-                <h3>Finding our own little corners.</h3>
-
-                <p>
-                    Some of the nicest moments were simply
-                    finding a quiet stretch of beach and
-                    enjoying the slower pace of island life.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block reverse">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui4.jpeg"
-                    alt="Open sandy beach and clear sea"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">AROUND THE ISLAND</p>
-
-                <h3>Exploring at our own pace.</h3>
-
-                <p>
-                    Samui is a good island to explore without
-                    rushing. We enjoyed the freedom of being
-                    able to head off for the day and see where
-                    the road took us.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui16.jpeg"
-                    alt="Shaded tropical walkway"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">EVENINGS</p>
-
-                <h3>Fisherman's Village.</h3>
-
-                <p>
-                    In the evenings we loved heading to
-                    Fisherman's Village. It was a great place
-                    to spend time eating, wandering around
-                    the shops and enjoying a different side
-                    of Samui after a day exploring.
-                </p>
-
-            </div>
-
-        </div>
-
+    <div class="section-heading">
+        <p>BEYOND THE HOTELS</p>
+        <h2>Three islands, three different rhythms.</h2>
     </div>
 
-</section>
-
-
-<!-- =====================================================
-     KOH PHANGAN
-====================================================== -->
-
-<section class="edition-photo-story section">
-
-    <div class="container">
-
-        <div class="section-heading edition-photo-heading">
-            <p>02 — KOH PHANGAN</p>
-            <h2>The island adventure.</h2>
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui21.jpeg"
-                    alt="Palm-lined tropical beach and turquoise sea"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">EXPLORING BY BOAT</p>
-
-                <h3>Get out on the water.</h3>
-
-                <p>
-                    Koh Phangan was probably the island we
-                    enjoyed exploring most. The coastline
-                    is beautiful, and getting around by boat
-                    allowed us to discover beaches that
-                    would otherwise have been much harder
-                    to reach.
-                </p>
-
-                <p>
-                    Taxis were eye-wateringly expensive
-                    every day, so exploring by boat made
-                    a lot of sense. More importantly, it
-                    was great fun.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block reverse">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui12.jpeg"
-                    alt="Traditional longtail boat on a tropical beach"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">THE COASTLINE</p>
-
-                <h3>One beach after another.</h3>
-
-                <p>
-                    We loved simply bounding around the coast,
-                    stopping at different beaches and seeing
-                    what each one had to offer. It was one
-                    of those days where the journey was just
-                    as enjoyable as the destinations.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui6.jpeg"
-                    alt="Beautiful secluded beach on Koh Phangan"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">BOTTLE BEACH</p>
-
-                <h3>Worth making the effort.</h3>
-
-                <p>
-                    Bottle Beach was one of the highlights.
-                    It is exactly the sort of place that
-                    makes exploring the island worthwhile.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block reverse">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui5.jpeg"
-                    alt="Coastal view across the islands"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">SECRET BEACH</p>
-
-                <h3>Finding somewhere quieter.</h3>
-
-                <p>
-                    Secret Beach was another favourite.
-                    Discovering these different stretches
-                    of coastline was a big part of what
-                    made Koh Phangan so enjoyable.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui8.jpeg"
-                    alt="Clear turquoise water and sandy beach"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">MA ISLAND</p>
-
-                <h3>A day out on the water.</h3>
-
-                <p>
-                    We also took a boat over to Ma Island.
-                    It was a fun day exploring another
-                    beautiful part of the coastline and
-                    enjoying everything that makes this
-                    island group so appealing.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block reverse">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui13.jpeg"
-                    alt="Sunset gathering overlooking the sea"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">AMSTERDAM BAR</p>
-
-                <h3>Possibly the best sunset bar in the world.</h3>
-
-                <p>
-                    We found Amsterdam Bar and all agreed
-                    that it was possibly the best sunset
-                    bar in the world.
-                </p>
-
-                <p>
-                    The atmosphere, the music and the view
-                    as the sun went down made it one of
-                    those places that stays with you long
-                    after the trip has finished.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui17.jpeg"
-                    alt="Sun setting over the sea framed by palm trees"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">THE SUNSET</p>
-
-                <h3>One of those evenings.</h3>
-
-                <p>
-                    There is something about watching the
-                    sun disappear over the water in the
-                    islands. Amsterdam Bar gave us the
-                    perfect setting to enjoy it.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block reverse">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui9.jpeg"
-                    alt="Golden sunset across a tropical beach"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">DINNER</p>
-
-                <h3>A table at Alcove.</h3>
-
-                <p>
-                    For dinner, Alcove was another great
-                    find. It was a lovely spot to spend
-                    an evening after a day exploring
-                    the island.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui11.jpeg"
-                    alt="Warm evening sunset over the sea"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">ISLAND EVENINGS</p>
-
-                <h3>The simple pleasures.</h3>
-
-                <p>
-                    Boat trips, quiet beaches, good food
-                    and sunsets. Koh Phangan gave us
-                    some of the most memorable moments
-                    of the trip.
-                </p>
-
-            </div>
-
-        </div>
-
+    <!-- SAMUI -->
+
+    <div class="th-mobile-story-copy">
+        <p class="section-label">01 — KOH SAMUI</p>
+        <h3>The quieter side of Samui.</h3>
+        <p>
+            The north of Koh Samui was exactly what we
+            wanted at the start of the trip. Peaceful,
+            relaxed and right on the beach, it gave us
+            a chance to settle in before exploring
+            further afield.
+        </p>
     </div>
 
-</section>
+    <img src="samui1.png" alt="Koh Samui island scenery" loading="lazy">
+    <img src="samui3.jpeg" alt="Quiet beach on Koh Samui" loading="lazy">
 
-
-<!-- =====================================================
-     KOH TAO
-====================================================== -->
-
-<section class="edition-photo-story section">
-
-    <div class="container">
-
-        <div class="section-heading edition-photo-heading">
-            <p>03 — KOH TAO</p>
-            <h2>A slower finish.</h2>
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui22.jpeg"
-                    alt="Elevated view over a turquoise bay on Koh Tao"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">KOH TAO</p>
-
-                <h3>Time to slow down.</h3>
-
-                <p>
-                    By the time we reached Koh Tao, we were
-                    ready for a slightly slower pace. We
-                    enjoyed walking around the cobbled
-                    streets, discovering the island and
-                    spending time relaxing on the beaches.
-                </p>
-
-                <p>
-                    It felt like a different world again,
-                    with a much more laid-back atmosphere
-                    and plenty of time to simply enjoy
-                    being there.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block reverse">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui20.jpeg"
-                    alt="Quiet sandy beach on a Thai island"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">BEACH DAYS</p>
-
-                <h3>Nothing too complicated.</h3>
-
-                <p>
-                    We spent time relaxing on the beaches
-                    and enjoying the slower life. After
-                    all the exploring on Samui and
-                    Phangan, it was a lovely way to
-                    finish the trip.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="edition-story-block">
-
-            <div class="edition-story-image">
-                <img
-                    src="samui10.jpeg"
-                    alt="Sunset over the water"
-                    loading="lazy"
-                >
-            </div>
-
-            <div class="edition-story-copy">
-
-                <p class="section-label">THE FINAL CHAPTER</p>
-
-                <h3>A fitting end to the islands.</h3>
-
-                <p>
-                    Koh Tao brought the pace right down.
-                    We enjoyed the beaches, the streets
-                    and the chance to relax before
-                    heading home.
-                </p>
-
-            </div>
-
-        </div>
-
+    <div class="th-mobile-story-copy">
+        <p class="section-label">EXPLORING BY CAR</p>
+        <h3>Freedom to find your own way.</h3>
+        <p>
+            We hired a car and loved having the freedom
+            to explore at our own pace. It made discovering
+            different parts of the island easy, with no
+            need to plan every stop in advance.
+        </p>
     </div>
 
-</section>
+    <img src="samui4.jpeg" alt="Koh Samui coastline" loading="lazy">
+    <img src="samui7.jpeg" alt="Koh Samui island sign surrounded by tropical greenery" loading="lazy">
 
-
-<!-- =====================================================
-     LOCAL KNOWLEDGE
-====================================================== -->
-
-<section class="edition-feature section">
-
-    <div class="container">
-
-        <div class="section-heading">
-            <p>THE THINGS WE LEARNED</p>
-            <h2>A few thoughts before you go.</h2>
-        </div>
-
-
-        <div class="edition-feature-grid">
-
-            <div class="edition-feature-copy">
-
-                <p class="section-label">KOH SAMUI</p>
-
-                <h3>Stay in the north if you want a quieter base.</h3>
-
-                <p>
-                    We loved the peaceful feel of the north.
-                    Having a car made exploring the island
-                    straightforward, and Fisherman's Village
-                    was a great place to spend the evenings.
-                </p>
-
-            </div>
-
-
-            <div class="edition-feature-copy">
-
-                <p class="section-label">KOH PHANGAN</p>
-
-                <h3>Explore the coastline by boat.</h3>
-
-                <p>
-                    The beaches were a huge highlight.
-                    We found exploring by boat a much
-                    more enjoyable way to get around
-                    than relying on expensive taxis.
-                </p>
-
-            </div>
-
-
-            <div class="edition-feature-copy">
-
-                <p class="section-label">KOH TAO</p>
-
-                <h3>Leave time to do very little.</h3>
-
-                <p>
-                    Koh Tao was a lovely place to slow
-                    down. Enjoy the beaches, wander
-                    around the streets and take the
-                    opportunity to relax.
-                </p>
-
-            </div>
-
-        </div>
-
+    <div class="th-mobile-story-copy">
+        <p class="section-label">FISHERMAN'S VILLAGE</p>
+        <h3>Evenings by the water.</h3>
+        <p>
+            In the evenings we loved heading to
+            Fisherman's Village. It was a great place
+            to spend time eating, wandering around
+            the shops and enjoying a different side
+            of Samui after a day exploring.
+        </p>
     </div>
 
-</section>
+    <img src="samui16.jpeg" alt="Shaded tropical walkway" loading="lazy">
+    <img src="samui18.jpeg" alt="Swimming pool surrounded by tropical greenery" loading="lazy">
+    <img src="samui19.jpeg" alt="Colourful island signpost beside the sea" loading="lazy">
 
+    <!-- PHANGAN -->
 
-<!-- =====================================================
-     OUR RECOMMENDATIONS
-====================================================== -->
-
-<section class="edition-not-miss section">
-
-    <div class="container">
-
-        <div class="section-heading">
-            <p>OUR RECOMMENDATIONS</p>
-            <h2>The places and experiences we loved.</h2>
-        </div>
-
-
-        <div class="edition-recommendations-grid">
-
-            <article class="edition-recommendation">
-                <p class="story-number">01</p>
-                <h3>Fisherman's Village</h3>
-                <p>
-                    A lovely place to spend the evening on
-                    Samui, with restaurants, shopping and
-                    plenty to wander around and discover.
-                </p>
-            </article>
-
-
-            <article class="edition-recommendation">
-                <p class="story-number">02</p>
-                <h3>Bottle Beach</h3>
-                <p>
-                    One of our favourite beaches on
-                    Koh Phangan. Worth making the
-                    effort to explore.
-                </p>
-            </article>
-
-
-            <article class="edition-recommendation">
-                <p class="story-number">03</p>
-                <h3>Secret Beach</h3>
-                <p>
-                    Another highlight of exploring
-                    the Koh Phangan coastline.
-                </p>
-            </article>
-
-
-            <article class="edition-recommendation">
-                <p class="story-number">04</p>
-                <h3>Ma Island</h3>
-                <p>
-                    A fun boat trip and a great way
-                    to spend a day exploring the
-                    surrounding coastline.
-                </p>
-            </article>
-
-
-            <article class="edition-recommendation">
-                <p class="story-number">05</p>
-                <h3>Amsterdam Bar</h3>
-                <p>
-                    A truly memorable sunset spot.
-                    Great music, a wonderful atmosphere
-                    and a view that made it one of the
-                    highlights of the whole trip.
-                </p>
-            </article>
-
-
-            <article class="edition-recommendation">
-                <p class="story-number">06</p>
-                <h3>Alcove</h3>
-                <p>
-                    A great place for dinner on
-                    Koh Phangan and one we were
-                    very happy to discover.
-                </p>
-            </article>
-
-
-            <article class="edition-recommendation">
-                <p class="story-number">07</p>
-                <h3>Fisherman's Village evenings</h3>
-                <p>
-                    An easy and enjoyable way to
-                    round off a day exploring Samui.
-                </p>
-            </article>
-
-
-            <article class="edition-recommendation">
-                <p class="story-number">08</p>
-                <h3>Koh Tao</h3>
-                <p>
-                    Come here to slow down, enjoy
-                    the beaches and take in the
-                    island's laid-back atmosphere.
-                </p>
-            </article>
-
-        </div>
-
+    <div class="th-mobile-story-copy">
+        <p class="section-label">02 — KOH PHANGAN</p>
+        <h3>The island adventure.</h3>
+        <p>
+            Koh Phangan was probably the island we
+            enjoyed exploring most. Getting around
+            by boat allowed us to discover beaches
+            that would otherwise have been much
+            harder to reach.
+        </p>
+        <p>
+            Taxis were eye-wateringly expensive
+            every day, so exploring by boat made
+            a lot of sense. More importantly, it
+            was great fun.
+        </p>
     </div>
 
-</section>
+    <img src="samui21.jpeg" alt="Tropical sea and island coastline" loading="lazy">
+    <img src="samui12.jpeg" alt="Traditional longtail boat on a tropical beach" loading="lazy">
 
-
-<!-- =====================================================
-     MORE FROM OUR CAMERA
-====================================================== -->
-
-<section class="edition-gallery section">
-
-    <div class="container">
-
-        <div class="section-heading">
-            <p>MORE FROM OUR CAMERA</p>
-            <h2>Moments from the islands.</h2>
-        </div>
-
-
-        <div class="edition-gallery-grid">
-
-            <img
-                src="samui14.jpeg"
-                alt="Fresh fruit bowl"
-                loading="lazy"
-            >
-
-            <img
-                src="samui15.jpeg"
-                alt="Alcove restaurant artwork"
-                loading="lazy"
-            >
-
-            <img
-                src="samui18.jpeg"
-                alt="Swimming pool surrounded by tropical greenery"
-                loading="lazy"
-            >
-
-            <img
-                src="samui19.jpeg"
-                alt="Colourful island signpost beside the sea"
-                loading="lazy"
-            >
-
-        </div>
-
+    <div class="th-mobile-story-copy">
+        <p class="section-label">BOTTLE BEACH &amp; SECRET BEACH</p>
+        <h3>One beach after another.</h3>
+        <p>
+            We loved Bottle Beach and Secret Beach.
+            Simply bounding around the coast, stopping
+            at different beaches and seeing what each
+            one had to offer, was a joy.
+        </p>
     </div>
 
-</section>
+    <img src="samui6.jpeg" alt="Secluded beach on Koh Phangan" loading="lazy">
+    <img src="samui5.jpeg" alt="Coastal view across the islands" loading="lazy">
+    <img src="samui8.jpeg" alt="Clear turquoise water and sandy beach" loading="lazy">
 
-
-<!-- =====================================================
-     OUR EDIT
-====================================================== -->
-
-<section class="edition-closing section">
-
-    <div class="container">
-
-        <div class="edition-closing-inner">
-
-            <div class="edition-closing-copy">
-
-                <p class="section-label">OUR EDIT</p>
-
-                <h2>Don't just stay on one island.</h2>
-
-                <p>
-                    If we were planning this trip again,
-                    we wouldn't change the idea of visiting
-                    all three islands.
-                </p>
-
-                <p>
-                    Samui gave us the peaceful beachfront
-                    base and the freedom to explore by car.
-                    Koh Phangan brought the adventure:
-                    boats, hidden beaches, Ma Island and
-                    that extraordinary sunset at
-                    Amsterdam Bar.
-                </p>
-
-                <p>
-                    Then Koh Tao gave us the chance to
-                    slow everything down, wander the
-                    streets and enjoy some time on the
-                    beach.
-                </p>
-
-                <p>
-                    Three islands, each with its own
-                    personality. Together, they made
-                    a wonderful trip.
-                </p>
-
-            </div>
-
-        </div>
-
+    <div class="th-mobile-story-copy">
+        <p class="section-label">MA ISLAND &amp; AMSTERDAM BAR</p>
+        <h3>A day on the water, then a remarkable sunset.</h3>
+        <p>
+            We also took a boat over to Ma Island.
+            It was a fun day exploring another beautiful
+            part of the coastline.
+        </p>
+        <p>
+            We found Amsterdam Bar and all agreed
+            that it was possibly the best sunset bar
+            in the world. The atmosphere, the music
+            and the view made it one of those places
+            that stays with you.
+        </p>
     </div>
 
+    <img src="samui13.jpeg" alt="Sunset gathering overlooking the sea" loading="lazy">
+    <img src="samui17.jpeg" alt="Sun setting over the sea framed by palm trees" loading="lazy">
+    <img src="samui9.jpeg" alt="Golden sunset across a tropical beach" loading="lazy">
+
+    <!-- KOH TAO -->
+
+    <div class="th-mobile-story-copy">
+        <p class="section-label">03 — KOH TAO</p>
+        <h3>A slower finish.</h3>
+        <p>
+            By the time we reached Koh Tao, we were
+            ready for a slightly slower pace. We
+            enjoyed walking around the cobbled
+            streets, discovering the island and
+            spending time relaxing on the beaches.
+        </p>
+        <p>
+            It felt like a different world again,
+            with a much more laid-back atmosphere
+            and plenty of time to simply enjoy being there.
+        </p>
+    </div>
+
+    <img src="samui22.jpeg" alt="Elevated view over a turquoise bay on Koh Tao" loading="lazy">
+    <img src="samui20.jpeg" alt="Quiet sandy beach on a Thai island" loading="lazy">
+
+    <!-- EXTRA PHOTOGRAPHY -->
+
+    <div class="th-mobile-story-copy">
+        <p class="section-label">THE LITTLE DETAILS</p>
+        <h3>Good food and island evenings.</h3>
+        <p>
+            From breakfast by the beach at Sarei to
+            dinner at Alcove and evenings around
+            Fisherman's Village, good food and
+            relaxed places were part of the trip.
+        </p>
+    </div>
+
+    <img src="samui14.jpeg" alt="Fresh fruit bowl" loading="lazy">
+    <img src="samui15.jpeg" alt="Alcove restaurant artwork" loading="lazy">
+    <img src="samui10.jpeg" alt="Sunset over the water" loading="lazy">
+    <img src="samui11.jpeg" alt="Warm evening sunset over the sea" loading="lazy">
+
+</div>
 </section>
 
+<!-- PLANNING -->
 
-<!-- =====================================================
-     MAP
-====================================================== -->
+<section class="th-mobile-info section">
+<div class="container">
+
+    <p class="section-label">PLANNING YOUR VISIT</p>
+    <h2>Making the most of the Gulf Islands.</h2>
+    <p>
+        A few things we learned along the way that
+        helped make our time across the three islands
+        so enjoyable.
+    </p>
+
+    <div class="th-mobile-info-item">
+        <p class="section-label">KOH SAMUI</p>
+        <h3>Stay in the north</h3>
+        <p>
+            We loved the peaceful feel of the north.
+            Staying by a quiet beach gave us a lovely
+            base, while hiring a car made exploring
+            the island straightforward.
+        </p>
+    </div>
+
+    <div class="th-mobile-info-item">
+        <p class="section-label">KOH PHANGAN</p>
+        <h3>Explore by boat</h3>
+        <p>
+            Taxis were eye-wateringly expensive
+            every day. Exploring the coastline by
+            boat was much more enjoyable and gave
+            us the freedom to discover different beaches.
+        </p>
+    </div>
+
+    <div class="th-mobile-info-item">
+        <p class="section-label">KOH TAO</p>
+        <h3>Leave time to slow down</h3>
+        <p>
+            Koh Tao was a lovely place to finish.
+            Enjoy the beaches, wander around the
+            streets and take the opportunity to relax.
+        </p>
+    </div>
+
+</div>
+</section>
+
+<!-- RECOMMENDATIONS -->
+
+<section class="th-mobile-recommendations section">
+<div class="container">
+
+    <div class="section-heading">
+        <p>OUR RECOMMENDATIONS</p>
+        <h2>The places and experiences we loved.</h2>
+    </div>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">01</p>
+        <h3>Sarei Samui</h3>
+        <p>
+            A peaceful northern base, directly on
+            a beautiful quiet beach. We loved the
+            pool and especially breakfast at the
+            beachfront restaurant.
+        </p>
+    </article>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">02</p>
+        <h3>Fisherman's Village</h3>
+        <p>
+            A lovely place to spend the evening
+            on Samui, with restaurants, shopping
+            and plenty to wander around and discover.
+        </p>
+    </article>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">03</p>
+        <h3>Varivana</h3>
+        <p>
+            Our base on Koh Phangan while exploring
+            the island and its beautiful coastline.
+        </p>
+    </article>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">04</p>
+        <h3>Bottle Beach &amp; Secret Beach</h3>
+        <p>
+            Two of our favourite discoveries on
+            Koh Phangan. Exploring the coast and
+            finding different beaches was a highlight.
+        </p>
+    </article>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">05</p>
+        <h3>Ma Island</h3>
+        <p>
+            A fun boat trip and a great way
+            to spend a day exploring the
+            surrounding coastline.
+        </p>
+    </article>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">06</p>
+        <h3>Amsterdam Bar</h3>
+        <p>
+            Possibly the best sunset bar in the
+            world. Great music, a wonderful
+            atmosphere and a view that made it
+            one of the highlights of the trip.
+        </p>
+    </article>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">07</p>
+        <h3>Alcove</h3>
+        <p>
+            A great place for dinner on
+            Koh Phangan and one we were
+            very happy to discover.
+        </p>
+    </article>
+
+    <article class="th-mobile-recommendation">
+        <p class="story-number">08</p>
+        <h3>The Heritage Hideaway</h3>
+        <p>
+            Our Koh Tao base for the final,
+            slower chapter of the trip.
+        </p>
+    </article>
+
+</div>
+</section>
+
+<!-- OUR EDIT -->
+
+<section class="th-mobile-journal section">
+<div class="container">
+
+    <p class="section-label">OUR EDIT</p>
+    <h2>Don't just stay on one island.</h2>
+
+    <p>
+        If we were planning this trip again,
+        we wouldn't change the idea of visiting
+        all three islands.
+    </p>
+    <p>
+        Samui gave us the peaceful beachfront
+        base and the freedom to explore by car.
+        Koh Phangan brought the adventure:
+        boats, hidden beaches, Ma Island and
+        that extraordinary sunset at Amsterdam Bar.
+    </p>
+    <p>
+        Then Koh Tao gave us the chance to
+        slow everything down, wander the
+        streets and enjoy some time on the beach.
+    </p>
+    <p>
+        Three islands, each with its own
+        personality. Together, they made
+        a wonderful trip.
+    </p>
+
+</div>
+</section>
+
+<!-- MAP -->
 
 <section class="edition-map section">
-
-    <div class="container">
-
-        <div class="edition-map-inner">
-
-            <p class="section-label">OUR MAP</p>
-
-            <h2>The Gulf Islands.</h2>
-
-            <p>
-                Koh Samui, Koh Phangan and Koh Tao.
-                Three islands in the Gulf of Thailand,
-                each offering something different —
-                from quiet beaches and boat adventures
-                to great sunsets and a slower way of life.
-            </p>
-
-        </div>
-
+<div class="container">
+    <div class="edition-map-inner">
+        <p class="section-label">OUR MAP</p>
+        <h2>The Gulf Islands.</h2>
+        <p>
+            Koh Samui, Koh Phangan and Koh Tao.
+            Three islands in the Gulf of Thailand,
+            each offering something different —
+            from quiet beaches and boat adventures
+            to great sunsets and a slower way of life.
+        </p>
     </div>
-
+</div>
 </section>
 
-
-<!-- =====================================================
-     END NAVIGATION
-====================================================== -->
+<!-- END -->
 
 <section class="edition-end">
-
-    <a href="/" class="text-link">
-        ← Back to Home
-    </a>
-
-    <a href="editions.html" class="text-link">
-        View All Editions →
-    </a>
-
+    <a href="/" class="text-link">← Back to Home</a>
+    <a href="editions.html" class="text-link">View All Editions →</a>
 </section>
 
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
+<!-- FOOTER -->
 
 <footer class="site-footer">
+<div class="site-footer-inner">
 
-    <div class="site-footer-inner">
-
-        <div>
-
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-
-            <p class="footer-description">
-                Travel, places &amp; observations from life abroad.
-            </p>
-
-        </div>
-
-
-        <nav class="footer-nav">
-            <a href="editions.html">Editions</a>
-            <a href="index-new.html#journal">Journal</a>
-            <a href="index-new.html#map">Map</a>
-            <a href="index-new.html#about">About</a>
-        </nav>
-
-
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-
-
-        <p class="footer-copyright">
-            © The Expat Edits
+    <div>
+        <div class="footer-logo">THE EXPAT EDITS</div>
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
         </p>
-
     </div>
 
+    <nav class="footer-nav">
+        <a href="editions.html">Editions</a>
+        <a href="index-new.html#journal">Journal</a>
+        <a href="index-new.html#map">Map</a>
+        <a href="index-new.html#about">About</a>
+    </nav>
+
+    <a href="https://www.instagram.com/theexpatedits/"
+       class="footer-social"
+       target="_blank"
+       rel="noopener">
+        Instagram
+    </a>
+
+    <p class="footer-copyright">© The Expat Edits</p>
+
+</div>
 </footer>
 
 </body>

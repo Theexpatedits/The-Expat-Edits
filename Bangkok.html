@@ -4,526 +4,460 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bangkok | The Expat Edits</title>
 
-<meta
-    name="description"
-    content="Bangkok — a family city break of temples, river journeys, rooftop bars, great food, Asiatique and the unexpected moments that make the city so much fun to explore."
->
+<meta name="description" content="Our Bangkok family city break: staying at the Pullman, exploring temples by river, evenings at Asiatique and an unforgettable elephant sanctuary visit in Hua Hin.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-    crossorigin
->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
->
-
-<link
-    rel="stylesheet"
-    href="style-new.css"
->
-
-<link
-    rel="stylesheet"
-    href="style-editions-new.css"
->
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-editions-new.css">
 
 <style>
 
 /* =========================================================
    BANGKOK
-   SINGAPORE1 EDITORIAL MASTER
+   HOTEL-LED EDITORIAL EDITION
+   BASED ON APPROVED KOMODO MASTER
 ========================================================= */
 
-.bangkok-desktop {
+.bangkok-desktop { display:block; }
+.bangkok-mobile { display:none; }
+
+.ko-opening,
+.ko-editorial,
+.ko-info,
+.ko-recommendations,
+.ko-journal,
+.ko-map,
+.ko-end { box-sizing:border-box; }
+
+.ko-editorial img {
     display:block;
+    width:100%;
+    height:auto;
 }
 
-.bangkok-mobile {
-    display:none;
+.ko-editorial-section { padding:70px 0; }
+.ko-text p { margin-top:0; }
+.ko-text h2,
+.ko-text h3 { margin-top:0; }
+
+.ko-rule {
+    width:42px;
+    height:1px;
+    margin:20px 0;
+    background:currentColor;
+    opacity:.65;
 }
 
+.ko-section-intro {
+    max-width:720px;
+    margin:0 0 55px;
+}
 
-/* =========================================================
-   DESKTOP
-========================================================= */
+.ko-section-intro p:last-child { margin-bottom:0; }
 
 @media (min-width:769px) {
 
-    :root {
-        --sg-width:min(1400px, calc(100% - 80px));
-        --sg-wide:min(1500px, calc(100% - 80px));
-        --sg-gap:22px;
-        --sg-line:rgba(255,255,255,.12);
-        --sg-line-strong:rgba(255,255,255,.16);
-    }
-
-
-    /* =====================================================
-       OPENING SPREAD
-    ===================================================== */
-
-    .sg-opening {
-        width:var(--sg-wide);
-        margin:0 auto;
-        padding:0 0 90px;
-
-        display:grid;
-        grid-template-columns:1.25fr .75fr;
-        gap:75px;
-        align-items:center;
-    }
-
-
-    .sg-opening-hero {
-        position:relative;
-        overflow:hidden;
-        width:100%;
-        background:#090909;
-    }
-
-
-    .sg-opening-hero img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-
-
-    .sg-opening-hero::after {
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:0;
-        right:0;
-        bottom:0;
-        height:38%;
-        pointer-events:none;
-
-        background:linear-gradient(
-            to bottom,
-            rgba(9,9,9,0) 0%,
-            rgba(9,9,9,.22) 28%,
-            rgba(9,9,9,.55) 55%,
-            rgba(9,9,9,.82) 78%,
-            #242320 100%
-        );
-    }
-
-
-    .sg-opening-hero .edition-hero-overlay {
-        position:absolute;
-        z-index:2;
-        left:55px;
-        right:55px;
-        bottom:50px;
-    }
-
-
-    .sg-opening-intro {
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        padding:50px 35px 50px 5px;
-    }
-
-
-    .sg-opening-intro h2 {
-        margin:0 0 28px;
-    }
-
-
-    .sg-opening-intro-copy {
-        max-width:560px;
-    }
-
-
-    .sg-opening-intro-copy p {
-        margin:0 0 22px;
-    }
-
-
-    .sg-opening-intro-copy p:last-child {
-        margin-bottom:0;
-    }
-
-
-    /* =====================================================
-       EDITORIAL CANVAS
-    ===================================================== */
-
-    .sg-editorial {
-        width:var(--sg-width);
-        margin:0 auto;
-    }
-
-
-    .sg-editorial-section {
-        padding:70px 0;
-    }
-
-
-    .sg-grid,
-    .sg-final-grid {
-        display:grid;
-        grid-template-columns:repeat(12,minmax(0,1fr));
-        column-gap:var(--sg-gap);
-        row-gap:42px;
-        align-items:start;
-    }
-
-
-    .sg-grid img,
-    .sg-final-grid img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-
-
-    .sg-text {
-        align-self:center;
-    }
-
-
-    .sg-text p {
-        margin-top:0;
-    }
-
-
-    .sg-text h2,
-    .sg-text h3 {
-        margin-top:0;
-    }
-
-
-    .sg-text .section-label {
-        margin-bottom:12px;
-    }
-
-
-    .sg-rule {
-        width:42px;
-        height:1px;
-        margin:20px 0;
-        background:currentColor;
-        opacity:.65;
-    }
-
-
-    /* =====================================================
-       EDITORIAL ROW 1
-    ===================================================== */
-
-    .sg-r1-text {
-        grid-column:1 / span 3;
-    }
-
-
-    .sg-r1-img1 {
-        grid-column:4 / span 5;
-        width:88%;
-    }
-
-
-    .sg-r1-img2 {
-        grid-column:9 / span 4;
-        width:90%;
-        margin-left:auto;
-        padding-top:55px;
-    }
-
-
-    /* =====================================================
-       EDITORIAL ROW 2
-    ===================================================== */
-
-    .sg-r2-img1 {
-        grid-column:1 / span 3;
-        padding-top:25px;
-    }
-
-
-    .sg-r2-text {
-        grid-column:4 / span 3;
-        padding:0 8px;
-    }
-
-
-    .sg-r2-img2 {
-        grid-column:7 / span 3;
-    }
-
-
-    .sg-r2-text2 {
-        grid-column:10 / span 3;
-        padding-top:55px;
-    }
-
-
-    /* =====================================================
-       EDITORIAL ROW 3
-    ===================================================== */
-
-    .sg-r3-text {
-        grid-column:1 / span 3;
-        padding-top:20px;
-    }
-
-
-    .sg-r3-img1 {
-        grid-column:4 / span 4;
-    }
-
-
-    .sg-r3-img2 {
-        grid-column:8 / span 2;
-        padding-top:55px;
-    }
-
-
-    .sg-r3-img3 {
-        grid-column:10 / span 3;
-        padding-top:10px;
-    }
-
-
-    /* =====================================================
-       EDITORIAL ROW 4
-    ===================================================== */
-
-    .sg-r4-img1 {
-        grid-column:1 / span 4;
-    }
-
-
-    .sg-r4-text {
-        grid-column:5 / span 3;
-        padding:20px 5px 0;
-    }
-
-
-    .sg-r4-img2 {
-        grid-column:8 / span 5;
-        padding-top:40px;
-    }
-
-
-    /* =====================================================
-       LOCAL INFORMATION
-    ===================================================== */
-
-    .sg-info {
-        margin:20px 0 70px;
-        padding:60px 0;
-        border-top:1px solid var(--sg-line);
-        border-bottom:1px solid var(--sg-line);
-    }
-
-
-    .sg-info-grid {
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:70px;
-    }
-
-
-    .sg-info-item h3 {
-        margin:10px 0 12px;
-    }
-
-
-    .sg-info-item p {
-        margin-top:0;
-    }
-
-
-    /* =====================================================
-       RECOMMENDATIONS
-    ===================================================== */
-
-    .sg-recommendations {
-        padding:20px 0 100px;
-    }
-
-
-    .sg-recommendations-heading {
-        margin-bottom:50px;
-    }
-
-
-    .sg-recommendation-list {
-        max-width:950px;
-        border-top:1px solid var(--sg-line-strong);
-    }
-
-
-    .sg-recommendation {
-        display:grid;
-        grid-template-columns:70px 280px 1fr;
-        column-gap:35px;
-        align-items:start;
-
-        padding:30px 0;
-        border-bottom:1px solid var(--sg-line-strong);
-    }
-
-
-    .sg-rec-number {
-        padding-top:7px;
-        font-size:.72rem;
-        letter-spacing:.14em;
-        opacity:.6;
-    }
-
-
-    .sg-recommendation h3 {
-        margin:0;
-        font-size:1.35rem;
-    }
-
-
-    .sg-recommendation p {
-        margin:0;
-        max-width:520px;
-    }
-
-
-    /* =====================================================
-       JOURNAL
-    ===================================================== */
-
-    .sg-journal {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:90px;
-        align-items:center;
-
-        padding:70px 0;
-        border-top:1px solid var(--sg-line);
-    }
-
-
-    .sg-journal-copy p {
-        margin-top:0;
-    }
-
-
-    .sg-journal-copy p:last-child {
-        margin-bottom:0;
-    }
-
-
-    /* =====================================================
-       FINAL PHOTOGRAPHIC FIELD
-    ===================================================== */
-
-    .sg-final-heading {
-        grid-column:1 / span 3;
-        padding-top:30px;
-    }
-
-
-    .sg-final-img1 {
-        grid-column:4 / span 4;
-    }
-
-
-    .sg-final-img2 {
-        grid-column:8 / span 2;
-        padding-top:45px;
-    }
-
-
-    .sg-final-img3 {
-        grid-column:10 / span 3;
-    }
-
-
-    .sg-final-img4 {
-        grid-column:1 / span 3;
-        padding-top:25px;
-    }
-
-
-    .sg-final-img5 {
-        grid-column:4 / span 3;
-        padding-top:55px;
-    }
-
-
-    .sg-final-img6 {
-        grid-column:7 / span 3;
-    }
-
-
-    .sg-final-img7 {
-        grid-column:10 / span 3;
-        padding-top:30px;
-    }
-
-
-    /* Bangkok has one additional photograph */
-
-    .sg-final-img8 {
-        grid-column:1 / span 4;
-        padding-top:35px;
-    }
-
-
-    /* =====================================================
-       MAP
-    ===================================================== */
-
-    .sg-map {
-        padding:80px 0 70px;
-    }
-
-
-    .sg-map-inner {
-        max-width:650px;
-    }
-
-
-    /* =====================================================
-       END NAVIGATION
-    ===================================================== */
-
-    .sg-end {
-        display:flex;
-        justify-content:space-between;
-        padding:35px 0 70px;
-    }
+:root {
+    --ko-width:min(1400px,calc(100% - 80px));
+    --ko-wide:min(1500px,calc(100% - 80px));
+    --ko-gap:22px;
+    --ko-line:rgba(255,255,255,.12);
+    --ko-line-strong:rgba(255,255,255,.16);
+}
+
+/* OPENING */
+
+.ko-opening {
+    width:var(--ko-wide);
+    margin:0 auto;
+    padding:0 0 100px;
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:75px;
+    align-items:center;
+}
+
+.ko-opening-hero {
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    background:#090909;
+}
+
+.ko-opening-hero img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.ko-opening-hero::after {
+    content:"";
+    position:absolute;
+    z-index:1;
+    left:0;
+    right:0;
+    bottom:0;
+    height:38%;
+    pointer-events:none;
+    background:linear-gradient(
+        to bottom,
+        rgba(9,9,9,0) 0%,
+        rgba(9,9,9,.22) 28%,
+        rgba(9,9,9,.55) 55%,
+        rgba(9,9,9,.82) 78%,
+        #242320 100%
+    );
+}
+
+.ko-opening-hero .edition-hero-overlay {
+    position:absolute;
+    z-index:2;
+    left:55px;
+    right:55px;
+    bottom:50px;
+}
+
+.ko-opening-intro {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:50px 35px 50px 5px;
+}
+
+.ko-opening-intro h2 { margin:0 0 28px; }
+.ko-opening-intro-copy { max-width:560px; }
+.ko-opening-intro-copy p { margin:0 0 20px; }
+.ko-opening-intro-copy p:last-child { margin-bottom:0; }
+
+/* EDITORIAL CANVAS */
+
+.ko-editorial {
+    width:var(--ko-width);
+    margin:0 auto;
+}
+
+.ko-grid {
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--ko-gap);
+    row-gap:55px;
+    align-items:start;
+}
+
+.ko-grid img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.ko-text { align-self:center; }
+.ko-text .section-label { margin-bottom:12px; }
+
+/* HOTEL FEATURE */
+
+.ko-hotel {
+    padding:90px 0 100px;
+    border-top:1px solid var(--ko-line);
+}
+
+.ko-hotel-heading {
+    max-width:750px;
+    margin-bottom:60px;
+}
+
+.ko-hotel-heading h2 { margin-bottom:20px; }
+
+.ko-hotel-layout {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:75px;
+    align-items:center;
+}
+
+.ko-hotel-layout > img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.ko-hotel-copy { max-width:550px; }
+.ko-hotel-copy h3 { margin-top:0; }
+.ko-hotel-copy p { margin-top:0; }
+.ko-hotel-copy .ko-rule { margin:24px 0; }
+
+.ko-hotel-note {
+    margin-top:30px;
+    padding-top:22px;
+    border-top:1px solid var(--ko-line);
+}
+
+/* CITY SETTING */
+
+.ko-hotel-setting {
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    gap:22px;
+    align-items:start;
+    padding:30px 0 90px;
+}
+
+.ko-setting-text {
+    grid-column:1 / span 3;
+    padding-top:30px;
+}
+
+.ko-setting-img1 { grid-column:4 / span 4; }
+
+.ko-setting-img2 {
+    grid-column:8 / span 5;
+    padding-top:65px;
+}
+
+/* THE RIVER */
+
+.ko-samara {
+    padding:90px 0;
+    border-top:1px solid var(--ko-line);
+}
+
+.ko-samara-heading {
+    max-width:750px;
+    margin-bottom:55px;
+}
+
+.ko-samara-layout {
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:75px;
+    align-items:center;
+}
+
+.ko-samara-copy { max-width:520px; }
+.ko-samara-copy p { margin-top:0; }
+
+.ko-samara-images {
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:18px;
+    align-items:start;
+}
+
+.ko-samara-images img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.ko-samara-images img:last-child { margin-top:65px; }
+
+/* DESTINATION STORY */
+
+.ko-destination {
+    padding:90px 0;
+    border-top:1px solid var(--ko-line);
+}
+
+.ko-destination-grid {
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--ko-gap);
+    row-gap:55px;
+    align-items:start;
+}
+
+.ko-destination-grid img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* TEMPLES */
+
+.ko-d1-text { grid-column:1 / span 3; padding-top:25px; }
+.ko-d1-img1 { grid-column:4 / span 5; }
+.ko-d1-img2 { grid-column:9 / span 4; padding-top:60px; }
+
+.ko-d2-img1 { grid-column:1 / span 4; }
+.ko-d2-text { grid-column:5 / span 3; padding:20px 5px 0; }
+.ko-d2-img2 { grid-column:8 / span 5; padding-top:45px; }
+
+.ko-d3-text { grid-column:1 / span 3; padding-top:20px; }
+.ko-d3-img1 { grid-column:4 / span 4; }
+.ko-d3-img2 { grid-column:8 / span 2; padding-top:55px; }
+.ko-d3-img3 { grid-column:10 / span 3; padding-top:10px; }
+
+.ko-d4-img1 { grid-column:1 / span 3; padding-top:25px; }
+.ko-d4-text { grid-column:4 / span 3; padding:15px 8px 0; }
+.ko-d4-img2 { grid-column:7 / span 3; }
+.ko-d4-img3 { grid-column:10 / span 3; padding-top:50px; }
+
+/* HUA HIN */
+
+.ko-d5-text { grid-column:1 / span 3; padding-top:25px; }
+.ko-d5-img1 { grid-column:4 / span 4; }
+.ko-d5-img2 { grid-column:8 / span 2; padding-top:50px; }
+.ko-d5-img3 { grid-column:10 / span 3; padding-top:15px; }
+
+/* TRAVEL INFORMATION */
+
+.ko-info {
+    margin:30px 0 70px;
+    padding:65px 0;
+    border-top:1px solid var(--ko-line);
+    border-bottom:1px solid var(--ko-line);
+}
+
+.ko-info-heading {
+    max-width:650px;
+    margin-bottom:45px;
+}
+
+.ko-info-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:65px;
+}
+
+.ko-info-item h3 { margin:10px 0 12px; }
+.ko-info-item p { max-width:370px; }
+.ko-info-item .section-label { margin-bottom:10px; }
+
+/* RECOMMENDATIONS */
+
+.ko-recommendations { padding:30px 0 100px; }
+.ko-recommendations-heading { margin-bottom:50px; }
+
+.ko-recommendation-list {
+    max-width:1000px;
+    border-top:1px solid var(--ko-line-strong);
+}
+
+.ko-recommendation {
+    display:grid;
+    grid-template-columns:70px 280px 1fr;
+    column-gap:35px;
+    align-items:start;
+    padding:30px 0;
+    border-bottom:1px solid var(--ko-line-strong);
+}
+
+.ko-rec-number {
+    padding-top:7px;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    opacity:.6;
+}
+
+.ko-recommendation h3 {
+    margin:0;
+    font-size:1.35rem;
+}
+
+.ko-recommendation p {
+    margin:0;
+    max-width:550px;
+}
+
+/* OUR EDIT */
+
+.ko-journal {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+    padding:75px 0;
+    border-top:1px solid var(--ko-line);
+}
+
+.ko-journal-copy p { margin-top:0; }
+
+/* MAP */
+
+.ko-map { padding:80px 0 70px; }
+.ko-map-inner { max-width:650px; }
+
+/* END */
+
+.ko-end {
+    display:flex;
+    justify-content:space-between;
+    padding:35px 0 70px;
+}
 
 }
 
-
 /* =========================================================
    MOBILE
-   ORIGINAL BANGKOK STRUCTURE
 ========================================================= */
 
 @media (max-width:768px) {
 
-    .bangkok-desktop {
-        display:none;
-    }
+.bangkok-desktop { display:none; }
+.bangkok-mobile { display:block; }
 
-    .bangkok-mobile {
-        display:block;
-    }
+.ko-mobile-hotel { padding:55px 0; }
+
+.ko-mobile-hotel img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:22px;
+}
+
+.ko-mobile-hotel-copy { padding:25px 0 0; }
+
+.ko-mobile-setting { padding:30px 0 55px; }
+
+.ko-mobile-setting img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin:22px 0;
+}
+
+.ko-mobile-river { padding:55px 0; }
+
+.ko-mobile-river img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:22px;
+}
+
+.ko-mobile-story { padding:55px 0; }
+
+.ko-mobile-story img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:22px;
+}
+
+.ko-mobile-story-copy { padding:20px 0 30px; }
+
+.ko-mobile-info { padding:55px 0; }
+
+.ko-mobile-info-item { margin-bottom:35px; }
+.ko-mobile-info-item:last-child { margin-bottom:0; }
+
+.ko-mobile-recommendations { padding:55px 0; }
+
+.ko-mobile-recommendation {
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.ko-mobile-recommendation h3 { margin:8px 0 12px; }
+
+.ko-mobile-journal { padding:55px 0; }
 
 }
 
@@ -531,53 +465,32 @@
 
 </head>
 
-
 <body class="edition-page">
 
-
-<!-- =====================================================
-     HEADER
-====================================================== -->
+<!-- HEADER -->
 
 <header class="site-header">
 
-    <div class="site-header-inner">
+<div class="site-header-inner">
 
-        <a
-            href="index-new.html"
-            class="site-logo"
-        >
-            THE EXPAT EDITS
-        </a>
+    <a href="/" class="site-logo">THE EXPAT EDITS</a>
 
-        <nav class="site-nav">
+    <nav class="site-nav">
+        <a href="editions.html">Editions</a>
+        <a href="index-new.html#journal">Journal</a>
+        <a href="index-new.html#map">Map</a>
+        <a href="index-new.html#about">About</a>
+    </nav>
 
-            <a href="editions.html">Editions</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-            <a href="index-new.html#journal">Journal</a>
-
-            <a href="index-new.html#map">Map</a>
-
-            <a href="about.html">About</a>
-
-        </nav>
-
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
+</div>
 
 </header>
-
 
 <!-- =====================================================
      DESKTOP EDITION
@@ -585,75 +498,49 @@
 
 <main class="bangkok-desktop">
 
+<!-- OPENING -->
 
-<!-- =====================================================
-     OPENING SPREAD
-====================================================== -->
+<section class="ko-opening">
 
-<section class="sg-opening">
+    <div class="ko-opening-hero">
 
-
-    <!-- LEFT: HERO -->
-
-    <div class="sg-opening-hero">
-
-        <img
-            src="bk-hero.jpeg"
-            alt="Bangkok skyline"
-            loading="eager"
-        >
+        <img src="bk-hero.jpeg" alt="A long-tail boat travelling along the Chao Phraya River with Bangkok's skyline behind it" loading="eager">
 
         <div class="edition-hero-overlay">
-
-            <p class="eyebrow">
-                THAILAND
-            </p>
-
-            <h1>
-                Bangkok
-            </h1>
-
-            <p class="edition-hero-subtitle">
-                A city to explore.
-            </p>
-
+            <p class="eyebrow">OUR BANGKOK</p>
+            <h1>Bangkok</h1>
+            <p class="edition-hero-subtitle">A city to explore.</p>
         </div>
 
     </div>
 
+    <div class="ko-opening-intro">
 
-    <!-- RIGHT: EDITORIAL INTRO -->
+        <p class="section-label">OUR BANGKOK</p>
 
-    <div class="sg-opening-intro">
+        <h2>A city that keeps pulling you out into the street.</h2>
 
-        <p class="section-label">
-            OUR BANGKOK
-        </p>
-
-        <h2>
-            A city that keeps pulling you out into the street.
-        </h2>
-
-        <div class="sg-opening-intro-copy">
+        <div class="ko-opening-intro-copy">
 
             <p>
                 Bangkok is one of those cities where the best thing
                 to do is simply get out and explore. We stayed at the
-                Pullman, which gave us a comfortable base, but most of
-                our favourite memories happened away from the hotel.
+                Pullman, which gave us a comfortable and well-located
+                base for our family city break.
             </p>
 
             <p>
-                We loved following the river, eating and drinking beside
-                it, taking boats through the city and watching Bangkok
-                change from day to night. The temples, markets and
-                streets give every outing a different feel.
+                We loved following the river, taking boats through
+                the city and visiting the temples along the way.
+                It is a wonderful way to see Bangkok, with the
+                scenery constantly changing as you travel.
             </p>
 
             <p>
-                And then there are the evenings — rooftop drinks,
-                Asiatique, good food and the sort of unexpected moments
-                you could never really plan for.
+                And then there are the evenings. We loved strolling
+                around Asiatique, enjoying the rooftop bars and
+                discovering the different sides of a city that
+                seems to have something happening around every corner.
             </p>
 
         </div>
@@ -662,741 +549,1020 @@
 
 </section>
 
-
-<div class="sg-editorial">
-
+<div class="ko-editorial">
 
 <!-- =====================================================
-     MAIN EDITORIAL STORY
+     THE STAY — PULLMAN
 ====================================================== -->
 
-<section class="sg-editorial-section">
+<section class="ko-hotel">
 
-    <div class="section-heading">
+    <div class="ko-hotel-heading">
+
+        <p class="section-label">THE STAY</p>
+
+        <h2>Pullman Bangkok.</h2>
 
         <p>
-            FROM OUR CAMERA
+            A comfortable, well-located base that worked particularly
+            well for us as a family.
         </p>
-
-        <h2>
-            Bangkok, as we see it.
-        </h2>
 
     </div>
 
+    <div class="ko-hotel-layout">
 
-    <div class="sg-grid">
+        <img src="bk18.jpeg" alt="Bangkok skyline at dusk" loading="lazy">
 
+        <div class="ko-hotel-copy">
 
-        <!-- ROW 1 -->
+            <p class="section-label">OUR EXPERIENCE</p>
 
-        <div class="sg-text sg-r1-text">
+            <h3>A good base for exploring the city.</h3>
 
-            <p class="section-label">
-                FINDING OUR BASE
-            </p>
-
-            <h3>
-                Somewhere comfortable to come back to.
-            </h3>
-
-            <div class="sg-rule"></div>
+            <div class="ko-rule"></div>
 
             <p>
-                We stayed at the Pullman, which worked particularly well
-                for us as a family. After a day of traffic, temples,
-                markets and wandering, it was good to have somewhere
-                comfortable to return to — and the rooftop bar gave us
-                another reason to stay around for the evening.
+                The Pullman was a good choice for us. Its location
+                worked well for getting out and exploring Bangkok,
+                while still giving us somewhere comfortable to
+                return to at the end of a busy day.
             </p>
-
-        </div>
-
-
-        <img
-            class="sg-r1-img1"
-            src="bk1.jpeg"
-            alt="Bangkok"
-            loading="eager"
-        >
-
-
-        <img
-            class="sg-r1-img2"
-            src="bk2.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <!-- ROW 2 -->
-
-        <img
-            class="sg-r2-img1"
-            src="bk3.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <div class="sg-text sg-r2-text">
-
-            <p class="section-label">
-                THE RIVER
-            </p>
-
-            <h3>
-                Follow the water.
-            </h3>
-
-            <div class="sg-rule"></div>
 
             <p>
-                Travelling along the river is one of our favourite ways
-                to see Bangkok. Boats make getting around part of the
-                experience, and the view constantly changes between
-                temples, hotels, homes, restaurants and the huge energy
-                of the city.
+                The family room product worked particularly well.
+                Having the right room arrangement made the stay
+                easy and comfortable for all of us, which makes
+                a real difference on a city break.
             </p>
-
-        </div>
-
-
-        <img
-            class="sg-r2-img2"
-            src="bk5.jpeg"
-            alt="Bangkok river"
-            loading="lazy"
-        >
-
-
-        <div class="sg-text sg-r2-text2">
-
-            <p class="section-label">
-                BY THE WATER
-            </p>
-
-            <h3>
-                Eat, drink and watch Bangkok go by.
-            </h3>
 
             <p>
-                Some of our favourite Bangkok evenings have been spent
-                along the river. There is something about sitting down
-                for food or a drink with the city moving around you that
-                captures Bangkok perfectly.
+                The rooftop bar was another plus. After a day
+                spent exploring the temples, streets and river,
+                it was a lovely place to settle in for a drink
+                and enjoy the city from above.
             </p>
+
+            <div class="ko-hotel-note">
+                <p>
+                    For a family wanting a well-located hotel,
+                    a practical room arrangement and somewhere
+                    to enjoy an evening drink, the Pullman
+                    worked very well for us.
+                </p>
+            </div>
 
         </div>
-
-
-        <!-- ROW 3 -->
-
-        <div class="sg-text sg-r3-text">
-
-            <p class="section-label">
-                THE CITY
-            </p>
-
-            <h3>
-                There is always another corner to discover.
-            </h3>
-
-            <div class="sg-rule"></div>
-
-            <p>
-                Bangkok rewards curiosity. We love the temples, the
-                markets, the streets and the fact that an ordinary walk
-                can suddenly turn into something memorable.
-            </p>
-
-        </div>
-
-
-        <img
-            class="sg-r3-img1"
-            src="bk6.jpeg"
-            alt="Asiatique Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-r3-img2"
-            src="bk7.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-r3-img3"
-            src="bk8.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <!-- ROW 4 -->
-
-        <img
-            class="sg-r4-img1"
-            src="bk9.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <div class="sg-text sg-r4-text">
-
-            <p class="section-label">
-                THE TEMPLES
-            </p>
-
-            <h3>
-                Some of the city's most beautiful moments.
-            </h3>
-
-            <p>
-                We love Bangkok's temples. They give the city a completely
-                different rhythm from the traffic and towers, and they are
-                one of the reasons exploring Bangkok never feels repetitive.
-            </p>
-
-        </div>
-
-
-        <img
-            class="sg-r4-img2"
-            src="bk10.jpeg"
-            alt="Bangkok temple"
-            loading="lazy"
-        >
 
     </div>
 
 </section>
 
+<!-- HOTEL SETTING / CITY AFTER DARK -->
+
+<section class="ko-hotel-setting">
+
+    <div class="ko-text ko-setting-text">
+
+        <p class="section-label">AFTER DARK</p>
+
+        <h3>Bangkok takes on a different energy in the evening.</h3>
+
+        <div class="ko-rule"></div>
+
+        <p>
+            We enjoyed the city's rooftop bars and the atmosphere
+            of its restaurants and streets once the evening arrived.
+            It is a side of Bangkok that is well worth making time for.
+        </p>
+
+        <p>
+            The Pullman's rooftop gave us an easy place to enjoy
+            a drink, while the wider city offered plenty of
+            reasons to head out again.
+        </p>
+
+    </div>
+
+    <img class="ko-setting-img1" src="bk19.jpeg" alt="An atmospheric Bangkok evening venue" loading="lazy">
+
+    <img class="ko-setting-img2" src="bk20.jpeg" alt="Bangkok restaurant and street food scene" loading="lazy">
+
+</section>
 
 <!-- =====================================================
-     LOCAL INFORMATION
+     THE RIVER
 ====================================================== -->
 
-<section class="sg-info">
+<section class="ko-samara">
 
-    <div class="sg-info-grid">
+    <div class="ko-samara-heading">
 
+        <p class="section-label">THE EXPERIENCE</p>
 
-        <div class="sg-info-item">
+        <h2>See Bangkok from the river.</h2>
 
-            <p class="section-label">
-                WHERE WE STAYED
-            </p>
+        <p>
+            One of our favourite ways to explore the city was
+            simply to get on a boat and follow the water.
+        </p>
 
-            <h3>
-                Pullman
-            </h3>
+    </div>
+
+    <div class="ko-samara-layout">
+
+        <div class="ko-samara-copy">
+
+            <p class="section-label">LIFE ALONG THE WATER</p>
+
+            <h3>Let the journey be part of the day.</h3>
+
+            <div class="ko-rule"></div>
 
             <p>
-                A comfortable base for the family, with a good rooftop
-                bar for an evening drink after exploring the city.
+                Travelling along the river is one of the things
+                we enjoyed most about Bangkok. We used the boats
+                to visit the temples, but the journey itself
+                was every bit as enjoyable.
+            </p>
+
+            <p>
+                The view changes constantly. Temples, buildings,
+                riverside restaurants and everyday city life
+                all appear along the banks, giving you a
+                different perspective from the busy streets.
+            </p>
+
+            <p>
+                It is an easy way to make getting around part
+                of the experience rather than simply a means
+                of reaching the next place.
             </p>
 
         </div>
 
+        <div class="ko-samara-images">
 
-        <div class="sg-info-item">
+            <img src="bk5.jpeg" alt="Temple beside the Bangkok river" loading="lazy">
 
-            <p class="section-label">
-                OUR EVENINGS
-            </p>
-
-            <h3>
-                Rooftops &amp; riverside
-            </h3>
-
-            <p>
-                We enjoyed the Pullman rooftop and the Lebua State Tower
-                rooftop bar, as well as eating and drinking along the river.
-            </p>
+            <img src="bk17.jpeg" alt="Colourful Bangkok street scene" loading="lazy">
 
         </div>
-
-
-        <div class="sg-info-item">
-
-            <p class="section-label">
-                GETTING AROUND
-            </p>
-
-            <h3>
-                Take the boat
-            </h3>
-
-            <p>
-                Bangkok's river boats are not just transport. They are
-                one of the most enjoyable ways to experience the city.
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
 
-
 <!-- =====================================================
-     RECOMMENDATIONS
+     DESTINATION STORY
 ====================================================== -->
 
-<section class="sg-recommendations">
+<section class="ko-destination">
 
-    <div class="sg-recommendations-heading">
+    <div class="section-heading">
+        <p>BEYOND THE HOTEL</p>
+        <h2>Discovering Bangkok.</h2>
+    </div>
 
-        <p class="section-label">
-            OUR RECOMMENDATIONS
-        </p>
+    <div class="ko-destination-grid">
 
-        <h2>
-            Places and experiences we loved.
-        </h2>
+        <!-- TEMPLES -->
+
+        <div class="ko-text ko-d1-text">
+
+            <p class="section-label">THE TEMPLES</p>
+
+            <h3>A different rhythm to the city.</h3>
+
+            <div class="ko-rule"></div>
+
+            <p>
+                Bangkok's temples are among the places we most
+                enjoyed exploring. They offer a complete change
+                of pace from the traffic and movement of the
+                modern city, with beautiful architecture and
+                details to discover at every turn.
+            </p>
+
+        </div>
+
+        <img class="ko-d1-img1" src="bk6.jpeg" alt="Ornate temple architecture in Bangkok" loading="lazy">
+
+        <img class="ko-d1-img2" src="bk10.jpeg" alt="Decorative details on a Bangkok temple roof" loading="lazy">
+
+        <!-- TEMPLE DETAILS -->
+
+        <img class="ko-d2-img1" src="bk7.jpeg" alt="Intricate golden and patterned temple details" loading="lazy">
+
+        <div class="ko-text ko-d2-text">
+
+            <p class="section-label">THE DETAIL</p>
+
+            <h3>Look a little closer.</h3>
+
+            <div class="ko-rule"></div>
+
+            <p>
+                Some of the most interesting moments are found
+                in the details: the decoration, the colours,
+                the craftsmanship and the scale of the
+                architecture around you.
+            </p>
+
+            <p>
+                It is worth slowing down and taking the time
+                to look beyond the main buildings.
+            </p>
+
+        </div>
+
+        <img class="ko-d2-img2" src="bk8.jpeg" alt="Close-up of a reclining Buddha statue" loading="lazy">
+
+        <!-- TEMPLE COMPLEX -->
+
+        <div class="ko-text ko-d3-text">
+
+            <p class="section-label">EXPLORING</p>
+
+            <h3>Every corner has something to see.</h3>
+
+            <div class="ko-rule"></div>
+
+            <p>
+                We enjoyed wandering through the temple
+                grounds, taking in the different buildings
+                and discovering the details that make
+                each part of the experience distinctive.
+            </p>
+
+        </div>
+
+        <img class="ko-d3-img1" src="bk9.jpeg" alt="Golden Buddha details inside a Bangkok temple" loading="lazy">
+
+        <img class="ko-d3-img2" src="bk11.jpeg" alt="Temple grounds and statue in Bangkok" loading="lazy">
+
+        <img class="ko-d3-img3" src="bk12.jpeg" alt="Temple spires against the Bangkok sky" loading="lazy">
+
+        <!-- ARCHITECTURE -->
+
+        <img class="ko-d4-img1" src="bk13.jpeg" alt="Ornate Bangkok temple spire" loading="lazy">
+
+        <div class="ko-text ko-d4-text">
+
+            <p class="section-label">THE ARCHITECTURE</p>
+
+            <h3>Beautiful from every angle.</h3>
+
+            <div class="ko-rule"></div>
+
+            <p>
+                The temples are full of colour, intricate
+                decoration and striking shapes. Even looking
+                up at the rooftops and spires reveals
+                another layer of detail.
+            </p>
+
+        </div>
+
+        <img class="ko-d4-img2" src="bk14.jpeg" alt="Traditional temple architecture and decorative details" loading="lazy">
+
+        <img class="ko-d4-img3" src="bk15.jpeg" alt="Temple spire framed by tropical greenery" loading="lazy">
+
+        <!-- HUA HIN -->
+
+        <div class="ko-text ko-d5-text">
+
+            <p class="section-label">BEYOND BANGKOK</p>
+
+            <h3>A family experience in Hua Hin.</h3>
+
+            <div class="ko-rule"></div>
+
+            <p>
+                Our elephant visit was not in Bangkok itself.
+                We travelled to a sanctuary in Hua Hin, where
+                we had the opportunity to spend time around
+                these remarkable animals.
+            </p>
+
+            <p>
+                It was a very different experience from the
+                city and a memorable addition to our time
+                in Thailand.
+            </p>
+
+        </div>
+
+        <img class="ko-d5-img1" src="bk1.jpeg" alt="Elephant at a sanctuary in Hua Hin" loading="lazy">
+
+        <img class="ko-d5-img2" src="bk3.jpeg" alt="Elephant in the natural surroundings of the Hua Hin sanctuary" loading="lazy">
+
+        <img class="ko-d5-img3" src="bk2.jpeg" alt="Sunset landscape during the Hua Hin part of the trip" loading="lazy">
 
     </div>
 
+</section>
 
-    <div class="sg-recommendation-list">
+<!-- =====================================================
+     PLANNING YOUR VISIT
+====================================================== -->
 
+<section class="ko-info">
 
-        <article class="sg-recommendation">
+    <div class="ko-info-heading">
 
-            <span class="sg-rec-number">01</span>
+        <p class="section-label">PLANNING YOUR VISIT</p>
 
+        <h2>Making the most of a Bangkok city break.</h2>
+
+        <p>
+            Bangkok is a city that rewards getting out and
+            exploring. For us, a comfortable hotel base,
+            time on the river and a few evenings set aside
+            for wandering made for a great family trip.
+        </p>
+
+    </div>
+
+    <div class="ko-info-grid">
+
+        <div class="ko-info-item">
+
+            <p class="section-label">WHERE TO STAY</p>
+
+            <h3>Choose a good base</h3>
+
+            <p>
+                We stayed at the Pullman and found it well
+                located for our trip. The family room
+                arrangement worked particularly well,
+                and the rooftop bar was a welcome bonus.
+            </p>
+
+        </div>
+
+        <div class="ko-info-item">
+
+            <p class="section-label">GETTING AROUND</p>
+
+            <h3>Take to the river</h3>
+
+            <p>
+                We loved travelling by boat to visit the
+                temples. It is a memorable way to see
+                another side of Bangkok and makes the
+                journey part of the experience.
+            </p>
+
+        </div>
+
+        <div class="ko-info-item">
+
+            <p class="section-label">EVENINGS</p>
+
+            <h3>Make time for Asiatique</h3>
+
+            <p>
+                We particularly enjoyed strolling around
+                Asiatique at night. It is an easy way to
+                spend an evening enjoying the atmosphere
+                and seeing the city after dark.
+            </p>
+
+        </div>
+
+        <div class="ko-info-item">
+
+            <p class="section-label">TEMPLE VISITS</p>
+
+            <h3>Allow time to explore</h3>
+
+            <p>
+                The temples were a highlight for us.
+                Rather than rushing between places,
+                leave time to walk around and appreciate
+                the architecture and detail.
+            </p>
+
+        </div>
+
+        <div class="ko-info-item">
+
+            <p class="section-label">BEYOND THE CITY</p>
+
+            <h3>Consider Hua Hin</h3>
+
+            <p>
+                Our elephant sanctuary visit was in
+                Hua Hin, not Bangkok. It made for a
+                different family experience beyond
+                the city itself.
+            </p>
+
+        </div>
+
+        <div class="ko-info-item">
+
+            <p class="section-label">WHO WILL LOVE IT</p>
+
+            <h3>Families and city explorers</h3>
+
+            <p>
+                Bangkok worked well for us as a family
+                city break, with a mix of temples,
+                boat journeys, food, evening exploring
+                and plenty of variety.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     OUR RECOMMENDATIONS
+====================================================== -->
+
+<section class="ko-recommendations">
+
+    <div class="ko-recommendations-heading">
+
+        <p class="section-label">OUR RECOMMENDATIONS</p>
+
+        <h2>Places &amp; experiences we loved.</h2>
+
+    </div>
+
+    <div class="ko-recommendation-list">
+
+        <article class="ko-recommendation">
+            <span class="ko-rec-number">01</span>
             <h3>Pullman</h3>
-
             <p>
-                Our base for the trip. Comfortable for the family and
-                particularly enjoyable for an evening drink at the rooftop
-                bar after a day exploring.
+                Our hotel base for the trip. Well located,
+                comfortable for the family and with a
+                family room product that worked particularly
+                well for us. The rooftop bar was another plus.
             </p>
-
         </article>
 
-
-        <article class="sg-recommendation">
-
-            <span class="sg-rec-number">02</span>
-
+        <article class="ko-recommendation">
+            <span class="ko-rec-number">02</span>
             <h3>Asiatique</h3>
-
             <p>
-                One of our favourite places to spend an evening. Restaurants,
-                bars, lights and the river create an easy atmosphere where
-                you can simply wander and see where the night takes you.
+                One of our favourite places to spend an
+                evening. We loved strolling around after
+                dark and enjoying the atmosphere.
             </p>
-
         </article>
 
+        <article class="ko-recommendation">
+            <span class="ko-rec-number">03</span>
+            <h3>The Chao Phraya River</h3>
+            <p>
+                Take a boat and make the journey part
+                of the day. Travelling along the river
+                was one of our favourite ways to see
+                the city and visit the temples.
+            </p>
+        </article>
 
-        <article class="sg-recommendation">
+        <article class="ko-recommendation">
+            <span class="ko-rec-number">04</span>
+            <h3>Bangkok's temples</h3>
+            <p>
+                A highlight of our time in the city.
+                Beautiful architecture, intricate details
+                and a completely different atmosphere
+                from the streets outside.
+            </p>
+        </article>
 
-            <span class="sg-rec-number">03</span>
-
+        <article class="ko-recommendation">
+            <span class="ko-rec-number">05</span>
             <h3>Lebua State Tower</h3>
-
             <p>
-                The rooftop bar is an experience in itself. Bangkok looks
-                particularly impressive from above, especially as the city
-                starts to light up after dark.
+                The rooftop bar was another of the
+                evening experiences we enjoyed.
+                Bangkok is an impressive city to
+                see from above as the lights come on.
             </p>
-
         </article>
 
-
-        <article class="sg-recommendation">
-
-            <span class="sg-rec-number">04</span>
-
-            <h3>The river</h3>
-
+        <article class="ko-recommendation">
+            <span class="ko-rec-number">06</span>
+            <h3>Hua Hin elephant sanctuary</h3>
             <p>
-                Take a boat and make the journey part of the day. We love
-                travelling up and down the river and seeing the city from
-                the water.
+                A memorable experience beyond Bangkok.
+                Our visit was in Hua Hin and offered
+                a different kind of family day out.
             </p>
-
         </article>
-
-
-        <article class="sg-recommendation">
-
-            <span class="sg-rec-number">05</span>
-
-            <h3>The temples</h3>
-
-            <p>
-                Bangkok's temples are one of the great reasons to keep
-                exploring. Beautiful, atmospheric and completely different
-                from the modern city around them.
-            </p>
-
-        </article>
-
-
-        <article class="sg-recommendation">
-
-            <span class="sg-rec-number">06</span>
-
-            <h3>Floating market</h3>
-
-            <p>
-                A very different side of Bangkok and one of the experiences
-                we would definitely build into a family trip.
-            </p>
-
-        </article>
-
-
-        <article class="sg-recommendation">
-
-            <span class="sg-rec-number">07</span>
-
-            <h3>Pool with the locals</h3>
-
-            <p>
-                One of the moments the boys enjoyed most was simply playing
-                pool with local people. It was completely unplanned and
-                became one of those small memories that makes a trip feel
-                personal.
-            </p>
-
-        </article>
-
-
-        <article class="sg-recommendation">
-
-            <span class="sg-rec-number">08</span>
-
-            <h3>Eat by the river</h3>
-
-            <p>
-                Bangkok's food scene is reason enough to explore. We love
-                combining dinner and drinks with the atmosphere of the
-                river rather than treating food as a separate part of the
-                trip.
-            </p>
-
-        </article>
-
 
     </div>
 
 </section>
 
-
 <!-- =====================================================
-     JOURNAL
+     OUR EDIT
 ====================================================== -->
 
-<section class="sg-journal">
-
+<section class="ko-journal">
 
     <div>
-
-        <p class="section-label">
-            FROM THE JOURNAL
-        </p>
-
-        <h2>
-            Bangkok is a city to explore.
-        </h2>
-
+        <p class="section-label">OUR EDIT</p>
+        <h2>Take the river, explore the temples and stay out after dark.</h2>
     </div>
 
-
-    <div class="sg-journal-copy">
+    <div class="ko-journal-copy">
 
         <p>
-            What we like about Bangkok is that it never really asks
-            you to follow a plan. You can leave the hotel intending
-            to see one thing and end up somewhere completely different,
-            usually with a much better story to tell.
+            What we like about Bangkok is that it never
+            really asks you to follow a plan. You can
+            head out intending to see one thing and
+            find yourself somewhere completely different.
         </p>
 
         <p>
-            For the family, that meant mixing the obvious highlights
-            with simple moments. The boys playing pool with local
-            people, travelling along the river, stopping for food,
-            wandering around Asiatique and discovering another temple
-            all became part of the experience.
+            For us, the river was one of the best ways
+            to explore. We loved travelling by boat
+            to visit the temples, taking in the city
+            from the water and then spending our
+            evenings wandering around Asiatique.
         </p>
 
         <p>
-            And Bangkok works particularly well at night. We loved
-            the Pullman rooftop, the Lebua State Tower and the
-            restaurants and bars along the river. There is a real
-            sense that the city continues long after the heat of the
-            day has disappeared.
+            The Pullman worked well as a family base,
+            and having a comfortable room and a good
+            rooftop bar made the stay easy. Our visit
+            to the elephant sanctuary in Hua Hin
+            added another memorable experience
+            beyond the city.
         </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FINAL PHOTOGRAPHIC FIELD
-====================================================== -->
-
-<section class="sg-editorial-section">
-
-    <div class="sg-final-grid">
-
-
-        <div class="sg-final-heading">
-
-            <p class="section-label">
-                MORE FROM OUR CAMERA
-            </p>
-
-            <h2>
-                More from Bangkok.
-            </h2>
-
-        </div>
-
-
-        <img
-            class="sg-final-img1"
-            src="bk11.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-final-img2"
-            src="bk12.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-final-img3"
-            src="bk14.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-final-img4"
-            src="bk15.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-final-img5"
-            src="bk17.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-final-img6"
-            src="bk18.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-final-img7"
-            src="bk19.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-        <img
-            class="sg-final-img8"
-            src="bk20.jpeg"
-            alt="Bangkok"
-            loading="lazy"
-        >
-
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     MAP
-====================================================== -->
-
-<section class="sg-map">
-
-    <div class="sg-map-inner">
-
-        <p class="section-label">
-            OUR MAP
-        </p>
-
-        <h2>
-            Bangkok.
-        </h2>
 
         <p>
-            The places that made up our Bangkok experience — from
-            the river and temples to Asiatique, rooftops, markets
-            and the streets in between.
+            Bangkok is a city that rewards curiosity.
+            Get out, explore and leave a little room
+            for the unexpected.
         </p>
 
     </div>
 
 </section>
 
+<!-- MAP -->
 
-<!-- =====================================================
-     END NAVIGATION
-====================================================== -->
+<section class="ko-map">
 
-<section class="sg-end">
+    <div class="ko-map-inner">
 
-    <a
-        href="/"
-        class="text-link"
-    >
-        ← Back to Home
-    </a>
+        <p class="section-label">OUR MAP</p>
 
-    <a
-        href="editions.html"
-        class="text-link"
-    >
-        View All Editions →
-    </a>
+        <h2>Bangkok.</h2>
+
+        <p>
+            The hotel, river, temples and places that
+            made up our Bangkok experience, alongside
+            our family excursion to Hua Hin.
+        </p>
+
+    </div>
 
 </section>
 
+<!-- END -->
+
+<section class="ko-end">
+
+    <a href="/" class="text-link">← Back to Home</a>
+
+    <a href="editions.html" class="text-link">View All Editions →</a>
+
+</section>
 
 </div>
 
 </main>
 
-
 <!-- =====================================================
-     MOBILE VERSION
-     ORIGINAL BANGKOK CONTENT RETAINED
+     MOBILE EDITION
 ====================================================== -->
 
-<div class="bangkok-mobile">
+<main class="bangkok-mobile">
 
+<!-- HERO -->
 
-<main>
-
-
-<!-- =========================
-     HERO
-========================== -->
-
-<section
-    class="edition-hero"
-    style="background-image:url('bk-hero.jpeg');"
->
+<section class="edition-hero" style="background-image:url('bk-hero.jpeg');">
 
     <div class="edition-hero-overlay">
+        <p class="eyebrow">OUR BANGKOK</p>
+        <h1>Bangkok</h1>
+        <p class="edition-hero-subtitle">A city to explore.</p>
+    </div>
 
-        <p class="hero-kicker">
-            JOURNEY
-        </p>
+</section>
 
-        <h1>
-            Bangkok
-        </h1>
+<!-- INTRO -->
 
-        <p class="hero-description">
-            A few days in Bangkok with the family, from a comfortable
-            stay at the Pullman to evenings spent wandering the lights,
-            bars and restaurants of Asiatique.
-        </p>
+<section class="edition-intro section">
 
-        <a
-            href="#story"
-            class="hero-button"
-        >
-            Begin Journey
-        </a>
+    <div class="container">
+
+        <div class="edition-intro-inner">
+
+            <p class="section-label">OUR BANGKOK</p>
+
+            <h2>A city that keeps pulling you out into the street.</h2>
+
+            <div class="edition-intro-text">
+
+                <p>
+                    Bangkok is one of those cities where the best
+                    thing to do is simply get out and explore.
+                    We stayed at the Pullman, which gave us
+                    a comfortable and well-located base for
+                    our family city break.
+                </p>
+
+                <p>
+                    We loved following the river, taking boats
+                    through the city and visiting the temples
+                    along the way. It is a wonderful way to
+                    see Bangkok, with the scenery constantly
+                    changing as you travel.
+                </p>
+
+                <p>
+                    And then there are the evenings. We loved
+                    strolling around Asiatique, enjoying the
+                    rooftop bars and discovering the different
+                    sides of a city that seems to have something
+                    happening around every corner.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
+<!-- PULLMAN -->
 
-<!-- =========================
-     THE EXPERIENCE
-========================== -->
+<section class="ko-mobile-hotel section">
 
-<section
-    id="story"
-    class="section"
->
+    <div class="container">
 
-    <div class="section-heading">
+        <p class="section-label">THE STAY</p>
+
+        <h2>Pullman Bangkok.</h2>
 
         <p>
-            The Experience
+            A comfortable, well-located base that worked
+            particularly well for us as a family.
         </p>
 
-        <h2>
-            Bangkok with the family
-        </h2>
+        <img src="bk18.jpeg" alt="Bangkok skyline at dusk" loading="lazy">
 
-    </div>
+        <div class="ko-mobile-hotel-copy">
 
+            <p class="section-label">OUR EXPERIENCE</p>
 
-    <div class="story-grid">
+            <h3>A good base for exploring the city.</h3>
 
-        <div>
+            <p>
+                The Pullman was a good choice for us.
+                Its location worked well for getting out
+                and exploring Bangkok, while still giving
+                us somewhere comfortable to return to
+                at the end of a busy day.
+            </p>
 
-            <p class="story-text">
+            <p>
+                The family room product worked particularly
+                well. Having the right room arrangement
+                made the stay easy and comfortable for
+                all of us, which makes a real difference
+                on a city break.
+            </p>
 
-                Bangkok is one of those cities that can feel completely
-                overwhelming at first, but travelling as a family gave us
-                a different way of experiencing it.
-
-                <br><br>
-
-                We stayed at the Pullman, which turned out to be a very
-                good base for us. The rooms and family-friendly room
-                options made the stay particularly easy, giving everyone
-                enough space to relax after a day in the city.
-
-                <br><br>
-
-                One of our favourite evenings was spent at Asiatique.
-                As the sun went down, the riverside came alive with
-                restaurants, bars, lights and plenty going on. It was an
-                easy place to spend an evening together without needing
-                to plan too much.
-
+            <p>
+                The rooftop bar was another plus. After
+                a day spent exploring the temples, streets
+                and river, it was a lovely place to settle
+                in for a drink and enjoy the city from above.
             </p>
 
         </div>
 
+        <img src="bk19.jpeg" alt="An atmospheric Bangkok evening venue" loading="lazy">
 
-        <div>
+        <img src="bk20.jpeg" alt="Bangkok restaurant and street food scene" loading="lazy">
 
-            <img
-                src="bk1.jpeg"
-                alt="Bangkok"
-                class="story-image"
-            >
+        <p class="section-label">AFTER DARK</p>
+
+        <h3>Bangkok takes on a different energy in the evening.</h3>
+
+        <p>
+            We enjoyed the city's rooftop bars and the
+            atmosphere of its restaurants and streets
+            once the evening arrived. The Pullman's
+            rooftop gave us an easy place to enjoy
+            a drink, while the wider city offered
+            plenty of reasons to head out again.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- THE RIVER -->
+
+<section class="ko-mobile-river section">
+
+    <div class="container">
+
+        <p class="section-label">THE EXPERIENCE</p>
+
+        <h2>See Bangkok from the river.</h2>
+
+        <p>
+            One of our favourite ways to explore the
+            city was simply to get on a boat and
+            follow the water.
+        </p>
+
+        <img src="bk5.jpeg" alt="Temple beside the Bangkok river" loading="lazy">
+
+        <p class="section-label">LIFE ALONG THE WATER</p>
+
+        <h3>Let the journey be part of the day.</h3>
+
+        <p>
+            Travelling along the river is one of the
+            things we enjoyed most about Bangkok.
+            We used the boats to visit the temples,
+            but the journey itself was every bit
+            as enjoyable.
+        </p>
+
+        <p>
+            The view changes constantly. Temples,
+            buildings, riverside restaurants and
+            everyday city life all appear along
+            the banks, giving you a different
+            perspective from the busy streets.
+        </p>
+
+        <img src="bk17.jpeg" alt="Colourful Bangkok street scene" loading="lazy">
+
+        <p>
+            It is an easy way to make getting around
+            part of the experience rather than simply
+            a means of reaching the next place.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- DESTINATION STORY -->
+
+<section class="ko-mobile-story section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <p>BEYOND THE HOTEL</p>
+            <h2>Discovering Bangkok.</h2>
+        </div>
+
+        <!-- TEMPLES -->
+
+        <div class="ko-mobile-story-copy">
+
+            <p class="section-label">THE TEMPLES</p>
+
+            <h3>A different rhythm to the city.</h3>
+
+            <p>
+                Bangkok's temples are among the places
+                we most enjoyed exploring. They offer
+                a complete change of pace from the
+                traffic and movement of the modern
+                city, with beautiful architecture
+                and details to discover at every turn.
+            </p>
+
+        </div>
+
+        <img src="bk6.jpeg" alt="Ornate temple architecture in Bangkok" loading="lazy">
+
+        <img src="bk10.jpeg" alt="Decorative details on a Bangkok temple roof" loading="lazy">
+
+        <div class="ko-mobile-story-copy">
+
+            <p class="section-label">THE DETAIL</p>
+
+            <h3>Look a little closer.</h3>
+
+            <p>
+                Some of the most interesting moments
+                are found in the details: the decoration,
+                the colours, the craftsmanship and
+                the scale of the architecture around you.
+            </p>
+
+            <p>
+                It is worth slowing down and taking
+                the time to look beyond the main buildings.
+            </p>
+
+        </div>
+
+        <img src="bk7.jpeg" alt="Intricate golden and patterned temple details" loading="lazy">
+
+        <img src="bk8.jpeg" alt="Close-up of a reclining Buddha statue" loading="lazy">
+
+        <div class="ko-mobile-story-copy">
+
+            <p class="section-label">EXPLORING</p>
+
+            <h3>Every corner has something to see.</h3>
+
+            <p>
+                We enjoyed wandering through the temple
+                grounds, taking in the different
+                buildings and discovering the details
+                that make each part of the experience
+                distinctive.
+            </p>
+
+        </div>
+
+        <img src="bk9.jpeg" alt="Golden Buddha details inside a Bangkok temple" loading="lazy">
+
+        <img src="bk11.jpeg" alt="Temple grounds and statue in Bangkok" loading="lazy">
+
+        <img src="bk12.jpeg" alt="Temple spires against the Bangkok sky" loading="lazy">
+
+        <div class="ko-mobile-story-copy">
+
+            <p class="section-label">THE ARCHITECTURE</p>
+
+            <h3>Beautiful from every angle.</h3>
+
+            <p>
+                The temples are full of colour,
+                intricate decoration and striking
+                shapes. Even looking up at the
+                rooftops and spires reveals
+                another layer of detail.
+            </p>
+
+        </div>
+
+        <img src="bk13.jpeg" alt="Ornate Bangkok temple spire" loading="lazy">
+
+        <img src="bk14.jpeg" alt="Traditional temple architecture and decorative details" loading="lazy">
+
+        <img src="bk15.jpeg" alt="Temple spire framed by tropical greenery" loading="lazy">
+
+        <!-- HUA HIN -->
+
+        <div class="ko-mobile-story-copy">
+
+            <p class="section-label">BEYOND BANGKOK</p>
+
+            <h3>A family experience in Hua Hin.</h3>
+
+            <p>
+                Our elephant visit was not in Bangkok
+                itself. We travelled to a sanctuary
+                in Hua Hin, where we had the opportunity
+                to spend time around these remarkable
+                animals.
+            </p>
+
+            <p>
+                It was a very different experience
+                from the city and a memorable addition
+                to our time in Thailand.
+            </p>
+
+        </div>
+
+        <img src="bk1.jpeg" alt="Elephant at a sanctuary in Hua Hin" loading="lazy">
+
+        <img src="bk3.jpeg" alt="Elephant in the natural surroundings of the Hua Hin sanctuary" loading="lazy">
+
+        <img src="bk2.jpeg" alt="Sunset landscape during the Hua Hin part of the trip" loading="lazy">
+
+    </div>
+
+</section>
+
+<!-- PLANNING YOUR VISIT -->
+
+<section class="ko-mobile-info section">
+
+    <div class="container">
+
+        <p class="section-label">PLANNING YOUR VISIT</p>
+
+        <h2>Making the most of a Bangkok city break.</h2>
+
+        <p>
+            Bangkok is a city that rewards getting out
+            and exploring. For us, a comfortable hotel
+            base, time on the river and a few evenings
+            set aside for wandering made for a great
+            family trip.
+        </p>
+
+        <div class="ko-mobile-info-item">
+
+            <p class="section-label">WHERE TO STAY</p>
+            <h3>Choose a good base</h3>
+
+            <p>
+                We stayed at the Pullman and found it
+                well located for our trip. The family
+                room arrangement worked particularly
+                well, and the rooftop bar was a welcome bonus.
+            </p>
+
+        </div>
+
+        <div class="ko-mobile-info-item">
+
+            <p class="section-label">GETTING AROUND</p>
+            <h3>Take to the river</h3>
+
+            <p>
+                We loved travelling by boat to visit
+                the temples. It is a memorable way
+                to see another side of Bangkok and
+                makes the journey part of the experience.
+            </p>
+
+        </div>
+
+        <div class="ko-mobile-info-item">
+
+            <p class="section-label">EVENINGS</p>
+            <h3>Make time for Asiatique</h3>
+
+            <p>
+                We particularly enjoyed strolling
+                around Asiatique at night. It is
+                an easy way to spend an evening
+                enjoying the atmosphere.
+            </p>
+
+        </div>
+
+        <div class="ko-mobile-info-item">
+
+            <p class="section-label">TEMPLE VISITS</p>
+            <h3>Allow time to explore</h3>
+
+            <p>
+                The temples were a highlight for us.
+                Rather than rushing between places,
+                leave time to walk around and
+                appreciate the architecture and detail.
+            </p>
+
+        </div>
+
+        <div class="ko-mobile-info-item">
+
+            <p class="section-label">BEYOND THE CITY</p>
+            <h3>Consider Hua Hin</h3>
+
+            <p>
+                Our elephant sanctuary visit was
+                in Hua Hin, not Bangkok. It made
+                for a different family experience
+                beyond the city itself.
+            </p>
+
+        </div>
+
+        <div class="ko-mobile-info-item">
+
+            <p class="section-label">WHO WILL LOVE IT</p>
+            <h3>Families and city explorers</h3>
+
+            <p>
+                Bangkok worked well for us as a
+                family city break, with a mix of
+                temples, boat journeys, food,
+                evening exploring and plenty of variety.
+            </p>
 
         </div>
 
@@ -1404,371 +1570,201 @@
 
 </section>
 
+<!-- RECOMMENDATIONS -->
 
-<!-- =========================
-     TRIP SNAPSHOT
-========================== -->
+<section class="ko-mobile-recommendations section">
 
-<section
-    id="snapshot"
-    class="section"
->
+    <div class="container">
 
-    <div class="section-heading">
+        <div class="section-heading">
+            <p>OUR RECOMMENDATIONS</p>
+            <h2>Places &amp; experiences we loved.</h2>
+        </div>
 
-        <p>
-            Travel Guide
-        </p>
+        <article class="ko-mobile-recommendation">
+            <p class="story-number">01</p>
+            <h3>Pullman</h3>
+            <p>
+                Our hotel base for the trip. Well located,
+                comfortable for the family and with a
+                family room product that worked particularly
+                well for us. The rooftop bar was another plus.
+            </p>
+        </article>
 
-        <h2>
-            Trip Snapshot
-        </h2>
+        <article class="ko-mobile-recommendation">
+            <p class="story-number">02</p>
+            <h3>Asiatique</h3>
+            <p>
+                One of our favourite places to spend
+                an evening. We loved strolling around
+                after dark and enjoying the atmosphere.
+            </p>
+        </article>
+
+        <article class="ko-mobile-recommendation">
+            <p class="story-number">03</p>
+            <h3>The Chao Phraya River</h3>
+            <p>
+                Take a boat and make the journey part
+                of the day. Travelling along the river
+                was one of our favourite ways to see
+                the city and visit the temples.
+            </p>
+        </article>
+
+        <article class="ko-mobile-recommendation">
+            <p class="story-number">04</p>
+            <h3>Bangkok's temples</h3>
+            <p>
+                A highlight of our time in the city.
+                Beautiful architecture, intricate
+                details and a completely different
+                atmosphere from the streets outside.
+            </p>
+        </article>
+
+        <article class="ko-mobile-recommendation">
+            <p class="story-number">05</p>
+            <h3>Lebua State Tower</h3>
+            <p>
+                The rooftop bar was another of the
+                evening experiences we enjoyed.
+                Bangkok is an impressive city to
+                see from above as the lights come on.
+            </p>
+        </article>
+
+        <article class="ko-mobile-recommendation">
+            <p class="story-number">06</p>
+            <h3>Hua Hin elephant sanctuary</h3>
+            <p>
+                A memorable experience beyond Bangkok.
+                Our visit was in Hua Hin and offered
+                a different kind of family day out.
+            </p>
+        </article>
 
     </div>
 
+</section>
 
-    <div class="snapshot-card">
+<!-- OUR EDIT -->
 
-        <div>
-            <h3>📍 Destination</h3>
-            <p>Bangkok, Thailand</p>
-        </div>
+<section class="ko-mobile-journal section">
 
-        <div>
-            <h3>🏨 Where We Stayed</h3>
-            <p>Pullman</p>
-        </div>
+    <div class="container">
 
-        <div>
-            <h3>👨‍👩‍👧‍👦 Best For</h3>
-            <p>Families and city breaks</p>
-        </div>
+        <p class="section-label">OUR EDIT</p>
 
-        <div>
-            <h3>🌆 Evening Highlight</h3>
-            <p>Asiatique</p>
-        </div>
+        <h2>Take the river, explore the temples and stay out after dark.</h2>
 
-        <div>
-            <h3>⭐ Our Highlight</h3>
-            <p>Asiatique after dark</p>
-        </div>
+        <p>
+            What we like about Bangkok is that it never
+            really asks you to follow a plan. You can
+            head out intending to see one thing and
+            find yourself somewhere completely different.
+        </p>
 
-        <div>
-            <h3>🍸 Evening Vibe</h3>
-            <p>Bars, restaurants and riverside atmosphere</p>
+        <p>
+            For us, the river was one of the best ways
+            to explore. We loved travelling by boat
+            to visit the temples, taking in the city
+            from the water and then spending our
+            evenings wandering around Asiatique.
+        </p>
+
+        <p>
+            The Pullman worked well as a family base,
+            and having a comfortable room and a good
+            rooftop bar made the stay easy. Our visit
+            to the elephant sanctuary in Hua Hin
+            added another memorable experience
+            beyond the city.
+        </p>
+
+        <p>
+            Bangkok is a city that rewards curiosity.
+            Get out, explore and leave a little room
+            for the unexpected.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- MAP -->
+
+<section class="edition-map section">
+
+    <div class="container">
+
+        <div class="edition-map-inner">
+
+            <p class="section-label">OUR MAP</p>
+
+            <h2>Bangkok.</h2>
+
+            <p>
+                The hotel, river, temples and places
+                that made up our Bangkok experience,
+                alongside our family excursion to Hua Hin.
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
-
-<!-- =========================
-     EDITORIAL STORY
-========================== -->
-
-<section class="journey-story">
-
-
-<div class="story-block">
-
-    <img
-        src="bk7.jpeg"
-        alt="Bangkok"
-    >
-
-    <div class="story-text">
-
-        <p class="story-number">
-            01
-        </p>
-
-        <h2>
-            Finding our base
-        </h2>
-
-        <p>
-            Having somewhere comfortable to come back to makes a
-            difference when you're travelling with children.
-            The Pullman worked well for us, particularly because of
-            the room options available for families.
-        </p>
-
-    </div>
-
-</div>
-
-
-<div class="story-block">
-
-    <img
-        src="bk5.jpeg"
-        alt="Bangkok"
-    >
-
-    <div class="story-text">
-
-        <p class="story-number">
-            02
-        </p>
-
-        <h2>
-            Into the city
-        </h2>
-
-        <p>
-            Bangkok is a city where there is always something
-            happening. The streets, buildings, traffic and people
-            create an energy that makes even a simple afternoon
-            feel like part of the experience.
-        </p>
-
-    </div>
-
-</div>
-
-
-<div class="story-block">
-
-    <img
-        src="bk6.jpeg"
-        alt="Asiatique Bangkok"
-    >
-
-    <div class="story-text">
-
-        <p class="story-number">
-            03
-        </p>
-
-        <h2>
-            Asiatique after dark
-        </h2>
-
-        <p>
-            Asiatique was one of the places we enjoyed most.
-            Once evening arrived, the riverside filled with lights,
-            restaurants and bars. It had enough atmosphere to keep
-            everyone entertained and was an easy place to spend
-            a relaxed family evening.
-        </p>
-
-    </div>
-
-</div>
-
-
-</section>
-
-
-<!-- =========================
-     PHOTOGRAPHY
-========================== -->
-
-<section
-    id="gallery"
-    class="section"
->
-
-    <div class="section-heading">
-
-        <p>
-            Photography
-        </p>
-
-        <h2>
-            Bangkok through our camera
-        </h2>
-
-    </div>
-
-
-    <div class="gallery">
-
-        <img
-            src="bk8.jpeg"
-            alt="Bangkok"
-        >
-
-
-        <div class="gallery-row">
-
-            <img
-                src="bk3.jpeg"
-                alt="Bangkok"
-            >
-
-            <img
-                src="bk2.jpeg"
-                alt="Bangkok"
-            >
-
-        </div>
-
-
-        <img
-            src="bk20.jpeg"
-            alt="Bangkok"
-        >
-
-
-        <div class="gallery-row">
-
-            <img
-                src="bk19.jpeg"
-                alt="Bangkok"
-            >
-
-            <img
-                src="bk10.jpeg"
-                alt="Bangkok"
-            >
-
-        </div>
-
-
-        <img
-            src="bk15.jpeg"
-            alt="Bangkok"
-        >
-
-
-        <div class="gallery-row">
-
-            <img
-                src="bk18.jpeg"
-                alt="Bangkok"
-            >
-
-            <img
-                src="bk14.jpeg"
-                alt="Bangkok"
-            >
-
-        </div>
-
-
-        <img
-            src="bk9.jpeg"
-            alt="Bangkok"
-        >
-
-
-        <div class="gallery-row">
-
-            <img
-                src="bk11.jpeg"
-                alt="Bangkok"
-            >
-
-            <img
-                src="bk12.jpeg"
-                alt="Bangkok"
-            >
-
-        </div>
-
-
-        <img
-            src="bk17.jpeg"
-            alt="Bangkok"
-        >
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-<!-- ORIGINAL END NAV -->
+<!-- END -->
 
 <section class="edition-end">
 
-    <a
-        href="/"
-        class="text-link"
-    >
-        ← Back to Home
-    </a>
+    <a href="/" class="text-link">← Back to Home</a>
 
-    <a
-        href="editions.html"
-        class="text-link"
-    >
-        View All Editions →
-    </a>
+    <a href="editions.html" class="text-link">View All Editions →</a>
 
 </section>
 
+</main>
 
-</div>
-
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
+<!-- FOOTER -->
 
 <footer class="site-footer">
 
-    <div class="site-footer-inner">
+<div class="site-footer-inner">
 
-        <div>
+    <div>
 
-            <div class="footer-logo">
-                THE EXPAT EDITS
-            </div>
-
-            <p class="footer-description">
-                A family travel journal of places we've visited,
-                hotels we've stayed in and experiences worth remembering.
-            </p>
-
+        <div class="footer-logo">
+            THE EXPAT EDITS
         </div>
 
-
-        <nav class="footer-nav">
-
-            <a href="editions.html">
-                Editions
-            </a>
-
-            <a href="index-new.html#journal">
-                Journal
-            </a>
-
-            <a href="index-new.html#map">
-                Map
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-        </nav>
-
-
-        <a
-            href="https://www.instagram.com/theexpatedits/"
-            class="footer-social"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-
-
-        <p class="footer-copyright">
-            © The Expat Edits
+        <p class="footer-description">
+            Travel, places &amp; observations from life abroad.
         </p>
 
     </div>
 
+    <nav class="footer-nav">
+        <a href="editions.html">Editions</a>
+        <a href="index-new.html#journal">Journal</a>
+        <a href="index-new.html#map">Map</a>
+        <a href="index-new.html#about">About</a>
+    </nav>
+
+    <a href="https://www.instagram.com/theexpatedits/" class="footer-social" target="_blank" rel="noopener">
+        Instagram
+    </a>
+
+    <p class="footer-copyright">
+        © The Expat Edits
+    </p>
+
+</div>
+
 </footer>
 
-
 </body>
-
 </html>

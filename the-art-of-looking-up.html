@@ -1,1 +1,575 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Art of Looking Up — The Expat Edits</title>
+<meta name="description" content="A personal collection of street art, murals, neon signs and unexpected details noticed along the way.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-notes.css">
+
+<style>
+.street-art-page {
+    background: var(--ivory, #f5f2eb);
+    color: var(--text, #242320);
+}
+
+.street-art-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 7% 65px;
+    text-align: center;
+}
+
+.street-art-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold, #b99a61);
+    margin-bottom: 25px;
+}
+
+.street-art-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -1.5px;
+    margin: 0 auto 25px;
+    max-width: 850px;
+}
+
+.street-art-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(21px, 2.5vw, 27px);
+    font-style: italic;
+    color: var(--muted, #77736b);
+    margin: 0 auto;
+}
+
+.street-art-intro,
+.street-art-copy {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 7% 75px;
+    text-align: center;
+}
+
+.street-art-intro p,
+.street-art-copy p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 2;
+    color: var(--muted, #77736b);
+    margin: 0 0 18px;
+}
+
+.street-art-section {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 5% 85px;
+}
+
+.street-art-section-heading {
+    max-width: 650px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.street-art-section-heading span {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold, #b99a61);
+    margin-bottom: 13px;
+}
+
+.street-art-section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.1;
+    margin: 0 0 14px;
+}
+
+.street-art-section-heading p {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    font-weight: 300;
+    color: var(--muted, #77736b);
+    margin: 0 auto;
+}
+
+.street-art-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+.street-art-gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+
+.street-art-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+}
+
+.street-art-gallery figure.wide {
+    grid-column: span 2;
+}
+
+.street-art-gallery figcaption {
+    padding: 10px 2px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted, #77736b);
+}
+
+.street-art-quote {
+    max-width: 760px;
+    margin: 0 auto 90px;
+    padding: 38px 7%;
+    border-top: 1px solid var(--line-soft, #ded9cf);
+    border-bottom: 1px solid var(--line-soft, #ded9cf);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(27px, 4vw, 39px);
+    line-height: 1.25;
+    font-style: italic;
+    color: var(--text, #242320);
+}
+
+.street-art-end {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 7% 90px;
+    text-align: center;
+}
+
+.street-art-end h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 400;
+    margin: 0 0 18px;
+}
+
+.street-art-end p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--muted, #77736b);
+}
+
+.street-art-return {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text, #242320);
+    border-bottom: 1px solid var(--gold, #b99a61);
+    padding-bottom: 7px;
+}
+
+@media (max-width: 800px) {
+    .street-art-hero {
+        padding: 75px 7% 48px;
+    }
+
+    .street-art-intro {
+        padding-bottom: 55px;
+    }
+
+    .street-art-section {
+        padding: 0 5% 65px;
+    }
+
+    .street-art-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .street-art-gallery figure.wide {
+        grid-column: span 2;
+    }
+
+    .street-art-gallery figcaption {
+        font-size: 8px;
+    }
+
+    .street-art-quote {
+        margin-bottom: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+    .street-art-hero {
+        padding-top: 62px;
+    }
+
+    .street-art-gallery {
+        gap: 10px;
+    }
+
+    .street-art-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .street-art-section-heading {
+        margin-bottom: 26px;
+    }
+
+    .street-art-section-heading p {
+        font-size: 11px;
+    }
+
+    .street-art-gallery figcaption {
+        padding-top: 7px;
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    .street-art-copy {
+        padding-bottom: 60px;
+    }
+}
+</style>
+</head>
+
+<body class="note-page street-art-page">
+
+<header class="site-header">
+    <div class="site-header-inner">
+        <a href="index.html" class="site-logo">THE EXPAT EDITS</a>
+
+        <nav class="site-nav">
+            <a href="index.html#editions">Editions</a>
+            <a href="index.html#journal">Journal</a>
+            <a href="index.html#map">Map</a>
+            <a href="index.html#about">About</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="street-art-hero">
+        <p class="street-art-eyebrow">THE JOURNAL · OBSERVATIONS</p>
+        <h1>The Art of Looking Up</h1>
+        <p class="street-art-subtitle">
+            A collection of the details that make a place memorable.
+        </p>
+    </section>
+
+    <section class="street-art-intro">
+        <p>
+            I have always enjoyed noticing the street art, graffiti and little
+            visual details that appear when we're travelling. Sometimes it's a
+            huge mural on the side of a building. Sometimes it's a neon sign
+            above a restaurant, an unexpected painting in a doorway or a small
+            piece of humour that makes you stop and look twice.
+        </p>
+
+        <p>
+            They're not necessarily the things you set out to see, and they
+            rarely make it into the itinerary. But they're often the details
+            that stay with you. Over time, I've found myself photographing
+            more and more of them.
+        </p>
+
+        <p>
+            This is a growing collection from our travels: a few favourite
+            discoveries, gathered along the way.
+        </p>
+    </section>
+
+    <section class="street-art-section">
+        <div class="street-art-section-heading">
+            <span>01 · The Night-time Edit</span>
+            <h2>When the lights come on</h2>
+            <p>
+                Restaurants, bars and late-night corners have their own visual
+                language. A little neon, a bold sign and an interior that
+                catches your eye.
+            </p>
+        </div>
+
+        <div class="street-art-gallery">
+
+            <figure>
+                <img src="IMG_6676.jpeg" alt="Shake It Off neon sign above a pair of sinks">
+                <figcaption>A little humour in an unexpected place</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6677.jpeg" alt="Dark interior with illuminated shelves and a sculptural figure">
+                <figcaption>An atmospheric corner</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6678.jpeg" alt="Red neon sign reading In Music We Trust">
+                <figcaption>In music we trust</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6679.jpeg" alt="Colourful neon-lit bar scene">
+                <figcaption>A late-night message</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6681.jpeg" alt="Yellow neon sign reading Let the Good Times Roll">
+                <figcaption>Let the good times roll</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6683.jpeg" alt="Hong Kong Hop Exchange neon sign">
+                <figcaption>A sign worth stopping for</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6686.jpeg" alt="Pastel Vespa in front of an illuminated tiled wall">
+                <figcaption>All I need is pastel</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6693.jpeg" alt="Stay Wild neon sign surrounded by tropical plants">
+                <figcaption>Stay wild</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6702.jpeg" alt="Blue wall with yellow neon lettering">
+                <figcaption>Just enjoying life</figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <section class="street-art-section">
+        <div class="street-art-section-heading">
+            <span>02 · Walls with a Story</span>
+            <h2>The streets become a canvas</h2>
+            <p>
+                Some of the most memorable pieces are impossible to miss.
+                Colourful characters, portraits and scenes that transform
+                an ordinary walk into something worth remembering.
+            </p>
+        </div>
+
+        <div class="street-art-gallery">
+
+            <figure>
+                <img src="IMG_6680.jpeg" alt="Illustrated shopfront and street scene">
+                <figcaption>A whole neighbourhood in one painted scene</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6682.jpeg" alt="Large illustrated artwork on a wall">
+                <figcaption>A detail worth a closer look</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6684.jpeg" alt="Playful mural with a character and a bird">
+                <figcaption>A little imagination on the wall</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6685.jpeg" alt="Colourful mural with figures and a street-side scene">
+                <figcaption>Colour and character</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6689.jpeg" alt="Large painted portrait of a woman beside a staircase">
+                <figcaption>A portrait that fills the wall</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6697.jpeg" alt="Pop-art style mural on a city building at night">
+                <figcaption>A familiar face in an unexpected setting</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6700.jpeg" alt="Large painted portrait with a parasol and warm colours">
+                <figcaption>Colour, character and detail</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6701.jpeg" alt="Illustrated woman with a fan against a red circular background">
+                <figcaption>A more traditional influence</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6342.jpeg" alt="Large-scale painted face mural on an urban wall">
+                <figcaption>One last look before moving on</figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <section class="street-art-copy">
+        <p>
+            What I enjoy most is the variety. Some pieces are carefully
+            considered murals, others are playful, slightly eccentric or
+            almost hidden in plain sight. They give buildings and interiors
+            a personality of their own.
+        </p>
+
+        <p>
+            And not everything needs to be a masterpiece. Sometimes the
+            best find is simply a sign, a phrase or a small detail that
+            makes you smile.
+        </p>
+    </section>
+
+    <div class="street-art-quote">
+        “The best discoveries are often the ones you weren't looking for.”
+    </div>
+
+    <section class="street-art-section">
+        <div class="street-art-section-heading">
+            <span>03 · The Unexpected</span>
+            <h2>A few details worth a second look</h2>
+            <p>
+                Not every discovery fits neatly into a category. Some are
+                funny, some are curious, and some simply make you stop.
+            </p>
+        </div>
+
+        <div class="street-art-gallery">
+
+            <figure>
+                <img src="IMG_6687.jpeg" alt="Colourful dragon artwork above the Lan Kwai Fong street sign">
+                <figcaption>A colourful welcome to Lan Kwai Fong</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6688.jpeg" alt="Playful restaurant mural beneath pink blossom">
+                <figcaption>Not exactly a subtle entrance</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6690.jpeg" alt="Miss Wong sign above a plant-filled restaurant entrance">
+                <figcaption>A doorway with its own character</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6691.jpeg" alt="Red illustrated Miss Wong artwork">
+                <figcaption>A graphic with a vintage feel</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6692.jpeg" alt="Painted figure above a busy restaurant interior">
+                <figcaption>Art becomes part of the evening</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6694.jpeg" alt="Framed artwork reading Abandon Hope">
+                <figcaption>A message with a sense of humour</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6695.jpeg" alt="Black and white illustrations of rats around a bathroom mirror and toilet">
+                <figcaption>Even the bathroom gets an artistic treatment</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6698.jpeg" alt="Trompe-l'oeil mural of a person climbing a rope beneath a suspended car">
+                <figcaption>A little visual trickery</figcaption>
+            </figure>
+
+            <figure>
+                <img src="IMG_6699.jpeg" alt="Large blue sculptural artwork above a lily pond">
+                <figcaption>Something sculptural among the water lilies</figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <section class="street-art-section">
+        <div class="street-art-section-heading">
+            <span>04 · A Different Kind of Sign</span>
+            <h2>Little reminders along the way</h2>
+            <p>
+                Sometimes it's not a mural at all. Just a few words,
+                painted or placed somewhere that makes them impossible
+                to ignore.
+            </p>
+        </div>
+
+        <div class="street-art-gallery">
+
+            <figure>
+                <img src="IMG_6696.jpeg" alt="Hand-painted signs on a wooden post beside a tropical beach">
+                <figcaption>Have a good day. Gimme a smile.</figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <section class="street-art-end">
+        <h2>Keep looking</h2>
+        <p>
+            This collection will keep growing. There are plenty more
+            streets to wander, signs to notice and walls to look up at.
+            And hopefully a few more unexpected discoveries along the way.
+        </p>
+
+        <a href="index.html#journal" class="street-art-return">
+            Back to The Journal
+        </a>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <a href="index.html" class="footer-logo">THE EXPAT EDITS</a>
+
+        <p class="footer-description">
+            A family travel journal. Places, people and experiences
+            collected along the way.
+        </p>
+
+        <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="index.html#editions">Editions</a>
+            <a href="index.html#journal">Journal</a>
+            <a href="partners.html">Partners</a>
+        </nav>
+
+        <div class="footer-social">
+            <a href="https://www.instagram.com/theexpatedits/" target="_blank" rel="noopener">
+                Instagram
+            </a>
+        </div>
+
+        <p class="footer-copyright">© The Expat Edits</p>
+    </div>
+</footer>
+
+</body>
+</html>

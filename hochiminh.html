@@ -1,1158 +1,1917 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ho Chi Minh City | The Expat Edits</title>
-<meta
-    name="description"
-    content="Ho Chi Minh City — a weekend of walking, street food, shopping, historic landmarks and the extraordinary energy of Saigon."
->
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
->
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-    crossorigin
->
-<link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
->
-<link
-    rel="stylesheet"
-    href="style-new.css"
->
-<link
-    rel="stylesheet"
-    href="style-editions-new.css"
->
+<meta name="description" content="Discover Ho Chi Minh City with The Expat Edits. Our first-hand guide to Fusion Suites Saigon, District 1, The Cafe Apartments, local pho, historic landmarks and the energy of Saigon.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style-new.css">
+<link rel="stylesheet" href="style-editions-new.css">
+
 <style>
 /* =========================================================
    HO CHI MINH CITY
-   Singapore1 Editorial Master
+   KOMODO EDITORIAL MASTER
 ========================================================= */
-.hochiminh-desktop {
+
+.hochiminh-desktop { display:block; }
+.hochiminh-mobile { display:none; }
+
+.hi-opening,
+.hi-editorial,
+.hi-hotel,
+.hi-story,
+.hi-info,
+.hi-recommendations,
+.hi-journal,
+.hi-map,
+.hi-end { box-sizing:border-box; }
+
+.hi-editorial img,
+.hi-story img {
     display:block;
+    width:100%;
+    height:auto;
 }
-.hochiminh-mobile {
-    display:none;
+
+.hi-rule {
+    width:42px;
+    height:1px;
+    margin:20px 0;
+    background:currentColor;
+    opacity:.65;
 }
+
+.hi-text p { margin-top:0; }
+
+.hi-kicker {
+    font-size:.7rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    opacity:.7;
+}
+
 /* =========================================================
    DESKTOP
 ========================================================= */
+
 @media (min-width:769px) {
-    :root {
-        --sg-width:min(1400px, calc(100% - 80px));
-        --sg-wide:min(1500px, calc(100% - 80px));
-        --sg-gap:22px;
-        --sg-line:rgba(255,255,255,.12);
-        --sg-line-strong:rgba(255,255,255,.16);
-    }
-    /* -----------------------------------------------------
-       OPENING
-    ----------------------------------------------------- */
-    .sg-opening {
-        width:var(--sg-wide);
-        margin:0 auto;
-        padding:0 0 90px;
-        display:grid;
-        grid-template-columns:1.25fr .75fr;
-        gap:75px;
-        align-items:center;
-    }
-    .sg-opening-hero {
-        position:relative;
-        overflow:hidden;
-        width:100%;
-        background:#090909;
-    }
-    .sg-opening-hero img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-    .sg-opening-hero::after {
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:0;
-        right:0;
-        bottom:0;
-        height:38%;
-        pointer-events:none;
-        background:linear-gradient(
-            to bottom,
-            rgba(9,9,9,0) 0%,
-            rgba(9,9,9,.22) 28%,
-            rgba(9,9,9,.55) 55%,
-            rgba(9,9,9,.82) 78%,
-            #242320 100%
-        );
-    }
-    .sg-opening-hero .edition-hero-overlay {
-        position:absolute;
-        z-index:2;
-        left:55px;
-        right:55px;
-        bottom:50px;
-    }
-    .sg-opening-intro {
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        padding:50px 35px 50px 5px;
-    }
-    .sg-opening-intro h2 {
-        margin:0 0 28px;
-    }
-    .sg-opening-intro-copy {
-        max-width:560px;
-    }
-    .sg-opening-intro-copy p {
-        margin:0 0 20px;
-    }
-    /* -----------------------------------------------------
-       MAIN EDITORIAL CANVAS
-    ----------------------------------------------------- */
-    .sg-editorial {
-        width:var(--sg-width);
-        margin:0 auto;
-    }
-    .sg-editorial-section {
-        padding:70px 0;
-    }
-    .sg-grid,
-    .sg-final-grid {
-        display:grid;
-        grid-template-columns:repeat(12,minmax(0,1fr));
-        column-gap:var(--sg-gap);
-        row-gap:42px;
-        align-items:start;
-    }
-    .sg-grid img,
-    .sg-final-grid img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-    .sg-text {
-        align-self:center;
-    }
-    .sg-text p {
-        margin-top:0;
-    }
-    .sg-text h2,
-    .sg-text h3 {
-        margin-top:0;
-    }
-    .sg-text .section-label {
-        margin-bottom:12px;
-    }
-    .sg-rule {
-        width:42px;
-        height:1px;
-        margin:20px 0;
-        background:currentColor;
-        opacity:.65;
-    }
-    /* -----------------------------------------------------
-       ROW 1
-    ----------------------------------------------------- */
-    .sg-r1-text {
-        grid-column:1 / span 3;
-    }
-    .sg-r1-img1 {
-        grid-column:4 / span 5;
-        width:88%;
-    }
-    .sg-r1-img2 {
-        grid-column:9 / span 4;
-        width:90%;
-        margin-left:auto;
-        padding-top:55px;
-    }
-    /* -----------------------------------------------------
-       ROW 2
-    ----------------------------------------------------- */
-    .sg-r2-img1 {
-        grid-column:1 / span 3;
-        padding-top:25px;
-    }
-    .sg-r2-text {
-        grid-column:4 / span 3;
-        padding:0 8px;
-    }
-    .sg-r2-img2 {
-        grid-column:7 / span 3;
-    }
-    .sg-r2-text2 {
-        grid-column:10 / span 3;
-        padding-top:55px;
-    }
-    /* -----------------------------------------------------
-       ROW 3
-    ----------------------------------------------------- */
-    .sg-r3-text {
-        grid-column:1 / span 3;
-        padding-top:20px;
-    }
-    .sg-r3-img1 {
-        grid-column:4 / span 4;
-    }
-    .sg-r3-img2 {
-        grid-column:8 / span 2;
-        padding-top:55px;
-    }
-    .sg-r3-img3 {
-        grid-column:10 / span 3;
-        padding-top:10px;
-    }
-    /* -----------------------------------------------------
-       ROW 4
-       One photograph only because this Edition has
-       eight photographs and we never duplicate imagery.
-    ----------------------------------------------------- */
-    .sg-r4-img1 {
-        grid-column:1 / span 4;
-    }
-    .sg-r4-text {
-        grid-column:5 / span 3;
-        padding:20px 5px 0;
-    }
-    /* -----------------------------------------------------
-       FINAL PHOTOGRAPHIC FIELD
-    ----------------------------------------------------- */
-    .sg-final-heading {
-        grid-column:1 / span 3;
-        padding-top:30px;
-    }
-    .sg-final-img1 {
-        grid-column:4 / span 4;
-    }
-    /* -----------------------------------------------------
-       LOCAL INFORMATION
-    ----------------------------------------------------- */
-    .sg-info {
-        margin:20px 0 70px;
-        padding:60px 0;
-        border-top:1px solid var(--sg-line);
-        border-bottom:1px solid var(--sg-line);
-    }
-    .sg-info-grid {
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:70px;
-    }
-    .sg-info-item h3 {
-        margin:10px 0 12px;
-    }
-    /* -----------------------------------------------------
-       RECOMMENDATIONS
-    ----------------------------------------------------- */
-    .sg-recommendations {
-        padding:20px 0 100px;
-    }
-    .sg-recommendations-heading {
-        margin-bottom:50px;
-    }
-    .sg-recommendation-list {
-        max-width:950px;
-        border-top:1px solid var(--sg-line-strong);
-    }
-    .sg-recommendation {
-        display:grid;
-        grid-template-columns:70px 280px 1fr;
-        column-gap:35px;
-        align-items:start;
-        padding:30px 0;
-        border-bottom:1px solid var(--sg-line-strong);
-    }
-    .sg-rec-number {
-        padding-top:7px;
-        font-size:.72rem;
-        letter-spacing:.14em;
-        opacity:.6;
-    }
-    .sg-recommendation h3 {
-        margin:0;
-        font-size:1.35rem;
-    }
-    .sg-recommendation p {
-        margin:0;
-        max-width:520px;
-    }
-    /* -----------------------------------------------------
-       JOURNAL
-    ----------------------------------------------------- */
-    .sg-journal {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:90px;
-        align-items:center;
-        padding:70px 0;
-        border-top:1px solid var(--sg-line);
-    }
-    .sg-journal-copy p {
-        margin-top:0;
-    }
-    /* -----------------------------------------------------
-       MAP
-    ----------------------------------------------------- */
-    .sg-map {
-        padding:80px 0 70px;
-    }
-    .sg-map-inner {
-        max-width:650px;
-    }
-    /* -----------------------------------------------------
-       END NAVIGATION
-    ----------------------------------------------------- */
-    .sg-end {
-        display:flex;
-        justify-content:space-between;
-        padding:35px 0 70px;
-    }
+
+:root {
+    --hi-width:min(1400px,calc(100% - 80px));
+    --hi-wide:min(1500px,calc(100% - 80px));
+    --hi-gap:22px;
+    --hi-line:rgba(255,255,255,.12);
+    --hi-line-strong:rgba(255,255,255,.16);
 }
+
+/* OPENING */
+
+.hi-opening {
+    width:var(--hi-wide);
+    margin:0 auto;
+    padding:0 0 100px;
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:75px;
+    align-items:center;
+}
+
+.hi-opening-hero {
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    background:#090909;
+}
+
+.hi-opening-hero img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.hi-opening-hero::after {
+    content:"";
+    position:absolute;
+    z-index:1;
+    left:0;
+    right:0;
+    bottom:0;
+    height:38%;
+    pointer-events:none;
+    background:linear-gradient(
+        to bottom,
+        rgba(9,9,9,0) 0%,
+        rgba(9,9,9,.22) 28%,
+        rgba(9,9,9,.55) 55%,
+        rgba(9,9,9,.82) 78%,
+        #242320 100%
+    );
+}
+
+.hi-opening-hero .edition-hero-overlay {
+    position:absolute;
+    z-index:2;
+    left:55px;
+    right:55px;
+    bottom:50px;
+}
+
+.hi-opening-intro {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:50px 35px 50px 5px;
+}
+
+.hi-opening-intro h2 { margin:0 0 28px; }
+
+.hi-opening-intro-copy { max-width:560px; }
+
+.hi-opening-intro-copy p { margin:0 0 20px; }
+
+/* EDITORIAL CANVAS */
+
+.hi-editorial {
+    width:var(--hi-width);
+    margin:0 auto;
+}
+
+/* HOTEL FEATURE */
+
+.hi-hotel {
+    padding:90px 0 100px;
+    border-top:1px solid var(--hi-line);
+}
+
+.hi-hotel-heading {
+    max-width:750px;
+    margin-bottom:55px;
+}
+
+.hi-hotel-heading h2 { margin-bottom:20px; }
+
+.hi-hotel-layout {
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:90px;
+    align-items:center;
+}
+
+.hi-hotel-intro {
+    max-width:460px;
+}
+
+.hi-hotel-intro h3 { margin-top:0; }
+
+.hi-hotel-copy {
+    max-width:620px;
+}
+
+.hi-hotel-copy p { margin-top:0; }
+
+.hi-hotel-note {
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--hi-line);
+}
+
+/* HOTEL SETTING */
+
+.hi-setting {
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    gap:22px;
+    align-items:start;
+    padding:20px 0 90px;
+}
+
+.hi-setting-text {
+    grid-column:2 / span 4;
+    padding-top:25px;
+}
+
+.hi-setting-text p { max-width:440px; }
+
+.hi-setting-note {
+    grid-column:7 / span 5;
+    padding:55px 30px 0;
+}
+
+/* CITY STORY */
+
+.hi-story {
+    padding:90px 0;
+    border-top:1px solid var(--hi-line);
+}
+
+.hi-story-heading {
+    max-width:750px;
+    margin-bottom:60px;
+}
+
+.hi-story-grid {
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--hi-gap);
+    row-gap:65px;
+    align-items:start;
+}
+
+.hi-story-grid img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.hi-text { align-self:center; }
+
+.hi-text .section-label { margin-bottom:12px; }
+
+/* ROW 1 — THE CAFE APARTMENTS */
+
+.hi-r1-text {
+    grid-column:1 / span 3;
+    padding-top:20px;
+}
+
+.hi-r1-img1 { grid-column:4 / span 5; }
+
+.hi-r1-img2 {
+    grid-column:9 / span 4;
+    padding-top:65px;
+}
+
+/* ROW 2 — THE HISTORIC CITY */
+
+.hi-r2-img1 {
+    grid-column:1 / span 4;
+    padding-top:25px;
+}
+
+.hi-r2-text {
+    grid-column:5 / span 3;
+    padding:20px 5px 0;
+}
+
+.hi-r2-img2 {
+    grid-column:8 / span 5;
+    padding-top:45px;
+}
+
+/* ROW 3 — THE CAFE CULTURE */
+
+.hi-r3-text {
+    grid-column:1 / span 3;
+    padding-top:20px;
+}
+
+.hi-r3-img1 {
+    grid-column:4 / span 4;
+}
+
+.hi-r3-img2 {
+    grid-column:8 / span 3;
+    padding-top:55px;
+}
+
+/* ROW 4 — STREET LIFE AND FOOD */
+
+.hi-r4-img1 {
+    grid-column:1 / span 4;
+}
+
+.hi-r4-text {
+    grid-column:5 / span 3;
+    padding:25px 5px 0;
+}
+
+.hi-r4-img2 {
+    grid-column:8 / span 5;
+    padding-top:45px;
+}
+
+/* TRAVEL INFORMATION */
+
+.hi-info {
+    margin:30px 0 70px;
+    padding:65px 0;
+    border-top:1px solid var(--hi-line);
+    border-bottom:1px solid var(--hi-line);
+}
+
+.hi-info-heading {
+    max-width:650px;
+    margin-bottom:45px;
+}
+
+.hi-info-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:65px;
+}
+
+.hi-info-item h3 { margin:10px 0 12px; }
+
+.hi-info-item p { max-width:370px; }
+
+/* RECOMMENDATIONS */
+
+.hi-recommendations {
+    padding:30px 0 100px;
+}
+
+.hi-recommendations-heading { margin-bottom:50px; }
+
+.hi-recommendation-list {
+    max-width:1000px;
+    border-top:1px solid var(--hi-line-strong);
+}
+
+.hi-recommendation {
+    display:grid;
+    grid-template-columns:70px 280px 1fr;
+    column-gap:35px;
+    align-items:start;
+    padding:30px 0;
+    border-bottom:1px solid var(--hi-line-strong);
+}
+
+.hi-rec-number {
+    padding-top:7px;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    opacity:.6;
+}
+
+.hi-recommendation h3 {
+    margin:0;
+    font-size:1.35rem;
+}
+
+.hi-recommendation p {
+    margin:0;
+    max-width:550px;
+}
+
+/* OUR EDIT */
+
+.hi-journal {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+    padding:75px 0;
+    border-top:1px solid var(--hi-line);
+}
+
+.hi-journal-copy p { margin-top:0; }
+
+/* MAP */
+
+.hi-map { padding:80px 0 70px; }
+
+.hi-map-inner { max-width:650px; }
+
+/* END */
+
+.hi-end {
+    display:flex;
+    justify-content:space-between;
+    padding:35px 0 70px;
+}
+
+}
+
 /* =========================================================
    MOBILE
 ========================================================= */
+
 @media (max-width:768px) {
-    .hochiminh-desktop {
-        display:none;
-    }
-    .hochiminh-mobile {
-        display:block;
-    }
+
+.hochiminh-desktop { display:none; }
+.hochiminh-mobile { display:block; }
+
+.hi-mobile-hotel { padding:55px 0; }
+
+.hi-mobile-hotel-copy { padding:20px 0; }
+
+.hi-mobile-hotel-note {
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.16);
 }
+
+.hi-mobile-story { padding:55px 0; }
+
+.hi-mobile-story img {
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:22px;
+}
+
+.hi-mobile-story-copy { padding:20px 0 30px; }
+
+.hi-mobile-info { padding:55px 0; }
+
+.hi-mobile-info-item { margin-bottom:35px; }
+
+.hi-mobile-info-item:last-child { margin-bottom:0; }
+
+.hi-mobile-recommendations { padding:55px 0; }
+
+.hi-mobile-recommendation {
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.hi-mobile-recommendation h3 { margin:8px 0 12px; }
+
+.hi-mobile-journal { padding:55px 0; }
+
+}
+
 </style>
 </head>
+
 <body class="edition-page">
-<!-- =====================================================
-     HEADER
-====================================================== -->
+
+<!-- HEADER -->
+
 <header class="site-header">
 <div class="site-header-inner">
-    <a
-        href="/"
-        class="site-logo"
-    >
-        THE EXPAT EDITS
-    </a>
+
+    <a href="/" class="site-logo">THE EXPAT EDITS</a>
+
     <nav class="site-nav">
-        <a href="editions.html">
-            Editions
-        </a>
-        <a href="index-new.html#journal">
-            Journal
-        </a>
-        <a href="index-new.html#map">
-            Map
-        </a>
-        <a href="index-new.html#about">
-            About
-        </a>
+        <a href="editions.html">Editions</a>
+        <a href="index-new.html#journal">Journal</a>
+        <a href="index-new.html#map">Map</a>
+        <a href="index-new.html#about">About</a>
     </nav>
-    <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation"
-    >
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation">
         <span></span>
         <span></span>
         <span></span>
     </button>
+
 </div>
 </header>
+
+
 <!-- =====================================================
      DESKTOP EDITION
 ====================================================== -->
+
 <main class="hochiminh-desktop">
-<!-- =====================================================
-     OPENING SPREAD
-====================================================== -->
-<section class="sg-opening">
-    <div class="sg-opening-hero">
-        <img
-            src="hochiminh-hero.jpeg"
-            alt="Ho Chi Minh City"
-            loading="eager"
-        >
+
+<!-- OPENING -->
+
+<section class="hi-opening">
+
+    <div class="hi-opening-hero">
+        <img src="hochiminh-hero.jpeg"
+             alt="Ho Chi Minh City Hall and the statue in the heart of Saigon"
+             loading="eager">
+
         <div class="edition-hero-overlay">
-            <p class="eyebrow">
-                VIETNAM
-            </p>
-            <h1>
-                Ho Chi Minh City
-            </h1>
+            <p class="eyebrow">OUR VIETNAM</p>
+            <h1>Ho Chi Minh City</h1>
             <p class="edition-hero-subtitle">
                 A weekend in the heart of Saigon.
             </p>
         </div>
     </div>
-    <div class="sg-opening-intro">
-        <p class="section-label">
-            OUR HO CHI MINH CITY
-        </p>
+
+    <div class="hi-opening-intro">
+
+        <p class="section-label">OUR HO CHI MINH CITY</p>
+
         <h2>
-            A city that makes you want to keep walking.
+            A city best discovered on foot.
         </h2>
-        <div class="sg-opening-intro-copy">
+
+        <div class="hi-opening-intro-copy">
+
             <p>
-                We spent a weekend exploring Ho Chi Minh City on foot,
-                moving through District 1, stopping whenever something
-                caught our eye and gradually getting pulled into the
-                extraordinary rhythm of Saigon. It is busy, noisy and
-                occasionally chaotic — but somehow it all works.
+                We spent a weekend exploring Ho Chi Minh City,
+                wandering through District 1, stopping for
+                coffee, discovering little shops and finding
+                somewhere to eat whenever something caught
+                our attention.
             </p>
+
             <p>
-                The Central Post Office and Independence Palace gave us
-                glimpses of the city's history, while shops, street food,
-                cafés and Nguyen Hue kept drawing us back into the energy
-                of modern Saigon.
+                From the historic architecture around the
+                Central Post Office to the independent cafés
+                inside The Cafe Apartments, the city offered
+                something interesting at almost every turn.
             </p>
+
+            <p>
+                Add a walk along the river, a bowl of local pho
+                and the extraordinary energy of the streets,
+                and it made for a wonderfully full weekend.
+            </p>
+
         </div>
     </div>
+
 </section>
-<div class="sg-editorial">
+
+
+<div class="hi-editorial">
+
 <!-- =====================================================
-     FROM OUR CAMERA
+     THE STAY — FUSION SUITES
 ====================================================== -->
-<section class="sg-editorial-section">
-<div class="section-heading">
-    <p>
-        FROM OUR CAMERA
-    </p>
-    <h2>
-        Ho Chi Minh City, as we see it.
-    </h2>
-</div>
-<div class="sg-grid">
-    <!-- ROW 1 -->
-    <div class="sg-text sg-r1-text">
-        <p class="section-label">
-            THE CITY
-        </p>
-        <h3>
-            Saigon reveals itself one street at a time.
-        </h3>
-        <div class="sg-rule"></div>
+
+<section class="hi-hotel">
+
+    <div class="hi-hotel-heading">
+
+        <p class="section-label">THE STAY</p>
+
+        <h2>Fusion Suites Saigon.</h2>
+
         <p>
-            We quickly realised that the best way to experience
-            Ho Chi Minh City was simply to walk. District 1 gave us
-            the perfect starting point — shops, cafés, restaurants,
-            old buildings and an almost constant stream of life.
+            A smart, comfortable base for a family weekend
+            in the city.
         </p>
+
     </div>
-    <img
-        class="sg-r1-img1"
-        src="hochiminh1.jpeg"
-        alt="Ho Chi Minh City"
-        loading="eager"
-    >
-    <img
-        class="sg-r1-img2"
-        src="hochiminh2.jpeg"
-        alt="Street life in Ho Chi Minh City"
-        loading="eager"
-    >
-    <!-- ROW 2 -->
-    <img
-        class="sg-r2-img1"
-        src="hochiminh3.jpeg"
-        alt="Historic architecture in Ho Chi Minh City"
-        loading="lazy"
-    >
-    <div class="sg-text sg-r2-text">
-        <p class="section-label">
-            THE OLD SAIGON
-        </p>
-        <h3>
-            History sits comfortably among the chaos.
-        </h3>
-        <div class="sg-rule"></div>
-        <p>
-            The Saigon Central Post Office was one of those places that
-            stopped us in our tracks. Its grand architecture feels
-            completely different from the streets outside, yet somehow
-            belongs to the same city.
-        </p>
+
+    <div class="hi-hotel-layout">
+
+        <div class="hi-hotel-intro">
+
+            <p class="section-label">OUR EXPERIENCE</p>
+
+            <h3>
+                A good room makes all the difference.
+            </h3>
+
+            <div class="hi-rule"></div>
+
+            <p>
+                We stayed at Fusion Suites Saigon and were
+                very happy with our choice. The hotel was
+                smart and clean, and the room product was
+                particularly good.
+            </p>
+
+        </div>
+
+        <div class="hi-hotel-copy">
+
+            <p>
+                Travelling as a family, one of the things
+                we appreciated most was the room arrangement.
+                Having a separate room for the children
+                worked really well and gave everyone a
+                little more space.
+            </p>
+
+            <p>
+                The accommodation was well appointed and
+                offered the sort of comfortable, practical
+                base we wanted after spending the day
+                exploring the city.
+            </p>
+
+            <p>
+                For a short city break, we thought it
+                worked particularly well. We could head
+                out into District 1, enjoy the cafés,
+                shops and restaurants, and return somewhere
+                comfortable at the end of the day.
+            </p>
+
+            <div class="hi-hotel-note">
+
+                <p class="section-label">OUR VERDICT</p>
+
+                <p>
+                    We'd happily recommend Fusion Suites
+                    for families looking for smart,
+                    comfortable accommodation with
+                    a useful separate sleeping arrangement
+                    for the children.
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
-    <img
-        class="sg-r2-img2"
-        src="hochiminh4.jpeg"
-        alt="Ho Chi Minh City architecture"
-        loading="lazy"
-    >
-    <div class="sg-text sg-r2-text2">
-        <p>
-            Independence Palace offered another glimpse into the city's
-            past. Walking between these landmarks gave the weekend a
-            useful sense of perspective — modern Saigon moving at full
-            speed around pieces of its history.
-        </p>
-    </div>
-    <!-- ROW 3 -->
-    <div class="sg-text sg-r3-text">
-        <p class="section-label">
-            DISTRICT 1
-        </p>
-        <h3>
-            Walk first. Decide where you're going later.
-        </h3>
-        <div class="sg-rule"></div>
-        <p>
-            District 1 became our natural playground. We wandered
-            between shops, cafés and restaurants, stopping for food
-            whenever we fancied it and letting the streets dictate
-            the route.
-        </p>
-    </div>
-    <img
-        class="sg-r3-img1"
-        src="hochiminh5.jpeg"
-        alt="District 1 street scene"
-        loading="lazy"
-    >
-    <img
-        class="sg-r3-img2"
-        src="hochiminh6.jpeg"
-        alt="Shopping and street life in Ho Chi Minh City"
-        loading="lazy"
-    >
-    <img
-        class="sg-r3-img3"
-        src="hochiminh7.jpeg"
-        alt="Ho Chi Minh City street life"
-        loading="lazy"
-    >
-    <!-- ROW 4 -->
-    <img
-        class="sg-r4-img1"
-        src="hochiminh8.jpeg"
-        alt="Ho Chi Minh City at night"
-        loading="lazy"
-    >
-    <div class="sg-text sg-r4-text">
-        <p class="section-label">
-            AFTER DARK
-        </p>
-        <h3>
-            Then the city changes gear.
-        </h3>
-        <p>
-            As evening arrived, Nguyen Hue Walking Street became one
-            of our favourite places to be. The crowds gathered, the
-            lights came on and the energy seemed to rise another level.
-        </p>
-        <p>
-            And everywhere around it was the traffic — an extraordinary
-            river of motorbikes flowing through the city. At first it
-            looked completely chaotic. After a while, you started to
-            realise there was an almost perfect choreography to it.
-        </p>
-    </div>
-</div>
+
 </section>
-<!-- =====================================================
-     LOCAL INFORMATION
-====================================================== -->
-<section class="sg-info">
-<div class="sg-info-grid">
-    <div class="sg-info-item">
-        <p class="section-label">
-            BEST FOR
-        </p>
+
+
+<!-- THE SETTING -->
+
+<section class="hi-setting">
+
+    <div class="hi-text hi-setting-text">
+
+        <p class="section-label">THE SETTING</p>
+
         <h3>
-            A city weekend
+            District 1 is where we'd start.
         </h3>
+
+        <div class="hi-rule"></div>
+
         <p>
-            Walk, eat, shop and explore without needing a packed
-            itinerary.
+            Much of what we enjoyed about Ho Chi Minh City
+            came from simply getting out and exploring.
+            District 1 gave us plenty to discover,
+            with shops, independent cafés, restaurants
+            and historic landmarks all part of the mix.
         </p>
+
+        <p>
+            We also really enjoyed walking along the river.
+            It was a lovely change of pace from the busy
+            streets and gave us another perspective
+            on the city.
+        </p>
+
     </div>
-    <div class="sg-info-item">
-        <p class="section-label">
-            THE FEELING
-        </p>
+
+    <div class="hi-text hi-setting-note">
+
+        <p class="section-label">THE WAY TO EXPLORE</p>
+
         <h3>
-            Energetic &amp; electric
+            No complicated itinerary required.
         </h3>
+
         <p>
-            Busy streets, incredible traffic and an energy that
-            continues well into the evening.
+            Our favourite approach was to head out on foot,
+            take our time and let the neighbourhood
+            decide where we went next.
         </p>
+
+        <p>
+            The best discoveries were often the places
+            we hadn't planned to visit.
+        </p>
+
     </div>
-    <div class="sg-info-item">
-        <p class="section-label">
-            OUR BASE
-        </p>
-        <h3>
-            District 1
-        </h3>
+
+</section>
+
+
+<!-- =====================================================
+     DESTINATION STORY
+====================================================== -->
+
+<section class="hi-story">
+
+    <div class="hi-story-heading">
+
+        <p class="section-label">BEYOND THE HOTEL</p>
+
+        <h2>Discovering Saigon.</h2>
+
         <p>
-            A brilliant starting point for shopping, food, landmarks
-            and exploring the city on foot.
+            A little history, independent cafés, colourful
+            streets and some very good food.
         </p>
+
     </div>
-</div>
+
+    <div class="hi-story-grid">
+
+        <!-- THE CAFE APARTMENTS -->
+
+        <div class="hi-text hi-r1-text">
+
+            <p class="section-label">THE CAFE APARTMENTS</p>
+
+            <h3>
+                A building full of little discoveries.
+            </h3>
+
+            <div class="hi-rule"></div>
+
+            <p>
+                One of the places we particularly enjoyed
+                exploring was The Cafe Apartments on
+                Nguyen Hue Walking Street.
+            </p>
+
+            <p>
+                The building is filled with independent
+                cafés, little shops and interesting
+                spaces. It's exactly the sort of place
+                we love wandering around, taking our
+                time and seeing what we find.
+            </p>
+
+        </div>
+
+        <img class="hi-r1-img1"
+             src="hochiminh1.jpeg"
+             alt="The Cafe Apartments on Nguyen Hue"
+             loading="lazy">
+
+        <img class="hi-r1-img2"
+             src="hochiminh3.jpeg"
+             alt="The colourful independent cafés and shops of Saigon"
+             loading="lazy">
+
+
+        <!-- THE HISTORIC CITY -->
+
+        <img class="hi-r2-img1"
+             src="hochiminh-hero.jpeg"
+             alt="Ho Chi Minh City Hall and the statue"
+             loading="lazy">
+
+        <div class="hi-text hi-r2-text">
+
+            <p class="section-label">THE OLD SAIGON</p>
+
+            <h3>
+                History around every corner.
+            </h3>
+
+            <div class="hi-rule"></div>
+
+            <p>
+                We visited the Saigon Central Post Office,
+                one of the city's most recognisable
+                historic landmarks.
+            </p>
+
+            <p>
+                It was a lovely way to take in another
+                side of the city, where the architecture
+                and history provide a contrast to the
+                pace of modern Saigon.
+            </p>
+
+        </div>
+
+        <img class="hi-r2-img2"
+             src="hochiminh5.jpeg"
+             alt="The historic city centre surrounded by flowers"
+             loading="lazy">
+
+
+        <!-- CAFE CULTURE -->
+
+        <div class="hi-text hi-r3-text">
+
+            <p class="section-label">CAFE CULTURE</p>
+
+            <h3>
+                Time to slow down.
+            </h3>
+
+            <div class="hi-rule"></div>
+
+            <p>
+                The cafés were another part of the
+                experience we loved. We enjoyed
+                stopping for a drink, taking in
+                the surroundings and watching
+                the city go by.
+            </p>
+
+            <p>
+                The independent café scene is
+                a great reason to leave a little
+                room in the day for unplanned stops.
+            </p>
+
+        </div>
+
+        <img class="hi-r3-img1"
+             src="hochiminh4.jpeg"
+             alt="A refreshing drink at a Saigon café"
+             loading="lazy">
+
+        <img class="hi-r3-img2"
+             src="hochiminh2.jpeg"
+             alt="Flowers and greenery in the city"
+             loading="lazy">
+
+
+        <!-- STREET LIFE AND FOOD -->
+
+        <img class="hi-r4-img1"
+             src="hochiminh7.jpeg"
+             alt="Everyday street life in Ho Chi Minh City"
+             loading="lazy">
+
+        <div class="hi-text hi-r4-text">
+
+            <p class="section-label">THE LOCAL EXPERIENCE</p>
+
+            <h3>
+                A city best enjoyed at street level.
+            </h3>
+
+            <div class="hi-rule"></div>
+
+            <p>
+                Some of our favourite moments were
+                the simple ones: wandering through
+                the streets, browsing the shops
+                and finding somewhere to stop
+                for something to eat.
+            </p>
+
+            <p>
+                Trying local pho was a real highlight.
+                A bowl of Vietnamese noodle soup
+                is a pretty wonderful way to
+                experience the local food culture.
+            </p>
+
+        </div>
+
+        <img class="hi-r4-img2"
+             src="hochiminh8.jpeg"
+             alt="A bowl of traditional Vietnamese pho"
+             loading="lazy">
+
+    </div>
+
 </section>
+
+
 <!-- =====================================================
-     RECOMMENDATIONS
+     PLANNING YOUR VISIT
 ====================================================== -->
-<section class="sg-recommendations">
-<div class="sg-recommendations-heading">
-    <p class="section-label">
-        OUR PICKS
-    </p>
-    <h2>
-        Six things we loved.
-    </h2>
-</div>
-<div class="sg-recommendation-list">
-    <article class="sg-recommendation">
-        <span class="sg-rec-number">
-            01
-        </span>
-        <h3>
-            District 1
-        </h3>
-        <p>
-            Our natural base for shopping, restaurants, cafés and
-            the sheer energy of the city.
-        </p>
-    </article>
-    <article class="sg-recommendation">
-        <span class="sg-rec-number">
-            02
-        </span>
-        <h3>
-            Saigon Central Post Office
-        </h3>
-        <p>
-            A beautiful historic landmark and an impressive reminder
-            of the city's architectural past.
-        </p>
-    </article>
-    <article class="sg-recommendation">
-        <span class="sg-rec-number">
-            03
-        </span>
-        <h3>
-            Independence Palace
-        </h3>
-        <p>
-            A fascinating window into Vietnam's modern history and
-            an essential stop in the centre.
-        </p>
-    </article>
-    <article class="sg-recommendation">
-        <span class="sg-rec-number">
-            04
-        </span>
-        <h3>
-            Nguyen Hue
-        </h3>
-        <p>
-            Go after dark, when the crowds gather and the city feels
-            at its most alive.
-        </p>
-    </article>
-    <article class="sg-recommendation">
-        <span class="sg-rec-number">
-            05
-        </span>
-        <h3>
-            Street Food
-        </h3>
-        <p>
-            One of the pleasures of walking Saigon is being able to
-            stop whenever something smells too good to ignore.
-        </p>
-    </article>
-    <article class="sg-recommendation">
-        <span class="sg-rec-number">
-            06
-        </span>
-        <h3>
-            Walk the City
-        </h3>
-        <p>
-            Our favourite way to experience the contrasts between
-            architecture, shops, food and street life.
-        </p>
-    </article>
-</div>
-</section>
-<!-- =====================================================
-     JOURNAL
-====================================================== -->
-<section class="sg-journal">
-<div>
-    <p class="section-label">
-        FROM THE JOURNAL
-    </p>
-    <h2>
-        Ho Chi Minh City makes you want to keep moving.
-    </h2>
-</div>
-<div class="sg-journal-copy">
-    <p>
-        There are cities where you need a plan. Ho Chi Minh City
-        wasn't one of them. We spent the weekend walking, following
-        whatever looked interesting and letting the city gradually
-        reveal itself.
-    </p>
-    <p>
-        District 1 became our starting point, with its shops,
-        restaurants and cafés. The Central Post Office and
-        Independence Palace added a completely different layer,
-        reminders that beneath the modern energy is a city with
-        an extraordinary history.
-    </p>
-    <p>
-        Street food became part of the rhythm. So did shopping,
-        stopping to watch the traffic and simply taking in the
-        incredible amount of life happening around us.
-    </p>
-    <p>
-        By evening, Nguyen Hue was buzzing. The crowds had gathered
-        and the city seemed to turn the volume up. Motorbikes streamed
-        through the streets in seemingly impossible numbers, somehow
-        avoiding one another with remarkable precision.
-    </p>
-    <p>
-        That was our Ho Chi Minh City: walk, eat, look around,
-        stop, start again. A short weekend that somehow felt
-        completely full.
-    </p>
-</div>
-</section>
-<!-- =====================================================
-     MORE FROM OUR CAMERA
-====================================================== -->
-<section class="sg-editorial-section">
-<div class="sg-final-grid">
-    <div class="sg-final-heading">
-        <p class="section-label">
-            MORE FROM OUR CAMERA
-        </p>
+
+<section class="hi-info">
+
+    <div class="hi-info-heading">
+
+        <p class="section-label">PLANNING YOUR VISIT</p>
+
         <h2>
-            Saigon, in motion.
+            Making the most of a city break.
         </h2>
+
+        <p>
+            Ho Chi Minh City is a destination where
+            a little structure goes a long way,
+            but there's no need to plan every hour.
+        </p>
+
     </div>
-    <img
-        class="sg-final-img1"
-        src="hochiminh8.jpeg"
-        alt="Ho Chi Minh City at night"
-        loading="lazy"
-    >
-</div>
+
+    <div class="hi-info-grid">
+
+        <div class="hi-info-item">
+
+            <p class="section-label">HOW LONG TO STAY</p>
+
+            <h3>A weekend</h3>
+
+            <p>
+                We found a weekend was a lovely
+                introduction to the city. Enough
+                time to explore District 1,
+                visit the main landmarks, enjoy
+                the cafés and spend time eating
+                our way around Saigon.
+            </p>
+
+        </div>
+
+        <div class="hi-info-item">
+
+            <p class="section-label">WHERE TO BASE YOURSELF</p>
+
+            <h3>District 1</h3>
+
+            <p>
+                We'd suggest looking at accommodation
+                in and around District 1. It provides
+                a convenient starting point for
+                shopping, restaurants, cafés
+                and many of the central landmarks.
+            </p>
+
+        </div>
+
+        <div class="hi-info-item">
+
+            <p class="section-label">GETTING AROUND</p>
+
+            <h3>Explore on foot</h3>
+
+            <p>
+                Walking was our favourite way
+                to discover the city. Take your
+                time, explore the side streets
+                and stop whenever something
+                catches your attention.
+            </p>
+
+        </div>
+
+        <div class="hi-info-item">
+
+            <p class="section-label">WHAT TO EAT</p>
+
+            <h3>Start with pho</h3>
+
+            <p>
+                Trying local pho was one of
+                our highlights. There are also
+                plenty of opportunities to
+                discover cafés, street food
+                and local restaurants as you
+                explore.
+            </p>
+
+        </div>
+
+        <div class="hi-info-item">
+
+            <p class="section-label">WHAT TO EXPLORE</p>
+
+            <h3>Old and new Saigon</h3>
+
+            <p>
+                Combine the Central Post Office
+                and historic city centre with
+                the shops, cafés and independent
+                spaces around Nguyen Hue.
+            </p>
+
+        </div>
+
+        <div class="hi-info-item">
+
+            <p class="section-label">WHO WILL LOVE IT</p>
+
+            <h3>Curious travellers</h3>
+
+            <p>
+                Couples and families who enjoy
+                walking, eating, shopping,
+                architecture and experiencing
+                the everyday energy of a
+                big Asian city.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
+
+
 <!-- =====================================================
-     MAP
+     OUR RECOMMENDATIONS
 ====================================================== -->
-<section class="sg-map">
-<div class="sg-map-inner">
-    <p class="section-label">
-        ON THE MAP
-    </p>
-    <h2>
-        Ho Chi Minh City.
-    </h2>
-    <p>
-        Vietnam's endlessly energetic southern city, where historic
-        landmarks, buzzing districts, incredible street food and a
-        seemingly endless stream of motorbikes come together.
-    </p>
-</div>
+
+<section class="hi-recommendations">
+
+    <div class="hi-recommendations-heading">
+
+        <p class="section-label">OUR RECOMMENDATIONS</p>
+
+        <h2>Places &amp; experiences we loved.</h2>
+
+    </div>
+
+    <div class="hi-recommendation-list">
+
+        <article class="hi-recommendation">
+
+            <span class="hi-rec-number">01</span>
+
+            <h3>Fusion Suites Saigon</h3>
+
+            <p>
+                Our hotel choice. Smart, clean and
+                very well appointed, with a room
+                arrangement that worked particularly
+                well for our family.
+            </p>
+
+        </article>
+
+        <article class="hi-recommendation">
+
+            <span class="hi-rec-number">02</span>
+
+            <h3>The Cafe Apartments</h3>
+
+            <p>
+                A lovely building to explore on
+                Nguyen Hue, filled with independent
+                cafés, shops and interesting
+                little spaces.
+            </p>
+
+        </article>
+
+        <article class="hi-recommendation">
+
+            <span class="hi-rec-number">03</span>
+
+            <h3>Saigon Central Post Office</h3>
+
+            <p>
+                A beautiful historic landmark
+                and well worth including while
+                exploring the centre.
+            </p>
+
+        </article>
+
+        <article class="hi-recommendation">
+
+            <span class="hi-rec-number">04</span>
+
+            <h3>Nguyen Hue</h3>
+
+            <p>
+                Spend some time around the
+                pedestrian boulevard, particularly
+                if you enjoy browsing cafés
+                and shops.
+            </p>
+
+        </article>
+
+        <article class="hi-recommendation">
+
+            <span class="hi-rec-number">05</span>
+
+            <h3>Local Pho</h3>
+
+            <p>
+                One of our favourite food
+                experiences. Make time to
+                try a proper bowl of local
+                Vietnamese pho.
+            </p>
+
+        </article>
+
+        <article class="hi-recommendation">
+
+            <span class="hi-rec-number">06</span>
+
+            <h3>The Saigon River</h3>
+
+            <p>
+                We really enjoyed walking
+                along the river. A lovely
+                change of pace from the
+                busy streets of District 1.
+            </p>
+
+        </article>
+
+    </div>
+
 </section>
+
+
 <!-- =====================================================
-     END
+     OUR EDIT
 ====================================================== -->
-<section class="sg-end">
-<a
-    href="index-new.html"
-    class="text-link"
->
-    ← Back to Home
-</a>
-<a
-    href="editions.html"
-    class="text-link"
->
-    View All Editions →
-</a>
-</section>
-</div>
-</main>
-<!-- =====================================================
-     MOBILE
-====================================================== -->
-<main class="hochiminh-mobile">
-<section
-    class="edition-hero"
-    style="background-image:url('hochiminh-hero.jpeg');"
->
-<div class="edition-hero-overlay">
-    <p class="eyebrow">
-        VIETNAM
-    </p>
-    <h1>
-        Ho Chi Minh City
-    </h1>
-    <p class="edition-hero-subtitle">
-        A weekend in the heart of Saigon.
-    </p>
-</div>
-</section>
-<section class="edition-intro section">
-<div class="container">
-<div class="edition-intro-inner">
-    <p class="section-label">
-        OUR HO CHI MINH CITY
-    </p>
-    <h2>
-        A city best discovered on foot.
-    </h2>
-    <div class="edition-intro-text">
-        <p>
-            We spent a weekend exploring Ho Chi Minh City on foot,
-            moving between its different districts and getting a
-            feel for the energy that makes Saigon so addictive.
-            From the grand old Central Post Office and Independence
-            Palace to the buzzing streets of District 1, every
-            corner seemed to offer something different.
-        </p>
-        <p>
-            Evenings belonged to Nguyen Hue Walking Street, while
-            street food, shopping and the extraordinary choreography
-            of the city's endless stream of motorbikes kept us
-            moving.
-        </p>
-    </div>
-</div>
-</div>
-</section>
-<section class="edition-photo-story section">
-<div class="container">
-<div class="section-heading edition-photo-heading">
-    <p>
-        THE PHOTO STORY
-    </p>
-    <h2>
-        Ho Chi Minh City, as we saw it.
-    </h2>
-</div>
-<div class="edition-photo-mosaic">
-    <img
-        src="hochiminh1.jpeg"
-        alt="Ho Chi Minh City"
-        loading="eager"
-    >
-    <img
-        src="hochiminh2.jpeg"
-        alt="Ho Chi Minh City street life"
-        loading="lazy"
-    >
-    <img
-        src="hochiminh3.jpeg"
-        alt="Historic architecture in Ho Chi Minh City"
-        loading="lazy"
-    >
-    <img
-        src="hochiminh4.jpeg"
-        alt="Ho Chi Minh City architecture"
-        loading="lazy"
-    >
-    <img
-        src="hochiminh5.jpeg"
-        alt="District 1 street scene"
-        loading="lazy"
-    >
-    <img
-        src="hochiminh6.jpeg"
-        alt="Shopping and street life in Ho Chi Minh City"
-        loading="lazy"
-    >
-    <img
-        src="hochiminh7.jpeg"
-        alt="Ho Chi Minh City street life"
-        loading="lazy"
-    >
-    <img
-        src="hochiminh8.jpeg"
-        alt="Ho Chi Minh City at night"
-        loading="lazy"
-    >
-</div>
-</div>
-</section>
-<section class="edition-local-info">
-<div class="container">
-<div class="edition-local-info-grid">
-    <div class="edition-local-info-item">
-        <p class="section-label">
-            BEST FOR
-        </p>
-        <h3>
-            A city weekend
-        </h3>
-        <p>
-            Walk, eat, shop and explore without needing a packed
-            itinerary.
-        </p>
-    </div>
-    <div class="edition-local-info-item">
-        <p class="section-label">
-            THE FEELING
-        </p>
-        <h3>
-            Energetic &amp; electric
-        </h3>
-        <p>
-            Busy streets, incredible traffic and an energy that
-            continues well into the evening.
-        </p>
-    </div>
-    <div class="edition-local-info-item">
-        <p class="section-label">
-            OUR BASE
-        </p>
-        <h3>
-            District 1
-        </h3>
-        <p>
-            A great starting point for shopping, food, landmarks
-            and exploring the city on foot.
-        </p>
-    </div>
-</div>
-</div>
-</section>
-<section class="edition-recommendations section">
-<div class="container">
-<div class="section-heading">
-    <p>
-        OUR PICKS
-    </p>
-    <h2>
-        Six things we loved.
-    </h2>
-</div>
-<div class="edition-recommendations-grid">
-    <article class="edition-recommendation">
-        <p class="story-number">
-            01
-        </p>
-        <h3>
-            District 1
-        </h3>
-        <p>
-            The place we kept coming back to for shopping,
-            restaurants, cafés and the sheer energy of the city.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            02
-        </p>
-        <h3>
-            Saigon Central Post Office
-        </h3>
-        <p>
-            One of the city's great architectural landmarks and
-            an easy stop while exploring the centre.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            03
-        </p>
-        <h3>
-            Independence Palace
-        </h3>
-        <p>
-            A fascinating glimpse into Vietnam's modern history
-            and one of the city's most recognisable landmarks.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            04
-        </p>
-        <h3>
-            Nguyen Hue Walking Street
-        </h3>
-        <p>
-            Best enjoyed after dark, when the crowds gather and
-            the city really comes alive.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            05
-        </p>
-        <h3>
-            Street Food
-        </h3>
-        <p>
-            Superb, varied and seemingly everywhere. Some of our
-            favourite moments came from simply stopping to eat.
-        </p>
-    </article>
-    <article class="edition-recommendation">
-        <p class="story-number">
-            06
-        </p>
-        <h3>
-            Walk the City
-        </h3>
-        <p>
-            The best way we found to experience the contrast
-            between districts, architecture, shops, food and
-            street life.
-        </p>
-    </article>
-</div>
-</div>
-</section>
-<section class="edition-journal section">
-<div class="container">
-<div class="edition-journal-inner">
+
+<section class="hi-journal">
+
     <div>
-        <p class="section-label">
-            FROM THE JOURNAL
-        </p>
+
+        <p class="section-label">OUR EDIT</p>
+
         <h2>
-            Ho Chi Minh City makes you want to keep moving.
+            A weekend best spent wandering.
         </h2>
+
     </div>
-    <div class="edition-journal-copy">
+
+    <div class="hi-journal-copy">
+
         <p>
-            There are cities where you need a plan. Ho Chi Minh
-            City wasn't one of them. We spent the weekend walking,
-            following whatever looked interesting and letting the
-            city gradually reveal itself.
+            Ho Chi Minh City was exactly the sort
+            of destination we enjoy for a short
+            break. We didn't need a packed itinerary
+            or a long list of things to tick off.
+            We simply headed out and explored.
         </p>
+
         <p>
-            District 1 became our starting point, with its shops,
-            restaurants and cafés. The Central Post Office and
-            Independence Palace added a completely different layer,
-            reminders that beneath the modern energy is a city with
-            an extraordinary history.
+            District 1 became our natural starting
+            point. We loved wandering around the
+            shops and cafés, particularly The Cafe
+            Apartments, and taking time to discover
+            places along the way.
         </p>
+
         <p>
-            Street food became part of the rhythm. So did shopping,
-            stopping to watch the traffic and simply taking in the
-            incredible amount of life happening around us.
+            The historic Central Post Office gave
+            us a glimpse of old Saigon, while
+            walking along the river provided
+            a welcome change of pace.
         </p>
+
         <p>
-            By evening, Nguyen Hue was buzzing. The crowds had
-            gathered and the city seemed to turn the volume up.
-            Motorbikes streamed through the streets in seemingly
-            impossible numbers, somehow avoiding one another with
-            remarkable precision.
+            And then there was the food. Trying
+            local pho was a highlight, as were
+            the little stops for coffee and
+            something to eat.
         </p>
+
+        <p>
+            Fusion Suites worked really well
+            for us as a family, giving us
+            a comfortable base to return to
+            after a day exploring.
+        </p>
+
+        <p>
+            Sometimes a weekend is all you need
+            to get a feel for a city. Saigon
+            certainly made us want to keep
+            exploring.
+        </p>
+
     </div>
-</div>
-</div>
+
 </section>
-<section class="edition-gallery section">
-<div class="container">
-<div class="section-heading">
-    <p>
-        MORE FROM THE CITY
-    </p>
-    <h2>
-        Saigon, in motion.
-    </h2>
-</div>
-<div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-    <img
-        src="hochiminh8.jpeg"
-        alt="Ho Chi Minh City at night"
-        loading="lazy"
-    >
-</div>
-</div>
+
+
+<!-- MAP -->
+
+<section class="hi-map">
+
+    <div class="hi-map-inner">
+
+        <p class="section-label">OUR MAP</p>
+
+        <h2>Ho Chi Minh City.</h2>
+
+        <p>
+            Our hotel, favourite neighbourhood,
+            cafés, historic landmarks and
+            experiences from a weekend
+            in the heart of Saigon.
+        </p>
+
+    </div>
+
 </section>
-<section class="edition-map section">
-<div class="container">
-<div class="edition-map-inner">
-    <p class="section-label">
-        ON THE MAP
-    </p>
-    <h2>
-        Ho Chi Minh City.
-    </h2>
-    <p>
-        Vietnam's endlessly energetic southern city, where historic
-        landmarks, buzzing districts, incredible street food and a
-        seemingly endless stream of motorbikes come together.
-    </p>
-</div>
-</div>
+
+
+<!-- END -->
+
+<section class="hi-end">
+
+    <a href="/" class="text-link">← Back to Home</a>
+
+    <a href="editions.html" class="text-link">View All Editions →</a>
+
 </section>
-<section class="edition-end">
-<a
-    href="index.html"
-    class="text-link"
->
-    ← Back to Home
-</a>
-<a
-    href="editions.html"
-    class="text-link"
->
-    View All Editions →
-</a>
-</section>
+
+</div>
 </main>
+
+
+<!-- =====================================================
+     MOBILE EDITION
+====================================================== -->
+
+<main class="hochiminh-mobile">
+
+<!-- HERO -->
+
+<section class="edition-hero"
+         style="background-image:url('hochiminh-hero.jpeg');">
+
+    <div class="edition-hero-overlay">
+
+        <p class="eyebrow">OUR VIETNAM</p>
+
+        <h1>Ho Chi Minh City</h1>
+
+        <p class="edition-hero-subtitle">
+            A weekend in the heart of Saigon.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="edition-intro section">
+
+    <div class="container">
+
+        <div class="edition-intro-inner">
+
+            <p class="section-label">OUR HO CHI MINH CITY</p>
+
+            <h2>A city best discovered on foot.</h2>
+
+            <div class="edition-intro-text">
+
+                <p>
+                    We spent a weekend exploring Ho Chi Minh
+                    City, wandering through District 1,
+                    stopping for coffee, discovering little
+                    shops and finding somewhere to eat
+                    whenever something caught our attention.
+                </p>
+
+                <p>
+                    From the historic architecture around
+                    the Central Post Office to the independent
+                    cafés inside The Cafe Apartments,
+                    the city offered something interesting
+                    at almost every turn.
+                </p>
+
+                <p>
+                    Add a walk along the river, a bowl
+                    of local pho and the extraordinary
+                    energy of the streets, and it made
+                    for a wonderfully full weekend.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOTEL -->
+
+<section class="hi-mobile-hotel section">
+
+    <div class="container">
+
+        <p class="section-label">THE STAY</p>
+
+        <h2>Fusion Suites Saigon.</h2>
+
+        <p>
+            A smart, comfortable base for a family
+            weekend in the city.
+        </p>
+
+        <div class="hi-mobile-hotel-copy">
+
+            <p class="section-label">OUR EXPERIENCE</p>
+
+            <h3>A good room makes all the difference.</h3>
+
+            <p>
+                We stayed at Fusion Suites Saigon
+                and were very happy with our choice.
+                The hotel was smart and clean,
+                and the room product was particularly good.
+            </p>
+
+            <p>
+                Travelling as a family, one of the
+                things we appreciated most was
+                the room arrangement. Having
+                a separate room for the children
+                worked really well and gave
+                everyone a little more space.
+            </p>
+
+            <p>
+                The accommodation was well appointed
+                and offered the sort of comfortable,
+                practical base we wanted after
+                spending the day exploring the city.
+            </p>
+
+            <p>
+                For a short city break, we thought
+                it worked particularly well.
+                We could head out into District 1,
+                enjoy the cafés, shops and restaurants,
+                and return somewhere comfortable
+                at the end of the day.
+            </p>
+
+            <div class="hi-mobile-hotel-note">
+
+                <p class="section-label">OUR VERDICT</p>
+
+                <p>
+                    We'd happily recommend Fusion Suites
+                    for families looking for smart,
+                    comfortable accommodation with
+                    a useful separate sleeping arrangement
+                    for the children.
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="section-label">THE SETTING</p>
+
+        <h3>District 1 is where we'd start.</h3>
+
+        <p>
+            Much of what we enjoyed about Ho Chi Minh
+            City came from simply getting out and
+            exploring. District 1 gave us plenty
+            to discover, with shops, independent
+            cafés, restaurants and historic
+            landmarks all part of the mix.
+        </p>
+
+        <p>
+            We also really enjoyed walking along
+            the river. It was a lovely change
+            of pace from the busy streets and
+            gave us another perspective on the city.
+        </p>
+
+        <p>
+            Our favourite approach was to head
+            out on foot, take our time and let
+            the neighbourhood decide where
+            we went next.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- DESTINATION STORY -->
+
+<section class="hi-mobile-story section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>BEYOND THE HOTEL</p>
+
+            <h2>Discovering Saigon.</h2>
+
+        </div>
+
+
+        <!-- CAFE APARTMENTS -->
+
+        <div class="hi-mobile-story-copy">
+
+            <p class="section-label">THE CAFE APARTMENTS</p>
+
+            <h3>A building full of little discoveries.</h3>
+
+            <p>
+                One of the places we particularly
+                enjoyed exploring was The Cafe
+                Apartments on Nguyen Hue Walking
+                Street.
+            </p>
+
+            <p>
+                The building is filled with
+                independent cafés, little shops
+                and interesting spaces. It's
+                exactly the sort of place we
+                love wandering around, taking
+                our time and seeing what we find.
+            </p>
+
+        </div>
+
+        <img src="hochiminh1.jpeg"
+             alt="The Cafe Apartments on Nguyen Hue"
+             loading="lazy">
+
+        <img src="hochiminh3.jpeg"
+             alt="The colourful independent cafés and shops of Saigon"
+             loading="lazy">
+
+
+        <!-- HISTORIC CITY -->
+
+        <div class="hi-mobile-story-copy">
+
+            <p class="section-label">THE OLD SAIGON</p>
+
+            <h3>History around every corner.</h3>
+
+            <p>
+                We visited the Saigon Central
+                Post Office, one of the city's
+                most recognisable historic
+                landmarks.
+            </p>
+
+            <p>
+                It was a lovely way to take
+                in another side of the city,
+                where the architecture and
+                history provide a contrast
+                to the pace of modern Saigon.
+            </p>
+
+        </div>
+
+        <img src="hochiminh5.jpeg"
+             alt="The historic city centre surrounded by flowers"
+             loading="lazy">
+
+        <img src="hochiminh-hero.jpeg"
+             alt="Ho Chi Minh City Hall and the statue"
+             loading="lazy">
+
+
+        <!-- CAFE CULTURE -->
+
+        <div class="hi-mobile-story-copy">
+
+            <p class="section-label">CAFE CULTURE</p>
+
+            <h3>Time to slow down.</h3>
+
+            <p>
+                The cafés were another part
+                of the experience we loved.
+                We enjoyed stopping for a drink,
+                taking in the surroundings
+                and watching the city go by.
+            </p>
+
+            <p>
+                The independent café scene
+                is a great reason to leave
+                a little room in the day
+                for unplanned stops.
+            </p>
+
+        </div>
+
+        <img src="hochiminh4.jpeg"
+             alt="A refreshing drink at a Saigon café"
+             loading="lazy">
+
+        <img src="hochiminh2.jpeg"
+             alt="Flowers and greenery in the city"
+             loading="lazy">
+
+
+        <!-- STREET LIFE AND FOOD -->
+
+        <div class="hi-mobile-story-copy">
+
+            <p class="section-label">THE LOCAL EXPERIENCE</p>
+
+            <h3>A city best enjoyed at street level.</h3>
+
+            <p>
+                Some of our favourite moments
+                were the simple ones: wandering
+                through the streets, browsing
+                the shops and finding somewhere
+                to stop for something to eat.
+            </p>
+
+            <p>
+                Trying local pho was a real
+                highlight. A bowl of Vietnamese
+                noodle soup is a pretty wonderful
+                way to experience the local
+                food culture.
+            </p>
+
+        </div>
+
+        <img src="hochiminh7.jpeg"
+             alt="Everyday street life in Ho Chi Minh City"
+             loading="lazy">
+
+        <img src="hochiminh8.jpeg"
+             alt="A bowl of traditional Vietnamese pho"
+             loading="lazy">
+
+    </div>
+
+</section>
+
+
+<!-- PLANNING YOUR VISIT -->
+
+<section class="hi-mobile-info section">
+
+    <div class="container">
+
+        <p class="section-label">PLANNING YOUR VISIT</p>
+
+        <h2>Making the most of a city break.</h2>
+
+        <p>
+            Ho Chi Minh City is a destination
+            where a little structure goes
+            a long way, but there's no need
+            to plan every hour.
+        </p>
+
+
+        <div class="hi-mobile-info-item">
+
+            <p class="section-label">HOW LONG TO STAY</p>
+
+            <h3>A weekend</h3>
+
+            <p>
+                We found a weekend was a lovely
+                introduction to the city.
+                Enough time to explore District 1,
+                visit the main landmarks, enjoy
+                the cafés and spend time eating
+                our way around Saigon.
+            </p>
+
+        </div>
+
+
+        <div class="hi-mobile-info-item">
+
+            <p class="section-label">WHERE TO BASE YOURSELF</p>
+
+            <h3>District 1</h3>
+
+            <p>
+                We'd suggest looking at accommodation
+                in and around District 1.
+                It provides a convenient starting
+                point for shopping, restaurants,
+                cafés and many of the central
+                landmarks.
+            </p>
+
+        </div>
+
+
+        <div class="hi-mobile-info-item">
+
+            <p class="section-label">GETTING AROUND</p>
+
+            <h3>Explore on foot</h3>
+
+            <p>
+                Walking was our favourite way
+                to discover the city.
+                Take your time, explore
+                the side streets and stop
+                whenever something catches
+                your attention.
+            </p>
+
+        </div>
+
+
+        <div class="hi-mobile-info-item">
+
+            <p class="section-label">WHAT TO EAT</p>
+
+            <h3>Start with pho</h3>
+
+            <p>
+                Trying local pho was one
+                of our highlights. There
+                are also plenty of opportunities
+                to discover cafés, street food
+                and local restaurants as
+                you explore.
+            </p>
+
+        </div>
+
+
+        <div class="hi-mobile-info-item">
+
+            <p class="section-label">WHAT TO EXPLORE</p>
+
+            <h3>Old and new Saigon</h3>
+
+            <p>
+                Combine the Central Post Office
+                and historic city centre with
+                the shops, cafés and independent
+                spaces around Nguyen Hue.
+            </p>
+
+        </div>
+
+
+        <div class="hi-mobile-info-item">
+
+            <p class="section-label">WHO WILL LOVE IT</p>
+
+            <h3>Curious travellers</h3>
+
+            <p>
+                Couples and families who enjoy
+                walking, eating, shopping,
+                architecture and experiencing
+                the everyday energy of a
+                big Asian city.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RECOMMENDATIONS -->
+
+<section class="hi-mobile-recommendations section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p>OUR RECOMMENDATIONS</p>
+
+            <h2>Places &amp; experiences we loved.</h2>
+
+        </div>
+
+
+        <article class="hi-mobile-recommendation">
+
+            <p class="story-number">01</p>
+
+            <h3>Fusion Suites Saigon</h3>
+
+            <p>
+                Our hotel choice. Smart, clean
+                and very well appointed, with
+                a room arrangement that worked
+                particularly well for our family.
+            </p>
+
+        </article>
+
+
+        <article class="hi-mobile-recommendation">
+
+            <p class="story-number">02</p>
+
+            <h3>The Cafe Apartments</h3>
+
+            <p>
+                A lovely building to explore
+                on Nguyen Hue, filled with
+                independent cafés, shops
+                and interesting little spaces.
+            </p>
+
+        </article>
+
+
+        <article class="hi-mobile-recommendation">
+
+            <p class="story-number">03</p>
+
+            <h3>Saigon Central Post Office</h3>
+
+            <p>
+                A beautiful historic landmark
+                and well worth including
+                while exploring the centre.
+            </p>
+
+        </article>
+
+
+        <article class="hi-mobile-recommendation">
+
+            <p class="story-number">04</p>
+
+            <h3>Nguyen Hue</h3>
+
+            <p>
+                Spend some time around
+                the pedestrian boulevard,
+                particularly if you enjoy
+                browsing cafés and shops.
+            </p>
+
+        </article>
+
+
+        <article class="hi-mobile-recommendation">
+
+            <p class="story-number">05</p>
+
+            <h3>Local Pho</h3>
+
+            <p>
+                One of our favourite food
+                experiences. Make time to
+                try a proper bowl of local
+                Vietnamese pho.
+            </p>
+
+        </article>
+
+
+        <article class="hi-mobile-recommendation">
+
+            <p class="story-number">06</p>
+
+            <h3>The Saigon River</h3>
+
+            <p>
+                We really enjoyed walking
+                along the river. A lovely
+                change of pace from the
+                busy streets of District 1.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- OUR EDIT -->
+
+<section class="hi-mobile-journal section">
+
+    <div class="container">
+
+        <p class="section-label">OUR EDIT</p>
+
+        <h2>A weekend best spent wandering.</h2>
+
+        <p>
+            Ho Chi Minh City was exactly
+            the sort of destination we
+            enjoy for a short break.
+            We didn't need a packed itinerary
+            or a long list of things to
+            tick off. We simply headed
+            out and explored.
+        </p>
+
+        <p>
+            District 1 became our natural
+            starting point. We loved
+            wandering around the shops
+            and cafés, particularly
+            The Cafe Apartments, and
+            taking time to discover
+            places along the way.
+        </p>
+
+        <p>
+            The historic Central Post Office
+            gave us a glimpse of old Saigon,
+            while walking along the river
+            provided a welcome change
+            of pace.
+        </p>
+
+        <p>
+            And then there was the food.
+            Trying local pho was a highlight,
+            as were the little stops for
+            coffee and something to eat.
+        </p>
+
+        <p>
+            Fusion Suites worked really
+            well for us as a family,
+            giving us a comfortable base
+            to return to after a day
+            exploring.
+        </p>
+
+        <p>
+            Sometimes a weekend is all
+            you need to get a feel for
+            a city. Saigon certainly
+            made us want to keep exploring.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MAP -->
+
+<section class="edition-map section">
+
+    <div class="container">
+
+        <div class="edition-map-inner">
+
+            <p class="section-label">OUR MAP</p>
+
+            <h2>Ho Chi Minh City.</h2>
+
+            <p>
+                Our hotel, favourite neighbourhood,
+                cafés, historic landmarks and
+                experiences from a weekend
+                in the heart of Saigon.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- END -->
+
+<section class="edition-end">
+
+    <a href="/" class="text-link">← Back to Home</a>
+
+    <a href="editions.html" class="text-link">View All Editions →</a>
+
+</section>
+
+</main>
+
+
 <!-- =====================================================
      FOOTER
 ====================================================== -->
+
 <footer class="site-footer">
+
 <div class="site-footer-inner">
+
     <div>
+
         <div class="footer-logo">
             THE EXPAT EDITS
         </div>
+
         <p class="footer-description">
             Travel, places &amp; observations from life abroad.
         </p>
+
     </div>
+
     <nav class="footer-nav">
-        <a href="editions.html">
-            Editions
-        </a>
-        <a href="index-new.html#journal">
-            Journal
-        </a>
-        <a href="index-new.html#map">
-            Map
-        </a>
-        <a href="index-new.html#about">
-            About
-        </a>
+
+        <a href="editions.html">Editions</a>
+
+        <a href="index-new.html#journal">Journal</a>
+
+        <a href="index-new.html#map">Map</a>
+
+        <a href="index-new.html#about">About</a>
+
     </nav>
-    <a
-        href="https://www.instagram.com/theexpatedits/"
-        class="footer-social"
-        target="_blank"
-        rel="noopener"
-    >
+
+    <a href="https://www.instagram.com/theexpatedits/"
+       class="footer-social"
+       target="_blank"
+       rel="noopener">
         Instagram
     </a>
+
     <p class="footer-copyright">
         © The Expat Edits
     </p>
+
 </div>
+
 </footer>
+
 </body>
 </html>

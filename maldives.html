@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,321 +6,482 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Maldives | The Expat Edits</title>
-
-<meta name="description" content="The Maldives through our eyes — One&Only Reethi Rah, extraordinary diving, island wildlife, beautiful pools and memorable evenings beside the water.">
+<meta name="description" content="Our Maldives Edition: a private beach villa at One&Only Reethi Rah, arriving by yacht, cycling the island, extraordinary diving and snorkelling with thousands of parrot fish.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style-new.css">
 <link rel="stylesheet" href="style-editions-new.css">
 
 <style>
-.maldives-desktop { display:block; }
-.maldives-mobile { display:none; }
+/* =========================================================
+   MALDIVES — HOTEL-LED EDITORIAL EDITION
+   Built around the approved Komodo Edition architecture.
+   Shared master CSS files remain untouched.
+========================================================= */
 
-@media (min-width:769px) {
-    :root {
-        --sg-width:min(1400px,calc(100% - 80px));
-        --sg-wide:min(1500px,calc(100% - 80px));
-        --sg-gap:22px;
-        --sg-line:rgba(255,255,255,.12);
-        --sg-line-strong:rgba(255,255,255,.16);
-    }
+.maldives-desktop{display:block}
+.maldives-mobile{display:none}
 
-    .sg-opening {
-        width:var(--sg-wide);
-        margin:0 auto;
-        padding:0 0 90px;
-        display:grid;
-        grid-template-columns:1.25fr .75fr;
-        gap:75px;
-        align-items:center;
-    }
-
-    .sg-opening-hero {
-        position:relative;
-        overflow:hidden;
-        width:100%;
-        background:#090909;
-    }
-
-    .sg-opening-hero img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-
-    .sg-opening-hero::after {
-        content:"";
-        position:absolute;
-        z-index:1;
-        left:0;
-        right:0;
-        bottom:0;
-        height:38%;
-        pointer-events:none;
-        background:linear-gradient(
-            to bottom,
-            rgba(9,9,9,0) 0%,
-            rgba(9,9,9,.22) 28%,
-            rgba(9,9,9,.55) 55%,
-            rgba(9,9,9,.82) 78%,
-            #242320 100%
-        );
-    }
-
-    .sg-opening-hero .edition-hero-overlay {
-        position:absolute;
-        z-index:2;
-        left:55px;
-        right:55px;
-        bottom:50px;
-    }
-
-    .sg-opening-intro {
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        padding:50px 35px 50px 5px;
-    }
-
-    .sg-opening-intro h2 { margin:0 0 28px; }
-
-    .sg-opening-intro-copy { max-width:560px; }
-
-    .sg-opening-intro-copy p { margin:0 0 18px; }
-
-    .sg-opening-intro-copy p:last-child { margin-bottom:0; }
-
-    .sg-editorial {
-        width:var(--sg-width);
-        margin:0 auto;
-    }
-
-    .sg-editorial-section { padding:70px 0; }
-
-    .sg-grid,
-    .sg-final-grid {
-        display:grid;
-        grid-template-columns:repeat(12,minmax(0,1fr));
-        column-gap:var(--sg-gap);
-        row-gap:42px;
-        align-items:start;
-    }
-
-    .sg-grid img,
-    .sg-final-grid img {
-        display:block;
-        width:100%;
-        height:auto;
-    }
-
-    .sg-text { align-self:center; }
-
-    .sg-text p { margin-top:0; }
-
-    .sg-text h2,
-    .sg-text h3 { margin-top:0; }
-
-    .sg-text .section-label { margin-bottom:12px; }
-
-    .sg-rule {
-        width:42px;
-        height:1px;
-        margin:20px 0;
-        background:currentColor;
-        opacity:.65;
-    }
-
-    .sg-r1-text { grid-column:1 / span 3; }
-
-    .sg-r1-img1 {
-        grid-column:4 / span 5;
-        width:88%;
-    }
-
-    .sg-r1-img2 {
-        grid-column:9 / span 4;
-        width:90%;
-        margin-left:auto;
-        padding-top:55px;
-    }
-
-    .sg-r2-img1 {
-        grid-column:1 / span 3;
-        padding-top:25px;
-    }
-
-    .sg-r2-text {
-        grid-column:4 / span 3;
-        padding:0 8px;
-    }
-
-    .sg-r2-img2 { grid-column:7 / span 3; }
-
-    .sg-r2-text2 {
-        grid-column:10 / span 3;
-        padding-top:55px;
-    }
-
-    .sg-r3-text {
-        grid-column:1 / span 3;
-        padding-top:20px;
-    }
-
-    .sg-r3-img1 { grid-column:4 / span 4; }
-
-    .sg-r3-img2 {
-        grid-column:8 / span 2;
-        padding-top:55px;
-    }
-
-    .sg-r3-img3 {
-        grid-column:10 / span 3;
-        padding-top:10px;
-    }
-
-    .sg-r4-img1 { grid-column:1 / span 4; }
-
-    .sg-r4-text {
-        grid-column:5 / span 3;
-        padding:20px 5px 0;
-    }
-
-    .sg-r4-img2 {
-        grid-column:8 / span 5;
-        padding-top:40px;
-    }
-
-    .sg-r5-text { grid-column:1 / span 3; }
-
-    .sg-r5-img1 {
-        grid-column:4 / span 5;
-        width:88%;
-    }
-
-    .sg-r5-img2 {
-        grid-column:9 / span 4;
-        width:90%;
-        margin-left:auto;
-        padding-top:45px;
-    }
-
-    .sg-info {
-        margin:20px 0 70px;
-        padding:60px 0;
-        border-top:1px solid var(--sg-line);
-        border-bottom:1px solid var(--sg-line);
-    }
-
-    .sg-info-grid {
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:70px;
-    }
-
-    .sg-info-item h3 { margin:10px 0 12px; }
-
-    .sg-recommendations { padding:20px 0 100px; }
-
-    .sg-recommendations-heading { margin-bottom:50px; }
-
-    .sg-recommendation-list {
-        max-width:950px;
-        border-top:1px solid var(--sg-line-strong);
-    }
-
-    .sg-recommendation {
-        display:grid;
-        grid-template-columns:70px 280px 1fr;
-        column-gap:35px;
-        align-items:start;
-        padding:30px 0;
-        border-bottom:1px solid var(--sg-line-strong);
-    }
-
-    .sg-rec-number {
-        padding-top:7px;
-        font-size:.72rem;
-        letter-spacing:.14em;
-        opacity:.6;
-    }
-
-    .sg-recommendation h3 {
-        margin:0;
-        font-size:1.35rem;
-    }
-
-    .sg-recommendation p {
-        margin:0;
-        max-width:520px;
-    }
-
-    .sg-journal {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:90px;
-        align-items:center;
-        padding:70px 0;
-        border-top:1px solid var(--sg-line);
-    }
-
-    .sg-journal-copy p { margin-top:0; }
-
-    .sg-final-heading {
-        grid-column:1 / span 3;
-        padding-top:30px;
-    }
-
-    .sg-final-img1 { grid-column:4 / span 4; }
-
-    .sg-final-img2 {
-        grid-column:8 / span 2;
-        padding-top:45px;
-    }
-
-    .sg-final-img3 { grid-column:10 / span 3; }
-
-    .sg-final-img4 {
-        grid-column:1 / span 3;
-        padding-top:25px;
-    }
-
-    .sg-final-img5 {
-        grid-column:4 / span 3;
-        padding-top:55px;
-    }
-
-    .sg-final-img6 { grid-column:7 / span 3; }
-
-    .sg-final-img7 {
-        grid-column:10 / span 3;
-        padding-top:30px;
-    }
-
-    .sg-final-img8 {
-        grid-column:3 / span 4;
-        padding-top:20px;
-    }
-
-    .sg-map { padding:80px 0 70px; }
-
-    .sg-map-inner { max-width:650px; }
-
-    .sg-end {
-        display:flex;
-        justify-content:space-between;
-        padding:35px 0 70px;
-    }
+.md-opening,.md-editorial,.md-hotel,.md-arrival,.md-info,
+.md-recommendations,.md-journal,.md-map,.md-end{
+    box-sizing:border-box;
 }
 
-@media (max-width:768px) {
-    .maldives-desktop { display:none; }
-    .maldives-mobile { display:block; }
+.md-editorial img,
+.md-hotel img,
+.md-arrival img{
+    display:block;
+    width:100%;
+    height:auto;
 }
+
+.md-rule{
+    width:42px;
+    height:1px;
+    margin:20px 0;
+    background:currentColor;
+    opacity:.65;
+}
+
+.md-text p{margin-top:0}
+.md-text h2,.md-text h3{margin-top:0}
+
+@media(min-width:769px){
+
+:root{
+    --md-width:min(1400px,calc(100% - 80px));
+    --md-wide:min(1500px,calc(100% - 80px));
+    --md-gap:22px;
+    --md-line:rgba(255,255,255,.12);
+    --md-line-strong:rgba(255,255,255,.16);
+}
+
+.md-opening{
+    width:var(--md-wide);
+    margin:0 auto;
+    padding:0 0 100px;
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:75px;
+    align-items:center;
+}
+
+.md-opening-hero{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    background:#090909;
+}
+
+.md-opening-hero img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.md-opening-hero:after{
+    content:"";
+    position:absolute;
+    z-index:1;
+    left:0;
+    right:0;
+    bottom:0;
+    height:38%;
+    pointer-events:none;
+    background:linear-gradient(
+        to bottom,
+        rgba(9,9,9,0),
+        rgba(9,9,9,.22) 28%,
+        rgba(9,9,9,.55) 55%,
+        rgba(9,9,9,.82) 78%,
+        #242320 100%
+    );
+}
+
+.md-opening-hero .edition-hero-overlay{
+    position:absolute;
+    z-index:2;
+    left:55px;
+    right:55px;
+    bottom:50px;
+}
+
+.md-opening-intro{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:50px 35px 50px 5px;
+}
+
+.md-opening-intro h2{margin:0 0 28px}
+.md-opening-intro-copy{max-width:560px}
+.md-opening-intro-copy p{margin:0 0 20px}
+.md-opening-intro-copy p:last-child{margin-bottom:0}
+
+.md-editorial{
+    width:var(--md-width);
+    margin:0 auto;
+}
+
+/* HOTEL */
+
+.md-hotel{
+    padding:90px 0 100px;
+    border-top:1px solid var(--md-line);
+}
+
+.md-section-heading{
+    max-width:780px;
+    margin-bottom:55px;
+}
+
+.md-section-heading h2{margin-bottom:18px}
+
+.md-hotel-layout{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:75px;
+    align-items:center;
+}
+
+.md-hotel-images{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    align-items:start;
+}
+
+.md-hotel-images img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.md-hotel-images img:last-child{margin-top:65px}
+
+.md-hotel-copy{max-width:550px}
+.md-hotel-copy h3{margin-top:0}
+.md-hotel-copy p{margin-top:0}
+
+.md-hotel-note{
+    margin-top:30px;
+    padding-top:22px;
+    border-top:1px solid var(--md-line);
+}
+
+/* PRIVATE ISLAND SETTING */
+
+.md-setting{
+    padding:25px 0 90px;
+}
+
+.md-setting-grid{
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--md-gap);
+    row-gap:40px;
+    align-items:start;
+}
+
+.md-setting-copy{
+    grid-column:1/span 3;
+    padding-top:25px;
+}
+
+.md-setting-img1{grid-column:4/span 5}
+
+.md-setting-img2{
+    grid-column:9/span 4;
+    padding-top:65px;
+}
+
+/* ARRIVAL BY YACHT */
+
+.md-arrival{
+    padding:90px 0;
+    border-top:1px solid var(--md-line);
+}
+
+.md-arrival-layout{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:75px;
+    align-items:center;
+}
+
+.md-arrival-copy{max-width:540px}
+
+.md-arrival-images{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    align-items:start;
+}
+
+.md-arrival-images img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.md-arrival-images img:last-child{margin-top:65px}
+
+/* ISLAND STORY */
+
+.md-island{
+    padding:90px 0;
+    border-top:1px solid var(--md-line);
+}
+
+.md-island-grid{
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--md-gap);
+    row-gap:55px;
+    align-items:start;
+}
+
+.md-island-grid img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.md-a-text{
+    grid-column:1/span 3;
+    padding-top:25px;
+}
+
+.md-a-img1{grid-column:4/span 5}
+
+.md-a-img2{
+    grid-column:9/span 4;
+    padding-top:60px;
+}
+
+.md-b-img1{grid-column:1/span 4}
+
+.md-b-text{
+    grid-column:5/span 3;
+    padding:20px 5px 0;
+}
+
+.md-b-img2{
+    grid-column:8/span 5;
+    padding-top:45px;
+}
+
+.md-c-text{
+    grid-column:1/span 3;
+    padding-top:25px;
+}
+
+.md-c-img1{grid-column:4/span 4}
+
+.md-c-img2{
+    grid-column:8/span 2;
+    padding-top:55px;
+}
+
+.md-c-img3{
+    grid-column:10/span 3;
+    padding-top:10px;
+}
+
+/* UNDERWATER STORY */
+
+.md-diving{
+    padding:90px 0;
+    border-top:1px solid var(--md-line);
+}
+
+.md-diving-grid{
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    column-gap:var(--md-gap);
+    row-gap:55px;
+    align-items:start;
+}
+
+.md-diving-grid img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.md-d-text{
+    grid-column:1/span 3;
+    padding-top:25px;
+}
+
+.md-d-img1{grid-column:4/span 5}
+
+.md-d-img2{
+    grid-column:9/span 4;
+    padding-top:60px;
+}
+
+.md-e-img1{grid-column:1/span 4}
+
+.md-e-text{
+    grid-column:5/span 3;
+    padding:20px 5px 0;
+}
+
+.md-e-img2{
+    grid-column:8/span 5;
+    padding-top:45px;
+}
+
+.md-f-text{
+    grid-column:1/span 3;
+    padding-top:25px;
+}
+
+.md-f-img1{grid-column:4/span 4}
+
+.md-f-img2{
+    grid-column:8/span 5;
+    padding-top:55px;
+}
+
+/* PLANNING */
+
+.md-info{
+    margin:30px 0 70px;
+    padding:65px 0;
+    border-top:1px solid var(--md-line);
+    border-bottom:1px solid var(--md-line);
+}
+
+.md-info-heading{
+    max-width:700px;
+    margin-bottom:45px;
+}
+
+.md-info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:65px;
+}
+
+.md-info-item h3{margin:10px 0 12px}
+.md-info-item p{max-width:370px}
+
+/* RECOMMENDATIONS */
+
+.md-recommendations{
+    padding:30px 0 100px;
+}
+
+.md-recommendations-heading{margin-bottom:50px}
+
+.md-recommendation-list{
+    max-width:1050px;
+    border-top:1px solid var(--md-line-strong);
+}
+
+.md-recommendation{
+    display:grid;
+    grid-template-columns:70px 280px 1fr;
+    column-gap:35px;
+    align-items:start;
+    padding:30px 0;
+    border-bottom:1px solid var(--md-line-strong);
+}
+
+.md-rec-number{
+    padding-top:7px;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    opacity:.6;
+}
+
+.md-recommendation h3{
+    margin:0;
+    font-size:1.35rem;
+}
+
+.md-recommendation p{
+    margin:0;
+    max-width:600px;
+}
+
+/* OUR EDIT */
+
+.md-journal{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+    padding:75px 0;
+    border-top:1px solid var(--md-line);
+}
+
+.md-journal-copy p{margin-top:0}
+
+/* MAP AND END */
+
+.md-map{padding:80px 0 70px}
+.md-map-inner{max-width:650px}
+
+.md-end{
+    display:flex;
+    justify-content:space-between;
+    padding:35px 0 70px;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.maldives-desktop{display:none}
+.maldives-mobile{display:block}
+
+.md-mobile-hotel,
+.md-mobile-arrival,
+.md-mobile-island,
+.md-mobile-diving,
+.md-mobile-info,
+.md-mobile-recommendations,
+.md-mobile-journal{
+    padding:55px 0;
+}
+
+.md-mobile-hotel img,
+.md-mobile-arrival img,
+.md-mobile-island img,
+.md-mobile-diving img{
+    display:block;
+    width:100%;
+    height:auto;
+    margin-bottom:22px;
+}
+
+.md-mobile-copy{padding:20px 0 30px}
+
+.md-mobile-info-item{
+    margin-bottom:35px;
+}
+
+.md-mobile-info-item:last-child{margin-bottom:0}
+
+.md-mobile-recommendation{
+    padding:25px 0;
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.md-mobile-recommendation h3{margin:8px 0 12px}
+
+.md-mobile-journal p{margin-top:0}
+
+}
+
 </style>
 </head>
 
@@ -333,7 +495,7 @@
             <a href="editions.html">Editions</a>
             <a href="index-new.html#journal">Journal</a>
             <a href="index-new.html#map">Map</a>
-            <a href="about.html">About</a>
+            <a href="index-new.html#about">About</a>
         </nav>
 
         <button class="menu-toggle" type="button" aria-label="Open navigation">
@@ -342,325 +504,607 @@
     </div>
 </header>
 
-<!-- DESKTOP EDITION -->
+
+<!-- =====================================================
+     DESKTOP EDITION
+===================================================== -->
 
 <main class="maldives-desktop">
 
-<section class="sg-opening">
-    <div class="sg-opening-hero">
-        <img src="maldiveshero.jpeg" alt="The Maldives" loading="eager">
+<!-- OPENING -->
+
+<section class="md-opening">
+
+    <div class="md-opening-hero">
+        <img src="maldiveshero.jpeg" alt="A heron among the tropical greenery of Reethi Rah" loading="eager">
 
         <div class="edition-hero-overlay">
-            <p class="eyebrow">THE MALDIVES</p>
+            <p class="eyebrow">OUR MALDIVES</p>
             <h1>Maldives</h1>
-            <p class="edition-hero-subtitle">Island life, wild encounters &amp; extraordinary water.</p>
+            <p class="edition-hero-subtitle">A private island, extraordinary water and life at a slower pace.</p>
         </div>
     </div>
 
-    <div class="sg-opening-intro">
+    <div class="md-opening-intro">
         <p class="section-label">OUR MALDIVES</p>
         <h2>More than just paradise.</h2>
 
-        <div class="sg-opening-intro-copy">
+        <div class="md-opening-intro-copy">
             <p>
-                We stayed at One&amp;Only Reethi Rah, and from the moment
-                we arrived the island felt completely removed from
-                everyday life. Our bungalow was exceptional, with
-                butler service that made everything feel wonderfully
-                effortless.
+                We stayed at One&amp;Only Reethi Rah, and it was one of
+                those places where the setting makes you slow down
+                almost immediately. We had a beach villa, a full-time
+                butler and the good fortune of being in the very last
+                bungalow along our stretch of the island.
             </p>
 
             <p>
-                We spent our days cycling around the island, looking
-                out for flying foxes and herons, and getting into the
-                water. Diving with sharks and eagle rays gave us a
-                very different perspective on this remarkable part
-                of the Maldives.
+                Our private pool looked out across a beautiful stretch
+                of sea, with no passing footfall beyond our own little
+                corner. We were told that the end villa had previously
+                been enjoyed by the Beckhams, although the real appeal
+                for us was simply the privacy.
             </p>
 
             <p>
-                There were slower pleasures, too: a fantastic barbecue
-                beside our private pool, some excellent wines, and
-                long stretches of time when there was absolutely
-                nowhere else we needed to be.
+                Days were spent cycling beneath the palms, looking
+                out for flying foxes and herons, and getting into
+                the water. The diving and snorkelling were every bit
+                as memorable as the island itself.
             </p>
         </div>
     </div>
+
 </section>
 
-<div class="sg-editorial">
 
-<section class="sg-editorial-section">
+<div class="md-editorial">
+
+
+<!-- =====================================================
+     WHERE WE STAYED
+===================================================== -->
+
+<section class="md-hotel">
+
+    <div class="md-section-heading">
+        <p class="section-label">THE STAY · ONE&amp;ONLY REETHI RAH</p>
+        <h2>Our own private corner of the island.</h2>
+        <p>
+            A sublime beach villa, a full-time butler and a private
+            stretch of shoreline that made it very easy to switch off.
+        </p>
+    </div>
+
+    <div class="md-hotel-layout">
+
+        <div class="md-hotel-images">
+            <img src="maldives5.jpeg" alt="The beach villa and private pool at One&Only Reethi Rah" loading="lazy">
+            <img src="maldives6.jpeg" alt="The private pool and tropical setting at sunset" loading="lazy">
+        </div>
+
+        <div class="md-hotel-copy">
+
+            <p class="section-label">OUR EXPERIENCE</p>
+            <h3>A beach villa with a wonderful sense of privacy.</h3>
+            <div class="md-rule"></div>
+
+            <p>
+                Our beach villa was sublime. We were lucky enough to
+                have the end bungalow, meaning there was no footfall
+                beyond our own private stretch of island. It felt
+                wonderfully secluded without being cut off from
+                everything the resort had to offer.
+            </p>
+
+            <p>
+                The private pool looked straight across a beautiful
+                stretch of sea. It was the sort of view that made
+                staying in feel every bit as appealing as heading
+                out to explore.
+            </p>
+
+            <p>
+                Having a full-time butler made the whole stay feel
+                effortless. Everything was taken care of, leaving us
+                free to enjoy the island at our own pace.
+            </p>
+
+            <p>
+                One evening we arranged a private barbecue on the
+                beach. With the sea just beyond us, it was a lovely
+                way to spend an evening and one of the memories
+                that really captures what made the stay special.
+            </p>
+
+            <div class="md-hotel-note">
+                <p>
+                    Our verdict: the villa, the privacy, the pool
+                    and the service made this an exceptional place
+                    to spend time together.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- THE SETTING -->
+
+<section class="md-setting">
+
     <div class="section-heading">
-        <p>FROM OUR CAMERA</p>
+        <p>THE SETTING</p>
+        <h2>Room to disappear for a while.</h2>
+    </div>
+
+    <div class="md-setting-grid">
+
+        <div class="md-text md-setting-copy">
+            <p class="section-label">OUR LITTLE CORNER</p>
+            <h3>Just the sea, the sand and the sound of the island.</h3>
+            <div class="md-rule"></div>
+
+            <p>
+                What we particularly loved about our position was
+                the feeling of having our own little piece of Reethi
+                Rah. Being at the end meant that nobody was walking
+                past our villa to get somewhere else.
+            </p>
+
+            <p>
+                The pool and the view became a natural part of the
+                day, whether we were returning from exploring or
+                simply deciding to spend a little longer at home.
+            </p>
+        </div>
+
+        <img class="md-setting-img1" src="maldives13.jpeg" alt="The infinity pool extending towards the sea at Reethi Rah" loading="lazy">
+
+        <img class="md-setting-img2" src="maldives8.jpeg" alt="The sun setting over the water in the Maldives" loading="lazy">
+
+    </div>
+
+</section>
+
+
+<!-- ARRIVAL BY YACHT -->
+
+<section class="md-arrival">
+
+    <div class="section-heading">
+        <p>THE ARRIVAL</p>
+        <h2>Arriving by yacht.</h2>
+    </div>
+
+    <div class="md-arrival-layout">
+
+        <div class="md-arrival-copy md-text">
+
+            <p class="section-label">FROM MALÉ TO REETHI RAH</p>
+            <h3>A lovely way to begin the stay.</h3>
+            <div class="md-rule"></div>
+
+            <p>
+                We used the yacht to get us to and from the island
+                from Malé, which was a particularly nice touch.
+                Rather than simply arriving by the usual transfer,
+                the journey itself became part of the experience.
+            </p>
+
+            <p>
+                There is something special about approaching an
+                island resort from the water. It sets the tone
+                before you have even reached the villa, and makes
+                the transition from everyday life feel complete.
+            </p>
+
+            <p>
+                Once on the island, we quickly settled into a much
+                slower rhythm: bicycles, beaches, the pool and
+                plenty of time in the sea.
+            </p>
+
+        </div>
+
+        <div class="md-arrival-images">
+            <img src="maldives1.jpeg" alt="A heron standing on the beach at Reethi Rah" loading="lazy">
+            <img src="maldives2.jpeg" alt="A heron looking out across the beach and sea" loading="lazy">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ISLAND LIFE -->
+
+<section class="md-island">
+
+    <div class="section-heading">
+        <p>THE ISLAND</p>
         <h2>Reethi Rah, as we saw it.</h2>
     </div>
 
-    <div class="sg-grid">
+    <div class="md-island-grid">
 
-        <div class="sg-text sg-r1-text">
-            <p class="section-label">THE ISLAND</p>
-            <h3>A world of its own.</h3>
-            <div class="sg-rule"></div>
-            <p>
-                Reethi Rah is a place to explore at your own pace.
-                Winding paths, tropical greenery and extraordinary
-                shades of blue make even a simple bicycle ride
-                feel like part of the holiday.
-            </p>
-        </div>
-
-        <img class="sg-r1-img1" src="maldives1.jpeg" alt="The Maldives surrounded by turquoise water" loading="eager">
-        <img class="sg-r1-img2" src="maldives2.jpeg" alt="The tropical island landscape" loading="lazy">
-
-        <img class="sg-r2-img1" src="maldives3.jpeg" alt="Clear water surrounding Reethi Rah" loading="lazy">
-
-        <div class="sg-text sg-r2-text">
+        <div class="md-text md-a-text">
             <p class="section-label">ISLAND LIFE</p>
-            <h3>Slow down and look around.</h3>
-            <div class="sg-rule"></div>
-            <p>
-                There is a lovely simplicity to island life. A bicycle
-                takes you from one corner to another, while the changing
-                light and the water provide plenty of reasons to stop.
-            </p>
-        </div>
-
-        <img class="sg-r2-img2" src="maldives4.jpeg" alt="Life around the island" loading="lazy">
-
-        <div class="sg-text sg-r2-text2">
-            <p class="section-label">BEACH &amp; WATER</p>
-            <h3>Blue in every direction.</h3>
-            <p>
-                The beaches are beautiful, but it is the water that
-                keeps drawing you back. The sea is a constant part
-                of the experience, whether swimming, exploring or
-                simply looking towards the horizon.
-            </p>
-        </div>
-
-        <div class="sg-text sg-r3-text">
-            <p class="section-label">GETTING AROUND</p>
             <h3>The pleasure of two wheels.</h3>
-            <div class="sg-rule"></div>
+            <div class="md-rule"></div>
+
             <p>
-                Bicycles quickly became part of our daily routine.
-                Exploring beneath the palms, rather than travelling
-                from one activity to the next, is one of the simplest
-                pleasures of staying on the island.
+                Cycling around the island quickly became part of
+                our daily routine. It is a lovely way to explore
+                without having to be anywhere in particular.
+            </p>
+
+            <p>
+                The paths take you beneath the palms and through
+                the greenery, with different beaches and views
+                appearing as you go.
             </p>
         </div>
 
-        <img class="sg-r3-img1" src="maldives5.jpeg" alt="Beach and tropical landscape" loading="lazy">
-        <img class="sg-r3-img2" src="maldives6.jpeg" alt="Cycling around Reethi Rah" loading="lazy">
-        <img class="sg-r3-img3" src="maldives7.jpeg" alt="Flying fox in the trees at Reethi Rah" loading="lazy">
+        <img class="md-a-img1" src="maldives3.jpeg" alt="A bird flying across the sunlit water" loading="lazy">
 
-        <img class="sg-r4-img1" src="maldives8.jpeg" alt="Heron around the island" loading="lazy">
+        <img class="md-a-img2" src="maldives4.jpeg" alt="Tropical island wildlife among the palms" loading="lazy">
 
-        <div class="sg-text sg-r4-text">
+
+        <img class="md-b-img1" src="maldives7.jpeg" alt="A flying fox resting among the tropical palm trees" loading="lazy">
+
+        <div class="md-text md-b-text">
             <p class="section-label">WILDLIFE</p>
             <h3>Look beyond the shoreline.</h3>
-            <div class="sg-rule"></div>
+            <div class="md-rule"></div>
+
             <p>
-                I seemed to spend an unreasonable amount of time
-                looking into the trees for flying foxes and herons
-                with a camera. They became unexpected characters
-                in our days, adding another dimension to the island.
+                I spent a surprising amount of time looking into
+                the trees for flying foxes and watching the birds
+                around the island.
+            </p>
+
+            <p>
+                Herons became familiar characters during our
+                stay, and the flying foxes were another reminder
+                that there is plenty happening beyond the beach.
             </p>
         </div>
 
-        <img class="sg-r4-img2" src="maldives9.jpeg" alt="Wildlife encountered on Reethi Rah" loading="lazy">
+        <img class="md-b-img2" src="maldives9.jpeg" alt="A reef shark moving through the shallow water" loading="lazy">
 
-        <div class="sg-text sg-r5-text">
-            <p class="section-label">BENEATH THE SURFACE</p>
-            <h3>Encounters that stay with you.</h3>
-            <div class="sg-rule"></div>
+
+        <div class="md-text md-c-text">
+            <p class="section-label">EVENINGS</p>
+            <h3>Time to do very little.</h3>
+            <div class="md-rule"></div>
+
             <p>
-                The diving was one of the real highlights. Encountering
-                sharks and eagle rays underwater brings an entirely
-                different perspective to the Maldives. The beauty
-                above the surface is only part of the story.
+                Not every day needed an activity. Some of the
+                nicest moments came from watching the light
+                change, spending time by the pool and enjoying
+                the feeling of being somewhere so far removed
+                from the usual routine.
             </p>
         </div>
 
-        <img class="sg-r5-img1" src="maldives10.jpeg" alt="The water and reef around Reethi Rah" loading="lazy">
-        <img class="sg-r5-img2" src="maldives11.jpeg" alt="Marine life in the Maldives" loading="lazy">
+        <img class="md-c-img1" src="maldives12.jpeg" alt="An eagle ray swimming above the sandy seabed" loading="lazy">
+
+        <img class="md-c-img2" src="maldives10.jpeg" alt="A lionfish among the reef" loading="lazy">
+
+        <img class="md-c-img3" src="maldives11.jpeg" alt="A diver exploring a school of fish above the reef" loading="lazy">
 
     </div>
+
 </section>
 
-<section class="sg-info">
-    <div class="sg-info-grid">
 
-        <div class="sg-info-item">
+<!-- DIVING AND SNORKELLING -->
+
+<section class="md-diving">
+
+    <div class="section-heading">
+        <p>BENEATH THE SURFACE</p>
+        <h2>The water was every bit as good as the island.</h2>
+    </div>
+
+    <div class="md-diving-grid">
+
+        <div class="md-text md-d-text">
+            <p class="section-label">THE DIVING</p>
+            <h3>They knew exactly where to take us.</h3>
+            <div class="md-rule"></div>
+
+            <p>
+                The diving was great. The team would drop us into
+                exactly the right spot depending on what we were
+                hoping to see, which made a real difference to
+                the experience.
+            </p>
+
+            <p>
+                We saw an extraordinary variety of marine life,
+                and it was a completely different way to appreciate
+                the Maldives beyond the beaches and lagoons.
+            </p>
+        </div>
+
+        <img class="md-d-img1" src="maldives14.jpeg" alt="A large school of colourful fish swimming above the reef" loading="lazy">
+
+        <img class="md-d-img2" src="maldives15.jpeg" alt="Thousands of colourful parrot fish moving together underwater" loading="lazy">
+
+
+        <img class="md-e-img1" src="maldives16.jpeg" alt="A butterflyfish swimming above the coral" loading="lazy">
+
+        <div class="md-text md-e-text">
+            <p class="section-label">SNORKELLING</p>
+            <h3>Thousands of parrot fish.</h3>
+            <div class="md-rule"></div>
+
+            <p>
+                Even snorkelling just off the atoll was great fun.
+                On one occasion I found myself surrounded by
+                thousands of parrot fish. It was one of those
+                unexpected encounters that makes you stop
+                and take in what is happening around you.
+            </p>
+
+            <p>
+                You do not always need to head out on a boat to
+                find something remarkable. There was plenty
+                happening just beneath the surface close to
+                the island.
+            </p>
+        </div>
+
+        <img class="md-e-img2" src="maldives17.jpeg" alt="A dense school of yellow and blue reef fish" loading="lazy">
+
+
+        <div class="md-text md-f-text">
+            <p class="section-label">REEF LIFE</p>
+            <h3>A whole world in the shallows.</h3>
+            <div class="md-rule"></div>
+
+            <p>
+                The reef offered plenty more to look at, from
+                colourful fish moving through the coral to
+                smaller details that were easy to miss at first.
+            </p>
+
+            <p>
+                It was a lovely contrast to the larger encounters
+                on the dives, and a reminder to take your time
+                when exploring the water.
+            </p>
+        </div>
+
+        <img class="md-f-img1" src="maldives18.jpeg" alt="A clownfish among the tentacles of an anemone" loading="lazy">
+
+        <img class="md-f-img2" src="maldives19.jpeg" alt="A healthy coral reef with fish swimming through it" loading="lazy">
+
+    </div>
+
+</section>
+
+
+<!-- PLANNING YOUR VISIT -->
+
+<section class="md-info">
+
+    <div class="md-info-heading">
+        <p class="section-label">PLANNING YOUR STAY</p>
+        <h2>A few thoughts before you go.</h2>
+        <p>
+            Reethi Rah is a private island resort, so the experience
+            is as much about enjoying the property and the water
+            as it is about getting out to explore.
+        </p>
+    </div>
+
+    <div class="md-info-grid">
+
+        <div class="md-info-item">
             <p class="section-label">BEST TIME</p>
             <h3>November – April</h3>
             <p>
-                The dry season generally brings sunnier skies and
-                calmer seas. Conditions vary, but this is a popular
-                period for enjoying the islands and getting out
-                on the water.
+                The dry season generally brings sunnier skies
+                and calmer seas. Conditions vary, but this is
+                a popular period for enjoying the islands and
+                getting out on the water.
             </p>
         </div>
 
-        <div class="sg-info-item">
-            <p class="section-label">THE SETTING</p>
-            <h3>A private island</h3>
+        <div class="md-info-item">
+            <p class="section-label">GETTING THERE</p>
+            <h3>Arrive by sea</h3>
             <p>
-                Reethi Rah combines tropical greenery, beaches,
-                open water and the privacy of a self-contained
-                island resort.
+                We travelled between Malé and Reethi Rah by yacht.
+                It was a lovely way to arrive and added a sense
+                of occasion to the start of the stay.
             </p>
         </div>
 
-        <div class="sg-info-item">
+        <div class="md-info-item">
             <p class="section-label">GETTING AROUND</p>
             <h3>By bicycle</h3>
             <p>
-                Cycling was one of our favourite ways to explore,
-                discover different corners of the island and
-                notice what was happening beyond the beach.
+                Cycling was one of our favourite ways to explore
+                the island. It is easy to enjoy the different
+                corners of the resort without rushing.
             </p>
         </div>
 
     </div>
+
 </section>
 
-<section class="sg-recommendations">
-    <div class="sg-recommendations-heading">
+
+<!-- RECOMMENDATIONS -->
+
+<section class="md-recommendations">
+
+    <div class="md-recommendations-heading">
         <p class="section-label">OUR RECOMMENDATIONS</p>
         <h2>What made it special.</h2>
     </div>
 
-    <div class="sg-recommendation-list">
+    <div class="md-recommendation-list">
 
-        <article class="sg-recommendation">
-            <span class="sg-rec-number">01</span>
+        <article class="md-recommendation">
+            <span class="md-rec-number">01</span>
             <h3>One&amp;Only Reethi Rah</h3>
             <p>
-                An extraordinary island setting and a wonderful
-                base for exploring the Maldives. The privacy,
-                thoughtful service and natural beauty made
-                our stay memorable.
+                A beautiful private island setting, with the
+                space, service and natural surroundings to
+                make a stay feel genuinely special.
             </p>
         </article>
 
-        <article class="sg-recommendation">
-            <span class="sg-rec-number">02</span>
-            <h3>The bungalow &amp; butler service</h3>
+        <article class="md-recommendation">
+            <span class="md-rec-number">02</span>
+            <h3>The beach villa</h3>
             <p>
-                Our bungalow was a highlight in its own right.
-                Butler service made everything feel effortless,
-                while the private pool gave us our own place
-                to unwind between adventures.
+                Our villa was sublime. Being in the end bungalow
+                gave us a wonderful sense of privacy, with no
+                passing footfall beyond our own stretch of island.
             </p>
         </article>
 
-        <article class="sg-recommendation">
-            <span class="sg-rec-number">03</span>
-            <h3>A barbecue by the pool</h3>
+        <article class="md-recommendation">
+            <span class="md-rec-number">03</span>
+            <h3>The private pool and sea view</h3>
             <p>
-                A fantastic barbecue beside our private pool,
-                some excellent wines and an evening with
-                nowhere else we needed to be.
+                Looking out across the water from our own pool
+                was one of the simple pleasures of the stay.
+                It was a lovely place to spend time between
+                exploring the island and getting into the sea.
             </p>
         </article>
 
-        <article class="sg-recommendation">
-            <span class="sg-rec-number">04</span>
-            <h3>The swimming pools</h3>
+        <article class="md-recommendation">
+            <span class="md-rec-number">04</span>
+            <h3>The full-time butler</h3>
             <p>
-                The main pool has beautiful mature trees providing
-                shade and a wonderfully established tropical feel.
-                The infinity lap pool extending towards the sea
-                offers another experience entirely, with the water
-                and horizon becoming part of the view.
+                Having a dedicated butler made everything feel
+                effortless and allowed us to enjoy the island
+                without having to think about the details.
             </p>
         </article>
 
-        <article class="sg-recommendation">
-            <span class="sg-rec-number">05</span>
-            <h3>Diving with sharks &amp; eagle rays</h3>
+        <article class="md-recommendation">
+            <span class="md-rec-number">05</span>
+            <h3>A private beach barbecue</h3>
             <p>
-                The diving added a real sense of adventure.
-                Encounters with sharks and eagle rays were
-                among the experiences that made the underwater
-                world so memorable.
+                One evening we enjoyed a private barbecue on
+                the beach. A memorable way to spend an evening
+                beside the water.
             </p>
         </article>
 
-        <article class="sg-recommendation">
-            <span class="sg-rec-number">06</span>
+        <article class="md-recommendation">
+            <span class="md-rec-number">06</span>
+            <h3>Diving and snorkelling</h3>
+            <p>
+                The diving team knew where to take us, while
+                snorkelling just off the atoll was rewarding
+                in its own right. Being surrounded by thousands
+                of parrot fish was an unforgettable moment.
+            </p>
+        </article>
+
+        <article class="md-recommendation">
+            <span class="md-rec-number">07</span>
+            <h3>Arriving by yacht</h3>
+            <p>
+                Travelling to and from the island by yacht
+                from Malé was a lovely touch and a memorable
+                way to begin and end the stay.
+            </p>
+        </article>
+
+        <article class="md-recommendation">
+            <span class="md-rec-number">08</span>
             <h3>Explore by bicycle</h3>
             <p>
-                Leave some time without a plan and ride around
+                Leave some time without a plan and cycle around
                 the island. It is a lovely way to discover
-                different beaches, take in the greenery and
-                notice the wildlife along the way.
+                the beaches, greenery and wildlife.
             </p>
         </article>
 
     </div>
+
 </section>
 
-<section class="sg-journal">
+
+<!-- OUR EDIT -->
+
+<section class="md-journal">
+
     <div>
-        <p class="section-label">FROM THE JOURNAL</p>
-        <h2>Life on Reethi Rah.</h2>
+        <p class="section-label">OUR EDIT</p>
+        <h2>A private island, with plenty to discover.</h2>
     </div>
 
-    <div class="sg-journal-copy">
+    <div class="md-journal-copy">
+
         <p>
             The Maldives is easy to reduce to photographs of
-            beaches and turquoise water. But what stayed with
-            us was the variety of the experience: cycling beneath
-            the palms, looking for wildlife and heading out into
-            water that offered so much more than a beautiful view.
+            beaches and turquoise water. Reethi Rah certainly
+            has those in abundance, but what stayed with us
+            was the variety of the experience.
         </p>
 
         <p>
-            Our bungalow and its butler service made everything
-            feel wonderfully easy. Some days were about diving
-            with sharks and eagle rays; others were about the
-            pools, a barbecue beside our own and a good bottle
-            of wine. The balance between adventure and doing
-            very little was what made the stay so memorable.
+            Our beach villa was sublime, particularly being
+            at the end of the island with our own sense of
+            privacy. The full-time butler, the pool looking
+            out to sea and the private barbecue on the beach
+            all made the stay feel wonderfully effortless.
         </p>
-    </div>
-</section>
 
-<section class="sg-editorial-section">
-    <div class="sg-final-grid">
+        <p>
+            Beyond the villa, we loved cycling around the island,
+            looking for flying foxes and herons, and heading
+            out into the water. The diving was excellent, but
+            the snorkelling was just as memorable in its own
+            way. Being surrounded by thousands of parrot fish
+            is not something you forget in a hurry.
+        </p>
 
-        <div class="sg-final-heading">
-            <p class="section-label">MORE FROM OUR CAMERA</p>
-            <h2>More from the Maldives.</h2>
-        </div>
-
-        <img class="sg-final-img1" src="maldives12.jpeg" alt="Island life at Reethi Rah" loading="lazy">
-        <img class="sg-final-img2" src="maldives13.jpeg" alt="Tropical beach and water" loading="lazy">
-        <img class="sg-final-img3" src="maldives14.jpeg" alt="The reef and ocean around Reethi Rah" loading="lazy">
-        <img class="sg-final-img4" src="maldives15.jpeg" alt="Wildlife around the island" loading="lazy">
-        <img class="sg-final-img5" src="maldives16.jpeg" alt="Life around One&Only Reethi Rah" loading="lazy">
-        <img class="sg-final-img6" src="maldives17.jpeg" alt="Marine life in the Maldives" loading="lazy">
-        <img class="sg-final-img7" src="maldives18.jpeg" alt="The Maldives from the island" loading="lazy">
-        <img class="sg-final-img8" src="maldives19.jpeg" alt="Reethi Rah and the surrounding ocean" loading="lazy">
+        <p>
+            Add in the yacht transfer from Malé and the whole
+            stay felt special from beginning to end. It was
+            a lovely balance of adventure, privacy and doing
+            very little at all.
+        </p>
 
     </div>
+
 </section>
 
-<section class="sg-map">
-    <div class="sg-map-inner">
+
+<!-- MAP -->
+
+<section class="md-map">
+
+    <div class="md-map-inner">
         <p class="section-label">OUR MAP</p>
-        <h2>Maldives.</h2>
+        <h2>One&amp;Only Reethi Rah, Maldives.</h2>
         <p>
-            One extraordinary island, memorable underwater
-            encounters and a beautiful escape from Singapore.
+            A private island in the North Malé Atoll, with
+            beautiful beaches, exceptional marine life and
+            a memorable place to slow down.
         </p>
     </div>
+
 </section>
 
-<section class="sg-end">
+
+<section class="md-end">
     <a href="/" class="text-link">← Back to Home</a>
     <a href="editions.html" class="text-link">View All Editions →</a>
 </section>
@@ -669,119 +1113,376 @@
 </main>
 
 
-<!-- MOBILE EDITION -->
+<!-- =====================================================
+     MOBILE EDITION
+===================================================== -->
 
 <main class="maldives-mobile">
 
-<section class="edition-hero" style="background-image:url('maldiveshero.jpeg');">
+<!-- HERO -->
+
+<section class="edition-hero" style="background-image:url('maldiveshero.jpeg')">
     <div class="edition-hero-overlay">
-        <p class="eyebrow">THE MALDIVES</p>
+        <p class="eyebrow">OUR MALDIVES</p>
         <h1>Maldives</h1>
-        <p class="edition-hero-subtitle">Island life, wild encounters &amp; extraordinary water.</p>
+        <p class="edition-hero-subtitle">A private island, extraordinary water and life at a slower pace.</p>
     </div>
 </section>
 
+
+<!-- INTRO -->
+
 <section class="edition-intro section">
     <div class="container">
+
         <div class="edition-intro-inner">
 
             <p class="section-label">OUR MALDIVES</p>
             <h2>More than just paradise.</h2>
 
             <div class="edition-intro-text">
+
                 <p>
-                    We stayed at One&amp;Only Reethi Rah, and from
-                    the moment we arrived the island felt completely
-                    removed from everyday life. Our bungalow was
-                    exceptional, with butler service that made
-                    everything feel wonderfully effortless.
+                    We stayed at One&amp;Only Reethi Rah, and it was
+                    one of those places where the setting makes
+                    you slow down almost immediately. We had a
+                    beach villa, a full-time butler and the good
+                    fortune of being in the very last bungalow
+                    along our stretch of the island.
                 </p>
 
                 <p>
-                    We spent our days cycling around the island,
-                    looking out for flying foxes and herons, and
-                    getting into the water. Diving with sharks and
-                    eagle rays gave us a very different perspective
-                    on this remarkable part of the Maldives.
+                    Our private pool looked out across a beautiful
+                    stretch of sea, with no passing footfall beyond
+                    our own little corner. We were told that the
+                    end villa had previously been enjoyed by the
+                    Beckhams, although the real appeal for us was
+                    simply the privacy.
                 </p>
 
                 <p>
-                    There were slower pleasures, too: a fantastic
-                    barbecue beside our private pool, some excellent
-                    wines, and long stretches of time when there was
-                    absolutely nowhere else we needed to be.
+                    Days were spent cycling beneath the palms,
+                    looking out for flying foxes and herons,
+                    and getting into the water. The diving and
+                    snorkelling were every bit as memorable
+                    as the island itself.
                 </p>
+
             </div>
 
         </div>
+
     </div>
 </section>
 
-<section class="edition-photo-story section">
+
+<!-- HOTEL -->
+
+<section class="md-mobile-hotel section">
     <div class="container">
 
-        <div class="section-heading edition-photo-heading">
-            <p>FROM OUR CAMERA</p>
+        <p class="section-label">THE STAY · ONE&amp;ONLY REETHI RAH</p>
+        <h2>Our own private corner of the island.</h2>
+
+        <p>
+            A sublime beach villa, a full-time butler and a
+            private stretch of shoreline that made it very
+            easy to switch off.
+        </p>
+
+        <img src="maldives5.jpeg" alt="The beach villa and private pool at One&Only Reethi Rah" loading="lazy">
+        <img src="maldives6.jpeg" alt="The private pool and tropical setting at sunset" loading="lazy">
+
+        <div class="md-mobile-copy">
+
+            <p class="section-label">OUR EXPERIENCE</p>
+            <h3>A beach villa with a wonderful sense of privacy.</h3>
+
+            <p>
+                Our beach villa was sublime. We were lucky enough
+                to have the end bungalow, meaning there was no
+                footfall beyond our own private stretch of island.
+                It felt wonderfully secluded without being cut
+                off from everything the resort had to offer.
+            </p>
+
+            <p>
+                The private pool looked straight across a
+                beautiful stretch of sea. It was the sort of
+                view that made staying in feel every bit as
+                appealing as heading out to explore.
+            </p>
+
+            <p>
+                Having a full-time butler made the whole stay
+                feel effortless. Everything was taken care of,
+                leaving us free to enjoy the island at our
+                own pace.
+            </p>
+
+            <p>
+                One evening we arranged a private barbecue
+                on the beach. With the sea just beyond us,
+                it was a lovely way to spend an evening and
+                one of the memories that really captures
+                what made the stay special.
+            </p>
+
+        </div>
+
+        <p class="section-label">THE SETTING</p>
+        <h3>Room to disappear for a while.</h3>
+
+        <img src="maldives13.jpeg" alt="The infinity pool extending towards the sea at Reethi Rah" loading="lazy">
+        <img src="maldives8.jpeg" alt="The sun setting over the water in the Maldives" loading="lazy">
+
+        <p>
+            What we particularly loved about our position
+            was the feeling of having our own little piece
+            of Reethi Rah. Being at the end meant that
+            nobody was walking past our villa to get
+            somewhere else.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ARRIVAL -->
+
+<section class="md-mobile-arrival section">
+    <div class="container">
+
+        <p class="section-label">THE ARRIVAL</p>
+        <h2>Arriving by yacht.</h2>
+
+        <img src="maldives1.jpeg" alt="A heron standing on the beach at Reethi Rah" loading="lazy">
+        <img src="maldives2.jpeg" alt="A heron looking out across the beach and sea" loading="lazy">
+
+        <div class="md-mobile-copy">
+
+            <p class="section-label">FROM MALÉ TO REETHI RAH</p>
+            <h3>A lovely way to begin the stay.</h3>
+
+            <p>
+                We used the yacht to get us to and from the
+                island from Malé, which was a particularly
+                nice touch. Rather than simply arriving by
+                the usual transfer, the journey itself became
+                part of the experience.
+            </p>
+
+            <p>
+                There is something special about approaching
+                an island resort from the water. It sets the
+                tone before you have even reached the villa,
+                and makes the transition from everyday life
+                feel complete.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ISLAND LIFE -->
+
+<section class="md-mobile-island section">
+    <div class="container">
+
+        <div class="section-heading">
+            <p>THE ISLAND</p>
             <h2>Reethi Rah, as we saw it.</h2>
         </div>
 
-        <div class="edition-photo-mosaic">
-            <img src="maldives1.jpeg" alt="The Maldives surrounded by turquoise water" loading="eager">
-            <img src="maldives2.jpeg" alt="Island landscape at Reethi Rah" loading="lazy">
-            <img src="maldives3.jpeg" alt="The turquoise water surrounding Reethi Rah" loading="lazy">
-            <img src="maldives4.jpeg" alt="Life around the island" loading="lazy">
-            <img src="maldives5.jpeg" alt="Beach and tropical landscape in the Maldives" loading="lazy">
-            <img src="maldives6.jpeg" alt="Cycling around Reethi Rah" loading="lazy">
-            <img src="maldives7.jpeg" alt="Flying fox in the trees at Reethi Rah" loading="lazy">
-            <img src="maldives8.jpeg" alt="Heron around the island" loading="lazy">
-            <img src="maldives9.jpeg" alt="Wildlife on Reethi Rah" loading="lazy">
-            <img src="maldives10.jpeg" alt="The water and reef around Reethi Rah" loading="lazy">
-            <img src="maldives11.jpeg" alt="Marine life in the Maldives" loading="lazy">
+        <div class="md-mobile-copy">
+            <p class="section-label">ISLAND LIFE</p>
+            <h3>The pleasure of two wheels.</h3>
+
+            <p>
+                Cycling around the island quickly became part
+                of our daily routine. It is a lovely way to
+                explore without having to be anywhere in
+                particular. The paths take you beneath the
+                palms and through the greenery, with different
+                beaches and views appearing as you go.
+            </p>
         </div>
+
+        <img src="maldives3.jpeg" alt="A bird flying across the sunlit water" loading="lazy">
+        <img src="maldives4.jpeg" alt="Tropical island wildlife among the palms" loading="lazy">
+
+        <div class="md-mobile-copy">
+            <p class="section-label">WILDLIFE</p>
+            <h3>Look beyond the shoreline.</h3>
+
+            <p>
+                I spent a surprising amount of time looking
+                into the trees for flying foxes and watching
+                the birds around the island. Herons became
+                familiar characters during our stay, and
+                the flying foxes were another reminder that
+                there is plenty happening beyond the beach.
+            </p>
+        </div>
+
+        <img src="maldives7.jpeg" alt="A flying fox resting among the tropical palm trees" loading="lazy">
+        <img src="maldives9.jpeg" alt="A reef shark moving through the shallow water" loading="lazy">
+
+        <div class="md-mobile-copy">
+            <p class="section-label">EVENINGS</p>
+            <h3>Time to do very little.</h3>
+
+            <p>
+                Not every day needed an activity. Some of the
+                nicest moments came from watching the light
+                change, spending time by the pool and enjoying
+                the feeling of being somewhere so far removed
+                from the usual routine.
+            </p>
+        </div>
+
+        <img src="maldives12.jpeg" alt="An eagle ray swimming above the sandy seabed" loading="lazy">
+        <img src="maldives10.jpeg" alt="A lionfish among the reef" loading="lazy">
+        <img src="maldives11.jpeg" alt="A diver exploring a school of fish above the reef" loading="lazy">
 
     </div>
 </section>
 
-<section class="edition-local-info">
+
+<!-- DIVING -->
+
+<section class="md-mobile-diving section">
     <div class="container">
-        <div class="edition-local-info-grid">
 
-            <div class="edition-local-info-item">
-                <p class="section-label">BEST TIME</p>
-                <h3>November – April</h3>
-                <p>
-                    The dry season generally brings sunnier skies
-                    and calmer seas, making this a popular period
-                    for enjoying the islands and getting out on
-                    the water.
-                </p>
-            </div>
-
-            <div class="edition-local-info-item">
-                <p class="section-label">THE SETTING</p>
-                <h3>A private island</h3>
-                <p>
-                    Reethi Rah combines tropical greenery, beaches,
-                    open water and the privacy of a self-contained
-                    island resort.
-                </p>
-            </div>
-
-            <div class="edition-local-info-item">
-                <p class="section-label">GETTING AROUND</p>
-                <h3>By bicycle</h3>
-                <p>
-                    Cycling was one of our favourite ways to explore,
-                    discover different corners of the island and
-                    notice what was happening beyond the beach.
-                </p>
-            </div>
-
+        <div class="section-heading">
+            <p>BENEATH THE SURFACE</p>
+            <h2>The water was every bit as good as the island.</h2>
         </div>
+
+        <div class="md-mobile-copy">
+            <p class="section-label">THE DIVING</p>
+            <h3>They knew exactly where to take us.</h3>
+
+            <p>
+                The diving was great. The team would drop us
+                into exactly the right spot depending on what
+                we were hoping to see, which made a real
+                difference to the experience.
+            </p>
+
+            <p>
+                We saw an extraordinary variety of marine life,
+                and it was a completely different way to
+                appreciate the Maldives beyond the beaches
+                and lagoons.
+            </p>
+        </div>
+
+        <img src="maldives14.jpeg" alt="A large school of colourful fish swimming above the reef" loading="lazy">
+        <img src="maldives15.jpeg" alt="Thousands of colourful parrot fish moving together underwater" loading="lazy">
+
+        <div class="md-mobile-copy">
+            <p class="section-label">SNORKELLING</p>
+            <h3>Thousands of parrot fish.</h3>
+
+            <p>
+                Even snorkelling just off the atoll was great
+                fun. On one occasion I found myself surrounded
+                by thousands of parrot fish. It was one of
+                those unexpected encounters that makes you
+                stop and take in what is happening around you.
+            </p>
+
+            <p>
+                You do not always need to head out on a boat
+                to find something remarkable. There was plenty
+                happening just beneath the surface close
+                to the island.
+            </p>
+        </div>
+
+        <img src="maldives16.jpeg" alt="A butterflyfish swimming above the coral" loading="lazy">
+        <img src="maldives17.jpeg" alt="A dense school of yellow and blue reef fish" loading="lazy">
+
+        <div class="md-mobile-copy">
+            <p class="section-label">REEF LIFE</p>
+            <h3>A whole world in the shallows.</h3>
+
+            <p>
+                The reef offered plenty more to look at,
+                from colourful fish moving through the coral
+                to smaller details that were easy to miss
+                at first.
+            </p>
+
+            <p>
+                It was a lovely contrast to the larger
+                encounters on the dives, and a reminder
+                to take your time when exploring the water.
+            </p>
+        </div>
+
+        <img src="maldives18.jpeg" alt="A clownfish among the tentacles of an anemone" loading="lazy">
+        <img src="maldives19.jpeg" alt="A healthy coral reef with fish swimming through it" loading="lazy">
+
     </div>
 </section>
 
-<section class="edition-recommendations section">
+
+<!-- PLANNING -->
+
+<section class="md-mobile-info section">
+    <div class="container">
+
+        <p class="section-label">PLANNING YOUR STAY</p>
+        <h2>A few thoughts before you go.</h2>
+
+        <p>
+            Reethi Rah is a private island resort, so the
+            experience is as much about enjoying the property
+            and the water as it is about getting out to explore.
+        </p>
+
+        <div class="md-mobile-info-item">
+            <p class="section-label">BEST TIME</p>
+            <h3>November – April</h3>
+            <p>
+                The dry season generally brings sunnier skies
+                and calmer seas. Conditions vary, but this is
+                a popular period for enjoying the islands and
+                getting out on the water.
+            </p>
+        </div>
+
+        <div class="md-mobile-info-item">
+            <p class="section-label">GETTING THERE</p>
+            <h3>Arrive by sea</h3>
+            <p>
+                We travelled between Malé and Reethi Rah by yacht.
+                It was a lovely way to arrive and added a sense
+                of occasion to the start of the stay.
+            </p>
+        </div>
+
+        <div class="md-mobile-info-item">
+            <p class="section-label">GETTING AROUND</p>
+            <h3>By bicycle</h3>
+            <p>
+                Cycling was one of our favourite ways to explore
+                the island. It is easy to enjoy the different
+                corners of the resort without rushing.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- RECOMMENDATIONS -->
+
+<section class="md-mobile-recommendations section">
     <div class="container">
 
         <div class="section-heading">
@@ -789,142 +1490,149 @@
             <h2>What made it special.</h2>
         </div>
 
-        <div class="edition-recommendations-grid">
+        <article class="md-mobile-recommendation">
+            <p class="story-number">01</p>
+            <h3>One&amp;Only Reethi Rah</h3>
+            <p>
+                A beautiful private island setting, with the
+                space, service and natural surroundings to
+                make a stay feel genuinely special.
+            </p>
+        </article>
 
-            <article class="edition-recommendation">
-                <p class="story-number">01</p>
-                <h3>One&amp;Only Reethi Rah</h3>
-                <p>
-                    An extraordinary island setting and a wonderful
-                    base for exploring the Maldives. Privacy,
-                    thoughtful service and natural beauty made
-                    our stay memorable.
-                </p>
-            </article>
+        <article class="md-mobile-recommendation">
+            <p class="story-number">02</p>
+            <h3>The beach villa</h3>
+            <p>
+                Our villa was sublime. Being in the end bungalow
+                gave us a wonderful sense of privacy, with no
+                passing footfall beyond our own stretch of island.
+            </p>
+        </article>
 
-            <article class="edition-recommendation">
-                <p class="story-number">02</p>
-                <h3>The bungalow &amp; butler service</h3>
-                <p>
-                    Our bungalow was a highlight in its own right.
-                    Butler service made everything feel effortless,
-                    while the private pool gave us our own place
-                    to unwind.
-                </p>
-            </article>
+        <article class="md-mobile-recommendation">
+            <p class="story-number">03</p>
+            <h3>The private pool and sea view</h3>
+            <p>
+                Looking out across the water from our own pool
+                was one of the simple pleasures of the stay.
+            </p>
+        </article>
 
-            <article class="edition-recommendation">
-                <p class="story-number">03</p>
-                <h3>A barbecue by the pool</h3>
-                <p>
-                    A fantastic barbecue beside our private pool,
-                    some excellent wines and an evening with
-                    nowhere else we needed to be.
-                </p>
-            </article>
+        <article class="md-mobile-recommendation">
+            <p class="story-number">04</p>
+            <h3>The full-time butler</h3>
+            <p>
+                Having a dedicated butler made everything feel
+                effortless and allowed us to enjoy the island
+                without having to think about the details.
+            </p>
+        </article>
 
-            <article class="edition-recommendation">
-                <p class="story-number">04</p>
-                <h3>The swimming pools</h3>
-                <p>
-                    The main pool is beautifully framed by mature
-                    trees. The infinity lap pool extending towards
-                    the sea offers another wonderful way to enjoy
-                    the island and its setting.
-                </p>
-            </article>
+        <article class="md-mobile-recommendation">
+            <p class="story-number">05</p>
+            <h3>A private beach barbecue</h3>
+            <p>
+                One evening we enjoyed a private barbecue
+                on the beach. A memorable way to spend
+                an evening beside the water.
+            </p>
+        </article>
 
-            <article class="edition-recommendation">
-                <p class="story-number">05</p>
-                <h3>Diving with sharks &amp; eagle rays</h3>
-                <p>
-                    The diving added a real sense of adventure.
-                    Encounters with sharks and eagle rays were
-                    among the experiences that made the underwater
-                    world so special.
-                </p>
-            </article>
+        <article class="md-mobile-recommendation">
+            <p class="story-number">06</p>
+            <h3>Diving and snorkelling</h3>
+            <p>
+                The diving team knew where to take us, while
+                snorkelling just off the atoll was rewarding
+                in its own right. Being surrounded by thousands
+                of parrot fish was an unforgettable moment.
+            </p>
+        </article>
 
-            <article class="edition-recommendation">
-                <p class="story-number">06</p>
-                <h3>Explore by bicycle</h3>
-                <p>
-                    Leave some time without a plan and ride around
-                    the island. Discover the beaches, greenery
-                    and wildlife along the way.
-                </p>
-            </article>
+        <article class="md-mobile-recommendation">
+            <p class="story-number">07</p>
+            <h3>Arriving by yacht</h3>
+            <p>
+                Travelling to and from the island by yacht
+                from Malé was a lovely touch and a memorable
+                way to begin and end the stay.
+            </p>
+        </article>
 
-        </div>
+        <article class="md-mobile-recommendation">
+            <p class="story-number">08</p>
+            <h3>Explore by bicycle</h3>
+            <p>
+                Leave some time without a plan and cycle around
+                the island. It is a lovely way to discover
+                the beaches, greenery and wildlife.
+            </p>
+        </article>
+
     </div>
 </section>
 
-<section class="edition-journal section">
-    <div class="container">
-        <div class="edition-journal-inner">
 
-            <div>
-                <p class="section-label">FROM THE JOURNAL</p>
-                <h2>Life on Reethi Rah.</h2>
-            </div>
+<!-- OUR EDIT -->
 
-            <div class="edition-journal-copy">
-                <p>
-                    The Maldives is easy to reduce to photographs
-                    of beaches and turquoise water. But what stayed
-                    with us was the variety of the experience:
-                    cycling beneath the palms, looking for wildlife
-                    and heading out into water that offered so much
-                    more than a beautiful view.
-                </p>
-
-                <p>
-                    Our bungalow and its butler service made
-                    everything feel wonderfully easy. Some days
-                    were about diving with sharks and eagle rays;
-                    others were about the pools, a barbecue beside
-                    our own and a good bottle of wine.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="edition-gallery section">
+<section class="md-mobile-journal section">
     <div class="container">
 
-        <div class="section-heading">
-            <p>MORE FROM OUR CAMERA</p>
-            <h2>More from the Maldives.</h2>
-        </div>
+        <p class="section-label">OUR EDIT</p>
+        <h2>A private island, with plenty to discover.</h2>
 
-        <div class="edition-photo-mosaic edition-photo-mosaic-secondary">
-            <img src="maldives12.jpeg" alt="Island life at Reethi Rah" loading="lazy">
-            <img src="maldives13.jpeg" alt="Tropical beach and water in the Maldives" loading="lazy">
-            <img src="maldives14.jpeg" alt="The reef and ocean around Reethi Rah" loading="lazy">
-            <img src="maldives15.jpeg" alt="Wildlife around the island" loading="lazy">
-            <img src="maldives16.jpeg" alt="Life around One&Only Reethi Rah" loading="lazy">
-            <img src="maldives17.jpeg" alt="Marine life in the Maldives" loading="lazy">
-            <img src="maldives18.jpeg" alt="The Maldives from the island" loading="lazy">
-            <img src="maldives19.jpeg" alt="Reethi Rah and the surrounding ocean" loading="lazy">
-        </div>
+        <p>
+            The Maldives is easy to reduce to photographs of
+            beaches and turquoise water. Reethi Rah certainly
+            has those in abundance, but what stayed with us
+            was the variety of the experience.
+        </p>
+
+        <p>
+            Our beach villa was sublime, particularly being
+            at the end of the island with our own sense of
+            privacy. The full-time butler, the pool looking
+            out to sea and the private barbecue on the beach
+            all made the stay feel wonderfully effortless.
+        </p>
+
+        <p>
+            Beyond the villa, we loved cycling around the island,
+            looking for flying foxes and herons, and heading
+            out into the water. The diving was excellent, but
+            the snorkelling was just as memorable in its own
+            way. Being surrounded by thousands of parrot fish
+            is not something you forget in a hurry.
+        </p>
+
+        <p>
+            Add in the yacht transfer from Malé and the whole
+            stay felt special from beginning to end. It was
+            a lovely balance of adventure, privacy and doing
+            very little at all.
+        </p>
 
     </div>
 </section>
+
+
+<!-- MAP -->
 
 <section class="edition-map section">
     <div class="container">
         <div class="edition-map-inner">
             <p class="section-label">OUR MAP</p>
-            <h2>Maldives.</h2>
+            <h2>One&amp;Only Reethi Rah, Maldives.</h2>
             <p>
-                One extraordinary island, memorable underwater
-                encounters and a beautiful escape from Singapore.
+                A private island in the North Malé Atoll,
+                with beautiful beaches, exceptional marine
+                life and a memorable place to slow down.
             </p>
         </div>
     </div>
 </section>
+
 
 <section class="edition-end">
     <a href="/" class="text-link">← Back to Home</a>
@@ -950,7 +1658,7 @@
             <a href="editions.html">Editions</a>
             <a href="index-new.html#journal">Journal</a>
             <a href="index-new.html#map">Map</a>
-            <a href="about.html">About</a>
+            <a href="index-new.html#about">About</a>
         </nav>
 
         <a
